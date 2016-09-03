@@ -3,9 +3,9 @@
  **********************************************************************************************/
 /** Map relative paths to URLs. */
 const map: any = {
-  'app' : 'app',
+  'App' : 'App',
 
-  'main': 'app/main.js',
+  'Main': 'App/Main.js',
   '@angular' : 'node_modules/@angular',
   'angular2-in-memory-web-api' : 'node_modules/angular2-in-memory-web-api',
   'rxjs' : 'node_modules/rxjs'
@@ -14,7 +14,7 @@ const map: any = {
 // packages tells the System loader how to load when no filename and/or no
 // extension
 const packages: any = {
-  'app' : {main : 'main.js', defaultExtension : 'js'},
+  'App' : {main : 'Main.js', defaultExtension : 'js'},
   'api' : {defaultExtension : 'js'},
   'rxjs' : {defaultExtension : 'js'},
   'angular2-in-memory-web-api' : {main : 'index.js', defaultExtension : 'js'},
@@ -22,9 +22,9 @@ const packages: any = {
 
 const barrels: any = [
   // App specific barrels.
-  'app/routing',
-  'app/shared',
-  'app/models',
+  'App/routing',
+  'App/shared',
+  'App/models',
 ];
 
 barrels.forEach((barrelName: string) => {

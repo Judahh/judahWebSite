@@ -5,7 +5,7 @@
   <title>JH</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="Styles.css">
 
   <!-- IE required polyfills, in this exact order -->
   <script src="node_modules/core-js/client/shim.min.js"></script>
@@ -14,14 +14,12 @@
   <script src="node_modules/systemjs/dist/system.src.js"></script>
 
   <script>
-    System.import('system-config.js').then(function () {
-        System.import('main');
+    System.import('SystemConfig.js').then(function () {
+        System.import('Main'); 
       }).catch(console.error.bind(console));
   </script>
 </head>
 
-<body>
-  <my-app>Loading...</my-app>
-</body>
+<body>Loading...</body>
 
 </html>

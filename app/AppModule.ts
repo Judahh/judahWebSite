@@ -9,11 +9,11 @@ import { XHRBackend } from '@angular/http';
 import { InMemoryBackendService, SEED_DATA } from 'angular2-in-memory-web-api';
 import { InMemoryDataService } from './in-memory-data.service';
 
-import './rxjs-extensions';
-import { AppComponent } from './app.component';
+import './RXJS/RXJSExtensions';
+import { AppComponent } from './AppComponent/AppComponent';
 import { routing, routedComponents } from './app.routing';
-import { HeroService } from './hero.service';
-import { HeroSearchComponent } from './hero-search.component';
+import { HeroService } from './Hero/HeroService';
+import { HeroSearchComponent } from './HeroSearch/HeroSearchComponent';
 
 @NgModule({
   imports: [
