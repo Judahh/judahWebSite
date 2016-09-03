@@ -1,15 +1,15 @@
 import { Routes, RouterModule } from '@angular/router';
 
-import { DashboardComponent } from './dashboard.component';
-import { HeroesComponent } from './heroes.component';
-import { HeroDetailComponent } from './hero-detail.component';
+//import { DashboardComponent } from './dashboard.component';
+//import { HeroesComponent } from './heroes.component';
+//import { HeroDetailComponent } from './hero-detail.component';
 
 const appRoutes: Routes = [
   {
     path: '',
     redirectTo: '/dashboard',
     pathMatch: 'full'
-  },
+  }/*,
   {
     path: 'dashboard',
     component: DashboardComponent
@@ -21,9 +21,9 @@ const appRoutes: Routes = [
   {
     path: 'heroes',
     component: HeroesComponent
-  }
+  }*/
 ];
 
 export const routing = RouterModule.forRoot(appRoutes);
 
-export const routedComponents = [DashboardComponent, HeroesComponent, HeroDetailComponent];
+export const routedComponents=0;// = [DashboardComponent, HeroesComponent, HeroDetailComponent];

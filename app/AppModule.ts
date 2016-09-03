@@ -10,10 +10,8 @@ import { InMemoryBackendService, SEED_DATA } from 'angular2-in-memory-web-api';
 import { InMemoryDataService } from './in-memory-data.service';
 
 import './RXJS/RXJSExtensions';
-import { AppComponent } from './AppComponent/AppComponent';
-import { routing, routedComponents } from './app.routing';
-import { HeroService } from './Hero/HeroService';
-import { HeroSearchComponent } from './HeroSearch/HeroSearchComponent';
+import { BodyComponent } from './Body/BodyComponent';
+import { routing, routedComponents } from './Routing';
 
 @NgModule({
   imports: [
@@ -23,15 +21,13 @@ import { HeroSearchComponent } from './HeroSearch/HeroSearchComponent';
     HttpModule
   ],
   declarations: [
-    AppComponent,
-    HeroSearchComponent,
-    routedComponents
+    BodyComponent/*,
+    routedComponents*/
   ],
   providers: [
-    HeroService,
     { provide: XHRBackend, useClass: InMemoryBackendService }, // in-mem server
     { provide: SEED_DATA, useClass: InMemoryDataService }     // in-mem server data
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [BodyComponent]
 })
 export class AppModule { }
