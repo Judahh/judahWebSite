@@ -1,7 +1,7 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 
-import { Item } from '../Common/Item/Item.model';
-import { ItemService } from '../Common/Item/Item.service';
+import { Item } from '../Common/Item/ItemModel';
+import { ItemService } from '../Common/Item/ItemService';
 
 import { Observable } from 'rxjs/Observable';
 import { Router } from '@angular/router';

@@ -1,12 +1,12 @@
 import { Component, Input } from '@angular/core';
 
-import { Item } from './Item.model';
+import { Item } from './ItemModel';
 
 @Component({
   moduleId: module.id,
   selector: 'item',
-  styleUrls: ['Item.component.css'],
-  templateUrl: 'Item.component.html'
+  styleUrls: ['ItemComponent.css'],
+  templateUrl: 'ItemComponent.html'
 })
 export class ItemComponent {
   @Input() item: Item;
