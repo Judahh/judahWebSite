@@ -9,7 +9,7 @@ import { HeroService } from './Hero/Hero.service';
   selector: 'page',
   styleUrls: ['PageComponent.css'],
   templateUrl: 'PageComponent.html',
-  directives: [HeroComponent],
+  entryComponents: [HeroComponent],
   providers: [HeroService]
 })
 export class PageComponent implements OnInit {

@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule,CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
@@ -11,6 +11,17 @@ import { InMemoryDataService } from './in-memory-data.service';
 
 import './RXJS/RXJSExtensions';
 import { BodyComponent } from './Body/BodyComponent';
+
+import { HeaderComponent } from './Body/Header/HeaderComponent';
+import { PageComponent } from './Body/Page/PageComponent';
+import { FooterComponent } from './Body/Footer/FooterComponent';
+
+import { MenuHorizontalLeftComponent } from './Body/Common/MenuHorizontalLeft/MenuHorizontalLeftComponent';
+import { MenuHorizontalCenterComponent } from './Body/Common/MenuHorizontalCenter/MenuHorizontalCenterComponent';
+import { MenuHorizontalRightComponent } from './Body/Common/MenuHorizontalRight/MenuHorizontalRightComponent';
+
+import { HeroComponent } from './Body/Page/Hero/Hero.component';
+
 import { routing, routedComponents } from './Routing';
 
 @NgModule({
@@ -20,9 +31,18 @@ import { routing, routedComponents } from './Routing';
     routing,
     HttpModule
   ],
+  schemas:
+  [CUSTOM_ELEMENTS_SCHEMA]
+  ,
   declarations: [
-    BodyComponent/*,
-    routedComponents*/
+    BodyComponent,
+    HeaderComponent,
+    PageComponent,
+    FooterComponent,
+    MenuHorizontalLeftComponent,
+    MenuHorizontalCenterComponent,
+    MenuHorizontalRightComponent,
+    HeroComponent
   ],
   providers: [
     { provide: XHRBackend, useClass: InMemoryBackendService }, // in-mem server

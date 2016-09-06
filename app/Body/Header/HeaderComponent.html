@@ -1,29 +1,11 @@
-<menuLeft>
-  <ul class="itemsLeft">
-    <li *ngFor="let item of itemsLeft"
-      (click)="onSelect(item)"
-      [class.selected]="item===selectedItem">
-      {{item.effect}}
-    </li>
-  </ul>
-</menuLeft>
+<menuHorizontalLeft>
+  Loading...
+</menuHorizontalLeft>
 
-<menuCenter>
-<ul class="itemsCenter">
-  <li *ngFor="let item of itemsCenter"
-    (click)="onSelect(item)"
-    [class.selected]="item===selectedItem">
-    {{item.effect}}
-  </li>
-</ul>
-</menuCenter>
+<menuHorizontalCenter>
+  Loading...
+</menuHorizontalCenter>
 
-<menuRight>
-  <ul class="itemsRight">
-    <li *ngFor="let item of itemsRight"
-      (click)="onSelect(item)"
-      [class.selected]="item===selectedItem">
-      {{item.effect}}
-    </li>
-  </ul>
-</menuRight>
+<menuHorizontalRight>
+  Loading...
+</menuHorizontalRight>

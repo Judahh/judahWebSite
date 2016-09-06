@@ -1,0 +1,7 @@
+<ul class="itemsRight">
+    <li *ngFor="let item of itemsRight"
+        (click)="onSelect(item)"
+        [class.selected]="item===selectedItem">
+        {{item.effect}}
+    </li>
+</ul>
