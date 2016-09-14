@@ -26,7 +26,7 @@ export class HeaderComponent implements OnInit {
   constructor(private itemService: ItemService) { }
 
   ngOnInit() {
-    //this.getItems();
+    this.getItems();
   }
 
   getItems(){
