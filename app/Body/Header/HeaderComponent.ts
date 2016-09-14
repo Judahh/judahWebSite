@@ -15,6 +15,7 @@ import { Router } from '@angular/router';
   providers: [ItemService]//,
   //directives:[Router]
 })
+
 export class HeaderComponent implements OnInit {
   itemsLeft: Item[];
   itemsRight: Item[];
@@ -25,7 +26,10 @@ export class HeaderComponent implements OnInit {
   constructor(private itemService: ItemService) { }
 
   ngOnInit() {
-    
+    //this.getItems();
+  }
+
+  getItems(){
     this.itemService.get('Header/Item','Left').subscribe(items => this.itemsLeft = items);
     alert("Items:"+this.itemsLeft);
     this.itemService.get('Header/Item','Right').subscribe(items => this.itemsRight = items);
@@ -34,7 +38,6 @@ export class HeaderComponent implements OnInit {
 
   onSelect(item: Item){
     this.selectedItem = item;
-    
   }
 
 }

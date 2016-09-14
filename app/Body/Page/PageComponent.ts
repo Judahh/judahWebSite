@@ -20,7 +20,7 @@ export class PageComponent implements OnInit {
   constructor(private heroService: HeroService) { }
 
   ngOnInit() {
-    this.heroes=this.heroSubscription.getHeroes();
+    //this.heroes=this.heroSubscription.getHeroes();
       //this.heroSubscription=this.heroService.getHeroes().subscribe(heroes => this.heroes = heroes);
   }
 

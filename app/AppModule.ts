@@ -28,7 +28,7 @@ import { routing, routedComponents } from './Routing';
   imports: [
     BrowserModule,
     FormsModule,
-    routing,
+    //routing,
     HttpModule
   ],
   schemas:

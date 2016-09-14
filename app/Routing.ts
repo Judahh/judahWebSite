@@ -5,11 +5,11 @@ import { Routes, RouterModule } from '@angular/router';
 //import { HeroDetailComponent } from './hero-detail.component';
 
 const appRoutes: Routes = [
-  {
+  /*{
     path: '',
     redirectTo: '/dashboard',
     pathMatch: 'full'
-  }/*,
+  },
   {
     path: 'dashboard',
     component: DashboardComponent
