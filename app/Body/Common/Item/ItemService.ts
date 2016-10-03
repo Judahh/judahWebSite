@@ -2,15 +2,26 @@ import { Injectable } from '@angular/core';
 import { Headers, Http, Response } from '@angular/http';
 import { Item } from './ItemModel';
 
+import 'rxjs/add/operator/toPromise';
 import 'rxjs/add/operator/map';
 
 
 @Injectable()
 export class ItemService {
+  private itemsUrl = 'App/items';
+  
   constructor(private http: Http) { }
 
   public get(path:string,name:string) {
     return this.http.get('App/Body/'+path+'/'+name+'.json').map((response: Response) => response.json());
+  }
+
+  getItems(): Promise<Item[]> {
+    return this.http
+      .get(this.itemsUrl)
+      .toPromise()
+      .then(response => response.json().data as Item[])
+      .catch(this.handleError);
   }
 
   save(item: Item,path:string,name:string): Promise<Item> {

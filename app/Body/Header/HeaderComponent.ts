@@ -11,8 +11,8 @@ import { Router } from '@angular/router';
   selector: 'header',
   styleUrls: ['HeaderComponent.css'],
   templateUrl: 'HeaderComponent.html',
-  encapsulation: ViewEncapsulation.None,
-  providers: [ItemService]//,
+  encapsulation: ViewEncapsulation.None//,
+  //providers: [ItemService]//,
   //directives:[Router]
 })
 
@@ -22,6 +22,7 @@ export class HeaderComponent implements OnInit {
   itemsCenter: Item[];
   selectedItem: Item;
   public string='';
+  error: any;
 
   constructor(private itemService: ItemService) { }
 
@@ -30,10 +31,16 @@ export class HeaderComponent implements OnInit {
   }
 
   getItems(){
-    this.itemService.get('Header/Item','Left').subscribe(items => this.itemsLeft = items);
+     this.itemService
+      .getItems()
+      .then(items => this.itemsLeft = items)
+      .catch(error => this.error = error);
     alert("Items:"+this.itemsLeft);
-    this.itemService.get('Header/Item','Right').subscribe(items => this.itemsRight = items);
-    this.itemService.get('Header/Item','Center').subscribe(items => this.itemsCenter = items);
+    alert(this.error);
+    //this.itemService.get('Header/Item','Left').subscribe(items => this.itemsLeft = items);
+    //alert("Items:"+this.itemsLeft);
+    //this.itemService.get('Header/Item','Right').subscribe(items => this.itemsRight = items);
+    //this.itemService.get('Header/Item','Center').subscribe(items => this.itemsCenter = items);
   }
 
   onSelect(item: Item){

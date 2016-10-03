@@ -3,10 +3,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
-// Imports for loading & configuring the in-memory web api
-import { XHRBackend } from '@angular/http';
+import { ItemService } from './Body/Common/Item/ItemService'
 
-import { InMemoryBackendService, SEED_DATA } from 'angular2-in-memory-web-api';
+import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService } from './in-memory-data.service';
 
 import './RXJS/RXJSExtensions';
@@ -28,12 +27,12 @@ import { routing, routedComponents } from './Routing';
   imports: [
     BrowserModule,
     FormsModule,
-    //routing,
-    HttpModule
+    routing,
+    HttpModule,
+    InMemoryWebApiModule.forRoot(InMemoryDataService, { delay: 600 })
   ],
-  schemas:
-  [CUSTOM_ELEMENTS_SCHEMA]
-  ,
+  //schemas:
+  //[CUSTOM_ELEMENTS_SCHEMA],
   declarations: [
     BodyComponent,
     HeaderComponent,
@@ -45,8 +44,7 @@ import { routing, routedComponents } from './Routing';
     HeroComponent
   ],
   providers: [
-    { provide: XHRBackend, useClass: InMemoryBackendService }, // in-mem server
-    { provide: SEED_DATA, useClass: InMemoryDataService }     // in-mem server data
+    ItemService
   ],
   bootstrap: [BodyComponent]
 })
