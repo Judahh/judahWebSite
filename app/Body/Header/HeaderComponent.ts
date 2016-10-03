@@ -27,17 +27,14 @@ export class HeaderComponent implements OnInit {
   constructor(private itemService: ItemService) { }
 
   ngOnInit() {
-    this.getItems();
+    //this.getItems();
   }
 
   getItems(){
-     this.itemService
-      .getItems()
-      .then(items => this.itemsLeft = items)
-      .catch(error => this.error = error);
-    alert("Items:"+this.itemsLeft);
-    alert(this.error);
-    //this.itemService.get('Header/Item','Left').subscribe(items => this.itemsLeft = items);
+     //this.itemService.getItems().then(items => this.itemsLeft = items).catch(error => this.error = error);
+    //alert("Items:"+this.itemsLeft);
+    //alert(error);
+    this.itemService.get('Header/Item','Left').subscribe(items => this.itemsLeft = items);
     //alert("Items:"+this.itemsLeft);
     //this.itemService.get('Header/Item','Right').subscribe(items => this.itemsRight = items);
     //this.itemService.get('Header/Item','Center').subscribe(items => this.itemsCenter = items);

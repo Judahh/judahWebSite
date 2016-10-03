@@ -12,6 +12,10 @@ export class ItemService {
   
   constructor(private http: Http) { }
 
+  public getFrom(path:string) {
+    return this.http.get(path).map((response: Response) => response.json());
+  }
+
   public get(path:string,name:string) {
     return this.http.get('App/Body/'+path+'/'+name+'.json').map((response: Response) => response.json());
   }

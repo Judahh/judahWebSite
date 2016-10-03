@@ -1,12 +1,15 @@
 System.config({
     paths: {
         // paths serve as alias
-        'npm:': 'node_modules/'
+        'npm:': 'node_modules/',
+        'rxjs/add/observable/*': 'node_modules/rxjs/add/observable/*.js',
+        'rxjs/add/operator/*': 'node_modules/rxjs/add/operator/*.js',
+        'rxjs/*': 'node_modules/rxjs/*.js'
     },
     // map tells the System loader where to look for things
     map: {
         // our app is within the app folder
-        'app': 'App',
+        'App': 'App',
         'Main': 'App/Main.js',
         // angular bundles
         '@angular/core': 'npm:@angular/core/bundles/core.umd.js',
@@ -24,7 +27,7 @@ System.config({
     },
     // packages tells the System loader how to load when no filename and/or no extension
     packages: {
-        'app': { main: './Main.js', defaultExtension: 'js' },
+        'App': { main: './Main.js', defaultExtension: 'js' },
         'api': { defaultExtension: 'js' },
         'rxjs': { defaultExtension: 'js' },
         'angular-in-memory-web-api': { main: './index.js', defaultExtension: 'js' },
