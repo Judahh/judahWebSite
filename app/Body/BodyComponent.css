@@ -1,21 +1,84 @@
+@font-face {
+    font-family: "FontIcon";
+    src: url("../../../../../../Fonts/BlueLionIcons.otf");
+    src: url("../../../../../../Fonts/BlueLionIcons.woff") format('woff');
+    /*src: url("../../../../../../Fonts/BlueLionIcons.ttf")  format(‘truetype’);*/
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "FontIconSocialMedia";
+    src: url("../../../../../../Fonts/Socialico.otf");
+    /*src: url("../../../../../../Fonts/Socialico.woff") format('woff');
+    src: url("../../../../../../Fonts/Socialico.ttf")  format(‘truetype’);*/
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "FontIconSocialMedia2";
+    src: url("../../../../../../Fonts/SocialicoPlus.otf");
+    /*src: url("../../../../../../Fonts/SocialicoPlus.woff") format('woff');
+    src: url("../../../../../../Fonts/SocialicoPlus.ttf")  format(‘truetype’);*/
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "FontIconSocialMedia3";
+    src: url("../../../../../../Fonts/MonoSocialIconsFont-1.10.otf");
+    src: url("../../../../../../Fonts/MonoSocialIconsFont-1.10.woff") format('woff');
+    /*src: url("../../../../../../Fonts/SocialicoPlus.ttf")  format(‘truetype’);*/
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "FontIconSocialMedia4";
+    src: url("../../../../../../Fonts/pictonic.ttf");
+    src: url("../../../../../../Fonts/pictonic.woff") format('woff');
+    /*src: url("../../../../../../Fonts/SocialicoPlus.ttf")  format(‘truetype’);*/
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "FontAwesome";
+    src: url("../../../../../../Fonts/fontawesome-webfont.ttf");
+    src: url("../../../../../../Fonts/fontawesome-webfont.woff") format('woff');
+    /*src: url("../../../../../../Fonts/SocialicoPlus.ttf")  format(‘truetype’);*/
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "FontFuturisticI";
+    src: url("../../../../../../Fonts/FuturisticFontI.otf");
+    src: url("../../../../../../Fonts/FuturisticFontI.woff") format('woff');
+    /*src: url("../../../../../../Fonts/FuturisticFontI.ttf")  format(‘truetype’);*/
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "FontFuturisticII";
+    src: url("../../../../../../Fonts/FuturisticFontII.otf");
+    src: url("../../../../../../Fonts/FuturisticFontII.woff") format('woff');
+    /*src: url("../../../../../../Fonts/FuturisticFontII.ttf")  format(‘truetype’);*/
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "OpenSans-Light";
+    src: url("../../../../../../Fonts/OpenSans-Light.ttf")  format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 body{
   margin: 0 0 0 0;
-}
-
-body, input[text], button {
-  color: #888;
-  font-family: Cambria, Georgia;
-}
-
-h1 {
-  color: #444;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 250%;
-}
-h2, h3 {
-  color: #369;
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: lighter;
 }
 
 a {
