@@ -1,10 +1,12 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, ViewEncapsulation } from '@angular/core';
 
 @Component({
   moduleId: module.id,
   selector: 'menuHorizontalCenter',
   styleUrls: ['MenuHorizontalCenterComponent.css'],
-  templateUrl: 'MenuHorizontalCenterComponent.html'
+  templateUrl: 'MenuHorizontalCenterComponent.html',
+  encapsulation: ViewEncapsulation.None
+  
 })
 export class MenuHorizontalCenterComponent {
 }

@@ -1,7 +1,7 @@
 @font-face {
     font-family: "FontIcon";
-    src: url("../../../../../../Fonts/BlueLionIcons.otf");
-    src: url("../../../../../../Fonts/BlueLionIcons.woff") format('woff');
+    src: url("App/Body/Fonts/BlueLionIcons.otf");
+    src: url("App/Body/Fonts/BlueLionIcons.woff") format('woff');
     /*src: url("../../../../../../Fonts/BlueLionIcons.ttf")  format(‘truetype’);*/
     font-weight: normal;
     font-style: normal;
@@ -9,7 +9,7 @@
 
 @font-face {
     font-family: "FontIconSocialMedia";
-    src: url("../../../../../../Fonts/Socialico.otf");
+    src: url("App/Body/Fonts/Socialico.otf");
     /*src: url("../../../../../../Fonts/Socialico.woff") format('woff');
     src: url("../../../../../../Fonts/Socialico.ttf")  format(‘truetype’);*/
     font-weight: normal;
@@ -18,7 +18,7 @@
 
 @font-face {
     font-family: "FontIconSocialMedia2";
-    src: url("../../../../../../Fonts/SocialicoPlus.otf");
+    src: url("App/Body/Fonts/SocialicoPlus.otf");
     /*src: url("../../../../../../Fonts/SocialicoPlus.woff") format('woff');
     src: url("../../../../../../Fonts/SocialicoPlus.ttf")  format(‘truetype’);*/
     font-weight: normal;
@@ -27,8 +27,8 @@
 
 @font-face {
     font-family: "FontIconSocialMedia3";
-    src: url("../../../../../../Fonts/MonoSocialIconsFont-1.10.otf");
-    src: url("../../../../../../Fonts/MonoSocialIconsFont-1.10.woff") format('woff');
+    src: url("App/Body/Fonts/MonoSocialIconsFont-1.10.otf");
+    src: url("App/Body/Fonts/MonoSocialIconsFont-1.10.woff") format('woff');
     /*src: url("../../../../../../Fonts/SocialicoPlus.ttf")  format(‘truetype’);*/
     font-weight: normal;
     font-style: normal;
@@ -36,8 +36,8 @@
 
 @font-face {
     font-family: "FontIconSocialMedia4";
-    src: url("../../../../../../Fonts/pictonic.ttf");
-    src: url("../../../../../../Fonts/pictonic.woff") format('woff');
+    src: url("App/Body/Fonts/pictonic.ttf");
+    src: url("App/Body/Fonts/pictonic.woff") format('woff');
     /*src: url("../../../../../../Fonts/SocialicoPlus.ttf")  format(‘truetype’);*/
     font-weight: normal;
     font-style: normal;
@@ -45,8 +45,8 @@
 
 @font-face {
     font-family: "FontAwesome";
-    src: url("../../../../../../Fonts/fontawesome-webfont.ttf");
-    src: url("../../../../../../Fonts/fontawesome-webfont.woff") format('woff');
+    src: url("App/Body/Fonts/fontawesome-webfont.ttf");
+    src: url("App/Body/Fonts/fontawesome-webfont.woff") format('woff');
     /*src: url("../../../../../../Fonts/SocialicoPlus.ttf")  format(‘truetype’);*/
     font-weight: normal;
     font-style: normal;
@@ -54,8 +54,8 @@
 
 @font-face {
     font-family: "FontFuturisticI";
-    src: url("../../../../../../Fonts/FuturisticFontI.otf");
-    src: url("../../../../../../Fonts/FuturisticFontI.woff") format('woff');
+    src: url("App/Body/Fonts/FuturisticFontI.otf");
+    src: url("App/Body/Fonts/FuturisticFontI.woff") format('woff');
     /*src: url("../../../../../../Fonts/FuturisticFontI.ttf")  format(‘truetype’);*/
     font-weight: normal;
     font-style: normal;
@@ -63,8 +63,8 @@
 
 @font-face {
     font-family: "FontFuturisticII";
-    src: url("../../../../../../Fonts/FuturisticFontII.otf");
-    src: url("../../../../../../Fonts/FuturisticFontII.woff") format('woff');
+    src: url("App/Body/Fonts/FuturisticFontII.otf");
+    src: url("App/Body/Fonts/FuturisticFontII.woff") format('woff');
     /*src: url("../../../../../../Fonts/FuturisticFontII.ttf")  format(‘truetype’);*/
     font-weight: normal;
     font-style: normal;
@@ -72,7 +72,7 @@
 
 @font-face {
     font-family: "OpenSans-Light";
-    src: url("../../../../../../Fonts/OpenSans-Light.ttf")  format('truetype');
+    src: url("App/Body/Fonts/OpenSans-Light.ttf")  format('truetype');
     font-weight: normal;
     font-style: normal;
 }
@@ -222,22 +222,6 @@ page,header,footer{
     width: 100%;
     padding: 0 0 0 0;
     margin: 0 0 0 0;
-}
-
-menuLeft{
-    float: left;
-}
-
-menuCenter{
-    align-content: center;
-    align-items: center;
-    align-self: center;
-    text-align: center;
-    display: inline-block;
-}
-
-menuRight{
-    float: right;
 }
 
 ul{

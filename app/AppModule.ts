@@ -15,6 +15,7 @@ import { HeaderComponent } from './Body/Header/HeaderComponent';
 import { PageComponent } from './Body/Page/PageComponent';
 import { FooterComponent } from './Body/Footer/FooterComponent';
 
+import { ItemComponent } from './Body/Common/Item/ItemComponent';
 import { MenuHorizontalLeftComponent } from './Body/Common/MenuHorizontalLeft/MenuHorizontalLeftComponent';
 import { MenuHorizontalCenterComponent } from './Body/Common/MenuHorizontalCenter/MenuHorizontalCenterComponent';
 import { MenuHorizontalRightComponent } from './Body/Common/MenuHorizontalRight/MenuHorizontalRightComponent';
@@ -41,6 +42,7 @@ import { routing, routedComponents } from './Routing';
     MenuHorizontalLeftComponent,
     MenuHorizontalCenterComponent,
     MenuHorizontalRightComponent,
+    ItemComponent,
     HeroComponent
   ],
   providers: [

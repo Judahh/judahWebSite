@@ -36,8 +36,8 @@ export class HeaderComponent implements OnInit {
     //alert(error);
     this.itemService.get('Header/Item','Left').subscribe(items => this.itemsLeft = items);
     //alert("Items:"+this.itemsLeft);
-    //this.itemService.get('Header/Item','Right').subscribe(items => this.itemsRight = items);
-    //this.itemService.get('Header/Item','Center').subscribe(items => this.itemsCenter = items);
+    this.itemService.get('Header/Item','Right').subscribe(items => this.itemsRight = items);
+    this.itemService.get('Header/Item','Center').subscribe(items => this.itemsCenter = items);
   }
 
   onSelect(item: Item){
