@@ -14,57 +14,68 @@ export class MenuHorizontalLeftComponent implements OnInit{
 
   items: ItemComponent[];
   
+  constructor(){
+    this.initialization()  
+  }
+
   ngOnInit() {
-    let itemWhoAmI:ItemComponent;
+    this.initialization();  
+  }
 
-    let color:HTMLGenerator;
-    color.type='class';
-    color.name='DivClassNeon';
-    
+  initialization(){
+    this.items=[];
 
-    let font:HTMLGenerator;
-    font.type='class';
-    font.name='DivClassIcon';
+    let itemWhoAmI:ItemComponent=new ItemComponent();
 
-    color.subDiv.push(font);
-    
-
-    let animation:HTMLGenerator;
-    animation.type='class';
-    animation.name='DivClassPulse';
-    animation.info='c';
-
-    font.subDiv.push(animation);
-
-    itemWhoAmI.hTMLGenerator=color;
+    itemWhoAmI.animationEffect='pulse'
+    itemWhoAmI.colorEffect='neon'
+    itemWhoAmI.font='icon'
+    itemWhoAmI.info='c'
 
     this.items.push(itemWhoAmI);
-//===================================
 
+    //===================================
 
-    let education:ItemComponent;
+    let itemEducation:ItemComponent=new ItemComponent();
 
-    let color2:HTMLGenerator;
-    color2.type='class';
-    color2.name='DivClassNeon';
-    
+    itemEducation.animationEffect='shake'
+    itemEducation.colorEffect='neon'
+    itemEducation.font='icon'
+    itemEducation.info='d'
 
-    let font2:HTMLGenerator;
-    font2.type='class';
-    font2.name='DivClassIcon';
+    this.items.push(itemEducation);
 
-    color2.subDiv.push(font2);
-    
+    //===================================
 
-    let animation2:HTMLGenerator;
-    animation2.type='class';
-    animation2.name='DivClassPulse';
-    animation2.info='d';
+    let itemSkills:ItemComponent=new ItemComponent();
 
-    font2.subDiv.push(animation2);
+    itemSkills.animationEffect='handIcon'
+    itemSkills.colorEffect='neon'
+    itemSkills.font='icon'
+    itemSkills.info='c'
 
-    education.hTMLGenerator=color2;
+    this.items.push(itemSkills);
 
-    this.items.push(education);
+    //===================================
+
+    let itemProjects:ItemComponent=new ItemComponent();
+
+    itemProjects.animationEffect='consoleIcon'
+    itemProjects.colorEffect='neon'
+    itemProjects.font='icon'
+    itemProjects.info='c'
+
+    this.items.push(itemProjects);
+
+    //===================================
+
+    let itemContact:ItemComponent=new ItemComponent();
+
+    itemContact.animationEffect='shake'
+    itemContact.colorEffect='neon'
+    itemContact.font='icon'
+    itemContact.info='6'
+
+    this.items.push(itemContact);
   }
 }

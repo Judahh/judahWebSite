@@ -24,6 +24,8 @@ import { HeroComponent } from './Body/Page/Hero/Hero.component';
 
 import { routing, routedComponents } from './Routing';
 
+import { HTMLGenerator } from './Body/Common/HTMLGenerator/HTMLGenerator';
+
 @NgModule({
   imports: [
     BrowserModule,

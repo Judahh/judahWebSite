@@ -11,15 +11,11 @@ import { HTMLGenerator } from '../HTMLGenerator/HTMLGenerator';
   encapsulation: ViewEncapsulation.None
 })
 export class ItemComponent {
-  @Input() item: Item;
+  @Input() colorEffect: string;
+  @Input() animationEffect: string;
+  @Input() font: string;
+  @Input() info: string;
 
-  public hTMLGenerator:HTMLGenerator;
-  //color = '';
-  //animation = '';
-  //font = '';
-  //info = '';
-
-  getHTML(){
-    return this.hTMLGenerator.getHTML();  
+  public constructor(){ 
   }
 }
