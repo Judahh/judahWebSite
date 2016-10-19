@@ -20,9 +20,7 @@ import { ColorEffectComponent } from './Body/Common/Item/ColorEffect/ColorEffect
 import { FontComponent } from './Body/Common/Item/Font/FontComponent';
 import { InfoComponent } from './Body/Common/Item/Info/InfoComponent';
 import { ItemComponent } from './Body/Common/Item/ItemComponent';
-import { MenuHorizontalLeftComponent } from './Body/Common/MenuHorizontalLeft/MenuHorizontalLeftComponent';
-import { MenuHorizontalCenterComponent } from './Body/Common/MenuHorizontalCenter/MenuHorizontalCenterComponent';
-import { MenuHorizontalRightComponent } from './Body/Common/MenuHorizontalRight/MenuHorizontalRightComponent';
+import { MenuHorizontalComponent } from './Body/Common/MenuHorizontal/MenuHorizontalComponent';
 
 import { HeroComponent } from './Body/Page/Hero/Hero.component';
 
@@ -45,9 +43,7 @@ import { HTMLGenerator } from './Body/Common/HTMLGenerator/HTMLGenerator';
     HeaderComponent,
     PageComponent,
     FooterComponent,
-    MenuHorizontalLeftComponent,
-    MenuHorizontalCenterComponent,
-    MenuHorizontalRightComponent,
+    MenuHorizontalComponent,
     ItemComponent,
     InfoComponent,
     FontComponent,

@@ -1,46 +1,83 @@
+nav{
+    /*display: none;*/
+    /*visibility: hidden;*/
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 45px;
+    -webkit-animation: goDown 1s ease-in-out;
+    -moz-animation: goDown 1s ease-in-out;
+    -ms-animation: goDown 1s ease-in-out;
+    -o-animation: goDown 1s ease-in-out;
+    animation: goDown 1s ease-in-out;
+}
+
 header{
-    background-color: black;
-    height: 2.5em;
 }
 
-header .selected {
-  
+.DivClassMenu{
+    visibility: visible;
+    display: inline;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    float: left;
+
+    -webkit-transition: all 1s;
+    -moz-transition: all 1s;
+    -ms-transition: all 1s;
+    -o-transition: all 1s;
+    transition: all 1s;
 }
 
-header li {
-  cursor: pointer;
-  position: relative;
-  left: 0;
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  white-space: nowrap;
-  float: left;
+.DivClassMenu:hover{
+    width: 100%px;
+
+    -webkit-transition: all 1s;
+    -moz-transition: all 1s;
+    -ms-transition: all 1s;
+    -o-transition: all 1s;
+    transition: all 1s;
 }
-header li.selected:hover {
-  background-color: #792e5c !important;
-  color: white;
+
+.DivClassMenu:hover .DivClassInput{
+    width: 90px;
+    opacity:1;
+
+    -webkit-transition: all 1s;
+    -moz-transition: all 1s;
+    -ms-transition: all 1s;
+    -o-transition: all 1s;
+    transition: all 1s;
 }
-header li:hover {
-  color: #a62e5c;
-  background-color: #DDD;
-  left: .1em;
+
+.DivClassMenu ul ul{
+    opacity:0;
+    visibility: visible;
+    display: block;
+    position: absolute;
+    top:-200px;
+
+    -webkit-transition: all 1s;
+    -moz-transition: all 1s;
+    -ms-transition: all 1s;
+    -o-transition: all 1s;
+    transition: all 1s;
 }
-header .text {
-  position: relative;
-  top: -3px;
+
+.DivClassMenu ul li:hover ul{
+    opacity:1;
+    visibility: visible;
+    display: block;
+    position: absolute;
+    height: 100%;
+    top:40px;
+
+    -webkit-transition: all 1s;
+    -moz-transition: all 1s;
+    -ms-transition: all 1s;
+    -o-transition: all 1s;
+    transition: all 1s;
 }
-header .badge {
-  display: inline-block;
-  font-size: small;
-  color: white;
-  padding: 0.8em 0.7em 0 0.7em;
-  background-color: #a62e5c;
-  line-height: 1em;
-  position: relative;
-  left: -1px;
-  top: -4px;
-  height: 1.8em;
-  margin-right: .8em;
-  border-radius: 4px 0 0 4px;
-}
+
+

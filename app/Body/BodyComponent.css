@@ -104,119 +104,18 @@ button:disabled {
   cursor: auto;
 }
 
-/* Navigation link styles */
-nav a {
-  padding: 5px 10px;
-  text-decoration: none;
-  margin-top: 10px;
-  display: inline-block;
-  background-color: #eee;
-  border-radius: 4px;
-}
-nav a:visited, a:link {
-  color: #607D8B;
-}
-nav a:hover {
-  color: #039be5;
-  background-color: #CFD8DC;
-}
-nav a.router-link-active {
-  color: #039be5;
-}
-
 /* items class */
 .items {
-  margin: 0 0 2em 0;
-  list-style-type: none;
+  margin: 0 0 0 0;
   padding: 0;
-  width: 24em;
-}
-.items li {
-  cursor: pointer;
-  position: relative;
-  left: 0;
-  background-color: #EEE;
-  margin: .5em;
-  padding: .3em 0;
-  height: 1.6em;
-  border-radius: 4px;
-}
-.items li:hover {
-  color: #607D8B;
-  background-color: #DDD;
-  left: .1em;
-}
-.items li.selected:hover {
-  background-color: #BBD8DC;
-  color: white;
-}
-.items .text {
-  position: relative;
-  top: -3px;
-}
-.items {
-  margin: 0 0 2em 0;
-  list-style-type: none;
-  padding: 0;
-  width: 24em;
-}
-.items li {
-  cursor: pointer;
-  position: relative;
-  left: 0;
-  background-color: #EEE;
-  margin: .5em;
-  padding: .3em 0;
-  height: 1.6em;
-  border-radius: 4px;
-}
-.items li:hover {
-  color: #607D8B;
-  background-color: #DDD;
-  left: .1em;
-}
-.items li.selected {
-  background-color: #CFD8DC;
-  color: white;
 }
 
-.items li.selected:hover {
-  background-color: #BBD8DC;
-}
-.items .text {
-  position: relative;
-  top: -3px;
-}
-.items .badge {
-  display: inline-block;
-  font-size: small;
-  color: white;
-  padding: 0.8em 0.7em 0 0.7em;
-  background-color: #607D8B;
-  line-height: 1em;
-  position: relative;
-  left: -1px;
-  top: -4px;
-  height: 1.8em;
-  margin-right: .8em;
-  border-radius: 4px 0 0 4px;
+li{
+  display: block;
+  float: left;
 }
 
-/* everywhere else */
-* {
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-input {
-  line-height: 24px;
-  font-size: 18px;
-  border: 1px solid lightgray;
-  border-left: rgba(35,115,23,0.64) 4px solid;
-  padding: 6px;
-  width: 280px;
-}
-
-page,header,footer{
+ul,page,header,footer{
     float: none;
     display: block;
     width: 100%;
@@ -224,7 +123,6 @@ page,header,footer{
     margin: 0 0 0 0;
 }
 
-ul{
-    margin: 0;
-    padding: 0;
+.DivClassHalf{
+    opacity: 0.5;
 }
