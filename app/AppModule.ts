@@ -12,7 +12,16 @@ import './RXJS/RXJSExtensions';
 import { BodyComponent } from './Body/BodyComponent';
 
 import { HeaderComponent } from './Body/Header/HeaderComponent';
+
 import { PageComponent } from './Body/Page/PageComponent';
+
+import { PageWhoAmIComponent } from './Body/Page/PageWhoAmI/PageWhoAmIComponent';
+import { PageEducationComponent } from './Body/Page/PageEducation/PageEducationComponent';
+import { PageSkillsComponent } from './Body/Page/PageSkills/PageSkillsComponent';
+import { PageProjectsComponent } from './Body/Page/PageProjects/PageProjectsComponent';
+import { PageContactComponent } from './Body/Page/PageContact/PageContactComponent';
+import { PageLanguagesComponent } from './Body/Page/PageLanguages/PageLanguagesComponent';
+
 import { FooterComponent } from './Body/Footer/FooterComponent';
 
 import { AnimationEffectComponent } from './Body/Common/Item/AnimationEffect/AnimationEffectComponent';
@@ -42,6 +51,12 @@ import { HTMLGenerator } from './Body/Common/HTMLGenerator/HTMLGenerator';
     BodyComponent,
     HeaderComponent,
     PageComponent,
+    PageWhoAmIComponent,
+    PageEducationComponent,
+    PageSkillsComponent,
+    PageProjectsComponent,
+    PageContactComponent,
+    PageLanguagesComponent,
     FooterComponent,
     MenuHorizontalComponent,
     ItemComponent,

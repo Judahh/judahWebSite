@@ -17,6 +17,8 @@ export class ItemComponent implements OnInit{
   @Input() animationEffect: string;
   @Input() font: string;
   @Input() info: string;
+  @Input() routerLink: string;
+  @Input() routerLinkActive: string;
 
   public constructor(){ 
     this.initialization(); 
@@ -32,6 +34,7 @@ export class ItemComponent implements OnInit{
     this.colorEffectComponent.colorEffect=this.colorEffect;
     this.colorEffectComponent.font=this.font;
     this.colorEffectComponent.info=this.info;
+    this.routerLinkActive="active"
   }
 
 }

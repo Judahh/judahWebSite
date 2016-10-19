@@ -31,6 +31,7 @@ export class MenuHorizontalComponent implements OnInit{
           case "top":
             let itemWhoAmI:ItemComponent=new ItemComponent();
 
+            itemWhoAmI.routerLink='WhoAmI';
             itemWhoAmI.animationEffect='pulse';
             itemWhoAmI.colorEffect='neon';
             itemWhoAmI.font='icon';
@@ -42,6 +43,7 @@ export class MenuHorizontalComponent implements OnInit{
 
             let itemEducation:ItemComponent=new ItemComponent();
 
+            itemEducation.routerLink='Education';
             itemEducation.animationEffect='shake';
             itemEducation.colorEffect='neon';
             itemEducation.font='icon';
@@ -53,6 +55,7 @@ export class MenuHorizontalComponent implements OnInit{
 
             let itemSkills:ItemComponent=new ItemComponent();
 
+            itemSkills.routerLink='Skills';
             itemSkills.animationEffect='handIcon';
             itemSkills.colorEffect='neon';
             itemSkills.font='icon';
@@ -65,6 +68,7 @@ export class MenuHorizontalComponent implements OnInit{
 
             let itemProjects:ItemComponent=new ItemComponent();
 
+            itemProjects.routerLink='Projects';
             itemProjects.animationEffect='consoleIcon';
             itemProjects.colorEffect='neon';
             itemProjects.font='icon';
@@ -79,6 +83,7 @@ export class MenuHorizontalComponent implements OnInit{
 
             let itemContact:ItemComponent=new ItemComponent();
 
+            itemContact.routerLink='Contact';
             itemContact.animationEffect='shake';
             itemContact.colorEffect='neon';
             itemContact.font='icon';
@@ -89,6 +94,7 @@ export class MenuHorizontalComponent implements OnInit{
           case "bottom":
             let itemLanguages:ItemComponent=new ItemComponent();
 
+            itemLanguages.routerLink='Languages';
             itemLanguages.animationEffect='';
             itemLanguages.colorEffect='neon';
             itemLanguages.font='icon';

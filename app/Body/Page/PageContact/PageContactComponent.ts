@@ -1,21 +1,13 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 
-import { Hero } from './Hero/Hero.model';
-import { HeroComponent } from './Hero/Hero.component';
-import { HeroService } from './Hero/Hero.service';
-
 @Component({
   moduleId: module.id,
-  selector: 'page',
-  styleUrls: ['PageComponent.css'],
-  templateUrl: 'PageComponent.html',
-  entryComponents: [HeroComponent],
-  providers: [HeroService],
+  selector: 'pageContact',
+  styleUrls: ['PageContactComponent.css'],
+  templateUrl: 'PageContactComponent.html',
   encapsulation: ViewEncapsulation.None
 })
-export class PageComponent implements OnInit {
-  heroes: Hero[];
-  selectedHero: Hero;
+export class PageContactComponent implements OnInit {
   heroSubscription:any;
 
   page:string;
@@ -33,10 +25,6 @@ export class PageComponent implements OnInit {
    }
 
   initialization(){
-    this.page="top";
-  }
-  onSelect(hero: Hero){
-    this.selectedHero = hero;
   }
 
   ngOnDestroy() {

@@ -1,13 +1,22 @@
 {
-  "name": "Judahh",
+  "name": "judahh",
   "version": "0.1.0",
+  "main": "App/MainElectron.js",
   "scripts": {
-    "start": "tsc && concurrently \"npm run tsc:w\" \"npm run lite\" ",
+    "start": "tsc && concurrently \"npm run tsc:w\" \"npm run lite\"",
     "lite": "lite-server",
-    "postinstall": "typings install",
     "tsc": "tsc",
     "tsc:w": "tsc -w",
-    "typings": "typings"
+    "typings": "typings",
+    "postinstall": "typings install",
+    "build": "gulp build",
+    "clean": "shx rm -Rf build/",
+    "gulp": "gulp",
+    "electronStart": "electron .",
+    "electron": "electron build/",
+    "try-web": "npm-run-all build lite",
+    "try-desktop": "npm-run-all build electron",
+    "pack-desktop": "electron-packager build/ --all"
   },
   "dependencies": {
     "@angular/common": "~2.0.1",
@@ -32,6 +41,26 @@
     "concurrently": "^3.0.0",
     "lite-server": "^2.2.2",
     "typescript": "^2.0.3",
-    "typings":"^1.4.0"
+    "typings":"^1.4.0",
+
+    "electron-packager": "^7.3.0",
+    "electron": "^1.4.3",
+    "gulp": "^3.9.1",
+    "gulp-if": "^2.0.1",
+    "gulp-postcss": "^6.1.1",
+    "gulp-pug": "^3.0.3",
+    "gulp-typescript": "^2.13.6",
+    "gulp-uglify": "^1.5.4",
+    "lost": "^7.0.3",
+    "npm-run-all": "^2.3.0",
+    "postcss-autoreset": "^1.1.5",
+    "postcss-cli": "^2.5.2",
+    "postcss-cssnext": "^2.7.0",
+    "postcss-nested": "^1.0.0",
+    "postcss-simple-vars": "^3.0.0",
+    "pug": "^2.0.0-beta3",
+    "pug-cli": "^1.0.0-alpha6",
+    "shx": "^0.1.2",
+    "yargs": "^4.8.1"
   }
 }
