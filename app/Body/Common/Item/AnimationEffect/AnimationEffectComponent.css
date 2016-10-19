@@ -1,0 +1,31 @@
+.DivClassPulse:hover{
+    -webkit-animation: pulse 1.5s linear infinite;
+    -moz-animation: pulse 1.5s linear infinite;
+    -ms-animation: pulse 1.5s linear infinite;
+    -o-animation: pulse 1.5s linear infinite;
+    animation: pulse 1.5s linear infinite;
+}
+
+.DivClassShake:hover{
+    -webkit-animation: shake 0.7s linear infinite;
+    -moz-animation: shake 0.7s linear infinite;
+    -ms-animation: shake 0.7s linear infinite;
+    -o-animation: shake 0.7s linear infinite;
+    animation: shake 0.7s linear infinite;
+}
+
+.DivClassSpin:hover{
+    -webkit-animation: spin 2.5s linear infinite;
+    -moz-animation: spin 2.5s linear infinite;
+    -ms-animation: spin 2.5s linear infinite;
+    -o-animation: spin 2.5s linear infinite;
+    animation: spin 2.5s linear infinite;
+}
+
+.DivClassSpin2:hover{
+    -webkit-animation: spin2 2.5s linear infinite;
+    -moz-animation: spin2 2.5s linear infinite;
+    -ms-animation: spin2 2.5s linear infinite;
+    -o-animation: spin2 2.5s linear infinite;
+    animation: spin2 2.5s linear infinite;
+}

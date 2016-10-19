@@ -12,7 +12,7 @@ import {HTMLGenerator} from './../HTMLGenerator/HTMLGenerator'
 })
 export class MenuHorizontalLeftComponent implements OnInit{
 
-  items: ItemComponent[];
+  items: Array<ItemComponent>;
   
   constructor(){
     this.initialization()  
@@ -23,14 +23,14 @@ export class MenuHorizontalLeftComponent implements OnInit{
   }
 
   initialization(){
-    this.items=[];
+    this.items=new Array<ItemComponent>();
 
     let itemWhoAmI:ItemComponent=new ItemComponent();
 
-    itemWhoAmI.animationEffect='pulse'
-    itemWhoAmI.colorEffect='neon'
-    itemWhoAmI.font='icon'
-    itemWhoAmI.info='c'
+    itemWhoAmI.animationEffect='pulse';
+    itemWhoAmI.colorEffect='neon';
+    itemWhoAmI.font='icon';
+    itemWhoAmI.info='c';
 
     this.items.push(itemWhoAmI);
 
@@ -38,10 +38,10 @@ export class MenuHorizontalLeftComponent implements OnInit{
 
     let itemEducation:ItemComponent=new ItemComponent();
 
-    itemEducation.animationEffect='shake'
-    itemEducation.colorEffect='neon'
-    itemEducation.font='icon'
-    itemEducation.info='d'
+    itemEducation.animationEffect='shake';
+    itemEducation.colorEffect='neon';
+    itemEducation.font='icon';
+    itemEducation.info='d';
 
     this.items.push(itemEducation);
 
@@ -49,10 +49,11 @@ export class MenuHorizontalLeftComponent implements OnInit{
 
     let itemSkills:ItemComponent=new ItemComponent();
 
-    itemSkills.animationEffect='handIcon'
-    itemSkills.colorEffect='neon'
-    itemSkills.font='icon'
-    itemSkills.info='c'
+    itemSkills.animationEffect='handIcon';
+    itemSkills.colorEffect='neon';
+    itemSkills.font='icon';
+    itemSkills.info='«';
+    itemSkills.info+='¬';
 
     this.items.push(itemSkills);
 
@@ -60,10 +61,13 @@ export class MenuHorizontalLeftComponent implements OnInit{
 
     let itemProjects:ItemComponent=new ItemComponent();
 
-    itemProjects.animationEffect='consoleIcon'
-    itemProjects.colorEffect='neon'
-    itemProjects.font='icon'
-    itemProjects.info='c'
+    itemProjects.animationEffect='consoleIcon';
+    itemProjects.colorEffect='neon';
+    itemProjects.font='icon';
+    itemProjects.info='i';
+    itemProjects.info+='j';
+    itemProjects.info+='k';
+    itemProjects.info+='l';
 
     this.items.push(itemProjects);
 
@@ -71,10 +75,10 @@ export class MenuHorizontalLeftComponent implements OnInit{
 
     let itemContact:ItemComponent=new ItemComponent();
 
-    itemContact.animationEffect='shake'
-    itemContact.colorEffect='neon'
-    itemContact.font='icon'
-    itemContact.info='6'
+    itemContact.animationEffect='shake';
+    itemContact.colorEffect='neon';
+    itemContact.font='icon';
+    itemContact.info='6';
 
     this.items.push(itemContact);
   }

@@ -15,6 +15,10 @@ import { HeaderComponent } from './Body/Header/HeaderComponent';
 import { PageComponent } from './Body/Page/PageComponent';
 import { FooterComponent } from './Body/Footer/FooterComponent';
 
+import { AnimationEffectComponent } from './Body/Common/Item/AnimationEffect/AnimationEffectComponent';
+import { ColorEffectComponent } from './Body/Common/Item/ColorEffect/ColorEffectComponent';
+import { FontComponent } from './Body/Common/Item/Font/FontComponent';
+import { InfoComponent } from './Body/Common/Item/Info/InfoComponent';
 import { ItemComponent } from './Body/Common/Item/ItemComponent';
 import { MenuHorizontalLeftComponent } from './Body/Common/MenuHorizontalLeft/MenuHorizontalLeftComponent';
 import { MenuHorizontalCenterComponent } from './Body/Common/MenuHorizontalCenter/MenuHorizontalCenterComponent';
@@ -45,6 +49,10 @@ import { HTMLGenerator } from './Body/Common/HTMLGenerator/HTMLGenerator';
     MenuHorizontalCenterComponent,
     MenuHorizontalRightComponent,
     ItemComponent,
+    InfoComponent,
+    FontComponent,
+    ColorEffectComponent,
+    AnimationEffectComponent,
     HeroComponent
   ],
   providers: [
