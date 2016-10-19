@@ -21,13 +21,20 @@ export class HeaderComponent implements OnInit {
   itemsRight: Item[];
   itemsCenter: Item[];
   selectedItem: Item;
-  public string='';
   error: any;
+  position: string;
 
-  constructor(private itemService: ItemService) { }
+  constructor(private itemService: ItemService) {
+    this.initialization();
+   }
 
   ngOnInit() {
     //this.getItems();
+    this.initialization();
+  }
+
+  initialization(){
+    this.position="top";
   }
 
   getItems(){

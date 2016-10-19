@@ -1,0 +1,13 @@
+footer{
+    /*display: none;*/
+    /*visibility: hidden;*/
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 45px;
+    -webkit-animation: goUp 1s ease-in-out;
+    -moz-animation: goUp 1s ease-in-out;
+    -ms-animation: goUp 1s ease-in-out;
+    -o-animation: goUp 1s ease-in-out;
+    animation: goUp 1s ease-in-out;
+}

@@ -12,6 +12,7 @@ import {HTMLGenerator} from './../HTMLGenerator/HTMLGenerator'
 })
 export class MenuHorizontalComponent implements OnInit{
   @Input() class: string;
+  @Input() position: string;
   items: Array<ItemComponent>;
   
   constructor(){
@@ -24,63 +25,102 @@ export class MenuHorizontalComponent implements OnInit{
 
   initialization(){
     this.items=new Array<ItemComponent>();
-    if(this.class=="DivClassLeft"){
-      let itemWhoAmI:ItemComponent=new ItemComponent();
+    switch(this.class){
+      case "DivClassLeft":
+        switch(this.position){
+          case "top":
+            let itemWhoAmI:ItemComponent=new ItemComponent();
 
-      itemWhoAmI.animationEffect='pulse';
-      itemWhoAmI.colorEffect='neon';
-      itemWhoAmI.font='icon';
-      itemWhoAmI.info='c';
+            itemWhoAmI.animationEffect='pulse';
+            itemWhoAmI.colorEffect='neon';
+            itemWhoAmI.font='icon';
+            itemWhoAmI.info='c';
 
-      this.items.push(itemWhoAmI);
+            this.items.push(itemWhoAmI);
 
-      //===================================
+            //===================================
 
-      let itemEducation:ItemComponent=new ItemComponent();
+            let itemEducation:ItemComponent=new ItemComponent();
 
-      itemEducation.animationEffect='shake';
-      itemEducation.colorEffect='neon';
-      itemEducation.font='icon';
-      itemEducation.info='d';
+            itemEducation.animationEffect='shake';
+            itemEducation.colorEffect='neon';
+            itemEducation.font='icon';
+            itemEducation.info='d';
 
-      this.items.push(itemEducation);
+            this.items.push(itemEducation);
 
-      //===================================
+            //===================================
 
-      let itemSkills:ItemComponent=new ItemComponent();
+            let itemSkills:ItemComponent=new ItemComponent();
 
-      itemSkills.animationEffect='handIcon';
-      itemSkills.colorEffect='neon';
-      itemSkills.font='icon';
-      itemSkills.info='«';
-      itemSkills.info+='¬';
+            itemSkills.animationEffect='handIcon';
+            itemSkills.colorEffect='neon';
+            itemSkills.font='icon';
+            itemSkills.info='«';
+            itemSkills.info+='¬';
 
-      this.items.push(itemSkills);
+            this.items.push(itemSkills);
 
-      //===================================
+            //===================================
 
-      let itemProjects:ItemComponent=new ItemComponent();
+            let itemProjects:ItemComponent=new ItemComponent();
 
-      itemProjects.animationEffect='consoleIcon';
-      itemProjects.colorEffect='neon';
-      itemProjects.font='icon';
-      itemProjects.info='i';
-      itemProjects.info+='j';
-      itemProjects.info+='k';
-      itemProjects.info+='l';
+            itemProjects.animationEffect='consoleIcon';
+            itemProjects.colorEffect='neon';
+            itemProjects.font='icon';
+            itemProjects.info='i';
+            itemProjects.info+='j';
+            itemProjects.info+='k';
+            itemProjects.info+='l';
 
-      this.items.push(itemProjects);
+            this.items.push(itemProjects);
 
-      //===================================
+            //===================================
 
-      let itemContact:ItemComponent=new ItemComponent();
+            let itemContact:ItemComponent=new ItemComponent();
 
-      itemContact.animationEffect='shake';
-      itemContact.colorEffect='neon';
-      itemContact.font='icon';
-      itemContact.info='6';
+            itemContact.animationEffect='shake';
+            itemContact.colorEffect='neon';
+            itemContact.font='icon';
+            itemContact.info='6';
 
-      this.items.push(itemContact);
+            this.items.push(itemContact);
+          break;
+          case "bottom":
+            let itemLanguages:ItemComponent=new ItemComponent();
+
+            itemLanguages.animationEffect='';
+            itemLanguages.colorEffect='neon';
+            itemLanguages.font='icon';
+            itemLanguages.info='µ';
+
+            this.items.push(itemLanguages);
+            
+          break;
+        }
+      break;
+
+      case "DivClassCenter":
+        switch(this.position){
+          case "top":
+
+          break;
+          case "bottom":
+
+          break;
+        }
+      break;
+
+      case "DivClassRight":
+        switch(this.position){
+          case "top":
+
+          break;
+          case "bottom":
+
+          break;
+        }
+      break;
     }
   }
 }

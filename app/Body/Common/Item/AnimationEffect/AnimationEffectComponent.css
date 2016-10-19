@@ -30,6 +30,61 @@
     animation: spin2 2.5s linear infinite;
 }
 
+@-webkit-keyframes goUp {
+    from {
+        bottom: -100px;
+        opacity:0;
+    }
+    to {
+        bottom: 0;
+        opacity:1;
+    }
+}
+
+@-moz-keyframes goUp {
+    from {
+        bottom: -100px;
+        opacity:0;
+    }
+    to {
+        bottom: 0;
+        opacity:1;
+    }
+}
+
+@-ms-keyframes goUp {
+    from {
+        bottom: -100px;
+        opacity:0;
+    }
+    to {
+        bottom: 0;
+        opacity:1;
+    }
+}
+
+@-o-keyframes goUp {
+    from {
+        bottom: -100px;
+        opacity:0;
+    }
+    to {
+        bottom: 0;
+        opacity:1;
+    }
+}
+
+@keyframes goUp {
+    from {
+        bottom: -100px;
+        opacity:0;
+    }
+    to {
+        bottom: 0;
+        opacity:1;
+    }
+}
+
 @-webkit-keyframes goDown {
     from {
         top: -100px;
@@ -81,6 +136,116 @@
     }
     to {
         top: 0;
+        opacity:1;
+    }
+}
+
+@-webkit-keyframes goLeft {
+    from {
+        right: -100px;
+        opacity:0;
+    }
+    to {
+        right: 0;
+        opacity:1;
+    }
+}
+
+@-moz-keyframes goLeft {
+    from {
+        right: -100px;
+        opacity:0;
+    }
+    to {
+        right: 0;
+        opacity:1;
+    }
+}
+
+@-ms-keyframes goLeft {
+    from {
+        right: -100px;
+        opacity:0;
+    }
+    to {
+        right: 0;
+        opacity:1;
+    }
+}
+
+@-o-keyframes goLeft {
+    from {
+        right: -100px;
+        opacity:0;
+    }
+    to {
+        right: 0;
+        opacity:1;
+    }
+}
+
+@keyframes goLeft {
+    from {
+        right: -100px;
+        opacity:0;
+    }
+    to {
+        right: 0;
+        opacity:1;
+    }
+}
+
+@-webkit-keyframes goRight {
+    from {
+        left: -100px;
+        opacity:0;
+    }
+    to {
+        left: 0;
+        opacity:1;
+    }
+}
+
+@-moz-keyframes goRight {
+    from {
+        left: -100px;
+        opacity:0;
+    }
+    to {
+        left: 0;
+        opacity:1;
+    }
+}
+
+@-ms-keyframes goRight {
+    from {
+        left: -100px;
+        opacity:0;
+    }
+    to {
+        left: 0;
+        opacity:1;
+    }
+}
+
+@-o-keyframes goRight {
+    from {
+        left: -100px;
+        opacity:0;
+    }
+    to {
+        left: 0;
+        opacity:1;
+    }
+}
+
+@keyframes goRight {
+    from {
+        left: -100px;
+        opacity:0;
+    }
+    to {
+        left: 0;
         opacity:1;
     }
 }
