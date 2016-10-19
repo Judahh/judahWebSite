@@ -1,12 +1,4 @@
 const {app, BrowserWindow} = require('electron')
-import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
-
-import { AppModule } from './AppModule';
-
-
-platformBrowserDynamic().bootstrapModule(AppModule)
-  .then(success => console.log(`Bootstrap success`))
-  .catch(error => console.log(error));
 
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
@@ -14,7 +6,7 @@ let win:any;
 
 function createWindow () {
   // Create the browser window.
-  win = new BrowserWindow({width: 800, height: 600})
+  win = new BrowserWindow({fullscreen:true , frame: true})
 
   // and load the index.html of the app.
   win.loadURL(`file://${__dirname}/../indexElectron.html`)
