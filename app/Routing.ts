@@ -11,18 +11,8 @@ import { PageLanguagesComponent } from './Body/Page/PageLanguages/PageLanguagesC
 
 const appRoutes: Routes = [
   {
-    path: '',
+    path: '**',
     redirectTo: '/WhoAmI',
-    pathMatch: 'full'
-  },
-  {
-    path: 'home',
-    redirectTo: '/WhoAmI',
-    pathMatch: 'full'
-  },
-  {
-    path: 'indexElectron.html',
-    component: PageWhoAmIComponent
   },
   {
     path: 'WhoAmI',

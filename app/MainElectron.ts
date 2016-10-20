@@ -1,12 +1,22 @@
-const {app, BrowserWindow} = require('electron')
+const {app, BrowserWindow, Tray, nativeImage} = require('electron');
 
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
 let win:any;
-
+ 
 function createWindow () {
   // Create the browser window.
-  win = new BrowserWindow({fullscreen:true , frame: true})
+  //var appIcon = new Tray('../favicon.png');
+  var appIcon = nativeImage.createFromPath(__dirname+'/favicon.png');
+
+  win = new BrowserWindow({
+    fullscreen:false,
+    frame: true,
+    useContentSize:true,
+    autoHideMenuBar:true,
+    //icon: __dirname + '/favicon.png'
+    icon: appIcon
+  })
 
   // and load the index.html of the app.
   win.loadURL(`file://${__dirname}/../indexElectron.html`)

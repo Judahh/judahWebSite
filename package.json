@@ -1,5 +1,7 @@
 {
   "name": "judahh",
+  "productName": "Judahh",
+  "author": "Judah",
   "version": "0.1.0",
   "main": "App/MainElectron.js",
   "scripts": {
@@ -13,10 +15,11 @@
     "clean": "shx rm -Rf build/",
     "gulp": "gulp",
     "electronStart": "electron .",
-    "electron": "electron build/",
-    "try-web": "npm-run-all build lite",
-    "try-desktop": "npm-run-all build electron",
-    "pack-desktop": "electron-packager build/ --all"
+    "tryWeb": "npm-run-all build lite",
+    "tryDesktop": "npm-run-all build electron",
+    "packDesktop": "electron-packager . --platform=all --arch=all --overwrite --icon=favicon.ico --ignore=node_modules/electron-*",
+    "packDesktopX64": "electron-packager . --platform=all --arch=x64 --overwrite --icon=favicon.ico --ignore=node_modules/electron-*",
+    "packDesktopWinX64": "electron-packager . --platform=win32 --arch=x64 --overwrite --icon=favicon.ico --ignore=node_modules/electron-*"
   },
   "dependencies": {
     "@angular/common": "~2.0.1",
