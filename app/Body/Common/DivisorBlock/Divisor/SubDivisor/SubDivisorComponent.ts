@@ -9,8 +9,9 @@ import {ItemComponent} from './../../../Item/ItemComponent'
   encapsulation: ViewEncapsulation.None
 })
 export class SubDivisorComponent implements OnInit {
-  @Input() SubDivisorType: string;
+  @Input() subDivisorType: number;
   cascadingStyleSheetsClass:string;
+  item:ItemComponent;
 
   @Input() colorEffect: string;
   @Input() animationEffect: string;
@@ -28,12 +29,32 @@ export class SubDivisorComponent implements OnInit {
   }
 
   initialization(){
-    this.colorEffectComponent=new ColorEffectComponent();
-    this.colorEffectComponent.animationEffect=this.animationEffect;
-    this.colorEffectComponent.colorEffect=this.colorEffect;
-    this.colorEffectComponent.font=this.font;
-    this.colorEffectComponent.info=this.info;
+    this.item.animationEffect=this.animationEffect;
+    this.item.colorEffect=this.colorEffect;
+    this.item.font=this.font;
+    this.item.info=this.info;
     this.routerLinkActive="active"
+
+    switch(this.subDivisorType){
+      case 0:
+        this.cascadingStyleSheetsClass="DivClassSubDivisor";
+      break
+      case 1:
+        this.cascadingStyleSheetsClass="DivClassSubDivisor1";
+      break
+      case 2:
+        this.cascadingStyleSheetsClass="DivClassSubDivisor2";
+      break
+      case 3:
+        this.cascadingStyleSheetsClass="DivClassSubDivisor3";
+      break
+      case 4:
+        this.cascadingStyleSheetsClass="DivClassSubDivisor4";
+      break
+      case 5:
+        this.cascadingStyleSheetsClass="DivClassSubDivisor5";
+      break
+    }
   }
 
   ngOnDestroy() {
