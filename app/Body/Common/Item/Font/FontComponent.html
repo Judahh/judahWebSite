@@ -1,6 +1,4 @@
-<div class="{{cascadingStyleSheetsClass}}">
-    <div class="{{cascadingStyleSheetsClassFontSize}}">
-        <animationEffect animationEffect="{{animationEffect}}" info="{{info}}">
-        </animationEffect>
-    </div>
+<div class="{{cascadingStyleSheetsClass}}" [style]="style()|safeStyle">
+    <animationEffect animationEffect="{{animationEffect}}" info="{{info}}">
+    </animationEffect>
 </div>

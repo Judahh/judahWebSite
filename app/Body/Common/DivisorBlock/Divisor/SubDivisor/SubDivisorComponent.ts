@@ -1,5 +1,6 @@
 import { Component, Input, OnInit, ViewEncapsulation } from '@angular/core';
 import {ItemComponent} from './../../../Item/ItemComponent'
+import {FontComponent} from './../../../Item/Font/FontComponent'
 
 @Component({
   moduleId: module.id,
@@ -11,14 +12,17 @@ import {ItemComponent} from './../../../Item/ItemComponent'
 export class SubDivisorComponent implements OnInit {
   @Input() subDivisorType: number;
   cascadingStyleSheetsClass:string;
-  item:ItemComponent;
+  content:any;
 
+  @Input() type: string;
   @Input() colorEffect: string;
   @Input() animationEffect: string;
   @Input() font: string;
   @Input() info: string;
-  @Input() routerLink: string;
-  @Input() routerLinkActive: string;
+  @Input() verticalAlign: string;
+  @Input() width: string;
+  @Input() size: number;
+  @Input() padding: number[];
 
   ngOnInit() {
     this.initialization();
@@ -29,11 +33,34 @@ export class SubDivisorComponent implements OnInit {
   }
 
   initialization(){
-    this.item.animationEffect=this.animationEffect;
-    this.item.colorEffect=this.colorEffect;
-    this.item.font=this.font;
-    this.item.info=this.info;
-    this.routerLinkActive="active"
+    switch(this.type){
+      case "item":
+        this.content= new ItemComponent();
+
+        this.content.animationEffect=this.animationEffect;
+        this.content.colorEffect=this.colorEffect;
+        this.content.font=this.font;
+        this.content.info=this.info;
+        this.content.verticalAlign=this.verticalAlign;
+        this.content.width=this.width;
+        this.content.size=this.size;
+        this.content.padding=this.padding;
+      break;
+
+      case "font":
+        this.content= new FontComponent();
+
+        this.content.animationEffect=this.animationEffect;
+        this.content.colorEffect=this.colorEffect;
+        this.content.font=this.font;
+        this.content.info=this.info;
+        this.content.verticalAlign=this.verticalAlign;
+        this.content.width=this.width;
+        this.content.size=this.size;
+        this.content.padding=this.padding;
+      break;
+    }
+    
 
     switch(this.subDivisorType){
       case 0:

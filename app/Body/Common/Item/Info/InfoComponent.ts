@@ -9,7 +9,6 @@ import { Component, Input, OnInit, ViewEncapsulation } from '@angular/core';
 })
 export class InfoComponent implements OnInit{
   @Input() info: string;
-  cascadingStyleSheetsClass:string;
 
   public constructor(){
     this.initialization(); 

@@ -1,4 +1,27 @@
 <div class="{{cascadingStyleSheetsClass}}">
-    <item routerLink="/{{routerLink}}" routerLinkActive="{{routerLinkActive}}" colorEffect="{{colorEffect}}" animationEffect="{{animationEffect}}" font="{{font}}" info="{{info}}">
+    <item
+        *ngIf="type=='item'"
+        type="{{type}}"
+        colorEffect="{{colorEffect}}"
+        animationEffect="{{animationEffect}}"
+        font="{{font}}"
+        info="{{info}}"
+        verticalAlign="{{verticalAlign}}"
+        width="{{width}}"
+        size="{{size}}"
+        padding="{{padding}}">
     </item>
+
+    <font
+        *ngIf="type=='font'"
+        type="{{type}}"
+        colorEffect="{{colorEffect}}"
+        animationEffect="{{animationEffect}}"
+        font="{{font}}"
+        info="{{info}}"
+        verticalAlign="{{verticalAlign}}"
+        width="{{width}}"
+        size="{{size}}"
+        padding="{{padding}}">
+    </font>
 </div>

@@ -40,11 +40,19 @@ import { routing, routedComponents } from './Routing';
 import { HTMLGenerator } from './Body/Common/HTMLGenerator/HTMLGenerator';
 
 
-@Pipe({ name: 'safe' })
-export class SafePipe implements PipeTransform {
+@Pipe({ name: 'safeUrl' })
+export class SafeUrlPipe implements PipeTransform {
   constructor(private sanitizer: DomSanitizer) {}
   transform(url:any) {
     return this.sanitizer.bypassSecurityTrustResourceUrl(url);
+  }
+}
+
+@Pipe({ name: 'safeStyle' })
+export class SafeStylePipe implements PipeTransform {
+  constructor(private sanitizer: DomSanitizer) {}
+  transform(style:any) {
+    return this.sanitizer.bypassSecurityTrustStyle(style);
   }
 }
 
@@ -89,7 +97,8 @@ let config: ResponsiveConfigInterface = {
     ColorEffectComponent,
     AnimationEffectComponent,
     HeroComponent,
-    SafePipe
+    SafeUrlPipe,
+    SafeStylePipe
   ],
   providers: [
     ItemService//,
