@@ -10,10 +10,10 @@ import {FontComponent} from './../../../Item/Font/FontComponent'
   encapsulation: ViewEncapsulation.None
 })
 export class SubDivisorComponent implements OnInit {
-  @Input() subDivisorType: number;
   cascadingStyleSheetsClass:string;
   content:any;
 
+  @Input() subDivisorType: number;
   @Input() type: string;
   @Input() colorEffect: string;
   @Input() animationEffect: string;
@@ -63,6 +63,7 @@ export class SubDivisorComponent implements OnInit {
     
 
     switch(this.subDivisorType){
+      default:
       case 0:
         this.cascadingStyleSheetsClass="DivClassSubDivisor";
       break
