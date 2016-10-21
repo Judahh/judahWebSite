@@ -8,11 +8,34 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
   encapsulation: ViewEncapsulation.None
 })
 export class PageWhoAmIComponent implements OnInit {
-  heroSubscription:any;
+  videoLink:string="https://www.youtube.com/embed/Rzu6zeLSWq8";
+  videoWidth:number=420;
+  videoHeight:number=315;
+  myPicturePath:string="App/Body/Images/Pictures/10269429_761463870605004_4764397887348042944_n.jpg";
 
-  page:string;
+  whoAmIText(){
+    return "";
+  }
 
-  //constructor(private heroService: HeroService) { }
+  name(){
+    return ""; 
+  }
+
+  personalStatement(){
+    return "";
+  }
+  
+  talkingAboutMe(){
+    return "";
+  }
+
+  thinkDifferentTitle(){
+    return "";
+  }
+
+  thinkDifferent(){
+    return "";
+  }
 
   ngOnInit() {
     //this.heroes=this.heroSubscription.getHeroes();

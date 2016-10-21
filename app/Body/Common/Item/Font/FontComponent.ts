@@ -10,8 +10,10 @@ import { Component, Input, OnInit, ViewEncapsulation } from '@angular/core';
 export class FontComponent implements OnInit{
   @Input() animationEffect: string;
   @Input() font: string;
+  @Input() size: string;
   @Input() info: string;
   cascadingStyleSheetsClass:string;
+  cascadingStyleSheetsClassFontSize:string;
 
   public constructor(){
     this.initialization(); 
@@ -24,6 +26,15 @@ export class FontComponent implements OnInit{
   initialization(){
     if(this.font=="icon"){
       this.cascadingStyleSheetsClass="DivClassIcon";
+    }
+    switch(this.size){
+      case "big":
+        this.cascadingStyleSheetsClassFontSize="DivClassFontBig";
+      break;
+      case "medium":
+      default:
+        this.cascadingStyleSheetsClassFontSize="DivClassFontMedium";
+      break;
     }
   }
 }

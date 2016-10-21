@@ -9,7 +9,7 @@
 
 @font-face {
     font-family: "FontIconSocialMedia";
-    src: url("App/Body/Fonts/Socialico.otf");
+    src: url("App/Body/Fonts/Brands/Socialico.otf");
     /*src: url("../../../../../../Fonts/Socialico.woff") format('woff');
     src: url("../../../../../../Fonts/Socialico.ttf")  format(‘truetype’);*/
     font-weight: normal;
@@ -18,7 +18,7 @@
 
 @font-face {
     font-family: "FontIconSocialMedia2";
-    src: url("App/Body/Fonts/SocialicoPlus.otf");
+    src: url("App/Body/Fonts/Brands/SocialicoPlus.otf");
     /*src: url("../../../../../../Fonts/SocialicoPlus.woff") format('woff');
     src: url("../../../../../../Fonts/SocialicoPlus.ttf")  format(‘truetype’);*/
     font-weight: normal;
@@ -27,8 +27,8 @@
 
 @font-face {
     font-family: "FontIconSocialMedia3";
-    src: url("App/Body/Fonts/MonoSocialIconsFont-1.10.otf");
-    src: url("App/Body/Fonts/MonoSocialIconsFont-1.10.woff") format('woff');
+    src: url("App/Body/Fonts/Brands/MonoSocialIconsFont-1.10.otf");
+    src: url("App/Body/Fonts/Brands/MonoSocialIconsFont-1.10.woff") format('woff');
     /*src: url("../../../../../../Fonts/SocialicoPlus.ttf")  format(‘truetype’);*/
     font-weight: normal;
     font-style: normal;
@@ -36,8 +36,8 @@
 
 @font-face {
     font-family: "FontIconSocialMedia4";
-    src: url("App/Body/Fonts/pictonic.ttf");
-    src: url("App/Body/Fonts/pictonic.woff") format('woff');
+    src: url("App/Body/Fonts/Brands/pictonic.ttf");
+    src: url("App/Body/Fonts/Brands/pictonic.woff") format('woff');
     /*src: url("../../../../../../Fonts/SocialicoPlus.ttf")  format(‘truetype’);*/
     font-weight: normal;
     font-style: normal;
@@ -54,8 +54,8 @@
 
 @font-face {
     font-family: "FontFuturisticI";
-    src: url("App/Body/Fonts/FuturisticFontI.otf");
-    src: url("App/Body/Fonts/FuturisticFontI.woff") format('woff');
+    src: url("App/Body/Fonts/Letters/FuturisticFontI.otf");
+    src: url("App/Body/Fonts/Letters/FuturisticFontI.woff") format('woff');
     /*src: url("../../../../../../Fonts/FuturisticFontI.ttf")  format(‘truetype’);*/
     font-weight: normal;
     font-style: normal;
@@ -63,8 +63,8 @@
 
 @font-face {
     font-family: "FontFuturisticII";
-    src: url("App/Body/Fonts/FuturisticFontII.otf");
-    src: url("App/Body/Fonts/FuturisticFontII.woff") format('woff');
+    src: url("App/Body/Fonts/Letters/FuturisticFontII.otf");
+    src: url("App/Body/Fonts/Letters/FuturisticFontII.woff") format('woff');
     /*src: url("../../../../../../Fonts/FuturisticFontII.ttf")  format(‘truetype’);*/
     font-weight: normal;
     font-style: normal;
@@ -72,7 +72,7 @@
 
 @font-face {
     font-family: "OpenSans-Light";
-    src: url("App/Body/Fonts/OpenSans-Light.ttf")  format('truetype');
+    src: url("App/Body/Fonts/Letters/OpenSans-Light.ttf")  format('truetype');
     font-weight: normal;
     font-style: normal;
 }

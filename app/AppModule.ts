@@ -1,7 +1,9 @@
-import { NgModule,CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA, Pipe, PipeTransform } from '@angular/core';
+import { BrowserModule, DomSanitizer } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
+
+//import { ResponsiveModule, ResponsiveConfig, ResponsiveConfigInterface } from 'ng2-responsive';
 
 import { ItemService } from './Body/Common/Item/ItemService'
 
@@ -37,12 +39,34 @@ import { routing, routedComponents } from './Routing';
 
 import { HTMLGenerator } from './Body/Common/HTMLGenerator/HTMLGenerator';
 
+
+@Pipe({ name: 'safe' })
+export class SafePipe implements PipeTransform {
+  constructor(private sanitizer: DomSanitizer) {}
+  transform(url:any) {
+    return this.sanitizer.bypassSecurityTrustResourceUrl(url);
+  }
+}
+
+/*
+let config: ResponsiveConfigInterface = {
+    breakPoints: {
+            xs: {max: 600},
+            sm: {min: 0, max: 700},
+            md: {min: 0, max: 850},
+            lg: {min: 0, max: 1919},
+            xl: {min: 0}
+    },
+    debounceTime: 100 // allow to debounce checking timer
+};*/
+
 @NgModule({
   imports: [
     BrowserModule,
     FormsModule,
     routing,
     HttpModule,
+    //ResponsiveModule,
     InMemoryWebApiModule.forRoot(InMemoryDataService, { delay: 600 })
   ],
   //schemas:
@@ -64,11 +88,14 @@ import { HTMLGenerator } from './Body/Common/HTMLGenerator/HTMLGenerator';
     FontComponent,
     ColorEffectComponent,
     AnimationEffectComponent,
-    HeroComponent
+    HeroComponent,
+    SafePipe
   ],
   providers: [
-    ItemService
+    ItemService//,
+    //{provide: ResponsiveConfig, useFactory: () => new ResponsiveConfig(config) }
   ],
   bootstrap: [BodyComponent]
 })
+
 export class AppModule { }

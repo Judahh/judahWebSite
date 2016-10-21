@@ -1,3 +1,64 @@
-<div class="DivClassHalf">
+<div class="DivClassProjectTitle">
+    <div class="DivClassText">
+        <div class="DivClassProjectTitleText">
+            <div class="DivClassTitleTextSize">
+                <div *xl class="DivClassTextWhoAmI">
+                    {{whoAmIText()}}
+                </div>
+                <div *sm class="DivClassTextWhoAmISizeSm">
+                    {{whoAmIText()}}
+                </div>
+            </div>
+        </div>
+        <div class="DivClassProjectTitleText2">
+            <div class="DivClassTitleTextSize">
+                <div class="DivClassTextName" itemprp="">
+                    {{name()}}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
+<div class="DivClassTableCodeWrap">
+    <div class="DivClassFullBlock">
+        <div class="DivClassMyPicture">
+            <img class="ImgClassPicture" src="{{myPicturePath}}"/>
+        </div>
+        <div class="DivClassTextWhoAmI">
+            <div class="DivClassTextBasic">
+                <div class="DivClassTextTalkingAboutMe">
+                    {{personalStatement()}}
+                    {{talkingAboutMe()}}
+                </div>
+            </div>
+        </div>
+        <div class="DivTextWhoAmI">
+            <div class="DivClassText">
+                <div class="DivClassProjectTitleText">
+                    <div class="DivClassTitleTextSize">
+                        <div class="DivClassTextThinkDifferentTitle">
+                            {{thinkDifferentTitle()}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="DivClassFullBlock">
+        <div class="DivClassVideo">
+            <div class="DivClassVideoWrapper">
+                <iframe width="{{videoWidth}}" height="{{videoHeight}}" [src]="videoLink|safe" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+    <div class="DivClassFullBlock">
+        <div class="DivClassTextWhoAmI2">
+            <div class="DivClassTextBasic">
+                <div class="DivClassTextThinkDifferent">
+                    {{thinkDifferent()}}
+                </div>
+            </div>
+        </div>
+    </div>
 </div>

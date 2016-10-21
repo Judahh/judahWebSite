@@ -11,10 +11,6 @@ import { PageLanguagesComponent } from './Body/Page/PageLanguages/PageLanguagesC
 
 const appRoutes: Routes = [
   {
-    path: '**',
-    redirectTo: '/WhoAmI',
-  },
-  {
     path: 'WhoAmI',
     component: PageWhoAmIComponent
   },
@@ -37,7 +33,11 @@ const appRoutes: Routes = [
   {
     path: 'Languages',
     component: PageLanguagesComponent
-  }
+  },
+  {
+    path: '**',
+    redirectTo: '/WhoAmI',
+  },
 ];
 
 export const routing = RouterModule.forRoot(appRoutes);

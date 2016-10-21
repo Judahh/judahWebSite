@@ -63,8 +63,19 @@ export class AnimationEffectComponent implements OnInit{
         this.cascadingStyleSheetsSubClasses.push("DivClassHandIconOn");  
       break;
 
+      case "multiwayIcon":
+      case "brainIcon":
+        this.cascadingStyleSheetsSubClass="DivClassHandIcon";
+        this.cascadingStyleSheetsSubClasses.push("DivClassHandIconOff");
+        this.cascadingStyleSheetsSubClasses.push("DivClassHandIconOn");
+      break;
+
+      case "teamworkIcon":
+      case "languagesIcon":
+      case "leadershipIcon":
+      break;
+
       case "consoleIcon":
-        this.cascadingStyleSheetsClass="";  
         this.cascadingStyleSheetsSubClass="DivClassConsoleIcon";
         this.cascadingStyleSheetsSubClasses.push("DivClassConsoleIconOff");
         this.cascadingStyleSheetsSubClasses.push("DivClassConsoleIconOn");
