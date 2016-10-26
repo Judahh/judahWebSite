@@ -105,7 +105,6 @@
     "pug-cli": "^1.0.0-alpha6",
     "shx": "^0.1.2",
     "typescript": "^2.0.3",
-    "typings": "^1.4.0",
     "yargs": "^4.8.1"
   }
 }
