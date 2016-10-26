@@ -1,0 +1,15 @@
+{
+  "manifest_version": 2,
+  "name": "Judahh",
+  "version": "1",
+  "icons": {
+    "16": "favicon.png"
+  },
+  "permissions": [],
+  "app": {
+    "background": {
+      "scripts": ["Background.js"]
+    }
+  },
+  "minimum_chrome_version": "28"
+}
