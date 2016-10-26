@@ -5,11 +5,13 @@
   "icons": {
     "16": "favicon.png"
   },
-  "permissions": [],
+  "permissions": [ "<all_urls>", "*://*/*" ],
   "app": {
     "background": {
       "scripts": ["Background.js"]
     }
   },
+  "sandbox": { "pages": [ "index.html" ] },
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
   "minimum_chrome_version": "28"
 }
