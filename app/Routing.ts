@@ -1,38 +1,38 @@
 import { Routes, RouterModule } from '@angular/router';
 
-import { PageComponent } from './Body/Page/PageComponent';
+import { ComponentPage } from './View/Body/Page/ComponentPage';
 
-import { PageWhoAmIComponent } from './Body/Page/PageWhoAmI/PageWhoAmIComponent';
-import { PageEducationComponent } from './Body/Page/PageEducation/PageEducationComponent';
-import { PageSkillsComponent } from './Body/Page/PageSkills/PageSkillsComponent';
-import { PageProjectsComponent } from './Body/Page/PageProjects/PageProjectsComponent';
-import { PageContactComponent } from './Body/Page/PageContact/PageContactComponent';
-import { PageLanguagesComponent } from './Body/Page/PageLanguages/PageLanguagesComponent';
+import { ComponentPageWhoAmI } from './View/Body/Page/PageWhoAmI/ComponentPageWhoAmI';
+import { ComponentPageEducation } from './View/Body/Page/PageEducation/ComponentPageEducation';
+import { ComponentPageSkills } from './View/Body/Page/PageSkills/ComponentPageSkills';
+import { ComponentPageProjects } from './View/Body/Page/PageProjects/ComponentPageProjects';
+import { ComponentPageContact } from './View/Body/Page/PageContact/ComponentPageContact';
+import { ComponentPageLanguages } from './View/Body/Page/PageLanguages/ComponentPageLanguages';
 
 const appRoutes: Routes = [
   {
     path: 'WhoAmI',
-    component: PageWhoAmIComponent
+    component: ComponentPageWhoAmI
   },
   {
     path: 'Education',
-    component: PageEducationComponent
+    component: ComponentPageEducation
   },
   {
     path: 'Skills',
-    component: PageSkillsComponent
+    component: ComponentPageSkills
   },
   {
     path: 'Projects',
-    component: PageProjectsComponent
+    component: ComponentPageProjects
   },
   {
     path: 'Contact',
-    component: PageContactComponent
+    component: ComponentPageContact
   },
   {
     path: 'Languages',
-    component: PageLanguagesComponent
+    component: ComponentPageLanguages
   },
   {
     path: '**',
@@ -44,10 +44,10 @@ export const routing = RouterModule.forRoot(appRoutes);
 
 export const routedComponents = 
   [
-    PageWhoAmIComponent,
-    PageEducationComponent,
-    PageSkillsComponent,
-    PageProjectsComponent,
-    PageContactComponent,
-    PageLanguagesComponent
+    ComponentPageWhoAmI,
+    ComponentPageEducation,
+    ComponentPageSkills,
+    ComponentPageProjects,
+    ComponentPageContact,
+    ComponentPageLanguages,
   ];

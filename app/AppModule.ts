@@ -5,40 +5,39 @@ import { HttpModule } from '@angular/http';
 
 //import { ResponsiveModule, ResponsiveConfig, ResponsiveConfigInterface } from 'ng2-responsive';
 
-import { ItemService } from './Body/Common/Item/ItemService'
+//import { ItemService } from './Body/Common/Item/ItemService'
 
 import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService } from './in-memory-data.service';
 
 import './RXJS/RXJSExtensions';
-import { BodyComponent } from './Body/BodyComponent';
+import { ComponentBody } from './View/Body/ComponentBody';
 
-import { HeaderComponent } from './Body/Header/HeaderComponent';
+import { HeaderComponent } from './View/Body/Header/HeaderComponent';
 
-import { PageComponent } from './Body/Page/PageComponent';
+import { ComponentPage } from './View/Body/Page/ComponentPage';
 
-import { PageWhoAmIComponent } from './Body/Page/PageWhoAmI/PageWhoAmIComponent';
-import { PageEducationComponent } from './Body/Page/PageEducation/PageEducationComponent';
-import { PageSkillsComponent } from './Body/Page/PageSkills/PageSkillsComponent';
-import { PageProjectsComponent } from './Body/Page/PageProjects/PageProjectsComponent';
-import { PageContactComponent } from './Body/Page/PageContact/PageContactComponent';
-import { PageLanguagesComponent } from './Body/Page/PageLanguages/PageLanguagesComponent';
+import { ComponentPageWhoAmI } from './View/Body/Page/PageWhoAmI/ComponentPageWhoAmI';
+import { ComponentPageEducation } from './View/Body/Page/PageEducation/ComponentPageEducation';
+import { ComponentPageSkills } from './View/Body/Page/PageSkills/ComponentPageSkills';
+import { ComponentPageProjects } from './View/Body/Page/PageProjects/ComponentPageProjects';
+import { ComponentPageContact } from './View/Body/Page/PageContact/ComponentPageContact';
+import { ComponentPageLanguages } from './View/Body/Page/PageLanguages/ComponentPageLanguages';
 
-import { FooterComponent } from './Body/Footer/FooterComponent';
+import { FooterComponent } from './View/Body/Footer/FooterComponent';
 
-import { AnimationEffectComponent } from './Body/Common/Item/AnimationEffect/AnimationEffectComponent';
-import { ColorEffectComponent } from './Body/Common/Item/ColorEffect/ColorEffectComponent';
-import { FontComponent } from './Body/Common/Item/Font/FontComponent';
-import { InfoComponent } from './Body/Common/Item/Info/InfoComponent';
-import { ItemComponent } from './Body/Common/Item/ItemComponent';
-import { MenuHorizontalComponent } from './Body/Common/MenuHorizontal/MenuHorizontalComponent';
+import { AnimationEffectComponent } from './View/Body/Common/Item/AnimationEffect/AnimationEffectComponent';
+import { ColorEffectComponent } from './View/Body/Common/Item/ColorEffect/ColorEffectComponent';
+import { FontComponent } from './View/Body/Common/Item/Font/FontComponent';
+import { InfoComponent } from './View/Body/Common/Item/Info/InfoComponent';
+import { ItemComponent } from './View/Body/Common/Item/ItemComponent';
+import { MenuHorizontalComponent } from './View/Body/Common/MenuHorizontal/MenuHorizontalComponent';
 
-import { HeroComponent } from './Body/Page/Hero/Hero.component';
+import { HeroComponent } from './View/Body/Page/Hero/Hero.component';
 
 import { routing, routedComponents } from './Routing';
 
-import { HTMLGenerator } from './Body/Common/HTMLGenerator/HTMLGenerator';
-
+import { HTMLGenerator } from './Core/HTMLGenerator/HTMLGenerator';
 
 @Pipe({ name: 'safeUrl' })
 export class SafeUrlPipe implements PipeTransform {
@@ -80,15 +79,15 @@ let config: ResponsiveConfigInterface = {
   //schemas:
   //[CUSTOM_ELEMENTS_SCHEMA],
   declarations: [
-    BodyComponent,
+    ComponentBody,
     HeaderComponent,
-    PageComponent,
-    PageWhoAmIComponent,
-    PageEducationComponent,
-    PageSkillsComponent,
-    PageProjectsComponent,
-    PageContactComponent,
-    PageLanguagesComponent,
+    ComponentPage,
+    ComponentPageWhoAmI,
+    ComponentPageEducation,
+    ComponentPageSkills,
+    ComponentPageProjects,
+    ComponentPageContact,
+    ComponentPageLanguages,
     FooterComponent,
     MenuHorizontalComponent,
     ItemComponent,
@@ -101,10 +100,10 @@ let config: ResponsiveConfigInterface = {
     SafeStylePipe
   ],
   providers: [
-    ItemService//,
+    //ItemService//,
     //{provide: ResponsiveConfig, useFactory: () => new ResponsiveConfig(config) }
   ],
-  bootstrap: [BodyComponent]
+  bootstrap: [ComponentBody]
 })
 
 export class AppModule { }
