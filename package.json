@@ -35,7 +35,6 @@
     "lite": "lite-server",
     "tsc": "tsc",
     "tsc:w": "tsc -w",
-    "typings": "typings",
     "postinstall": "typings install",
     "build": "gulp build",
     "clean": "shx rm -Rf build/",
