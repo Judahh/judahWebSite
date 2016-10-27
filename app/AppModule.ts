@@ -5,7 +5,7 @@ import { HttpModule, JsonpModule } from '@angular/http';
 
 //import { ResponsiveModule, ResponsiveConfig, ResponsiveConfigInterface } from 'ng2-responsive';
 
-import { ItemService } from './Core/Services/ItemService'
+import { ServiceJSON } from './Core/Services/ServiceJSON'
 
 import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService } from './in-memory-data.service';
@@ -101,7 +101,7 @@ let config: ResponsiveConfigInterface = {
     SafeStylePipe
   ],
   providers: [
-    ItemService//,
+    ServiceJSON//,
     //{provide: ResponsiveConfig, useFactory: () => new ResponsiveConfig(config) }
   ],
   bootstrap: [ComponentBody]
