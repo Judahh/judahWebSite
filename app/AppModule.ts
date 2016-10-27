@@ -13,7 +13,7 @@ import { InMemoryDataService } from './in-memory-data.service';
 import './RXJS/RXJSExtensions';
 import { ComponentBody } from './View/Body/ComponentBody';
 
-import { HeaderComponent } from './View/Body/Header/HeaderComponent';
+import { ComponentHeader } from './View/Body/Header/ComponentHeader';
 
 import { ComponentPage } from './View/Body/Page/ComponentPage';
 
@@ -24,14 +24,14 @@ import { ComponentPageProjects } from './View/Body/Page/PageProjects/ComponentPa
 import { ComponentPageContact } from './View/Body/Page/PageContact/ComponentPageContact';
 import { ComponentPageLanguages } from './View/Body/Page/PageLanguages/ComponentPageLanguages';
 
-import { FooterComponent } from './View/Body/Footer/FooterComponent';
+import { ComponentFooter } from './View/Body/Footer/ComponentFooter';
 
-import { AnimationEffectComponent } from './View/Body/Common/Item/AnimationEffect/AnimationEffectComponent';
-import { ColorEffectComponent } from './View/Body/Common/Item/ColorEffect/ColorEffectComponent';
-import { FontComponent } from './View/Body/Common/Item/Font/FontComponent';
-import { InfoComponent } from './View/Body/Common/Item/Info/InfoComponent';
-import { ItemComponent } from './View/Body/Common/Item/ItemComponent';
-import { MenuHorizontalComponent } from './View/Body/Common/MenuHorizontal/MenuHorizontalComponent';
+import { ComponentAnimationEffect } from './View/Body/Common/Item/AnimationEffect/ComponentAnimationEffect';
+import { ComponentColorEffect } from './View/Body/Common/Item/ColorEffect/ComponentColorEffect';
+import { ComponentFont } from './View/Body/Common/Item/Font/ComponentFont';
+import { ComponentInfo } from './View/Body/Common/Item/Info/ComponentInfo';
+import { ComponentItem } from './View/Body/Common/Item/ComponentItem';
+import { ComponentMenuHorizontal } from './View/Body/Common/MenuHorizontal/ComponentMenuHorizontal';
 
 import { HeroComponent } from './View/Body/Page/Hero/Hero.component';
 
@@ -80,7 +80,7 @@ let config: ResponsiveConfigInterface = {
   //[CUSTOM_ELEMENTS_SCHEMA],
   declarations: [
     ComponentBody,
-    HeaderComponent,
+    ComponentHeader,
     ComponentPage,
     ComponentPageWhoAmI,
     ComponentPageEducation,
@@ -88,13 +88,13 @@ let config: ResponsiveConfigInterface = {
     ComponentPageProjects,
     ComponentPageContact,
     ComponentPageLanguages,
-    FooterComponent,
-    MenuHorizontalComponent,
-    ItemComponent,
-    InfoComponent,
-    FontComponent,
-    ColorEffectComponent,
-    AnimationEffectComponent,
+    ComponentFooter,
+    ComponentMenuHorizontal,
+    ComponentItem,
+    ComponentInfo,
+    ComponentFont,
+    ComponentColorEffect,
+    ComponentAnimationEffect,
     HeroComponent,
     SafeUrlPipe,
     SafeStylePipe

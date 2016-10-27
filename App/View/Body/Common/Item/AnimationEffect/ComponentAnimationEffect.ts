@@ -9,7 +9,7 @@ import { Utils } from './../../../../../Core/Utils'
   templateUrl: Utils.getFileHTML(Utils.getFileName(__filename)),
   encapsulation: ViewEncapsulation.None
 })
-export class AnimationEffectComponent implements OnInit{
+export class ComponentAnimationEffect implements OnInit{
   @Input() animationEffect: string;
   @Input() info: string;
   cascadingStyleSheetsClass:string;

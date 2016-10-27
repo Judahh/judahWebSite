@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 
-import { Item } from '../Common/Item/ItemModel';
+import { ModelItem } from '../Common/Item/ModelItem';
 //import { ItemService } from '../Common/Item/ItemService';
 
 import { Observable } from 'rxjs/Observable';
@@ -16,11 +16,11 @@ import { Utils } from './../../../Core/Utils'
   encapsulation: ViewEncapsulation.None
 })
 
-export class HeaderComponent implements OnInit {
-  itemsLeft: Item[];
-  itemsRight: Item[];
-  itemsCenter: Item[];
-  selectedItem: Item;
+export class ComponentHeader implements OnInit {
+  itemsLeft: ModelItem[];
+  itemsRight: ModelItem[];
+  itemsCenter: ModelItem[];
+  selectedItem: ModelItem;
   error: any;
   position: string;
 
@@ -47,7 +47,7 @@ export class HeaderComponent implements OnInit {
     //this.itemService.get('Header/Item','Center').subscribe(items => this.itemsCenter = items);
   }
 
-  onSelect(item: Item){
+  onSelect(item: ModelItem){
     this.selectedItem = item;
   }
 

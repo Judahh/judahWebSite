@@ -1,8 +1,8 @@
 import { Component, Input, OnInit, ViewEncapsulation } from '@angular/core';
-import { ItemComponent } from './../Item/ItemComponent'
-import { FontComponent } from './../Item/Font/FontComponent'
-import { SubDivisorComponent } from './Divisor/SubDivisor/SubDivisorComponent'
-import { DivisorComponent } from './Divisor/DivisorComponent'
+import { ComponentItem } from './../Item/ComponentItem'
+import { ComponentFont } from './../Item/Font/ComponentFont'
+import { ComponentSubDivisor } from './Divisor/SubDivisor/ComponentSubDivisor'
+import { ComponentDivisor } from './Divisor/ComponentDivisor'
 
 import { Utils } from './../../../../Core/Utils'
 
@@ -13,13 +13,13 @@ import { Utils } from './../../../../Core/Utils'
   templateUrl: Utils.getFileHTML(Utils.getFileName(__filename)),
   encapsulation: ViewEncapsulation.None
 })
-export class DivisorBlockComponent implements OnInit {
+export class ComponentDivisorBlock implements OnInit {
   @Input() type: string;
-  subDivisor: SubDivisorComponent;
-  divisor: DivisorComponent;
-  items: Array<ItemComponent>;
-  titles: Array<FontComponent>;
-  texts: Array<FontComponent>;
+  subDivisor: ComponentSubDivisor;
+  divisor: ComponentDivisor;
+  items: Array<ComponentItem>;
+  titles: Array<ComponentFont>;
+  texts: Array<ComponentFont>;
   cascadingStyleSheetsClass:string;
 
   ngOnInit() {
@@ -36,14 +36,14 @@ export class DivisorBlockComponent implements OnInit {
     switch(this.type){
       case "skills":
         
-        this.items=new Array<ItemComponent>();
-        this.titles=new Array<FontComponent>();
-        this.texts=new Array<FontComponent>();
+        this.items=new Array<ComponentItem>();
+        this.titles=new Array<ComponentFont>();
+        this.texts=new Array<ComponentFont>();
 
         
-        let itemIntelligence:ItemComponent=new ItemComponent();
-        let titleIntelligence:FontComponent=new FontComponent();
-        let textIntelligence:FontComponent=new FontComponent();
+        let itemIntelligence:ComponentItem=new ComponentItem();
+        let titleIntelligence:ComponentFont=new ComponentFont();
+        let textIntelligence:ComponentFont=new ComponentFont();
 
         itemIntelligence.animationEffect='brainIcon';
         itemIntelligence.colorEffect='neon';
@@ -67,7 +67,7 @@ export class DivisorBlockComponent implements OnInit {
         this.titles.push(titleIntelligence);
         this.texts.push(textIntelligence);
 
-        let itemTeamwork:ItemComponent=new ItemComponent();
+        let itemTeamwork:ComponentItem=new ComponentItem();
         itemTeamwork.animationEffect='teamworkIcon';
         itemTeamwork.colorEffect='neon';
         itemTeamwork.font='icon';
@@ -75,7 +75,7 @@ export class DivisorBlockComponent implements OnInit {
 
         this.items.push(itemTeamwork);
 
-        let itemLeadership:ItemComponent=new ItemComponent();
+        let itemLeadership:ComponentItem=new ComponentItem();
         itemLeadership.animationEffect='leadershipIcon';
         itemLeadership.colorEffect='neon';
         itemLeadership.font='icon';
@@ -83,7 +83,7 @@ export class DivisorBlockComponent implements OnInit {
 
         this.items.push(itemTeamwork);
 
-        let itemLanguages:ItemComponent=new ItemComponent();
+        let itemLanguages:ComponentItem=new ComponentItem();
         itemLanguages.animationEffect='languagesIcon';
         itemLanguages.colorEffect='neon';
         itemLanguages.font='icon';
@@ -91,7 +91,7 @@ export class DivisorBlockComponent implements OnInit {
 
         this.items.push(itemTeamwork);
 
-        let itemMultiway:ItemComponent=new ItemComponent();
+        let itemMultiway:ComponentItem=new ComponentItem();
         itemMultiway.animationEffect='multiwayIcon';
         itemMultiway.colorEffect='neon';
         itemMultiway.font='icon';
@@ -100,13 +100,13 @@ export class DivisorBlockComponent implements OnInit {
 
 
 
-        this.divisor=new DivisorComponent();
-        this.subDivisor=new SubDivisorComponent();
+        this.divisor=new ComponentDivisor();
+        this.subDivisor=new ComponentSubDivisor();
 
-        this.divisor.subDivisors=new Array<SubDivisorComponent>();
+        this.divisor.subDivisors=new Array<ComponentSubDivisor>();
 
-        let subDivisorItem:SubDivisorComponent=new SubDivisorComponent();
-        let subDivisorText:SubDivisorComponent=new SubDivisorComponent();
+        let subDivisorItem:ComponentSubDivisor=new ComponentSubDivisor();
+        let subDivisorText:ComponentSubDivisor=new ComponentSubDivisor();
 
         subDivisorItem.type='item';
         subDivisorItem.subDivisorType=0;

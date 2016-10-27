@@ -1,7 +1,7 @@
 import { Component, OnInit, Input, ViewEncapsulation } from '@angular/core';
 
-import { Item } from './ItemModel';
-import { ColorEffectComponent } from '../Item/ColorEffect/ColorEffectComponent';
+import { ModelItem } from './ModelItem';
+import { ComponentColorEffect } from '../Item/ColorEffect/ComponentColorEffect';
 
 import {HTMLGenerator} from './../../../../Core/HTMLGenerator/HTMLGenerator'
 
@@ -14,8 +14,8 @@ import { Utils } from './../../../../Core/Utils'
   templateUrl: Utils.getFileHTML(Utils.getFileName(__filename)),
   encapsulation: ViewEncapsulation.None
 })
-export class ItemComponent implements OnInit{
-  colorEffectComponent: ColorEffectComponent;
+export class ComponentItem implements OnInit{
+  colorEffectComponent: ComponentColorEffect;
   @Input() colorEffect: string;
   @Input() animationEffect: string;
   @Input() font: string;
@@ -32,7 +32,7 @@ export class ItemComponent implements OnInit{
   }
 
   initialization(){
-    this.colorEffectComponent=new ColorEffectComponent();
+    this.colorEffectComponent=new ComponentColorEffect();
     this.colorEffectComponent.animationEffect=this.animationEffect;
     this.colorEffectComponent.colorEffect=this.colorEffect;
     this.colorEffectComponent.font=this.font;

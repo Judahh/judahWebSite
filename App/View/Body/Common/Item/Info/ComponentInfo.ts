@@ -9,7 +9,7 @@ import { Utils } from './../../../../../Core/Utils'
   templateUrl: Utils.getFileHTML(Utils.getFileName(__filename)),
   encapsulation: ViewEncapsulation.None
 })
-export class InfoComponent implements OnInit{
+export class ComponentInfo implements OnInit{
   @Input() info: string;
 
   public constructor(){

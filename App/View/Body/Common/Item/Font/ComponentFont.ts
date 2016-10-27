@@ -9,7 +9,7 @@ import { Utils } from './../../../../../Core/Utils'
   templateUrl: Utils.getFileHTML(Utils.getFileName(__filename)),
   encapsulation: ViewEncapsulation.None
 })
-export class FontComponent implements OnInit{
+export class ComponentFont implements OnInit{
   @Input() animationEffect: string;
   @Input() font: string;
   @Input() verticalAlign: string;

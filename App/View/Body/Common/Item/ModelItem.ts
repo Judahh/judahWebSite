@@ -1,4 +1,4 @@
-export class Item {
+export class ModelItem {
   id: number;
   name: string;
   effect: string;

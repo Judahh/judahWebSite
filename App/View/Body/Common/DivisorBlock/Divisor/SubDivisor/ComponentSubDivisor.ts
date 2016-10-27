@@ -1,6 +1,6 @@
 import { Component, Input, OnInit, ViewEncapsulation } from '@angular/core';
-import {ItemComponent} from './../../../Item/ItemComponent'
-import {FontComponent} from './../../../Item/Font/FontComponent'
+import {ComponentItem} from './../../../Item/ComponentItem'
+import {ComponentFont} from './../../../Item/Font/ComponentFont'
 
 import { Utils } from './../../../../../../Core/Utils'
 
@@ -11,7 +11,7 @@ import { Utils } from './../../../../../../Core/Utils'
   templateUrl: Utils.getFileHTML(Utils.getFileName(__filename)),
   encapsulation: ViewEncapsulation.None
 })
-export class SubDivisorComponent implements OnInit {
+export class ComponentSubDivisor implements OnInit {
   cascadingStyleSheetsClass:string;
   content:any;
 
@@ -37,7 +37,7 @@ export class SubDivisorComponent implements OnInit {
   initialization(){
     switch(this.type){
       case "item":
-        this.content= new ItemComponent();
+        this.content= new ComponentItem();
 
         this.content.animationEffect=this.animationEffect;
         this.content.colorEffect=this.colorEffect;
@@ -50,7 +50,7 @@ export class SubDivisorComponent implements OnInit {
       break;
 
       case "font":
-        this.content= new FontComponent();
+        this.content= new ComponentFont();
 
         this.content.animationEffect=this.animationEffect;
         this.content.colorEffect=this.colorEffect;

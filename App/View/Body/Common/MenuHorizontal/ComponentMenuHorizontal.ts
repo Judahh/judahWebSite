@@ -1,6 +1,6 @@
 import { Component, Input, OnInit, ViewEncapsulation } from '@angular/core';
 
-import {ItemComponent} from './../Item/ItemComponent'
+import {ComponentItem} from './../Item/ComponentItem'
 import {HTMLGenerator} from './../../../../Core/HTMLGenerator/HTMLGenerator'
 
 import { Utils } from './../../../../Core/Utils'
@@ -12,10 +12,10 @@ import { Utils } from './../../../../Core/Utils'
   templateUrl: Utils.getFileHTML(Utils.getFileName(__filename)),
   encapsulation: ViewEncapsulation.None
 })
-export class MenuHorizontalComponent implements OnInit{
+export class ComponentMenuHorizontal implements OnInit{
   @Input() class: string;
   @Input() position: string;
-  items: Array<ItemComponent>;
+  items: Array<ComponentItem>;
   
   constructor(){
     this.initialization()  
@@ -26,12 +26,12 @@ export class MenuHorizontalComponent implements OnInit{
   }
 
   initialization(){
-    this.items=new Array<ItemComponent>();
+    this.items=new Array<ComponentItem>();
     switch(this.class){
       case "DivClassLeft":
         switch(this.position){
           case "top":
-            let itemWhoAmI:ItemComponent=new ItemComponent();
+            let itemWhoAmI:ComponentItem=new ComponentItem();
 
             itemWhoAmI.routerLink='WhoAmI';
             itemWhoAmI.animationEffect='pulse';
@@ -43,7 +43,7 @@ export class MenuHorizontalComponent implements OnInit{
 
             //===================================
 
-            let itemEducation:ItemComponent=new ItemComponent();
+            let itemEducation:ComponentItem=new ComponentItem();
 
             itemEducation.routerLink='Education';
             itemEducation.animationEffect='shake';
@@ -55,7 +55,7 @@ export class MenuHorizontalComponent implements OnInit{
 
             //===================================
 
-            let itemSkills:ItemComponent=new ItemComponent();
+            let itemSkills:ComponentItem=new ComponentItem();
 
             itemSkills.routerLink='Skills';
             itemSkills.animationEffect='handIcon';
@@ -68,7 +68,7 @@ export class MenuHorizontalComponent implements OnInit{
 
             //===================================
 
-            let itemProjects:ItemComponent=new ItemComponent();
+            let itemProjects:ComponentItem=new ComponentItem();
 
             itemProjects.routerLink='Projects';
             itemProjects.animationEffect='consoleIcon';
@@ -83,7 +83,7 @@ export class MenuHorizontalComponent implements OnInit{
 
             //===================================
 
-            let itemContact:ItemComponent=new ItemComponent();
+            let itemContact:ComponentItem=new ComponentItem();
 
             itemContact.routerLink='Contact';
             itemContact.animationEffect='shake';
@@ -94,7 +94,7 @@ export class MenuHorizontalComponent implements OnInit{
             this.items.push(itemContact);
           break;
           case "bottom":
-            let itemLanguages:ItemComponent=new ItemComponent();
+            let itemLanguages:ComponentItem=new ComponentItem();
 
             itemLanguages.routerLink='Languages';
             itemLanguages.animationEffect='';

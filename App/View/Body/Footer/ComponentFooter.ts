@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 
-import { Item } from '../Common/Item/ItemModel';
+import { ModelItem } from '../Common/Item/ModelItem';
 //import { ItemService } from '../Common/Item/ItemService';
 
 import { Utils } from './../../../Core/Utils'
@@ -12,12 +12,12 @@ import { Utils } from './../../../Core/Utils'
   templateUrl: Utils.getFileHTML(Utils.getFileName(__filename)),
   encapsulation: ViewEncapsulation.None
 })
-export class FooterComponent implements OnInit {
+export class ComponentFooter implements OnInit {
 
-  itemsLeft: Item[];
-  itemsRight: Item[];
-  itemsCenter: Item[];
-  selectedItem: Item;
+  itemsLeft: ModelItem[];
+  itemsRight: ModelItem[];
+  itemsCenter: ModelItem[];
+  selectedItem: ModelItem;
   error: any;
   position: string;
 
@@ -44,7 +44,7 @@ export class FooterComponent implements OnInit {
     //this.itemService.get('Header/Item','Center').subscribe(items => this.itemsCenter = items);
   }
 
-  onSelect(item: Item){
+  onSelect(item: ModelItem){
     this.selectedItem = item;
   }
 }

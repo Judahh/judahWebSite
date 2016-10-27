@@ -1,5 +1,4 @@
 import { Component, Input, OnInit, ViewEncapsulation } from '@angular/core';
-import { SubDivisorComponent } from './SubDivisor/SubDivisorComponent'
 
 import { Utils } from './../../../../../Core/Utils'
 
@@ -10,26 +9,24 @@ import { Utils } from './../../../../../Core/Utils'
   templateUrl: Utils.getFileHTML(Utils.getFileName(__filename)),
   encapsulation: ViewEncapsulation.None
 })
-export class DivisorComponent implements OnInit {
-  subDivisors: Array<SubDivisorComponent>;
+export class ComponentColorEffect implements OnInit{
+  @Input() colorEffect: string;
+  @Input() animationEffect: string;
+  @Input() font: string;
+  @Input() info: string;
   cascadingStyleSheetsClass:string;
 
-  ngOnInit() {
-    this.initialization();
+  public constructor(){ 
+    this.initialization();  
   }
 
-  constructor() {
-    this.initialization();
+  ngOnInit() {
+    this.initialization();  
   }
 
   initialization(){
-    this.cascadingStyleSheetsClass="DivClassDivisor";
+    if(this.colorEffect=="neon"){
+      this.cascadingStyleSheetsClass="DivClassNeon";
+    }
   }
-
-  ngOnDestroy() {
-    //this.heroSubscription.unsubscribe();
-  }
-
 }
-
-
