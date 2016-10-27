@@ -1,11 +1,11 @@
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA, Pipe, PipeTransform } from '@angular/core';
 import { BrowserModule, DomSanitizer } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
+import { HttpModule, JsonpModule } from '@angular/http';
 
 //import { ResponsiveModule, ResponsiveConfig, ResponsiveConfigInterface } from 'ng2-responsive';
 
-//import { ItemService } from './Body/Common/Item/ItemService'
+import { ItemService } from './Core/Services/ItemService'
 
 import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService } from './in-memory-data.service';
@@ -73,6 +73,7 @@ let config: ResponsiveConfigInterface = {
     FormsModule,
     routing,
     HttpModule,
+    JsonpModule,
     //ResponsiveModule,
     InMemoryWebApiModule.forRoot(InMemoryDataService, { delay: 600 })
   ],
@@ -100,7 +101,7 @@ let config: ResponsiveConfigInterface = {
     SafeStylePipe
   ],
   providers: [
-    //ItemService//,
+    ItemService//,
     //{provide: ResponsiveConfig, useFactory: () => new ResponsiveConfig(config) }
   ],
   bootstrap: [ComponentBody]

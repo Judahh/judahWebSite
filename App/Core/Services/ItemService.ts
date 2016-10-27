@@ -1,83 +1,91 @@
-// import { Injectable } from '@angular/core';
-// import { Headers, Http, Response } from '@angular/http';
-// import { Item } from './ItemModel';
+import { Injectable } from '@angular/core';
+import { Headers, Http, Response, Jsonp, URLSearchParams } from '@angular/http';
+import { ModelItem } from './../../View/Body/Common/Item/ModelItem';
 
-// import 'rxjs/add/operator/toPromise';
-// import 'rxjs/add/operator/map';
+// Statics
+import 'rxjs/add/observable/throw';
 
+// Operators
+import 'rxjs/add/operator/catch';
+import 'rxjs/add/operator/debounceTime';
+import 'rxjs/add/operator/distinctUntilChanged';
+import 'rxjs/add/operator/map';
+import 'rxjs/add/operator/switchMap';
+import 'rxjs/add/operator/toPromise';
 
-// @Injectable()
+@Injectable()
 export class ItemService {
-  // private itemsUrl = 'App/items';
+  private itemsUrl = 'App/View/Body/';
   
-  // constructor(private http: Http) { }
+  constructor(private http: Http) { }
 
-  // public getFrom(path:string) {
-  //   return this.http.get(path).map((response: Response) => response.json());
-  // }
+  getFrom(path:string) {
+    return this.http.get(path).map((response: Response) => response.json());
+  }
 
-  // public get(path:string,name:string) {
-  //   return this.http.get('App/Body/'+path+'/'+name+'.json').map((response: Response) => response.json());
-  // }
+  get(path:string,name:string) {
+    //alert(this.itemsUrl+path+'/'+name+'.json');
+    return this.http.get(this.itemsUrl+path+'/'+name+'.json').map((response: Response) => response.json());
+  }
 
-  // getItems(): Promise<Item[]> {
-  //   return this.http
-  //     .get(this.itemsUrl)
-  //     .toPromise()
-  //     .then(response => response.json().data as Item[])
-  //     .catch(this.handleError);
-  // }
+  getItems(path:string,name:string): Promise<ModelItem[]> {
+    return this.http
+      .get('App/items')
+      .toPromise()
+      .then(response => response.json().data as ModelItem[])
+      .catch(this.handleError);
+  }
 
-  // save(item: Item,path:string,name:string): Promise<Item> {
-  //   if (item.id) {
-  //     return this.put(item,path,name);
-  //   }
-  //   return this.post(item,path,name);
-  // }
+  save(item: ModelItem,path:string,name:string): Promise<ModelItem> {
+    if (item.id) {
+      return this.put(item,path,name);
+    }
+    return this.post(item,path,name);
+  }
 
-  // delete(item: Item,path:string,name:string): Promise<Response> {
-  //   let headers = new Headers();
-  //   headers.append('Content-Type', 'application/json');
+  delete(item: ModelItem,path:string,name:string): Promise<Response> {
+    let headers = new Headers();
+    headers.append('Content-Type', 'application/json');
 
-  //   let url = 'App/Body/'+path+'/'+name+'.json';
+    let url = this.itemsUrl+path+'/'+name+'.json';
 
-  //   return this.http
-  //     .delete(url, { headers: headers })
-  //     .toPromise()
-  //     .catch(this.handleError);
-  // }
+    return this.http
+      .delete(url, { headers: headers })
+      .toPromise()
+      .catch(this.handleError);
+  }
 
-  // // Add new Hero
-  // private post(item: Item,path:string,name:string): Promise<Item> {
-  //   let headers = new Headers({
-  //     'Content-Type': 'application/json'
-  //   });
+  // Add new Hero
+  private post(item: ModelItem,path:string,name:string): Promise<ModelItem> {
+    let headers = new Headers({
+      'Content-Type': 'application/json'
+    });
 
-  //   let url = 'App/Body/'+path+'/'+name+'.json';
+    let url = this.itemsUrl+path+'/'+name+'.json';
 
-  //   return this.http
-  //     .post(url, JSON.stringify(item), { headers: headers })
-  //     .toPromise()
-  //     .then(res => res.json().data)
-  //     .catch(this.handleError);
-  // }
+    return this.http
+      .post(url, JSON.stringify(item), { headers: headers })
+      .toPromise()
+      .then(res => res.json().data)
+      .catch(this.handleError);
+  }
 
-  // // Update existing Hero
-  // private put(item: Item,path:string,name:string): Promise<Item> {
-  //   let headers = new Headers();
-  //   headers.append('Content-Type', 'application/json');
+  // Update existing Hero
+  private put(item: ModelItem,path:string,name:string): Promise<ModelItem> {
+    let headers = new Headers();
+    headers.append('Content-Type', 'application/json');
 
-  //   let url = 'App/Body/'+path+'/'+name+'.json';
+    let url = this.itemsUrl+path+'/'+name+'.json';
 
-  //   return this.http
-  //     .put(url, JSON.stringify(item), { headers: headers })
-  //     .toPromise()
-  //     .then(() => item)
-  //     .catch(this.handleError);
-  // }
+    return this.http
+      .put(url, JSON.stringify(item), { headers: headers })
+      .toPromise()
+      .then(() => item)
+      .catch(this.handleError);
+  }
 
-  // private handleError(error: any): Promise<any> {
-  //   console.error('An error occurred', error);
-  //   return Promise.reject(error.message || error);
-  // }
+  private handleError(error: any): Promise<any> {
+    console.error('An error occurred', error);
+    return Promise.reject(error.message || error);
+  }
 }
