@@ -1,7 +1,9 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 
 import { ModelItem } from '../Common/Item/ModelItem';
-//import { ItemService } from '../Common/Item/ItemService';
+import { ModelMenuHorizontal } from '../Common/MenuHorizontal/ModelMenuHorizontal';
+import { ModelMenuItems } from '../Common/ModelMenuItems';
+import { ServiceJSON } from './../../../Core/Services/ServiceJSON';
 
 import { Utils } from './../../../Core/Utils'
 
@@ -10,43 +12,60 @@ import { Utils } from './../../../Core/Utils'
   selector: Utils.getFileSelector(Utils.getFileName(__filename)),
   styleUrls: [Utils.getFileCSS(Utils.getFileName(__filename))],
   templateUrl: Utils.getFileHTML(Utils.getFileName(__filename)),
-  encapsulation: ViewEncapsulation.None
+  encapsulation: ViewEncapsulation.None,
+  providers: [ServiceJSON]
 })
-export class ComponentFooter implements OnInit {
 
-  itemsLeft: ModelItem[];
-  itemsRight: ModelItem[];
-  itemsCenter: ModelItem[];
-  selectedItem: ModelItem;
-  error: any;
+export class ComponentFooter implements OnInit {
+  modelMenuHorizontals: ModelMenuHorizontal[];
+  // itemsRight: ModelItem[];
+  // itemsCenter: ModelItem[];
+  // selectedItem: ModelItem;
+  errorMessage: any;
   position: string;
 
-  constructor() {
+  constructor(private serviceJSON: ServiceJSON) {
     this.initialization();
    }
 
   ngOnInit() {
-    //this.getItems();
     this.initialization();
   }
 
   initialization(){
-    this.position="bottom";
+    this.getItems();
   }
 
   getItems(){
-     //this.itemService.getItems().then(items => this.itemsLeft = items).catch(error => this.error = error);
-    //alert("Items:"+this.itemsLeft);
-    //alert(error);
-    //this.itemService.get('Header/Item','Left').subscribe(items => this.itemsLeft = items);
-    //alert("Items:"+this.itemsLeft);
-    //this.itemService.get('Header/Item','Right').subscribe(items => this.itemsRight = items);
-    //this.itemService.get('Header/Item','Center').subscribe(items => this.itemsCenter = items);
+    this.modelMenuHorizontals=[];
+    this.errorMessage="";
+
+    this.serviceJSON.getObservable('menuItems').subscribe(items => this.filter(items), error => this.errorMessage = <any>error);
+    
+    if(this.errorMessage!=""){
+      alert("Error:"+this.errorMessage);
+    }
   }
 
-  onSelect(item: ModelItem){
-    this.selectedItem = item;
+  filter(items:Array<ModelMenuItems>){
+    for(var index:number=0;index<items.length;index++){
+      if(items[index].name==Utils.getFileSelector(Utils.getFileName(__filename))){
+        this.position=items[index].position;
+        this.modelMenuHorizontals=items[index].menuHorizontal;
+      }
+    }
   }
+
+  // addHero (name: string) {
+  //   if (!name) { return; }
+  //   this.heroService.addHero(name)
+  //                    .subscribe(
+  //                      hero  => this.heroes.push(hero),
+  //                      error =>  this.errorMessage = <any>error);
+  // }
+
+  // onSelect(item: ModelItem){
+  //   this.selectedItem = item;
+  // }
+
 }
-
-

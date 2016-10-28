@@ -5,7 +5,7 @@ import { Observable }     from 'rxjs/Observable';
 
 @Injectable()
 export class ServiceJSON {
-  private URL = '/API/';
+  private URL = '/API/JSON/';
   
   constructor(private http: Http) { }
 
@@ -28,7 +28,7 @@ export class ServiceJSON {
 
   private extractData(response: Response) {
     let body = response.json();
-    return body.data || { };
+    return body;
   }
 
   private handleObservableError (error: Response | any) {

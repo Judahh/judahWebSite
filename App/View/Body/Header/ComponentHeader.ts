@@ -1,6 +1,7 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 
 import { ModelItem } from '../Common/Item/ModelItem';
+import { ModelMenuHorizontal } from '../Common/MenuHorizontal/ModelMenuHorizontal';
 import { ModelMenuItems } from '../Common/ModelMenuItems';
 import { ServiceJSON } from './../../../Core/Services/ServiceJSON';
 
@@ -16,10 +17,10 @@ import { Utils } from './../../../Core/Utils'
 })
 
 export class ComponentHeader implements OnInit {
-  itemsLeft: ModelItem[];
-  itemsRight: ModelItem[];
-  itemsCenter: ModelItem[];
-  selectedItem: ModelItem;
+  modelMenuHorizontals: ModelMenuHorizontal[];
+  // itemsRight: ModelItem[];
+  // itemsCenter: ModelItem[];
+  // selectedItem: ModelItem;
   errorMessage: any;
   position: string;
 
@@ -29,15 +30,14 @@ export class ComponentHeader implements OnInit {
 
   ngOnInit() {
     this.initialization();
-    this.getItems();
   }
 
   initialization(){
-    
+    this.getItems();
   }
 
   getItems(){
-    this.itemsLeft=[];
+    this.modelMenuHorizontals=[];
     this.errorMessage="";
 
     this.serviceJSON.getObservable('menuItems').subscribe(items => this.filter(items), error => this.errorMessage = <any>error);
@@ -48,11 +48,10 @@ export class ComponentHeader implements OnInit {
   }
 
   filter(items:Array<ModelMenuItems>){
-    alert(items[index]);
     for(var index:number=0;index<items.length;index++){
-      alert(items[index].name);
-      if(items[index].name=="header"){
+      if(items[index].name==Utils.getFileSelector(Utils.getFileName(__filename))){
         this.position=items[index].position;
+        this.modelMenuHorizontals=items[index].menuHorizontal;
       }
     }
   }
@@ -65,8 +64,8 @@ export class ComponentHeader implements OnInit {
   //                      error =>  this.errorMessage = <any>error);
   // }
 
-  onSelect(item: ModelItem){
-    this.selectedItem = item;
-  }
+  // onSelect(item: ModelItem){
+  //   this.selectedItem = item;
+  // }
 
 }
