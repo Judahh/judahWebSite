@@ -52,6 +52,7 @@ export class ComponentHeader implements OnInit {
       if(items[index].name==Utils.getFileSelector(Utils.getFileName(__filename))){
         this.position=items[index].position;
         this.modelMenuHorizontals=items[index].menuHorizontal;
+        return;
       }
     }
   }

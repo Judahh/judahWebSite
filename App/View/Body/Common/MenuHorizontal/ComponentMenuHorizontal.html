@@ -1,6 +1,13 @@
 <ul>    
     <li *ngFor="let item of items">
-        <item routerLink="/{{item.routerLink}}" routerLinkActive="{{item.routerLinkActive}}" colorEffect="{{item.colorEffect}}" animationEffect="{{item.animationEffect}}" font="{{item.font}}" info="{{item.info}}">
+        <item 
+            routerLink="/{{item.routerLink}}"
+            routerLinkActive="{{item.routerLinkActive}}" 
+            colorEffect="{{item.colorEffect}}" 
+            animationEffect="{{item.animationEffect}}" 
+            font="{{item.font}}" 
+            info="{{item.info}}">
+            Loading...
         </item>
     </li>
 </ul>

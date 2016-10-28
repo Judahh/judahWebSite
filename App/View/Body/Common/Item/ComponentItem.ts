@@ -37,7 +37,7 @@ export class ComponentItem implements OnInit{
     this.colorEffectComponent.colorEffect=this.colorEffect;
     this.colorEffectComponent.font=this.font;
     this.colorEffectComponent.info=this.info;
-    this.routerLinkActive="active"
+    this.routerLinkActive=this.routerLinkActive;
   }
 
 }

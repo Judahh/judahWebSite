@@ -11,6 +11,7 @@
           {
             "id":0,
             "routerLink":"WhoAmI",
+            "routerLinkActive":"active",
             "animationEffect":"pulse",
             "colorEffect":"neon",
             "font":"icon",
@@ -19,6 +20,7 @@
           {
             "id":1,
             "routerLink":"Education",
+            "routerLinkActive":"active",
             "animationEffect":"shake",
             "colorEffect":"neon",
             "font":"icon",
@@ -27,6 +29,7 @@
           {
             "id":2,
             "routerLink":"Skills",
+            "routerLinkActive":"active",
             "animationEffect":"handIcon",
             "colorEffect":"neon",
             "font":"icon",
@@ -35,6 +38,7 @@
           {
             "id":3,
             "routerLink":"Projects",
+            "routerLinkActive":"active",
             "animationEffect":"consoleIcon",
             "colorEffect":"neon",
             "font":"icon",
@@ -43,6 +47,7 @@
           {
             "id":4,
             "routerLink":"Contact",
+            "routerLinkActive":"active",
             "animationEffect":"shake",
             "colorEffect":"neon",
             "font":"icon",
@@ -74,7 +79,8 @@
           {
             "id":0,
             "routerLink":"Languages",
-            "animationEffect":"",
+            "routerLinkActive":"active",
+            "animationEffect":" ",
             "colorEffect":"neon",
             "font":"icon",
             "info":"µ"
