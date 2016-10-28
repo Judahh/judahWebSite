@@ -1,4 +1,4 @@
-export class InMemoryDataService {
+export class MenuItemService {
   createDb() {
     let items = [
       {

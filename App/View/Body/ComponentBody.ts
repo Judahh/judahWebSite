@@ -1,7 +1,7 @@
 import { Component, ViewEncapsulation } from '@angular/core';
 
 import { Utils } from './../../Core/Utils';
-//import './rxjs-operators';
+import './../../RxjsOperators';
 
 @Component({
   moduleId: module.id,

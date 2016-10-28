@@ -3,13 +3,6 @@ import { Headers, Http, Response, RequestOptions } from '@angular/http';
 
 import { Observable }     from 'rxjs/Observable';
 
-// Statics
-//import 'rxjs/add/observable/throw';
-
-// Operators
-//import 'rxjs/add/operator/map';
-import 'rxjs/add/operator/toPromise';
-
 @Injectable()
 export class ServiceJSON {
   private URL = '/API/';

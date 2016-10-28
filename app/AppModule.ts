@@ -7,8 +7,8 @@ import { HttpModule, JsonpModule } from '@angular/http';
 
 import { ServiceJSON } from './Core/Services/ServiceJSON'
 
-import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
-import { InMemoryDataService } from './in-memory-data.service';
+//import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
+//import { MenuItemService } from './MenuItemService';
 
 import './RXJS/RXJSExtensions';
 import { ComponentBody } from './View/Body/ComponentBody';
@@ -73,9 +73,9 @@ let config: ResponsiveConfigInterface = {
     FormsModule,
     routing,
     HttpModule,
-    JsonpModule,
+    JsonpModule//,
     //ResponsiveModule,
-    InMemoryWebApiModule.forRoot(InMemoryDataService, { delay: 600 })
+    //InMemoryWebApiModule.forRoot(MenuItemService, { delay: 600 })
   ],
   //schemas:
   //[CUSTOM_ELEMENTS_SCHEMA],
