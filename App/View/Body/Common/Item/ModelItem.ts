@@ -1,6 +1,8 @@
 export class ModelItem {
   id: number;
-  name: string;
-  effect: string;
-  page: string;
+  routerLink: string;
+  animationEffect: string;
+  colorEffect: string;
+  font: string;
+  info: string;
 }

@@ -1,0 +1,96 @@
+[
+  {
+    "id": 0,
+    "name": "header",
+    "position": "top",
+    "menuHorizontal":[
+      {
+        "id":0,
+        "class":"DivClassLeft",
+        "item":[
+          {
+            "id":0,
+            "routerLink":"WhoAmI",
+            "animationEffect":"pulse",
+            "colorEffect":"neon",
+            "font":"icon",
+            "info":"c"
+          },
+          {
+            "id":1,
+            "routerLink":"Education",
+            "animationEffect":"shake",
+            "colorEffect":"neon",
+            "font":"icon",
+            "info":"d"
+          },
+          {
+            "id":2,
+            "routerLink":"Skills",
+            "animationEffect":"handIcon",
+            "colorEffect":"neon",
+            "font":"icon",
+            "info":"«¬"
+          },
+          {
+            "id":3,
+            "routerLink":"Projects",
+            "animationEffect":"consoleIcon",
+            "colorEffect":"neon",
+            "font":"icon",
+            "info":"ijkl"
+          },
+          {
+            "id":4,
+            "routerLink":"Contact",
+            "animationEffect":"shake",
+            "colorEffect":"neon",
+            "font":"icon",
+            "info":"6"
+          }
+        ]
+      },
+      {
+        "id":1,
+        "class":"DivClassCenter",
+        "item":[]
+      },
+      {
+        "id":2,
+        "class":"DivClassRight",
+        "item":[]
+      }
+    ]
+  },
+  {
+    "id": 1,
+    "name": "footer",
+    "position": "bottom",
+    "menuHorizontal":[
+      {
+        "id":0,
+        "class":"DivClassLeft",
+        "item":[
+          {
+            "id":0,
+            "routerLink":"Languages",
+            "animationEffect":"",
+            "colorEffect":"neon",
+            "font":"icon",
+            "info":"µ"
+          }
+        ]
+      },
+      {
+        "id":1,
+        "class":"DivClassCenter",
+        "item":[]
+      },
+      {
+        "id":2,
+        "class":"DivClassRight",
+        "item":[]
+      }
+    ]
+  }
+]

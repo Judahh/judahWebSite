@@ -1,10 +1,8 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 
 import { ModelItem } from '../Common/Item/ModelItem';
+import { ModelMenuItems } from '../Common/ModelMenuItems';
 import { ServiceJSON } from './../../../Core/Services/ServiceJSON';
-
-import { Observable } from 'rxjs/Observable';
-import { Router } from '@angular/router';
 
 import { Utils } from './../../../Core/Utils'
 
@@ -35,27 +33,28 @@ export class ComponentHeader implements OnInit {
   }
 
   initialization(){
-    this.position="top";
+    
   }
 
   getItems(){
     this.itemsLeft=[];
     this.errorMessage="";
 
-    // this.itemService.getItems('Header/Item','Left').then(items => this.itemsLeft = items).catch(error => this.errorMessage = error);
-    // alert("Items:"+this.itemsLeft);
-    // alert("Error:"+this.errorMessage);
-
-    this.serviceJSON.get('items').subscribe(items => this.itemsLeft = items, error => this.errorMessage = <any>error);
-    alert("Error:"+this.errorMessage);
-    alert("Items:"+this.itemsLeft.length);
-
-    //this.itemService.get('Header/Item','Left').subscribe(items => this.itemsLeft = items, error => this.errorMessage = <any>error);
-    //alert("Error:"+this.errorMessage);
-    //alert("Items:"+this.itemsLeft);
+    this.serviceJSON.getObservable('menuItems').subscribe(items => this.filter(items), error => this.errorMessage = <any>error);
     
-    //this.itemService.get('Header/Item','Right').subscribe(items => this.itemsRight = items);
-    //this.itemService.get('Header/Item','Center').subscribe(items => this.itemsCenter = items);
+    if(this.errorMessage!=""){
+      alert("Error:"+this.errorMessage);
+    }
+  }
+
+  filter(items:Array<ModelMenuItems>){
+    alert(items[index]);
+    for(var index:number=0;index<items.length;index++){
+      alert(items[index].name);
+      if(items[index].name=="header"){
+        this.position=items[index].position;
+      }
+    }
   }
 
   // addHero (name: string) {
