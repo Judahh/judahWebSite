@@ -1,6 +1,10 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { Utils } from './../../../../Core/Utils'
 
+import { ModelWhoAmI } from './ModelWhoAmI';
+import { ModelWhoAmIInformation } from './ModelWhoAmIInformation';
+import { ServiceJSON } from './../../../../Core/Services/ServiceJSON';
+
 @Component({
   moduleId: module.id,
   selector: Utils.getFileSelector(Utils.getFileName(__filename)),
@@ -10,46 +14,78 @@ import { Utils } from './../../../../Core/Utils'
 })
 
 export class ComponentPageWhoAmI implements OnInit {
-  videoLink:string="https://www.youtube.com/embed/Rzu6zeLSWq8";
-  videoWidth:number=420;
-  videoHeight:number=315;
-  myPicturePath:string="App/View/Body/Images/Pictures/10269429_761463870605004_4764397887348042944_n.jpg";
+  modelWhoAmIInformation:ModelWhoAmIInformation;
+  modelWhoAmIs:Array<ModelWhoAmI>;
+  errorMessage: any;
 
-  whoAmIText(){
+  title(){
+    if(this.modelWhoAmIs.length>0){
+      return this.modelWhoAmIs[0].title;
+    } 
     return "";
   }
 
   name(){
-    return ""; 
+    if(this.modelWhoAmIs.length>0){
+      return this.modelWhoAmIs[0].name;
+    } 
+    return "";
   }
 
   personalStatement(){
+    if(this.modelWhoAmIs.length>0){
+      return this.modelWhoAmIs[0].personalStatementBeforeAge+Utils.gregorianAge(this.modelWhoAmIInformation.birthDate)+this.modelWhoAmIs[0].personalStatementAfterAge;
+    } 
     return "";
   }
   
   talkingAboutMe(){
+    if(this.modelWhoAmIs.length>0){
+      return this.modelWhoAmIs[0].talkingAboutMe;
+    } 
     return "";
   }
 
   thinkDifferentTitle(){
+    if(this.modelWhoAmIs.length>0){
+      return this.modelWhoAmIs[0].thinkDifferentTitle;
+    } 
     return "";
   }
 
   thinkDifferent(){
+    if(this.modelWhoAmIs.length>0){
+      return this.modelWhoAmIs[0].thinkDifferent;
+    } 
     return "";
   }
 
   ngOnInit() {
-    //this.heroes=this.heroSubscription.getHeroes();
-      //this.heroSubscription=this.heroService.getHeroes().subscribe(heroes => this.heroes = heroes);
-      this.initialization();
+    this.initialization();
   }
 
-  constructor() {
+  constructor(private serviceJSON: ServiceJSON) {
     this.initialization();
-   }
+  }
 
   initialization(){
+    this.modelWhoAmIs=[];
+    this.modelWhoAmIInformation=new ModelWhoAmIInformation();
+    this.errorMessage="";
+
+    this.serviceJSON.getObservable('Languages/'+Utils.getFileSelector(Utils.getFileName(__filename))).subscribe(
+      items => this.modelWhoAmIs=items, error => this.errorMessage = <any>error);
+    
+    if(this.errorMessage!=""){
+      alert("Error:"+this.errorMessage);
+    }
+
+    this.serviceJSON.getObservable('Information/'+Utils.getFileSelector(Utils.getFileName(__filename))).subscribe(
+      item => this.modelWhoAmIInformation=item[0], error => this.errorMessage = <any>error);
+    
+    if(this.errorMessage!=""){
+      alert("Error:"+this.errorMessage);
+    }
   }
 
   ngOnDestroy() {

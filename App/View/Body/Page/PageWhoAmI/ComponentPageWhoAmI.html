@@ -3,11 +3,12 @@
         <div class="DivClassProjectTitleText">
             <div class="DivClassTitleTextSize">
                 <div *xl class="DivClassTextWhoAmI">
-                    {{whoAmIText()}}
+                    {{title()}}
                 </div>
                 <div *sm class="DivClassTextWhoAmISizeSm">
-                    {{whoAmIText()}}
+                    {{title()}}
                 </div>
+                {{title()}}
             </div>
         </div>
         <div class="DivClassProjectTitleText2">
@@ -23,7 +24,7 @@
 <div class="DivClassTableCodeWrap">
     <div class="DivClassFullBlock">
         <div class="DivClassMyPicture">
-            <img class="ImgClassPicture" src="{{myPicturePath}}"/>
+            <img class="ImgClassPicture" src="{{modelWhoAmIInformation.myPicturePath}}"/>
         </div>
         <div class="DivClassTextWhoAmI">
             <div class="DivClassTextBasic">
@@ -48,7 +49,7 @@
     <div class="DivClassFullBlock">
         <div class="DivClassVideo">
             <div class="DivClassVideoWrapper">
-                <iframe width="{{videoWidth}}" height="{{videoHeight}}" [src]="videoLink|safeUrl" frameborder="0" allowfullscreen></iframe>
+                <iframe width="{{modelWhoAmIInformation.videoWidth}}" height="{{modelWhoAmIInformation.videoHeight}}" [src]="modelWhoAmIInformation.videoLink|safeUrl" frameborder="0" allowfullscreen></iframe>
             </div>
         </div>
     </div>
