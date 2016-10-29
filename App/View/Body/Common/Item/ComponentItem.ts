@@ -23,9 +23,7 @@ export class ComponentItem implements OnInit{
   @Input() routerLink: string;
   @Input() routerLinkActive: string;
 
-  public constructor(){ 
-    this.initialization(); 
-  }
+  public constructor(){}
 
   ngOnInit() {
     this.initialization();  

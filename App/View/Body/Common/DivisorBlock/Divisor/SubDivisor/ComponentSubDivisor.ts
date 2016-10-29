@@ -30,9 +30,7 @@ export class ComponentSubDivisor implements OnInit {
     this.initialization();
   }
 
-  constructor() {
-    this.initialization();
-  }
+  constructor() {}
 
   initialization(){
     switch(this.type){

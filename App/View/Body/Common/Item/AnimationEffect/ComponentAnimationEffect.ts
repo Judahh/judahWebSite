@@ -16,9 +16,7 @@ export class ComponentAnimationEffect implements OnInit{
   cascadingStyleSheetsSubClass:string;
   cascadingStyleSheetsSubClasses:Array<string>;
 
-  public constructor(){
-    this.initialization(); 
-  }
+  public constructor(){}
 
   ngOnInit() {
     this.initialization();  

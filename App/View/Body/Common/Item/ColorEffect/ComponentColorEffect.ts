@@ -16,9 +16,7 @@ export class ComponentColorEffect implements OnInit{
   @Input() info: string;
   cascadingStyleSheetsClass:string;
 
-  public constructor(){ 
-    this.initialization();  
-  }
+  public constructor(){}
 
   ngOnInit() {
     this.initialization();  

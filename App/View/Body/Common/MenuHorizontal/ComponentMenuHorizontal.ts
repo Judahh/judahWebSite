@@ -25,9 +25,7 @@ export class ComponentMenuHorizontal implements OnInit{
   items: Array<ModelItem>;
   errorMessage: any;
   
-  constructor(private serviceJSON: ServiceJSON){
-    this.initialization();  
-  }
+  constructor(private serviceJSON: ServiceJSON){}
 
   ngOnInit() {
     this.initialization();  

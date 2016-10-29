@@ -18,9 +18,7 @@ export class ComponentDivisor implements OnInit {
     this.initialization();
   }
 
-  constructor() {
-    this.initialization();
-  }
+  constructor() {}
 
   initialization(){
     this.cascadingStyleSheetsClass="DivClassDivisor";

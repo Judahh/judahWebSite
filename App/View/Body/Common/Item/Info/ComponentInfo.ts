@@ -12,9 +12,7 @@ import { Utils } from './../../../../../Core/Utils/Utils';
 export class ComponentInfo implements OnInit{
   @Input() info: string;
 
-  public constructor(){
-    this.initialization(); 
-  }
+  public constructor(){}
 
   ngOnInit() {
     this.initialization();  

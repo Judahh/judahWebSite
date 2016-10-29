@@ -1,6 +1,7 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { Utils } from './../../../../Core/Utils/Utils';
-import { Language } from './../../../../Core/Language/Language';
+import { Languages } from './../../../../Core/Languages/Languages';
+import { ModelLanguages } from './../../../../Core/Languages/ModelLanguages';
 
 import { ModelWhoAmI } from './ModelWhoAmI';
 import { ModelWhoAmIInformation } from './ModelWhoAmIInformation';
@@ -16,90 +17,72 @@ import { ServiceJSON } from './../../../../Core/Services/ServiceJSON';
 
 export class ComponentPageWhoAmI implements OnInit {
   modelWhoAmIInformation:ModelWhoAmIInformation;
-  modelWhoAmIs:Array<ModelWhoAmI>;
+  modelWhoAmI:ModelWhoAmI;
+  modelLanguages:ModelLanguages;
   errorMessage: any;
 
   title(){
-    if(this.modelWhoAmIs.length>0){
-      return this.modelWhoAmIs[0].title;
-    } 
-    return "";
+    return this.modelWhoAmI.title;
   }
 
   name(){
-    if(this.modelWhoAmIs.length>0){
-      return this.modelWhoAmIs[0].name;
-    } 
-    return "";
+    return this.modelWhoAmI.name;
   }
 
   personalStatement(){
-    if(this.modelWhoAmIs.length>0){
-      return (this.modelWhoAmIs[0].personalStatementBeforeAge
+      return (this.modelWhoAmI.personalStatementBeforeAge
       + Utils.gregorianAge(this.modelWhoAmIInformation.birthDate)
-      + this.modelWhoAmIs[0].personalStatementAfterAge);
-    } 
-    return "";
+      + this.modelWhoAmI.personalStatementAfterAge);
   }
 
   personalStatement2(){
-    if(this.modelWhoAmIs.length>0){
-      return (this.modelWhoAmIs[0].personalStatement2);
-    } 
-    return "";
+    return (this.modelWhoAmI.personalStatement2);
   }
   
   talkingAboutMe(){
-    if(this.modelWhoAmIs.length>0){
-      return this.modelWhoAmIs[0].talkingAboutMe;
-    } 
-    return "";
+    return this.modelWhoAmI.talkingAboutMe;
   }
 
   talkingAboutMe2(){
-    if(this.modelWhoAmIs.length>0){
-      return this.modelWhoAmIs[0].talkingAboutMe2;
-    } 
-    return "";
+    return this.modelWhoAmI.talkingAboutMe2;
   }
 
   thinkDifferentTitle(){
-    if(this.modelWhoAmIs.length>0){
-      return this.modelWhoAmIs[0].thinkDifferentTitle;
-    } 
-    return "";
+    return this.modelWhoAmI.thinkDifferentTitle;
   }
 
   thinkDifferent(){
-    if(this.modelWhoAmIs.length>0){
-      return this.modelWhoAmIs[0].thinkDifferent;
-    } 
-    return "";
+    return this.modelWhoAmI.thinkDifferent;
   }
 
   ngOnInit() {
     this.initialization();
   }
 
-  constructor(private serviceJSON: ServiceJSON) {
-    this.initialization();
-  }
+  constructor(private serviceJSON: ServiceJSON) {}
 
   initialization(){
-    alert(Language.language);
-    this.modelWhoAmIs=[];
+    this.modelWhoAmI=new ModelWhoAmI();
+    this.modelLanguages=new ModelLanguages();
     this.modelWhoAmIInformation=new ModelWhoAmIInformation();
     this.errorMessage="";
 
-    this.serviceJSON.getObservable('Languages/'+Utils.getFileSelector(Utils.getFileName(__filename))).subscribe(
-      items => this.modelWhoAmIs=items, error => this.errorMessage = <any>error);
+    this.serviceJSON.getObservable('Information/'+Utils.getFileSelector(Utils.getFileName(__filename))).subscribe(
+      item => this.modelWhoAmIInformation=item[0], error => this.errorMessage = <any>error);
     
     if(this.errorMessage!=""){
       alert("Error:"+this.errorMessage);
     }
 
-    this.serviceJSON.getObservable('Information/'+Utils.getFileSelector(Utils.getFileName(__filename))).subscribe(
-      item => this.modelWhoAmIInformation=item[0], error => this.errorMessage = <any>error);
+    this.serviceJSON.getObservable(Languages.currentlanguageNamePath).subscribe(
+      items => this.modelLanguages=Languages.getModelLanguages(items), error => this.errorMessage = <any>error);
+    
+    if(this.errorMessage!=""){
+      alert("Error:"+this.errorMessage);
+    }
+
+    this.serviceJSON.getObservable('Languages/'+Utils.getFileSelector(Utils.getFileName(__filename))).subscribe(
+      items => this.modelWhoAmI=Languages.getPageLanguage(items,this.modelLanguages), error => this.errorMessage = <any>error);
     
     if(this.errorMessage!=""){
       alert("Error:"+this.errorMessage);

@@ -24,9 +24,7 @@ export class ComponentFooter implements OnInit {
   errorMessage: any;
   position: string;
 
-  constructor(private serviceJSON: ServiceJSON) {
-    this.initialization();
-   }
+  constructor(private serviceJSON: ServiceJSON) {}
 
   ngOnInit() {
     this.initialization();

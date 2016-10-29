@@ -20,9 +20,7 @@ export class ComponentFont implements OnInit{
   cascadingStyleSheetsClass:string;
   cascadingStyleSheetsClassFontSize:string;
 
-  public constructor(){
-    this.initialization(); 
-  }
+  public constructor(){}
 
   ngOnInit() {
     this.initialization();  
