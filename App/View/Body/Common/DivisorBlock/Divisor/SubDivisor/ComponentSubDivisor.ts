@@ -2,7 +2,7 @@ import { Component, Input, OnInit, ViewEncapsulation } from '@angular/core';
 import {ComponentItem} from './../../../Item/ComponentItem'
 import {ComponentFont} from './../../../Item/Font/ComponentFont'
 
-import { Utils } from './../../../../../../Core/Utils'
+import { Utils } from './../../../../../../Core/Utils/Utils'
 
 @Component({
   moduleId: module.id,

@@ -1,27 +1,27 @@
-export namespace Utils {
-    export function getFileName(filename:string){
+export class Utils {
+    static getFileName(filename:string){
         var names:string[]=filename.split("/");
         return names[names.length-1].split(".")[0];
     }
 
-    export function getFileJSON(fileName:string){
+    static getFileJSON(fileName:string){
         return fileName+".json";
     }
 
-    export function getFileHTML(fileName:string){
+    static getFileHTML(fileName:string){
         return fileName+".html";
     }
 
-    export function getFileCSS(fileName:string){
+    static getFileCSS(fileName:string){
         return fileName+".css";
     }
 
-    export function getFileSelector(fileName:string){
+    static getFileSelector(fileName:string){
         fileName=fileName.replace("Component","");
         return fileName.charAt(0).toLowerCase()+fileName.substring(1,fileName.length);
     }
 
-    export function gregorianAge(birthDate:any, ageAtDate?:any) {
+    static gregorianAge(birthDate:any, ageAtDate?:any) {
         // convert birthDate to date object if already not
         if (Object.prototype.toString.call(birthDate) !== '[object Date]')
         birthDate = new Date(birthDate);

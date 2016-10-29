@@ -5,7 +5,7 @@ import { ComponentColorEffect } from '../Item/ColorEffect/ComponentColorEffect';
 
 import {HTMLGenerator} from './../../../../Core/HTMLGenerator/HTMLGenerator'
 
-import { Utils } from './../../../../Core/Utils'
+import { Utils } from './../../../../Core/Utils/Utils'
 
 @Component({
   moduleId: module.id,

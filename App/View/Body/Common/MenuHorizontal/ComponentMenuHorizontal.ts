@@ -8,7 +8,7 @@ import { ModelMenuHorizontal } from './ModelMenuHorizontal';
 import { ModelMenuItems } from './../ModelMenuItems';
 import { ServiceJSON } from './../../../../Core/Services/ServiceJSON';
 
-import { Utils } from './../../../../Core/Utils'
+import { Utils } from './../../../../Core/Utils/Utils'
 
 @Component({
   moduleId: module.id,
@@ -37,7 +37,7 @@ export class ComponentMenuHorizontal implements OnInit{
     this.items=[];
     this.errorMessage="";
 
-    this.serviceJSON.getObservable('menuItems').subscribe(items => this.filter(items), error => this.errorMessage = <any>error);
+    this.serviceJSON.getObservable('ViewLoader/menuItems').subscribe(items => this.filter(items), error => this.errorMessage = <any>error);
     
     if(this.errorMessage!=""){
       alert("Error:"+this.errorMessage);

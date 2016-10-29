@@ -1,6 +1,6 @@
 import { Component, ViewEncapsulation } from '@angular/core';
 
-import { Utils } from './../../Core/Utils';
+import { Utils } from './../../Core/Utils/Utils';
 import './../../RxjsOperators';
 
 @Component({
