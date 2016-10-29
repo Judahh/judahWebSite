@@ -1,7 +1,7 @@
 <div class="{{cascadingStyleSheetsClass}}">
     <div class="{{cascadingStyleSheetsSubClass}}">
-        <div *ngFor="let element of elements()" class="{{cascadingStyleSheetsSubClasses[element]}}">
-            <info info="{{info[element]}}">
+        <div *ngFor="let information of this.modelItem.info; let i = index" class="{{cascadingStyleSheetsSubClasses[i]}}">
+            <info [info]="information">
             </info>
         </div>
     </div>

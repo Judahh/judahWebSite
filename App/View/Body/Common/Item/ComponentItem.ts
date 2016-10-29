@@ -15,13 +15,9 @@ import { Utils } from './../../../../Core/Utils/Utils';
   encapsulation: ViewEncapsulation.None
 })
 export class ComponentItem implements OnInit{
-  colorEffectComponent: ComponentColorEffect;
-  @Input() colorEffect: string;
-  @Input() animationEffect: string;
-  @Input() font: string;
-  @Input() info: string;
   @Input() routerLink: string;
   @Input() routerLinkActive: string;
+  @Input() modelItem:ModelItem;
 
   public constructor(){}
 
@@ -30,12 +26,6 @@ export class ComponentItem implements OnInit{
   }
 
   initialization(){
-    this.colorEffectComponent=new ComponentColorEffect();
-    this.colorEffectComponent.animationEffect=this.animationEffect;
-    this.colorEffectComponent.colorEffect=this.colorEffect;
-    this.colorEffectComponent.font=this.font;
-    this.colorEffectComponent.info=this.info;
-    this.routerLinkActive=this.routerLinkActive;
   }
 
 }

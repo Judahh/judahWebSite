@@ -4,5 +4,9 @@ export class ModelItem {
   animationEffect: string;
   colorEffect: string;
   font: string;
-  info: string;
+  info: Array<string>;
+  verticalAlign: string;
+  width: string;
+  size: number;
+  padding: Array<number>;
 }

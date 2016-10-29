@@ -1,6 +1,7 @@
 import { Component, Input, OnInit, ViewEncapsulation } from '@angular/core';
 
 import { Utils } from './../../../../../Core/Utils/Utils';
+import { ModelItem } from '../ModelItem';
 
 @Component({
   moduleId: module.id,
@@ -10,13 +11,7 @@ import { Utils } from './../../../../../Core/Utils/Utils';
   encapsulation: ViewEncapsulation.None
 })
 export class ComponentFont implements OnInit{
-  @Input() animationEffect: string;
-  @Input() font: string;
-  @Input() verticalAlign: string;
-  @Input() width: string;
-  @Input() size: number;
-  @Input() padding: number[];
-  @Input() info: string;
+  @Input() modelItem:ModelItem;
   cascadingStyleSheetsClass:string;
   cascadingStyleSheetsClassFontSize:string;
 
@@ -27,34 +22,33 @@ export class ComponentFont implements OnInit{
   }
 
   fontWidth(){
-    if(this.width==null){
+    if(this.modelItem.width==null||this.modelItem.width==""){
       return "";
     }
-    return "vertical-align: "+this.width+";";
+    return "width: "+this.modelItem.width+";";
   }
 
   fontVerticalAlign(){
-    if(this.verticalAlign==null){
+    if(this.modelItem.verticalAlign==null||this.modelItem.verticalAlign==""){
       return "";
     }
-    return "vertical-align: "+this.verticalAlign+";";
+    return "vertical-align: "+this.modelItem.verticalAlign+";";
   }
 
   fontSize(){
-    return "font-size: "+this.size+"px;";
+    return "font-size: "+this.modelItem.size+"px;";
   }
 
   fontPadding(){
-    let stringPadding:string=""
-
-    for(let index:number=0;index<this.padding.length;index++){
+    let stringPadding:string="";
+    for(let index:number=0;index<this.modelItem.padding.length;index++){
       if(index==0){
-        stringPadding+="padding: ";
+        stringPadding+="padding:";
       }
 
-      stringPadding+=(this.padding[index]+"px");
+      stringPadding+=" "+(this.modelItem.padding[index]+"px");
 
-      if(index==this.padding.length-1){
+      if(index==this.modelItem.padding.length-1){
         stringPadding+=";";
       }
     }
@@ -67,16 +61,16 @@ export class ComponentFont implements OnInit{
   }
 
   initialization(){
-    if(this.size==null){
-      this.size=40;  
+    if(this.modelItem.size==null||this.modelItem.size==undefined||this.modelItem.size.toString()==""){
+      this.modelItem.size=40;  
     }
 
-    if(this.padding==null){
-      this.padding=[];  
-      this.padding.push(5);
+    if(this.modelItem.padding==null||this.modelItem.padding==undefined||this.modelItem.padding.toString()==""){
+      this.modelItem.padding=[];  
+      this.modelItem.padding.push(5);
     }
 
-    switch(this.font){
+    switch(this.modelItem.font){
       case "icon":
         this.cascadingStyleSheetsClass="DivClassIcon";
       break;

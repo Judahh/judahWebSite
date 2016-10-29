@@ -2,6 +2,8 @@ import { Component, Input, OnInit, ViewEncapsulation } from '@angular/core';
 
 import { Utils } from './../../../../../Core/Utils/Utils';
 
+import { ModelItem } from '../ModelItem';
+
 @Component({
   moduleId: module.id,
   selector: Utils.getFileSelector(Utils.getFileName(__filename)),
@@ -10,8 +12,7 @@ import { Utils } from './../../../../../Core/Utils/Utils';
   encapsulation: ViewEncapsulation.None
 })
 export class ComponentAnimationEffect implements OnInit{
-  @Input() animationEffect: string;
-  @Input() info: string;
+  @Input() modelItem:ModelItem;
   cascadingStyleSheetsClass:string;
   cascadingStyleSheetsSubClass:string;
   cascadingStyleSheetsSubClasses:Array<string>;
@@ -22,24 +23,12 @@ export class ComponentAnimationEffect implements OnInit{
     this.initialization();  
   }
 
-  isComma(value:any){
-    return value==',';
-  }
-
-  elements(){
-    let array:Array<number>=new Array<number>();
-    for(let index=0; index< this.info.length; index++){
-      array.push(index);
-    }
-    return array;
-  }
-
   initialization(){
     this.cascadingStyleSheetsClass="";
     this.cascadingStyleSheetsSubClass="";
     this.cascadingStyleSheetsSubClasses=new Array<string>();
     
-    switch(this.animationEffect){
+    switch(this.modelItem.animationEffect){
       case "pulse":
         this.cascadingStyleSheetsClass="DivClassPulse";
       break;

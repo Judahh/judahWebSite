@@ -2,6 +2,8 @@ import { Component, Input, OnInit, ViewEncapsulation } from '@angular/core';
 
 import { Utils } from './../../../../../Core/Utils/Utils';
 
+import { ModelItem } from '../ModelItem';
+
 @Component({
   moduleId: module.id,
   selector: Utils.getFileSelector(Utils.getFileName(__filename)),
@@ -10,10 +12,7 @@ import { Utils } from './../../../../../Core/Utils/Utils';
   encapsulation: ViewEncapsulation.None
 })
 export class ComponentColorEffect implements OnInit{
-  @Input() colorEffect: string;
-  @Input() animationEffect: string;
-  @Input() font: string;
-  @Input() info: string;
+  @Input() modelItem:ModelItem;
   cascadingStyleSheetsClass:string;
 
   public constructor(){}
@@ -23,7 +22,7 @@ export class ComponentColorEffect implements OnInit{
   }
 
   initialization(){
-    if(this.colorEffect=="neon"){
+    if(this.modelItem.colorEffect=="neon"){
       this.cascadingStyleSheetsClass="DivClassNeon";
     }
   }

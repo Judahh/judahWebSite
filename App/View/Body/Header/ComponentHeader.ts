@@ -18,9 +18,6 @@ import { Utils } from './../../../Core/Utils/Utils';
 
 export class ComponentHeader implements OnInit {
   modelMenuHorizontals: ModelMenuHorizontal[];
-  // itemsRight: ModelItem[];
-  // itemsCenter: ModelItem[];
-  // selectedItem: ModelItem;
   errorMessage: any;
   position: string;
 

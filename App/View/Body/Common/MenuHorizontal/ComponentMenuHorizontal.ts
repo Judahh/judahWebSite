@@ -1,4 +1,4 @@
-import { Component, Input, OnInit, ViewEncapsulation } from '@angular/core';
+import { Component, Input, OnInit, ViewEncapsulation, ViewChildren, QueryList, forwardRef } from '@angular/core';
 
 import {ComponentItem} from './../Item/ComponentItem';
 import {HTMLGenerator} from './../../../../Core/HTMLGenerator/HTMLGenerator';
@@ -31,15 +31,31 @@ export class ComponentMenuHorizontal implements OnInit{
     this.initialization();  
   }
 
+  ngAfterContentInit() {
+      //console.log(this.itemsQ.length);
+  }
+
   getItems(){
     this.items=[];
     this.errorMessage="";
 
     this.serviceJSON.getObservable('ViewLoader/menuItems').subscribe(items => this.filter(items), error => this.errorMessage = <any>error);
     
+    // this.stateCtrl = new Control();
+    // this.stateCtrl.valueChanges.subscribe(
+    //   data => {
+    //     this.itemsQ._results.forEach(child => {
+    //       child.state = data;
+    //     });
+    //   });
+    //this.itemsQ.changes.subscribe(items => alert(items), error => this.errorMessage = <any>error);
+
     if(this.errorMessage!=""){
       alert("Error:"+this.errorMessage);
     }
+  }
+
+  ngAfterViewInit() {
   }
 
   private filter(items:Array<ModelMenuItems>){

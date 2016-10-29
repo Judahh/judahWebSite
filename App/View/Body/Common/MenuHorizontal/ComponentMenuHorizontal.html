@@ -1,12 +1,9 @@
 <ul>    
     <li *ngFor="let item of items">
         <item 
+            [modelItem]="item"
             routerLink="/{{item.routerLink}}"
-            routerLinkActive="{{item.routerLinkActive}}" 
-            colorEffect="{{item.colorEffect}}" 
-            animationEffect="{{item.animationEffect}}" 
-            font="{{item.font}}" 
-            info="{{item.info}}">
+            routerLinkActive="{{item.routerLinkActive}}" >
             Loading...
         </item>
     </li>

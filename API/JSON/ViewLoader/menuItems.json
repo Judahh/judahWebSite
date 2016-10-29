@@ -15,7 +15,11 @@
             "animationEffect":"pulse",
             "colorEffect":"neon",
             "font":"icon",
-            "info":"c"
+            "info":["c"],
+            "verticalAlign":"",
+            "width":"",
+            "size":40,
+            "padding":[5]
           },
           {
             "id":1,
@@ -24,7 +28,11 @@
             "animationEffect":"shake",
             "colorEffect":"neon",
             "font":"icon",
-            "info":"d"
+            "info":["d"],
+            "verticalAlign":"",
+            "width":"",
+            "size":40,
+            "padding":[5]
           },
           {
             "id":2,
@@ -33,7 +41,11 @@
             "animationEffect":"handIcon",
             "colorEffect":"neon",
             "font":"icon",
-            "info":"«¬"
+            "info":["«","¬"],
+            "verticalAlign":"",
+            "width":"",
+            "size":40,
+            "padding":[5]
           },
           {
             "id":3,
@@ -42,7 +54,11 @@
             "animationEffect":"consoleIcon",
             "colorEffect":"neon",
             "font":"icon",
-            "info":"ijkl"
+            "info":["i","j","k","l"],
+            "verticalAlign":"",
+            "width":"",
+            "size":40,
+            "padding":[5]
           },
           {
             "id":4,
@@ -51,7 +67,11 @@
             "animationEffect":"shake",
             "colorEffect":"neon",
             "font":"icon",
-            "info":"6"
+            "info":["6"],
+            "verticalAlign":"",
+            "width":"",
+            "size":40,
+            "padding":[5]
           }
         ]
       },
@@ -83,7 +103,11 @@
             "animationEffect":" ",
             "colorEffect":"neon",
             "font":"icon",
-            "info":"µ"
+            "info":["µ"],
+            "verticalAlign":"",
+            "width":"",
+            "size":40,
+            "padding":[5]
           }
         ]
       },
