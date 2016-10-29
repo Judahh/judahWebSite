@@ -1,7 +1,7 @@
 import { Component, Input, OnInit, ViewEncapsulation } from '@angular/core';
-import { ComponentSubDivisor } from './SubDivisor/ComponentSubDivisor'
+import { ComponentSubDivisor } from './SubDivisor/ComponentSubDivisor';
 
-import { Utils } from './../../../../../Core/Utils/Utils'
+import { Utils } from './../../../../../Core/Utils/Utils';
 
 @Component({
   moduleId: module.id,

@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
-import { Utils } from './../../../../Core/Utils/Utils'
+import { Utils } from './../../../../Core/Utils/Utils';
+import { Language } from './../../../../Core/Language/Language';
 
 import { ModelWhoAmI } from './ModelWhoAmI';
 import { ModelWhoAmIInformation } from './ModelWhoAmIInformation';

@@ -5,7 +5,7 @@ import { ModelMenuHorizontal } from '../Common/MenuHorizontal/ModelMenuHorizonta
 import { ModelMenuItems } from '../Common/ModelMenuItems';
 import { ServiceJSON } from './../../../Core/Services/ServiceJSON';
 
-import { Utils } from './../../../Core/Utils/Utils'
+import { Utils } from './../../../Core/Utils/Utils';
 
 @Component({
   moduleId: module.id,

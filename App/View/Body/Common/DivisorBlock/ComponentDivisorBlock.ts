@@ -1,10 +1,10 @@
 import { Component, Input, OnInit, ViewEncapsulation } from '@angular/core';
-import { ComponentItem } from './../Item/ComponentItem'
-import { ComponentFont } from './../Item/Font/ComponentFont'
-import { ComponentSubDivisor } from './Divisor/SubDivisor/ComponentSubDivisor'
-import { ComponentDivisor } from './Divisor/ComponentDivisor'
+import { ComponentItem } from './../Item/ComponentItem';
+import { ComponentFont } from './../Item/Font/ComponentFont';
+import { ComponentSubDivisor } from './Divisor/SubDivisor/ComponentSubDivisor';
+import { ComponentDivisor } from './Divisor/ComponentDivisor';
 
-import { Utils } from './../../../../Core/Utils/Utils'
+import { Utils } from './../../../../Core/Utils/Utils';
 
 @Component({
   moduleId: module.id,
