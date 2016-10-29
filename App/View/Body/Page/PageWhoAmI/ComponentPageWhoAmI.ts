@@ -34,7 +34,16 @@ export class ComponentPageWhoAmI implements OnInit {
 
   personalStatement(){
     if(this.modelWhoAmIs.length>0){
-      return this.modelWhoAmIs[0].personalStatementBeforeAge+Utils.gregorianAge(this.modelWhoAmIInformation.birthDate)+this.modelWhoAmIs[0].personalStatementAfterAge;
+      return (this.modelWhoAmIs[0].personalStatementBeforeAge
+      + Utils.gregorianAge(this.modelWhoAmIInformation.birthDate)
+      + this.modelWhoAmIs[0].personalStatementAfterAge);
+    } 
+    return "";
+  }
+
+  personalStatement2(){
+    if(this.modelWhoAmIs.length>0){
+      return (this.modelWhoAmIs[0].personalStatement2);
     } 
     return "";
   }
@@ -42,6 +51,13 @@ export class ComponentPageWhoAmI implements OnInit {
   talkingAboutMe(){
     if(this.modelWhoAmIs.length>0){
       return this.modelWhoAmIs[0].talkingAboutMe;
+    } 
+    return "";
+  }
+
+  talkingAboutMe2(){
+    if(this.modelWhoAmIs.length>0){
+      return this.modelWhoAmIs[0].talkingAboutMe2;
     } 
     return "";
   }
