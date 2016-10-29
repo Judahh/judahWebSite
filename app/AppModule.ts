@@ -33,8 +33,6 @@ import { ComponentInfo } from './View/Body/Common/Item/Info/ComponentInfo';
 import { ComponentItem } from './View/Body/Common/Item/ComponentItem';
 import { ComponentMenuHorizontal } from './View/Body/Common/MenuHorizontal/ComponentMenuHorizontal';
 
-import { HeroComponent } from './View/Body/Page/Hero/Hero.component';
-
 import { routing, routedComponents } from './Routing';
 
 import { HTMLGenerator } from './Core/HTMLGenerator/HTMLGenerator';
@@ -96,7 +94,6 @@ let config: ResponsiveConfigInterface = {
     ComponentFont,
     ComponentColorEffect,
     ComponentAnimationEffect,
-    HeroComponent,
     SafeUrlPipe,
     SafeStylePipe
   ],

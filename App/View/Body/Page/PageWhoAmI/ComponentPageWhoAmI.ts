@@ -86,6 +86,7 @@ export class ComponentPageWhoAmI implements OnInit {
   }
 
   initialization(){
+    alert(Language.language);
     this.modelWhoAmIs=[];
     this.modelWhoAmIInformation=new ModelWhoAmIInformation();
     this.errorMessage="";
