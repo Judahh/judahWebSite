@@ -1,6 +1,14 @@
 page{
-  width: 100%;
-  height: 100%;
+    width: 100%;
+    height: 100%;
+    border: 10px solid transparent;
+    border-top: 40px solid transparent;
+    border-bottom: 20px solid transparent;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 .selected {
@@ -136,7 +144,11 @@ page{
 .ImgClassPicture{
     box-sizing: border-box;
     border: solid black 15px;
+    position: relative;
     border-radius: 1000px;
+    width: 100%;
+    height: auto;
+    top: 0;
 }
 
 .DivClassVideo{
