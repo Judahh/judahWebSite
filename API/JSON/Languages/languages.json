@@ -8,5 +8,25 @@
         "id":1,
         "language":"English-USA",
         "code":"en"
+    },
+    {
+        "id":3,
+        "language":"English-GB",
+        "code":"en-gb"
+    },
+    {
+        "id":4,
+        "language":"Portuguese-Brazil",
+        "code":"pt-br"
+    },
+    {
+        "id":5,
+        "language":"Portuguese-Portugal",
+        "code":"pt-pt"
+    },
+    {
+        "id":6,
+        "language":"Portuguese-Portugal",
+        "code":"pt"
     }
 ]
