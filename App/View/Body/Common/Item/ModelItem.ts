@@ -1,7 +1,9 @@
+import { ModelAnimationEffect } from './AnimationEffect/ModelAnimationEffect';
+
 export class ModelItem {
   id: number;
   routerLink: string;
-  animationEffect: string;
+  animationEffect: ModelAnimationEffect;
   colorEffect: string;
   font: string;
   info: Array<string>;

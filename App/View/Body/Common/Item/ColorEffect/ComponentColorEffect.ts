@@ -22,8 +22,5 @@ export class ComponentColorEffect implements OnInit{
   }
 
   initialization(){
-    if(this.modelItem.colorEffect=="neon"){
-      this.cascadingStyleSheetsClass="DivClassNeon";
-    }
   }
 }

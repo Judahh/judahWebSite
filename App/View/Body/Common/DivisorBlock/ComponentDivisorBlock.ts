@@ -1,5 +1,5 @@
 import { Component, Input, OnInit, ViewEncapsulation } from '@angular/core';
-import { ComponentItem } from './../Item/ComponentItem';
+import { ModelItem } from './../Item/ModelItem';
 import { ComponentFont } from './../Item/Font/ComponentFont';
 import { ComponentSubDivisor } from './Divisor/SubDivisor/ComponentSubDivisor';
 import { ComponentDivisor } from './Divisor/ComponentDivisor';
@@ -17,7 +17,7 @@ export class ComponentDivisorBlock implements OnInit {
   @Input() type: string;
   subDivisor: ComponentSubDivisor;
   divisor: ComponentDivisor;
-  items: Array<ComponentItem>;
+  items: Array<ModelItem>;
   titles: Array<ComponentFont>;
   texts: Array<ComponentFont>;
   cascadingStyleSheetsClass:string;
@@ -34,67 +34,79 @@ export class ComponentDivisorBlock implements OnInit {
     switch(this.type){
       case "skills":
         
-        this.items=new Array<ComponentItem>();
+        this.items=new Array<ModelItem>();
         this.titles=new Array<ComponentFont>();
         this.texts=new Array<ComponentFont>();
 
         
-        let itemIntelligence:ComponentItem=new ComponentItem();
+        let itemIntelligence:ModelItem=new ModelItem();
         let titleIntelligence:ComponentFont=new ComponentFont();
         let textIntelligence:ComponentFont=new ComponentFont();
 
-        itemIntelligence.animationEffect='brainIcon';
+        itemIntelligence.animationEffect.class='';
+        itemIntelligence.animationEffect.subClass='DivClassHandIcon';
+        itemIntelligence.animationEffect.subClasses.push("DivClassHandIconOff");
+        itemIntelligence.animationEffect.subClasses.push("DivClassHandIconOn");
         itemIntelligence.colorEffect='neon';
         itemIntelligence.font='icon';
-        itemIntelligence.info='{';
-        itemIntelligence.info+='|';
+        itemIntelligence.info.push('{');
+        itemIntelligence.info.push('|');
 
-        titleIntelligence.font='futuristicI';
-        titleIntelligence.verticalAlign='bottom';
-        titleIntelligence.width='100%';
-        titleIntelligence.size=40;
-        titleIntelligence.info='title';
+        titleIntelligence.modelItem.font='futuristicI';
+        titleIntelligence.modelItem.verticalAlign='bottom';
+        titleIntelligence.modelItem.width='100%';
+        titleIntelligence.modelItem.size=40;
+        titleIntelligence.modelItem.info.push('title');
 
-        textIntelligence.font='futuristicI';
-        textIntelligence.verticalAlign='bottom';
-        textIntelligence.width='100%';
-        textIntelligence.size=20;
-        textIntelligence.info='text';
+        textIntelligence.modelItem.font='futuristicI';
+        textIntelligence.modelItem.verticalAlign='bottom';
+        textIntelligence.modelItem.width='100%';
+        textIntelligence.modelItem.size=20;
+        textIntelligence.modelItem.info.push('text');
 
         this.items.push(itemIntelligence);
         this.titles.push(titleIntelligence);
         this.texts.push(textIntelligence);
 
-        let itemTeamwork:ComponentItem=new ComponentItem();
-        itemTeamwork.animationEffect='teamworkIcon';
+        let itemTeamwork:ModelItem=new ModelItem();
+        itemTeamwork.animationEffect.class='';
+        itemTeamwork.animationEffect.subClass='';
+        itemTeamwork.animationEffect.subClasses=[];
         itemTeamwork.colorEffect='neon';
         itemTeamwork.font='icon';
-        itemTeamwork.info='z';
+        itemTeamwork.info.push('z');
 
         this.items.push(itemTeamwork);
 
-        let itemLeadership:ComponentItem=new ComponentItem();
-        itemLeadership.animationEffect='leadershipIcon';
+        let itemLeadership:ModelItem=new ModelItem();
+        itemLeadership.animationEffect.class='';
+        itemLeadership.animationEffect.subClass='';
+        itemLeadership.animationEffect.subClasses=[];
         itemLeadership.colorEffect='neon';
         itemLeadership.font='icon';
-        itemLeadership.info='¡';
+        itemLeadership.info.push('¡');
 
         this.items.push(itemTeamwork);
 
-        let itemLanguages:ComponentItem=new ComponentItem();
-        itemLanguages.animationEffect='languagesIcon';
+        let itemLanguages:ModelItem=new ModelItem();
+        itemLanguages.animationEffect.class='';
+        itemLanguages.animationEffect.subClass='';
+        itemLanguages.animationEffect.subClasses=[];
         itemLanguages.colorEffect='neon';
         itemLanguages.font='icon';
-        itemLanguages.info='}';
+        itemLanguages.info.push('}');
 
         this.items.push(itemTeamwork);
 
-        let itemMultiway:ComponentItem=new ComponentItem();
-        itemMultiway.animationEffect='multiwayIcon';
+        let itemMultiway:ModelItem=new ModelItem();
+        itemMultiway.animationEffect.class='';
+        itemMultiway.animationEffect.subClass='DivClassHandIcon';
+        itemMultiway.animationEffect.subClasses.push("DivClassHandIconOff");
+        itemMultiway.animationEffect.subClasses.push("DivClassHandIconOn");
         itemMultiway.colorEffect='neon';
         itemMultiway.font='icon';
-        itemMultiway.info='x';
-        itemMultiway.info+='y';
+        itemMultiway.info.push('x');
+        itemMultiway.info.push('y');
 
 
 

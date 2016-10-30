@@ -1,6 +1,6 @@
-<div class="{{cascadingStyleSheetsClass}}">
-    <div class="{{cascadingStyleSheetsSubClass}}">
-        <div *ngFor="let information of this.modelItem.info; let i = index" class="{{cascadingStyleSheetsSubClasses[i]}}">
+<div class="{{modelItem.animationEffect.class}}">
+    <div class="{{modelItem.animationEffect.subClass}}">
+        <div *ngFor="let information of this.modelItem.info; let i = index" class="{{modelItem.animationEffect.subClasses[i]}}">
             <info [info]="information">
             </info>
         </div>

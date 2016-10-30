@@ -13,9 +13,6 @@ import { ModelItem } from '../ModelItem';
 })
 export class ComponentAnimationEffect implements OnInit{
   @Input() modelItem:ModelItem;
-  cascadingStyleSheetsClass:string;
-  cascadingStyleSheetsSubClass:string;
-  cascadingStyleSheetsSubClasses:Array<string>;
 
   public constructor(){}
 
@@ -24,53 +21,56 @@ export class ComponentAnimationEffect implements OnInit{
   }
 
   initialization(){
-    this.cascadingStyleSheetsClass="";
-    this.cascadingStyleSheetsSubClass="";
-    this.cascadingStyleSheetsSubClasses=new Array<string>();
-    
-    switch(this.modelItem.animationEffect){
-      case "pulse":
-        this.cascadingStyleSheetsClass="DivClassPulse";
-      break;
+    // this.cascadingStyleSheetsClass=this.modelItem.animationEffect.class;
+    // // console.log(this.cascadingStyleSheetsClass);
+    // this.cascadingStyleSheetsSubClass=this.modelItem.animationEffect.subClass;
+    // // console.log(this.cascadingStyleSheetsSubClass);
+    // this.cascadingStyleSheetsSubClasses=this.modelItem.animationEffect.subClasses;
+    // // console.log(this.cascadingStyleSheetsSubClasses);
 
-      case "shake":
-        this.cascadingStyleSheetsClass="DivClassShake";
-      break;
+  //   switch(this.modelItem.animationEffect){
+  //     case "pulse":
+  //       this.cascadingStyleSheetsClass="DivClassPulse";
+  //     break;
 
-      case "spin":
-        this.cascadingStyleSheetsClass="DivClassSpin";  
-      break;
+  //     case "shake":
+  //       this.cascadingStyleSheetsClass="DivClassShake";
+  //     break;
 
-      case "spin2":
-        this.cascadingStyleSheetsClass="DivClassSpin2";  
-      break;
+  //     case "spin":
+  //       this.cascadingStyleSheetsClass="DivClassSpin";  
+  //     break;
 
-      case "handIcon":
-        this.cascadingStyleSheetsClass="DivClassShake";
-        this.cascadingStyleSheetsSubClass="DivClassHandIcon";
-        this.cascadingStyleSheetsSubClasses.push("DivClassHandIconOff");
-        this.cascadingStyleSheetsSubClasses.push("DivClassHandIconOn");  
-      break;
+  //     case "spin2":
+  //       this.cascadingStyleSheetsClass="DivClassSpin2";  
+  //     break;
 
-      case "multiwayIcon":
-      case "brainIcon":
-        this.cascadingStyleSheetsSubClass="DivClassHandIcon";
-        this.cascadingStyleSheetsSubClasses.push("DivClassHandIconOff");
-        this.cascadingStyleSheetsSubClasses.push("DivClassHandIconOn");
-      break;
+  //     case "handIcon":
+  //       this.cascadingStyleSheetsClass="DivClassShake";
+  //       this.cascadingStyleSheetsSubClass="DivClassHandIcon";
+  //       this.cascadingStyleSheetsSubClasses.push("DivClassHandIconOff");
+  //       this.cascadingStyleSheetsSubClasses.push("DivClassHandIconOn");  
+  //     break;
 
-      case "teamworkIcon":
-      case "languagesIcon":
-      case "leadershipIcon":
-      break;
+  //     case "multiwayIcon":
+  //     case "brainIcon":
+  //       this.cascadingStyleSheetsSubClass="DivClassHandIcon";
+  //       this.cascadingStyleSheetsSubClasses.push("DivClassHandIconOff");
+  //       this.cascadingStyleSheetsSubClasses.push("DivClassHandIconOn");
+  //     break;
 
-      case "consoleIcon":
-        this.cascadingStyleSheetsSubClass="DivClassConsoleIcon";
-        this.cascadingStyleSheetsSubClasses.push("DivClassConsoleIconOff");
-        this.cascadingStyleSheetsSubClasses.push("DivClassConsoleIconOn");
-        this.cascadingStyleSheetsSubClasses.push("DivClassConsoleIconOn1");
-        this.cascadingStyleSheetsSubClasses.push("DivClassConsoleIconOn2");
-      break;
-    }
+  //     case "teamworkIcon":
+  //     case "languagesIcon":
+  //     case "leadershipIcon":
+  //     break;
+
+  //     case "consoleIcon":
+  //       this.cascadingStyleSheetsSubClass="DivClassConsoleIcon";
+  //       this.cascadingStyleSheetsSubClasses.push("DivClassConsoleIconOff");
+  //       this.cascadingStyleSheetsSubClasses.push("DivClassConsoleIconOn");
+  //       this.cascadingStyleSheetsSubClasses.push("DivClassConsoleIconOn1");
+  //       this.cascadingStyleSheetsSubClasses.push("DivClassConsoleIconOn2");
+  //     break;
+  //   }
   }
 }

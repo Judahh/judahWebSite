@@ -61,25 +61,5 @@ export class ComponentFont implements OnInit{
   }
 
   initialization(){
-    if(this.modelItem.size==null||this.modelItem.size==undefined||this.modelItem.size.toString()==""){
-      this.modelItem.size=40;  
-    }
-
-    if(this.modelItem.padding==null||this.modelItem.padding==undefined||this.modelItem.padding.toString()==""){
-      this.modelItem.padding=[];  
-      this.modelItem.padding.push(5);
-    }
-
-    switch(this.modelItem.font){
-      case "icon":
-        this.cascadingStyleSheetsClass="DivClassIcon";
-      break;
-      case "futuristicI":
-        this.cascadingStyleSheetsClass="DivClassFuturisticI";
-      break;
-      case "futuristicII":
-        this.cascadingStyleSheetsClass="DivClassFuturisticII";
-      break;
-    }
   }
 }
