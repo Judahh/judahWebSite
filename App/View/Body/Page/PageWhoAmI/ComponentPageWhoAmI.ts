@@ -29,6 +29,7 @@ export class ComponentPageWhoAmI implements OnInit {
   modelWhoAmI:ModelWhoAmI;
   modelWhoAmIInformation:ModelWhoAmIInformation;
   modelLanguages:ModelLanguages;
+  modelSubDivisor:ModelSubDivisor;
   errorMessage: any;
 
   title(){
@@ -72,30 +73,29 @@ export class ComponentPageWhoAmI implements OnInit {
   constructor(private serviceJSON: ServiceJSON) {}
 
   initialization(){
+
+    this.modelSubDivisor=new ModelSubDivisor()
+    this.modelSubDivisor.item=new ModelItem();
+    this.modelSubDivisor.item.colorEffect=new ModelColorEffect();
+    this.modelSubDivisor.item.colorEffect.font=new ModelFont();
+    this.modelSubDivisor.item.colorEffect.font.animationEffect=new ModelAnimationEffect();
+
+    this.modelSubDivisor.item.routerLink='';
+    this.modelSubDivisor.item.routerLinkActive='inactive';
+    this.modelSubDivisor.item.colorEffect.font.arrayPadding=[];
+    this.modelSubDivisor.item.colorEffect.font.font='DivClassFuturisticIAndII';
+    this.modelSubDivisor.item.colorEffect.font.verticalAlign='bottom';
+    this.modelSubDivisor.item.colorEffect.font.textAlign='center';
+    this.modelSubDivisor.item.colorEffect.font.width='100%';
+    this.modelSubDivisor.item.colorEffect.font.size=40;
+    this.modelSubDivisor.item.colorEffect.font.animationEffect.class='';
+    this.modelSubDivisor.item.colorEffect.font.animationEffect.subClass='';
+    this.modelSubDivisor.item.colorEffect.font.animationEffect.subClasses=[];
+    this.modelSubDivisor.item.colorEffect.font.animationEffect.arrayInformation=new Array<ModelInformation>();
+    this.modelSubDivisor.item.colorEffect.font.animationEffect.arrayInformation.push(new ModelInformation('Title'));
+
+
     this.modelWhoAmI=new ModelWhoAmI();
-
-    this.modelWhoAmI.subDivisor=new ModelSubDivisor()
-    this.modelWhoAmI.subDivisor.item=new ModelItem();
-    this.modelWhoAmI.subDivisor.item.colorEffect=new ModelColorEffect();
-    this.modelWhoAmI.subDivisor.item.colorEffect.font=new ModelFont();
-    this.modelWhoAmI.subDivisor.item.colorEffect.font.animationEffect=new ModelAnimationEffect();
-
-    this.modelWhoAmI.subDivisor.item.routerLink='';
-    this.modelWhoAmI.subDivisor.item.routerLinkActive='inactive';
-    this.modelWhoAmI.subDivisor.item.colorEffect.font.arrayPadding=[];
-    this.modelWhoAmI.subDivisor.item.colorEffect.font.font='DivClassFuturisticIAndII';
-    this.modelWhoAmI.subDivisor.item.colorEffect.font.verticalAlign='bottom';
-    this.modelWhoAmI.subDivisor.item.colorEffect.font.textAlign='center';
-    this.modelWhoAmI.subDivisor.item.colorEffect.font.width='100%';
-    this.modelWhoAmI.subDivisor.item.colorEffect.font.size=40;
-    this.modelWhoAmI.subDivisor.item.colorEffect.font.animationEffect.class='';
-    this.modelWhoAmI.subDivisor.item.colorEffect.font.animationEffect.subClass='';
-    this.modelWhoAmI.subDivisor.item.colorEffect.font.animationEffect.subClasses=[];
-    this.modelWhoAmI.subDivisor.item.colorEffect.font.animationEffect.arrayInformation=new Array<ModelInformation>();
-    this.modelWhoAmI.subDivisor.item.colorEffect.font.animationEffect.arrayInformation.push(new ModelInformation('Title'));
-
-
-    //this.modelWhoAmI=new ModelWhoAmI();
     this.modelLanguages=new ModelLanguages();
     this.modelWhoAmIInformation=new ModelWhoAmIInformation();
     this.errorMessage="";

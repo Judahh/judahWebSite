@@ -6,5 +6,4 @@ export class ModelWhoAmI {
     videoHeight:number;
     myPicturePath:string;
     birthDate:string;
-    subDivisor:ModelSubDivisor;
 }
