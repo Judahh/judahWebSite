@@ -41,9 +41,7 @@ export class ComponentPageSkills implements OnInit {
       this.initialization();
   }
 
-  constructor() {
-    this.initialization();
-   }
+  constructor() {}
 
   initialization(){
   }

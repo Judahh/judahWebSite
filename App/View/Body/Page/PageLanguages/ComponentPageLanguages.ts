@@ -22,9 +22,7 @@ export class ComponentPageLanguages implements OnInit {
       this.initialization();
   }
 
-  constructor() {
-    this.initialization();
-   }
+  constructor() {}
 
   initialization(){
   }

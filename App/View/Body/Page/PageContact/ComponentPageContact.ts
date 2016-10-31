@@ -22,9 +22,7 @@ export class ComponentPageContact implements OnInit {
       this.initialization();
   }
 
-  constructor() {
-    this.initialization();
-   }
+  constructor() {}
 
   initialization(){
   }
