@@ -33,6 +33,10 @@ import { ComponentColorEffect } from './View/Body/Common/Item/ColorEffect/Compon
 import { ComponentItem } from './View/Body/Common/Item/ComponentItem';
 import { ComponentMenuHorizontal } from './View/Body/Common/MenuHorizontal/ComponentMenuHorizontal';
 
+import { ComponentDivisorBlock } from './View/Body/Common/DivisorBlock/ComponentDivisorBlock';
+import { ComponentDivisor } from './View/Body/Common/DivisorBlock/Divisor/ComponentDivisor';
+import { ComponentSubDivisor } from './View/Body/Common/DivisorBlock/Divisor/SubDivisor/ComponentSubDivisor';
+
 import { routing, routedComponents } from './Routing';
 
 import { HTMLGenerator } from './Core/HTMLGenerator/HTMLGenerator';
@@ -94,6 +98,9 @@ let config: ResponsiveConfigInterface = {
     ComponentFont,
     ComponentColorEffect,
     ComponentAnimationEffect,
+    ComponentDivisorBlock,
+    ComponentDivisor,
+    ComponentSubDivisor,
     SafeUrlPipe,
     SafeStylePipe
   ],

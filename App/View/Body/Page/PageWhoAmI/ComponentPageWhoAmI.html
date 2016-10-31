@@ -21,10 +21,13 @@
     </div>
 </div>
 
+<subDivisor [modelSubDivisor]="modelWhoAmI.subDivisor">
+</subDivisor>
+
 <div class="DivClassTableCodeWrap">
     <div class="DivClassFullBlock">
         <div class="DivClassMyPicture">
-            <img class="ImgClassPicture" src="{{modelWhoAmIInformation.myPicturePath}}"/>
+            <img class="ImgClassPicture" src="{{modelWhoAmI.myPicturePath}}"/>
         </div>
         <div class="DivClassTextWhoAmI">
             <div class="DivClassTextBasic">
@@ -51,7 +54,7 @@
     <div class="DivClassFullBlock">
         <div class="DivClassVideo">
             <div class="DivClassVideoWrapper">
-                <iframe width="{{modelWhoAmIInformation.videoWidth}}" height="{{modelWhoAmIInformation.videoHeight}}" [src]="modelWhoAmIInformation.videoLink|safeUrl" frameborder="0" allowfullscreen></iframe>
+                <iframe width="{{modelWhoAmI.videoWidth}}" height="{{modelWhoAmI.videoHeight}}" [src]="modelWhoAmI.videoLink|safeUrl" frameborder="0" allowfullscreen></iframe>
             </div>
         </div>
     </div>

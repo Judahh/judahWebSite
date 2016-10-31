@@ -2,6 +2,8 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 
 import { Utils } from './../../../../Core/Utils/Utils';
 
+import { ModelDivisorBlock } from './../../Common/DivisorBlock/ModelDivisorBlock';
+
 @Component({
   moduleId: module.id,
   selector: Utils.getFileSelector(Utils.getFileName(__filename)),
@@ -10,6 +12,8 @@ import { Utils } from './../../../../Core/Utils/Utils';
   encapsulation: ViewEncapsulation.None
 })
 export class ComponentPageSkills implements OnInit {
+
+  modelDivisorBlock: ModelDivisorBlock=new ModelDivisorBlock();
 
   skillsText(){return "";}
 

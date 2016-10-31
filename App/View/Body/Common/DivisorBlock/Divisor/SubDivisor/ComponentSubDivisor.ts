@@ -27,6 +27,21 @@ export class ComponentSubDivisor implements OnInit {
     //this.heroSubscription.unsubscribe();
   }
 
+  position(){
+    return "position: absolute;";
+  }
+
+  bottom(){
+    return "bottom: 0px;";
+  }
+
+  style(){
+    if(this.modelSubDivisor.toBottom){
+      return this.position()+this.bottom();
+    }
+    return "";
+  }
+
 }
 
 

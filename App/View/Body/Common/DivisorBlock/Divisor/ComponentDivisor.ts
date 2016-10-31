@@ -30,8 +30,37 @@ export class ComponentDivisor implements OnInit {
     return "border-bottom: solid "+this.modelDivisor.color+";";
   }
 
+  display(){
+    return "display: inherit;";
+  }
+
+  width(){
+    return "width: inherit;";
+  }
+
+  fontPadding(){
+    let stringPadding:string="";
+    for(let index:number=0;index<this.modelDivisor.arrayPadding.length;index++){
+      if(index==0){
+        stringPadding+="padding:";
+      }
+
+      stringPadding+=" "+(this.modelDivisor.arrayPadding[index]+"px");
+
+      if(index==this.modelDivisor.arrayPadding.length-1){
+        stringPadding+=";";
+      }
+    }
+
+    return stringPadding;
+  }
+
   style(){
-    return this.borderBottom();
+    return this.borderBottom()+this.display()+this.width();
+  }
+
+  style2(){
+    return this.fontPadding()+this.display()+this.width();
   }
 }
 
