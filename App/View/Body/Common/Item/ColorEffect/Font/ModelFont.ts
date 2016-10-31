@@ -1,4 +1,4 @@
-import { ModelAnimationEffect } from '../AnimationEffect/ModelAnimationEffect';
+import { ModelAnimationEffect } from './AnimationEffect/ModelAnimationEffect';
 
 export class ModelFont {
   font: string;

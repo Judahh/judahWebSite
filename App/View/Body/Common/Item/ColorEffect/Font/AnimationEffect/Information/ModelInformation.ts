@@ -1,5 +1,3 @@
-import { ModelAnimationEffect } from '../AnimationEffect/ModelAnimationEffect';
-
 export class ModelInformation {
   information: string;
 

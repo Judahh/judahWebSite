@@ -1,6 +1,6 @@
 import { Component, Input, OnInit, ViewEncapsulation } from '@angular/core';
 
-import { Utils } from './../../../../../Core/Utils/Utils';
+import { Utils } from './../../../../../../../Core/Utils/Utils';
 
 import { ModelAnimationEffect } from './ModelAnimationEffect';
 

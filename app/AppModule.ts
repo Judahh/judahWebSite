@@ -26,10 +26,10 @@ import { ComponentPageLanguages } from './View/Body/Page/PageLanguages/Component
 
 import { ComponentFooter } from './View/Body/Footer/ComponentFooter';
 
-import { ComponentAnimationEffect } from './View/Body/Common/Item/AnimationEffect/ComponentAnimationEffect';
+import { ComponentInformation } from './View/Body/Common/Item/ColorEffect/Font/AnimationEffect/Information/ComponentInformation';
+import { ComponentAnimationEffect } from './View/Body/Common/Item/ColorEffect/Font/AnimationEffect/ComponentAnimationEffect';
+import { ComponentFont } from './View/Body/Common/Item/ColorEffect/Font/ComponentFont';
 import { ComponentColorEffect } from './View/Body/Common/Item/ColorEffect/ComponentColorEffect';
-import { ComponentFont } from './View/Body/Common/Item/Font/ComponentFont';
-import { ComponentInformation } from './View/Body/Common/Item/Information/ComponentInformation';
 import { ComponentItem } from './View/Body/Common/Item/ComponentItem';
 import { ComponentMenuHorizontal } from './View/Body/Common/MenuHorizontal/ComponentMenuHorizontal';
 
