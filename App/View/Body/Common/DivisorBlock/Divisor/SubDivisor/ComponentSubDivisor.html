@@ -1,25 +1,5 @@
-<div class="{{cascadingStyleSheetsClass}}">
-    <item
-        *ngIf="type=='item'"
-        colorEffect="{{colorEffect}}"
-        animationEffect="{{animationEffect}}"
-        font="{{font}}"
-        info="{{info}}"
-        verticalAlign="{{verticalAlign}}"
-        width="{{width}}"
-        size="{{size}}"
-        padding="{{padding}}">
-    </item>
-
-    <font
-        *ngIf="type=='font'"
-        colorEffect="{{colorEffect}}"
-        animationEffect="{{animationEffect}}"
-        font="{{font}}"
-        info="{{info}}"
-        verticalAlign="{{verticalAlign}}"
-        width="{{width}}"
-        size="{{size}}"
-        padding="{{padding}}">
-    </font>
-</div>
+<item
+    [modelItem]="modelSubDivisor.item"
+    routerLink="/{{modelSubDivisor.item.routerLink}}"
+    routerLinkActive="{{modelSubDivisor.item.routerLinkActive}}">
+</item>

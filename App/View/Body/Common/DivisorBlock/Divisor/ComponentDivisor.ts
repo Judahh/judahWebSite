@@ -1,5 +1,5 @@
 import { Component, Input, OnInit, ViewEncapsulation } from '@angular/core';
-import { ComponentSubDivisor } from './SubDivisor/ComponentSubDivisor';
+import { ModelDivisor } from './ModelDivisor';
 
 import { Utils } from './../../../../../Core/Utils/Utils';
 
@@ -11,8 +11,7 @@ import { Utils } from './../../../../../Core/Utils/Utils';
   encapsulation: ViewEncapsulation.None
 })
 export class ComponentDivisor implements OnInit {
-  subDivisors: Array<ComponentSubDivisor>;
-  cascadingStyleSheetsClass:string;
+  @Input() modelDivisor: Array<ModelDivisor>;
 
   ngOnInit() {
     this.initialization();
@@ -21,7 +20,6 @@ export class ComponentDivisor implements OnInit {
   constructor() {}
 
   initialization(){
-    this.cascadingStyleSheetsClass="DivClassDivisor";
   }
 
   ngOnDestroy() {

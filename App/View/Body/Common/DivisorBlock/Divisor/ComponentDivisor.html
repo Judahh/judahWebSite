@@ -1,16 +1,3 @@
-<div class="{{cascadingStyleSheetsClass}}">
-    <li *ngFor="let subDivisor of subDivisors">
-        <subDivisor 
-            subDivisorType="{{subDivisor.subDivisorType}}"
-            type="{{subDivisor.type}}"
-            colorEffect="{{subDivisor.colorEffect}}"
-            animationEffect="{{subDivisor.animationEffect}}"
-            font="{{subDivisor.font}}"
-            info="{{subDivisor.info}}"
-            verticalAlign="{{subDivisor.verticalAlign}}"
-            width="{{subDivisor.width}}"
-            size="{{subDivisor.size}}"
-            padding="{{subDivisor.padding}}">
-        </subDivisor>
-    </li>
-</div>
+<subDivisor *ngFor="let subDivisor of modelDivisor.arraySubDivisor"
+    [modelSubDivisor]="subDivisor">
+</subDivisor>

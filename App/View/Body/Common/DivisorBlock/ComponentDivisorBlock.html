@@ -1,4 +1,5 @@
-<divisor>
+<divisor [modelDivisor]="modelDivisorBlock.divisor">
 </divisor>
-<subDivisor>
+<subDivisor *ngFor="let subDivisor of modelDivisorBlock.arraySubDivisor"
+    [modelSubDivisor]="subDivisor">
 </subDivisor>
