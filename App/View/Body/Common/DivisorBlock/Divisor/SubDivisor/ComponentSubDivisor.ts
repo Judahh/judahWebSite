@@ -17,10 +17,14 @@ export class ComponentSubDivisor implements OnInit {
 
   @Input() subDivisorType: number;
   @Input() type: string;
+  
   @Input() colorEffect: string;
+
   @Input() animationEffect: string;
-  @Input() font: string;
+  
   @Input() info: string;
+
+  @Input() font: string;
   @Input() verticalAlign: string;
   @Input() width: string;
   @Input() size: number;

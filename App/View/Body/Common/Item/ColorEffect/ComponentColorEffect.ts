@@ -2,7 +2,7 @@ import { Component, Input, OnInit, ViewEncapsulation } from '@angular/core';
 
 import { Utils } from './../../../../../Core/Utils/Utils';
 
-import { ModelItem } from '../ModelItem';
+import { ModelColorEffect } from './ModelColorEffect';
 
 @Component({
   moduleId: module.id,
@@ -12,8 +12,7 @@ import { ModelItem } from '../ModelItem';
   encapsulation: ViewEncapsulation.None
 })
 export class ComponentColorEffect implements OnInit{
-  @Input() modelItem:ModelItem;
-  cascadingStyleSheetsClass:string;
+  @Input() modelColorEffect:ModelColorEffect;
 
   public constructor(){}
 

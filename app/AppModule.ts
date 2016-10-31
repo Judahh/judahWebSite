@@ -29,7 +29,7 @@ import { ComponentFooter } from './View/Body/Footer/ComponentFooter';
 import { ComponentAnimationEffect } from './View/Body/Common/Item/AnimationEffect/ComponentAnimationEffect';
 import { ComponentColorEffect } from './View/Body/Common/Item/ColorEffect/ComponentColorEffect';
 import { ComponentFont } from './View/Body/Common/Item/Font/ComponentFont';
-import { ComponentInfo } from './View/Body/Common/Item/Info/ComponentInfo';
+import { ComponentInformation } from './View/Body/Common/Item/Information/ComponentInformation';
 import { ComponentItem } from './View/Body/Common/Item/ComponentItem';
 import { ComponentMenuHorizontal } from './View/Body/Common/MenuHorizontal/ComponentMenuHorizontal';
 
@@ -90,7 +90,7 @@ let config: ResponsiveConfigInterface = {
     ComponentFooter,
     ComponentMenuHorizontal,
     ComponentItem,
-    ComponentInfo,
+    ComponentInformation,
     ComponentFont,
     ComponentColorEffect,
     ComponentAnimationEffect,

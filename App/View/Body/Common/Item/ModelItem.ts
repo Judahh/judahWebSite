@@ -1,14 +1,9 @@
-import { ModelAnimationEffect } from './AnimationEffect/ModelAnimationEffect';
+import { ModelFont } from './Font/ModelFont';
+
+import { ModelColorEffect } from './ColorEffect/ModelColorEffect';
 
 export class ModelItem {
   id: number;
   routerLink: string;
-  animationEffect: ModelAnimationEffect;
-  colorEffect: string;
-  font: string;
-  info: Array<string>;
-  verticalAlign: string;
-  width: string;
-  size: number;
-  padding: Array<number>;
+  colorEffect: ModelColorEffect;
 }

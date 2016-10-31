@@ -1,7 +1,7 @@
 import { Component, Input, OnInit, ViewEncapsulation } from '@angular/core';
 
 import { Utils } from './../../../../../Core/Utils/Utils';
-import { ModelItem } from '../ModelItem';
+import { ModelFont } from './ModelFont';
 
 @Component({
   moduleId: module.id,
@@ -11,9 +11,7 @@ import { ModelItem } from '../ModelItem';
   encapsulation: ViewEncapsulation.None
 })
 export class ComponentFont implements OnInit{
-  @Input() modelItem:ModelItem;
-  cascadingStyleSheetsClass:string;
-  cascadingStyleSheetsClassFontSize:string;
+  @Input() modelFont:ModelFont;
 
   public constructor(){}
 
@@ -22,33 +20,33 @@ export class ComponentFont implements OnInit{
   }
 
   fontWidth(){
-    if(this.modelItem.width==null||this.modelItem.width==""){
+    if(this.modelFont.width==null||this.modelFont.width==""){
       return "";
     }
-    return "width: "+this.modelItem.width+";";
+    return "width: "+this.modelFont.width+";";
   }
 
   fontVerticalAlign(){
-    if(this.modelItem.verticalAlign==null||this.modelItem.verticalAlign==""){
+    if(this.modelFont.verticalAlign==null||this.modelFont.verticalAlign==""){
       return "";
     }
-    return "vertical-align: "+this.modelItem.verticalAlign+";";
+    return "vertical-align: "+this.modelFont.verticalAlign+";";
   }
 
   fontSize(){
-    return "font-size: "+this.modelItem.size+"px;";
+    return "font-size: "+this.modelFont.size+"px;";
   }
 
   fontPadding(){
     let stringPadding:string="";
-    for(let index:number=0;index<this.modelItem.padding.length;index++){
+    for(let index:number=0;index<this.modelFont.arrayPadding.length;index++){
       if(index==0){
         stringPadding+="padding:";
       }
 
-      stringPadding+=" "+(this.modelItem.padding[index]+"px");
+      stringPadding+=" "+(this.modelFont.arrayPadding[index]+"px");
 
-      if(index==this.modelItem.padding.length-1){
+      if(index==this.modelFont.arrayPadding.length-1){
         stringPadding+=";";
       }
     }

@@ -2,7 +2,7 @@ import { Component, Input, OnInit, ViewEncapsulation } from '@angular/core';
 
 import { Utils } from './../../../../../Core/Utils/Utils';
 
-import { ModelItem } from '../ModelItem';
+import { ModelAnimationEffect } from './ModelAnimationEffect';
 
 @Component({
   moduleId: module.id,
@@ -12,7 +12,7 @@ import { ModelItem } from '../ModelItem';
   encapsulation: ViewEncapsulation.None
 })
 export class ComponentAnimationEffect implements OnInit{
-  @Input() modelItem:ModelItem;
+  @Input() modelAnimationEffect:ModelAnimationEffect;
 
   public constructor(){}
 

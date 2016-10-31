@@ -1,8 +1,8 @@
-<div class="{{modelItem.animationEffect.class}}">
-    <div class="{{modelItem.animationEffect.subClass}}">
-        <div *ngFor="let information of this.modelItem.info; let i = index" class="{{modelItem.animationEffect.subClasses[i]}}">
-            <info [info]="information">
-            </info>
+<div class="{{modelAnimationEffect.class}}">
+    <div class="{{modelAnimationEffect.subClass}}">
+        <div *ngFor="let information of this.modelAnimationEffect.arrayInformation; let i = index" class="{{modelAnimationEffect.subClasses[i]}}">
+            <information [information]="information">
+            </information>
         </div>
     </div>
 </div>

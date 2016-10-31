@@ -1,8 +1,10 @@
 import { Component, Input, OnInit, ViewEncapsulation } from '@angular/core';
 import { ModelItem } from './../Item/ModelItem';
-import { ComponentFont } from './../Item/Font/ComponentFont';
+import { ModelFont } from './../Item/Font/ModelFont';
 import { ComponentSubDivisor } from './Divisor/SubDivisor/ComponentSubDivisor';
 import { ComponentDivisor } from './Divisor/ComponentDivisor';
+
+import { ModelInformation } from './../Item/Information/ModelInformation';
 
 import { Utils } from './../../../../Core/Utils/Utils';
 
@@ -17,9 +19,6 @@ export class ComponentDivisorBlock implements OnInit {
   @Input() type: string;
   subDivisor: ComponentSubDivisor;
   divisor: ComponentDivisor;
-  items: Array<ModelItem>;
-  titles: Array<ComponentFont>;
-  texts: Array<ComponentFont>;
   cascadingStyleSheetsClass:string;
 
   ngOnInit() {
@@ -34,69 +33,69 @@ export class ComponentDivisorBlock implements OnInit {
     switch(this.type){
       case "skills":
         
-        this.items=new Array<ModelItem>();
-        this.titles=new Array<ComponentFont>();
-        this.texts=new Array<ComponentFont>();
+        var items=new Array<ModelItem>();
+        var titles=new Array<ModelItem>();
+        var texts=new Array<ModelItem>();
 
         
         let itemIntelligence:ModelItem=new ModelItem();
-        let titleIntelligence:ComponentFont=new ComponentFont();
-        let textIntelligence:ComponentFont=new ComponentFont();
+        let titleIntelligence:ModelItem=new ModelItem();
+        let textIntelligence:ModelItem=new ModelItem();
 
         itemIntelligence.animationEffect.class='';
         itemIntelligence.animationEffect.subClass='DivClassHandIcon';
         itemIntelligence.animationEffect.subClasses.push("DivClassHandIconOff");
         itemIntelligence.animationEffect.subClasses.push("DivClassHandIconOn");
         itemIntelligence.colorEffect='neon';
-        itemIntelligence.font='icon';
-        itemIntelligence.info.push('{');
-        itemIntelligence.info.push('|');
+        itemIntelligence.font.font='icon';
+        itemIntelligence.arrayInformation.push(new ModelInformation('{'));
+        itemIntelligence.arrayInformation.push(new ModelInformation('|'));
 
-        titleIntelligence.modelItem.font='futuristicI';
-        titleIntelligence.modelItem.verticalAlign='bottom';
-        titleIntelligence.modelItem.width='100%';
-        titleIntelligence.modelItem.size=40;
-        titleIntelligence.modelItem.info.push('title');
+        titleIntelligence.font.font='futuristicI';
+        titleIntelligence.font.verticalAlign='bottom';
+        titleIntelligence.font.width='100%';
+        titleIntelligence.font.size=40;
+        titleIntelligence.arrayInformation.push(new ModelInformation('title'));
 
-        textIntelligence.modelItem.font='futuristicI';
-        textIntelligence.modelItem.verticalAlign='bottom';
-        textIntelligence.modelItem.width='100%';
-        textIntelligence.modelItem.size=20;
-        textIntelligence.modelItem.info.push('text');
+        textIntelligence.font.font='futuristicI';
+        textIntelligence.font.verticalAlign='bottom';
+        textIntelligence.font.width='100%';
+        textIntelligence.font.size=20;
+        textIntelligence.arrayInformation.push(new ModelInformation('text'));
 
-        this.items.push(itemIntelligence);
-        this.titles.push(titleIntelligence);
-        this.texts.push(textIntelligence);
+        items.push(itemIntelligence);
+        titles.push(titleIntelligence);
+        texts.push(textIntelligence);
 
         let itemTeamwork:ModelItem=new ModelItem();
         itemTeamwork.animationEffect.class='';
         itemTeamwork.animationEffect.subClass='';
         itemTeamwork.animationEffect.subClasses=[];
         itemTeamwork.colorEffect='neon';
-        itemTeamwork.font='icon';
-        itemTeamwork.info.push('z');
+        itemTeamwork.font.font='icon';
+        itemTeamwork.arrayInformation.push(new ModelInformation('z'));
 
-        this.items.push(itemTeamwork);
+        items.push(itemTeamwork);
 
         let itemLeadership:ModelItem=new ModelItem();
         itemLeadership.animationEffect.class='';
         itemLeadership.animationEffect.subClass='';
         itemLeadership.animationEffect.subClasses=[];
         itemLeadership.colorEffect='neon';
-        itemLeadership.font='icon';
-        itemLeadership.info.push('¡');
+        itemLeadership.font.font='icon';
+        itemLeadership.arrayInformation.push(new ModelInformation('¡'));
 
-        this.items.push(itemTeamwork);
+        items.push(itemTeamwork);
 
         let itemLanguages:ModelItem=new ModelItem();
         itemLanguages.animationEffect.class='';
         itemLanguages.animationEffect.subClass='';
         itemLanguages.animationEffect.subClasses=[];
         itemLanguages.colorEffect='neon';
-        itemLanguages.font='icon';
-        itemLanguages.info.push('}');
+        itemLanguages.font.font='icon';
+        itemLanguages.arrayInformation.push(new ModelInformation('}'));
 
-        this.items.push(itemTeamwork);
+        items.push(itemTeamwork);
 
         let itemMultiway:ModelItem=new ModelItem();
         itemMultiway.animationEffect.class='';
@@ -104,9 +103,9 @@ export class ComponentDivisorBlock implements OnInit {
         itemMultiway.animationEffect.subClasses.push("DivClassHandIconOff");
         itemMultiway.animationEffect.subClasses.push("DivClassHandIconOn");
         itemMultiway.colorEffect='neon';
-        itemMultiway.font='icon';
-        itemMultiway.info.push('x');
-        itemMultiway.info.push('y');
+        itemMultiway.font.font='icon';
+        itemMultiway.arrayInformation.push(new ModelInformation('x'));
+        itemMultiway.arrayInformation.push(new ModelInformation('y'));
 
 
 
@@ -120,17 +119,17 @@ export class ComponentDivisorBlock implements OnInit {
 
         subDivisorItem.type='item';
         subDivisorItem.subDivisorType=0;
-        subDivisorItem.content=this.items[0];
+        subDivisorItem.content=items[0];
         subDivisorText.type='font';
         subDivisorText.subDivisorType=0;
-        subDivisorText.content=this.titles[0];
+        subDivisorText.content=titles[0];
 
         this.divisor.subDivisors.push(subDivisorItem);
         this.divisor.subDivisors.push(subDivisorText);
 
         this.subDivisor.type='font';
         this.subDivisor.subDivisorType=0;
-        this.subDivisor.content=this.texts[0];
+        this.subDivisor.content=texts[0];
       break;
     }
 
