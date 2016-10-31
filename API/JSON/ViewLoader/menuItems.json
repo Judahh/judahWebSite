@@ -3,11 +3,11 @@
     "id": 0,
     "name": "header",
     "position": "top",
-    "menuHorizontal":[
+    "arrayMenuHorizontal":[
       {
         "id":0,
         "class":"DivClassLeft",
-        "item":[
+        "arrayItem":[
           {
             "id":0,
             "routerLink":"WhoAmI",
@@ -150,12 +150,12 @@
       {
         "id":1,
         "class":"DivClassCenter",
-        "item":[]
+        "arrayItem":[]
       },
       {
         "id":2,
         "class":"DivClassRight",
-        "item":[]
+        "arrayItem":[]
       }
     ]
   },
@@ -163,11 +163,11 @@
     "id": 1,
     "name": "footer",
     "position": "bottom",
-    "menuHorizontal":[
+    "arrayMenuHorizontal":[
       {
         "id":0,
         "class":"DivClassLeft",
-        "item":[
+        "arrayItem":[
           {
             "id":0,
             "routerLink":"Languages",
@@ -198,12 +198,12 @@
       {
         "id":1,
         "class":"DivClassCenter",
-        "item":[]
+        "arrayItem":[]
       },
       {
         "id":2,
         "class":"DivClassRight",
-        "item":[]
+        "arrayItem":[]
       }
     ]
   }

@@ -4,5 +4,5 @@ export class ModelMenuItems {
   id: number;
   name: string;
   position: string;
-  menuHorizontal: Array<ModelMenuHorizontal>;
+  arrayMenuHorizontal: Array<ModelMenuHorizontal>;
 }

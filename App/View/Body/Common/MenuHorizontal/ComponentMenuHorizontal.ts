@@ -19,11 +19,7 @@ import { Utils } from './../../../../Core/Utils/Utils';
   providers: [ServiceJSON]
 })
 export class ComponentMenuHorizontal implements OnInit{
-  @Input() class: string;
-  @Input() position: string;
-  @Input() id: number;
-  items: Array<ModelItem>;
-  errorMessage: any;
+  @Input() modelMenuHorizontal: ModelMenuHorizontal;
   
   constructor(private serviceJSON: ServiceJSON){}
 
@@ -31,48 +27,6 @@ export class ComponentMenuHorizontal implements OnInit{
     this.initialization();  
   }
 
-  ngAfterContentInit() {
-      //console.log(this.itemsQ.length);
-  }
-
-  getItems(){
-    this.items=[];
-    this.errorMessage="";
-
-    this.serviceJSON.getObservable('ViewLoader/menuItems').subscribe(items => this.filter(items), error => this.errorMessage = <any>error);
-    
-    // this.stateCtrl = new Control();
-    // this.stateCtrl.valueChanges.subscribe(
-    //   data => {
-    //     this.itemsQ._results.forEach(child => {
-    //       child.state = data;
-    //     });
-    //   });
-    //this.itemsQ.changes.subscribe(items => alert(items), error => this.errorMessage = <any>error);
-
-    if(this.errorMessage!=""){
-      alert("Error:"+this.errorMessage);
-    }
-  }
-
-  ngAfterViewInit() {
-  }
-
-  private filter(items:Array<ModelMenuItems>){
-    for(var index:number=0;index<items.length;index++){
-      if(items[index].position==this.position){
-        var modelMenuHorizontals:Array<ModelMenuHorizontal>=items[index].menuHorizontal;
-        for(var index2:number=0;index2<modelMenuHorizontals.length;index2++){
-          if(modelMenuHorizontals[index2].id==this.id){
-            this.items=modelMenuHorizontals[index2].item;
-            return;
-          }
-        }
-      }
-    }
-  }
-
   private initialization(){
-    this.getItems();
   }
 }

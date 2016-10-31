@@ -17,7 +17,7 @@ import { Utils } from './../../../Core/Utils/Utils';
 })
 
 export class ComponentHeader implements OnInit {
-  modelMenuHorizontals: ModelMenuHorizontal[];
+  arrayModelMenuHorizontal: ModelMenuHorizontal[];
   errorMessage: any;
   position: string;
 
@@ -32,7 +32,7 @@ export class ComponentHeader implements OnInit {
   }
 
   getItems(){
-    this.modelMenuHorizontals=[];
+    this.arrayModelMenuHorizontal=[];
     this.errorMessage="";
 
     this.serviceJSON.getObservable('ViewLoader/menuItems').subscribe(items => this.filter(items), error => this.errorMessage = <any>error);
@@ -46,7 +46,7 @@ export class ComponentHeader implements OnInit {
     for(var index:number=0;index<items.length;index++){
       if(items[index].name==Utils.getFileSelector(Utils.getFileName(__filename))){
         this.position=items[index].position;
-        this.modelMenuHorizontals=items[index].menuHorizontal;
+        this.arrayModelMenuHorizontal=items[index].arrayMenuHorizontal;
         return;
       }
     }

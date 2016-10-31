@@ -1,4 +1,5 @@
 <div class="DivClassHalf">
-    <menuHorizontal *ngFor="let modelMenuHorizontal of modelMenuHorizontals" id="{{modelMenuHorizontal.id}}" class="{{modelMenuHorizontal.class}}" position="{{position}}">
+    <menuHorizontal *ngFor="let modelMenuHorizontal of arrayModelMenuHorizontal" 
+        [modelMenuHorizontal]="modelMenuHorizontal">
     </menuHorizontal>
 </div>
