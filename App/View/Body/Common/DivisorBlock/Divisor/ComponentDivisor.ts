@@ -11,7 +11,7 @@ import { Utils } from './../../../../../Core/Utils/Utils';
   encapsulation: ViewEncapsulation.None
 })
 export class ComponentDivisor implements OnInit {
-  @Input() modelDivisor: Array<ModelDivisor>;
+  @Input() modelDivisor: ModelDivisor;
 
   ngOnInit() {
     this.initialization();
@@ -26,6 +26,13 @@ export class ComponentDivisor implements OnInit {
     //this.heroSubscription.unsubscribe();
   }
 
+  borderBottom(){
+    return "border-bottom: solid "+this.modelDivisor.color+";";
+  }
+
+  style(){
+    return this.borderBottom();
+  }
 }
 
 

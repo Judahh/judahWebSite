@@ -67,7 +67,7 @@ export class ComponentPageWhoAmI implements OnInit {
     this.modelWhoAmIInformation=new ModelWhoAmIInformation();
     this.errorMessage="";
 
-    this.serviceJSON.getObservable('Information/'+Utils.getFileSelector(Utils.getFileName(__filename))).subscribe(
+    this.serviceJSON.getObservable('ViewLoader/'+Utils.getFileSelector(Utils.getFileName(__filename))).subscribe(
       item => this.modelWhoAmIInformation=item[0], error => this.errorMessage = <any>error);
     
     if(this.errorMessage!=""){
