@@ -26,6 +26,13 @@ export class ComponentFont implements OnInit{
     return "width: "+this.modelFont.width+";";
   }
 
+  fontTextIndent(){
+    if(this.modelFont.textIndent==null||this.modelFont.textIndent==""){
+      return "";
+    }
+    return "text-indent: "+this.modelFont.textIndent+";";
+  }
+
   fontTextAlign(){
     if(this.modelFont.textAlign==null||this.modelFont.textAlign==""){
       return "";
@@ -62,7 +69,7 @@ export class ComponentFont implements OnInit{
   }
 
   style(){
-    return this.fontSize() + this.fontPadding() + this.fontVerticalAlign() + this.fontTextAlign() + this.fontWidth();
+    return this.fontSize() + this.fontPadding() + this.fontVerticalAlign() + this.fontTextAlign() + this.fontTextIndent() + this.fontWidth();
   }
 
   initialization(){

@@ -32,7 +32,6 @@ export class ComponentPageWhoAmI implements OnInit {
   modelWhoAmIInformation:ModelWhoAmIInformation;
   modelLanguages:ModelLanguages;
   arrayModelDivisorBlock:Array<ModelDivisorBlock>;
-  errorMessage: any;
 
   title(){
     return this.modelWhoAmIInformation.title;
@@ -75,52 +74,65 @@ export class ComponentPageWhoAmI implements OnInit {
   constructor(private serviceJSON: ServiceJSON) {}
 
   initialization(){
-
     this.arrayModelDivisorBlock=new Array<ModelDivisorBlock>()
     this.modelWhoAmI=new ModelWhoAmI();
     this.modelLanguages=new ModelLanguages();
     this.modelWhoAmIInformation=new ModelWhoAmIInformation();
-    this.errorMessage="";
+
+    this.getPageService();
+    this.getLanguageService();
+    this.getInformationService();
+    this.getArrayDivisorBlockService();
+  }
+
+  private getArrayModelDivisorBlock(arrayModelDivisorBlock:Array<ModelDivisorBlock>){
+    this.arrayModelDivisorBlock=arrayModelDivisorBlock;
+    this.arrayModelDivisorBlock[0].divisor.arraySubDivisor[0].item.colorEffect.font.animationEffect.arrayInformation.push(new ModelInformation(this.title()));
+    this.arrayModelDivisorBlock[1].divisor.arraySubDivisor[0].item.colorEffect.font.animationEffect.arrayInformation.push(new ModelInformation(this.name()));
+  }
+
+  private getPageService(){
+    var errorMessage="";
 
     this.serviceJSON.getObservable('ViewLoader/'+Utils.getFileSelector(Utils.getFileName(__filename))).subscribe(
-      item => this.modelWhoAmI=item[0], error => this.errorMessage = <any>error);
+      item => this.modelWhoAmI=item, error => errorMessage = <any>error);
     
-    if(this.errorMessage!=""){
-      alert("Error:"+this.errorMessage);
-    }
-
-    this.errorMessage="";
-
-    this.serviceJSON.getObservable(Languages.currentlanguageNamePath).subscribe(
-      items => this.modelLanguages=Languages.getModelLanguages(items), error => this.errorMessage = <any>error);
-    
-    if(this.errorMessage!=""){
-      alert("Error:"+this.errorMessage);
-    }
-
-    this.errorMessage="";
-
-    this.serviceJSON.getObservable('Languages/'+Utils.getFileSelector(Utils.getFileName(__filename))).subscribe(
-      items => this.modelWhoAmIInformation=Languages.getPageLanguage(items,this.modelLanguages), error => this.errorMessage = <any>error);
-    
-    if(this.errorMessage!=""){
-      alert("Error:"+this.errorMessage);
-    }
-
-    this.errorMessage="";
-
-    this.serviceJSON.getObservable('ViewLoader/'+Utils.getFileSelector(Utils.getFileName(__filename))+'DivisorBlocks').subscribe(
-      item => this.getArrayModelDivisorBlock(item), error => this.errorMessage = <any>error);
-    
-    if(this.errorMessage!=""){
-      alert("Error:"+this.errorMessage);
+    if(errorMessage!=""){
+      alert("Error:"+errorMessage);
     }
   }
 
-  getArrayModelDivisorBlock(arrayModelDivisorBlock:Array<ModelDivisorBlock>){
-    this.arrayModelDivisorBlock=arrayModelDivisorBlock;
-    this.arrayModelDivisorBlock[0].divisor.arraySubDivisor[0].item.colorEffect.font.animationEffect.arrayInformation.push(new ModelInformation(this.modelWhoAmIInformation.title));
-    this.arrayModelDivisorBlock[1].divisor.arraySubDivisor[0].item.colorEffect.font.animationEffect.arrayInformation.push(new ModelInformation(this.modelWhoAmIInformation.name));
+  private getLanguageService(){
+    var errorMessage="";
+
+    this.serviceJSON.getObservable(Languages.currentlanguageNamePath).subscribe(
+      items => this.modelLanguages=Languages.getModelLanguages(items), error => errorMessage = <any>error);
+    
+    if(errorMessage!=""){
+      alert("Error:"+errorMessage);
+    }
+  }
+
+  private getInformationService(){
+    var errorMessage="";
+
+    this.serviceJSON.getObservable('Languages/'+Utils.getFileSelector(Utils.getFileName(__filename))).subscribe(
+      items => this.modelWhoAmIInformation=Languages.getPageLanguage(items,this.modelLanguages), error => errorMessage = <any>error);
+    
+    if(errorMessage!=""){
+      alert("Error:"+errorMessage);
+    }
+  }
+
+  private getArrayDivisorBlockService(){
+    var errorMessage="";
+
+    this.serviceJSON.getObservable('ViewLoader/'+Utils.getFileSelector(Utils.getFileName(__filename))+'ArrayDivisorBlock').subscribe(
+      item => this.getArrayModelDivisorBlock(item), error => errorMessage = <any>error);
+    
+    if(errorMessage!=""){
+      alert("Error:"+errorMessage);
+    }
   }
 
   ngOnDestroy() {

@@ -35,7 +35,7 @@ export class ComponentHeader implements OnInit {
     this.arrayModelMenuHorizontal=[];
     this.errorMessage="";
 
-    this.serviceJSON.getObservable('ViewLoader/menuItems').subscribe(items => this.filter(items), error => this.errorMessage = <any>error);
+    this.serviceJSON.getObservable('ViewLoader/arrayMenuItems').subscribe(items => this.filter(items), error => this.errorMessage = <any>error);
     
     if(this.errorMessage!=""){
       alert("Error:"+this.errorMessage);
