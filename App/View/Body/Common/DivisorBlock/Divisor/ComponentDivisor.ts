@@ -27,6 +27,9 @@ export class ComponentDivisor implements OnInit {
   }
 
   borderBottom(){
+    if(this.modelDivisor.color==null||this.modelDivisor.color==""){
+      return "";
+    }
     return "border-bottom: solid "+this.modelDivisor.color+";";
   }
 
@@ -48,6 +51,10 @@ export class ComponentDivisor implements OnInit {
   }
 
   fontPadding(){
+    if(this.modelDivisor.arrayPadding==null||this.modelDivisor.arrayPadding==undefined){
+      return "";
+    }
+
     let stringPadding:string="";
     for(let index:number=0;index<this.modelDivisor.arrayPadding.length;index++){
       if(index==0){

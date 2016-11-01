@@ -26,16 +26,36 @@ export class ComponentImage implements OnInit{
   initialization(){
   }
 
-  cursor(){
-    if(this.routerLinkActive=="active"){
-      return "cursor: pointer;";
-    }else{
-      return "";//"pointer-events: none;";
+  boxSizing(){
+    if(this.modelImage.boxSizing==null||this.modelImage.boxSizing==""){
+      return "";
     }
+    return "box-sizing: "+this.modelImage.boxSizing+";";
+  }
+
+  border(){
+    if(this.modelImage.color==null||this.modelImage.color==""||this.modelImage.borderSize==null){
+      return "";
+    }
+    return "border: solid "+this.modelImage.color+" "+this.modelImage.borderSize+" px;";
+  }
+
+  borderRadius(){
+    if(this.modelImage.borderRadius==null){
+      return "";
+    }
+    return "border-radius: "+this.modelImage.borderRadius+"px;";
+  }
+
+  position(){
+    if(this.modelImage.position==null||this.modelImage.position==""){
+      return "";
+    }
+    return "position: "+this.modelImage.position+";";
   }
 
   style(){
-    return this.cursor();
+    return this.boxSizing()+this.border()+this.borderRadius()+this.position();
   }
 
 }

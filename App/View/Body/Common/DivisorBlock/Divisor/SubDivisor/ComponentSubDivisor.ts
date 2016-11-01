@@ -27,6 +27,42 @@ export class ComponentSubDivisor implements OnInit {
     //this.heroSubscription.unsubscribe();
   }
 
+  margin(){
+    if(this.modelSubDivisor.arrayMargin==null||this.modelSubDivisor.arrayMargin==undefined){
+      return "";
+    }
+
+    let stringMargin:string="";
+    
+    for(let index:number=0;index<this.modelSubDivisor.arrayMargin.length;index++){
+      if(index==0){
+        stringMargin+="margin:";
+      }
+
+      stringMargin+=" "+(this.modelSubDivisor.arrayMargin[index]+"px");
+
+      if(index==this.modelSubDivisor.arrayMargin.length-1){
+        stringMargin+=";";
+      }
+    }
+
+    return stringMargin;
+  }
+
+  float(){
+    if(this.modelSubDivisor.float==null||this.modelSubDivisor.float==""){
+      return "";
+    }
+    return "float: "+this.modelSubDivisor.float+";";
+  }
+
+  width(){
+    if(this.modelSubDivisor.width==null||this.modelSubDivisor.width==""){
+      return "";
+    }
+    return "width: "+this.modelSubDivisor.width+";";
+  }
+
   position(){
     return "position: absolute;";
   }
@@ -35,11 +71,28 @@ export class ComponentSubDivisor implements OnInit {
     return "bottom: 0px;";
   }
 
+  isItemActive(){
+    return this.modelSubDivisor.item!=null && 
+    this.modelSubDivisor.item!=undefined && 
+    this.modelSubDivisor.item.routerLinkActive=='active';
+  }
+
+  isItemInactive(){
+    return this.modelSubDivisor.item!=null && 
+    this.modelSubDivisor.item!=undefined && 
+    this.modelSubDivisor.item.routerLinkActive=='inactive';
+  }
+
+  isImage(){
+    return this.modelSubDivisor.image!=null && 
+    this.modelSubDivisor.image!=undefined;
+  }
+
   style(){
     if(this.modelSubDivisor.toBottom){
-      return this.position()+this.bottom();
+      return this.position()+this.bottom()+this.width()+this.float()+this.margin();
     }
-    return "";
+    return this.width()+this.float()+this.margin();
   }
 
 }

@@ -52,6 +52,10 @@ export class ComponentFont implements OnInit{
   }
 
   fontPadding(){
+    if(this.modelFont.arrayPadding==null||this.modelFont.arrayPadding==undefined){
+      return "";
+    }
+
     let stringPadding:string="";
     for(let index:number=0;index<this.modelFont.arrayPadding.length;index++){
       if(index==0){

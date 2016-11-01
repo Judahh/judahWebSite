@@ -72,28 +72,16 @@
         "arrayPadding": [],
         "arraySubDivisor":[
             {
+                "float":"left",
+                "width":"25%",
+                "arrayMargin":[15],
                 "toBottom": false,
-                "item":{
-                    "id":0,
-                    "routerLink":"",
-                    "routerLinkActive":"inactive",
-                    "colorEffect":{
-                        "colorEffect":"",
-                        "font":{
-                            "font":"",
-                            "textAlign":"",
-                            "textIndent":"2.",
-                            "width":"25%",
-                            "size":40,
-                            "arrayPadding":[15],
-                            "animationEffect":{
-                                "class":"",
-                                "subClass":"",
-                                "subClasses":[],
-                                "arrayInformation":[]
-                            }
-                        }
-                    }
+                "image":{
+                    "boxSizing":"border-box",
+                    "borderSize":"15",
+                    "borderRadius":"1000",
+                    "color":"black",
+                    "position":"relative"
                 }
             },
             {
