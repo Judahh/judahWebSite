@@ -1,7 +1,8 @@
 <div [style]="style()|safeStyle">
     <div [style]="style2()|safeStyle">
         <subDivisor *ngFor="let subDivisor of modelDivisor.arraySubDivisor"
-            [modelSubDivisor]="subDivisor">
+            [modelSubDivisor]="subDivisor"
+            [style]="subDivisorWidth()|safeStyle">
         </subDivisor>
     </div>
 </div>

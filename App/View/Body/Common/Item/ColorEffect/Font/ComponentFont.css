@@ -5,7 +5,7 @@
     -ms-font-smoothing: antialiased;
     -moz-font-smoothing: antialiased;
     -webkit-font-smoothing: antialiased;
-    cursor: pointer;
+    /*cursor: pointer;*/
     font-family: "FontIcon";
 }
 
@@ -16,7 +16,7 @@
     -ms-font-smoothing: antialiased;
     -moz-font-smoothing: antialiased;
     -webkit-font-smoothing: antialiased;
-    cursor: pointer;
+    /*cursor: pointer;*/
     font-family: "FontFuturisticI";
 }
 
@@ -27,7 +27,7 @@
     -ms-font-smoothing: antialiased;
     -moz-font-smoothing: antialiased;
     -webkit-font-smoothing: antialiased;
-    cursor: pointer;
+    /*cursor: pointer;*/
     font-family: "FontFuturisticII";
 }
 
@@ -38,7 +38,7 @@
     -ms-font-smoothing: antialiased;
     -moz-font-smoothing: antialiased;
     -webkit-font-smoothing: antialiased;
-    cursor: pointer;
+    /*cursor: pointer;*/
     font-family: "FontFuturisticI";
 }
 
@@ -49,6 +49,6 @@
     -ms-font-smoothing: antialiased;
     -moz-font-smoothing: antialiased;
     -webkit-font-smoothing: antialiased;
-    cursor: pointer;
+    /*cursor: pointer;*/
     font-family: "FontFuturisticII";
 }

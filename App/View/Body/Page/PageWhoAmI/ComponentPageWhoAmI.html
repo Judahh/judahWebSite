@@ -1,72 +1,46 @@
-<div class="DivClassProjectTitle">
-    <div class="DivClassText">
-        <div class="DivClassProjectTitleText">
-            <div class="DivClassTitleTextSize">
-                <div *xl class="DivClassTextWhoAmI">
-                    {{title()}}
-                </div>
-                <div *sm class="DivClassTextWhoAmISizeSm">
-                    {{title()}}
-                </div>
-                {{title()}}
-            </div>
-        </div>
-        <div class="DivClassProjectTitleText2">
-            <div class="DivClassTitleTextSize">
-                <div class="DivClassTextName" itemprp="">
-                    {{name()}}
-                </div>
+<divisorBlock *ngFor="let divisorBlock of arrayModelDivisorBlock" 
+    [modelDivisorBlock]="divisorBlock">
+</divisorBlock>
+<div class="DivClassFullBlock">
+    <div class="DivClassMyPicture">
+        <img class="ImgClassPicture" src="{{modelWhoAmI.myPicturePath}}"/>
+    </div>
+    <div class="DivClassTextWhoAmI">
+        <div class="DivClassTextBasic">
+            <div class="DivClassTextTalkingAboutMe">
+                <p style=" text-indent: 2.5em;">{{personalStatement()}}</p>
+                <p style=" text-indent: 2.5em;">{{personalStatement2()}}</p>
+                <p style=" text-indent: 2.5em;">{{talkingAboutMe()}}</p>
+                <p style=" text-indent: 2.5em;">{{talkingAboutMe2()}}</p>
             </div>
         </div>
     </div>
 </div>
-
-<subDivisor *ngFor="let modelSubDivisor of arrayModelSubDivisor" 
-    [modelSubDivisor]="modelSubDivisor">
-</subDivisor>
-
-<div class="DivClassTableCodeWrap">
-    <div class="DivClassFullBlock">
-        <div class="DivClassMyPicture">
-            <img class="ImgClassPicture" src="{{modelWhoAmI.myPicturePath}}"/>
-        </div>
-        <div class="DivClassTextWhoAmI">
-            <div class="DivClassTextBasic">
-                <div class="DivClassTextTalkingAboutMe">
-                    <p style=" text-indent: 2.5em;">{{personalStatement()}}</p>
-                    <p style=" text-indent: 2.5em;">{{personalStatement2()}}</p>
-                    <p style=" text-indent: 2.5em;">{{talkingAboutMe()}}</p>
-                    <p style=" text-indent: 2.5em;">{{talkingAboutMe2()}}</p>
-                </div>
-            </div>
-        </div>
-        <div class="DivTextWhoAmI">
-            <div class="DivClassText">
-                <div class="DivClassProjectTitleText">
-                    <div class="DivClassTitleTextSize">
-                        <div class="DivClassTextThinkDifferentTitle">
-                            {{thinkDifferentTitle()}}
-                        </div>
+<div class="DivClassFullBlock">
+    <div class="DivTextWhoAmI">
+        <div class="DivClassText">
+            <div class="DivClassProjectTitleText">
+                <div class="DivClassTitleTextSize">
+                    <div class="DivClassTextThinkDifferentTitle">
+                        {{thinkDifferentTitle()}}
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="DivClassFullBlock">
-        <div class="DivClassVideo">
-            <div class="DivClassVideoWrapper">
-                <iframe width="{{modelWhoAmI.videoWidth}}" height="{{modelWhoAmI.videoHeight}}" [src]="modelWhoAmI.videoLink|safeUrl" frameborder="0" allowfullscreen></iframe>
-            </div>
+    <div class="DivClassVideo">
+        <div class="DivClassVideoWrapper">
+            <iframe width="{{modelWhoAmI.videoWidth}}" height="{{modelWhoAmI.videoHeight}}" [src]="modelWhoAmI.videoLink|safeUrl" frameborder="0" allowfullscreen></iframe>
         </div>
     </div>
-    <div class="DivClassFullBlock">
-        <div class="DivClassTextWhoAmI2">
-            <div class="DivClassTextBasic">
-                <div class="DivClassTextThinkDifferent">
-                    <p style=" text-indent: 2.5em;">
-                        {{thinkDifferent()}}
-                    </p>
-                </div>
+</div>
+<div class="DivClassFullBlock">
+    <div class="DivClassTextWhoAmI2">
+        <div class="DivClassTextBasic">
+            <div class="DivClassTextThinkDifferent">
+                <p style=" text-indent: 2.5em;">
+                    {{thinkDifferent()}}
+                </p>
             </div>
         </div>
     </div>

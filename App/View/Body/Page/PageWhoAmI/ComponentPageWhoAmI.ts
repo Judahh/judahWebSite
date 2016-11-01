@@ -4,6 +4,8 @@ import { Utils } from './../../../../Core/Utils/Utils';
 import { Languages } from './../../../../Core/Languages/Languages';
 import { ModelLanguages } from './../../../../Core/Languages/ModelLanguages';
 
+import { ModelDivisorBlock } from './../../Common/DivisorBlock/ModelDivisorBlock';
+import { ModelDivisor } from './../../Common/DivisorBlock/Divisor/ModelDivisor';
 import { ModelSubDivisor } from './../../Common/DivisorBlock/Divisor/SubDivisor/ModelSubDivisor';
 
 import { ModelInformation } from './../../Common/Item/ColorEffect/Font/AnimationEffect/Information/ModelInformation';
@@ -29,7 +31,7 @@ export class ComponentPageWhoAmI implements OnInit {
   modelWhoAmI:ModelWhoAmI;
   modelWhoAmIInformation:ModelWhoAmIInformation;
   modelLanguages:ModelLanguages;
-  arrayModelSubDivisor:Array<ModelSubDivisor>;
+  arrayModelDivisorBlock:Array<ModelDivisorBlock>;
   errorMessage: any;
 
   title(){
@@ -74,7 +76,7 @@ export class ComponentPageWhoAmI implements OnInit {
 
   initialization(){
 
-    this.arrayModelSubDivisor=new Array<ModelSubDivisor>()
+    this.arrayModelDivisorBlock=new Array<ModelDivisorBlock>()
     this.modelWhoAmI=new ModelWhoAmI();
     this.modelLanguages=new ModelLanguages();
     this.modelWhoAmIInformation=new ModelWhoAmIInformation();
@@ -107,12 +109,18 @@ export class ComponentPageWhoAmI implements OnInit {
 
     this.errorMessage="";
 
-    this.serviceJSON.getObservable('ViewLoader/'+Utils.getFileSelector(Utils.getFileName(__filename))+'SubDivisors').subscribe(
-      item => this.arrayModelSubDivisor=item, error => this.errorMessage = <any>error);
+    this.serviceJSON.getObservable('ViewLoader/'+Utils.getFileSelector(Utils.getFileName(__filename))+'DivisorBlocks').subscribe(
+      item => this.getArrayModelDivisorBlock(item), error => this.errorMessage = <any>error);
     
     if(this.errorMessage!=""){
       alert("Error:"+this.errorMessage);
     }
+  }
+
+  getArrayModelDivisorBlock(arrayModelDivisorBlock:Array<ModelDivisorBlock>){
+    this.arrayModelDivisorBlock=arrayModelDivisorBlock;
+    this.arrayModelDivisorBlock[0].divisor.arraySubDivisor[0].item.colorEffect.font.animationEffect.arrayInformation.push(new ModelInformation(this.modelWhoAmIInformation.title));
+    this.arrayModelDivisorBlock[1].divisor.arraySubDivisor[0].item.colorEffect.font.animationEffect.arrayInformation.push(new ModelInformation(this.modelWhoAmIInformation.name));
   }
 
   ngOnDestroy() {

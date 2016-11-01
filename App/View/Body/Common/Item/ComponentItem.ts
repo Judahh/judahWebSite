@@ -28,4 +28,16 @@ export class ComponentItem implements OnInit{
   initialization(){
   }
 
+  cursor(){
+    if(this.routerLinkActive=="active"){
+      return "cursor: pointer;";
+    }else{
+      return "";//"pointer-events: none;";
+    }
+  }
+
+  style(){
+    return this.cursor();
+  }
+
 }

@@ -38,6 +38,15 @@ export class ComponentDivisor implements OnInit {
     return "width: inherit;";
   }
 
+  subDivisorWidth(){
+    if(this.modelDivisor.arraySubDivisor.length==1){
+      if(this.modelDivisor.arraySubDivisor[0].item.colorEffect.font.textAlign=="center")
+        return "width: inherit;";
+    }else{
+      return "";
+    }
+  }
+
   fontPadding(){
     let stringPadding:string="";
     for(let index:number=0;index<this.modelDivisor.arrayPadding.length;index++){
