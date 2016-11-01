@@ -56,13 +56,6 @@ export class ComponentSubDivisor implements OnInit {
     return "float: "+this.modelSubDivisor.float+";";
   }
 
-  width(){
-    if(this.modelSubDivisor.width==null||this.modelSubDivisor.width==""){
-      return "";
-    }
-    return "width: "+this.modelSubDivisor.width+";";
-  }
-
   position(){
     return "position: absolute;";
   }
@@ -90,9 +83,9 @@ export class ComponentSubDivisor implements OnInit {
 
   style(){
     if(this.modelSubDivisor.toBottom){
-      return this.position()+this.bottom()+this.width()+this.float()+this.margin();
+      return this.position()+this.bottom()+this.float()+this.margin();
     }
-    return this.width()+this.float()+this.margin();
+    return this.float()+this.margin();
   }
 
 }

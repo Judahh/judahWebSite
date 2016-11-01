@@ -41,13 +41,29 @@ export class ComponentDivisor implements OnInit {
     return "width: inherit;";
   }
 
-  subDivisorWidth(){
+  subDivisorWidth(index:number){
     if(this.modelDivisor.arraySubDivisor.length==1){
       if(this.modelDivisor.arraySubDivisor[0].item.colorEffect.font.textAlign=="center")
         return "width: inherit;";
     }else{
+      let width=this.modelDivisor.arraySubDivisor[index].width;
+      if(width==null||width==undefined||width==""){
+        return "";
+      }
+      return "width: "+width+";";
+    }
+  }
+
+  subDivisorFloat(index:number){
+    let float=this.modelDivisor.arraySubDivisor[index].float;
+    if(float==null||float==undefined||float==""){
       return "";
     }
+    return "float: "+float+";";
+  }
+
+  subDivisorStyle(index:number){
+    return this.subDivisorFloat(index)+this.subDivisorWidth(index);
   }
 
   fontPadding(){

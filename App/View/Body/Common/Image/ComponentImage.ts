@@ -37,7 +37,7 @@ export class ComponentImage implements OnInit{
     if(this.modelImage.color==null||this.modelImage.color==""||this.modelImage.borderSize==null){
       return "";
     }
-    return "border: solid "+this.modelImage.color+" "+this.modelImage.borderSize+" px;";
+    return "border: solid "+this.modelImage.color+" "+this.modelImage.borderSize+"px;";
   }
 
   borderRadius(){

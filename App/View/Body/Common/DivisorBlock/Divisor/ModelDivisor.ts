@@ -4,4 +4,5 @@ export class ModelDivisor {
     arraySubDivisor: Array<ModelSubDivisor>;
     color:string;
     arrayPadding: Array<number>;
+    display:string;
 }
