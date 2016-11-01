@@ -1,27 +1,26 @@
 [
   {
     "toBottom": true,
-    "id":0,
-    "class":"DivClassLeft",
     "item":{
         "id":0,
-        "routerLink":"WhoAmI",
-        "routerLinkActive":"active",
+        "routerLink":" ",
+        "routerLinkActive":"inactive",
         "colorEffect":{
-            "colorEffect":"DivClassNeon",
+            "colorEffect":"",
             "font":{
-                "font":"DivClassIcon",
-                "verticalAlign":"",
-                "width":"",
+                "font":"DivClassFuturisticIAndII",
+                "verticalAlign":"bottom",
+                "textAlign":"center",
+                "width":"100%",
                 "size":40,
-                "arrayPadding":[5],
+                "arrayPadding":[],
                 "animationEffect":{
-                    "class":"DivClassPulse",
+                    "class":"",
                     "subClass":"",
                     "subClasses":[],
                     "arrayInformation":[
                         {
-                        "information":"c"
+                        "information":"Title"
                         }
                     ]
                 }

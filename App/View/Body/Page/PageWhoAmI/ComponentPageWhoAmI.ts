@@ -29,7 +29,7 @@ export class ComponentPageWhoAmI implements OnInit {
   modelWhoAmI:ModelWhoAmI;
   modelWhoAmIInformation:ModelWhoAmIInformation;
   modelLanguages:ModelLanguages;
-  modelSubDivisor:ModelSubDivisor;
+  arrayModelSubDivisor:Array<ModelSubDivisor>;
   errorMessage: any;
 
   title(){
@@ -74,27 +74,7 @@ export class ComponentPageWhoAmI implements OnInit {
 
   initialization(){
 
-    this.modelSubDivisor=new ModelSubDivisor()
-    this.modelSubDivisor.item=new ModelItem();
-    this.modelSubDivisor.item.colorEffect=new ModelColorEffect();
-    this.modelSubDivisor.item.colorEffect.font=new ModelFont();
-    this.modelSubDivisor.item.colorEffect.font.animationEffect=new ModelAnimationEffect();
-
-    this.modelSubDivisor.item.routerLink='';
-    this.modelSubDivisor.item.routerLinkActive='inactive';
-    this.modelSubDivisor.item.colorEffect.font.arrayPadding=[];
-    this.modelSubDivisor.item.colorEffect.font.font='DivClassFuturisticIAndII';
-    this.modelSubDivisor.item.colorEffect.font.verticalAlign='bottom';
-    this.modelSubDivisor.item.colorEffect.font.textAlign='center';
-    this.modelSubDivisor.item.colorEffect.font.width='100%';
-    this.modelSubDivisor.item.colorEffect.font.size=40;
-    this.modelSubDivisor.item.colorEffect.font.animationEffect.class='';
-    this.modelSubDivisor.item.colorEffect.font.animationEffect.subClass='';
-    this.modelSubDivisor.item.colorEffect.font.animationEffect.subClasses=[];
-    this.modelSubDivisor.item.colorEffect.font.animationEffect.arrayInformation=new Array<ModelInformation>();
-    this.modelSubDivisor.item.colorEffect.font.animationEffect.arrayInformation.push(new ModelInformation('Title'));
-
-
+    this.arrayModelSubDivisor=new Array<ModelSubDivisor>()
     this.modelWhoAmI=new ModelWhoAmI();
     this.modelLanguages=new ModelLanguages();
     this.modelWhoAmIInformation=new ModelWhoAmIInformation();
@@ -107,6 +87,8 @@ export class ComponentPageWhoAmI implements OnInit {
       alert("Error:"+this.errorMessage);
     }
 
+    this.errorMessage="";
+
     this.serviceJSON.getObservable(Languages.currentlanguageNamePath).subscribe(
       items => this.modelLanguages=Languages.getModelLanguages(items), error => this.errorMessage = <any>error);
     
@@ -114,8 +96,19 @@ export class ComponentPageWhoAmI implements OnInit {
       alert("Error:"+this.errorMessage);
     }
 
+    this.errorMessage="";
+
     this.serviceJSON.getObservable('Languages/'+Utils.getFileSelector(Utils.getFileName(__filename))).subscribe(
       items => this.modelWhoAmIInformation=Languages.getPageLanguage(items,this.modelLanguages), error => this.errorMessage = <any>error);
+    
+    if(this.errorMessage!=""){
+      alert("Error:"+this.errorMessage);
+    }
+
+    this.errorMessage="";
+
+    this.serviceJSON.getObservable('ViewLoader/'+Utils.getFileSelector(Utils.getFileName(__filename))+'SubDivisors').subscribe(
+      item => this.arrayModelSubDivisor=item, error => this.errorMessage = <any>error);
     
     if(this.errorMessage!=""){
       alert("Error:"+this.errorMessage);

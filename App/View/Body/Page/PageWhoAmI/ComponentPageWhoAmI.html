@@ -21,7 +21,8 @@
     </div>
 </div>
 
-<subDivisor [modelSubDivisor]="modelSubDivisor">
+<subDivisor *ngFor="let modelSubDivisor of arrayModelSubDivisor" 
+    [modelSubDivisor]="modelSubDivisor">
 </subDivisor>
 
 <div class="DivClassTableCodeWrap">
