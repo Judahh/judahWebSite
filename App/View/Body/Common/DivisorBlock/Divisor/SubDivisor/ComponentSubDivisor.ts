@@ -64,6 +64,10 @@ export class ComponentSubDivisor implements OnInit {
     return "bottom: 0px;";
   }
 
+  boxSizing(){
+    return "box-sizing: border-box;";
+  }
+
   isItemActive(){
     return this.modelSubDivisor.item!=null && 
     this.modelSubDivisor.item!=undefined && 
@@ -83,9 +87,9 @@ export class ComponentSubDivisor implements OnInit {
 
   style(){
     if(this.modelSubDivisor.toBottom){
-      return this.position()+this.bottom()+this.float()+this.margin();
+      return this.position()+this.bottom()+this.float()+this.margin()+this.boxSizing();
     }
-    return this.float()+this.margin();
+    return this.float()+this.margin()+this.boxSizing();
   }
 
 }

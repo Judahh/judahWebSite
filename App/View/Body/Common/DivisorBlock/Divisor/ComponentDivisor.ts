@@ -87,12 +87,16 @@ export class ComponentDivisor implements OnInit {
     return stringPadding;
   }
 
+  boxSizing(){
+    return "box-sizing: border-box;";
+  }
+
   style(){
-    return this.borderBottom()+this.display()+this.width();
+    return this.borderBottom()+this.display()+this.width()+this.boxSizing();
   }
 
   style2(){
-    return this.fontPadding()+this.display()+this.width();
+    return this.fontPadding()+this.display()+this.width()+this.boxSizing();
   }
 }
 
