@@ -85,6 +85,11 @@ export class ComponentSubDivisor implements OnInit {
     this.modelSubDivisor.image!=undefined;
   }
 
+  isVideo(){
+    return this.modelSubDivisor.video!=null && 
+    this.modelSubDivisor.video!=undefined;
+  }
+
   style(){
     if(this.modelSubDivisor.toBottom){
       return this.position()+this.bottom()+this.float()+this.padding()+this.boxSizing();

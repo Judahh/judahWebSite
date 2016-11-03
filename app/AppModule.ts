@@ -34,6 +34,7 @@ import { ComponentItem } from './View/Body/Common/Item/ComponentItem';
 import { ComponentMenuHorizontal } from './View/Body/Common/MenuHorizontal/ComponentMenuHorizontal';
 
 import { ComponentImage } from './View/Body/Common/Image/ComponentImage';
+import { ComponentVideo } from './View/Body/Common/Video/ComponentVideo';
 
 import { ComponentDivisorBlock } from './View/Body/Common/DivisorBlock/ComponentDivisorBlock';
 import { ComponentDivisor } from './View/Body/Common/DivisorBlock/Divisor/ComponentDivisor';
@@ -104,6 +105,7 @@ let config: ResponsiveConfigInterface = {
     ComponentDivisor,
     ComponentSubDivisor,
     ComponentImage,
+    ComponentVideo,
     SafeUrlPipe,
     SafeStylePipe
   ],
