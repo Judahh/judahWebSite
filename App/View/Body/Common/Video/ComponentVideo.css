@@ -1,6 +1,7 @@
 video {
     position: relative;
     padding-top: 75%;
+    width: 100%;
 }
 
 video iframe {

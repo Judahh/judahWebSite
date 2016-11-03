@@ -150,16 +150,16 @@
     "arraySubDivisor":[],
     "divisor":{
         "color": "transparent",
-        "arrayPadding": [5],
+        "arrayPadding": [],
         "arraySubDivisor":[
             {
                 "toBottom": false,
+                "width":"100%",
                 "video":{
                     "boxSizing":"border-box",
                     "borderSize":"0",
                     "borderRadius":"0",
                     "color":"black",
-                    "position":"relative",
                     "height":315,
                     "width":420
                 }
