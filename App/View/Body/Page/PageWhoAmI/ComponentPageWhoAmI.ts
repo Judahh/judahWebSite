@@ -99,6 +99,7 @@ export class ComponentPageWhoAmI implements OnInit {
     this.arrayModelDivisorBlock[2].divisor.arraySubDivisor[1].item.colorEffect.font.animationEffect.arrayInformation.push(new ModelInformation(this.talkingAboutMe2()));
     this.arrayModelDivisorBlock[2].divisor.arraySubDivisor[1].item.colorEffect.font.animationEffect.arrayInformation.push(new ModelInformation(" "));
     this.arrayModelDivisorBlock[3].divisor.arraySubDivisor[0].item.colorEffect.font.animationEffect.arrayInformation.push(new ModelInformation(this.thinkDifferentTitle()));
+    this.arrayModelDivisorBlock[4].divisor.arraySubDivisor[0].video.source = this.modelWhoAmI.videoLink;
   }
 
   private getPageService(){

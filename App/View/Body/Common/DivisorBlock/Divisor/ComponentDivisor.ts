@@ -42,7 +42,10 @@ export class ComponentDivisor implements OnInit {
   }
 
   subDivisorWidth(index:number){
-    if(this.modelDivisor.arraySubDivisor.length==1){
+    if(this.modelDivisor.arraySubDivisor.length==1 &&
+     (this.modelDivisor.arraySubDivisor[0].item!=null &&
+      this.modelDivisor.arraySubDivisor[0].item!=undefined)
+      ){
       if(this.modelDivisor.arraySubDivisor[0].item.colorEffect.font.textAlign=="center")
         return "width: inherit;";
     }else{

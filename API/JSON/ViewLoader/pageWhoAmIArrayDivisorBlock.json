@@ -145,5 +145,26 @@
             }
         ]
     }
+  },
+  {
+    "arraySubDivisor":[],
+    "divisor":{
+        "color": "transparent",
+        "arrayPadding": [5],
+        "arraySubDivisor":[
+            {
+                "toBottom": false,
+                "video":{
+                    "boxSizing":"border-box",
+                    "borderSize":"0",
+                    "borderRadius":"0",
+                    "color":"black",
+                    "position":"relative",
+                    "height":315,
+                    "width":420
+                }
+            }
+        ]
+    }
   }
 ]
