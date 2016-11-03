@@ -26,32 +26,10 @@ import { ServiceJSON } from './../../../../Core/Services/ServiceJSON';
   encapsulation: ViewEncapsulation.None
 })
 export class ComponentPageSkills implements OnInit {
-  skillsInformation:ModelSkillsInformation;
+  modelSkillsInformation:ModelSkillsInformation;
   modelLanguages:ModelLanguages;
 
   arrayModelDivisorBlock:Array<ModelDivisorBlock>;
-
-  skillsTitle(){return "";}
-
-  intelligenceTitle(){return "";}
-
-  intelligenceText(){return "";}
-
-  teamworkTitle(){return "";}
-
-  teamworkText(){return "";}
-
-  leadershipTitle(){return "";}
-
-  leadershipText(){return "";}
-
-  languagesCommunicationTitle(){return "";}
-
-  languagesCommunicationText(){return "";}
-
-  flexibilityTitle(){return "";}
-
-  flexibilityText(){return "";}
 
   ngOnInit() {
       this.initialization();
@@ -62,7 +40,7 @@ export class ComponentPageSkills implements OnInit {
   initialization(){
     this.arrayModelDivisorBlock=new Array<ModelDivisorBlock>();
     this.modelLanguages=new ModelLanguages();
-    this.skillsInformation=new ModelSkillsInformation();
+    this.modelSkillsInformation=new ModelSkillsInformation();
 
     this.getLanguageService();
     this.getInformationService();
@@ -84,7 +62,7 @@ export class ComponentPageSkills implements OnInit {
     var errorMessage="";
 
     this.serviceJSON.getObservable('Languages/'+Utils.getFileSelector(Utils.getFileName(__filename))).subscribe(
-      items => this.skillsInformation=Languages.getPageLanguage(items,this.modelLanguages), error => errorMessage = <any>error);
+      items => this.modelSkillsInformation=Languages.getPageLanguage(items,this.modelLanguages), error => errorMessage = <any>error);
     
     if(errorMessage!=""){
       alert("Error:"+errorMessage);
@@ -104,6 +82,23 @@ export class ComponentPageSkills implements OnInit {
 
   private getArrayModelDivisorBlock(arrayModelDivisorBlock:Array<ModelDivisorBlock>){
     this.arrayModelDivisorBlock=arrayModelDivisorBlock;
+    this.arrayModelDivisorBlock[0].divisor.arraySubDivisor[0].item.colorEffect.font.animationEffect.arrayInformation.push(new ModelInformation(this.modelSkillsInformation.title));
+    this.arrayModelDivisorBlock[1].divisor.arraySubDivisor[1].item.colorEffect.font.animationEffect.arrayInformation.push(new ModelInformation(this.modelSkillsInformation.intelligenceTitle));
+    
+    this.arrayModelDivisorBlock[1].arraySubDivisor[0].item.colorEffect.font.animationEffect.arrayInformation.push(new ModelInformation(this.modelSkillsInformation.intelligenceText[0]));
+    // this.arrayModelDivisorBlock[2].divisor.arraySubDivisor[0].image.source = this.modelWhoAmI.myPicturePath;
+    // this.arrayModelDivisorBlock[2].divisor.arraySubDivisor[1].item.colorEffect.font.animationEffect.arrayInformation.push(new ModelInformation(this.personalStatement()));
+    // this.arrayModelDivisorBlock[2].divisor.arraySubDivisor[1].item.colorEffect.font.animationEffect.arrayInformation.push(new ModelInformation(" "));
+    // this.arrayModelDivisorBlock[2].divisor.arraySubDivisor[1].item.colorEffect.font.animationEffect.arrayInformation.push(new ModelInformation(this.personalStatement2()));
+    // this.arrayModelDivisorBlock[2].divisor.arraySubDivisor[1].item.colorEffect.font.animationEffect.arrayInformation.push(new ModelInformation(" "));
+    // this.arrayModelDivisorBlock[2].divisor.arraySubDivisor[1].item.colorEffect.font.animationEffect.arrayInformation.push(new ModelInformation(this.talkingAboutMe()));
+    // this.arrayModelDivisorBlock[2].divisor.arraySubDivisor[1].item.colorEffect.font.animationEffect.arrayInformation.push(new ModelInformation(" "));
+    // this.arrayModelDivisorBlock[2].divisor.arraySubDivisor[1].item.colorEffect.font.animationEffect.arrayInformation.push(new ModelInformation(this.talkingAboutMe2()));
+    // this.arrayModelDivisorBlock[2].divisor.arraySubDivisor[1].item.colorEffect.font.animationEffect.arrayInformation.push(new ModelInformation(" "));
+    // this.arrayModelDivisorBlock[3].divisor.arraySubDivisor[0].item.colorEffect.font.animationEffect.arrayInformation.push(new ModelInformation(this.thinkDifferentTitle()));
+    // this.arrayModelDivisorBlock[4].divisor.arraySubDivisor[0].videoLink.source = this.modelWhoAmI.videoLink;
+    // this.arrayModelDivisorBlock[5].divisor.arraySubDivisor[0].item.colorEffect.font.animationEffect.arrayInformation.push(new ModelInformation(" "));
+    // this.arrayModelDivisorBlock[5].divisor.arraySubDivisor[0].item.colorEffect.font.animationEffect.arrayInformation.push(new ModelInformation(this.thinkDifferent()));
   }
 
   ngOnDestroy() {

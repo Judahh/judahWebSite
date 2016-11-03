@@ -3,13 +3,13 @@ export class ModelSkillsInformation {
     language:string;
     title:string;
     intelligenceTitle:string;
-    intelligenceText:string;
+    intelligenceText:Array<string>;
     teamworkTitle:string;
-    teamworkText:string;
+    teamworkText:Array<string>;
     leadershipTitle:string;
-    leadershipText:string;
+    leadershipText:Array<string>;
     languagesCommunicationTitle:string;
-    languagesCommunicationText:string;
+    languagesCommunicationText:Array<string>;
     flexibilityTitle:string;
-    flexibilityText:string;
+    flexibilityText:Array<string>;
 }
