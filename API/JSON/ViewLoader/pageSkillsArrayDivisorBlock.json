@@ -107,6 +107,8 @@
                     "colorEffect":"",
                     "font":{
                         "font":"DivClassFuturisticI",
+                        "textAlign":"justify",
+                        "textIndent":"0.5em",
                         "width":"100%",
                         "size":20,
                         "arrayPadding":[10],
@@ -191,6 +193,8 @@
                     "colorEffect":"",
                     "font":{
                         "font":"DivClassFuturisticI",
+                        "textAlign":"justify",
+                        "textIndent":"0.5em",
                         "width":"100%",
                         "size":20,
                         "arrayPadding":[10],
@@ -275,6 +279,8 @@
                     "colorEffect":"",
                     "font":{
                         "font":"DivClassFuturisticI",
+                        "textAlign":"justify",
+                        "textIndent":"0.5em",
                         "width":"100%",
                         "size":20,
                         "arrayPadding":[10],
@@ -359,6 +365,8 @@
                     "colorEffect":"",
                     "font":{
                         "font":"DivClassFuturisticI",
+                        "textAlign":"justify",
+                        "textIndent":"0.5em",
                         "width":"100%",
                         "size":20,
                         "arrayPadding":[10],
@@ -449,6 +457,8 @@
                     "colorEffect":"",
                     "font":{
                         "font":"DivClassFuturisticI",
+                        "textAlign":"justify",
+                        "textIndent":"0.5em",
                         "width":"100%",
                         "size":20,
                         "arrayPadding":[10],

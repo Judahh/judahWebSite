@@ -83,22 +83,31 @@ export class ComponentPageSkills implements OnInit {
   private getArrayModelDivisorBlock(arrayModelDivisorBlock:Array<ModelDivisorBlock>){
     this.arrayModelDivisorBlock=arrayModelDivisorBlock;
     this.arrayModelDivisorBlock[0].divisor.arraySubDivisor[0].item.colorEffect.font.animationEffect.arrayInformation.push(new ModelInformation(this.modelSkillsInformation.title));
+
     this.arrayModelDivisorBlock[1].divisor.arraySubDivisor[1].item.colorEffect.font.animationEffect.arrayInformation.push(new ModelInformation(this.modelSkillsInformation.intelligenceTitle));
-    
-    this.arrayModelDivisorBlock[1].arraySubDivisor[0].item.colorEffect.font.animationEffect.arrayInformation.push(new ModelInformation(this.modelSkillsInformation.intelligenceText[0]));
-    // this.arrayModelDivisorBlock[2].divisor.arraySubDivisor[0].image.source = this.modelWhoAmI.myPicturePath;
-    // this.arrayModelDivisorBlock[2].divisor.arraySubDivisor[1].item.colorEffect.font.animationEffect.arrayInformation.push(new ModelInformation(this.personalStatement()));
-    // this.arrayModelDivisorBlock[2].divisor.arraySubDivisor[1].item.colorEffect.font.animationEffect.arrayInformation.push(new ModelInformation(" "));
-    // this.arrayModelDivisorBlock[2].divisor.arraySubDivisor[1].item.colorEffect.font.animationEffect.arrayInformation.push(new ModelInformation(this.personalStatement2()));
-    // this.arrayModelDivisorBlock[2].divisor.arraySubDivisor[1].item.colorEffect.font.animationEffect.arrayInformation.push(new ModelInformation(" "));
-    // this.arrayModelDivisorBlock[2].divisor.arraySubDivisor[1].item.colorEffect.font.animationEffect.arrayInformation.push(new ModelInformation(this.talkingAboutMe()));
-    // this.arrayModelDivisorBlock[2].divisor.arraySubDivisor[1].item.colorEffect.font.animationEffect.arrayInformation.push(new ModelInformation(" "));
-    // this.arrayModelDivisorBlock[2].divisor.arraySubDivisor[1].item.colorEffect.font.animationEffect.arrayInformation.push(new ModelInformation(this.talkingAboutMe2()));
-    // this.arrayModelDivisorBlock[2].divisor.arraySubDivisor[1].item.colorEffect.font.animationEffect.arrayInformation.push(new ModelInformation(" "));
-    // this.arrayModelDivisorBlock[3].divisor.arraySubDivisor[0].item.colorEffect.font.animationEffect.arrayInformation.push(new ModelInformation(this.thinkDifferentTitle()));
-    // this.arrayModelDivisorBlock[4].divisor.arraySubDivisor[0].videoLink.source = this.modelWhoAmI.videoLink;
-    // this.arrayModelDivisorBlock[5].divisor.arraySubDivisor[0].item.colorEffect.font.animationEffect.arrayInformation.push(new ModelInformation(" "));
-    // this.arrayModelDivisorBlock[5].divisor.arraySubDivisor[0].item.colorEffect.font.animationEffect.arrayInformation.push(new ModelInformation(this.thinkDifferent()));
+    for(let index=0;index<this.modelSkillsInformation.intelligenceText.length;index++){
+      this.arrayModelDivisorBlock[1].arraySubDivisor[0].item.colorEffect.font.animationEffect.arrayInformation.push(new ModelInformation(this.modelSkillsInformation.intelligenceText[index]));
+    }
+
+    this.arrayModelDivisorBlock[2].divisor.arraySubDivisor[1].item.colorEffect.font.animationEffect.arrayInformation.push(new ModelInformation(this.modelSkillsInformation.teamworkTitle));
+    for(let index=0;index<this.modelSkillsInformation.teamworkText.length;index++){
+      this.arrayModelDivisorBlock[2].arraySubDivisor[0].item.colorEffect.font.animationEffect.arrayInformation.push(new ModelInformation(this.modelSkillsInformation.teamworkText[index]));
+    }
+
+    this.arrayModelDivisorBlock[3].divisor.arraySubDivisor[1].item.colorEffect.font.animationEffect.arrayInformation.push(new ModelInformation(this.modelSkillsInformation.leadershipTitle));
+    for(let index=0;index<this.modelSkillsInformation.leadershipText.length;index++){
+      this.arrayModelDivisorBlock[3].arraySubDivisor[0].item.colorEffect.font.animationEffect.arrayInformation.push(new ModelInformation(this.modelSkillsInformation.leadershipText[index]));
+    }
+
+    this.arrayModelDivisorBlock[4].divisor.arraySubDivisor[1].item.colorEffect.font.animationEffect.arrayInformation.push(new ModelInformation(this.modelSkillsInformation.languagesCommunicationTitle));
+    for(let index=0;index<this.modelSkillsInformation.languagesCommunicationText.length;index++){
+      this.arrayModelDivisorBlock[4].arraySubDivisor[0].item.colorEffect.font.animationEffect.arrayInformation.push(new ModelInformation(this.modelSkillsInformation.languagesCommunicationText[index]));
+    }
+
+    this.arrayModelDivisorBlock[5].divisor.arraySubDivisor[1].item.colorEffect.font.animationEffect.arrayInformation.push(new ModelInformation(this.modelSkillsInformation.flexibilityTitle));
+    for(let index=0;index<this.modelSkillsInformation.flexibilityText.length;index++){
+      this.arrayModelDivisorBlock[5].arraySubDivisor[0].item.colorEffect.font.animationEffect.arrayInformation.push(new ModelInformation(this.modelSkillsInformation.flexibilityText[index]));
+    }
   }
 
   ngOnDestroy() {
