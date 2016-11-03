@@ -132,23 +132,7 @@ page{
     float: left;
 }
 
-.DivClassMyPicture{
-    margin: 15px;
-    width:25%;
-    float: left;
-}
-
 .DivClassTextWhoAmI{
-}
-
-.DivClassVideo{
-    width: 100%;
-    background: black;
-    float: none;
-    margin: 0;
-    padding: 0;
-    left:0;
-    top:0;
 }
 
 .DivClassVideoWrapper {
@@ -181,11 +165,6 @@ page{
 /*Common Size A (sm)*/
 
 .DivClassTextWhoAmISizeSm{
-    width: 100%;
-}
-
-.DivClassMyPictureSizeSm{
-    margin: 15px;
     width: 100%;
 }
 
