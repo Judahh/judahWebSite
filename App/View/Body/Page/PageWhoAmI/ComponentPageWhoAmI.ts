@@ -74,7 +74,7 @@ export class ComponentPageWhoAmI implements OnInit {
   constructor(private serviceJSON: ServiceJSON) {}
 
   initialization(){
-    this.arrayModelDivisorBlock=new Array<ModelDivisorBlock>()
+    this.arrayModelDivisorBlock=new Array<ModelDivisorBlock>();
     this.modelWhoAmI=new ModelWhoAmI();
     this.modelLanguages=new ModelLanguages();
     this.modelWhoAmIInformation=new ModelWhoAmIInformation();

@@ -27,6 +27,9 @@ export class ComponentDivisorBlock implements OnInit {
   }
 
   display(){
+    if(this.modelDivisorBlock.divisor==null||this.modelDivisorBlock.divisor==undefined){
+      return "";
+    }
     if(this.modelDivisorBlock.divisor.display==null||this.modelDivisorBlock.divisor.display==undefined||this.modelDivisorBlock.divisor.display==""){
       return "display: flex;";
     }
