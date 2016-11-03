@@ -1,4 +1,4 @@
-export class ModelVideo {
+export class ModelVideoLink {
     width: number;
     height: number;
     source:string;

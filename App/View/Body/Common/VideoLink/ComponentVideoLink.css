@@ -1,10 +1,10 @@
-video {
+videoLink {
     position: relative;
     padding-top: 75%;
     width: 100%;
 }
 
-video iframe {
+videoLink iframe {
     position: absolute;
     top: 0;
     width: 100%;

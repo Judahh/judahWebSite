@@ -1,6 +1,6 @@
 import { Component, OnInit, Input, ViewEncapsulation } from '@angular/core';
 
-import { ModelVideo } from './ModelVideo';
+import { ModelVideoLink } from './ModelVideoLink';
 import { ComponentColorEffect } from '../Item/ColorEffect/ComponentColorEffect';
 
 import {HTMLGenerator} from './../../../../Core/HTMLGenerator/HTMLGenerator';
@@ -14,8 +14,8 @@ import { Utils } from './../../../../Core/Utils/Utils';
   templateUrl: Utils.getFileHTML(Utils.getFileName(__filename)),
   encapsulation: ViewEncapsulation.None
 })
-export class ComponentVideo implements OnInit{
-  @Input() modelVideo:ModelVideo;
+export class ComponentVideoLink implements OnInit{
+  @Input() modelVideoLink:ModelVideoLink;
 
   public constructor(){}
 
@@ -27,31 +27,31 @@ export class ComponentVideo implements OnInit{
   }
 
   boxSizing(){
-    if(this.modelVideo.boxSizing==null||this.modelVideo.boxSizing==""){
+    if(this.modelVideoLink.boxSizing==null||this.modelVideoLink.boxSizing==""){
       return "";
     }
-    return "box-sizing: "+this.modelVideo.boxSizing+";";
+    return "box-sizing: "+this.modelVideoLink.boxSizing+";";
   }
 
   border(){
-    if(this.modelVideo.color==null||this.modelVideo.color==""||this.modelVideo.borderSize==null){
+    if(this.modelVideoLink.color==null||this.modelVideoLink.color==""||this.modelVideoLink.borderSize==null){
       return "";
     }
-    return "border: solid "+this.modelVideo.color+" "+this.modelVideo.borderSize+"px;";
+    return "border: solid "+this.modelVideoLink.color+" "+this.modelVideoLink.borderSize+"px;";
   }
 
   borderRadius(){
-    if(this.modelVideo.borderRadius==null){
+    if(this.modelVideoLink.borderRadius==null){
       return "";
     }
-    return "border-radius: "+this.modelVideo.borderRadius+"px;";
+    return "border-radius: "+this.modelVideoLink.borderRadius+"px;";
   }
 
   position(){
-    if(this.modelVideo.position==null||this.modelVideo.position==""){
+    if(this.modelVideoLink.position==null||this.modelVideoLink.position==""){
       return "";
     }
-    return "position: "+this.modelVideo.position+";";
+    return "position: "+this.modelVideoLink.position+";";
   }
 
   style(){
