@@ -69,25 +69,25 @@ export class ComponentSubDivisor implements OnInit {
   }
 
   isItemActive(){
-    return this.modelSubDivisor.item!=null && 
+    return (this.modelSubDivisor.item!=null && 
     this.modelSubDivisor.item!=undefined && 
-    this.modelSubDivisor.item.routerLinkActive=='active';
+    this.modelSubDivisor.item.routerLinkActive=='active');
   }
 
   isItemInactive(){
-    return this.modelSubDivisor.item!=null && 
+    return (this.modelSubDivisor.item!=null && 
     this.modelSubDivisor.item!=undefined && 
-    this.modelSubDivisor.item.routerLinkActive=='inactive';
+    this.modelSubDivisor.item.routerLinkActive=='inactive');
   }
 
   isImage(){
-    return this.modelSubDivisor.image!=null && 
-    this.modelSubDivisor.image!=undefined;
+    return (this.modelSubDivisor.image!=null && 
+    this.modelSubDivisor.image!=undefined);
   }
 
   isVideoLink(){
-    return this.modelSubDivisor.videoLink!=null && 
-    this.modelSubDivisor.videoLink!=undefined;
+    return (this.modelSubDivisor.videoLink!=null && 
+    this.modelSubDivisor.videoLink!=undefined);
   }
 
   style(){

@@ -155,7 +155,7 @@
             {
                 "toBottom": false,
                 "width":"100%",
-                "video":{
+                "videoLink":{
                     "boxSizing":"border-box",
                     "borderSize":"0",
                     "borderRadius":"0",
