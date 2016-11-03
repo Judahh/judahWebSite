@@ -85,9 +85,9 @@ export class ComponentSubDivisor implements OnInit {
     this.modelSubDivisor.image!=undefined;
   }
 
-  isVideo(){
-    return this.modelSubDivisor.video!=null && 
-    this.modelSubDivisor.video!=undefined;
+  isVideoLink(){
+    return this.modelSubDivisor.videoLink!=null && 
+    this.modelSubDivisor.videoLink!=undefined;
   }
 
   style(){

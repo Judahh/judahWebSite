@@ -1,11 +1,11 @@
 import { ModelItem } from './../../../Item/ModelItem';
 import { ModelImage } from './../../../Image/ModelImage';
-import { ModelVideo } from './../../../Video/ModelVideo';
+import { ModelVideoLink } from './../../../VideoLink/ModelVideoLink';
 
 export class ModelSubDivisor {
     item: ModelItem;
     image: ModelImage;
-    video: ModelVideo;
+    videoLink: ModelVideoLink;
     toBottom:boolean;
     float:string;
     width:string;
