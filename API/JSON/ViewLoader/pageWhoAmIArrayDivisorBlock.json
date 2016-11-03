@@ -166,5 +166,40 @@
             }
         ]
     }
+  },
+  {
+    "arraySubDivisor":[],
+    "divisor":{
+        "display":"block",
+        "color": "transparent",
+        "arrayPadding": [],
+        "arraySubDivisor":[
+            {
+                "toBottom": false,
+                "item":{
+                    "id":0,
+                    "routerLink":"",
+                    "routerLinkActive":"inactive",
+                    "colorEffect":{
+                        "colorEffect":"",
+                        "font":{
+                            "font":"DivClassFuturisticI",
+                            "textAlign":"justify",
+                            "textIndent":"2.5em",
+                            "width":"100%",
+                            "size":20,
+                            "arrayPadding":[],
+                            "animationEffect":{
+                                "class":"",
+                                "subClass":"",
+                                "subClasses":[],
+                                "arrayInformation":[]
+                            }
+                        }
+                    }
+                }
+            }
+        ]
+    }
   }
 ]
