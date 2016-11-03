@@ -7,5 +7,5 @@ export class ModelSubDivisor {
     toBottom:boolean;
     float:string;
     width:string;
-    arrayMargin: Array<number>;//px
+    arrayPadding: Array<number>;//px
 }

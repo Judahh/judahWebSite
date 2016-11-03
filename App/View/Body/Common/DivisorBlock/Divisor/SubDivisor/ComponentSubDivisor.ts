@@ -27,26 +27,26 @@ export class ComponentSubDivisor implements OnInit {
     //this.heroSubscription.unsubscribe();
   }
 
-  margin(){
-    if(this.modelSubDivisor.arrayMargin==null||this.modelSubDivisor.arrayMargin==undefined){
+  padding(){
+    if(this.modelSubDivisor.arrayPadding==null||this.modelSubDivisor.arrayPadding==undefined){
       return "";
     }
 
-    let stringMargin:string="";
+    let stringPadding:string="";
     
-    for(let index:number=0;index<this.modelSubDivisor.arrayMargin.length;index++){
+    for(let index:number=0;index<this.modelSubDivisor.arrayPadding.length;index++){
       if(index==0){
-        stringMargin+="margin:";
+        stringPadding+="padding:";
       }
 
-      stringMargin+=" "+(this.modelSubDivisor.arrayMargin[index]+"px");
+      stringPadding+=" "+(this.modelSubDivisor.arrayPadding[index]+"px");
 
-      if(index==this.modelSubDivisor.arrayMargin.length-1){
-        stringMargin+=";";
+      if(index==this.modelSubDivisor.arrayPadding.length-1){
+        stringPadding+=";";
       }
     }
 
-    return stringMargin;
+    return stringPadding;
   }
 
   float(){
@@ -87,9 +87,9 @@ export class ComponentSubDivisor implements OnInit {
 
   style(){
     if(this.modelSubDivisor.toBottom){
-      return this.position()+this.bottom()+this.float()+this.margin()+this.boxSizing();
+      return this.position()+this.bottom()+this.float()+this.padding()+this.boxSizing();
     }
-    return this.float()+this.margin()+this.boxSizing();
+    return this.float()+this.padding()+this.boxSizing();
   }
 
 }

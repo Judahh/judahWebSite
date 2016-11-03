@@ -75,7 +75,7 @@
             {
                 "float":"left",
                 "width":"18%",
-                "arrayMargin":[15],
+                "arrayPadding":[15],
                 "toBottom": false,
                 "image":{
                     "boxSizing":"border-box",
