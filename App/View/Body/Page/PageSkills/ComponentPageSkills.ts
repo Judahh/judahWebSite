@@ -14,7 +14,7 @@ import { ModelFont } from './../../Common/Item/ColorEffect/Font/ModelFont';
 import { ModelColorEffect } from './../../Common/Item/ColorEffect/ModelColorEffect';
 import { ModelItem } from './../../Common/Item/ModelItem';
 
-//import { ModelSkillsInformation } from './ModelSkillsInformation';
+import { ModelSkillsInformation } from './ModelSkillsInformation';
 
 import { ServiceJSON } from './../../../../Core/Services/ServiceJSON';
 
@@ -26,7 +26,7 @@ import { ServiceJSON } from './../../../../Core/Services/ServiceJSON';
   encapsulation: ViewEncapsulation.None
 })
 export class ComponentPageSkills implements OnInit {
-  //skillsInformation:ModelSkillsInformation;
+  skillsInformation:ModelSkillsInformation;
   modelLanguages:ModelLanguages;
 
   arrayModelDivisorBlock:Array<ModelDivisorBlock>;
@@ -62,10 +62,10 @@ export class ComponentPageSkills implements OnInit {
   initialization(){
     this.arrayModelDivisorBlock=new Array<ModelDivisorBlock>();
     this.modelLanguages=new ModelLanguages();
-    //this.skillsInformation=new SkillsInformation();
+    this.skillsInformation=new ModelSkillsInformation();
 
     this.getLanguageService();
-    // this.getInformationService();
+    this.getInformationService();
     this.getArrayDivisorBlockService();
   }
 
@@ -80,16 +80,16 @@ export class ComponentPageSkills implements OnInit {
     }
   }
 
-  // private getInformationService(){
-  //   var errorMessage="";
+  private getInformationService(){
+    var errorMessage="";
 
-  //   this.serviceJSON.getObservable('Languages/'+Utils.getFileSelector(Utils.getFileName(__filename))).subscribe(
-  //     items => this.modelWhoAmIInformation=Languages.getPageLanguage(items,this.modelLanguages), error => errorMessage = <any>error);
+    this.serviceJSON.getObservable('Languages/'+Utils.getFileSelector(Utils.getFileName(__filename))).subscribe(
+      items => this.skillsInformation=Languages.getPageLanguage(items,this.modelLanguages), error => errorMessage = <any>error);
     
-  //   if(errorMessage!=""){
-  //     alert("Error:"+errorMessage);
-  //   }
-  // }
+    if(errorMessage!=""){
+      alert("Error:"+errorMessage);
+    }
+  }
 
   private getArrayDivisorBlockService(){
     var errorMessage="";
