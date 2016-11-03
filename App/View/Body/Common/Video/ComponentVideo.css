@@ -1,9 +1,9 @@
-.DivClassVideoWrapper {
+video {
     position: relative;
     padding-top: 75%;
 }
 
-.DivClassVideoWrapper iframe {
+video iframe {
     position: absolute;
     top: 0;
     width: 100%;
