@@ -68,7 +68,10 @@ export class ComponentHeader implements OnInit {
         this.arrayModelMenuHorizontal=items[index].arrayMenuHorizontal;
         for(var index2:number=0;index2<this.arrayModelMenuHorizontal.length;index2++){
           for(var index3:number=0;index3<this.arrayModelMenuHorizontal[index2].arrayItem.length;index3++){
-            this.arrayModelMenuHorizontal[index2].arrayItem[index3].tooltip=new ModelTooltip();
+            if(this.arrayModelMenuHorizontal[index2].arrayItem[index3].tooltip==null||
+              this.arrayModelMenuHorizontal[index2].arrayItem[index3].tooltip==undefined){
+                this.arrayModelMenuHorizontal[index2].arrayItem[index3].tooltip=new ModelTooltip();
+            }
             this.getTooltipService(index2,index3);
           }
         }

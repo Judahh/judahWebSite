@@ -44,12 +44,26 @@ export class ComponentItem implements OnInit{
     return "font-size: "+tooltip.fontSize+"px ;";
   }
 
+  marginTop(tooltip:ModelTooltip){
+    if(tooltip==null||tooltip==undefined||tooltip.marginTop==null||tooltip.marginTop==undefined){
+      return "";
+    }
+    return "margin-top: "+tooltip.marginTop+"px ;";
+  }
+
+  marginLeft(tooltip:ModelTooltip){
+    if(tooltip==null||tooltip==undefined||tooltip.marginLeft==null||tooltip.marginLeft==undefined){
+      return "";
+    }
+    return "margin-left: "+tooltip.marginLeft+"px ;";
+  }
+
   style(){
     return this.cursor();
   }
 
   tooltipStyle(tooltip:ModelTooltip){
-    return this.fontSize(tooltip);
+    return this.marginTop(tooltip)+this.marginLeft(tooltip);
   }
 
 }
