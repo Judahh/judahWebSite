@@ -88,7 +88,7 @@
 .DivClassConsoleIconOn, .DivClassConsoleIconOn1, .DivClassConsoleIconOn2, .DivClassConsoleIcon:hover .DivClassConsoleIconOff{
     visibility: hidden;
     height: 0px;
-    width: 0px;
+    /*width: 0px;*/
 }
 
 .DivClassWebIcon:hover .DivClassWebIconOn1{
@@ -192,5 +192,5 @@
 .DivClassWebIconOn1, .DivClassWebIconOn2, .DivClassWebIconOn3, .DivClassWebIconOn4, .DivClassWebIcon:hover .DivClassWebIconOff{
     visibility: hidden;
     height: 0px;
-    width: 0px;
+    /*width: 0px;*/
 }
