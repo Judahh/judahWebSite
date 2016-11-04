@@ -16,61 +16,28 @@ export class ComponentAnimationEffect implements OnInit{
 
   public constructor(){}
 
+  getSubClasses(index:number){
+    if(this.isSubClassesString(index)){
+      return this.modelAnimationEffect.subClasses[index];
+    }
+    console.log(this.modelAnimationEffect.subClasses[index].current);
+    console.log(this.modelAnimationEffect.subClasses[index].subClass);
+    return this.modelAnimationEffect.subClasses[index].current;
+  }
+
+  getSubClassesSubClass(index:number){
+    return this.modelAnimationEffect.subClasses[index].subClass;
+  }
+
+  isSubClassesString(index:number){
+    return ((this.modelAnimationEffect.subClasses[index] == undefined)||
+    (this.modelAnimationEffect.subClasses[index].current == undefined));
+  }
+
   ngOnInit() {
     this.initialization();  
   }
 
   initialization(){
-    // this.cascadingStyleSheetsClass=this.modelItem.animationEffect.class;
-    // // console.log(this.cascadingStyleSheetsClass);
-    // this.cascadingStyleSheetsSubClass=this.modelItem.animationEffect.subClass;
-    // // console.log(this.cascadingStyleSheetsSubClass);
-    // this.cascadingStyleSheetsSubClasses=this.modelItem.animationEffect.subClasses;
-    // // console.log(this.cascadingStyleSheetsSubClasses);
-
-  //   switch(this.modelItem.animationEffect){
-  //     case "pulse":
-  //       this.cascadingStyleSheetsClass="DivClassPulse";
-  //     break;
-
-  //     case "shake":
-  //       this.cascadingStyleSheetsClass="DivClassShake";
-  //     break;
-
-  //     case "spin":
-  //       this.cascadingStyleSheetsClass="DivClassSpin";  
-  //     break;
-
-  //     case "spin2":
-  //       this.cascadingStyleSheetsClass="DivClassSpin2";  
-  //     break;
-
-  //     case "handIcon":
-  //       this.cascadingStyleSheetsClass="DivClassShake";
-  //       this.cascadingStyleSheetsSubClass="DivClassHandIcon";
-  //       this.cascadingStyleSheetsSubClasses.push("DivClassHandIconOff");
-  //       this.cascadingStyleSheetsSubClasses.push("DivClassHandIconOn");  
-  //     break;
-
-  //     case "multiwayIcon":
-  //     case "brainIcon":
-  //       this.cascadingStyleSheetsSubClass="DivClassHandIcon";
-  //       this.cascadingStyleSheetsSubClasses.push("DivClassHandIconOff");
-  //       this.cascadingStyleSheetsSubClasses.push("DivClassHandIconOn");
-  //     break;
-
-  //     case "teamworkIcon":
-  //     case "languagesIcon":
-  //     case "leadershipIcon":
-  //     break;
-
-  //     case "consoleIcon":
-  //       this.cascadingStyleSheetsSubClass="DivClassConsoleIcon";
-  //       this.cascadingStyleSheetsSubClasses.push("DivClassConsoleIconOff");
-  //       this.cascadingStyleSheetsSubClasses.push("DivClassConsoleIconOn");
-  //       this.cascadingStyleSheetsSubClasses.push("DivClassConsoleIconOn1");
-  //       this.cascadingStyleSheetsSubClasses.push("DivClassConsoleIconOn2");
-  //     break;
-  //   }
   }
 }

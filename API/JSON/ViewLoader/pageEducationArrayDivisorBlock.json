@@ -141,7 +141,10 @@
                                 "subClass":"",
                                 "subClasses":[
                                     "DivClassTextBackground",
-                                    "DivClassTextOverText"
+                                    {
+                                        "current":"DivClassSpin2",
+                                        "subClass":"DivClassTextOverText"
+                                    }
                                 ],
                                 "arrayInformation":[
                                     {

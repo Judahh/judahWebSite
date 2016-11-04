@@ -73,7 +73,9 @@ export class ComponentFont implements OnInit{
   }
 
   style(){
-    return this.fontSize() + this.fontPadding() + this.fontVerticalAlign() + this.fontTextAlign() + this.fontTextIndent() + this.fontWidth();
+    return this.fontSize() + this.fontPadding() + 
+    this.fontVerticalAlign() + this.fontTextAlign() + 
+    this.fontTextIndent() + this.fontWidth();
   }
 
   initialization(){
