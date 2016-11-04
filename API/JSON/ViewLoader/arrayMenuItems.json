@@ -10,10 +10,7 @@
         "arrayItem":[
           {
             "id":0,
-            "tooltip":{
-              "value":"Who Am I?",
-              "fontSize":15
-            },
+            "tooltip":{"fontSize":15},
             "routerLink":"WhoAmI",
             "routerLinkActive":"active",
             "colorEffect":{

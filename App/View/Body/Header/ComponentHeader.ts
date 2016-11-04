@@ -1,6 +1,10 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 
+import { Languages } from './../../../Core/Languages/Languages';
+import { ModelLanguages } from './../../../Core/Languages/ModelLanguages';
+
 import { ModelItem } from '../Common/Item/ModelItem';
+import { ModelTooltip } from '../Common/Item/ModelTooltip';
 import { ModelMenuHorizontal } from '../Common/MenuHorizontal/ModelMenuHorizontal';
 import { ModelMenuItems } from '../Common/ModelMenuItems';
 import { ServiceJSON } from './../../../Core/Services/ServiceJSON';
@@ -18,7 +22,7 @@ import { Utils } from './../../../Core/Utils/Utils';
 
 export class ComponentHeader implements OnInit {
   arrayModelMenuHorizontal: ModelMenuHorizontal[];
-  errorMessage: any;
+  modelLanguages:ModelLanguages;
   position: string;
 
   constructor(private serviceJSON: ServiceJSON) {}
@@ -28,40 +32,63 @@ export class ComponentHeader implements OnInit {
   }
 
   initialization(){
+    this.modelLanguages=new ModelLanguages();
+
+    this.getLanguageService();
     this.getItems();
+  }
+
+  private getLanguageService(){
+    var errorMessage="";
+
+    this.serviceJSON.getObservable(Languages.currentLanguageNamePath).subscribe(
+      items => this.modelLanguages=Languages.getModelLanguages(items), error => errorMessage = <any>error);
+    
+    if(errorMessage!=""){
+      alert("Error:"+errorMessage);
+    }
   }
 
   getItems(){
     this.arrayModelMenuHorizontal=[];
-    this.errorMessage="";
+    var errorMessage="";
 
-    this.serviceJSON.getObservable('ViewLoader/arrayMenuItems').subscribe(items => this.filter(items), error => this.errorMessage = <any>error);
+    this.serviceJSON.getObservable('ViewLoader/arrayMenuItems').subscribe(items => this.filter(items), error => errorMessage = <any>error);
     
-    if(this.errorMessage!=""){
-      alert("Error:"+this.errorMessage);
+    if(errorMessage!=""){
+      alert("Error:"+errorMessage);
     }
   }
 
   filter(items:Array<ModelMenuItems>){
+    
     for(var index:number=0;index<items.length;index++){
       if(items[index].name==Utils.getFileSelector(Utils.getFileName(__filename))){
         this.position=items[index].position;
         this.arrayModelMenuHorizontal=items[index].arrayMenuHorizontal;
+        for(var index2:number=0;index2<this.arrayModelMenuHorizontal.length;index2++){
+          for(var index3:number=0;index3<this.arrayModelMenuHorizontal[index2].arrayItem.length;index3++){
+            this.arrayModelMenuHorizontal[index2].arrayItem[index3].tooltip=new ModelTooltip();
+            this.getTooltipService(index2,index3);
+          }
+        }
         return;
       }
     }
   }
 
-  // addHero (name: string) {
-  //   if (!name) { return; }
-  //   this.heroService.addHero(name)
-  //                    .subscribe(
-  //                      hero  => this.heroes.push(hero),
-  //                      error =>  this.errorMessage = <any>error);
-  // }
+  getTooltipService(index:number,index2:number){
+    var errorMessage="";
+    this.serviceJSON.getObservable("Languages/page"+this.arrayModelMenuHorizontal[index].arrayItem[index2].routerLink).subscribe(
+              items => this.getTooltip(index, index2, items), 
+              error => errorMessage = <any>error);
 
-  // onSelect(item: ModelItem){
-  //   this.selectedItem = item;
-  // }
+    if(errorMessage!=""){
+      alert("Error:"+errorMessage);
+    }
+  }
 
+  getTooltip(index:number,index2:number,items:any){
+    this.arrayModelMenuHorizontal[index].arrayItem[index2].tooltip.value=Languages.getPageLanguage(items,this.modelLanguages).title
+  }
 }

@@ -1,6 +1,7 @@
 import { Component, OnInit, Input, ViewEncapsulation } from '@angular/core';
 
 import { ModelItem } from './ModelItem';
+import { ModelTooltip } from './ModelTooltip';
 import { ComponentColorEffect } from '../Item/ColorEffect/ComponentColorEffect';
 
 import {HTMLGenerator} from './../../../../Core/HTMLGenerator/HTMLGenerator';
@@ -36,19 +37,19 @@ export class ComponentItem implements OnInit{
     }
   }
 
-  fontSize(){
-    if(this.modelItem.tootip==null||this.modelItem.tootip==undefined||this.modelItem.tootip.fontSize==null||this.modelItem.tootip.fontSize==undefined){
+  fontSize(tooltip:ModelTooltip){
+    if(tooltip==null||tooltip==undefined||tooltip.fontSize==null||tooltip.fontSize==undefined){
       return "";
     }
-    return "font-size: "+this.modelItem.tootip.fontSize+"px ;";
+    return "font-size: "+tooltip.fontSize+"px ;";
   }
 
   style(){
     return this.cursor();
   }
 
-  tooltipStyle(){
-    return this.fontSize();
+  tooltipStyle(tooltip:ModelTooltip){
+    return this.fontSize(tooltip);
   }
 
 }

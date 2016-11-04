@@ -9,7 +9,7 @@
         [style]="style()|safeStyle">
     </colorEffect>
     <div class="DivClassTooltip">
-        <div class="DivClassOpenSansLight" [style]="tooltipStyle()|safeStyle">
+        <div class="DivClassOpenSansLight" [style]="tooltipStyle(modelItem.tooltip)|safeStyle">
             {{modelItem.tooltip.value}}
         </div>
     </div>

@@ -1,10 +1,10 @@
 import { ModelColorEffect } from './ColorEffect/ModelColorEffect';
-import { ModelTootip } from './ModelTootip';
+import { ModelTooltip } from './ModelTooltip';
 
 export class ModelItem {
   id: number;
   routerLink: string;
   routerLinkActive: string;
   colorEffect: ModelColorEffect;
-  tootip:ModelTootip;
+  tooltip:ModelTooltip;
 }
