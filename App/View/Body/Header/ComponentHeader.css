@@ -1,7 +1,10 @@
 nav{
+    z-index: 1;
+}
+
+header{
     /*display: none;*/
     /*visibility: hidden;*/
-    z-index: 1;
     position: fixed;
     top: 0;
     width: 100%;
@@ -11,9 +14,6 @@ nav{
     -ms-animation: goDown 1s ease-in-out;
     -o-animation: goDown 1s ease-in-out;
     animation: goDown 1s ease-in-out;
-}
-
-header{
 }
 
 .DivClassMenu{

@@ -103,10 +103,7 @@ export class ComponentPageLanguages implements OnInit {
     var currentLanguage=Languages.currentLanguage;
     Languages.currentLanguage=modelLanguages.code[0];
     if(currentLanguage!=modelLanguages.code[0]){
-      this.getItemService();
-      this.getLanguageService();
-      this.getInformationService();
-      this.getArrayDivisorBlockService();
+      location.reload();
     }
   }
 
