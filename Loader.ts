@@ -5,12 +5,8 @@ function mouseTooltip(event:any) {
     var height:any = Math.max(html.clientHeight);
     var tooltip:any = document.querySelectorAll('.DivClassTooltip');
     for (var i=0; i<tooltip.length; i++) {
-        tooltip[i].style.left = event.pageX + 'px';
-        if(isBottom(tooltip[i])){
-        	tooltip[i].style.top = (event.pageY-(height-(isBottom(tooltip[i])))) + 'px';
-        }else{
-        	tooltip[i].style.top = event.pageY + 'px';
-        }
+        tooltip[i].style.left = event.clientX + 'px';
+        tooltip[i].style.top = event.clientY + 'px';
     }
 }
 
