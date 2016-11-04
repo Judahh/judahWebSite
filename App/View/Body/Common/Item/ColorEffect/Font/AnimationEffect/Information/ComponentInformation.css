@@ -1,4 +1,4 @@
-.tooltiper{
+.DivClassTooltiper{
     width:inherit;
     display:inline-block;
     -webkit-animation: none;
@@ -8,7 +8,7 @@
     animation: none;
 }
 
-.tooltiper:hover .tooltip {
+.DivClassTooltiper:hover .DivClassTooltip {
     display: block;
     visibility: visible;
     opacity:0.5;
@@ -16,7 +16,7 @@
     transition: visibility 0.5s, opacity 0.5s linear;
 }
 
-.tooltip {
+.DivClassTooltip {
     display: block;
     visibility: hidden;
     opacity:0;
