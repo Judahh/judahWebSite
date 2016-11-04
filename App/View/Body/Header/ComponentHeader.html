@@ -1,7 +1,10 @@
 <nav>
-  <div class="DivClassHalf">
-    <menuHorizontal *ngFor="let modelMenuHorizontal of arrayModelMenuHorizontal" 
-      [modelMenuHorizontal]="modelMenuHorizontal">
-    </menuHorizontal>
-  </div>
+    <div class="DivClassHalf">
+        <div class="DivClassMenuHorizontal">
+            <menuHorizontal *ngFor="let modelMenuHorizontal of arrayModelMenuHorizontal" 
+                [modelMenuHorizontal]="modelMenuHorizontal"
+                class="{{modelMenuHorizontal.class}}">
+            </menuHorizontal>
+        </div>
+    </div>
 </nav>

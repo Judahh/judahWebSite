@@ -1,8 +1,8 @@
 document.addEventListener('mousemove', mouseTooltip, false);
 
 function mouseTooltip(event:any) {
-		var tooltip:any = document.querySelectorAll('.DivClassTooltip');
-    for (var i=tooltip.length; i--;) {
+	var tooltip:any = document.querySelectorAll('.DivClassTooltip');
+    for (var i=0; i<tooltip.length; i++) {
         tooltip[i].style.left = event.pageX + 'px';
         tooltip[i].style.top = event.pageY + 'px';
     }

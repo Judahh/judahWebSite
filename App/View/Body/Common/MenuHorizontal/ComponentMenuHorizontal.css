@@ -13,3 +13,7 @@
 .DivClassRight{
     float: right;
 }
+
+.DivClassMenuHorizontal{
+    text-align: center;
+}
