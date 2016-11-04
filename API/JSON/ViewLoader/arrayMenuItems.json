@@ -155,34 +155,7 @@
       {
         "id":1,
         "class":"DivClassCenter",
-        "arrayItem":[
-          {
-            "id":0,
-            "tooltip":{"fontSize":15},
-            "routerLink":"Languages",
-            "routerLinkActive":"active",
-            "colorEffect":{
-              "colorEffect":"DivClassNeon",
-              "font":{
-                "font":"DivClassIcon",
-                "verticalAlign":"",
-                "width":"",
-                "size":40,
-                "arrayPadding":[5],
-                "animationEffect":{
-                    "class":"",
-                    "subClass":"",
-                    "subClasses":[],
-                    "arrayInformation":[
-                      {
-                        "information":"µ"
-                      }
-                    ]
-                }
-              }
-            }
-          }
-        ]
+        "arrayItem":[]
       },
       {
         "id":2,
