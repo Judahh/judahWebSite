@@ -2,14 +2,14 @@ export class ModelEducationInformation {
     id: number;
     language:string;
     title:string;
-    intelligenceTitle:string;
-    intelligenceText:Array<string>;
-    teamworkTitle:string;
-    teamworkText:Array<string>;
-    leadershipTitle:string;
-    leadershipText:Array<string>;
-    languagesCommunicationTitle:string;
-    languagesCommunicationText:Array<string>;
-    flexibilityTitle:string;
-    flexibilityText:Array<string>;
+    diplomas_CertificatesTitle:string;
+    diplomas_CertificatesText:Array<string>;
+    hardwareTitle:string;
+    hardwareText:Array<string>;
+    softwareTitle:string;
+    softwareText:Array<string>;
+    webTitle:string;
+    webText:Array<string>;
+    mobileTitle:string;
+    mobileText:Array<string>;
 }

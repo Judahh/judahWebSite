@@ -84,29 +84,29 @@ export class ComponentPageEducation implements OnInit {
     this.arrayModelDivisorBlock=arrayModelDivisorBlock;
     this.arrayModelDivisorBlock[0].divisor.arraySubDivisor[0].item.colorEffect.font.animationEffect.arrayInformation.push(new ModelInformation(this.modelEducationInformation.title));
 
-    this.arrayModelDivisorBlock[1].divisor.arraySubDivisor[1].item.colorEffect.font.animationEffect.arrayInformation.push(new ModelInformation(this.modelEducationInformation.intelligenceTitle));
-    for(let index=0;index<this.modelEducationInformation.intelligenceText.length;index++){
-      this.arrayModelDivisorBlock[1].arraySubDivisor[0].item.colorEffect.font.animationEffect.arrayInformation.push(new ModelInformation(this.modelEducationInformation.intelligenceText[index]));
+    this.arrayModelDivisorBlock[1].divisor.arraySubDivisor[1].item.colorEffect.font.animationEffect.arrayInformation.push(new ModelInformation(this.modelEducationInformation.diplomas_CertificatesTitle));
+    for(let index=0;index<this.modelEducationInformation.diplomas_CertificatesText.length;index++){
+      this.arrayModelDivisorBlock[1].arraySubDivisor[0].item.colorEffect.font.animationEffect.arrayInformation.push(new ModelInformation(this.modelEducationInformation.diplomas_CertificatesText[index]));
     }
 
-    this.arrayModelDivisorBlock[2].divisor.arraySubDivisor[1].item.colorEffect.font.animationEffect.arrayInformation.push(new ModelInformation(this.modelEducationInformation.teamworkTitle));
-    for(let index=0;index<this.modelEducationInformation.teamworkText.length;index++){
-      this.arrayModelDivisorBlock[2].arraySubDivisor[0].item.colorEffect.font.animationEffect.arrayInformation.push(new ModelInformation(this.modelEducationInformation.teamworkText[index]));
+    this.arrayModelDivisorBlock[2].divisor.arraySubDivisor[1].item.colorEffect.font.animationEffect.arrayInformation.push(new ModelInformation(this.modelEducationInformation.hardwareTitle));
+    for(let index=0;index<this.modelEducationInformation.hardwareText.length;index++){
+      this.arrayModelDivisorBlock[2].arraySubDivisor[0].item.colorEffect.font.animationEffect.arrayInformation.push(new ModelInformation(this.modelEducationInformation.hardwareText[index]));
     }
 
-    this.arrayModelDivisorBlock[3].divisor.arraySubDivisor[1].item.colorEffect.font.animationEffect.arrayInformation.push(new ModelInformation(this.modelEducationInformation.leadershipTitle));
-    for(let index=0;index<this.modelEducationInformation.leadershipText.length;index++){
-      this.arrayModelDivisorBlock[3].arraySubDivisor[0].item.colorEffect.font.animationEffect.arrayInformation.push(new ModelInformation(this.modelEducationInformation.leadershipText[index]));
+    this.arrayModelDivisorBlock[3].divisor.arraySubDivisor[1].item.colorEffect.font.animationEffect.arrayInformation.push(new ModelInformation(this.modelEducationInformation.softwareTitle));
+    for(let index=0;index<this.modelEducationInformation.softwareText.length;index++){
+      this.arrayModelDivisorBlock[3].arraySubDivisor[0].item.colorEffect.font.animationEffect.arrayInformation.push(new ModelInformation(this.modelEducationInformation.softwareText[index]));
     }
 
-    this.arrayModelDivisorBlock[4].divisor.arraySubDivisor[1].item.colorEffect.font.animationEffect.arrayInformation.push(new ModelInformation(this.modelEducationInformation.languagesCommunicationTitle));
-    for(let index=0;index<this.modelEducationInformation.languagesCommunicationText.length;index++){
-      this.arrayModelDivisorBlock[4].arraySubDivisor[0].item.colorEffect.font.animationEffect.arrayInformation.push(new ModelInformation(this.modelEducationInformation.languagesCommunicationText[index]));
+    this.arrayModelDivisorBlock[4].divisor.arraySubDivisor[1].item.colorEffect.font.animationEffect.arrayInformation.push(new ModelInformation(this.modelEducationInformation.webTitle));
+    for(let index=0;index<this.modelEducationInformation.webText.length;index++){
+      this.arrayModelDivisorBlock[4].arraySubDivisor[0].item.colorEffect.font.animationEffect.arrayInformation.push(new ModelInformation(this.modelEducationInformation.webText[index]));
     }
 
-    this.arrayModelDivisorBlock[5].divisor.arraySubDivisor[1].item.colorEffect.font.animationEffect.arrayInformation.push(new ModelInformation(this.modelEducationInformation.flexibilityTitle));
-    for(let index=0;index<this.modelEducationInformation.flexibilityText.length;index++){
-      this.arrayModelDivisorBlock[5].arraySubDivisor[0].item.colorEffect.font.animationEffect.arrayInformation.push(new ModelInformation(this.modelEducationInformation.flexibilityText[index]));
+    this.arrayModelDivisorBlock[5].divisor.arraySubDivisor[1].item.colorEffect.font.animationEffect.arrayInformation.push(new ModelInformation(this.modelEducationInformation.mobileTitle));
+    for(let index=0;index<this.modelEducationInformation.mobileText.length;index++){
+      this.arrayModelDivisorBlock[5].arraySubDivisor[0].item.colorEffect.font.animationEffect.arrayInformation.push(new ModelInformation(this.modelEducationInformation.mobileText[index]));
     }
   }
 

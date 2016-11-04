@@ -3,8 +3,8 @@
         "id":0,
         "language":"English-USA",
         "title":"Education",
-        "diplomas/CertificatesTitle":"Diplomas/Certificates",
-        "diplomas/CertificatesText":[
+        "diplomas_CertificatesTitle":"Diplomas/Certificates",
+        "diplomas_CertificatesText":[
             "- Major in Computer Engineering at the Universidade de Fortaleza - UNIFOR",
             "- Circuit Board Design with Altium",
             "- Programming in Java",
@@ -77,8 +77,8 @@
         "id":1,
         "language":"Portuguese-Brazil",
         "title":"Educação",
-        "diplomas/CertificatesTitle":"Diplomas/Certificados",
-        "diplomas/CertificatesText":[
+        "diplomas_CertificatesTitle":"Diplomas/Certificados",
+        "diplomas_CertificatesText":[
             "- Graduado em Engenharia de Computação na Universidade de Fortaleza - UNIFOR",
             "- Projeto de placas de circuito impresso com Altium",
             "- Programação em Java",
