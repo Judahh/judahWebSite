@@ -36,8 +36,19 @@ export class ComponentItem implements OnInit{
     }
   }
 
+  fontSize(){
+    if(this.modelItem.tootip==null||this.modelItem.tootip==undefined||this.modelItem.tootip.fontSize==null||this.modelItem.tootip.fontSize==undefined){
+      return "";
+    }
+    return "font-size: "+this.modelItem.tootip.fontSize+"px ;";
+  }
+
   style(){
     return this.cursor();
+  }
+
+  tooltipStyle(){
+    return this.fontSize();
   }
 
 }

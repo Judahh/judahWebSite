@@ -1,4 +1,17 @@
-<colorEffect
+<colorEffect *ngIf="modelItem.tooltip==undefined"
     [modelColorEffect]="modelItem.colorEffect"
     [style]="style()|safeStyle">
 </colorEffect>
+<div *ngIf="modelItem.tooltip!=undefined">
+  <div class="DivClassTooltiper">
+    <colorEffect
+        [modelColorEffect]="modelItem.colorEffect"
+        [style]="style()|safeStyle">
+    </colorEffect>
+    <div class="DivClassTooltip">
+        <div class="DivClassOpenSansLight" [style]="tooltipStyle()|safeStyle">
+            {{modelItem.tooltip.value}}
+        </div>
+    </div>
+  </div>
+</div>
