@@ -86,16 +86,42 @@ a {
   cursor: hand;
 }
 
-button {
-  font-family: Arial;
+.checkButton label input {
+    position:absolute;
+    top:-20px;
+}
+
+.checkButton input:checked + div {
+    background-color:deepskyblue;
+    border-radius: 5px;
+}
+
+.checkButton input:checked + div:hover {
+    background-color:deepskyblue;
+    border-radius: 5px;
+    background-color: #cfd8dc;
+}
+
+::-moz-selection,::selection {
+    outline: 0;
+    background: deepskyblue;
+}
+
+button,.checkButton {
   background-color: #eee;
+  padding: 0px;
   border: none;
-  padding: 5px 10px;
-  border-radius: 4px;
+  border-radius: 5px;
   cursor: pointer;
   cursor: hand;
+  display: inline-block;
 }
-button:hover {
+button:active,button:focus{
+    outline: 0;
+    background: deepskyblue;
+}
+
+button:hover,.checkButton:hover {
   background-color: #cfd8dc;
 }
 button:disabled {
