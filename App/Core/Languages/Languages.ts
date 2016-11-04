@@ -4,30 +4,32 @@ import { ModelLanguages } from './ModelLanguages';
 
 export class Languages {
 
-    public static get currentlanguageNamePath(){
+    public static get currentLanguageNamePath(){
         return Utils.getFileName(__filename)+'/'+Utils.getFileSelector(Utils.getFileName(__filename));
     }
 
-    public static get currentlanguage() : string {
+    public static get currentLanguage() : string {
         var language:string = CacheManager.storage.getItem(Utils.getFileSelector(Utils.getFileName(__filename)));
 
         if(!language){
             language = navigator.language.toLowerCase().replace("_","-"); 
-            Languages.currentlanguage=language;
+            Languages.currentLanguage=language;
         }
 
         return language;
     }
 
-    public static set currentlanguage(language : string) {
+    public static set currentLanguage(language : string) {
         CacheManager.storage.setItem(Utils.getFileSelector(Utils.getFileName(__filename)),
         language);
     }
     
     public static getModelLanguages(arrayModelLanguages:Array<ModelLanguages>){
         for(var index:number=0;index<arrayModelLanguages.length;index++){
-            if(arrayModelLanguages[index].code==Languages.currentlanguage){
-                return arrayModelLanguages[index];
+            for(var index2:number=0;index2<arrayModelLanguages[index].code.length;index2++){
+                if(arrayModelLanguages[index].code[index2]==Languages.currentLanguage){
+                    return arrayModelLanguages[index];
+                }
             }
         }
         return null;

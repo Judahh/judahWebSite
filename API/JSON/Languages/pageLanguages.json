@@ -3,22 +3,30 @@
         "id":0,
         "language":"English-USA",
         "title":"Languages",
-        "englishUSA":"English-USA",
-        "portugueseBrazil":"Portuguese-Brazil",
-        "selected":"Selected",
-        "current":"Current",
-        "oK":"OK",
-        "cancel":"Cancel"
+        "languages":[
+            {
+                "language":"English-USA",
+                "value":"English-USA"
+            },
+            {
+                "language":"Portuguese-Brazil",
+                "value":"Portuguese-Brazil"
+            }
+        ]
     },
     {
         "id":1,
         "language":"Portuguese-Brazil",
         "title":"Línguas",
-        "englishUSA":"Inglês-EUA",
-        "portugueseBrazil":"Português-Brasil",
-        "selected":"Selecionada",
-        "current":"Atual",
-        "oK":"OK",
-        "cancel":"Cancel"
+        "languages":[
+            {
+                "language":"English-USA",
+                "value":"Inglês-EUA"
+            },
+            {
+                "language":"Portuguese-Brazil",
+                "value":"Português-Brasil"
+            }
+        ]
     }
 ]

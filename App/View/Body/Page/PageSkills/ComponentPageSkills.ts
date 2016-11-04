@@ -50,7 +50,7 @@ export class ComponentPageSkills implements OnInit {
   private getLanguageService(){
     var errorMessage="";
 
-    this.serviceJSON.getObservable(Languages.currentlanguageNamePath).subscribe(
+    this.serviceJSON.getObservable(Languages.currentLanguageNamePath).subscribe(
       items => this.modelLanguages=Languages.getModelLanguages(items), error => errorMessage = <any>error);
     
     if(errorMessage!=""){

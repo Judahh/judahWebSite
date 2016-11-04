@@ -1,3 +1,38 @@
+.tooltiper{
+    width:inherit;
+    display:inline-block;
+    -webkit-animation: none;
+    -moz-animation: none;
+    -ms-animation: none;
+    -o-animation: none;
+    animation: none;
+}
+
+.tooltiper:hover .tooltip {
+    display: block;
+    visibility: visible;
+    opacity:0.5;
+    -webkit-transition: visibility 0.5s, opacity 0.5s linear; /* For Safari 3.1 to 6.0 */
+    transition: visibility 0.5s, opacity 0.5s linear;
+}
+
+.tooltip {
+    display: block;
+    visibility: hidden;
+    opacity:0;
+    background: white;
+    color: black;
+    margin-left: 7px;
+    margin-top: 17px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1000;
+    border:solid 1px black;
+    -webkit-transition: visibility 0.5s opacity 0.5s linear;
+    transition: visibility 0.5s, opacity 0.5s linear;
+}
+
+
 .DivClassHandIconOn, .DivClassHandIcon:hover .DivClassHandIconOff, .DivClassHandIcon .DivClassHandIconOn{
     visibility: hidden;
     height: 0px;

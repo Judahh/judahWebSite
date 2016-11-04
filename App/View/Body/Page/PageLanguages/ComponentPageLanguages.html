@@ -1,43 +1,18 @@
-<div class="DivClassFullWclassthFloat">
-    <div class="DivClassProjectTitle">
-        <div class="DivClassNeon">
-            <div class="DivClassText">
-                <div class="DivClassProjectTitleText">
-                    <div class="DivClassTitleTextSize">
-                        <div class="DivClassTextLanguages">
-                            Languages
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+<divisorBlock *ngFor="let divisorBlock of arrayModelDivisorBlock" 
+    [modelDivisorBlock]="divisorBlock">
+</divisorBlock>
 
-
-<div class="checkButton">
+<div class="checkButton" *ngFor="let languages of filteredArrayModelLanguages" (click)="setLanguage(languages)">
     <label>
-        <input type="checkbox" value="1">
-        <div class="DivClassNeon">
-            <div class="DivClassFuturisticI">
-                -English/USA
-            </div>
+        <input type="radio" name="language"
+         *ngIf="isChecked(languages)" checked 
+         value="{{languages.language}}">
+         <input type="radio" name="language"
+         *ngIf="!isChecked(languages)"
+         value="{{languages.language}}">
+        <div>
+            <item [modelItem]="getItem(languages)">
+            </item>
         </div>
     </label>
 </div>
-
-
-<button onclick="changeLanguageTemporary('English/USA')">
-    <div class="DivClassNeon">
-        <div class="DivClassFuturisticI">
-            -English/USA
-        </div>
-    </div>
-</button>
-<button onclick="changeLanguageTemporary('Português/Brasil')">
-    <div class="DivClassNeon">
-        <div class="DivClassFuturisticI">
-            -Português/Brasil
-        </div>
-    </div>
-</button>
