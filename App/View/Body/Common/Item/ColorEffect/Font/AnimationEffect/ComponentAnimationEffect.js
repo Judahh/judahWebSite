@@ -18,8 +18,8 @@ var ComponentAnimationEffect = (function () {
         if (this.isSubClassesString(index)) {
             return this.modelAnimationEffect.subClasses[index];
         }
-        console.log(this.modelAnimationEffect.subClasses[index].current);
-        console.log(this.modelAnimationEffect.subClasses[index].subClass);
+        // console.log(this.modelAnimationEffect.subClasses[index].current);
+        // console.log(this.modelAnimationEffect.subClasses[index].subClass);
         return this.modelAnimationEffect.subClasses[index].current;
     };
     ComponentAnimationEffect.prototype.getSubClassesSubClass = function (index) {

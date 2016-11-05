@@ -45,11 +45,17 @@ var ComponentItem = (function () {
         }
         return "margin-left: " + tooltip.marginLeft + "px ;";
     };
+    ComponentItem.prototype.opacity = function (tooltip) {
+        if (tooltip.opacity == null || tooltip.opacity == undefined) {
+            return "";
+        }
+        return "opacity: " + tooltip.opacity + ";";
+    };
     ComponentItem.prototype.style = function () {
         return this.cursor();
     };
     ComponentItem.prototype.tooltipStyle = function (tooltip) {
-        return this.marginTop(tooltip) + this.marginLeft(tooltip);
+        return this.marginTop(tooltip) + this.marginLeft(tooltip) + this.opacity(tooltip);
     };
     __decorate([
         core_1.Input(), 

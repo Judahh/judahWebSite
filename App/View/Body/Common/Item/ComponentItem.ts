@@ -58,12 +58,19 @@ export class ComponentItem implements OnInit{
     return "margin-left: "+tooltip.marginLeft+"px ;";
   }
 
+  opacity(tooltip:ModelTooltip){
+    if(tooltip.opacity==null||tooltip.opacity==undefined){
+      return "";
+    }
+    return "opacity: "+tooltip.opacity+";";
+  }
+
   style(){
     return this.cursor();
   }
 
   tooltipStyle(tooltip:ModelTooltip){
-    return this.marginTop(tooltip)+this.marginLeft(tooltip);
+    return this.marginTop(tooltip)+this.marginLeft(tooltip)+this.opacity(tooltip);
   }
 
 }
