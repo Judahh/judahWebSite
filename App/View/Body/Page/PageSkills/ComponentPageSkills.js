@@ -26,9 +26,19 @@ var ComponentPageSkills = (function () {
         this.arrayModelDivisorBlock = new Array();
         this.modelLanguages = new ModelLanguages_1.ModelLanguages();
         this.modelSkillsInformation = new ModelSkillsInformation_1.ModelSkillsInformation();
+        this.basicModelInformation = new ModelInformation_1.ModelInformation("");
+        this.getHalfModelInformation();
         this.getLanguageService();
         this.getInformationService();
         this.getArrayDivisorBlockService();
+    };
+    ComponentPageSkills.prototype.getHalfModelInformation = function () {
+        var _this = this;
+        var errorMessage = "";
+        this.serviceJSON.getObservable('ViewLoader/halfInformation').subscribe(function (item) { return _this.basicModelInformation = item; }, function (error) { return errorMessage = error; });
+        if (errorMessage != "") {
+            alert("Error:" + errorMessage);
+        }
     };
     ComponentPageSkills.prototype.getLanguageService = function () {
         var _this = this;
@@ -59,23 +69,33 @@ var ComponentPageSkills = (function () {
         this.arrayModelDivisorBlock[0].divisor.arraySubDivisor[0].item.colorEffect.font.animationEffect.arrayInformation.push(new ModelInformation_1.ModelInformation(this.modelSkillsInformation.title));
         this.arrayModelDivisorBlock[1].divisor.arraySubDivisor[1].item.colorEffect.font.animationEffect.arrayInformation.push(new ModelInformation_1.ModelInformation(this.modelSkillsInformation.intelligenceTitle));
         for (var index = 0; index < this.modelSkillsInformation.intelligenceText.length; index++) {
-            this.arrayModelDivisorBlock[1].arraySubDivisor[0].item.colorEffect.font.animationEffect.arrayInformation.push(new ModelInformation_1.ModelInformation(this.modelSkillsInformation.intelligenceText[index]));
+            var modelInformation = Object.create(this.basicModelInformation);
+            modelInformation.information = this.modelSkillsInformation.intelligenceText[index];
+            this.arrayModelDivisorBlock[1].arraySubDivisor[0].item.colorEffect.font.animationEffect.arrayInformation.push(modelInformation);
         }
         this.arrayModelDivisorBlock[2].divisor.arraySubDivisor[1].item.colorEffect.font.animationEffect.arrayInformation.push(new ModelInformation_1.ModelInformation(this.modelSkillsInformation.teamworkTitle));
         for (var index = 0; index < this.modelSkillsInformation.teamworkText.length; index++) {
-            this.arrayModelDivisorBlock[2].arraySubDivisor[0].item.colorEffect.font.animationEffect.arrayInformation.push(new ModelInformation_1.ModelInformation(this.modelSkillsInformation.teamworkText[index]));
+            var modelInformation = Object.create(this.basicModelInformation);
+            modelInformation.information = this.modelSkillsInformation.teamworkText[index];
+            this.arrayModelDivisorBlock[2].arraySubDivisor[0].item.colorEffect.font.animationEffect.arrayInformation.push(modelInformation);
         }
         this.arrayModelDivisorBlock[3].divisor.arraySubDivisor[1].item.colorEffect.font.animationEffect.arrayInformation.push(new ModelInformation_1.ModelInformation(this.modelSkillsInformation.leadershipTitle));
         for (var index = 0; index < this.modelSkillsInformation.leadershipText.length; index++) {
-            this.arrayModelDivisorBlock[3].arraySubDivisor[0].item.colorEffect.font.animationEffect.arrayInformation.push(new ModelInformation_1.ModelInformation(this.modelSkillsInformation.leadershipText[index]));
+            var modelInformation = Object.create(this.basicModelInformation);
+            modelInformation.information = this.modelSkillsInformation.leadershipText[index];
+            this.arrayModelDivisorBlock[3].arraySubDivisor[0].item.colorEffect.font.animationEffect.arrayInformation.push(modelInformation);
         }
         this.arrayModelDivisorBlock[4].divisor.arraySubDivisor[1].item.colorEffect.font.animationEffect.arrayInformation.push(new ModelInformation_1.ModelInformation(this.modelSkillsInformation.languagesCommunicationTitle));
         for (var index = 0; index < this.modelSkillsInformation.languagesCommunicationText.length; index++) {
-            this.arrayModelDivisorBlock[4].arraySubDivisor[0].item.colorEffect.font.animationEffect.arrayInformation.push(new ModelInformation_1.ModelInformation(this.modelSkillsInformation.languagesCommunicationText[index]));
+            var modelInformation = Object.create(this.basicModelInformation);
+            modelInformation.information = this.modelSkillsInformation.languagesCommunicationText[index];
+            this.arrayModelDivisorBlock[4].arraySubDivisor[0].item.colorEffect.font.animationEffect.arrayInformation.push(modelInformation);
         }
         this.arrayModelDivisorBlock[5].divisor.arraySubDivisor[1].item.colorEffect.font.animationEffect.arrayInformation.push(new ModelInformation_1.ModelInformation(this.modelSkillsInformation.flexibilityTitle));
         for (var index = 0; index < this.modelSkillsInformation.flexibilityText.length; index++) {
-            this.arrayModelDivisorBlock[5].arraySubDivisor[0].item.colorEffect.font.animationEffect.arrayInformation.push(new ModelInformation_1.ModelInformation(this.modelSkillsInformation.flexibilityText[index]));
+            var modelInformation = Object.create(this.basicModelInformation);
+            modelInformation.information = this.modelSkillsInformation.flexibilityText[index];
+            this.arrayModelDivisorBlock[5].arraySubDivisor[0].item.colorEffect.font.animationEffect.arrayInformation.push(modelInformation);
         }
     };
     ComponentPageSkills.prototype.ngOnDestroy = function () {

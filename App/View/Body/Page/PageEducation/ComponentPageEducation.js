@@ -26,9 +26,19 @@ var ComponentPageEducation = (function () {
         this.arrayModelDivisorBlock = new Array();
         this.modelLanguages = new ModelLanguages_1.ModelLanguages();
         this.modelEducationInformation = new ModelEducationInformation_1.ModelEducationInformation();
+        this.basicModelInformation = new ModelInformation_1.ModelInformation("");
+        this.getHalfModelInformation();
         this.getLanguageService();
         this.getInformationService();
         this.getArrayDivisorBlockService();
+    };
+    ComponentPageEducation.prototype.getHalfModelInformation = function () {
+        var _this = this;
+        var errorMessage = "";
+        this.serviceJSON.getObservable('ViewLoader/halfInformation').subscribe(function (item) { return _this.basicModelInformation = item; }, function (error) { return errorMessage = error; });
+        if (errorMessage != "") {
+            alert("Error:" + errorMessage);
+        }
     };
     ComponentPageEducation.prototype.getLanguageService = function () {
         var _this = this;
@@ -59,23 +69,33 @@ var ComponentPageEducation = (function () {
         this.arrayModelDivisorBlock[0].divisor.arraySubDivisor[0].item.colorEffect.font.animationEffect.arrayInformation.push(new ModelInformation_1.ModelInformation(this.modelEducationInformation.title));
         this.arrayModelDivisorBlock[1].divisor.arraySubDivisor[1].item.colorEffect.font.animationEffect.arrayInformation.push(new ModelInformation_1.ModelInformation(this.modelEducationInformation.diplomas_CertificatesTitle));
         for (var index = 0; index < this.modelEducationInformation.diplomas_CertificatesText.length; index++) {
-            this.arrayModelDivisorBlock[1].arraySubDivisor[0].item.colorEffect.font.animationEffect.arrayInformation.push(new ModelInformation_1.ModelInformation(this.modelEducationInformation.diplomas_CertificatesText[index]));
+            var modelInformation = Object.create(this.basicModelInformation);
+            modelInformation.information = this.modelEducationInformation.diplomas_CertificatesText[index];
+            this.arrayModelDivisorBlock[1].arraySubDivisor[0].item.colorEffect.font.animationEffect.arrayInformation.push(modelInformation);
         }
         this.arrayModelDivisorBlock[2].divisor.arraySubDivisor[1].item.colorEffect.font.animationEffect.arrayInformation.push(new ModelInformation_1.ModelInformation(this.modelEducationInformation.hardwareTitle));
         for (var index = 0; index < this.modelEducationInformation.hardwareText.length; index++) {
-            this.arrayModelDivisorBlock[2].arraySubDivisor[0].item.colorEffect.font.animationEffect.arrayInformation.push(new ModelInformation_1.ModelInformation(this.modelEducationInformation.hardwareText[index]));
+            var modelInformation = Object.create(this.basicModelInformation);
+            modelInformation.information = this.modelEducationInformation.hardwareText[index];
+            this.arrayModelDivisorBlock[2].arraySubDivisor[0].item.colorEffect.font.animationEffect.arrayInformation.push(modelInformation);
         }
         this.arrayModelDivisorBlock[3].divisor.arraySubDivisor[1].item.colorEffect.font.animationEffect.arrayInformation.push(new ModelInformation_1.ModelInformation(this.modelEducationInformation.softwareTitle));
         for (var index = 0; index < this.modelEducationInformation.softwareText.length; index++) {
-            this.arrayModelDivisorBlock[3].arraySubDivisor[0].item.colorEffect.font.animationEffect.arrayInformation.push(new ModelInformation_1.ModelInformation(this.modelEducationInformation.softwareText[index]));
+            var modelInformation = Object.create(this.basicModelInformation);
+            modelInformation.information = this.modelEducationInformation.softwareText[index];
+            this.arrayModelDivisorBlock[3].arraySubDivisor[0].item.colorEffect.font.animationEffect.arrayInformation.push(modelInformation);
         }
         this.arrayModelDivisorBlock[4].divisor.arraySubDivisor[1].item.colorEffect.font.animationEffect.arrayInformation.push(new ModelInformation_1.ModelInformation(this.modelEducationInformation.webTitle));
         for (var index = 0; index < this.modelEducationInformation.webText.length; index++) {
-            this.arrayModelDivisorBlock[4].arraySubDivisor[0].item.colorEffect.font.animationEffect.arrayInformation.push(new ModelInformation_1.ModelInformation(this.modelEducationInformation.webText[index]));
+            var modelInformation = Object.create(this.basicModelInformation);
+            modelInformation.information = this.modelEducationInformation.webText[index];
+            this.arrayModelDivisorBlock[4].arraySubDivisor[0].item.colorEffect.font.animationEffect.arrayInformation.push(modelInformation);
         }
         this.arrayModelDivisorBlock[5].divisor.arraySubDivisor[1].item.colorEffect.font.animationEffect.arrayInformation.push(new ModelInformation_1.ModelInformation(this.modelEducationInformation.mobileTitle));
         for (var index = 0; index < this.modelEducationInformation.mobileText.length; index++) {
-            this.arrayModelDivisorBlock[5].arraySubDivisor[0].item.colorEffect.font.animationEffect.arrayInformation.push(new ModelInformation_1.ModelInformation(this.modelEducationInformation.mobileText[index]));
+            var modelInformation = Object.create(this.basicModelInformation);
+            modelInformation.information = this.modelEducationInformation.mobileText[index];
+            this.arrayModelDivisorBlock[5].arraySubDivisor[0].item.colorEffect.font.animationEffect.arrayInformation.push(modelInformation);
         }
     };
     ComponentPageEducation.prototype.ngOnDestroy = function () {

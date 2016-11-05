@@ -23,7 +23,9 @@ var ComponentPageProjects = (function () {
     };
     ComponentPageProjects.prototype.initialization = function () {
         this.arrayModelDivisorBlock = new Array();
+        this.basicModelInformation = new ModelInformation_1.ModelInformation("");
         this.modelLanguages = new ModelLanguages_1.ModelLanguages();
+        //this.getHalfModelInformation();
         this.getLanguageService();
         this.getInformationService();
         this.getArrayDivisorBlockService();
@@ -40,6 +42,14 @@ var ComponentPageProjects = (function () {
         var _this = this;
         var errorMessage = "";
         this.serviceJSON.getObservable('Languages/' + Utils_1.Utils.getFileSelector(Utils_1.Utils.getFileName(__filename))).subscribe(function (items) { return _this.modelProjectsInformation = Languages_1.Languages.getPageLanguage(items, _this.modelLanguages); }, function (error) { return errorMessage = error; });
+        if (errorMessage != "") {
+            alert("Error:" + errorMessage);
+        }
+    };
+    ComponentPageProjects.prototype.getHalfModelInformation = function () {
+        var _this = this;
+        var errorMessage = "";
+        this.serviceJSON.getObservable('ViewLoader/halfInformation').subscribe(function (item) { return _this.basicModelInformation = item; }, function (error) { return errorMessage = error; });
         if (errorMessage != "") {
             alert("Error:" + errorMessage);
         }

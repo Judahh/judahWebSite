@@ -28,6 +28,7 @@ import { ServiceJSON } from './../../../../Core/Services/ServiceJSON';
 export class ComponentPageEducation implements OnInit {
   modelEducationInformation:ModelEducationInformation;
   modelLanguages:ModelLanguages;
+  basicModelInformation:ModelInformation;
 
   arrayModelDivisorBlock:Array<ModelDivisorBlock>;
 
@@ -41,10 +42,23 @@ export class ComponentPageEducation implements OnInit {
     this.arrayModelDivisorBlock=new Array<ModelDivisorBlock>();
     this.modelLanguages=new ModelLanguages();
     this.modelEducationInformation=new ModelEducationInformation();
+    this.basicModelInformation=new ModelInformation("");
 
+    this.getHalfModelInformation();
     this.getLanguageService();
     this.getInformationService();
     this.getArrayDivisorBlockService();
+  }
+
+  private getHalfModelInformation(){
+    var errorMessage="";
+
+    this.serviceJSON.getObservable('ViewLoader/halfInformation').subscribe(
+      item => this.basicModelInformation=item, error => errorMessage = <any>error);
+    
+    if(errorMessage!=""){
+      alert("Error:"+errorMessage);
+    }
   }
 
   private getLanguageService(){
@@ -86,27 +100,37 @@ export class ComponentPageEducation implements OnInit {
 
     this.arrayModelDivisorBlock[1].divisor.arraySubDivisor[1].item.colorEffect.font.animationEffect.arrayInformation.push(new ModelInformation(this.modelEducationInformation.diplomas_CertificatesTitle));
     for(let index=0;index<this.modelEducationInformation.diplomas_CertificatesText.length;index++){
-      this.arrayModelDivisorBlock[1].arraySubDivisor[0].item.colorEffect.font.animationEffect.arrayInformation.push(new ModelInformation(this.modelEducationInformation.diplomas_CertificatesText[index]));
+      var modelInformation:ModelInformation=Object.create(this.basicModelInformation);
+      modelInformation.information=this.modelEducationInformation.diplomas_CertificatesText[index];
+      this.arrayModelDivisorBlock[1].arraySubDivisor[0].item.colorEffect.font.animationEffect.arrayInformation.push(modelInformation);
     }
 
     this.arrayModelDivisorBlock[2].divisor.arraySubDivisor[1].item.colorEffect.font.animationEffect.arrayInformation.push(new ModelInformation(this.modelEducationInformation.hardwareTitle));
     for(let index=0;index<this.modelEducationInformation.hardwareText.length;index++){
-      this.arrayModelDivisorBlock[2].arraySubDivisor[0].item.colorEffect.font.animationEffect.arrayInformation.push(new ModelInformation(this.modelEducationInformation.hardwareText[index]));
+      var modelInformation:ModelInformation=Object.create(this.basicModelInformation);
+      modelInformation.information=this.modelEducationInformation.hardwareText[index];
+      this.arrayModelDivisorBlock[2].arraySubDivisor[0].item.colorEffect.font.animationEffect.arrayInformation.push(modelInformation);
     }
 
     this.arrayModelDivisorBlock[3].divisor.arraySubDivisor[1].item.colorEffect.font.animationEffect.arrayInformation.push(new ModelInformation(this.modelEducationInformation.softwareTitle));
     for(let index=0;index<this.modelEducationInformation.softwareText.length;index++){
-      this.arrayModelDivisorBlock[3].arraySubDivisor[0].item.colorEffect.font.animationEffect.arrayInformation.push(new ModelInformation(this.modelEducationInformation.softwareText[index]));
+      var modelInformation:ModelInformation=Object.create(this.basicModelInformation);
+      modelInformation.information=this.modelEducationInformation.softwareText[index];
+      this.arrayModelDivisorBlock[3].arraySubDivisor[0].item.colorEffect.font.animationEffect.arrayInformation.push(modelInformation);
     }
 
     this.arrayModelDivisorBlock[4].divisor.arraySubDivisor[1].item.colorEffect.font.animationEffect.arrayInformation.push(new ModelInformation(this.modelEducationInformation.webTitle));
     for(let index=0;index<this.modelEducationInformation.webText.length;index++){
-      this.arrayModelDivisorBlock[4].arraySubDivisor[0].item.colorEffect.font.animationEffect.arrayInformation.push(new ModelInformation(this.modelEducationInformation.webText[index]));
+      var modelInformation:ModelInformation=Object.create(this.basicModelInformation);
+      modelInformation.information=this.modelEducationInformation.webText[index];
+      this.arrayModelDivisorBlock[4].arraySubDivisor[0].item.colorEffect.font.animationEffect.arrayInformation.push(modelInformation);
     }
 
     this.arrayModelDivisorBlock[5].divisor.arraySubDivisor[1].item.colorEffect.font.animationEffect.arrayInformation.push(new ModelInformation(this.modelEducationInformation.mobileTitle));
     for(let index=0;index<this.modelEducationInformation.mobileText.length;index++){
-      this.arrayModelDivisorBlock[5].arraySubDivisor[0].item.colorEffect.font.animationEffect.arrayInformation.push(new ModelInformation(this.modelEducationInformation.mobileText[index]));
+      var modelInformation:ModelInformation=Object.create(this.basicModelInformation);
+      modelInformation.information=this.modelEducationInformation.mobileText[index];
+      this.arrayModelDivisorBlock[5].arraySubDivisor[0].item.colorEffect.font.animationEffect.arrayInformation.push(modelInformation);
     }
   }
 

@@ -28,7 +28,7 @@ import { ServiceJSON } from './../../../../Core/Services/ServiceJSON';
 export class ComponentPageSkills implements OnInit {
   modelSkillsInformation:ModelSkillsInformation;
   modelLanguages:ModelLanguages;
-
+  basicModelInformation:ModelInformation;
   arrayModelDivisorBlock:Array<ModelDivisorBlock>;
 
   ngOnInit() {
@@ -41,10 +41,23 @@ export class ComponentPageSkills implements OnInit {
     this.arrayModelDivisorBlock=new Array<ModelDivisorBlock>();
     this.modelLanguages=new ModelLanguages();
     this.modelSkillsInformation=new ModelSkillsInformation();
+    this.basicModelInformation=new ModelInformation("");
 
+    this.getHalfModelInformation();
     this.getLanguageService();
     this.getInformationService();
     this.getArrayDivisorBlockService();
+  }
+
+  private getHalfModelInformation(){
+    var errorMessage="";
+
+    this.serviceJSON.getObservable('ViewLoader/halfInformation').subscribe(
+      item => this.basicModelInformation=item, error => errorMessage = <any>error);
+    
+    if(errorMessage!=""){
+      alert("Error:"+errorMessage);
+    }
   }
 
   private getLanguageService(){
@@ -86,27 +99,37 @@ export class ComponentPageSkills implements OnInit {
 
     this.arrayModelDivisorBlock[1].divisor.arraySubDivisor[1].item.colorEffect.font.animationEffect.arrayInformation.push(new ModelInformation(this.modelSkillsInformation.intelligenceTitle));
     for(let index=0;index<this.modelSkillsInformation.intelligenceText.length;index++){
-      this.arrayModelDivisorBlock[1].arraySubDivisor[0].item.colorEffect.font.animationEffect.arrayInformation.push(new ModelInformation(this.modelSkillsInformation.intelligenceText[index]));
+      var modelInformation:ModelInformation=Object.create(this.basicModelInformation);
+      modelInformation.information=this.modelSkillsInformation.intelligenceText[index];
+      this.arrayModelDivisorBlock[1].arraySubDivisor[0].item.colorEffect.font.animationEffect.arrayInformation.push(modelInformation);
     }
 
     this.arrayModelDivisorBlock[2].divisor.arraySubDivisor[1].item.colorEffect.font.animationEffect.arrayInformation.push(new ModelInformation(this.modelSkillsInformation.teamworkTitle));
     for(let index=0;index<this.modelSkillsInformation.teamworkText.length;index++){
-      this.arrayModelDivisorBlock[2].arraySubDivisor[0].item.colorEffect.font.animationEffect.arrayInformation.push(new ModelInformation(this.modelSkillsInformation.teamworkText[index]));
+      var modelInformation:ModelInformation=Object.create(this.basicModelInformation);
+      modelInformation.information=this.modelSkillsInformation.teamworkText[index];
+      this.arrayModelDivisorBlock[2].arraySubDivisor[0].item.colorEffect.font.animationEffect.arrayInformation.push(modelInformation);
     }
 
     this.arrayModelDivisorBlock[3].divisor.arraySubDivisor[1].item.colorEffect.font.animationEffect.arrayInformation.push(new ModelInformation(this.modelSkillsInformation.leadershipTitle));
     for(let index=0;index<this.modelSkillsInformation.leadershipText.length;index++){
-      this.arrayModelDivisorBlock[3].arraySubDivisor[0].item.colorEffect.font.animationEffect.arrayInformation.push(new ModelInformation(this.modelSkillsInformation.leadershipText[index]));
+      var modelInformation:ModelInformation=Object.create(this.basicModelInformation);
+      modelInformation.information=this.modelSkillsInformation.leadershipText[index];
+      this.arrayModelDivisorBlock[3].arraySubDivisor[0].item.colorEffect.font.animationEffect.arrayInformation.push(modelInformation);
     }
 
     this.arrayModelDivisorBlock[4].divisor.arraySubDivisor[1].item.colorEffect.font.animationEffect.arrayInformation.push(new ModelInformation(this.modelSkillsInformation.languagesCommunicationTitle));
     for(let index=0;index<this.modelSkillsInformation.languagesCommunicationText.length;index++){
-      this.arrayModelDivisorBlock[4].arraySubDivisor[0].item.colorEffect.font.animationEffect.arrayInformation.push(new ModelInformation(this.modelSkillsInformation.languagesCommunicationText[index]));
+      var modelInformation:ModelInformation=Object.create(this.basicModelInformation);
+      modelInformation.information=this.modelSkillsInformation.languagesCommunicationText[index];
+      this.arrayModelDivisorBlock[4].arraySubDivisor[0].item.colorEffect.font.animationEffect.arrayInformation.push(modelInformation);
     }
 
     this.arrayModelDivisorBlock[5].divisor.arraySubDivisor[1].item.colorEffect.font.animationEffect.arrayInformation.push(new ModelInformation(this.modelSkillsInformation.flexibilityTitle));
     for(let index=0;index<this.modelSkillsInformation.flexibilityText.length;index++){
-      this.arrayModelDivisorBlock[5].arraySubDivisor[0].item.colorEffect.font.animationEffect.arrayInformation.push(new ModelInformation(this.modelSkillsInformation.flexibilityText[index]));
+      var modelInformation:ModelInformation=Object.create(this.basicModelInformation);
+      modelInformation.information=this.modelSkillsInformation.flexibilityText[index];
+      this.arrayModelDivisorBlock[5].arraySubDivisor[0].item.colorEffect.font.animationEffect.arrayInformation.push(modelInformation);
     }
   }
 

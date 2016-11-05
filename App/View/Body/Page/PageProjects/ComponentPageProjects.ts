@@ -26,6 +26,7 @@ import { ServiceJSON } from './../../../../Core/Services/ServiceJSON';
 export class ComponentPageProjects implements OnInit {
   modelProjectsInformation:any;
   modelLanguages:ModelLanguages;
+  basicModelInformation:ModelInformation;
   arrayModelDivisorBlock:Array<ModelDivisorBlock>;
 
   ngOnInit() {
@@ -36,8 +37,10 @@ export class ComponentPageProjects implements OnInit {
 
   initialization(){
     this.arrayModelDivisorBlock=new Array<ModelDivisorBlock>();
+    this.basicModelInformation=new ModelInformation("");
     this.modelLanguages=new ModelLanguages();
 
+    //this.getHalfModelInformation();
     this.getLanguageService();
     this.getInformationService();
     this.getArrayDivisorBlockService();
@@ -59,6 +62,17 @@ export class ComponentPageProjects implements OnInit {
 
     this.serviceJSON.getObservable('Languages/'+Utils.getFileSelector(Utils.getFileName(__filename))).subscribe(
       items => this.modelProjectsInformation=Languages.getPageLanguage(items,this.modelLanguages), error => errorMessage = <any>error);
+    
+    if(errorMessage!=""){
+      alert("Error:"+errorMessage);
+    }
+  }
+
+  private getHalfModelInformation(){
+    var errorMessage="";
+
+    this.serviceJSON.getObservable('ViewLoader/halfInformation').subscribe(
+      item => this.basicModelInformation=item, error => errorMessage = <any>error);
     
     if(errorMessage!=""){
       alert("Error:"+errorMessage);
