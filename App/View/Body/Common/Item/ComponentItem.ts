@@ -70,7 +70,8 @@ export class ComponentItem implements OnInit{
   }
 
   tooltipStyle(tooltip:ModelTooltip){
-    return this.marginTop(tooltip)+this.marginLeft(tooltip)+this.opacity(tooltip);
+    // return this.marginTop(tooltip)+this.marginLeft(tooltip)+this.opacity(tooltip);
+    return this.opacity(tooltip);
   }
 
 }

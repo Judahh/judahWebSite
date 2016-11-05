@@ -55,7 +55,8 @@ var ComponentItem = (function () {
         return this.cursor();
     };
     ComponentItem.prototype.tooltipStyle = function (tooltip) {
-        return this.marginTop(tooltip) + this.marginLeft(tooltip) + this.opacity(tooltip);
+        // return this.marginTop(tooltip)+this.marginLeft(tooltip)+this.opacity(tooltip);
+        return this.opacity(tooltip);
     };
     __decorate([
         core_1.Input(), 
