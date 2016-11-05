@@ -54,8 +54,15 @@ export class ComponentVideoLink implements OnInit{
     return "position: "+this.modelVideoLink.position+";";
   }
 
+  opacity(){
+    if(this.modelVideoLink.opacity==null||this.modelVideoLink.opacity==undefined){
+      return "";
+    }
+    return "opacity: "+this.modelVideoLink.opacity+";";
+  }
+
   style(){
-    return this.boxSizing()+this.border()+this.borderRadius()+this.position();
+    return this.boxSizing()+this.border()+this.borderRadius()+this.position()+this.opacity();
   }
 
 }

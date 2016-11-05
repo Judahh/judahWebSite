@@ -22,6 +22,12 @@ var ComponentDivisor = (function () {
     ComponentDivisor.prototype.ngOnDestroy = function () {
         //this.heroSubscription.unsubscribe();
     };
+    ComponentDivisor.prototype.opacity = function () {
+        if (this.modelDivisor.opacity == null || this.modelDivisor.opacity == undefined) {
+            return "";
+        }
+        return "opacity: " + this.modelDivisor.opacity + ";";
+    };
     ComponentDivisor.prototype.borderBottom = function () {
         if (this.modelDivisor.color == null || this.modelDivisor.color == "") {
             return "";
@@ -79,7 +85,7 @@ var ComponentDivisor = (function () {
         return "box-sizing: border-box;";
     };
     ComponentDivisor.prototype.style = function () {
-        return this.borderBottom() + this.display() + this.width() + this.boxSizing();
+        return this.borderBottom() + this.display() + this.width() + this.boxSizing() + this.opacity();
     };
     ComponentDivisor.prototype.style2 = function () {
         return this.fontPadding() + this.display() + this.width() + this.boxSizing();

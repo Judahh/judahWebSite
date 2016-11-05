@@ -8,4 +8,6 @@ export class ModelVideoLink {
     color: string;
     position: string;
     borderRadius:number;//px
+
+    opacity:number;
 }

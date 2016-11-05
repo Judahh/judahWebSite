@@ -5,4 +5,5 @@ export class ModelDivisor {
     color:string;
     arrayPadding: Array<number>;
     display:string;
+    opacity:number;
 }

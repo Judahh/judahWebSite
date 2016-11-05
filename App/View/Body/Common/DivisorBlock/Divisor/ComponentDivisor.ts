@@ -26,6 +26,13 @@ export class ComponentDivisor implements OnInit {
     //this.heroSubscription.unsubscribe();
   }
 
+  opacity(){
+    if(this.modelDivisor.opacity==null||this.modelDivisor.opacity==undefined){
+      return "";
+    }
+    return "opacity: "+this.modelDivisor.opacity+";";
+  }
+
   borderBottom(){
     if(this.modelDivisor.color==null||this.modelDivisor.color==""){
       return "";
@@ -95,7 +102,7 @@ export class ComponentDivisor implements OnInit {
   }
 
   style(){
-    return this.borderBottom()+this.display()+this.width()+this.boxSizing();
+    return this.borderBottom()+this.display()+this.width()+this.boxSizing()+this.opacity();
   }
 
   style2(){
