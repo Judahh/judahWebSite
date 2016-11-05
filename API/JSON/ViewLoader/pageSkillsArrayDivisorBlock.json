@@ -2,6 +2,7 @@
   {
     "arraySubDivisor":[],
     "divisor":{
+        "opacity":0.6,
         "color": "transparent",
         "arrayPadding": [5],
         "arraySubDivisor":[
@@ -34,6 +35,7 @@
   },
   {
     "divisor":{
+        "opacity":0.6,
         "color": "black",
         "arrayPadding": [5],
         "arraySubDivisor":[
@@ -126,6 +128,7 @@
   },
   {
     "divisor":{
+        "opacity":0.6,
         "color": "black",
         "arrayPadding": [5],
         "arraySubDivisor":[
@@ -212,6 +215,7 @@
   },
   {
     "divisor":{
+        "opacity":0.6,
         "color": "black",
         "arrayPadding": [5],
         "arraySubDivisor":[
@@ -298,6 +302,7 @@
   },
   {
     "divisor":{
+        "opacity":0.6,
         "color": "black",
         "arrayPadding": [5],
         "arraySubDivisor":[
@@ -384,6 +389,7 @@
   },
   {
     "divisor":{
+        "opacity":0.6,
         "color": "black",
         "arrayPadding": [5],
         "arraySubDivisor":[

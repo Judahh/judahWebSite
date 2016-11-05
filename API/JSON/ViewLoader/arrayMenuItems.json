@@ -27,7 +27,8 @@
                     "subClasses":[],
                     "arrayInformation":[
                       {
-                        "information":"c"
+                        "information":"c",
+                        "opacity":0.6
                       }
                     ]
                 }
@@ -53,7 +54,8 @@
                     "subClasses":[],
                     "arrayInformation":[
                       {
-                        "information":"d"
+                        "information":"d",
+                        "opacity":0.6
                       }
                     ]
                 }
@@ -79,10 +81,12 @@
                     "subClasses":["DivClassHandIconOff","DivClassHandIconOn"],
                     "arrayInformation":[
                       {
-                        "information":"«"
+                        "information":"«",
+                        "opacity":0.6
                       },
                       {
-                        "information":"¬"
+                        "information":"¬",
+                        "opacity":0.6
                       }
                     ]
                 }
@@ -108,16 +112,20 @@
                     "subClasses":["DivClassConsoleIconOff","DivClassConsoleIconOn","DivClassConsoleIconOn1","DivClassConsoleIconOn2"],
                     "arrayInformation":[
                       {
-                        "information":"i"
+                        "information":"i",
+                        "opacity":0.6
                       },
                       {
-                        "information":"j"
+                        "information":"j",
+                        "opacity":0.6
                       },
                       {
-                        "information":"k"
+                        "information":"k",
+                        "opacity":0.6
                       },
                       {
-                        "information":"l"
+                        "information":"l",
+                        "opacity":0.6
                       }
                     ]
                 }
@@ -143,7 +151,8 @@
                     "subClasses":[],
                     "arrayInformation":[
                       {
-                        "information":"6"
+                        "information":"6",
+                        "opacity":0.6
                       }
                     ]
                 }
@@ -183,7 +192,8 @@
                     "subClasses":[],
                     "arrayInformation":[
                       {
-                        "information":"µ"
+                        "information":"µ",
+                        "opacity":0.6
                       }
                     ]
                 }
@@ -226,7 +236,8 @@
                     "subClasses":[],
                     "arrayInformation":[
                       {
-                        "information":"µ"
+                        "information":"µ",
+                        "opacity":0.6
                       }
                     ]
                 }
@@ -267,7 +278,8 @@
                     "subClasses":[],
                     "arrayInformation":[
                       {
-                        "information":"µ"
+                        "information":"µ",
+                        "opacity":0.6
                       }
                     ]
                 }
