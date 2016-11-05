@@ -32,6 +32,7 @@ export class ComponentPageLanguages implements OnInit {
   arrayModelLanguages:Array<ModelLanguages>;
   filteredArrayModelLanguages:Array<ModelLanguages>;
   basicItem:ModelItem;
+  basicModelInformation:ModelInformation;
 
   arrayModelDivisorBlock:Array<ModelDivisorBlock>;
 
@@ -49,11 +50,24 @@ export class ComponentPageLanguages implements OnInit {
     this.modelLanguagesInformation=new ModelLanguagesInformation();
     this.modelLanguages=new ModelLanguages();
     this.basicItem=new ModelItem();
+    this.basicModelInformation=new ModelInformation("");
 
+    this.getHalfModelInformation();
     this.getItemService();
     this.getLanguageService();
     this.getInformationService();
     this.getArrayDivisorBlockService();
+  }
+
+  private getHalfModelInformation(){
+    var errorMessage="";
+
+    this.serviceJSON.getObservable('ViewLoader/halfInformation').subscribe(
+      item => this.basicModelInformation=item, error => errorMessage = <any>error);
+    
+    if(errorMessage!=""){
+      alert("Error:"+errorMessage);
+    }
   }
 
   private getLanguageService(){
@@ -85,8 +99,9 @@ export class ComponentPageLanguages implements OnInit {
     while(this.modelLanguagesInformation==undefined){}
     for(let index:number=0;index<this.modelLanguagesInformation.languages.length;index++){
       if(this.modelLanguagesInformation.languages[index].language==modelLanguages.language){
-        item.colorEffect.font.animationEffect.arrayInformation.push(
-          new ModelInformation(this.modelLanguagesInformation.languages[index].value));
+        var modelInformation:ModelInformation=Object.create(this.basicModelInformation);
+        modelInformation.information=this.modelLanguagesInformation.languages[index].value;
+        item.colorEffect.font.animationEffect.arrayInformation.push(modelInformation);
         return item;
       }
     }

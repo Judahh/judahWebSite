@@ -31,10 +31,20 @@ var ComponentPageLanguages = (function () {
         this.modelLanguagesInformation = new ModelLanguagesInformation_1.ModelLanguagesInformation();
         this.modelLanguages = new ModelLanguages_1.ModelLanguages();
         this.basicItem = new ModelItem_1.ModelItem();
+        this.basicModelInformation = new ModelInformation_1.ModelInformation("");
+        this.getHalfModelInformation();
         this.getItemService();
         this.getLanguageService();
         this.getInformationService();
         this.getArrayDivisorBlockService();
+    };
+    ComponentPageLanguages.prototype.getHalfModelInformation = function () {
+        var _this = this;
+        var errorMessage = "";
+        this.serviceJSON.getObservable('ViewLoader/halfInformation').subscribe(function (item) { return _this.basicModelInformation = item; }, function (error) { return errorMessage = error; });
+        if (errorMessage != "") {
+            alert("Error:" + errorMessage);
+        }
     };
     ComponentPageLanguages.prototype.getLanguageService = function () {
         var _this = this;
@@ -58,7 +68,9 @@ var ComponentPageLanguages = (function () {
         while (this.modelLanguagesInformation == undefined) { }
         for (var index = 0; index < this.modelLanguagesInformation.languages.length; index++) {
             if (this.modelLanguagesInformation.languages[index].language == modelLanguages.language) {
-                item.colorEffect.font.animationEffect.arrayInformation.push(new ModelInformation_1.ModelInformation(this.modelLanguagesInformation.languages[index].value));
+                var modelInformation = Object.create(this.basicModelInformation);
+                modelInformation.information = this.modelLanguagesInformation.languages[index].value;
+                item.colorEffect.font.animationEffect.arrayInformation.push(modelInformation);
                 return item;
             }
         }
