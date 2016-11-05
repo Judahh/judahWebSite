@@ -101,24 +101,30 @@ a:visited {
 .checkButton input:checked + div, .checkButton input:checked + item{
     background-color:deepskyblue;
     border-radius: 5px;
+    border: none;
 }
 
 .checkButton input:checked + div:hover, checkButton input:checked + item:hover{
-    background-color:deepskyblue;
-    border-radius: 5px;
+    /*background-color:deepskyblue;*/
+    /*border-radius: 5px;*/
     background-color: #cfd8dc;
+    /*border: none;*/
 }
 
 ::-moz-selection,::selection {
     outline: 0;
     background: deepskyblue;
+    border: none;
 }
 
 button,.checkButton {
   margin: 0 0.1em;
   background-color: #eee;
+  /*background-color:white;*/
+  color: black;
+  /*border:solid 1px black;*/
   padding: 0px;
-  border: none;
+  
   border-radius: 5px;
   cursor: pointer;
   cursor: hand;
@@ -127,14 +133,17 @@ button,.checkButton {
 button:active,button:focus{
     outline: 0;
     background: deepskyblue;
+    border: none;
 }
 
 button:hover,.checkButton:hover {
-  background-color: #cfd8dc;
+  background-color: #eee;
 }
+
 button:disabled {
   background-color: #eee;
   color: #aaa;
+  border: none;
   cursor: auto;
 }
 
@@ -149,8 +158,4 @@ ul,page,header,footer{
     width: 100%;
     padding: 0 0 0 0;
     margin: 0 0 0 0;
-}
-
-.DivClassHalf{
-    opacity: 0.5;
 }

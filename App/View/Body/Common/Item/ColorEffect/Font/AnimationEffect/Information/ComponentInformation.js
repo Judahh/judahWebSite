@@ -19,6 +19,15 @@ var ComponentInformation = (function () {
     };
     ComponentInformation.prototype.initialization = function () {
     };
+    ComponentInformation.prototype.opacity = function () {
+        if (this.information.opacity == null || this.information.opacity == undefined) {
+            return "";
+        }
+        return "opacity: " + this.information.opacity + ";";
+    };
+    ComponentInformation.prototype.style = function () {
+        return this.opacity();
+    };
     __decorate([
         core_1.Input(), 
         __metadata('design:type', ModelInformation_1.ModelInformation)

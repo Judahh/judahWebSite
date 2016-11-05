@@ -43,8 +43,14 @@ var ComponentImage = (function () {
         }
         return "position: " + this.modelImage.position + ";";
     };
+    ComponentImage.prototype.opacity = function () {
+        if (this.modelImage.opacity == null || this.modelImage.opacity == undefined) {
+            return "";
+        }
+        return "opacity: " + this.modelImage.opacity + ";";
+    };
     ComponentImage.prototype.style = function () {
-        return this.boxSizing() + this.border() + this.borderRadius() + this.position();
+        return this.boxSizing() + this.border() + this.borderRadius() + this.position() + this.opacity;
     };
     __decorate([
         core_1.Input(), 

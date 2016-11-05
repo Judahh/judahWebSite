@@ -1,7 +1,9 @@
-<div *ngIf="information.link==null||information.link==undefined">
+<div *ngIf="information.link==null||information.link==undefined"
+    [style]="style()|safeStyle">
     {{information.information}}
 </div>
 <a *ngIf="information.link!=null && information.link!=undefined"
-    href="{{information.link}}">
+    href="{{information.link}}"
+    [style]="style()|safeStyle">
     {{information.information}}
 </a>

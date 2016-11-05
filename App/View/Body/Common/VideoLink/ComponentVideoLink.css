@@ -3,6 +3,7 @@ videoLink {
     padding-top: 75%;
     width: 100%;
     display: block;
+    opacity: 0.5;
 }
 
 videoLink iframe {

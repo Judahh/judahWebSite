@@ -54,8 +54,15 @@ export class ComponentImage implements OnInit{
     return "position: "+this.modelImage.position+";";
   }
 
+  opacity(){
+    if(this.modelImage.opacity==null||this.modelImage.opacity==undefined){
+      return "";
+    }
+    return "opacity: "+this.modelImage.opacity+";";
+  }
+
   style(){
-    return this.boxSizing()+this.border()+this.borderRadius()+this.position();
+    return this.boxSizing()+this.border()+this.borderRadius()+this.position()+this.opacity;
   }
 
 }

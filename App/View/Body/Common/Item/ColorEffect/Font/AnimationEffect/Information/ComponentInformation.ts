@@ -23,4 +23,15 @@ export class ComponentInformation implements OnInit{
 
   initialization(){
   }
+
+  opacity(){
+    if(this.information.opacity==null||this.information.opacity==undefined){
+      return "";
+    }
+    return "opacity: "+this.information.opacity+";";
+  }
+
+  style(){
+    return this.opacity();
+  }
 }

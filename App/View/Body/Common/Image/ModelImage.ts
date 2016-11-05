@@ -6,4 +6,5 @@ export class ModelImage {
     position: string;
     borderRadius:number;//px
     source:string;
+    opacity:number;
 }
