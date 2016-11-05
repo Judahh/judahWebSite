@@ -10,16 +10,51 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var Utils_1 = require('./../../../../Core/Utils/Utils');
+var Languages_1 = require('./../../../../Core/Languages/Languages');
+var ModelLanguages_1 = require('./../../../../Core/Languages/ModelLanguages');
+var ModelInformation_1 = require('./../../Common/Item/ColorEffect/Font/AnimationEffect/Information/ModelInformation');
+var ServiceJSON_1 = require('./../../../../Core/Services/ServiceJSON');
 var ComponentPageProjects = (function () {
-    function ComponentPageProjects() {
+    function ComponentPageProjects(serviceJSON) {
+        this.serviceJSON = serviceJSON;
     }
-    //constructor(private heroService: HeroService) { }
     ComponentPageProjects.prototype.ngOnInit = function () {
-        //this.heroes=this.heroSubscription.getHeroes();
-        //this.heroSubscription=this.heroService.getHeroes().subscribe(heroes => this.heroes = heroes);
         this.initialization();
     };
     ComponentPageProjects.prototype.initialization = function () {
+        this.arrayModelDivisorBlock = new Array();
+        this.modelLanguages = new ModelLanguages_1.ModelLanguages();
+        this.getLanguageService();
+        this.getInformationService();
+        this.getArrayDivisorBlockService();
+    };
+    ComponentPageProjects.prototype.getLanguageService = function () {
+        var _this = this;
+        var errorMessage = "";
+        this.serviceJSON.getObservable(Languages_1.Languages.currentLanguageNamePath).subscribe(function (items) { return _this.modelLanguages = Languages_1.Languages.getModelLanguages(items); }, function (error) { return errorMessage = error; });
+        if (errorMessage != "") {
+            alert("Error:" + errorMessage);
+        }
+    };
+    ComponentPageProjects.prototype.getInformationService = function () {
+        var _this = this;
+        var errorMessage = "";
+        this.serviceJSON.getObservable('Languages/' + Utils_1.Utils.getFileSelector(Utils_1.Utils.getFileName(__filename))).subscribe(function (items) { return _this.modelProjectsInformation = Languages_1.Languages.getPageLanguage(items, _this.modelLanguages); }, function (error) { return errorMessage = error; });
+        if (errorMessage != "") {
+            alert("Error:" + errorMessage);
+        }
+    };
+    ComponentPageProjects.prototype.getArrayDivisorBlockService = function () {
+        var _this = this;
+        var errorMessage = "";
+        this.serviceJSON.getObservable('ViewLoader/' + Utils_1.Utils.getFileSelector(Utils_1.Utils.getFileName(__filename)) + 'ArrayDivisorBlock').subscribe(function (item) { return _this.getArrayModelDivisorBlock(item); }, function (error) { return errorMessage = error; });
+        if (errorMessage != "") {
+            alert("Error:" + errorMessage);
+        }
+    };
+    ComponentPageProjects.prototype.getArrayModelDivisorBlock = function (arrayModelDivisorBlock) {
+        this.arrayModelDivisorBlock = arrayModelDivisorBlock;
+        this.arrayModelDivisorBlock[0].divisor.arraySubDivisor[0].item.colorEffect.font.animationEffect.arrayInformation.push(new ModelInformation_1.ModelInformation(this.modelProjectsInformation.title));
     };
     ComponentPageProjects.prototype.ngOnDestroy = function () {
         //this.heroSubscription.unsubscribe();
@@ -32,7 +67,7 @@ var ComponentPageProjects = (function () {
             templateUrl: Utils_1.Utils.getFileHTML(Utils_1.Utils.getFileName(__filename)),
             encapsulation: core_1.ViewEncapsulation.None
         }), 
-        __metadata('design:paramtypes', [])
+        __metadata('design:paramtypes', [ServiceJSON_1.ServiceJSON])
     ], ComponentPageProjects);
     return ComponentPageProjects;
 }());

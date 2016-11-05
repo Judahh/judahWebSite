@@ -84,6 +84,13 @@ body{
 a {
   cursor: pointer;
   cursor: hand;
+  color: deepskyblue;
+}
+
+a:visited {
+  cursor: pointer;
+  cursor: hand;
+  color: black;
 }
 
 .checkButton label input {
