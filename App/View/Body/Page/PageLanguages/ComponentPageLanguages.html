@@ -2,17 +2,7 @@
     [modelDivisorBlock]="divisorBlock">
 </divisorBlock>
 
-<div class="checkButton" *ngFor="let languages of filteredArrayModelLanguages" (click)="setLanguage(languages)">
-    <label>
-        <input type="radio" name="language"
-         *ngIf="isChecked(languages)" checked 
-         value="{{languages.language}}">
-         <input type="radio" name="language"
-         *ngIf="!isChecked(languages)"
-         value="{{languages.language}}">
-        <div>
-            <item [modelItem]="getItem(languages)">
-            </item>
-        </div>
-    </label>
-</div>
+<checkButton *ngFor="let checkButton of arrayModelCheckButton" 
+    [modelCheckButton]="checkButton"
+    (click)="setLanguage(checkButton.value)">
+</checkButton>

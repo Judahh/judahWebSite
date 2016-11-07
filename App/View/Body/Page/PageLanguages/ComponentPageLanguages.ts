@@ -14,6 +14,8 @@ import { ModelFont } from './../../Common/Item/ColorEffect/Font/ModelFont';
 import { ModelColorEffect } from './../../Common/Item/ColorEffect/ModelColorEffect';
 import { ModelItem } from './../../Common/Item/ModelItem';
 
+import { ModelCheckButton } from './../../Common/CheckButton/ModelCheckButton';
+
 import { ModelLanguagesInformation } from './ModelLanguagesInformation';
 
 import { ServiceJSON } from './../../../../Core/Services/ServiceJSON';
@@ -30,7 +32,8 @@ export class ComponentPageLanguages implements OnInit {
   arrayModelLanguagesInformation:Array<ModelLanguagesInformation>;
   modelLanguages:ModelLanguages;
   arrayModelLanguages:Array<ModelLanguages>;
-  filteredArrayModelLanguages:Array<ModelLanguages>;
+  //filteredArrayModelLanguages:Array<ModelLanguages>;
+  arrayModelCheckButton:Array<ModelCheckButton>;
   basicItem:ModelItem;
   basicModelInformation:ModelInformation;
 
@@ -45,12 +48,13 @@ export class ComponentPageLanguages implements OnInit {
   initialization(){
     this.arrayModelDivisorBlock=new Array<ModelDivisorBlock>();
     this.arrayModelLanguages=new Array<ModelLanguages>();
-    this.filteredArrayModelLanguages=new Array<ModelLanguages>();
+    //this.filteredArrayModelLanguages=new Array<ModelLanguages>();
     this.arrayModelLanguagesInformation=new Array<ModelLanguagesInformation>();
     this.modelLanguagesInformation=new ModelLanguagesInformation();
     this.modelLanguages=new ModelLanguages();
     this.basicItem=new ModelItem();
     this.basicModelInformation=new ModelInformation("");
+    this.arrayModelCheckButton=new Array<ModelCheckButton>();
 
     this.getHalfModelInformation();
     this.getItemService();
@@ -94,14 +98,16 @@ export class ComponentPageLanguages implements OnInit {
 
 
   getItem(modelLanguages:ModelLanguages){
-    let item = this.basicItem;
+    let item = Object.create(this.basicItem);
     item.colorEffect.font.animationEffect.arrayInformation=[];
     while(this.modelLanguagesInformation==undefined){}
     for(let index:number=0;index<this.modelLanguagesInformation.languages.length;index++){
       if(this.modelLanguagesInformation.languages[index].language==modelLanguages.language){
         var modelInformation:ModelInformation=Object.create(this.basicModelInformation);
         modelInformation.information=this.modelLanguagesInformation.languages[index].value;
+        console.log("Information:"+modelInformation.information);
         item.colorEffect.font.animationEffect.arrayInformation.push(modelInformation);
+        console.log("Information.Size:"+item.colorEffect.font.animationEffect.arrayInformation.length);
         return item;
       }
     }
@@ -109,15 +115,21 @@ export class ComponentPageLanguages implements OnInit {
   }
 
   isChecked(modelLanguages:ModelLanguages){
-    //console.log(modelLanguagesInformation==this.modelLanguagesInformation);
     return (modelLanguages==this.modelLanguages);
   }
 
-  setLanguage(modelLanguages:ModelLanguages){
-    // console.log(arrayModelLanguages.code[0]);
+  // setLanguage(modelLanguages:ModelLanguages){
+  //   var currentLanguage=Languages.currentLanguage;
+  //   Languages.currentLanguage=modelLanguages.code[0];
+  //   if(currentLanguage!=modelLanguages.code[0]){
+  //     location.reload();
+  //   }
+  // }
+
+  setLanguage(languageCode:string){
     var currentLanguage=Languages.currentLanguage;
-    Languages.currentLanguage=modelLanguages.code[0];
-    if(currentLanguage!=modelLanguages.code[0]){
+    Languages.currentLanguage=languageCode;
+    if(currentLanguage!=languageCode){
       location.reload();
     }
   }
@@ -130,18 +142,27 @@ export class ComponentPageLanguages implements OnInit {
   getModelLanguagesInformation(arrayModelLanguagesInformation:Array<ModelLanguagesInformation>){
     this.arrayModelLanguagesInformation=arrayModelLanguagesInformation;
     this.modelLanguagesInformation=Languages.getPageLanguage(arrayModelLanguagesInformation,this.modelLanguages);
-    this.getFilteredArrayModelLanguages();
+    this.getArrayModelCheckButton();
   }
 
-  getFilteredArrayModelLanguages(){
-    this.filteredArrayModelLanguages=new Array<ModelLanguages>();
+  getArrayModelCheckButton(){
+    //this.filteredArrayModelLanguages=new Array<ModelLanguages>();
     for(let index:number=0;index<this.arrayModelLanguagesInformation.length;index++){
       for(let index2:number=0;index2<this.arrayModelLanguages.length;index2++){
         if(this.arrayModelLanguagesInformation[index].language==this.arrayModelLanguages[index2].language){
-          this.filteredArrayModelLanguages.push(this.arrayModelLanguages[index2]);
+          //this.filteredArrayModelLanguages.push(this.arrayModelLanguages[index2]);
+          var modelCheckButton:ModelCheckButton=new ModelCheckButton();
+          modelCheckButton.item=Object.create(this.getItem(this.arrayModelLanguages[index2]));
+          modelCheckButton.checked=this.isChecked(this.arrayModelLanguages[index2]);
+          modelCheckButton.value=this.arrayModelLanguages[index2].code[0];
+          modelCheckButton.name="language";
+          modelCheckButton.radio=true;
+          console.log("value:"+modelCheckButton.value);
+          this.arrayModelCheckButton.push(modelCheckButton);
         }
       }
     }
+
   }
 
   private getInformationService(){

@@ -14,6 +14,7 @@ var Languages_1 = require('./../../../../Core/Languages/Languages');
 var ModelLanguages_1 = require('./../../../../Core/Languages/ModelLanguages');
 var ModelInformation_1 = require('./../../Common/Item/ColorEffect/Font/AnimationEffect/Information/ModelInformation');
 var ModelItem_1 = require('./../../Common/Item/ModelItem');
+var ModelCheckButton_1 = require('./../../Common/CheckButton/ModelCheckButton');
 var ModelLanguagesInformation_1 = require('./ModelLanguagesInformation');
 var ServiceJSON_1 = require('./../../../../Core/Services/ServiceJSON');
 var ComponentPageLanguages = (function () {
@@ -26,12 +27,13 @@ var ComponentPageLanguages = (function () {
     ComponentPageLanguages.prototype.initialization = function () {
         this.arrayModelDivisorBlock = new Array();
         this.arrayModelLanguages = new Array();
-        this.filteredArrayModelLanguages = new Array();
+        //this.filteredArrayModelLanguages=new Array<ModelLanguages>();
         this.arrayModelLanguagesInformation = new Array();
         this.modelLanguagesInformation = new ModelLanguagesInformation_1.ModelLanguagesInformation();
         this.modelLanguages = new ModelLanguages_1.ModelLanguages();
         this.basicItem = new ModelItem_1.ModelItem();
         this.basicModelInformation = new ModelInformation_1.ModelInformation("");
+        this.arrayModelCheckButton = new Array();
         this.getHalfModelInformation();
         this.getItemService();
         this.getLanguageService();
@@ -63,28 +65,35 @@ var ComponentPageLanguages = (function () {
         }
     };
     ComponentPageLanguages.prototype.getItem = function (modelLanguages) {
-        var item = this.basicItem;
+        var item = Object.create(this.basicItem);
         item.colorEffect.font.animationEffect.arrayInformation = [];
         while (this.modelLanguagesInformation == undefined) { }
         for (var index = 0; index < this.modelLanguagesInformation.languages.length; index++) {
             if (this.modelLanguagesInformation.languages[index].language == modelLanguages.language) {
                 var modelInformation = Object.create(this.basicModelInformation);
                 modelInformation.information = this.modelLanguagesInformation.languages[index].value;
+                console.log("Information:" + modelInformation.information);
                 item.colorEffect.font.animationEffect.arrayInformation.push(modelInformation);
+                console.log("Information.Size:" + item.colorEffect.font.animationEffect.arrayInformation.length);
                 return item;
             }
         }
         return item;
     };
     ComponentPageLanguages.prototype.isChecked = function (modelLanguages) {
-        //console.log(modelLanguagesInformation==this.modelLanguagesInformation);
         return (modelLanguages == this.modelLanguages);
     };
-    ComponentPageLanguages.prototype.setLanguage = function (modelLanguages) {
-        // console.log(arrayModelLanguages.code[0]);
+    // setLanguage(modelLanguages:ModelLanguages){
+    //   var currentLanguage=Languages.currentLanguage;
+    //   Languages.currentLanguage=modelLanguages.code[0];
+    //   if(currentLanguage!=modelLanguages.code[0]){
+    //     location.reload();
+    //   }
+    // }
+    ComponentPageLanguages.prototype.setLanguage = function (languageCode) {
         var currentLanguage = Languages_1.Languages.currentLanguage;
-        Languages_1.Languages.currentLanguage = modelLanguages.code[0];
-        if (currentLanguage != modelLanguages.code[0]) {
+        Languages_1.Languages.currentLanguage = languageCode;
+        if (currentLanguage != languageCode) {
             location.reload();
         }
     };
@@ -95,14 +104,22 @@ var ComponentPageLanguages = (function () {
     ComponentPageLanguages.prototype.getModelLanguagesInformation = function (arrayModelLanguagesInformation) {
         this.arrayModelLanguagesInformation = arrayModelLanguagesInformation;
         this.modelLanguagesInformation = Languages_1.Languages.getPageLanguage(arrayModelLanguagesInformation, this.modelLanguages);
-        this.getFilteredArrayModelLanguages();
+        this.getArrayModelCheckButton();
     };
-    ComponentPageLanguages.prototype.getFilteredArrayModelLanguages = function () {
-        this.filteredArrayModelLanguages = new Array();
+    ComponentPageLanguages.prototype.getArrayModelCheckButton = function () {
+        //this.filteredArrayModelLanguages=new Array<ModelLanguages>();
         for (var index = 0; index < this.arrayModelLanguagesInformation.length; index++) {
             for (var index2 = 0; index2 < this.arrayModelLanguages.length; index2++) {
                 if (this.arrayModelLanguagesInformation[index].language == this.arrayModelLanguages[index2].language) {
-                    this.filteredArrayModelLanguages.push(this.arrayModelLanguages[index2]);
+                    //this.filteredArrayModelLanguages.push(this.arrayModelLanguages[index2]);
+                    var modelCheckButton = new ModelCheckButton_1.ModelCheckButton();
+                    modelCheckButton.item = Object.create(this.getItem(this.arrayModelLanguages[index2]));
+                    modelCheckButton.checked = this.isChecked(this.arrayModelLanguages[index2]);
+                    modelCheckButton.value = this.arrayModelLanguages[index2].code[0];
+                    modelCheckButton.name = "language";
+                    modelCheckButton.radio = true;
+                    console.log("value:" + modelCheckButton.value);
+                    this.arrayModelCheckButton.push(modelCheckButton);
                 }
             }
         }
