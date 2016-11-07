@@ -99,6 +99,15 @@ datalist, option{
     font-size: 17px;
 }
 
+input,textarea{
+    font-smooth:always;
+    font-smoothing: antialiased;
+    -o-font-smoothing: antialiased;
+    -ms-font-smoothing: antialiased;
+    -moz-font-smoothing: antialiased;
+    -webkit-font-smoothing: antialiased;
+}
+
 textarea{
     /* background-color: transparent; */
     opacity: 0.6;

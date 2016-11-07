@@ -1,0 +1,32 @@
+<input 
+    *ngIf="modelTextInput.isField()"
+    [style]="style()|safeStyle"
+    name="{{modelTextInput.name}}"
+    placeholder="{{modelTextInput.placeholder}}"
+    value="{{modelTextInput.value}}"/>
+
+
+<input 
+    *ngIf="modelTextInput.isDataList()"
+    [style]="style()|safeStyle"
+    name="{{modelTextInput.name}}"
+    placeholder="{{modelTextInput.placeholder}}"
+    list="{{modelTextInput.getDataListId}}"
+    value="{{modelTextInput.value}}"/>
+
+<datalist 
+    *ngIf="modelTextInput.isDataList()"
+    id="{{modelTextInput.getDataListId}}">
+    <option 
+        *ngFor="let option of modelTextInput.arrayOptions">
+        {{option}}
+    </option>
+</datalist>
+
+<textarea 
+    *ngIf="modelTextInput.isArea()"
+    [style]="style()|safeStyle"
+    name="{{modelTextInput.name}}"
+    placeholder="{{modelTextInput.placeholder}}">
+    {{modelTextInput.value}}
+</textarea>
