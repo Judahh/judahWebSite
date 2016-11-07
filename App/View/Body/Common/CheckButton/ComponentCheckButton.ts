@@ -6,9 +6,7 @@ import { ModelFont } from './../Item/ColorEffect/Font/ModelFont';
 import { ModelColorEffect } from './../Item/ColorEffect/ModelColorEffect';
 import { ModelItem } from './../Item/ModelItem';
 
-import { ModelDivisorBlock } from './ModelDivisorBlock';
-import { ModelSubDivisor } from './Divisor/SubDivisor/ModelSubDivisor';
-import { ModelDivisor } from './Divisor/ModelDivisor';
+import { ModelCheckButton } from './ModelCheckButton';
 import { Utils } from './../../../../Core/Utils/Utils';
 
 @Component({
@@ -18,26 +16,12 @@ import { Utils } from './../../../../Core/Utils/Utils';
   templateUrl: Utils.getFileHTML(Utils.getFileName(__filename)),
   encapsulation: ViewEncapsulation.None
 })
-export class ComponentDivisorBlock implements OnInit {
+export class ComponentCheckButton implements OnInit {
 
-  @Input() modelDivisorBlock: ModelDivisorBlock;
+  @Input() modelCheckButton: ModelCheckButton;
 
   ngOnInit() {
     this.initialization();
-  }
-
-  display(){
-    if(this.modelDivisorBlock.divisor==null||this.modelDivisorBlock.divisor==undefined){
-      return "";
-    }
-    if(this.modelDivisorBlock.divisor.display==null||this.modelDivisorBlock.divisor.display==undefined||this.modelDivisorBlock.divisor.display==""){
-      return "display: flex;";
-    }
-    return "display: "+this.modelDivisorBlock.divisor.display+";";
-  }
-
-  style(){
-    return this.display();
   }
 
   constructor() {}
