@@ -66,13 +66,10 @@ var ComponentPageLanguages = (function () {
     };
     ComponentPageLanguages.prototype.getItem = function (modelLanguages) {
         var item;
-        item = Object.create(this.basicItem);
-        item = Object.assign({}, this.basicItem);
-        //item.colorEffect.font.animationEffect.arrayInformation=[];
-        //while(this.modelLanguagesInformation==undefined){}
+        item = JSON.parse(JSON.stringify(this.basicItem));
         for (var index = 0; index < this.modelLanguagesInformation.languages.length; index++) {
             if (this.modelLanguagesInformation.languages[index].language == modelLanguages.language) {
-                var modelInformation = Object.create(this.basicModelInformation);
+                var modelInformation = JSON.parse(JSON.stringify(this.basicModelInformation));
                 modelInformation.information = this.modelLanguagesInformation.languages[index].value;
                 item.colorEffect.font.animationEffect.arrayInformation.push(modelInformation);
                 return item;
@@ -83,13 +80,6 @@ var ComponentPageLanguages = (function () {
     ComponentPageLanguages.prototype.isChecked = function (modelLanguages) {
         return (modelLanguages == this.modelLanguages);
     };
-    // setLanguage(modelLanguages:ModelLanguages){
-    //   var currentLanguage=Languages.currentLanguage;
-    //   Languages.currentLanguage=modelLanguages.code[0];
-    //   if(currentLanguage!=modelLanguages.code[0]){
-    //     location.reload();
-    //   }
-    // }
     ComponentPageLanguages.prototype.setLanguage = function (languageCode) {
         var currentLanguage = Languages_1.Languages.currentLanguage;
         Languages_1.Languages.currentLanguage = languageCode;

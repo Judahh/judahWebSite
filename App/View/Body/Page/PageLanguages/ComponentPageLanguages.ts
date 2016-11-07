@@ -99,13 +99,10 @@ export class ComponentPageLanguages implements OnInit {
 
   getItem(modelLanguages:ModelLanguages){
     var item:ModelItem;
-    item = Object.create(this.basicItem);
-    item = Object.assign({},this.basicItem);
-    //item.colorEffect.font.animationEffect.arrayInformation=[];
-    //while(this.modelLanguagesInformation==undefined){}
+    item = JSON.parse(JSON.stringify(this.basicItem));
     for(let index:number=0;index<this.modelLanguagesInformation.languages.length;index++){
       if(this.modelLanguagesInformation.languages[index].language==modelLanguages.language){
-        var modelInformation:ModelInformation=Object.create(this.basicModelInformation);
+        var modelInformation:ModelInformation=JSON.parse(JSON.stringify(this.basicModelInformation));
         modelInformation.information=this.modelLanguagesInformation.languages[index].value;
         item.colorEffect.font.animationEffect.arrayInformation.push(modelInformation);
         return item;
@@ -117,14 +114,6 @@ export class ComponentPageLanguages implements OnInit {
   isChecked(modelLanguages:ModelLanguages){
     return (modelLanguages==this.modelLanguages);
   }
-
-  // setLanguage(modelLanguages:ModelLanguages){
-  //   var currentLanguage=Languages.currentLanguage;
-  //   Languages.currentLanguage=modelLanguages.code[0];
-  //   if(currentLanguage!=modelLanguages.code[0]){
-  //     location.reload();
-  //   }
-  // }
 
   setLanguage(languageCode:string){
     var currentLanguage=Languages.currentLanguage;
