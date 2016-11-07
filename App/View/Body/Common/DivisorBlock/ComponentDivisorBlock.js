@@ -8,16 +8,16 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-const core_1 = require('@angular/core');
-const ModelDivisorBlock_1 = require('./ModelDivisorBlock');
-const Utils_1 = require('./../../../../Core/Utils/Utils');
-let ComponentDivisorBlock = class ComponentDivisorBlock {
-    constructor() {
+var core_1 = require('@angular/core');
+var ModelDivisorBlock_1 = require('./ModelDivisorBlock');
+var Utils_1 = require('./../../../../Core/Utils/Utils');
+var ComponentDivisorBlock = (function () {
+    function ComponentDivisorBlock() {
     }
-    ngOnInit() {
+    ComponentDivisorBlock.prototype.ngOnInit = function () {
         this.initialization();
-    }
-    display() {
+    };
+    ComponentDivisorBlock.prototype.display = function () {
         if (this.modelDivisorBlock.divisor == null || this.modelDivisorBlock.divisor == undefined) {
             return "";
         }
@@ -25,28 +25,29 @@ let ComponentDivisorBlock = class ComponentDivisorBlock {
             return "display: flex;";
         }
         return "display: " + this.modelDivisorBlock.divisor.display + ";";
-    }
-    style() {
+    };
+    ComponentDivisorBlock.prototype.style = function () {
         return this.display();
-    }
-    initialization() {
-    }
-    ngOnDestroy() {
-    }
-};
-__decorate([
-    core_1.Input(), 
-    __metadata('design:type', ModelDivisorBlock_1.ModelDivisorBlock)
-], ComponentDivisorBlock.prototype, "modelDivisorBlock", void 0);
-ComponentDivisorBlock = __decorate([
-    core_1.Component({
-        moduleId: module.id,
-        selector: Utils_1.Utils.getFileSelector(Utils_1.Utils.getFileName(__filename)),
-        styleUrls: [Utils_1.Utils.getFileCSS(Utils_1.Utils.getFileName(__filename))],
-        templateUrl: Utils_1.Utils.getFileHTML(Utils_1.Utils.getFileName(__filename)),
-        encapsulation: core_1.ViewEncapsulation.None
-    }), 
-    __metadata('design:paramtypes', [])
-], ComponentDivisorBlock);
+    };
+    ComponentDivisorBlock.prototype.initialization = function () {
+    };
+    ComponentDivisorBlock.prototype.ngOnDestroy = function () {
+    };
+    __decorate([
+        core_1.Input(), 
+        __metadata('design:type', ModelDivisorBlock_1.ModelDivisorBlock)
+    ], ComponentDivisorBlock.prototype, "modelDivisorBlock", void 0);
+    ComponentDivisorBlock = __decorate([
+        core_1.Component({
+            moduleId: module.id,
+            selector: Utils_1.Utils.getFileSelector(Utils_1.Utils.getFileName(__filename)),
+            styleUrls: [Utils_1.Utils.getFileCSS(Utils_1.Utils.getFileName(__filename))],
+            templateUrl: Utils_1.Utils.getFileHTML(Utils_1.Utils.getFileName(__filename)),
+            encapsulation: core_1.ViewEncapsulation.None
+        }), 
+        __metadata('design:paramtypes', [])
+    ], ComponentDivisorBlock);
+    return ComponentDivisorBlock;
+}());
 exports.ComponentDivisorBlock = ComponentDivisorBlock;
 //# sourceMappingURL=ComponentDivisorBlock.js.map

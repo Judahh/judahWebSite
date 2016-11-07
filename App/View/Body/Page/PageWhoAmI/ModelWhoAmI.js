@@ -1,5 +1,8 @@
 "use strict";
-class ModelWhoAmI {
-}
+var ModelWhoAmI = (function () {
+    function ModelWhoAmI() {
+    }
+    return ModelWhoAmI;
+}());
 exports.ModelWhoAmI = ModelWhoAmI;
 //# sourceMappingURL=ModelWhoAmI.js.map

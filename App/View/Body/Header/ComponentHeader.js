@@ -8,40 +8,42 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-const core_1 = require('@angular/core');
-const Languages_1 = require('./../../../Core/Languages/Languages');
-const ModelLanguages_1 = require('./../../../Core/Languages/ModelLanguages');
-const ModelTooltip_1 = require('../Common/Item/ModelTooltip');
-const ServiceJSON_1 = require('./../../../Core/Services/ServiceJSON');
-const Utils_1 = require('./../../../Core/Utils/Utils');
-let ComponentHeader = class ComponentHeader {
-    constructor(serviceJSON) {
+var core_1 = require('@angular/core');
+var Languages_1 = require('./../../../Core/Languages/Languages');
+var ModelLanguages_1 = require('./../../../Core/Languages/ModelLanguages');
+var ModelTooltip_1 = require('../Common/Item/ModelTooltip');
+var ServiceJSON_1 = require('./../../../Core/Services/ServiceJSON');
+var Utils_1 = require('./../../../Core/Utils/Utils');
+var ComponentHeader = (function () {
+    function ComponentHeader(serviceJSON) {
         this.serviceJSON = serviceJSON;
     }
-    ngOnInit() {
+    ComponentHeader.prototype.ngOnInit = function () {
         this.initialization();
-    }
-    initialization() {
+    };
+    ComponentHeader.prototype.initialization = function () {
         this.modelLanguages = new ModelLanguages_1.ModelLanguages();
         this.getLanguageService();
         this.getItems();
-    }
-    getLanguageService() {
+    };
+    ComponentHeader.prototype.getLanguageService = function () {
+        var _this = this;
         var errorMessage = "";
-        this.serviceJSON.getObservable(Languages_1.Languages.currentLanguageNamePath).subscribe(items => this.modelLanguages = Languages_1.Languages.getModelLanguages(items), error => errorMessage = error);
+        this.serviceJSON.getObservable(Languages_1.Languages.currentLanguageNamePath).subscribe(function (items) { return _this.modelLanguages = Languages_1.Languages.getModelLanguages(items); }, function (error) { return errorMessage = error; });
         if (errorMessage != "") {
             alert("Error:" + errorMessage);
         }
-    }
-    getItems() {
+    };
+    ComponentHeader.prototype.getItems = function () {
+        var _this = this;
         this.arrayModelMenuHorizontal = [];
         var errorMessage = "";
-        this.serviceJSON.getObservable('ViewLoader/arrayMenuItems').subscribe(items => this.filter(items), error => errorMessage = error);
+        this.serviceJSON.getObservable('ViewLoader/arrayMenuItems').subscribe(function (items) { return _this.filter(items); }, function (error) { return errorMessage = error; });
         if (errorMessage != "") {
             alert("Error:" + errorMessage);
         }
-    }
-    filter(items) {
+    };
+    ComponentHeader.prototype.filter = function (items) {
         for (var index = 0; index < items.length; index++) {
             if (items[index].name == Utils_1.Utils.getFileSelector(Utils_1.Utils.getFileName(__filename))) {
                 this.position = items[index].position;
@@ -58,28 +60,30 @@ let ComponentHeader = class ComponentHeader {
                 return;
             }
         }
-    }
-    getTooltipService(index, index2) {
+    };
+    ComponentHeader.prototype.getTooltipService = function (index, index2) {
+        var _this = this;
         var errorMessage = "";
-        this.serviceJSON.getObservable("Languages/page" + this.arrayModelMenuHorizontal[index].arrayItem[index2].routerLink).subscribe(items => this.getTooltip(index, index2, items), error => errorMessage = error);
+        this.serviceJSON.getObservable("Languages/page" + this.arrayModelMenuHorizontal[index].arrayItem[index2].routerLink).subscribe(function (items) { return _this.getTooltip(index, index2, items); }, function (error) { return errorMessage = error; });
         if (errorMessage != "") {
             alert("Error:" + errorMessage);
         }
-    }
-    getTooltip(index, index2, items) {
+    };
+    ComponentHeader.prototype.getTooltip = function (index, index2, items) {
         this.arrayModelMenuHorizontal[index].arrayItem[index2].tooltip.value = Languages_1.Languages.getPageLanguage(items, this.modelLanguages).title;
-    }
-};
-ComponentHeader = __decorate([
-    core_1.Component({
-        moduleId: module.id,
-        selector: Utils_1.Utils.getFileSelector(Utils_1.Utils.getFileName(__filename)),
-        styleUrls: [Utils_1.Utils.getFileCSS(Utils_1.Utils.getFileName(__filename))],
-        templateUrl: Utils_1.Utils.getFileHTML(Utils_1.Utils.getFileName(__filename)),
-        encapsulation: core_1.ViewEncapsulation.None,
-        providers: [ServiceJSON_1.ServiceJSON]
-    }), 
-    __metadata('design:paramtypes', [ServiceJSON_1.ServiceJSON])
-], ComponentHeader);
+    };
+    ComponentHeader = __decorate([
+        core_1.Component({
+            moduleId: module.id,
+            selector: Utils_1.Utils.getFileSelector(Utils_1.Utils.getFileName(__filename)),
+            styleUrls: [Utils_1.Utils.getFileCSS(Utils_1.Utils.getFileName(__filename))],
+            templateUrl: Utils_1.Utils.getFileHTML(Utils_1.Utils.getFileName(__filename)),
+            encapsulation: core_1.ViewEncapsulation.None,
+            providers: [ServiceJSON_1.ServiceJSON]
+        }), 
+        __metadata('design:paramtypes', [ServiceJSON_1.ServiceJSON])
+    ], ComponentHeader);
+    return ComponentHeader;
+}());
 exports.ComponentHeader = ComponentHeader;
 //# sourceMappingURL=ComponentHeader.js.map

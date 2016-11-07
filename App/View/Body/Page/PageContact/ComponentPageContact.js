@@ -8,32 +8,33 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-const core_1 = require('@angular/core');
-const Utils_1 = require('./../../../../Core/Utils/Utils');
-let ComponentPageContact = class ComponentPageContact {
-    constructor() {
+var core_1 = require('@angular/core');
+var Utils_1 = require('./../../../../Core/Utils/Utils');
+var ComponentPageContact = (function () {
+    function ComponentPageContact() {
     }
     //constructor(private heroService: HeroService) { }
-    ngOnInit() {
+    ComponentPageContact.prototype.ngOnInit = function () {
         //this.heroes=this.heroSubscription.getHeroes();
         //this.heroSubscription=this.heroService.getHeroes().subscribe(heroes => this.heroes = heroes);
         this.initialization();
-    }
-    initialization() {
-    }
-    ngOnDestroy() {
+    };
+    ComponentPageContact.prototype.initialization = function () {
+    };
+    ComponentPageContact.prototype.ngOnDestroy = function () {
         //this.heroSubscription.unsubscribe();
-    }
-};
-ComponentPageContact = __decorate([
-    core_1.Component({
-        moduleId: module.id,
-        selector: Utils_1.Utils.getFileSelector(Utils_1.Utils.getFileName(__filename)),
-        styleUrls: [Utils_1.Utils.getFileCSS(Utils_1.Utils.getFileName(__filename))],
-        templateUrl: Utils_1.Utils.getFileHTML(Utils_1.Utils.getFileName(__filename)),
-        encapsulation: core_1.ViewEncapsulation.None
-    }), 
-    __metadata('design:paramtypes', [])
-], ComponentPageContact);
+    };
+    ComponentPageContact = __decorate([
+        core_1.Component({
+            moduleId: module.id,
+            selector: Utils_1.Utils.getFileSelector(Utils_1.Utils.getFileName(__filename)),
+            styleUrls: [Utils_1.Utils.getFileCSS(Utils_1.Utils.getFileName(__filename))],
+            templateUrl: Utils_1.Utils.getFileHTML(Utils_1.Utils.getFileName(__filename)),
+            encapsulation: core_1.ViewEncapsulation.None
+        }), 
+        __metadata('design:paramtypes', [])
+    ], ComponentPageContact);
+    return ComponentPageContact;
+}());
 exports.ComponentPageContact = ComponentPageContact;
 //# sourceMappingURL=ComponentPageContact.js.map

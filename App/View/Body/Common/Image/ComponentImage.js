@@ -8,64 +8,65 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-const core_1 = require('@angular/core');
-const ModelImage_1 = require('./ModelImage');
-const Utils_1 = require('./../../../../Core/Utils/Utils');
-let ComponentImage = class ComponentImage {
-    constructor() {
+var core_1 = require('@angular/core');
+var ModelImage_1 = require('./ModelImage');
+var Utils_1 = require('./../../../../Core/Utils/Utils');
+var ComponentImage = (function () {
+    function ComponentImage() {
     }
-    ngOnInit() {
+    ComponentImage.prototype.ngOnInit = function () {
         this.initialization();
-    }
-    initialization() {
-    }
-    boxSizing() {
+    };
+    ComponentImage.prototype.initialization = function () {
+    };
+    ComponentImage.prototype.boxSizing = function () {
         if (this.modelImage.boxSizing == null || this.modelImage.boxSizing == "") {
             return "";
         }
         return "box-sizing: " + this.modelImage.boxSizing + ";";
-    }
-    border() {
+    };
+    ComponentImage.prototype.border = function () {
         if (this.modelImage.color == null || this.modelImage.color == "" || this.modelImage.borderSize == null) {
             return "";
         }
         return "border: solid " + this.modelImage.color + " " + this.modelImage.borderSize + "px;";
-    }
-    borderRadius() {
+    };
+    ComponentImage.prototype.borderRadius = function () {
         if (this.modelImage.borderRadius == null) {
             return "";
         }
         return "border-radius: " + this.modelImage.borderRadius + "px;";
-    }
-    position() {
+    };
+    ComponentImage.prototype.position = function () {
         if (this.modelImage.position == null || this.modelImage.position == "") {
             return "";
         }
         return "position: " + this.modelImage.position + ";";
-    }
-    opacity() {
+    };
+    ComponentImage.prototype.opacity = function () {
         if (this.modelImage.opacity == null || this.modelImage.opacity == undefined) {
             return "";
         }
         return "opacity: " + this.modelImage.opacity + ";";
-    }
-    style() {
+    };
+    ComponentImage.prototype.style = function () {
         return this.boxSizing() + this.border() + this.borderRadius() + this.position() + this.opacity;
-    }
-};
-__decorate([
-    core_1.Input(), 
-    __metadata('design:type', ModelImage_1.ModelImage)
-], ComponentImage.prototype, "modelImage", void 0);
-ComponentImage = __decorate([
-    core_1.Component({
-        moduleId: module.id,
-        selector: Utils_1.Utils.getFileSelector(Utils_1.Utils.getFileName(__filename)),
-        styleUrls: [Utils_1.Utils.getFileCSS(Utils_1.Utils.getFileName(__filename))],
-        templateUrl: Utils_1.Utils.getFileHTML(Utils_1.Utils.getFileName(__filename)),
-        encapsulation: core_1.ViewEncapsulation.None
-    }), 
-    __metadata('design:paramtypes', [])
-], ComponentImage);
+    };
+    __decorate([
+        core_1.Input(), 
+        __metadata('design:type', ModelImage_1.ModelImage)
+    ], ComponentImage.prototype, "modelImage", void 0);
+    ComponentImage = __decorate([
+        core_1.Component({
+            moduleId: module.id,
+            selector: Utils_1.Utils.getFileSelector(Utils_1.Utils.getFileName(__filename)),
+            styleUrls: [Utils_1.Utils.getFileCSS(Utils_1.Utils.getFileName(__filename))],
+            templateUrl: Utils_1.Utils.getFileHTML(Utils_1.Utils.getFileName(__filename)),
+            encapsulation: core_1.ViewEncapsulation.None
+        }), 
+        __metadata('design:paramtypes', [])
+    ], ComponentImage);
+    return ComponentImage;
+}());
 exports.ComponentImage = ComponentImage;
 //# sourceMappingURL=ComponentImage.js.map

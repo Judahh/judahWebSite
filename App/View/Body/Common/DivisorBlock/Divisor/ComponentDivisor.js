@@ -8,39 +8,39 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-const core_1 = require('@angular/core');
-const ModelDivisor_1 = require('./ModelDivisor');
-const Utils_1 = require('./../../../../../Core/Utils/Utils');
-let ComponentDivisor = class ComponentDivisor {
-    constructor() {
+var core_1 = require('@angular/core');
+var ModelDivisor_1 = require('./ModelDivisor');
+var Utils_1 = require('./../../../../../Core/Utils/Utils');
+var ComponentDivisor = (function () {
+    function ComponentDivisor() {
     }
-    ngOnInit() {
+    ComponentDivisor.prototype.ngOnInit = function () {
         this.initialization();
-    }
-    initialization() {
-    }
-    ngOnDestroy() {
+    };
+    ComponentDivisor.prototype.initialization = function () {
+    };
+    ComponentDivisor.prototype.ngOnDestroy = function () {
         //this.heroSubscription.unsubscribe();
-    }
-    opacity() {
+    };
+    ComponentDivisor.prototype.opacity = function () {
         if (this.modelDivisor.opacity == null || this.modelDivisor.opacity == undefined) {
             return "";
         }
         return "opacity: " + this.modelDivisor.opacity + ";";
-    }
-    borderBottom() {
+    };
+    ComponentDivisor.prototype.borderBottom = function () {
         if (this.modelDivisor.color == null || this.modelDivisor.color == "") {
             return "";
         }
         return "border-bottom: solid " + this.modelDivisor.color + ";";
-    }
-    display() {
+    };
+    ComponentDivisor.prototype.display = function () {
         return "display: inherit;";
-    }
-    width() {
+    };
+    ComponentDivisor.prototype.width = function () {
         return "width: inherit;";
-    }
-    subDivisorWidth(index) {
+    };
+    ComponentDivisor.prototype.subDivisorWidth = function (index) {
         if (this.modelDivisor.arraySubDivisor.length == 1 &&
             (this.modelDivisor.arraySubDivisor[0].item != null &&
                 this.modelDivisor.arraySubDivisor[0].item != undefined)) {
@@ -48,29 +48,29 @@ let ComponentDivisor = class ComponentDivisor {
                 return "width: inherit;";
         }
         else {
-            let width = this.modelDivisor.arraySubDivisor[index].width;
+            var width = this.modelDivisor.arraySubDivisor[index].width;
             if (width == null || width == undefined || width == "") {
                 return "";
             }
             return "width: " + width + ";";
         }
-    }
-    subDivisorFloat(index) {
-        let float = this.modelDivisor.arraySubDivisor[index].float;
+    };
+    ComponentDivisor.prototype.subDivisorFloat = function (index) {
+        var float = this.modelDivisor.arraySubDivisor[index].float;
         if (float == null || float == undefined || float == "") {
             return "";
         }
         return "float: " + float + ";";
-    }
-    subDivisorStyle(index) {
+    };
+    ComponentDivisor.prototype.subDivisorStyle = function (index) {
         return this.subDivisorFloat(index) + this.subDivisorWidth(index);
-    }
-    fontPadding() {
+    };
+    ComponentDivisor.prototype.fontPadding = function () {
         if (this.modelDivisor.arrayPadding == null || this.modelDivisor.arrayPadding == undefined) {
             return "";
         }
-        let stringPadding = "";
-        for (let index = 0; index < this.modelDivisor.arrayPadding.length; index++) {
+        var stringPadding = "";
+        for (var index = 0; index < this.modelDivisor.arrayPadding.length; index++) {
             if (index == 0) {
                 stringPadding += "padding:";
             }
@@ -80,30 +80,31 @@ let ComponentDivisor = class ComponentDivisor {
             }
         }
         return stringPadding;
-    }
-    boxSizing() {
+    };
+    ComponentDivisor.prototype.boxSizing = function () {
         return "box-sizing: border-box;";
-    }
-    style() {
+    };
+    ComponentDivisor.prototype.style = function () {
         return this.borderBottom() + this.display() + this.width() + this.boxSizing() + this.opacity();
-    }
-    style2() {
+    };
+    ComponentDivisor.prototype.style2 = function () {
         return this.fontPadding() + this.display() + this.width() + this.boxSizing();
-    }
-};
-__decorate([
-    core_1.Input(), 
-    __metadata('design:type', ModelDivisor_1.ModelDivisor)
-], ComponentDivisor.prototype, "modelDivisor", void 0);
-ComponentDivisor = __decorate([
-    core_1.Component({
-        moduleId: module.id,
-        selector: Utils_1.Utils.getFileSelector(Utils_1.Utils.getFileName(__filename)),
-        styleUrls: [Utils_1.Utils.getFileCSS(Utils_1.Utils.getFileName(__filename))],
-        templateUrl: Utils_1.Utils.getFileHTML(Utils_1.Utils.getFileName(__filename)),
-        encapsulation: core_1.ViewEncapsulation.None
-    }), 
-    __metadata('design:paramtypes', [])
-], ComponentDivisor);
+    };
+    __decorate([
+        core_1.Input(), 
+        __metadata('design:type', ModelDivisor_1.ModelDivisor)
+    ], ComponentDivisor.prototype, "modelDivisor", void 0);
+    ComponentDivisor = __decorate([
+        core_1.Component({
+            moduleId: module.id,
+            selector: Utils_1.Utils.getFileSelector(Utils_1.Utils.getFileName(__filename)),
+            styleUrls: [Utils_1.Utils.getFileCSS(Utils_1.Utils.getFileName(__filename))],
+            templateUrl: Utils_1.Utils.getFileHTML(Utils_1.Utils.getFileName(__filename)),
+            encapsulation: core_1.ViewEncapsulation.None
+        }), 
+        __metadata('design:paramtypes', [])
+    ], ComponentDivisor);
+    return ComponentDivisor;
+}());
 exports.ComponentDivisor = ComponentDivisor;
 //# sourceMappingURL=ComponentDivisor.js.map
