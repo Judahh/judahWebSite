@@ -1,19 +1,180 @@
-<textarea></textarea>
-<input/>
-<label>
-    <select id="SelectIdSalaryType">
-        <option id="OptionIdSalaryType">
-            /h                                            </option>
-        <option id="OptionIdSalaryType">
-            /m                                            </option>
-    </select>
-</label>
-<div class="DivClassComboBoxEditable" autocomplete="off">
-    <input id="InputIdLocationName" name="LocationName" type="text" autocomplete="off" placeholder="Location Name"/>
-    <div class="DivClassDropDownList" style="display: none;">
-        <a>Current Location</a>
-        <a>New Address</a>
-        <a>Ex1</a>
-        <a>Ex2</a>
+<form>
+    <div>
+        <div style="display: inline-block;"><input placeholder="Name"/></div>
+        <div style="display: inline-block;"><input placeholder="Company"/></div>
     </div>
-</div>
+
+    <div>
+        <div style="display: inline-block;"><input placeholder="Email"/></div>
+        <div style="display: inline-block;">
+            <div style="display: inline-block;"><input placeholder="phone"/></div>
+            <label>
+                <select>
+                    <option>
+                        Landline
+                    </option>
+                    <option>
+                        Mobile
+                    </option>
+                </select>
+            </label>
+        </div>
+    </div>
+
+    <div>
+        <div style="display: inline-block;"><input placeholder="Address"/></div>
+    </div>
+
+    <div>
+        <div style="display: inline-block;">
+            <div style="display: inline-block;"><input placeholder="Job Title"/></div>
+            <label>
+                <select>
+                    <option>
+                        Regular
+                    </option>
+                    <option>
+                        Consultant
+                    </option>
+                    <option>
+                        Temporary
+                    </option>
+                </select>
+            </label>
+        </div>
+
+        <div style="display: inline-block;">
+            <div style="display: inline-block;">
+                <input type="text" name="salaryCurrency" list="inputIdSalaryCurrency" placeholder="US$"/>
+                <datalist id="inputIdSalaryCurrency">
+                    <option>
+                        US$
+                    </option>
+                    <option>
+                        R$
+                    </option>
+                </datalist>
+            </div>
+            <div style="display: inline-block;"><input placeholder="Salary"/></div>
+            <div style="display: inline-block;">
+                <label>
+                    <select>
+                        <option>
+                            /h
+                        </option>
+                        <option>
+                            /m
+                        </option>
+                    </select>
+                </label>
+            </div>
+            <div style="display: inline-block;">
+                <div class="checkButton">
+                    <label>
+                        <input type="checkbox" name="Flexible"/>
+                        <div>
+                            Flexible
+                        </div>
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div>
+        Working Hours:
+        <div>
+            <div class="checkButton">
+                <label>
+                    <input type="checkbox" name="Sunday"/>
+                    <div>
+                        S
+                    </div>
+                </label>
+            </div>
+            <div class="checkButton">
+                <label>
+                    <input type="checkbox" name="Monday"/>
+                    <div>
+                        M
+                    </div>
+                </label>
+            </div>
+            <div class="checkButton">
+                <label>
+                    <input type="checkbox" name="Tuesday"/>
+                    <div>
+                        T
+                    </div>
+                </label>
+            </div>
+            <div class="checkButton">
+                <label>
+                    <input type="checkbox" name="Wednesday"/>
+                    <div>
+                        W
+                    </div>
+                </label>
+            </div>
+            <div class="checkButton">
+                <label>
+                    <input type="checkbox" name="Thursday"/>
+                    <div>
+                        T
+                    </div>
+                </label>
+            </div>
+            <div class="checkButton">
+                <label>
+                    <input type="checkbox" name="Friday"/>
+                    <div>
+                        F
+                    </div>
+                </label>
+            </div>
+            <div class="checkButton">
+                <label>
+                    <input type="checkbox" name="Saturday"/>
+                    <div>
+                        S
+                    </div>
+                </label>
+            </div>
+            <div class="checkButton">
+                <label>
+                    <input type="checkbox" name="Flexible"/>
+                    <div>
+                        Flexible
+                    </div>
+                </label>
+            </div>
+        </div>
+        <div>
+            <div style="display: inline-block;"><input placeholder="In"/></div>h
+            <div class="checkButton">
+                <label>
+                    <input type="checkbox" name="Flexible"/>
+                    <div>
+                        Flexible
+                    </div>
+                </label>
+            </div>
+        </div>
+        <div>
+            <div style="display: inline-block;"><input placeholder="Out"/></div>h
+            <div class="checkButton">
+                <label>
+                    <input type="checkbox" name="Flexible"/>
+                    <div>
+                        Flexible
+                    </div>
+                </label>
+            </div>
+        </div>
+    </div>
+
+    <textarea placeholder="Description"></textarea>
+
+    <button>send</button>
+
+</form>

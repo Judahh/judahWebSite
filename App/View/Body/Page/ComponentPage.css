@@ -20,10 +20,6 @@ page{
     text-align: center;
 }
 
-.DivClassTitleTextSize{
-    font-size: 40px;
-}
-
 .DivClassProjectTitleText, .DivClassProjectTitleText2{
     width: 100%;
     vertical-align: bottom;
@@ -95,22 +91,6 @@ page{
     color: white;
 }
 
-.DivClassTextTalkingAboutMe, .DivClassTextThinkDifferent{
-    text-align: justify;
-}
-
-.DivClassTextThinkDifferentTitle {
-    text-align: center;
-}
-
-.DivClassTitleTextSize{
-    font-size: 40px;
-}
-
-.DivClassTableCodeWrap{
-    width: 100%;
-}
-
 .DivClassFullBlock{
     width: 100%;
     display: block;
@@ -132,33 +112,6 @@ page{
     float: left;
 }
 
-.DivClassVideoWrapper {
-    position: relative;
-    padding-top: 75%;
-}
-
-.DivClassVideoWrapper iframe {
-    position: absolute;
-    top: 0;
-    width: 100%;
-    height: 100%;
-}
-
-.DivClassTextWhoAmI{
-}
-
-.DivClassFontMedium{
-    font-size: 40px;
-}
-
-.DivClassFontBig{
-    font-size: 100px;
-}
-
-.DivClassFontBig2{
-    font-size: 500px;
-}
-
 /*Common Size A (sm)*/
 
 .DivClassTextWhoAmISizeSm{
@@ -168,14 +121,6 @@ page{
 /*Common Size A END*/
 
 /*Common Size B (xs)*/
-
-.DivClassFontBig2SizeXS{
-    font-size: 200px;
-}
-
-.DivClassTitleTextSizeSizeXS{
-    font-size: 20px;
-}
 
 .DivClassText,.DivClassTextBasicSizeXS{
     font-size: 15px;
