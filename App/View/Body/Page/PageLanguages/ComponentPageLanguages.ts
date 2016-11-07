@@ -105,8 +105,8 @@ export class ComponentPageLanguages implements OnInit {
       if(this.modelLanguagesInformation.languages[index].language==modelLanguages.language){
         var modelInformation:ModelInformation=Object.create(this.basicModelInformation);
         modelInformation.information=this.modelLanguagesInformation.languages[index].value;
-        console.log("Information:"+modelInformation.information);
         item.colorEffect.font.animationEffect.arrayInformation.push(modelInformation);
+        console.log("Information:"+modelInformation.information);
         console.log("Information.Size:"+item.colorEffect.font.animationEffect.arrayInformation.length);
         return item;
       }
@@ -158,6 +158,7 @@ export class ComponentPageLanguages implements OnInit {
           modelCheckButton.name="language";
           modelCheckButton.radio=true;
           console.log("value:"+modelCheckButton.value);
+          console.log("Information:"+modelCheckButton.item.colorEffect.font.animationEffect.arrayInformation[0].information);
           this.arrayModelCheckButton.push(modelCheckButton);
         }
       }
