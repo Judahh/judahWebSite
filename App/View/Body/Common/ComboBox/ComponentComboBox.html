@@ -1,7 +1,6 @@
-<label>
-    <select>
-        <option *ngFor="let option of modelComboBox.arrayOptions">
-            {{option}}
-        </option>
-    </select>
-</label>
+<select name="modelComboBox.name">
+    <option *ngFor="let option of modelComboBox.arrayOptions"
+        value="{{option}}">
+        {{option}}
+    </option>
+</select>

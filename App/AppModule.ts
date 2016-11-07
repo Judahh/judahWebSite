@@ -34,6 +34,7 @@ import { ComponentItem } from './View/Body/Common/Item/ComponentItem';
 import { ComponentMenuHorizontal } from './View/Body/Common/MenuHorizontal/ComponentMenuHorizontal';
 
 import { ComponentTextInput } from './View/Body/Common/TextInput/ComponentTextInput';
+import { ComponentComboBox } from './View/Body/Common/ComboBox/ComponentComboBox';
 import { ComponentClickButton } from './View/Body/Common/ClickButton/ComponentClickButton';
 import { ComponentCheckButton } from './View/Body/Common/CheckButton/ComponentCheckButton';
 import { ComponentImage } from './View/Body/Common/Image/ComponentImage';
@@ -112,6 +113,7 @@ let config: ResponsiveConfigInterface = {
     ComponentCheckButton,
     ComponentClickButton,
     ComponentTextInput,
+    ComponentComboBox,
     SafeUrlPipe,
     SafeStylePipe
   ],
