@@ -98,16 +98,16 @@ export class ComponentPageLanguages implements OnInit {
 
 
   getItem(modelLanguages:ModelLanguages){
-    let item = Object.create(this.basicItem);
-    item.colorEffect.font.animationEffect.arrayInformation=[];
-    while(this.modelLanguagesInformation==undefined){}
+    var item:ModelItem;
+    item = Object.create(this.basicItem);
+    item = Object.assign({},this.basicItem);
+    //item.colorEffect.font.animationEffect.arrayInformation=[];
+    //while(this.modelLanguagesInformation==undefined){}
     for(let index:number=0;index<this.modelLanguagesInformation.languages.length;index++){
       if(this.modelLanguagesInformation.languages[index].language==modelLanguages.language){
         var modelInformation:ModelInformation=Object.create(this.basicModelInformation);
         modelInformation.information=this.modelLanguagesInformation.languages[index].value;
         item.colorEffect.font.animationEffect.arrayInformation.push(modelInformation);
-        console.log("Information:"+modelInformation.information);
-        console.log("Information.Size:"+item.colorEffect.font.animationEffect.arrayInformation.length);
         return item;
       }
     }
@@ -146,13 +146,11 @@ export class ComponentPageLanguages implements OnInit {
   }
 
   getArrayModelCheckButton(){
-    //this.filteredArrayModelLanguages=new Array<ModelLanguages>();
     for(let index:number=0;index<this.arrayModelLanguagesInformation.length;index++){
       for(let index2:number=0;index2<this.arrayModelLanguages.length;index2++){
         if(this.arrayModelLanguagesInformation[index].language==this.arrayModelLanguages[index2].language){
-          //this.filteredArrayModelLanguages.push(this.arrayModelLanguages[index2]);
           var modelCheckButton:ModelCheckButton=new ModelCheckButton();
-          modelCheckButton.item=Object.create(this.getItem(this.arrayModelLanguages[index2]));
+          modelCheckButton.item=this.getItem(this.arrayModelLanguages[index2]);
           modelCheckButton.checked=this.isChecked(this.arrayModelLanguages[index2]);
           modelCheckButton.value=this.arrayModelLanguages[index2].code[0];
           modelCheckButton.name="language";
@@ -162,6 +160,11 @@ export class ComponentPageLanguages implements OnInit {
           this.arrayModelCheckButton.push(modelCheckButton);
         }
       }
+    }
+    for(let index:number=0;index<this.arrayModelCheckButton.length;index++){
+      var modelCheckButton:ModelCheckButton=this.arrayModelCheckButton[index];
+      console.log("value:"+modelCheckButton.value);
+      console.log("Information:"+modelCheckButton.item.colorEffect.font.animationEffect.arrayInformation[0].information);
     }
 
   }

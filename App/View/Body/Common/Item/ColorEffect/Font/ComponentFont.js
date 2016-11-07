@@ -8,48 +8,48 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var core_1 = require('@angular/core');
-var Utils_1 = require('./../../../../../../Core/Utils/Utils');
-var ModelFont_1 = require('./ModelFont');
-var ComponentFont = (function () {
-    function ComponentFont() {
+const core_1 = require('@angular/core');
+const Utils_1 = require('./../../../../../../Core/Utils/Utils');
+const ModelFont_1 = require('./ModelFont');
+let ComponentFont = class ComponentFont {
+    constructor() {
     }
-    ComponentFont.prototype.ngOnInit = function () {
+    ngOnInit() {
         this.initialization();
-    };
-    ComponentFont.prototype.fontWidth = function () {
+    }
+    fontWidth() {
         if (this.modelFont.width == null || this.modelFont.width == "") {
             return "";
         }
         return "width: " + this.modelFont.width + ";";
-    };
-    ComponentFont.prototype.fontTextIndent = function () {
+    }
+    fontTextIndent() {
         if (this.modelFont.textIndent == null || this.modelFont.textIndent == "") {
             return "";
         }
         return "text-indent: " + this.modelFont.textIndent + ";";
-    };
-    ComponentFont.prototype.fontTextAlign = function () {
+    }
+    fontTextAlign() {
         if (this.modelFont.textAlign == null || this.modelFont.textAlign == "") {
             return "";
         }
         return "text-align: " + this.modelFont.textAlign + ";";
-    };
-    ComponentFont.prototype.fontVerticalAlign = function () {
+    }
+    fontVerticalAlign() {
         if (this.modelFont.verticalAlign == null || this.modelFont.verticalAlign == "") {
             return "";
         }
         return "vertical-align: " + this.modelFont.verticalAlign + ";";
-    };
-    ComponentFont.prototype.fontSize = function () {
+    }
+    fontSize() {
         return "font-size: " + this.modelFont.size + "px;";
-    };
-    ComponentFont.prototype.fontPadding = function () {
+    }
+    fontPadding() {
         if (this.modelFont.arrayPadding == null || this.modelFont.arrayPadding == undefined) {
             return "";
         }
-        var stringPadding = "";
-        for (var index = 0; index < this.modelFont.arrayPadding.length; index++) {
+        let stringPadding = "";
+        for (let index = 0; index < this.modelFont.arrayPadding.length; index++) {
             if (index == 0) {
                 stringPadding += "padding:";
             }
@@ -59,29 +59,28 @@ var ComponentFont = (function () {
             }
         }
         return stringPadding;
-    };
-    ComponentFont.prototype.style = function () {
+    }
+    style() {
         return this.fontSize() + this.fontPadding() +
             this.fontVerticalAlign() + this.fontTextAlign() +
             this.fontTextIndent() + this.fontWidth();
-    };
-    ComponentFont.prototype.initialization = function () {
-    };
-    __decorate([
-        core_1.Input(), 
-        __metadata('design:type', ModelFont_1.ModelFont)
-    ], ComponentFont.prototype, "modelFont", void 0);
-    ComponentFont = __decorate([
-        core_1.Component({
-            moduleId: module.id,
-            selector: Utils_1.Utils.getFileSelector(Utils_1.Utils.getFileName(__filename)),
-            styleUrls: [Utils_1.Utils.getFileCSS(Utils_1.Utils.getFileName(__filename))],
-            templateUrl: Utils_1.Utils.getFileHTML(Utils_1.Utils.getFileName(__filename)),
-            encapsulation: core_1.ViewEncapsulation.None
-        }), 
-        __metadata('design:paramtypes', [])
-    ], ComponentFont);
-    return ComponentFont;
-}());
+    }
+    initialization() {
+    }
+};
+__decorate([
+    core_1.Input(), 
+    __metadata('design:type', ModelFont_1.ModelFont)
+], ComponentFont.prototype, "modelFont", void 0);
+ComponentFont = __decorate([
+    core_1.Component({
+        moduleId: module.id,
+        selector: Utils_1.Utils.getFileSelector(Utils_1.Utils.getFileName(__filename)),
+        styleUrls: [Utils_1.Utils.getFileCSS(Utils_1.Utils.getFileName(__filename))],
+        templateUrl: Utils_1.Utils.getFileHTML(Utils_1.Utils.getFileName(__filename)),
+        encapsulation: core_1.ViewEncapsulation.None
+    }), 
+    __metadata('design:paramtypes', [])
+], ComponentFont);
 exports.ComponentFont = ComponentFont;
 //# sourceMappingURL=ComponentFont.js.map

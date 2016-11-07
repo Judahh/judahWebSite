@@ -8,41 +8,40 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var core_1 = require('@angular/core');
-var Utils_1 = require('./../../../../../../../../Core/Utils/Utils');
-var ModelInformation_1 = require('./ModelInformation');
-var ComponentInformation = (function () {
-    function ComponentInformation() {
+const core_1 = require('@angular/core');
+const Utils_1 = require('./../../../../../../../../Core/Utils/Utils');
+const ModelInformation_1 = require('./ModelInformation');
+let ComponentInformation = class ComponentInformation {
+    constructor() {
     }
-    ComponentInformation.prototype.ngOnInit = function () {
+    ngOnInit() {
         this.initialization();
-    };
-    ComponentInformation.prototype.initialization = function () {
-    };
-    ComponentInformation.prototype.opacity = function () {
+    }
+    initialization() {
+    }
+    opacity() {
         if (this.information.opacity == null || this.information.opacity == undefined) {
             return "";
         }
         return "opacity: " + this.information.opacity + ";";
-    };
-    ComponentInformation.prototype.style = function () {
+    }
+    style() {
         return this.opacity();
-    };
-    __decorate([
-        core_1.Input(), 
-        __metadata('design:type', ModelInformation_1.ModelInformation)
-    ], ComponentInformation.prototype, "information", void 0);
-    ComponentInformation = __decorate([
-        core_1.Component({
-            moduleId: module.id,
-            selector: Utils_1.Utils.getFileSelector(Utils_1.Utils.getFileName(__filename)),
-            styleUrls: [Utils_1.Utils.getFileCSS(Utils_1.Utils.getFileName(__filename))],
-            templateUrl: Utils_1.Utils.getFileHTML(Utils_1.Utils.getFileName(__filename)),
-            encapsulation: core_1.ViewEncapsulation.None
-        }), 
-        __metadata('design:paramtypes', [])
-    ], ComponentInformation);
-    return ComponentInformation;
-}());
+    }
+};
+__decorate([
+    core_1.Input(), 
+    __metadata('design:type', ModelInformation_1.ModelInformation)
+], ComponentInformation.prototype, "information", void 0);
+ComponentInformation = __decorate([
+    core_1.Component({
+        moduleId: module.id,
+        selector: Utils_1.Utils.getFileSelector(Utils_1.Utils.getFileName(__filename)),
+        styleUrls: [Utils_1.Utils.getFileCSS(Utils_1.Utils.getFileName(__filename))],
+        templateUrl: Utils_1.Utils.getFileHTML(Utils_1.Utils.getFileName(__filename)),
+        encapsulation: core_1.ViewEncapsulation.None
+    }), 
+    __metadata('design:paramtypes', [])
+], ComponentInformation);
 exports.ComponentInformation = ComponentInformation;
 //# sourceMappingURL=ComponentInformation.js.map

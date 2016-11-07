@@ -1,8 +1,5 @@
 "use strict";
-var ModelMenuItems = (function () {
-    function ModelMenuItems() {
-    }
-    return ModelMenuItems;
-}());
+class ModelMenuItems {
+}
 exports.ModelMenuItems = ModelMenuItems;
 //# sourceMappingURL=ModelMenuItems.js.map

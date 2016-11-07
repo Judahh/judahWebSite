@@ -1,8 +1,5 @@
 "use strict";
-var ModelDivisorBlock = (function () {
-    function ModelDivisorBlock() {
-    }
-    return ModelDivisorBlock;
-}());
+class ModelDivisorBlock {
+}
 exports.ModelDivisorBlock = ModelDivisorBlock;
 //# sourceMappingURL=ModelDivisorBlock.js.map

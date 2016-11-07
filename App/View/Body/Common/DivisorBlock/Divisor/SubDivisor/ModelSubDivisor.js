@@ -1,8 +1,5 @@
 "use strict";
-var ModelSubDivisor = (function () {
-    function ModelSubDivisor() {
-    }
-    return ModelSubDivisor;
-}());
+class ModelSubDivisor {
+}
 exports.ModelSubDivisor = ModelSubDivisor;
 //# sourceMappingURL=ModelSubDivisor.js.map

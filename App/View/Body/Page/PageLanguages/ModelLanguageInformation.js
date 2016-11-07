@@ -1,8 +1,5 @@
 "use strict";
-var ModelLanguageInformation = (function () {
-    function ModelLanguageInformation() {
-    }
-    return ModelLanguageInformation;
-}());
+class ModelLanguageInformation {
+}
 exports.ModelLanguageInformation = ModelLanguageInformation;
 //# sourceMappingURL=ModelLanguageInformation.js.map

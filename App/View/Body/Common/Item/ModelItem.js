@@ -1,8 +1,5 @@
 "use strict";
-var ModelItem = (function () {
-    function ModelItem() {
-    }
-    return ModelItem;
-}());
+class ModelItem {
+}
 exports.ModelItem = ModelItem;
 //# sourceMappingURL=ModelItem.js.map
