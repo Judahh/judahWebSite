@@ -33,6 +33,7 @@ import { ComponentColorEffect } from './View/Body/Common/Item/ColorEffect/Compon
 import { ComponentItem } from './View/Body/Common/Item/ComponentItem';
 import { ComponentMenuHorizontal } from './View/Body/Common/MenuHorizontal/ComponentMenuHorizontal';
 
+import { ComponentTextInput } from './View/Body/Common/TextInput/ComponentTextInput';
 import { ComponentClickButton } from './View/Body/Common/ClickButton/ComponentClickButton';
 import { ComponentCheckButton } from './View/Body/Common/CheckButton/ComponentCheckButton';
 import { ComponentImage } from './View/Body/Common/Image/ComponentImage';
@@ -110,6 +111,7 @@ let config: ResponsiveConfigInterface = {
     ComponentVideoLink,
     ComponentCheckButton,
     ComponentClickButton,
+    ComponentTextInput,
     SafeUrlPipe,
     SafeStylePipe
   ],
