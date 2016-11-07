@@ -33,6 +33,7 @@ var ComponentFont_1 = require('./View/Body/Common/Item/ColorEffect/Font/Componen
 var ComponentColorEffect_1 = require('./View/Body/Common/Item/ColorEffect/ComponentColorEffect');
 var ComponentItem_1 = require('./View/Body/Common/Item/ComponentItem');
 var ComponentMenuHorizontal_1 = require('./View/Body/Common/MenuHorizontal/ComponentMenuHorizontal');
+var ComponentClickButton_1 = require('./View/Body/Common/ClickButton/ComponentClickButton');
 var ComponentCheckButton_1 = require('./View/Body/Common/CheckButton/ComponentCheckButton');
 var ComponentImage_1 = require('./View/Body/Common/Image/ComponentImage');
 var ComponentVideoLink_1 = require('./View/Body/Common/VideoLink/ComponentVideoLink');
@@ -116,6 +117,7 @@ var AppModule = (function () {
                 ComponentImage_1.ComponentImage,
                 ComponentVideoLink_1.ComponentVideoLink,
                 ComponentCheckButton_1.ComponentCheckButton,
+                ComponentClickButton_1.ComponentClickButton,
                 SafeUrlPipe,
                 SafeStylePipe
             ],

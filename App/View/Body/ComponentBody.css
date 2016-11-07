@@ -148,77 +148,16 @@ input{
     box-sizing: border-box;
 }
 
-.checkButton:active,.checkButton:focus,input:active,input:focus,textarea:active,textarea:focus,select:active,select:focus{
+input:active,input:focus,textarea:active,textarea:focus,select:active,select:focus{
     outline: 0;
     border-radius: 5px;
     background-color: deepskyblue;
-}
-
-.checkButton label input {
-    position:absolute;
-    top:-20px;
-}
-
-.checkButton input:checked + div, .checkButton input:checked + item{
-    background-color:deepskyblue;
-    border-radius: 5px;
-    border: none;
-}
-
-.checkButton input:checked + div:hover, checkButton input:checked + item:hover{
-    /*background-color:deepskyblue;*/
-    /*border-radius: 5px;*/
-    background-color: #cfd8dc;
-    /*border: none;*/
-}
-
-.checkButton {
-  box-sizing: border-box;
-}
-
-.checkButton:hover {
-  background-color: #eee;
 }
 
 ::-moz-selection,::selection {
     outline: 0;
     background: deepskyblue;
     border: none;
-}
-
-button,.checkButton {
-  margin: 0 0.1em;
-  background-color: #eee;
-  /*background-color:white;*/
-  color: black;
-  border:none;
-  /*border:solid 1px black;*/
-  padding: 0px;
-  
-  border-radius: 5px;
-  cursor: pointer;
-  cursor: hand;
-  display: inline-block;
-}
-
-button:active,button:focus{
-    outline: 0;
-    border: none;
-}
-
-button:active{
-    background: deepskyblue;
-}
-
-button:focus{
-    border: 1px solid deepskyblue;
-}
-
-button:disabled {
-  background-color: #eee;
-  color: #aaa;
-  border: none;
-  cursor: auto;
 }
 
 li{
