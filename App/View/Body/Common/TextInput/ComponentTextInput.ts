@@ -19,6 +19,7 @@ import { Utils } from './../../../../Core/Utils/Utils';
 export class ComponentTextInput implements OnInit {
 
   @Input() modelTextInput: ModelTextInput;
+  @Input() list: string;
 
   ngOnInit() {
     this.initialization();
