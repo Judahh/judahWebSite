@@ -17,7 +17,7 @@ import { ModelItem } from './../../Common/Item/ModelItem';
 import { ModelWhoAmI } from './ModelWhoAmI';
 import { ModelWhoAmIInformation } from './ModelWhoAmIInformation';
 
-import { ServiceJSON } from './../../../../Core/Services/ServiceJSON';
+import { ServiceJSON } from './../../../../Core/Services/JSON/ServiceJSON';
 
 @Component({
   moduleId: module.id,

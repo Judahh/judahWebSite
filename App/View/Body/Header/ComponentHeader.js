@@ -12,7 +12,7 @@ var core_1 = require('@angular/core');
 var Languages_1 = require('./../../../Core/Languages/Languages');
 var ModelLanguages_1 = require('./../../../Core/Languages/ModelLanguages');
 var ModelTooltip_1 = require('../Common/Item/ModelTooltip');
-var ServiceJSON_1 = require('./../../../Core/Services/ServiceJSON');
+var ServiceJSON_1 = require('./../../../Core/Services/JSON/ServiceJSON');
 var Utils_1 = require('./../../../Core/Utils/Utils');
 var ComponentHeader = (function () {
     function ComponentHeader(serviceJSON) {

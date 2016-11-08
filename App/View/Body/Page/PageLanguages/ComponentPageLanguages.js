@@ -16,7 +16,7 @@ var ModelInformation_1 = require('./../../Common/Item/ColorEffect/Font/Animation
 var ModelItem_1 = require('./../../Common/Item/ModelItem');
 var ModelCheckButton_1 = require('./../../Common/CheckButton/ModelCheckButton');
 var ModelLanguagesInformation_1 = require('./ModelLanguagesInformation');
-var ServiceJSON_1 = require('./../../../../Core/Services/ServiceJSON');
+var ServiceJSON_1 = require('./../../../../Core/Services/JSON/ServiceJSON');
 var ComponentPageLanguages = (function () {
     function ComponentPageLanguages(serviceJSON) {
         this.serviceJSON = serviceJSON;

@@ -10,7 +10,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var ModelMenuHorizontal_1 = require('./ModelMenuHorizontal');
-var ServiceJSON_1 = require('./../../../../Core/Services/ServiceJSON');
+var ServiceJSON_1 = require('./../../../../Core/Services/JSON/ServiceJSON');
 var Utils_1 = require('./../../../../Core/Utils/Utils');
 var ComponentMenuHorizontal = (function () {
     function ComponentMenuHorizontal(serviceJSON) {

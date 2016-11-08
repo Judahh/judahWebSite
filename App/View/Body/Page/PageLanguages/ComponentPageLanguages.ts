@@ -18,7 +18,7 @@ import { ModelCheckButton } from './../../Common/CheckButton/ModelCheckButton';
 
 import { ModelLanguagesInformation } from './ModelLanguagesInformation';
 
-import { ServiceJSON } from './../../../../Core/Services/ServiceJSON';
+import { ServiceJSON } from './../../../../Core/Services/JSON/ServiceJSON';
 
 @Component({
   moduleId: module.id,

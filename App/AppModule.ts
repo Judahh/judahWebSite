@@ -5,7 +5,7 @@ import { HttpModule, JsonpModule } from '@angular/http';
 
 //import { ResponsiveModule, ResponsiveConfig, ResponsiveConfigInterface } from 'ng2-responsive';
 
-import { ServiceJSON } from './Core/Services/ServiceJSON'
+import { ServiceJSON } from './Core/Services/JSON/ServiceJSON'
 
 //import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
 //import { MenuItemService } from './MenuItemService';

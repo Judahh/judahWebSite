@@ -13,7 +13,7 @@ var platform_browser_1 = require('@angular/platform-browser');
 var forms_1 = require('@angular/forms');
 var http_1 = require('@angular/http');
 //import { ResponsiveModule, ResponsiveConfig, ResponsiveConfigInterface } from 'ng2-responsive';
-var ServiceJSON_1 = require('./Core/Services/ServiceJSON');
+var ServiceJSON_1 = require('./Core/Services/JSON/ServiceJSON');
 //import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
 //import { MenuItemService } from './MenuItemService';
 require('./RXJS/RXJSExtensions');

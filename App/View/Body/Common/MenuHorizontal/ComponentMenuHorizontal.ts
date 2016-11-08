@@ -6,7 +6,7 @@ import {HTMLGenerator} from './../../../../Core/HTMLGenerator/HTMLGenerator';
 import { ModelItem } from './../Item/ModelItem';
 import { ModelMenuHorizontal } from './ModelMenuHorizontal';
 import { ModelMenuItems } from './../ModelMenuItems';
-import { ServiceJSON } from './../../../../Core/Services/ServiceJSON';
+import { ServiceJSON } from './../../../../Core/Services/JSON/ServiceJSON';
 
 import { Utils } from './../../../../Core/Utils/Utils';
 

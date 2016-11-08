@@ -14,7 +14,7 @@ var Languages_1 = require('./../../../../Core/Languages/Languages');
 var ModelLanguages_1 = require('./../../../../Core/Languages/ModelLanguages');
 var ModelInformation_1 = require('./../../Common/Item/ColorEffect/Font/AnimationEffect/Information/ModelInformation');
 var ModelEducationInformation_1 = require('./ModelEducationInformation');
-var ServiceJSON_1 = require('./../../../../Core/Services/ServiceJSON');
+var ServiceJSON_1 = require('./../../../../Core/Services/JSON/ServiceJSON');
 var ComponentPageEducation = (function () {
     function ComponentPageEducation(serviceJSON) {
         this.serviceJSON = serviceJSON;

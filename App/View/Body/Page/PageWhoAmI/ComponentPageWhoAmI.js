@@ -15,7 +15,7 @@ var ModelLanguages_1 = require('./../../../../Core/Languages/ModelLanguages');
 var ModelInformation_1 = require('./../../Common/Item/ColorEffect/Font/AnimationEffect/Information/ModelInformation');
 var ModelWhoAmI_1 = require('./ModelWhoAmI');
 var ModelWhoAmIInformation_1 = require('./ModelWhoAmIInformation');
-var ServiceJSON_1 = require('./../../../../Core/Services/ServiceJSON');
+var ServiceJSON_1 = require('./../../../../Core/Services/JSON/ServiceJSON');
 var ComponentPageWhoAmI = (function () {
     function ComponentPageWhoAmI(serviceJSON) {
         this.serviceJSON = serviceJSON;
