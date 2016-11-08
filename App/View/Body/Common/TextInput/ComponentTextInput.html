@@ -9,7 +9,7 @@
 <input 
     *ngIf="modelTextInput.isDataList()"
     name="{{modelTextInput.name}}"
-    list="{{modelTextInput.getDataListId()}}"
+    [attr.list]="modelTextInput.getDataListId()"
     placeholder="{{modelTextInput.placeholder}}"
     [style]="style()|safeStyle"
     value="{{modelTextInput.value}}"/>

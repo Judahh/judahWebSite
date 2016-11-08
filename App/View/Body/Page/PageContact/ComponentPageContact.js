@@ -12,6 +12,7 @@ var core_1 = require('@angular/core');
 var Utils_1 = require('./../../../../Core/Utils/Utils');
 var ComponentPageContact = (function () {
     function ComponentPageContact() {
+        this.input = "inputIdSalaryCurrency";
     }
     //constructor(private heroService: HeroService) { }
     ComponentPageContact.prototype.ngOnInit = function () {

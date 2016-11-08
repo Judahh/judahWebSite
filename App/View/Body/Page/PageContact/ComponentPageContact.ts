@@ -10,7 +10,7 @@ import { Utils } from './../../../../Core/Utils/Utils';
   encapsulation: ViewEncapsulation.None
 })
 export class ComponentPageContact implements OnInit {
-  heroSubscription:any;
+  input:string="inputIdSalaryCurrency";
 
   page:string;
 
