@@ -32,14 +32,15 @@ System.config({
     // other libraries
     'rxjs':                      'npm:rxjs',
     'angular-in-memory-web-api': 'npm:angular-in-memory-web-api',
+    //'angularfire2': 'node_modules/angularfire2/'
   },
   // packages tells the System loader how to load when no filename and/or no extension
   packages: {
     'App': { main: './Main.js', defaultExtension: 'js' },
-    'api' : { defaultExtension : 'js' },
+    'API' : { defaultExtension : 'js' },
     'rxjs': { defaultExtension: 'js' },
-    'angular-in-memory-web-api': { main: './index.js', defaultExtension: 'js' },
-
+    'angular-in-memory-web-api': { main: './index.js', defaultExtension: 'js' }//,
+    //'angularfire2': { main: 'angularfire2.js', format: 'js', defaultExtension: 'js' }
     // barrels
     // 'app/core':   { main: 'index'},
     // 'app/models': { main: 'index'},

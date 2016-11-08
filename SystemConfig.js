@@ -28,9 +28,9 @@ System.config({
     // packages tells the System loader how to load when no filename and/or no extension
     packages: {
         'App': { main: './Main.js', defaultExtension: 'js' },
-        'api': { defaultExtension: 'js' },
+        'API': { defaultExtension: 'js' },
         'rxjs': { defaultExtension: 'js' },
-        'angular-in-memory-web-api': { main: './index.js', defaultExtension: 'js' },
+        'angular-in-memory-web-api': { main: './index.js', defaultExtension: 'js' } //,
     }
 });
 //# sourceMappingURL=SystemConfig.js.map
