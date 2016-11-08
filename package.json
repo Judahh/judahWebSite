@@ -62,6 +62,8 @@
     "@types/jasmine": "^2.5.37",
     "@types/node": "^6.0.45",
     "angular-in-memory-web-api": "^0.1.14",
+    "angular2-jwt": "^0.1.25",
+    "auth0-lock": "^10.5.1",
     "chai": "^3.4.0",
     "core-js": "^2.4.1",
     "electron": "^1.4.5",
