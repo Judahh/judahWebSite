@@ -15,7 +15,8 @@
     "types": [
       "core-js",
       "jasmine",
-      "node"
+      "node",
+      "requirejs"
     ]
   }
 }

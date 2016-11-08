@@ -30,19 +30,25 @@ System.config({
     '@angular/upgrade': 'npm:@angular/upgrade/bundles/upgrade.umd.js',
 
     // other libraries
-    'rxjs':                      'npm:rxjs',
-    'angular-in-memory-web-api': 'npm:angular-in-memory-web-api',
-    //'angularfire2': 'node_modules/angularfire2/'
+    'rxjs':                       'npm:rxjs',
+    'angular-in-memory-web-api':  'npm:angular-in-memory-web-api',
+    'angularfire2':               'npm:angularfire2/bundles/angularfire2.umd.js',
+    'firebase':                   'npm:firebase'
   },
   // packages tells the System loader how to load when no filename and/or no extension
   packages: {
     'App': { main: './Main.js', defaultExtension: 'js' },
-    'API' : { defaultExtension : 'js' },
+    'api' : { defaultExtension : 'js' },
     'rxjs': { defaultExtension: 'js' },
-    'angular-in-memory-web-api': { main: './index.js', defaultExtension: 'js' }//,
-    //'angularfire2': { main: 'angularfire2.js', format: 'js', defaultExtension: 'js' }
+    'angular-in-memory-web-api': { main: './index.js', defaultExtension: 'js' },
+    'traceur': { main: './traceur.js', defaultExtension: 'js' },
+    'firebase': { main: './firebase.js', defaultExtension: 'js' }
     // barrels
     // 'app/core':   { main: 'index'},
     // 'app/models': { main: 'index'},
+  },
+  typescriptOptions: {
+      tsconfig: true,
+      types: []
   }
 });
