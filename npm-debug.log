@@ -12,10 +12,10 @@
 9 verbose lifecycle judahh@0.1.0~start: PATH: /usr/local/lib/node_modules/npm/bin/node-gyp-bin:/Users/Judah/judahh/node_modules/.bin:/usr/local/Cellar/node/7.0.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
 10 verbose lifecycle judahh@0.1.0~start: CWD: /Users/Judah/judahh
 11 silly lifecycle judahh@0.1.0~start: Args: [ '-c', 'tsc && concurrently "npm run tsc:w" "npm run lite"' ]
-12 silly lifecycle judahh@0.1.0~start: Returned: code: 2  signal: null
+12 silly lifecycle judahh@0.1.0~start: Returned: code: 1  signal: null
 13 info lifecycle judahh@0.1.0~start: Failed to exec start script
 14 verbose stack Error: judahh@0.1.0 start: `tsc && concurrently "npm run tsc:w" "npm run lite"`
-14 verbose stack Exit status 2
+14 verbose stack Exit status 1
 14 verbose stack     at EventEmitter.<anonymous> (/usr/local/lib/node_modules/npm/lib/utils/lifecycle.js:255:16)
 14 verbose stack     at emitTwo (events.js:106:13)
 14 verbose stack     at EventEmitter.emit (events.js:191:7)
@@ -32,7 +32,7 @@
 20 error npm  v3.10.8
 21 error code ELIFECYCLE
 22 error judahh@0.1.0 start: `tsc && concurrently "npm run tsc:w" "npm run lite"`
-22 error Exit status 2
+22 error Exit status 1
 23 error Failed at the judahh@0.1.0 start script 'tsc && concurrently "npm run tsc:w" "npm run lite"'.
 23 error Make sure you have the latest version of node.js and npm installed.
 23 error If you do, this is most likely a problem with the judahh package,

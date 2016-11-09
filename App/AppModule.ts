@@ -4,12 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule, JsonpModule } from '@angular/http';
 import { AngularFireModule, AuthProviders, AuthMethods } from 'angularfire2';
 
-//import { ResponsiveModule, ResponsiveConfig, ResponsiveConfigInterface } from 'ng2-responsive';
-
 import { ServiceJSON } from './Core/Services/JSON/ServiceJSON'
-
-//import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
-//import { MenuItemService } from './MenuItemService';
 
 import './RXJS/RXJSExtensions';
 import { ComponentBody } from './View/Body/ComponentBody';
@@ -40,6 +35,7 @@ import { ComponentClickButton } from './View/Body/Common/ClickButton/ComponentCl
 import { ComponentCheckButton } from './View/Body/Common/CheckButton/ComponentCheckButton';
 import { ComponentImage } from './View/Body/Common/Image/ComponentImage';
 import { ComponentVideoLink } from './View/Body/Common/VideoLink/ComponentVideoLink';
+import { ComponentAuthentication } from './View/Body/Common/Authentication/ComponentAuthentication';
 
 import { ComponentDivisorBlock } from './View/Body/Common/DivisorBlock/ComponentDivisorBlock';
 import { ComponentDivisor } from './View/Body/Common/DivisorBlock/Divisor/ComponentDivisor';
@@ -49,6 +45,8 @@ import { routing, routedComponents } from './Routing';
 
 import { HTMLGenerator } from './Core/HTMLGenerator/HTMLGenerator';
 
+//import { ResponsiveModule, ResponsiveConfig, ResponsiveConfigInterface } from 'ng2-responsive';
+//import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
 
 // const firebaseConfiguration = {
 //     apiKey: "AIzaSyBvG4ULCDY34FnQ-9pKRgFOkuiFkz5u4fE",
@@ -58,12 +56,23 @@ import { HTMLGenerator } from './Core/HTMLGenerator/HTMLGenerator';
 //     messagingSenderId: "167354169967"
 // };
 
-import firebaseConfiguration from './Core/ConfigurationFiles/firebaseConfiguration.json';
-
 // const firebaseAuthConfiguration = {
 //   provider: AuthProviders.Google,
 //   method: AuthMethods.Redirect
 // }
+
+// let config: ResponsiveConfigInterface = {
+//     breakPoints: {
+//             xs: {max: 600},
+//             sm: {min: 0, max: 700},
+//             md: {min: 0, max: 850},
+//             lg: {min: 0, max: 1919},
+//             xl: {min: 0}
+//     },
+//     debounceTime: 100 // allow to debounce checking timer
+// };
+
+import firebaseConfiguration from './Core/ConfigurationFiles/firebaseConfiguration.json';
 
 import firebaseAuthConfiguration from './Core/ConfigurationFiles/firebaseAuthConfiguration.json';
 
@@ -82,18 +91,6 @@ export class SafeStylePipe implements PipeTransform {
     return this.sanitizer.bypassSecurityTrustStyle(style);
   }
 }
-
-/*
-let config: ResponsiveConfigInterface = {
-    breakPoints: {
-            xs: {max: 600},
-            sm: {min: 0, max: 700},
-            md: {min: 0, max: 850},
-            lg: {min: 0, max: 1919},
-            xl: {min: 0}
-    },
-    debounceTime: 100 // allow to debounce checking timer
-};*/
 
 @NgModule({
   imports: [
@@ -134,6 +131,7 @@ let config: ResponsiveConfigInterface = {
     ComponentClickButton,
     ComponentTextInput,
     ComponentComboBox,
+    ComponentAuthentication,
     SafeUrlPipe,
     SafeStylePipe
   ],

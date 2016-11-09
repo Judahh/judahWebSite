@@ -1,7 +1,3 @@
-/*
-  JSON plugin
-*/
-
 define({
   translate: function(load) {
     var json = JSON.parse(load.source);

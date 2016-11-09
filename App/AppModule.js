@@ -13,10 +13,7 @@ const platform_browser_1 = require('@angular/platform-browser');
 const forms_1 = require('@angular/forms');
 const http_1 = require('@angular/http');
 const angularfire2_1 = require('angularfire2');
-//import { ResponsiveModule, ResponsiveConfig, ResponsiveConfigInterface } from 'ng2-responsive';
 const ServiceJSON_1 = require('./Core/Services/JSON/ServiceJSON');
-//import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
-//import { MenuItemService } from './MenuItemService';
 require('./RXJS/RXJSExtensions');
 const ComponentBody_1 = require('./View/Body/ComponentBody');
 const ComponentHeader_1 = require('./View/Body/Header/ComponentHeader');
@@ -40,10 +37,13 @@ const ComponentClickButton_1 = require('./View/Body/Common/ClickButton/Component
 const ComponentCheckButton_1 = require('./View/Body/Common/CheckButton/ComponentCheckButton');
 const ComponentImage_1 = require('./View/Body/Common/Image/ComponentImage');
 const ComponentVideoLink_1 = require('./View/Body/Common/VideoLink/ComponentVideoLink');
+const ComponentAuthentication_1 = require('./View/Body/Common/Authentication/ComponentAuthentication');
 const ComponentDivisorBlock_1 = require('./View/Body/Common/DivisorBlock/ComponentDivisorBlock');
 const ComponentDivisor_1 = require('./View/Body/Common/DivisorBlock/Divisor/ComponentDivisor');
 const ComponentSubDivisor_1 = require('./View/Body/Common/DivisorBlock/Divisor/SubDivisor/ComponentSubDivisor');
 const Routing_1 = require('./Routing');
+//import { ResponsiveModule, ResponsiveConfig, ResponsiveConfigInterface } from 'ng2-responsive';
+//import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
 // const firebaseConfiguration = {
 //     apiKey: "AIzaSyBvG4ULCDY34FnQ-9pKRgFOkuiFkz5u4fE",
 //     authDomain: "bluelion-a2d56.firebaseapp.com",
@@ -51,11 +51,21 @@ const Routing_1 = require('./Routing');
 //     storageBucket: "bluelion-a2d56.appspot.com",
 //     messagingSenderId: "167354169967"
 // };
-const firebaseConfiguration_json_1 = require('./Core/ConfigurationFiles/firebaseConfiguration.json');
 // const firebaseAuthConfiguration = {
 //   provider: AuthProviders.Google,
 //   method: AuthMethods.Redirect
 // }
+// let config: ResponsiveConfigInterface = {
+//     breakPoints: {
+//             xs: {max: 600},
+//             sm: {min: 0, max: 700},
+//             md: {min: 0, max: 850},
+//             lg: {min: 0, max: 1919},
+//             xl: {min: 0}
+//     },
+//     debounceTime: 100 // allow to debounce checking timer
+// };
+const firebaseConfiguration_json_1 = require('./Core/ConfigurationFiles/firebaseConfiguration.json');
 const firebaseAuthConfiguration_json_1 = require('./Core/ConfigurationFiles/firebaseAuthConfiguration.json');
 let SafeUrlPipe = class SafeUrlPipe {
     constructor(sanitizer) {
@@ -83,17 +93,6 @@ SafeStylePipe = __decorate([
     __metadata('design:paramtypes', [platform_browser_1.DomSanitizer])
 ], SafeStylePipe);
 exports.SafeStylePipe = SafeStylePipe;
-/*
-let config: ResponsiveConfigInterface = {
-    breakPoints: {
-            xs: {max: 600},
-            sm: {min: 0, max: 700},
-            md: {min: 0, max: 850},
-            lg: {min: 0, max: 1919},
-            xl: {min: 0}
-    },
-    debounceTime: 100 // allow to debounce checking timer
-};*/
 let AppModule = class AppModule {
 };
 AppModule = __decorate([
@@ -134,6 +133,7 @@ AppModule = __decorate([
             ComponentClickButton_1.ComponentClickButton,
             ComponentTextInput_1.ComponentTextInput,
             ComponentComboBox_1.ComponentComboBox,
+            ComponentAuthentication_1.ComponentAuthentication,
             SafeUrlPipe,
             SafeStylePipe
         ],

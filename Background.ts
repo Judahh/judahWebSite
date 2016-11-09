@@ -1,8 +1,3 @@
-/**
- * Listens for the app launching then creates the window
- *
- * @see http://developer.chrome.com/apps/app.window.html
-*/
 declare var chrome: any;
 
 chrome.app.runtime.onLaunched.addListener(function() {

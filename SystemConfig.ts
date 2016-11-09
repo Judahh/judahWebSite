@@ -1,24 +1,16 @@
-/**
- * System configuration for Angular samples
- * Adjust as necessary for your application needs.
- */
 declare var System: any;
 
 System.config({
   paths: {
-    // paths serve as alias
     'npm:': 'node_modules/',
     'rxjs/add/observable/*' : 'node_modules/rxjs/add/observable/*.js',
     'rxjs/add/operator/*' : 'node_modules/rxjs/add/operator/*.js',
     'rxjs/*' : 'node_modules/rxjs/*.js'
   },
-  // map tells the System loader where to look for things
   map: {
-    // our app is within the app folder
     'App': 'App',
     'Main': 'App/Main.js',
 
-    // angular bundles
     '@angular/core': 'npm:@angular/core/bundles/core.umd.js',
     '@angular/common': 'npm:@angular/common/bundles/common.umd.js',
     '@angular/compiler': 'npm:@angular/compiler/bundles/compiler.umd.js',
@@ -29,25 +21,20 @@ System.config({
     '@angular/forms': 'npm:@angular/forms/bundles/forms.umd.js',
     '@angular/upgrade': 'npm:@angular/upgrade/bundles/upgrade.umd.js',
 
-    // other libraries
     'rxjs':                       'npm:rxjs',
     'angular-in-memory-web-api':  'npm:angular-in-memory-web-api',
-    'angularfire2':               'npm:angularfire2/bundles/angularfire2.umd.js',
+    'angularfire2':               'npm:angularfire2',
     'firebase':                   'npm:firebase',
 
     'json': 'Plugins/json.js'
   },
-  // packages tells the System loader how to load when no filename and/or no extension
   packages: {
     'App': { main: './Main.js', defaultExtension: 'js' },
     'api' : { defaultExtension : 'js' },
     'rxjs': { defaultExtension: 'js' },
     'angular-in-memory-web-api': { main: './index.js', defaultExtension: 'js' },
-    'traceur': { main: './traceur.js', defaultExtension: 'js' },
-    'firebase': { main: './firebase.js', defaultExtension: 'js' }
-    // barrels
-    // 'app/core':   { main: 'index'},
-    // 'app/models': { main: 'index'},
+    'firebase': { main: './firebase.js', defaultExtension: 'js' },
+    'angularfire2': { defaultExtension: 'js', main: './angularfire2.js'}
   },
   typescriptOptions: {
       tsconfig: true,
