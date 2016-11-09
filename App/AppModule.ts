@@ -49,9 +49,21 @@ import { routing, routedComponents } from './Routing';
 
 import { HTMLGenerator } from './Core/HTMLGenerator/HTMLGenerator';
 
-import firebaseConfiguration from 'json!./Core/ConfigurationFiles/firebaseConfiguration.json';
 
-import firebaseAuthConfiguration from 'json!./Core/ConfigurationFiles/firebaseAuthConfiguration.json';
+// const firebaseConfiguration = {
+//     apiKey: "AIzaSyBvG4ULCDY34FnQ-9pKRgFOkuiFkz5u4fE",
+//     authDomain: "bluelion-a2d56.firebaseapp.com",
+//     databaseURL: "https://bluelion-a2d56.firebaseio.com",
+//     storageBucket: "bluelion-a2d56.appspot.com",
+//     messagingSenderId: "167354169967"
+// };
+
+import firebaseConfiguration from './Core/ConfigurationFiles/firebaseConfiguration.json';
+
+const firebaseAuthConfiguration = {
+  provider: AuthProviders.Google,
+  method: AuthMethods.Redirect
+}
 
 @Pipe({ name: 'safeUrl' })
 export class SafeUrlPipe implements PipeTransform {
@@ -87,7 +99,7 @@ let config: ResponsiveConfigInterface = {
     FormsModule,
     routing,
     HttpModule,
-    //AngularFireModule.initializeApp(firebaseConfiguration, firebaseAuthConfiguration),
+    AngularFireModule.initializeApp(firebaseConfiguration, firebaseAuthConfiguration),
     JsonpModule//,
     //ResponsiveModule,
     //InMemoryWebApiModule.forRoot(MenuItemService, { delay: 600 })

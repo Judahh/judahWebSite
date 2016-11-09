@@ -8,23 +8,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var core_1 = require('@angular/core');
-var Utils_1 = require('./../../../../Core/Utils/Utils');
-var Languages_1 = require('./../../../../Core/Languages/Languages');
-var ModelLanguages_1 = require('./../../../../Core/Languages/ModelLanguages');
-var ModelInformation_1 = require('./../../Common/Item/ColorEffect/Font/AnimationEffect/Information/ModelInformation');
-var ModelItem_1 = require('./../../Common/Item/ModelItem');
-var ModelCheckButton_1 = require('./../../Common/CheckButton/ModelCheckButton');
-var ModelLanguagesInformation_1 = require('./ModelLanguagesInformation');
-var ServiceJSON_1 = require('./../../../../Core/Services/JSON/ServiceJSON');
-var ComponentPageLanguages = (function () {
-    function ComponentPageLanguages(serviceJSON) {
+const core_1 = require('@angular/core');
+const Utils_1 = require('./../../../../Core/Utils/Utils');
+const Languages_1 = require('./../../../../Core/Languages/Languages');
+const ModelLanguages_1 = require('./../../../../Core/Languages/ModelLanguages');
+const ModelInformation_1 = require('./../../Common/Item/ColorEffect/Font/AnimationEffect/Information/ModelInformation');
+const ModelItem_1 = require('./../../Common/Item/ModelItem');
+const ModelCheckButton_1 = require('./../../Common/CheckButton/ModelCheckButton');
+const ModelLanguagesInformation_1 = require('./ModelLanguagesInformation');
+const ServiceJSON_1 = require('./../../../../Core/Services/JSON/ServiceJSON');
+let ComponentPageLanguages = class ComponentPageLanguages {
+    constructor(serviceJSON) {
         this.serviceJSON = serviceJSON;
     }
-    ComponentPageLanguages.prototype.ngOnInit = function () {
+    ngOnInit() {
         this.initialization();
-    };
-    ComponentPageLanguages.prototype.initialization = function () {
+    }
+    initialization() {
         this.arrayModelDivisorBlock = new Array();
         this.arrayModelLanguages = new Array();
         //this.filteredArrayModelLanguages=new Array<ModelLanguages>();
@@ -39,35 +39,32 @@ var ComponentPageLanguages = (function () {
         this.getLanguageService();
         this.getInformationService();
         this.getArrayDivisorBlockService();
-    };
-    ComponentPageLanguages.prototype.getHalfModelInformation = function () {
-        var _this = this;
+    }
+    getHalfModelInformation() {
         var errorMessage = "";
-        this.serviceJSON.getObservable('ViewLoader/halfInformation').subscribe(function (item) { return _this.basicModelInformation = item; }, function (error) { return errorMessage = error; });
+        this.serviceJSON.getObservable('ViewLoader/halfInformation').subscribe(item => this.basicModelInformation = item, error => errorMessage = error);
         if (errorMessage != "") {
             alert("Error:" + errorMessage);
         }
-    };
-    ComponentPageLanguages.prototype.getLanguageService = function () {
-        var _this = this;
+    }
+    getLanguageService() {
         var errorMessage = "";
-        this.serviceJSON.getObservable(Languages_1.Languages.currentLanguageNamePath).subscribe(function (items) { return _this.getModelLanguages(items); }, function (error) { return errorMessage = error; });
+        this.serviceJSON.getObservable(Languages_1.Languages.currentLanguageNamePath).subscribe(items => this.getModelLanguages(items), error => errorMessage = error);
         if (errorMessage != "") {
             alert("Error:" + errorMessage);
         }
-    };
-    ComponentPageLanguages.prototype.getItemService = function () {
-        var _this = this;
+    }
+    getItemService() {
         var errorMessage = "";
-        this.serviceJSON.getObservable('ViewLoader/' + Utils_1.Utils.getFileSelector(Utils_1.Utils.getFileName(__filename)) + 'Item').subscribe(function (item) { return _this.basicItem = item; }, function (error) { return errorMessage = error; });
+        this.serviceJSON.getObservable('ViewLoader/' + Utils_1.Utils.getFileSelector(Utils_1.Utils.getFileName(__filename)) + 'Item').subscribe(item => this.basicItem = item, error => errorMessage = error);
         if (errorMessage != "") {
             alert("Error:" + errorMessage);
         }
-    };
-    ComponentPageLanguages.prototype.getItem = function (modelLanguages) {
+    }
+    getItem(modelLanguages) {
         var item;
         item = JSON.parse(JSON.stringify(this.basicItem));
-        for (var index = 0; index < this.modelLanguagesInformation.languages.length; index++) {
+        for (let index = 0; index < this.modelLanguagesInformation.languages.length; index++) {
             if (this.modelLanguagesInformation.languages[index].language == modelLanguages.language) {
                 var modelInformation = JSON.parse(JSON.stringify(this.basicModelInformation));
                 modelInformation.information = this.modelLanguagesInformation.languages[index].value;
@@ -76,29 +73,29 @@ var ComponentPageLanguages = (function () {
             }
         }
         return item;
-    };
-    ComponentPageLanguages.prototype.isChecked = function (modelLanguages) {
+    }
+    isChecked(modelLanguages) {
         return (modelLanguages == this.modelLanguages);
-    };
-    ComponentPageLanguages.prototype.setLanguage = function (languageCode) {
+    }
+    setLanguage(languageCode) {
         var currentLanguage = Languages_1.Languages.currentLanguage;
         Languages_1.Languages.currentLanguage = languageCode;
         if (currentLanguage != languageCode) {
             location.reload();
         }
-    };
-    ComponentPageLanguages.prototype.getModelLanguages = function (arrayModelLanguages) {
+    }
+    getModelLanguages(arrayModelLanguages) {
         this.arrayModelLanguages = arrayModelLanguages;
         this.modelLanguages = Languages_1.Languages.getModelLanguages(this.arrayModelLanguages);
-    };
-    ComponentPageLanguages.prototype.getModelLanguagesInformation = function (arrayModelLanguagesInformation) {
+    }
+    getModelLanguagesInformation(arrayModelLanguagesInformation) {
         this.arrayModelLanguagesInformation = arrayModelLanguagesInformation;
         this.modelLanguagesInformation = Languages_1.Languages.getPageLanguage(arrayModelLanguagesInformation, this.modelLanguages);
         this.getArrayModelCheckButton();
-    };
-    ComponentPageLanguages.prototype.getArrayModelCheckButton = function () {
-        for (var index = 0; index < this.arrayModelLanguagesInformation.length; index++) {
-            for (var index2 = 0; index2 < this.arrayModelLanguages.length; index2++) {
+    }
+    getArrayModelCheckButton() {
+        for (let index = 0; index < this.arrayModelLanguagesInformation.length; index++) {
+            for (let index2 = 0; index2 < this.arrayModelLanguages.length; index2++) {
                 if (this.arrayModelLanguagesInformation[index].language == this.arrayModelLanguages[index2].language) {
                     var modelCheckButton = new ModelCheckButton_1.ModelCheckButton();
                     modelCheckButton.item = this.getItem(this.arrayModelLanguages[index2]);
@@ -112,46 +109,43 @@ var ComponentPageLanguages = (function () {
                 }
             }
         }
-        for (var index = 0; index < this.arrayModelCheckButton.length; index++) {
+        for (let index = 0; index < this.arrayModelCheckButton.length; index++) {
             var modelCheckButton = this.arrayModelCheckButton[index];
             console.log("value:" + modelCheckButton.value);
             console.log("Information:" + modelCheckButton.item.colorEffect.font.animationEffect.arrayInformation[0].information);
         }
-    };
-    ComponentPageLanguages.prototype.getInformationService = function () {
-        var _this = this;
+    }
+    getInformationService() {
         var errorMessage = "";
-        this.serviceJSON.getObservable('Languages/' + Utils_1.Utils.getFileSelector(Utils_1.Utils.getFileName(__filename))).subscribe(function (items) { return _this.getModelLanguagesInformation(items); }, function (error) { return errorMessage = error; });
+        this.serviceJSON.getObservable('Languages/' + Utils_1.Utils.getFileSelector(Utils_1.Utils.getFileName(__filename))).subscribe(items => this.getModelLanguagesInformation(items), error => errorMessage = error);
         if (errorMessage != "") {
             alert("Error:" + errorMessage);
         }
-    };
-    ComponentPageLanguages.prototype.getArrayDivisorBlockService = function () {
-        var _this = this;
+    }
+    getArrayDivisorBlockService() {
         var errorMessage = "";
-        this.serviceJSON.getObservable('ViewLoader/' + Utils_1.Utils.getFileSelector(Utils_1.Utils.getFileName(__filename)) + 'ArrayDivisorBlock').subscribe(function (item) { return _this.getArrayModelDivisorBlock(item); }, function (error) { return errorMessage = error; });
+        this.serviceJSON.getObservable('ViewLoader/' + Utils_1.Utils.getFileSelector(Utils_1.Utils.getFileName(__filename)) + 'ArrayDivisorBlock').subscribe(item => this.getArrayModelDivisorBlock(item), error => errorMessage = error);
         if (errorMessage != "") {
             alert("Error:" + errorMessage);
         }
-    };
-    ComponentPageLanguages.prototype.getArrayModelDivisorBlock = function (arrayModelDivisorBlock) {
+    }
+    getArrayModelDivisorBlock(arrayModelDivisorBlock) {
         this.arrayModelDivisorBlock = arrayModelDivisorBlock;
         this.arrayModelDivisorBlock[0].divisor.arraySubDivisor[0].item.colorEffect.font.animationEffect.arrayInformation.push(new ModelInformation_1.ModelInformation(this.modelLanguagesInformation.title));
-    };
-    ComponentPageLanguages.prototype.ngOnDestroy = function () {
+    }
+    ngOnDestroy() {
         //this.heroSubscription.unsubscribe();
-    };
-    ComponentPageLanguages = __decorate([
-        core_1.Component({
-            moduleId: module.id,
-            selector: Utils_1.Utils.getFileSelector(Utils_1.Utils.getFileName(__filename)),
-            styleUrls: [Utils_1.Utils.getFileCSS(Utils_1.Utils.getFileName(__filename))],
-            templateUrl: Utils_1.Utils.getFileHTML(Utils_1.Utils.getFileName(__filename)),
-            encapsulation: core_1.ViewEncapsulation.None
-        }), 
-        __metadata('design:paramtypes', [ServiceJSON_1.ServiceJSON])
-    ], ComponentPageLanguages);
-    return ComponentPageLanguages;
-}());
+    }
+};
+ComponentPageLanguages = __decorate([
+    core_1.Component({
+        moduleId: module.id,
+        selector: Utils_1.Utils.getFileSelector(Utils_1.Utils.getFileName(__filename)),
+        styleUrls: [Utils_1.Utils.getFileCSS(Utils_1.Utils.getFileName(__filename))],
+        templateUrl: Utils_1.Utils.getFileHTML(Utils_1.Utils.getFileName(__filename)),
+        encapsulation: core_1.ViewEncapsulation.None
+    }), 
+    __metadata('design:paramtypes', [ServiceJSON_1.ServiceJSON])
+], ComponentPageLanguages);
 exports.ComponentPageLanguages = ComponentPageLanguages;
 //# sourceMappingURL=ComponentPageLanguages.js.map

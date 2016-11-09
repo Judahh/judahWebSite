@@ -1,8 +1,5 @@
 "use strict";
-var ModelSkillsInformation = (function () {
-    function ModelSkillsInformation() {
-    }
-    return ModelSkillsInformation;
-}());
+class ModelSkillsInformation {
+}
 exports.ModelSkillsInformation = ModelSkillsInformation;
 //# sourceMappingURL=ModelSkillsInformation.js.map

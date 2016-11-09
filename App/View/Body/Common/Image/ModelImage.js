@@ -1,8 +1,5 @@
 "use strict";
-var ModelImage = (function () {
-    function ModelImage() {
-    }
-    return ModelImage;
-}());
+class ModelImage {
+}
 exports.ModelImage = ModelImage;
 //# sourceMappingURL=ModelImage.js.map

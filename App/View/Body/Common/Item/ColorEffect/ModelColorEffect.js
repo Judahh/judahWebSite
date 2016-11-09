@@ -1,8 +1,5 @@
 "use strict";
-var ModelColorEffect = (function () {
-    function ModelColorEffect() {
-    }
-    return ModelColorEffect;
-}());
+class ModelColorEffect {
+}
 exports.ModelColorEffect = ModelColorEffect;
 //# sourceMappingURL=ModelColorEffect.js.map
