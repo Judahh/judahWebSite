@@ -8,14 +8,14 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-const core_1 = require('@angular/core');
-const Utils_1 = require('./../../../../Core/Utils/Utils');
-const Languages_1 = require('./../../../../Core/Languages/Languages');
-const ModelLanguages_1 = require('./../../../../Core/Languages/ModelLanguages');
-const ModelInformation_1 = require('./../../Common/Item/ColorEffect/Font/AnimationEffect/Information/ModelInformation');
-const ModelWhoAmI_1 = require('./ModelWhoAmI');
-const ModelWhoAmIInformation_1 = require('./ModelWhoAmIInformation');
-const ServiceJSON_1 = require('./../../../../Core/Services/JSON/ServiceJSON');
+const core_1 = require("@angular/core");
+const Utils_1 = require("./../../../../Core/Utils/Utils");
+const Languages_1 = require("./../../../../Core/Languages/Languages");
+const ModelLanguages_1 = require("./../../../../Core/Languages/ModelLanguages");
+const ModelInformation_1 = require("./../../Common/Item/ColorEffect/Font/AnimationEffect/Information/ModelInformation");
+const ModelWhoAmI_1 = require("./ModelWhoAmI");
+const ModelWhoAmIInformation_1 = require("./ModelWhoAmIInformation");
+const ServiceJSON_1 = require("./../../../../Core/Services/JSON/ServiceJSON");
 let ComponentPageWhoAmI = class ComponentPageWhoAmI {
     constructor(serviceJSON) {
         this.serviceJSON = serviceJSON;
@@ -116,8 +116,8 @@ ComponentPageWhoAmI = __decorate([
         styleUrls: [Utils_1.Utils.getFileCSS(Utils_1.Utils.getFileName(__filename))],
         templateUrl: Utils_1.Utils.getFileHTML(Utils_1.Utils.getFileName(__filename)),
         encapsulation: core_1.ViewEncapsulation.None
-    }), 
-    __metadata('design:paramtypes', [ServiceJSON_1.ServiceJSON])
+    }),
+    __metadata("design:paramtypes", [ServiceJSON_1.ServiceJSON])
 ], ComponentPageWhoAmI);
 exports.ComponentPageWhoAmI = ComponentPageWhoAmI;
 //# sourceMappingURL=ComponentPageWhoAmI.js.map

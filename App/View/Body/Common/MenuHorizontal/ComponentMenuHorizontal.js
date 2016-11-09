@@ -8,10 +8,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-const core_1 = require('@angular/core');
-const ModelMenuHorizontal_1 = require('./ModelMenuHorizontal');
-const ServiceJSON_1 = require('./../../../../Core/Services/JSON/ServiceJSON');
-const Utils_1 = require('./../../../../Core/Utils/Utils');
+const core_1 = require("@angular/core");
+const ModelMenuHorizontal_1 = require("./ModelMenuHorizontal");
+const ServiceJSON_1 = require("./../../../../Core/Services/JSON/ServiceJSON");
+const Utils_1 = require("./../../../../Core/Utils/Utils");
 let ComponentMenuHorizontal = class ComponentMenuHorizontal {
     constructor(serviceJSON) {
         this.serviceJSON = serviceJSON;
@@ -23,8 +23,8 @@ let ComponentMenuHorizontal = class ComponentMenuHorizontal {
     }
 };
 __decorate([
-    core_1.Input(), 
-    __metadata('design:type', ModelMenuHorizontal_1.ModelMenuHorizontal)
+    core_1.Input(),
+    __metadata("design:type", ModelMenuHorizontal_1.ModelMenuHorizontal)
 ], ComponentMenuHorizontal.prototype, "modelMenuHorizontal", void 0);
 ComponentMenuHorizontal = __decorate([
     core_1.Component({
@@ -34,8 +34,8 @@ ComponentMenuHorizontal = __decorate([
         templateUrl: Utils_1.Utils.getFileHTML(Utils_1.Utils.getFileName(__filename)),
         encapsulation: core_1.ViewEncapsulation.None,
         providers: [ServiceJSON_1.ServiceJSON]
-    }), 
-    __metadata('design:paramtypes', [ServiceJSON_1.ServiceJSON])
+    }),
+    __metadata("design:paramtypes", [ServiceJSON_1.ServiceJSON])
 ], ComponentMenuHorizontal);
 exports.ComponentMenuHorizontal = ComponentMenuHorizontal;
 //# sourceMappingURL=ComponentMenuHorizontal.js.map

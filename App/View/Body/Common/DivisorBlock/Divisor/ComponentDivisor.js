@@ -8,12 +8,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-const core_1 = require('@angular/core');
-const ModelDivisor_1 = require('./ModelDivisor');
-const Utils_1 = require('./../../../../../Core/Utils/Utils');
+const core_1 = require("@angular/core");
+const ModelDivisor_1 = require("./ModelDivisor");
+const Utils_1 = require("./../../../../../Core/Utils/Utils");
 let ComponentDivisor = class ComponentDivisor {
-    constructor() {
-    }
+    constructor() { }
     ngOnInit() {
         this.initialization();
     }
@@ -92,8 +91,8 @@ let ComponentDivisor = class ComponentDivisor {
     }
 };
 __decorate([
-    core_1.Input(), 
-    __metadata('design:type', ModelDivisor_1.ModelDivisor)
+    core_1.Input(),
+    __metadata("design:type", ModelDivisor_1.ModelDivisor)
 ], ComponentDivisor.prototype, "modelDivisor", void 0);
 ComponentDivisor = __decorate([
     core_1.Component({
@@ -102,8 +101,8 @@ ComponentDivisor = __decorate([
         styleUrls: [Utils_1.Utils.getFileCSS(Utils_1.Utils.getFileName(__filename))],
         templateUrl: Utils_1.Utils.getFileHTML(Utils_1.Utils.getFileName(__filename)),
         encapsulation: core_1.ViewEncapsulation.None
-    }), 
-    __metadata('design:paramtypes', [])
+    }),
+    __metadata("design:paramtypes", [])
 ], ComponentDivisor);
 exports.ComponentDivisor = ComponentDivisor;
 //# sourceMappingURL=ComponentDivisor.js.map

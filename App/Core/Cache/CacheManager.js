@@ -5,6 +5,7 @@ class CacheManager {
         return domStorage;
     }
 }
+exports.CacheManager = CacheManager;
 CacheManager.storage = (function () {
     var uid = new Date;
     var storage;
@@ -17,5 +18,4 @@ CacheManager.storage = (function () {
     }
     catch (exception) { }
 }());
-exports.CacheManager = CacheManager;
 //# sourceMappingURL=CacheManager.js.map

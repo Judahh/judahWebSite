@@ -35,9 +35,6 @@ var tsProject = typescript.createProject(
     noImplicitAny: false,
 });
 
-/**
-* Execute all tests.
-*/
 // gulp.task('compile-TypeScript', function () {
 //     return gulp.src('app/**/*.ts')
 //         .pipe(typescript({

@@ -8,40 +8,40 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-const core_1 = require('@angular/core');
-const platform_browser_1 = require('@angular/platform-browser');
-const forms_1 = require('@angular/forms');
-const http_1 = require('@angular/http');
-const angularfire2_1 = require('angularfire2');
-const ServiceJSON_1 = require('./Core/Services/JSON/ServiceJSON');
-require('./RXJS/RXJSExtensions');
-const ComponentBody_1 = require('./View/Body/ComponentBody');
-const ComponentHeader_1 = require('./View/Body/Header/ComponentHeader');
-const ComponentPage_1 = require('./View/Body/Page/ComponentPage');
-const ComponentPageWhoAmI_1 = require('./View/Body/Page/PageWhoAmI/ComponentPageWhoAmI');
-const ComponentPageEducation_1 = require('./View/Body/Page/PageEducation/ComponentPageEducation');
-const ComponentPageSkills_1 = require('./View/Body/Page/PageSkills/ComponentPageSkills');
-const ComponentPageProjects_1 = require('./View/Body/Page/PageProjects/ComponentPageProjects');
-const ComponentPageContact_1 = require('./View/Body/Page/PageContact/ComponentPageContact');
-const ComponentPageLanguages_1 = require('./View/Body/Page/PageLanguages/ComponentPageLanguages');
-const ComponentFooter_1 = require('./View/Body/Footer/ComponentFooter');
-const ComponentInformation_1 = require('./View/Body/Common/Item/ColorEffect/Font/AnimationEffect/Information/ComponentInformation');
-const ComponentAnimationEffect_1 = require('./View/Body/Common/Item/ColorEffect/Font/AnimationEffect/ComponentAnimationEffect');
-const ComponentFont_1 = require('./View/Body/Common/Item/ColorEffect/Font/ComponentFont');
-const ComponentColorEffect_1 = require('./View/Body/Common/Item/ColorEffect/ComponentColorEffect');
-const ComponentItem_1 = require('./View/Body/Common/Item/ComponentItem');
-const ComponentMenuHorizontal_1 = require('./View/Body/Common/MenuHorizontal/ComponentMenuHorizontal');
-const ComponentTextInput_1 = require('./View/Body/Common/TextInput/ComponentTextInput');
-const ComponentComboBox_1 = require('./View/Body/Common/ComboBox/ComponentComboBox');
-const ComponentClickButton_1 = require('./View/Body/Common/ClickButton/ComponentClickButton');
-const ComponentCheckButton_1 = require('./View/Body/Common/CheckButton/ComponentCheckButton');
-const ComponentImage_1 = require('./View/Body/Common/Image/ComponentImage');
-const ComponentVideoLink_1 = require('./View/Body/Common/VideoLink/ComponentVideoLink');
-const ComponentAuthentication_1 = require('./View/Body/Common/Authentication/ComponentAuthentication');
-const ComponentDivisorBlock_1 = require('./View/Body/Common/DivisorBlock/ComponentDivisorBlock');
-const ComponentDivisor_1 = require('./View/Body/Common/DivisorBlock/Divisor/ComponentDivisor');
-const ComponentSubDivisor_1 = require('./View/Body/Common/DivisorBlock/Divisor/SubDivisor/ComponentSubDivisor');
-const Routing_1 = require('./Routing');
+const core_1 = require("@angular/core");
+const platform_browser_1 = require("@angular/platform-browser");
+const forms_1 = require("@angular/forms");
+const http_1 = require("@angular/http");
+const angularfire2_1 = require("angularfire2");
+const ServiceJSON_1 = require("./Core/Services/JSON/ServiceJSON");
+require("./RXJS/RXJSExtensions");
+const ComponentBody_1 = require("./View/Body/ComponentBody");
+const ComponentHeader_1 = require("./View/Body/Header/ComponentHeader");
+const ComponentPage_1 = require("./View/Body/Page/ComponentPage");
+const ComponentPageWhoAmI_1 = require("./View/Body/Page/PageWhoAmI/ComponentPageWhoAmI");
+const ComponentPageEducation_1 = require("./View/Body/Page/PageEducation/ComponentPageEducation");
+const ComponentPageSkills_1 = require("./View/Body/Page/PageSkills/ComponentPageSkills");
+const ComponentPageProjects_1 = require("./View/Body/Page/PageProjects/ComponentPageProjects");
+const ComponentPageContact_1 = require("./View/Body/Page/PageContact/ComponentPageContact");
+const ComponentPageLanguages_1 = require("./View/Body/Page/PageLanguages/ComponentPageLanguages");
+const ComponentFooter_1 = require("./View/Body/Footer/ComponentFooter");
+const ComponentInformation_1 = require("./View/Body/Common/Item/ColorEffect/Font/AnimationEffect/Information/ComponentInformation");
+const ComponentAnimationEffect_1 = require("./View/Body/Common/Item/ColorEffect/Font/AnimationEffect/ComponentAnimationEffect");
+const ComponentFont_1 = require("./View/Body/Common/Item/ColorEffect/Font/ComponentFont");
+const ComponentColorEffect_1 = require("./View/Body/Common/Item/ColorEffect/ComponentColorEffect");
+const ComponentItem_1 = require("./View/Body/Common/Item/ComponentItem");
+const ComponentMenuHorizontal_1 = require("./View/Body/Common/MenuHorizontal/ComponentMenuHorizontal");
+const ComponentTextInput_1 = require("./View/Body/Common/TextInput/ComponentTextInput");
+const ComponentComboBox_1 = require("./View/Body/Common/ComboBox/ComponentComboBox");
+const ComponentClickButton_1 = require("./View/Body/Common/ClickButton/ComponentClickButton");
+const ComponentCheckButton_1 = require("./View/Body/Common/CheckButton/ComponentCheckButton");
+const ComponentImage_1 = require("./View/Body/Common/Image/ComponentImage");
+const ComponentVideoLink_1 = require("./View/Body/Common/VideoLink/ComponentVideoLink");
+const ComponentAuthentication_1 = require("./View/Body/Common/Authentication/ComponentAuthentication");
+const ComponentDivisorBlock_1 = require("./View/Body/Common/DivisorBlock/ComponentDivisorBlock");
+const ComponentDivisor_1 = require("./View/Body/Common/DivisorBlock/Divisor/ComponentDivisor");
+const ComponentSubDivisor_1 = require("./View/Body/Common/DivisorBlock/Divisor/SubDivisor/ComponentSubDivisor");
+const Routing_1 = require("./Routing");
 //import { ResponsiveModule, ResponsiveConfig, ResponsiveConfigInterface } from 'ng2-responsive';
 //import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
 // const firebaseConfiguration = {
@@ -65,8 +65,8 @@ const Routing_1 = require('./Routing');
 //     },
 //     debounceTime: 100 // allow to debounce checking timer
 // };
-const firebaseConfiguration_json_1 = require('./Core/ConfigurationFiles/firebaseConfiguration.json');
-const firebaseAuthConfiguration_json_1 = require('./Core/ConfigurationFiles/firebaseAuthConfiguration.json');
+const firebaseConfiguration_json_1 = require("./Core/ConfigurationFiles/firebaseConfiguration.json");
+const firebaseAuthConfiguration_json_1 = require("./Core/ConfigurationFiles/firebaseAuthConfiguration.json");
 let SafeUrlPipe = class SafeUrlPipe {
     constructor(sanitizer) {
         this.sanitizer = sanitizer;
@@ -76,8 +76,8 @@ let SafeUrlPipe = class SafeUrlPipe {
     }
 };
 SafeUrlPipe = __decorate([
-    core_1.Pipe({ name: 'safeUrl' }), 
-    __metadata('design:paramtypes', [platform_browser_1.DomSanitizer])
+    core_1.Pipe({ name: 'safeUrl' }),
+    __metadata("design:paramtypes", [platform_browser_1.DomSanitizer])
 ], SafeUrlPipe);
 exports.SafeUrlPipe = SafeUrlPipe;
 let SafeStylePipe = class SafeStylePipe {
@@ -89,8 +89,8 @@ let SafeStylePipe = class SafeStylePipe {
     }
 };
 SafeStylePipe = __decorate([
-    core_1.Pipe({ name: 'safeStyle' }), 
-    __metadata('design:paramtypes', [platform_browser_1.DomSanitizer])
+    core_1.Pipe({ name: 'safeStyle' }),
+    __metadata("design:paramtypes", [platform_browser_1.DomSanitizer])
 ], SafeStylePipe);
 exports.SafeStylePipe = SafeStylePipe;
 let AppModule = class AppModule {
@@ -141,8 +141,8 @@ AppModule = __decorate([
             ServiceJSON_1.ServiceJSON //,
         ],
         bootstrap: [ComponentBody_1.ComponentBody]
-    }), 
-    __metadata('design:paramtypes', [])
+    }),
+    __metadata("design:paramtypes", [])
 ], AppModule);
 exports.AppModule = AppModule;
 //# sourceMappingURL=AppModule.js.map

@@ -8,12 +8,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-const core_1 = require('@angular/core');
-const Utils_1 = require('./../../../../../../Core/Utils/Utils');
-const ModelFont_1 = require('./ModelFont');
+const core_1 = require("@angular/core");
+const Utils_1 = require("./../../../../../../Core/Utils/Utils");
+const ModelFont_1 = require("./ModelFont");
 let ComponentFont = class ComponentFont {
-    constructor() {
-    }
+    constructor() { }
     ngOnInit() {
         this.initialization();
     }
@@ -69,8 +68,8 @@ let ComponentFont = class ComponentFont {
     }
 };
 __decorate([
-    core_1.Input(), 
-    __metadata('design:type', ModelFont_1.ModelFont)
+    core_1.Input(),
+    __metadata("design:type", ModelFont_1.ModelFont)
 ], ComponentFont.prototype, "modelFont", void 0);
 ComponentFont = __decorate([
     core_1.Component({
@@ -79,8 +78,8 @@ ComponentFont = __decorate([
         styleUrls: [Utils_1.Utils.getFileCSS(Utils_1.Utils.getFileName(__filename))],
         templateUrl: Utils_1.Utils.getFileHTML(Utils_1.Utils.getFileName(__filename)),
         encapsulation: core_1.ViewEncapsulation.None
-    }), 
-    __metadata('design:paramtypes', [])
+    }),
+    __metadata("design:paramtypes", [])
 ], ComponentFont);
 exports.ComponentFont = ComponentFont;
 //# sourceMappingURL=ComponentFont.js.map

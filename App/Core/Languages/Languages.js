@@ -1,6 +1,6 @@
 "use strict";
-const CacheManager_1 = require('../Cache/CacheManager');
-const Utils_1 = require('../Utils/Utils');
+const CacheManager_1 = require("../Cache/CacheManager");
+const Utils_1 = require("../Utils/Utils");
 class Languages {
     static get currentLanguageNamePath() {
         return Utils_1.Utils.getFileName(__filename) + '/' + Utils_1.Utils.getFileSelector(Utils_1.Utils.getFileName(__filename));

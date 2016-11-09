@@ -8,12 +8,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-const core_1 = require('@angular/core');
-const ModelVideoLink_1 = require('./ModelVideoLink');
-const Utils_1 = require('./../../../../Core/Utils/Utils');
+const core_1 = require("@angular/core");
+const ModelVideoLink_1 = require("./ModelVideoLink");
+const Utils_1 = require("./../../../../Core/Utils/Utils");
 let ComponentVideoLink = class ComponentVideoLink {
-    constructor() {
-    }
+    constructor() { }
     ngOnInit() {
         this.initialization();
     }
@@ -54,8 +53,8 @@ let ComponentVideoLink = class ComponentVideoLink {
     }
 };
 __decorate([
-    core_1.Input(), 
-    __metadata('design:type', ModelVideoLink_1.ModelVideoLink)
+    core_1.Input(),
+    __metadata("design:type", ModelVideoLink_1.ModelVideoLink)
 ], ComponentVideoLink.prototype, "modelVideoLink", void 0);
 ComponentVideoLink = __decorate([
     core_1.Component({
@@ -64,8 +63,8 @@ ComponentVideoLink = __decorate([
         styleUrls: [Utils_1.Utils.getFileCSS(Utils_1.Utils.getFileName(__filename))],
         templateUrl: Utils_1.Utils.getFileHTML(Utils_1.Utils.getFileName(__filename)),
         encapsulation: core_1.ViewEncapsulation.None
-    }), 
-    __metadata('design:paramtypes', [])
+    }),
+    __metadata("design:paramtypes", [])
 ], ComponentVideoLink);
 exports.ComponentVideoLink = ComponentVideoLink;
 //# sourceMappingURL=ComponentVideoLink.js.map

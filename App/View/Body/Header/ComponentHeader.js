@@ -8,12 +8,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-const core_1 = require('@angular/core');
-const Languages_1 = require('./../../../Core/Languages/Languages');
-const ModelLanguages_1 = require('./../../../Core/Languages/ModelLanguages');
-const ModelTooltip_1 = require('../Common/Item/ModelTooltip');
-const ServiceJSON_1 = require('./../../../Core/Services/JSON/ServiceJSON');
-const Utils_1 = require('./../../../Core/Utils/Utils');
+const core_1 = require("@angular/core");
+const Languages_1 = require("./../../../Core/Languages/Languages");
+const ModelLanguages_1 = require("./../../../Core/Languages/ModelLanguages");
+const ModelTooltip_1 = require("../Common/Item/ModelTooltip");
+const ServiceJSON_1 = require("./../../../Core/Services/JSON/ServiceJSON");
+const Utils_1 = require("./../../../Core/Utils/Utils");
 let ComponentHeader = class ComponentHeader {
     constructor(serviceJSON) {
         this.serviceJSON = serviceJSON;
@@ -78,8 +78,8 @@ ComponentHeader = __decorate([
         templateUrl: Utils_1.Utils.getFileHTML(Utils_1.Utils.getFileName(__filename)),
         encapsulation: core_1.ViewEncapsulation.None,
         providers: [ServiceJSON_1.ServiceJSON]
-    }), 
-    __metadata('design:paramtypes', [ServiceJSON_1.ServiceJSON])
+    }),
+    __metadata("design:paramtypes", [ServiceJSON_1.ServiceJSON])
 ], ComponentHeader);
 exports.ComponentHeader = ComponentHeader;
 //# sourceMappingURL=ComponentHeader.js.map
