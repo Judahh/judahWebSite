@@ -60,10 +60,12 @@ import { HTMLGenerator } from './Core/HTMLGenerator/HTMLGenerator';
 
 import firebaseConfiguration from './Core/ConfigurationFiles/firebaseConfiguration.json';
 
-const firebaseAuthConfiguration = {
-  provider: AuthProviders.Google,
-  method: AuthMethods.Redirect
-}
+// const firebaseAuthConfiguration = {
+//   provider: AuthProviders.Google,
+//   method: AuthMethods.Redirect
+// }
+
+import firebaseAuthConfiguration from './Core/ConfigurationFiles/firebaseAuthConfiguration.json';
 
 @Pipe({ name: 'safeUrl' })
 export class SafeUrlPipe implements PipeTransform {

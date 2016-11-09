@@ -52,10 +52,11 @@ const Routing_1 = require('./Routing');
 //     messagingSenderId: "167354169967"
 // };
 const firebaseConfiguration_json_1 = require('./Core/ConfigurationFiles/firebaseConfiguration.json');
-const firebaseAuthConfiguration = {
-    provider: angularfire2_1.AuthProviders.Google,
-    method: angularfire2_1.AuthMethods.Redirect
-};
+// const firebaseAuthConfiguration = {
+//   provider: AuthProviders.Google,
+//   method: AuthMethods.Redirect
+// }
+const firebaseAuthConfiguration_json_1 = require('./Core/ConfigurationFiles/firebaseAuthConfiguration.json');
 let SafeUrlPipe = class SafeUrlPipe {
     constructor(sanitizer) {
         this.sanitizer = sanitizer;
@@ -102,7 +103,7 @@ AppModule = __decorate([
             forms_1.FormsModule,
             Routing_1.routing,
             http_1.HttpModule,
-            angularfire2_1.AngularFireModule.initializeApp(firebaseConfiguration_json_1.default, firebaseAuthConfiguration),
+            angularfire2_1.AngularFireModule.initializeApp(firebaseConfiguration_json_1.default, firebaseAuthConfiguration_json_1.default),
             http_1.JsonpModule //,
         ],
         //schemas:
