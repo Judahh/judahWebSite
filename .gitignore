@@ -2,7 +2,7 @@ typings
 app/**/*.js
 app/**/*.map
 node_modules
-!/node_modules/@types/declaration/*
+!node_modules/@types/declaration/*
 jspm_packages
 bower_components
 platforms
