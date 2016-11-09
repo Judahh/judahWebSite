@@ -49,21 +49,9 @@ import { routing, routedComponents } from './Routing';
 
 import { HTMLGenerator } from './Core/HTMLGenerator/HTMLGenerator';
 
-const firebaseConfiguration = {
-    apiKey: "AIzaSyBvG4ULCDY34FnQ-9pKRgFOkuiFkz5u4fE",
-    authDomain: "bluelion-a2d56.firebaseapp.com",
-    databaseURL: "https://bluelion-a2d56.firebaseio.com",
-    storageBucket: "bluelion-a2d56.appspot.com",
-    messagingSenderId: "167354169967"
-  };
+import firebaseConfiguration from 'json!./Core/ConfigurationFiles/firebaseConfiguration.json';
 
-
-//require('json!./Core/ConfigurationFiles/firebaseConfiguration.json');
-
-const firebaseAuthConfiguration = {
-  provider: AuthProviders.Google,
-  method: AuthMethods.Redirect
-}
+import firebaseAuthConfiguration from 'json!./Core/ConfigurationFiles/firebaseAuthConfiguration.json';
 
 @Pipe({ name: 'safeUrl' })
 export class SafeUrlPipe implements PipeTransform {

@@ -12,7 +12,6 @@ var core_1 = require('@angular/core');
 var platform_browser_1 = require('@angular/platform-browser');
 var forms_1 = require('@angular/forms');
 var http_1 = require('@angular/http');
-var angularfire2_1 = require('angularfire2');
 //import { ResponsiveModule, ResponsiveConfig, ResponsiveConfigInterface } from 'ng2-responsive';
 var ServiceJSON_1 = require('./Core/Services/JSON/ServiceJSON');
 //import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
@@ -44,18 +43,6 @@ var ComponentDivisorBlock_1 = require('./View/Body/Common/DivisorBlock/Component
 var ComponentDivisor_1 = require('./View/Body/Common/DivisorBlock/Divisor/ComponentDivisor');
 var ComponentSubDivisor_1 = require('./View/Body/Common/DivisorBlock/Divisor/SubDivisor/ComponentSubDivisor');
 var Routing_1 = require('./Routing');
-var firebaseConfiguration = {
-    apiKey: "AIzaSyBvG4ULCDY34FnQ-9pKRgFOkuiFkz5u4fE",
-    authDomain: "bluelion-a2d56.firebaseapp.com",
-    databaseURL: "https://bluelion-a2d56.firebaseio.com",
-    storageBucket: "bluelion-a2d56.appspot.com",
-    messagingSenderId: "167354169967"
-};
-//require('json!./Core/ConfigurationFiles/firebaseConfiguration.json');
-var firebaseAuthConfiguration = {
-    provider: angularfire2_1.AuthProviders.Google,
-    method: angularfire2_1.AuthMethods.Redirect
-};
 var SafeUrlPipe = (function () {
     function SafeUrlPipe(sanitizer) {
         this.sanitizer = sanitizer;
