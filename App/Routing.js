@@ -1,11 +1,11 @@
 "use strict";
 const router_1 = require("@angular/router");
-const ComponentPageWhoAmI_1 = require("./view/body/Page/PageWhoAmI/ComponentPageWhoAmI");
-const ComponentPageEducation_1 = require("./view/body/Page/PageEducation/ComponentPageEducation");
-const ComponentPageSkills_1 = require("./view/body/Page/PageSkills/ComponentPageSkills");
-const ComponentPageProjects_1 = require("./view/body/Page/PageProjects/ComponentPageProjects");
-const ComponentPageContact_1 = require("./view/body/Page/PageContact/ComponentPageContact");
-const ComponentPageLanguages_1 = require("./view/body/Page/PageLanguages/ComponentPageLanguages");
+const ComponentPageWhoAmI_1 = require("./view/body/page/PageWhoAmI/ComponentPageWhoAmI");
+const ComponentPageEducation_1 = require("./view/body/page/pageEducation/ComponentPageEducation");
+const ComponentPageSkills_1 = require("./view/body/page/pageSkills/ComponentPageSkills");
+const ComponentPageProjects_1 = require("./view/body/page/pageProjects/ComponentPageProjects");
+const ComponentPageContact_1 = require("./view/body/page/pageContact/ComponentPageContact");
+const ComponentPageLanguages_1 = require("./view/body/page/pageLanguages/ComponentPageLanguages");
 const appRoutes = [
     {
         path: 'WhoAmI',

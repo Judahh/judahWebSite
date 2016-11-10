@@ -9,18 +9,18 @@ import { ServiceJSON } from './Core/Services/JSON/ServiceJSON'
 import './RXJS/RXJSExtensions';
 import { ComponentBody } from './view/body/ComponentBody';
 
-import { ComponentHeader } from './view/body/Header/ComponentHeader';
+import { ComponentHeader } from './view/body/header/ComponentHeader';
 
-import { ComponentPage } from './view/body/Page/ComponentPage';
+import { ComponentPage } from './view/body/page/ComponentPage';
 
-import { ComponentPageWhoAmI } from './view/body/Page/PageWhoAmI/ComponentPageWhoAmI';
-import { ComponentPageEducation } from './view/body/Page/PageEducation/ComponentPageEducation';
-import { ComponentPageSkills } from './view/body/Page/PageSkills/ComponentPageSkills';
-import { ComponentPageProjects } from './view/body/Page/PageProjects/ComponentPageProjects';
-import { ComponentPageContact } from './view/body/Page/PageContact/ComponentPageContact';
-import { ComponentPageLanguages } from './view/body/Page/PageLanguages/ComponentPageLanguages';
+import { ComponentPageWhoAmI } from './view/body/page/PageWhoAmI/ComponentPageWhoAmI';
+import { ComponentPageEducation } from './view/body/page/pageEducation/ComponentPageEducation';
+import { ComponentPageSkills } from './view/body/page/pageSkills/ComponentPageSkills';
+import { ComponentPageProjects } from './view/body/page/pageProjects/ComponentPageProjects';
+import { ComponentPageContact } from './view/body/page/pageContact/ComponentPageContact';
+import { ComponentPageLanguages } from './view/body/page/pageLanguages/ComponentPageLanguages';
 
-import { ComponentFooter } from './view/body/Footer/ComponentFooter';
+import { ComponentFooter } from './view/body/footer/ComponentFooter';
 
 import { ComponentInformation } from './view/body/common/item/colorEffect/font/animationEffect/information/ComponentInformation';
 import { ComponentAnimationEffect } from './view/body/common/item/colorEffect/font/animationEffect/ComponentAnimationEffect';
