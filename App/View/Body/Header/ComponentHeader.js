@@ -12,7 +12,7 @@ const core_1 = require("@angular/core");
 const Languages_1 = require("./../../../core/languages/Languages");
 const ModelLanguages_1 = require("./../../../core/languages/ModelLanguages");
 const ModelTooltip_1 = require("../common/item/ModelTooltip");
-const ServiceJSON_1 = require("./../../../core/services/JSON/ServiceJSON");
+const ServiceJSON_1 = require("./../../../core/services/jSON/ServiceJSON");
 const Utils_1 = require("./../../../core/Utils/Utils");
 let ComponentHeader = class ComponentHeader {
     constructor(serviceJSON) {

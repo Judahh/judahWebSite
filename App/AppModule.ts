@@ -4,7 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule, JsonpModule } from '@angular/http';
 // import { AngularFireModule, AuthProviders, AuthMethods } from 'angularfire2';
 
-import { ServiceJSON } from './core/services/JSON/ServiceJSON'
+import { ServiceJSON } from './core/services/jSON/ServiceJSON'
 
 import './rXJS/RXJSExtensions';
 import { ComponentBody } from './view/body/ComponentBody';

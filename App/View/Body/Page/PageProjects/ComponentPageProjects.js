@@ -13,7 +13,7 @@ const Utils_1 = require("./../../../../core/Utils/Utils");
 const Languages_1 = require("./../../../../core/languages/Languages");
 const ModelLanguages_1 = require("./../../../../core/languages/ModelLanguages");
 const ModelInformation_1 = require("./../../common/item/colorEffect/font/animationEffect/information/ModelInformation");
-const ServiceJSON_1 = require("./../../../../core/services/JSON/ServiceJSON");
+const ServiceJSON_1 = require("./../../../../core/services/jSON/ServiceJSON");
 let ComponentPageProjects = class ComponentPageProjects {
     constructor(serviceJSON) {
         this.serviceJSON = serviceJSON;

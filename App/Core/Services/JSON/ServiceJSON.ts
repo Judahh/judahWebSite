@@ -5,7 +5,7 @@ import { Observable }     from 'rxjs/Observable';
 
 @Injectable()
 export class ServiceJSON {
-  private URL = '/API/JSON/';
+  private URL = '/API/jSON/';
   
   constructor(private http: Http) { }
 

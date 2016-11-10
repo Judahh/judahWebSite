@@ -13,7 +13,7 @@ const platform_browser_1 = require("@angular/platform-browser");
 const forms_1 = require("@angular/forms");
 const http_1 = require("@angular/http");
 // import { AngularFireModule, AuthProviders, AuthMethods } from 'angularfire2';
-const ServiceJSON_1 = require("./core/services/JSON/ServiceJSON");
+const ServiceJSON_1 = require("./core/services/jSON/ServiceJSON");
 require("./rXJS/RXJSExtensions");
 const ComponentBody_1 = require("./view/body/ComponentBody");
 const ComponentHeader_1 = require("./view/body/header/ComponentHeader");

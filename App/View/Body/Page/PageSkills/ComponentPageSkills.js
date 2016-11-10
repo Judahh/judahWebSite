@@ -14,7 +14,7 @@ const Languages_1 = require("./../../../../core/languages/Languages");
 const ModelLanguages_1 = require("./../../../../core/languages/ModelLanguages");
 const ModelInformation_1 = require("./../../common/item/colorEffect/font/animationEffect/information/ModelInformation");
 const ModelSkillsInformation_1 = require("./ModelSkillsInformation");
-const ServiceJSON_1 = require("./../../../../core/services/JSON/ServiceJSON");
+const ServiceJSON_1 = require("./../../../../core/services/jSON/ServiceJSON");
 let ComponentPageSkills = class ComponentPageSkills {
     constructor(serviceJSON) {
         this.serviceJSON = serviceJSON;
