@@ -21,7 +21,7 @@ System.config({
         'angular-in-memory-web-api': 'npm:angular-in-memory-web-api',
         'angularfire2': 'npm:angularfire2',
         'firebase': 'npm:firebase',
-        'json': 'Plugins/json.js'
+        'json': 'plugins/json.js'
     },
     packages: {
         'app': { main: './Main.js', defaultExtension: 'js' },

@@ -26,7 +26,7 @@ System.config({
     'angularfire2':               'npm:angularfire2',
     'firebase':                   'npm:firebase',
 
-    'json': 'Plugins/json.js'
+    'json': 'plugins/json.js'
   },
   packages: {
     'app': { main: './Main.js', defaultExtension: 'js' },
