@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 
-import { Utils } from './../../../../core/Utils/Utils';
+import { Utils } from './../../../../core/utils/Utils';
 
 @Component({
   moduleId: module.id,

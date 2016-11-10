@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 
-import { Utils } from './../../../../core/Utils/Utils';
+import { Utils } from './../../../../core/utils/Utils';
 import { Languages } from './../../../../core/languages/Languages';
 import { ModelLanguages } from './../../../../core/languages/ModelLanguages';
 

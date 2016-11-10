@@ -1,5 +1,5 @@
 import { CacheManager } from '../cache/CacheManager';
-import { Utils } from '../Utils/Utils';
+import { Utils } from '../utils/Utils';
 import { ModelLanguages } from './ModelLanguages';
 
 export class Languages {

@@ -7,7 +7,7 @@ import { ModelColorEffect } from './../item/colorEffect/ModelColorEffect';
 import { ModelItem } from './../item/ModelItem';
 
 import { ModelClickButton } from './ModelClickButton';
-import { Utils } from './../../../../core/Utils/Utils';
+import { Utils } from './../../../../core/utils/Utils';
 
 @Component({
   moduleId: module.id,

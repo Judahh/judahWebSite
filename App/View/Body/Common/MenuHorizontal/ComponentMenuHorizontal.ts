@@ -8,7 +8,7 @@ import { ModelMenuHorizontal } from './ModelMenuHorizontal';
 import { ModelMenuItems } from './../ModelMenuItems';
 import { ServiceJSON } from './../../../../core/services/jSON/ServiceJSON';
 
-import { Utils } from './../../../../core/Utils/Utils';
+import { Utils } from './../../../../core/utils/Utils';
 
 @Component({
   moduleId: module.id,

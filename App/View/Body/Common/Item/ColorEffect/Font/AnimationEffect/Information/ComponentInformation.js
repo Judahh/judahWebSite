@@ -9,7 +9,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 const core_1 = require("@angular/core");
-const Utils_1 = require("./../../../../../../../../core/Utils/Utils");
+const Utils_1 = require("./../../../../../../../../core/utils/Utils");
 const ModelInformation_1 = require("./ModelInformation");
 let ComponentInformation = class ComponentInformation {
     constructor() { }

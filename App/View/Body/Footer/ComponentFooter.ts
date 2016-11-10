@@ -9,7 +9,7 @@ import { ModelMenuHorizontal } from '../common/menuHorizontal/ModelMenuHorizonta
 import { ModelMenuItems } from '../common/ModelMenuItems';
 import { ServiceJSON } from './../../../core/services/jSON/ServiceJSON';
 
-import { Utils } from './../../../core/Utils/Utils';
+import { Utils } from './../../../core/utils/Utils';
 @Component({
   moduleId: module.id,
   selector: Utils.getFileSelector(Utils.getFileName(__filename)),

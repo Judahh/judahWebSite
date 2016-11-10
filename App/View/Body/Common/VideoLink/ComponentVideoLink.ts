@@ -5,7 +5,7 @@ import { ComponentColorEffect } from '../item/colorEffect/ComponentColorEffect';
 
 import {hTMLGenerator} from './../../../../core/hTMLGenerator/hTMLGenerator';
 
-import { Utils } from './../../../../core/Utils/Utils';
+import { Utils } from './../../../../core/utils/Utils';
 
 @Component({
   moduleId: module.id,
