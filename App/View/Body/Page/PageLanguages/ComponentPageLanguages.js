@@ -12,7 +12,7 @@ const core_1 = require("@angular/core");
 const Utils_1 = require("./../../../../Core/Utils/Utils");
 const Languages_1 = require("./../../../../Core/Languages/Languages");
 const ModelLanguages_1 = require("./../../../../Core/Languages/ModelLanguages");
-const ModelInformation_1 = require("./../../common/item/colorEffect/font/animationEffect/Information/ModelInformation");
+const ModelInformation_1 = require("./../../common/item/colorEffect/font/animationEffect/information/ModelInformation");
 const ModelItem_1 = require("./../../common/item/ModelItem");
 const ModelCheckButton_1 = require("./../../common/checkButton/ModelCheckButton");
 const ModelLanguagesInformation_1 = require("./ModelLanguagesInformation");
@@ -104,7 +104,7 @@ let ComponentPageLanguages = class ComponentPageLanguages {
                     modelCheckButton.name = "language";
                     modelCheckButton.radio = true;
                     console.log("value:" + modelCheckButton.value);
-                    console.log("Information:" + modelCheckButton.item.colorEffect.font.animationEffect.arrayInformation[0].information);
+                    console.log("information:" + modelCheckButton.item.colorEffect.font.animationEffect.arrayInformation[0].information);
                     this.arrayModelCheckButton.push(modelCheckButton);
                 }
             }
@@ -112,7 +112,7 @@ let ComponentPageLanguages = class ComponentPageLanguages {
         for (let index = 0; index < this.arrayModelCheckButton.length; index++) {
             var modelCheckButton = this.arrayModelCheckButton[index];
             console.log("value:" + modelCheckButton.value);
-            console.log("Information:" + modelCheckButton.item.colorEffect.font.animationEffect.arrayInformation[0].information);
+            console.log("information:" + modelCheckButton.item.colorEffect.font.animationEffect.arrayInformation[0].information);
         }
     }
     getInformationService() {

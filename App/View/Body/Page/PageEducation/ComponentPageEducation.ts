@@ -8,7 +8,7 @@ import { ModelDivisorBlock } from './../../common/divisorBlock/ModelDivisorBlock
 import { ModelDivisor } from './../../common/divisorBlock/divisor/ModelDivisor';
 import { ModelSubDivisor } from './../../common/divisorBlock/divisor/subDivisor/ModelSubDivisor';
 
-import { ModelInformation } from './../../common/item/colorEffect/font/animationEffect/Information/ModelInformation';
+import { ModelInformation } from './../../common/item/colorEffect/font/animationEffect/information/ModelInformation';
 import { ModelAnimationEffect } from './../../common/item/colorEffect/font/animationEffect/ModelAnimationEffect';
 import { ModelFont } from './../../common/item/colorEffect/font/ModelFont';
 import { ModelColorEffect } from './../../common/item/colorEffect/ModelColorEffect';

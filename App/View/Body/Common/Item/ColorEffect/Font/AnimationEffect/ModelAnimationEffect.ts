@@ -1,4 +1,4 @@
-import { ModelInformation } from './Information/ModelInformation';
+import { ModelInformation } from './information/ModelInformation';
 
 export class ModelAnimationEffect {
     class:string;

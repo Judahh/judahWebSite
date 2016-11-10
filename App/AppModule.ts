@@ -22,7 +22,7 @@ import { ComponentPageLanguages } from './view/body/Page/PageLanguages/Component
 
 import { ComponentFooter } from './view/body/Footer/ComponentFooter';
 
-import { ComponentInformation } from './view/body/common/item/colorEffect/font/animationEffect/Information/ComponentInformation';
+import { ComponentInformation } from './view/body/common/item/colorEffect/font/animationEffect/information/ComponentInformation';
 import { ComponentAnimationEffect } from './view/body/common/item/colorEffect/font/animationEffect/ComponentAnimationEffect';
 import { ComponentFont } from './view/body/common/item/colorEffect/font/ComponentFont';
 import { ComponentColorEffect } from './view/body/common/item/colorEffect/ComponentColorEffect';

@@ -8,7 +8,7 @@ import { ModelDivisorBlock } from './../../common/divisorBlock/ModelDivisorBlock
 import { ModelDivisor } from './../../common/divisorBlock/divisor/ModelDivisor';
 import { ModelSubDivisor } from './../../common/divisorBlock/divisor/subDivisor/ModelSubDivisor';
 
-import { ModelInformation } from './../../common/item/colorEffect/font/animationEffect/Information/ModelInformation';
+import { ModelInformation } from './../../common/item/colorEffect/font/animationEffect/information/ModelInformation';
 import { ModelAnimationEffect } from './../../common/item/colorEffect/font/animationEffect/ModelAnimationEffect';
 import { ModelFont } from './../../common/item/colorEffect/font/ModelFont';
 import { ModelColorEffect } from './../../common/item/colorEffect/ModelColorEffect';
@@ -145,7 +145,7 @@ export class ComponentPageLanguages implements OnInit {
           modelCheckButton.name="language";
           modelCheckButton.radio=true;
           console.log("value:"+modelCheckButton.value);
-          console.log("Information:"+modelCheckButton.item.colorEffect.font.animationEffect.arrayInformation[0].information);
+          console.log("information:"+modelCheckButton.item.colorEffect.font.animationEffect.arrayInformation[0].information);
           this.arrayModelCheckButton.push(modelCheckButton);
         }
       }
@@ -153,7 +153,7 @@ export class ComponentPageLanguages implements OnInit {
     for(let index:number=0;index<this.arrayModelCheckButton.length;index++){
       var modelCheckButton:ModelCheckButton=this.arrayModelCheckButton[index];
       console.log("value:"+modelCheckButton.value);
-      console.log("Information:"+modelCheckButton.item.colorEffect.font.animationEffect.arrayInformation[0].information);
+      console.log("information:"+modelCheckButton.item.colorEffect.font.animationEffect.arrayInformation[0].information);
     }
 
   }

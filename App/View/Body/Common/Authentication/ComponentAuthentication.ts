@@ -1,6 +1,6 @@
 import { Component, Input, OnInit, ViewEncapsulation } from '@angular/core';
 
-import { ModelInformation } from './../item/colorEffect/font/animationEffect/Information/ModelInformation';
+import { ModelInformation } from './../item/colorEffect/font/animationEffect/information/ModelInformation';
 import { ModelAnimationEffect } from './../item/colorEffect/font/animationEffect/ModelAnimationEffect';
 import { ModelFont } from './../item/colorEffect/font/ModelFont';
 import { ModelColorEffect } from './../item/colorEffect/ModelColorEffect';
