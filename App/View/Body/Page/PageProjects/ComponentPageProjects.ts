@@ -14,7 +14,7 @@ import { ModelFont } from './../../common/item/colorEffect/font/ModelFont';
 import { ModelColorEffect } from './../../common/item/colorEffect/ModelColorEffect';
 import { ModelItem } from './../../common/item/ModelItem';
 
-import { ServiceJSON } from './../../../../core/Services/JSON/ServiceJSON';
+import { ServiceJSON } from './../../../../core/services/JSON/ServiceJSON';
 
 @Component({
   moduleId: module.id,

@@ -10,7 +10,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 const core_1 = require("@angular/core");
 const ModelMenuHorizontal_1 = require("./ModelMenuHorizontal");
-const ServiceJSON_1 = require("./../../../../core/Services/JSON/ServiceJSON");
+const ServiceJSON_1 = require("./../../../../core/services/JSON/ServiceJSON");
 const Utils_1 = require("./../../../../core/Utils/Utils");
 let ComponentMenuHorizontal = class ComponentMenuHorizontal {
     constructor(serviceJSON) {

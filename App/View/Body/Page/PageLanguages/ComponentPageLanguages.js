@@ -16,7 +16,7 @@ const ModelInformation_1 = require("./../../common/item/colorEffect/font/animati
 const ModelItem_1 = require("./../../common/item/ModelItem");
 const ModelCheckButton_1 = require("./../../common/checkButton/ModelCheckButton");
 const ModelLanguagesInformation_1 = require("./ModelLanguagesInformation");
-const ServiceJSON_1 = require("./../../../../core/Services/JSON/ServiceJSON");
+const ServiceJSON_1 = require("./../../../../core/services/JSON/ServiceJSON");
 let ComponentPageLanguages = class ComponentPageLanguages {
     constructor(serviceJSON) {
         this.serviceJSON = serviceJSON;

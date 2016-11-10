@@ -6,7 +6,7 @@ declare var Auth0Lock: any;
 
 @Injectable()
 export class Auth {
-  // Configure Auth0 (temp)
+  // Configure auth0 (temp)
   lock = new Auth0Lock('gDqtVIx7G8tKvkfqqG4YyvaEHqbk1Ko9', 'judahh.auth0.com', {});
 
   constructor() {

@@ -7,7 +7,7 @@ import { ModelItem } from '../common/item/ModelItem';
 import { ModelTooltip } from '../common/item/ModelTooltip';
 import { ModelMenuHorizontal } from '../common/menuHorizontal/ModelMenuHorizontal';
 import { ModelMenuItems } from '../common/ModelMenuItems';
-import { ServiceJSON } from './../../../core/Services/JSON/ServiceJSON';
+import { ServiceJSON } from './../../../core/services/JSON/ServiceJSON';
 
 import { Utils } from './../../../core/Utils/Utils';
 

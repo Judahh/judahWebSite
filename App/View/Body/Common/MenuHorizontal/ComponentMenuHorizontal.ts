@@ -6,7 +6,7 @@ import {hTMLGenerator} from './../../../../core/hTMLGenerator/hTMLGenerator';
 import { ModelItem } from './../item/ModelItem';
 import { ModelMenuHorizontal } from './ModelMenuHorizontal';
 import { ModelMenuItems } from './../ModelMenuItems';
-import { ServiceJSON } from './../../../../core/Services/JSON/ServiceJSON';
+import { ServiceJSON } from './../../../../core/services/JSON/ServiceJSON';
 
 import { Utils } from './../../../../core/Utils/Utils';
 
