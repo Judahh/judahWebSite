@@ -7,8 +7,8 @@ import { ModelColorEffect } from './../Item/ColorEffect/ModelColorEffect';
 import { ModelItem } from './../Item/ModelItem';
 
 import { ModelDivisorBlock } from './ModelDivisorBlock';
-import { ModelSubDivisor } from './Divisor/SubDivisor/ModelSubDivisor';
-import { ModelDivisor } from './Divisor/ModelDivisor';
+import { ModelSubDivisor } from './divisor/subDivisor/ModelSubDivisor';
+import { ModelDivisor } from './divisor/ModelDivisor';
 import { Utils } from './../../../../Core/Utils/Utils';
 
 @Component({

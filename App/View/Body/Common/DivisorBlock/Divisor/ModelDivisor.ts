@@ -1,4 +1,4 @@
-import { ModelSubDivisor } from './SubDivisor/ModelSubDivisor';
+import { ModelSubDivisor } from './subDivisor/ModelSubDivisor';
 
 export class ModelDivisor {
     arraySubDivisor: Array<ModelSubDivisor>;

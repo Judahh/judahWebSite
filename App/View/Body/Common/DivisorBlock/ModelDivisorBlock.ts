@@ -1,5 +1,5 @@
-import { ModelSubDivisor } from './Divisor/SubDivisor/ModelSubDivisor';
-import { ModelDivisor } from './Divisor/ModelDivisor';
+import { ModelSubDivisor } from './divisor/subDivisor/ModelSubDivisor';
+import { ModelDivisor } from './divisor/ModelDivisor';
 
 export class ModelDivisorBlock {
     arraySubDivisor: Array<ModelSubDivisor>;

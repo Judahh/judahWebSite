@@ -4,9 +4,9 @@ import { Utils } from './../../../../Core/Utils/Utils';
 import { Languages } from './../../../../Core/Languages/Languages';
 import { ModelLanguages } from './../../../../Core/Languages/ModelLanguages';
 
-import { ModelDivisorBlock } from './../../common/DivisorBlock/ModelDivisorBlock';
-import { ModelDivisor } from './../../common/DivisorBlock/Divisor/ModelDivisor';
-import { ModelSubDivisor } from './../../common/DivisorBlock/Divisor/SubDivisor/ModelSubDivisor';
+import { ModelDivisorBlock } from './../../common/divisorBlock/ModelDivisorBlock';
+import { ModelDivisor } from './../../common/divisorBlock/divisor/ModelDivisor';
+import { ModelSubDivisor } from './../../common/divisorBlock/divisor/subDivisor/ModelSubDivisor';
 
 import { ModelInformation } from './../../common/Item/ColorEffect/Font/AnimationEffect/Information/ModelInformation';
 import { ModelAnimationEffect } from './../../common/Item/ColorEffect/Font/AnimationEffect/ModelAnimationEffect';

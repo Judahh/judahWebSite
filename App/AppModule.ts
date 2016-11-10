@@ -30,16 +30,16 @@ import { ComponentItem } from './view/body/common/Item/ComponentItem';
 import { ComponentMenuHorizontal } from './view/body/common/MenuHorizontal/ComponentMenuHorizontal';
 
 import { ComponentTextInput } from './view/body/common/TextInput/ComponentTextInput';
-import { ComponentComboBox } from './view/body/common/ComboBox/ComponentComboBox';
-import { ComponentClickButton } from './view/body/common/ClickButton/ComponentClickButton';
+import { ComponentComboBox } from './view/body/common/comboBox/ComponentComboBox';
+import { ComponentClickButton } from './view/body/common/clickButton/ComponentClickButton';
 import { ComponentCheckButton } from './view/body/common/checkButton/ComponentCheckButton';
 import { ComponentImage } from './view/body/common/Image/ComponentImage';
 import { ComponentVideoLink } from './view/body/common/VideoLink/ComponentVideoLink';
 import { ComponentAuthentication } from './view/body/common/authentication/ComponentAuthentication';
 
-import { ComponentDivisorBlock } from './view/body/common/DivisorBlock/ComponentDivisorBlock';
-import { ComponentDivisor } from './view/body/common/DivisorBlock/Divisor/ComponentDivisor';
-import { ComponentSubDivisor } from './view/body/common/DivisorBlock/Divisor/SubDivisor/ComponentSubDivisor';
+import { ComponentDivisorBlock } from './view/body/common/divisorBlock/ComponentDivisorBlock';
+import { ComponentDivisor } from './view/body/common/divisorBlock/divisor/ComponentDivisor';
+import { ComponentSubDivisor } from './view/body/common/divisorBlock/divisor/subDivisor/ComponentSubDivisor';
 
 import { routing, routedComponents } from './Routing';
 
