@@ -9,7 +9,7 @@ System.config({
   },
   map: {
     'app': 'app',
-    'Main': 'app/Main.js',
+    'main': 'app/main.js',
 
     '@angular/core': 'npm:@angular/core/bundles/core.umd.js',
     '@angular/common': 'npm:@angular/common/bundles/common.umd.js',
@@ -29,7 +29,7 @@ System.config({
     'json': 'plugins/json.js'
   },
   packages: {
-    'app': { main: './Main.js', defaultExtension: 'js' },
+    'app': { main: './main.js', defaultExtension: 'js' },
     'api' : { defaultExtension : 'js' },
     'rxjs': { defaultExtension: 'js' },
     'angular-in-memory-web-api': { main: './index.js', defaultExtension: 'js' },
