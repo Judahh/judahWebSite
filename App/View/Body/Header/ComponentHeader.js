@@ -36,7 +36,7 @@ let ComponentHeader = class ComponentHeader {
     getItems() {
         this.arrayModelMenuHorizontal = [];
         var errorMessage = "";
-        this.serviceJSON.getObservable('ViewLoader/arrayMenuItems').subscribe(items => this.filter(items), error => errorMessage = error);
+        this.serviceJSON.getObservable('viewLoader/arrayMenuItems').subscribe(items => this.filter(items), error => errorMessage = error);
         if (errorMessage != "") {
             alert("Error:" + errorMessage);
         }

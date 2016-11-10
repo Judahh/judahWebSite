@@ -34,7 +34,7 @@ let ComponentPageEducation = class ComponentPageEducation {
     }
     getHalfModelInformation() {
         var errorMessage = "";
-        this.serviceJSON.getObservable('ViewLoader/halfInformation').subscribe(item => this.basicModelInformation = item, error => errorMessage = error);
+        this.serviceJSON.getObservable('viewLoader/halfInformation').subscribe(item => this.basicModelInformation = item, error => errorMessage = error);
         if (errorMessage != "") {
             alert("Error:" + errorMessage);
         }
@@ -55,7 +55,7 @@ let ComponentPageEducation = class ComponentPageEducation {
     }
     getArrayDivisorBlockService() {
         var errorMessage = "";
-        this.serviceJSON.getObservable('ViewLoader/' + Utils_1.Utils.getFileSelector(Utils_1.Utils.getFileName(__filename)) + 'ArrayDivisorBlock').subscribe(item => this.getArrayModelDivisorBlock(item), error => errorMessage = error);
+        this.serviceJSON.getObservable('viewLoader/' + Utils_1.Utils.getFileSelector(Utils_1.Utils.getFileName(__filename)) + 'ArrayDivisorBlock').subscribe(item => this.getArrayModelDivisorBlock(item), error => errorMessage = error);
         if (errorMessage != "") {
             alert("Error:" + errorMessage);
         }

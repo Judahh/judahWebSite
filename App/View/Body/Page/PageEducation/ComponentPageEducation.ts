@@ -53,7 +53,7 @@ export class ComponentPageEducation implements OnInit {
   private getHalfModelInformation(){
     var errorMessage="";
 
-    this.serviceJSON.getObservable('ViewLoader/halfInformation').subscribe(
+    this.serviceJSON.getObservable('viewLoader/halfInformation').subscribe(
       item => this.basicModelInformation=item, error => errorMessage = <any>error);
     
     if(errorMessage!=""){
@@ -86,7 +86,7 @@ export class ComponentPageEducation implements OnInit {
   private getArrayDivisorBlockService(){
     var errorMessage="";
 
-    this.serviceJSON.getObservable('ViewLoader/'+Utils.getFileSelector(Utils.getFileName(__filename))+'ArrayDivisorBlock').subscribe(
+    this.serviceJSON.getObservable('viewLoader/'+Utils.getFileSelector(Utils.getFileName(__filename))+'ArrayDivisorBlock').subscribe(
       item => this.getArrayModelDivisorBlock(item), error => errorMessage = <any>error);
     
     if(errorMessage!=""){

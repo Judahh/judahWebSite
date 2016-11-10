@@ -52,7 +52,7 @@ export class ComponentFooter implements OnInit {
     this.arrayModelMenuHorizontal=[];
     var errorMessage="";
 
-    this.serviceJSON.getObservable('ViewLoader/arrayMenuItems').subscribe(items => this.filter(items), error => errorMessage = <any>error);
+    this.serviceJSON.getObservable('viewLoader/arrayMenuItems').subscribe(items => this.filter(items), error => errorMessage = <any>error);
     
     if(errorMessage!=""){
       alert("Error:"+errorMessage);

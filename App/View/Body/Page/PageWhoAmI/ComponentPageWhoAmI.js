@@ -79,7 +79,7 @@ let ComponentPageWhoAmI = class ComponentPageWhoAmI {
     }
     getPageService() {
         var errorMessage = "";
-        this.serviceJSON.getObservable('ViewLoader/' + Utils_1.Utils.getFileSelector(Utils_1.Utils.getFileName(__filename))).subscribe(item => this.modelWhoAmI = item, error => errorMessage = error);
+        this.serviceJSON.getObservable('viewLoader/' + Utils_1.Utils.getFileSelector(Utils_1.Utils.getFileName(__filename))).subscribe(item => this.modelWhoAmI = item, error => errorMessage = error);
         if (errorMessage != "") {
             alert("Error:" + errorMessage);
         }
@@ -100,7 +100,7 @@ let ComponentPageWhoAmI = class ComponentPageWhoAmI {
     }
     getArrayDivisorBlockService() {
         var errorMessage = "";
-        this.serviceJSON.getObservable('ViewLoader/' + Utils_1.Utils.getFileSelector(Utils_1.Utils.getFileName(__filename)) + 'ArrayDivisorBlock').subscribe(item => this.getArrayModelDivisorBlock(item), error => errorMessage = error);
+        this.serviceJSON.getObservable('viewLoader/' + Utils_1.Utils.getFileSelector(Utils_1.Utils.getFileName(__filename)) + 'ArrayDivisorBlock').subscribe(item => this.getArrayModelDivisorBlock(item), error => errorMessage = error);
         if (errorMessage != "") {
             alert("Error:" + errorMessage);
         }

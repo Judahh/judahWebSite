@@ -107,7 +107,7 @@ export class ComponentPageWhoAmI implements OnInit {
   private getPageService(){
     var errorMessage="";
 
-    this.serviceJSON.getObservable('ViewLoader/'+Utils.getFileSelector(Utils.getFileName(__filename))).subscribe(
+    this.serviceJSON.getObservable('viewLoader/'+Utils.getFileSelector(Utils.getFileName(__filename))).subscribe(
       item => this.modelWhoAmI=item, error => errorMessage = <any>error);
     
     if(errorMessage!=""){
@@ -140,7 +140,7 @@ export class ComponentPageWhoAmI implements OnInit {
   private getArrayDivisorBlockService(){
     var errorMessage="";
 
-    this.serviceJSON.getObservable('ViewLoader/'+Utils.getFileSelector(Utils.getFileName(__filename))+'ArrayDivisorBlock').subscribe(
+    this.serviceJSON.getObservable('viewLoader/'+Utils.getFileSelector(Utils.getFileName(__filename))+'ArrayDivisorBlock').subscribe(
       item => this.getArrayModelDivisorBlock(item), error => errorMessage = <any>error);
     
     if(errorMessage!=""){
