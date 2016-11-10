@@ -12,7 +12,7 @@ const core_1 = require("@angular/core");
 const platform_browser_1 = require("@angular/platform-browser");
 const forms_1 = require("@angular/forms");
 const http_1 = require("@angular/http");
-const angularfire2_1 = require("angularfire2");
+// import { AngularFireModule, AuthProviders, AuthMethods } from 'angularfire2';
 const ServiceJSON_1 = require("./Core/Services/JSON/ServiceJSON");
 require("./RXJS/RXJSExtensions");
 const ComponentBody_1 = require("./View/Body/ComponentBody");
@@ -65,8 +65,8 @@ const Routing_1 = require("./Routing");
 //     },
 //     debounceTime: 100 // allow to debounce checking timer
 // };
-const firebaseConfiguration_json_1 = require("./Core/ConfigurationFiles/firebaseConfiguration.json");
-const firebaseAuthConfiguration_json_1 = require("./Core/ConfigurationFiles/firebaseAuthConfiguration.json");
+// import firebaseConfiguration from './Core/ConfigurationFiles/firebaseConfiguration.json';
+// import firebaseAuthConfiguration from './Core/ConfigurationFiles/firebaseAuthConfiguration.json';
 let SafeUrlPipe = class SafeUrlPipe {
     constructor(sanitizer) {
         this.sanitizer = sanitizer;
@@ -102,7 +102,7 @@ AppModule = __decorate([
             forms_1.FormsModule,
             Routing_1.routing,
             http_1.HttpModule,
-            angularfire2_1.AngularFireModule.initializeApp(firebaseConfiguration_json_1.default, firebaseAuthConfiguration_json_1.default),
+            // AngularFireModule.initializeApp(firebaseConfiguration, firebaseAuthConfiguration),
             http_1.JsonpModule //,
         ],
         //schemas:
