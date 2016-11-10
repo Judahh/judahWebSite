@@ -29,7 +29,7 @@ System.config({
         'rxjs': { defaultExtension: 'js' },
         'angular-in-memory-web-api': { main: './index.js', defaultExtension: 'js' },
         'firebase': { main: './firebase.js', defaultExtension: 'js' },
-        'angularfire2': { defaultExtension: 'js', main: './angularfire2.js' }
+        'angularfire2': { main: './index.js', defaultExtension: 'js', format: 'esm' }
     },
     typescriptOptions: {
         tsconfig: true,
