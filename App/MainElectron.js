@@ -15,7 +15,7 @@ function createWindow() {
         icon: appIcon
     });
     // and load the index.html of the app.
-    win.loadURL(`file://${__dirname}/../indexElectron.html`);
+    win.loadURL(`file://${__dirname}/../index.html`);
     // Open the DevTools.
     //win.webContents.openDevTools()
     // Emitted when the window is closed.
