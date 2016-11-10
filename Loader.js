@@ -52,4 +52,4 @@ function isBottom(element) {
     }
     return isBottom(element.parentElement);
 }
-//# sourceMappingURL=Loader.js.map
+//# sourceMappingURL=loader.js.map

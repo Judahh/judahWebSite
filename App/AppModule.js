@@ -145,4 +145,4 @@ AppModule = __decorate([
     __metadata("design:paramtypes", [])
 ], AppModule);
 exports.AppModule = AppModule;
-//# sourceMappingURL=AppModule.js.map
+//# sourceMappingURL=appModule.js.map
