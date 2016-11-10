@@ -81,7 +81,7 @@ export class ComponentFooter implements OnInit {
 
   getTooltipService(index:number,index2:number){
     var errorMessage="";
-    this.serviceJSON.getObservable("Languages/page"+this.arrayModelMenuHorizontal[index].arrayItem[index2].routerLink).subscribe(
+    this.serviceJSON.getObservable("languages/page"+this.arrayModelMenuHorizontal[index].arrayItem[index2].routerLink).subscribe(
               items => this.getTooltip(index, index2, items), 
               error => errorMessage = <any>error);
 

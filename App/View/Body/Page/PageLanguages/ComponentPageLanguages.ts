@@ -161,7 +161,7 @@ export class ComponentPageLanguages implements OnInit {
   private getInformationService(){
     var errorMessage="";
 
-    this.serviceJSON.getObservable('Languages/'+Utils.getFileSelector(Utils.getFileName(__filename))).subscribe(
+    this.serviceJSON.getObservable('languages/'+Utils.getFileSelector(Utils.getFileName(__filename))).subscribe(
       items => this.getModelLanguagesInformation(items), error => errorMessage = <any>error);
     
     if(errorMessage!=""){

@@ -117,7 +117,7 @@ let ComponentPageLanguages = class ComponentPageLanguages {
     }
     getInformationService() {
         var errorMessage = "";
-        this.serviceJSON.getObservable('Languages/' + Utils_1.Utils.getFileSelector(Utils_1.Utils.getFileName(__filename))).subscribe(items => this.getModelLanguagesInformation(items), error => errorMessage = error);
+        this.serviceJSON.getObservable('languages/' + Utils_1.Utils.getFileSelector(Utils_1.Utils.getFileName(__filename))).subscribe(items => this.getModelLanguagesInformation(items), error => errorMessage = error);
         if (errorMessage != "") {
             alert("Error:" + errorMessage);
         }

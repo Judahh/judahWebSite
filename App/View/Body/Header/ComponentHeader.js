@@ -61,7 +61,7 @@ let ComponentHeader = class ComponentHeader {
     }
     getTooltipService(index, index2) {
         var errorMessage = "";
-        this.serviceJSON.getObservable("Languages/page" + this.arrayModelMenuHorizontal[index].arrayItem[index2].routerLink).subscribe(items => this.getTooltip(index, index2, items), error => errorMessage = error);
+        this.serviceJSON.getObservable("languages/page" + this.arrayModelMenuHorizontal[index].arrayItem[index2].routerLink).subscribe(items => this.getTooltip(index, index2, items), error => errorMessage = error);
         if (errorMessage != "") {
             alert("Error:" + errorMessage);
         }

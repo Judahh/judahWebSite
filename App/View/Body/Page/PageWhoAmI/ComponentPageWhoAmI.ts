@@ -129,7 +129,7 @@ export class ComponentPageWhoAmI implements OnInit {
   private getInformationService(){
     var errorMessage="";
 
-    this.serviceJSON.getObservable('Languages/'+Utils.getFileSelector(Utils.getFileName(__filename))).subscribe(
+    this.serviceJSON.getObservable('languages/'+Utils.getFileSelector(Utils.getFileName(__filename))).subscribe(
       items => this.modelWhoAmIInformation=Languages.getPageLanguage(items,this.modelLanguages), error => errorMessage = <any>error);
     
     if(errorMessage!=""){
