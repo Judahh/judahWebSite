@@ -1,4 +1,4 @@
-import { ModelColorEffect } from './ColorEffect/ModelColorEffect';
+import { ModelColorEffect } from './colorEffect/ModelColorEffect';
 import { ModelTooltip } from './ModelTooltip';
 
 export class ModelItem {

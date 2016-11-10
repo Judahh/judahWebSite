@@ -1,4 +1,4 @@
-import { ModelFont } from './Font/ModelFont';
+import { ModelFont } from './font/ModelFont';
 
 export class ModelColorEffect {
   colorEffect: string;

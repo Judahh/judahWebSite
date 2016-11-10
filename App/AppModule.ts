@@ -22,10 +22,10 @@ import { ComponentPageLanguages } from './view/body/Page/PageLanguages/Component
 
 import { ComponentFooter } from './view/body/Footer/ComponentFooter';
 
-import { ComponentInformation } from './view/body/common/item/ColorEffect/Font/AnimationEffect/Information/ComponentInformation';
-import { ComponentAnimationEffect } from './view/body/common/item/ColorEffect/Font/AnimationEffect/ComponentAnimationEffect';
-import { ComponentFont } from './view/body/common/item/ColorEffect/Font/ComponentFont';
-import { ComponentColorEffect } from './view/body/common/item/ColorEffect/ComponentColorEffect';
+import { ComponentInformation } from './view/body/common/item/colorEffect/font/AnimationEffect/Information/ComponentInformation';
+import { ComponentAnimationEffect } from './view/body/common/item/colorEffect/font/AnimationEffect/ComponentAnimationEffect';
+import { ComponentFont } from './view/body/common/item/colorEffect/font/ComponentFont';
+import { ComponentColorEffect } from './view/body/common/item/colorEffect/ComponentColorEffect';
 import { ComponentItem } from './view/body/common/item/ComponentItem';
 import { ComponentMenuHorizontal } from './view/body/common/MenuHorizontal/ComponentMenuHorizontal';
 

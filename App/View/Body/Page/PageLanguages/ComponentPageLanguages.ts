@@ -8,10 +8,10 @@ import { ModelDivisorBlock } from './../../common/divisorBlock/ModelDivisorBlock
 import { ModelDivisor } from './../../common/divisorBlock/divisor/ModelDivisor';
 import { ModelSubDivisor } from './../../common/divisorBlock/divisor/subDivisor/ModelSubDivisor';
 
-import { ModelInformation } from './../../common/item/ColorEffect/Font/AnimationEffect/Information/ModelInformation';
-import { ModelAnimationEffect } from './../../common/item/ColorEffect/Font/AnimationEffect/ModelAnimationEffect';
-import { ModelFont } from './../../common/item/ColorEffect/Font/ModelFont';
-import { ModelColorEffect } from './../../common/item/ColorEffect/ModelColorEffect';
+import { ModelInformation } from './../../common/item/colorEffect/font/AnimationEffect/Information/ModelInformation';
+import { ModelAnimationEffect } from './../../common/item/colorEffect/font/AnimationEffect/ModelAnimationEffect';
+import { ModelFont } from './../../common/item/colorEffect/font/ModelFont';
+import { ModelColorEffect } from './../../common/item/colorEffect/ModelColorEffect';
 import { ModelItem } from './../../common/item/ModelItem';
 
 import { ModelCheckButton } from './../../common/checkButton/ModelCheckButton';

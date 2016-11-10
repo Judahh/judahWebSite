@@ -1,7 +1,7 @@
 import { Component, OnInit, Input, ViewEncapsulation } from '@angular/core';
 
 import { ModelImage } from './ModelImage';
-import { ComponentColorEffect } from '../item/ColorEffect/ComponentColorEffect';
+import { ComponentColorEffect } from '../item/colorEffect/ComponentColorEffect';
 
 import {HTMLGenerator} from './../../../../Core/HTMLGenerator/HTMLGenerator';
 
