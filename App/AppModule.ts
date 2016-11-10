@@ -27,9 +27,9 @@ import { ComponentAnimationEffect } from './view/body/common/item/colorEffect/fo
 import { ComponentFont } from './view/body/common/item/colorEffect/font/ComponentFont';
 import { ComponentColorEffect } from './view/body/common/item/colorEffect/ComponentColorEffect';
 import { ComponentItem } from './view/body/common/item/ComponentItem';
-import { ComponentMenuHorizontal } from './view/body/common/MenuHorizontal/ComponentMenuHorizontal';
+import { ComponentMenuHorizontal } from './view/body/common/menuHorizontal/ComponentMenuHorizontal';
 
-import { ComponentTextInput } from './view/body/common/TextInput/ComponentTextInput';
+import { ComponentTextInput } from './view/body/common/textInput/ComponentTextInput';
 import { ComponentComboBox } from './view/body/common/comboBox/ComponentComboBox';
 import { ComponentClickButton } from './view/body/common/clickButton/ComponentClickButton';
 import { ComponentCheckButton } from './view/body/common/checkButton/ComponentCheckButton';

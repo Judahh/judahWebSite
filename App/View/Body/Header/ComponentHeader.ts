@@ -5,7 +5,7 @@ import { ModelLanguages } from './../../../Core/Languages/ModelLanguages';
 
 import { ModelItem } from '../common/item/ModelItem';
 import { ModelTooltip } from '../common/item/ModelTooltip';
-import { ModelMenuHorizontal } from '../common/MenuHorizontal/ModelMenuHorizontal';
+import { ModelMenuHorizontal } from '../common/menuHorizontal/ModelMenuHorizontal';
 import { ModelMenuItems } from '../common/ModelMenuItems';
 import { ServiceJSON } from './../../../Core/Services/JSON/ServiceJSON';
 
