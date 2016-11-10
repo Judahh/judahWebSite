@@ -1,4 +1,4 @@
-import { ModelItem } from './../Item/ModelItem';
+import { ModelItem } from './../item/ModelItem';
 
 export class ModelAuthentication {
 }

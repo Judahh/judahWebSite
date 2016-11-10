@@ -22,18 +22,18 @@ import { ComponentPageLanguages } from './view/body/Page/PageLanguages/Component
 
 import { ComponentFooter } from './view/body/Footer/ComponentFooter';
 
-import { ComponentInformation } from './view/body/common/Item/ColorEffect/Font/AnimationEffect/Information/ComponentInformation';
-import { ComponentAnimationEffect } from './view/body/common/Item/ColorEffect/Font/AnimationEffect/ComponentAnimationEffect';
-import { ComponentFont } from './view/body/common/Item/ColorEffect/Font/ComponentFont';
-import { ComponentColorEffect } from './view/body/common/Item/ColorEffect/ComponentColorEffect';
-import { ComponentItem } from './view/body/common/Item/ComponentItem';
+import { ComponentInformation } from './view/body/common/item/ColorEffect/Font/AnimationEffect/Information/ComponentInformation';
+import { ComponentAnimationEffect } from './view/body/common/item/ColorEffect/Font/AnimationEffect/ComponentAnimationEffect';
+import { ComponentFont } from './view/body/common/item/ColorEffect/Font/ComponentFont';
+import { ComponentColorEffect } from './view/body/common/item/ColorEffect/ComponentColorEffect';
+import { ComponentItem } from './view/body/common/item/ComponentItem';
 import { ComponentMenuHorizontal } from './view/body/common/MenuHorizontal/ComponentMenuHorizontal';
 
 import { ComponentTextInput } from './view/body/common/TextInput/ComponentTextInput';
 import { ComponentComboBox } from './view/body/common/comboBox/ComponentComboBox';
 import { ComponentClickButton } from './view/body/common/clickButton/ComponentClickButton';
 import { ComponentCheckButton } from './view/body/common/checkButton/ComponentCheckButton';
-import { ComponentImage } from './view/body/common/Image/ComponentImage';
+import { ComponentImage } from './view/body/common/image/ComponentImage';
 import { ComponentVideoLink } from './view/body/common/VideoLink/ComponentVideoLink';
 import { ComponentAuthentication } from './view/body/common/authentication/ComponentAuthentication';
 

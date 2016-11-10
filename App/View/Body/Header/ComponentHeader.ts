@@ -3,8 +3,8 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { Languages } from './../../../Core/Languages/Languages';
 import { ModelLanguages } from './../../../Core/Languages/ModelLanguages';
 
-import { ModelItem } from '../common/Item/ModelItem';
-import { ModelTooltip } from '../common/Item/ModelTooltip';
+import { ModelItem } from '../common/item/ModelItem';
+import { ModelTooltip } from '../common/item/ModelTooltip';
 import { ModelMenuHorizontal } from '../common/MenuHorizontal/ModelMenuHorizontal';
 import { ModelMenuItems } from '../common/ModelMenuItems';
 import { ServiceJSON } from './../../../Core/Services/JSON/ServiceJSON';

@@ -12,8 +12,8 @@ const core_1 = require("@angular/core");
 const Utils_1 = require("./../../../../Core/Utils/Utils");
 const Languages_1 = require("./../../../../Core/Languages/Languages");
 const ModelLanguages_1 = require("./../../../../Core/Languages/ModelLanguages");
-const ModelInformation_1 = require("./../../common/Item/ColorEffect/Font/AnimationEffect/Information/ModelInformation");
-const ModelItem_1 = require("./../../common/Item/ModelItem");
+const ModelInformation_1 = require("./../../common/item/ColorEffect/Font/AnimationEffect/Information/ModelInformation");
+const ModelItem_1 = require("./../../common/item/ModelItem");
 const ModelCheckButton_1 = require("./../../common/checkButton/ModelCheckButton");
 const ModelLanguagesInformation_1 = require("./ModelLanguagesInformation");
 const ServiceJSON_1 = require("./../../../../Core/Services/JSON/ServiceJSON");
@@ -56,7 +56,7 @@ let ComponentPageLanguages = class ComponentPageLanguages {
     }
     getItemService() {
         var errorMessage = "";
-        this.serviceJSON.getObservable('ViewLoader/' + Utils_1.Utils.getFileSelector(Utils_1.Utils.getFileName(__filename)) + 'Item').subscribe(item => this.basicItem = item, error => errorMessage = error);
+        this.serviceJSON.getObservable('ViewLoader/' + Utils_1.Utils.getFileSelector(Utils_1.Utils.getFileName(__filename)) + 'item').subscribe(item => this.basicItem = item, error => errorMessage = error);
         if (errorMessage != "") {
             alert("Error:" + errorMessage);
         }

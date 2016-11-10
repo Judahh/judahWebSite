@@ -2,7 +2,7 @@ import { Component, OnInit, Input, ViewEncapsulation } from '@angular/core';
 
 import { ModelItem } from './ModelItem';
 import { ModelTooltip } from './ModelTooltip';
-import { ComponentColorEffect } from '../Item/ColorEffect/ComponentColorEffect';
+import { ComponentColorEffect } from '../item/ColorEffect/ComponentColorEffect';
 
 import {HTMLGenerator} from './../../../../Core/HTMLGenerator/HTMLGenerator';
 

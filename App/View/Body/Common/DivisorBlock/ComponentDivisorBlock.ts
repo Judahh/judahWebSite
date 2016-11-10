@@ -1,10 +1,10 @@
 import { Component, Input, OnInit, ViewEncapsulation } from '@angular/core';
 
-import { ModelInformation } from './../Item/ColorEffect/Font/AnimationEffect/Information/ModelInformation';
-import { ModelAnimationEffect } from './../Item/ColorEffect/Font/AnimationEffect/ModelAnimationEffect';
-import { ModelFont } from './../Item/ColorEffect/Font/ModelFont';
-import { ModelColorEffect } from './../Item/ColorEffect/ModelColorEffect';
-import { ModelItem } from './../Item/ModelItem';
+import { ModelInformation } from './../item/ColorEffect/Font/AnimationEffect/Information/ModelInformation';
+import { ModelAnimationEffect } from './../item/ColorEffect/Font/AnimationEffect/ModelAnimationEffect';
+import { ModelFont } from './../item/ColorEffect/Font/ModelFont';
+import { ModelColorEffect } from './../item/ColorEffect/ModelColorEffect';
+import { ModelItem } from './../item/ModelItem';
 
 import { ModelDivisorBlock } from './ModelDivisorBlock';
 import { ModelSubDivisor } from './divisor/subDivisor/ModelSubDivisor';

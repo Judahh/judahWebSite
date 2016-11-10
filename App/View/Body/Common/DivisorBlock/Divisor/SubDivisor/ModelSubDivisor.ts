@@ -1,5 +1,5 @@
-import { ModelItem } from './../../../Item/ModelItem';
-import { ModelImage } from './../../../Image/ModelImage';
+import { ModelItem } from './../../../item/ModelItem';
+import { ModelImage } from './../../../image/ModelImage';
 import { ModelVideoLink } from './../../../VideoLink/ModelVideoLink';
 
 export class ModelSubDivisor {

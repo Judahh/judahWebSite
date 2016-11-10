@@ -8,11 +8,11 @@ import { ModelDivisorBlock } from './../../common/divisorBlock/ModelDivisorBlock
 import { ModelDivisor } from './../../common/divisorBlock/divisor/ModelDivisor';
 import { ModelSubDivisor } from './../../common/divisorBlock/divisor/subDivisor/ModelSubDivisor';
 
-import { ModelInformation } from './../../common/Item/ColorEffect/Font/AnimationEffect/Information/ModelInformation';
-import { ModelAnimationEffect } from './../../common/Item/ColorEffect/Font/AnimationEffect/ModelAnimationEffect';
-import { ModelFont } from './../../common/Item/ColorEffect/Font/ModelFont';
-import { ModelColorEffect } from './../../common/Item/ColorEffect/ModelColorEffect';
-import { ModelItem } from './../../common/Item/ModelItem';
+import { ModelInformation } from './../../common/item/ColorEffect/Font/AnimationEffect/Information/ModelInformation';
+import { ModelAnimationEffect } from './../../common/item/ColorEffect/Font/AnimationEffect/ModelAnimationEffect';
+import { ModelFont } from './../../common/item/ColorEffect/Font/ModelFont';
+import { ModelColorEffect } from './../../common/item/ColorEffect/ModelColorEffect';
+import { ModelItem } from './../../common/item/ModelItem';
 
 import { ModelCheckButton } from './../../common/checkButton/ModelCheckButton';
 
@@ -88,7 +88,7 @@ export class ComponentPageLanguages implements OnInit {
   getItemService(){
     var errorMessage="";
 
-    this.serviceJSON.getObservable('ViewLoader/'+Utils.getFileSelector(Utils.getFileName(__filename))+'Item').subscribe(
+    this.serviceJSON.getObservable('ViewLoader/'+Utils.getFileSelector(Utils.getFileName(__filename))+'item').subscribe(
       item => this.basicItem=item, error => errorMessage = <any>error);
     
     if(errorMessage!=""){
