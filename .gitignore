@@ -1,6 +1,8 @@
 typings
 app/**/*.js
 app/**/*.map
+aPI/**/*.js
+aPI/**/*.map
 node_modules
 !node_modules/@types/declaration/*
 jspm_packages
