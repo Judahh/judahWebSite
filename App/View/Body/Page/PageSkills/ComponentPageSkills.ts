@@ -4,15 +4,15 @@ import { Utils } from './../../../../Core/Utils/Utils';
 import { Languages } from './../../../../Core/Languages/Languages';
 import { ModelLanguages } from './../../../../Core/Languages/ModelLanguages';
 
-import { ModelDivisorBlock } from './../../Common/DivisorBlock/ModelDivisorBlock';
-import { ModelDivisor } from './../../Common/DivisorBlock/Divisor/ModelDivisor';
-import { ModelSubDivisor } from './../../Common/DivisorBlock/Divisor/SubDivisor/ModelSubDivisor';
+import { ModelDivisorBlock } from './../../common/DivisorBlock/ModelDivisorBlock';
+import { ModelDivisor } from './../../common/DivisorBlock/Divisor/ModelDivisor';
+import { ModelSubDivisor } from './../../common/DivisorBlock/Divisor/SubDivisor/ModelSubDivisor';
 
-import { ModelInformation } from './../../Common/Item/ColorEffect/Font/AnimationEffect/Information/ModelInformation';
-import { ModelAnimationEffect } from './../../Common/Item/ColorEffect/Font/AnimationEffect/ModelAnimationEffect';
-import { ModelFont } from './../../Common/Item/ColorEffect/Font/ModelFont';
-import { ModelColorEffect } from './../../Common/Item/ColorEffect/ModelColorEffect';
-import { ModelItem } from './../../Common/Item/ModelItem';
+import { ModelInformation } from './../../common/Item/ColorEffect/Font/AnimationEffect/Information/ModelInformation';
+import { ModelAnimationEffect } from './../../common/Item/ColorEffect/Font/AnimationEffect/ModelAnimationEffect';
+import { ModelFont } from './../../common/Item/ColorEffect/Font/ModelFont';
+import { ModelColorEffect } from './../../common/Item/ColorEffect/ModelColorEffect';
+import { ModelItem } from './../../common/Item/ModelItem';
 
 import { ModelSkillsInformation } from './ModelSkillsInformation';
 

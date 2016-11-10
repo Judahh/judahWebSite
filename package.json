@@ -3,7 +3,7 @@
   "productName": "Judahh",
   "author": "Judah <judahholanda7@gmail.com>",
   "version": "0.1.0",
-  "main": "App/MainElectron.js",
+  "main": "app/MainElectron.js",
   "private": true,
   "description": "Nativescript Judahh project",
   "keywords": [

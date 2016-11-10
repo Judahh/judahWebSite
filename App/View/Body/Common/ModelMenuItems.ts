@@ -1,4 +1,4 @@
-import { ModelMenuHorizontal } from '../Common/menuHorizontal/ModelMenuHorizontal';
+import { ModelMenuHorizontal } from '../common/menuHorizontal/ModelMenuHorizontal';
 
 export class ModelMenuItems {
   id: number;

@@ -12,7 +12,7 @@ const core_1 = require("@angular/core");
 const Utils_1 = require("./../../../../Core/Utils/Utils");
 const Languages_1 = require("./../../../../Core/Languages/Languages");
 const ModelLanguages_1 = require("./../../../../Core/Languages/ModelLanguages");
-const ModelInformation_1 = require("./../../Common/Item/ColorEffect/Font/AnimationEffect/Information/ModelInformation");
+const ModelInformation_1 = require("./../../common/Item/ColorEffect/Font/AnimationEffect/Information/ModelInformation");
 const ServiceJSON_1 = require("./../../../../Core/Services/JSON/ServiceJSON");
 let ComponentPageProjects = class ComponentPageProjects {
     constructor(serviceJSON) {

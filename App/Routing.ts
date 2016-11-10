@@ -1,13 +1,13 @@
 import { Routes, RouterModule } from '@angular/router';
 
-import { ComponentPage } from './View/Body/Page/ComponentPage';
+import { ComponentPage } from './view/body/Page/ComponentPage';
 
-import { ComponentPageWhoAmI } from './View/Body/Page/PageWhoAmI/ComponentPageWhoAmI';
-import { ComponentPageEducation } from './View/Body/Page/PageEducation/ComponentPageEducation';
-import { ComponentPageSkills } from './View/Body/Page/PageSkills/ComponentPageSkills';
-import { ComponentPageProjects } from './View/Body/Page/PageProjects/ComponentPageProjects';
-import { ComponentPageContact } from './View/Body/Page/PageContact/ComponentPageContact';
-import { ComponentPageLanguages } from './View/Body/Page/PageLanguages/ComponentPageLanguages';
+import { ComponentPageWhoAmI } from './view/body/Page/PageWhoAmI/ComponentPageWhoAmI';
+import { ComponentPageEducation } from './view/body/Page/PageEducation/ComponentPageEducation';
+import { ComponentPageSkills } from './view/body/Page/PageSkills/ComponentPageSkills';
+import { ComponentPageProjects } from './view/body/Page/PageProjects/ComponentPageProjects';
+import { ComponentPageContact } from './view/body/Page/PageContact/ComponentPageContact';
+import { ComponentPageLanguages } from './view/body/Page/PageLanguages/ComponentPageLanguages';
 
 const appRoutes: Routes = [
   {

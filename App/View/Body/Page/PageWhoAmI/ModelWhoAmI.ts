@@ -1,4 +1,4 @@
-import { ModelSubDivisor } from './../../Common/DivisorBlock/Divisor/SubDivisor/ModelSubDivisor';
+import { ModelSubDivisor } from './../../common/DivisorBlock/Divisor/SubDivisor/ModelSubDivisor';
 
 export class ModelWhoAmI {
     videoLink:string;

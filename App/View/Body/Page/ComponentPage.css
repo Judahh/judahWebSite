@@ -112,23 +112,23 @@ page{
     float: left;
 }
 
-/*Common Size A (sm)*/
+/*common Size A (sm)*/
 
 .DivClassTextWhoAmISizeSm{
     width: 100%;
 }
 
-/*Common Size A END*/
+/*common Size A END*/
 
-/*Common Size B (xs)*/
+/*common Size B (xs)*/
 
 .DivClassText,.DivClassTextBasicSizeXS{
     font-size: 15px;
 }
 
-/*Common Size B END*/
+/*common Size B END*/
 
-/*Common Size C (md)*/
+/*common Size C (md)*/
 
 .DivClassHalfBlockSizeMd{
     width: 100%;
@@ -139,4 +139,4 @@ page{
     width: 100%;
     display: block;
 }
-/*Common Size C END*/
+/*common Size C END*/

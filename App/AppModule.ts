@@ -7,39 +7,39 @@ import { HttpModule, JsonpModule } from '@angular/http';
 import { ServiceJSON } from './Core/Services/JSON/ServiceJSON'
 
 import './RXJS/RXJSExtensions';
-import { ComponentBody } from './View/Body/ComponentBody';
+import { ComponentBody } from './view/body/ComponentBody';
 
-import { ComponentHeader } from './View/Body/Header/ComponentHeader';
+import { ComponentHeader } from './view/body/Header/ComponentHeader';
 
-import { ComponentPage } from './View/Body/Page/ComponentPage';
+import { ComponentPage } from './view/body/Page/ComponentPage';
 
-import { ComponentPageWhoAmI } from './View/Body/Page/PageWhoAmI/ComponentPageWhoAmI';
-import { ComponentPageEducation } from './View/Body/Page/PageEducation/ComponentPageEducation';
-import { ComponentPageSkills } from './View/Body/Page/PageSkills/ComponentPageSkills';
-import { ComponentPageProjects } from './View/Body/Page/PageProjects/ComponentPageProjects';
-import { ComponentPageContact } from './View/Body/Page/PageContact/ComponentPageContact';
-import { ComponentPageLanguages } from './View/Body/Page/PageLanguages/ComponentPageLanguages';
+import { ComponentPageWhoAmI } from './view/body/Page/PageWhoAmI/ComponentPageWhoAmI';
+import { ComponentPageEducation } from './view/body/Page/PageEducation/ComponentPageEducation';
+import { ComponentPageSkills } from './view/body/Page/PageSkills/ComponentPageSkills';
+import { ComponentPageProjects } from './view/body/Page/PageProjects/ComponentPageProjects';
+import { ComponentPageContact } from './view/body/Page/PageContact/ComponentPageContact';
+import { ComponentPageLanguages } from './view/body/Page/PageLanguages/ComponentPageLanguages';
 
-import { ComponentFooter } from './View/Body/Footer/ComponentFooter';
+import { ComponentFooter } from './view/body/Footer/ComponentFooter';
 
-import { ComponentInformation } from './View/Body/Common/Item/ColorEffect/Font/AnimationEffect/Information/ComponentInformation';
-import { ComponentAnimationEffect } from './View/Body/Common/Item/ColorEffect/Font/AnimationEffect/ComponentAnimationEffect';
-import { ComponentFont } from './View/Body/Common/Item/ColorEffect/Font/ComponentFont';
-import { ComponentColorEffect } from './View/Body/Common/Item/ColorEffect/ComponentColorEffect';
-import { ComponentItem } from './View/Body/Common/Item/ComponentItem';
-import { ComponentMenuHorizontal } from './View/Body/Common/MenuHorizontal/ComponentMenuHorizontal';
+import { ComponentInformation } from './view/body/common/Item/ColorEffect/Font/AnimationEffect/Information/ComponentInformation';
+import { ComponentAnimationEffect } from './view/body/common/Item/ColorEffect/Font/AnimationEffect/ComponentAnimationEffect';
+import { ComponentFont } from './view/body/common/Item/ColorEffect/Font/ComponentFont';
+import { ComponentColorEffect } from './view/body/common/Item/ColorEffect/ComponentColorEffect';
+import { ComponentItem } from './view/body/common/Item/ComponentItem';
+import { ComponentMenuHorizontal } from './view/body/common/MenuHorizontal/ComponentMenuHorizontal';
 
-import { ComponentTextInput } from './View/Body/Common/TextInput/ComponentTextInput';
-import { ComponentComboBox } from './View/Body/Common/ComboBox/ComponentComboBox';
-import { ComponentClickButton } from './View/Body/Common/ClickButton/ComponentClickButton';
-import { ComponentCheckButton } from './View/Body/Common/CheckButton/ComponentCheckButton';
-import { ComponentImage } from './View/Body/Common/Image/ComponentImage';
-import { ComponentVideoLink } from './View/Body/Common/VideoLink/ComponentVideoLink';
-import { ComponentAuthentication } from './View/Body/Common/Authentication/ComponentAuthentication';
+import { ComponentTextInput } from './view/body/common/TextInput/ComponentTextInput';
+import { ComponentComboBox } from './view/body/common/ComboBox/ComponentComboBox';
+import { ComponentClickButton } from './view/body/common/ClickButton/ComponentClickButton';
+import { ComponentCheckButton } from './view/body/common/checkButton/ComponentCheckButton';
+import { ComponentImage } from './view/body/common/Image/ComponentImage';
+import { ComponentVideoLink } from './view/body/common/VideoLink/ComponentVideoLink';
+import { ComponentAuthentication } from './view/body/common/authentication/ComponentAuthentication';
 
-import { ComponentDivisorBlock } from './View/Body/Common/DivisorBlock/ComponentDivisorBlock';
-import { ComponentDivisor } from './View/Body/Common/DivisorBlock/Divisor/ComponentDivisor';
-import { ComponentSubDivisor } from './View/Body/Common/DivisorBlock/Divisor/SubDivisor/ComponentSubDivisor';
+import { ComponentDivisorBlock } from './view/body/common/DivisorBlock/ComponentDivisorBlock';
+import { ComponentDivisor } from './view/body/common/DivisorBlock/Divisor/ComponentDivisor';
+import { ComponentSubDivisor } from './view/body/common/DivisorBlock/Divisor/SubDivisor/ComponentSubDivisor';
 
 import { routing, routedComponents } from './Routing';
 
