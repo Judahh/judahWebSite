@@ -1,7 +1,7 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 
-import { Languages } from './../../../core/Languages/Languages';
-import { ModelLanguages } from './../../../core/Languages/ModelLanguages';
+import { Languages } from './../../../core/languages/Languages';
+import { ModelLanguages } from './../../../core/languages/ModelLanguages';
 
 import { ModelItem } from '../common/item/ModelItem';
 import { ModelTooltip } from '../common/item/ModelTooltip';

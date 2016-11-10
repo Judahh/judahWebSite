@@ -9,8 +9,8 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 const core_1 = require("@angular/core");
-const Languages_1 = require("./../../../core/Languages/Languages");
-const ModelLanguages_1 = require("./../../../core/Languages/ModelLanguages");
+const Languages_1 = require("./../../../core/languages/Languages");
+const ModelLanguages_1 = require("./../../../core/languages/ModelLanguages");
 const ModelTooltip_1 = require("../common/item/ModelTooltip");
 const ServiceJSON_1 = require("./../../../core/Services/JSON/ServiceJSON");
 const Utils_1 = require("./../../../core/Utils/Utils");

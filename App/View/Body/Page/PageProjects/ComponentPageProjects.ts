@@ -1,8 +1,8 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 
 import { Utils } from './../../../../core/Utils/Utils';
-import { Languages } from './../../../../core/Languages/Languages';
-import { ModelLanguages } from './../../../../core/Languages/ModelLanguages';
+import { Languages } from './../../../../core/languages/Languages';
+import { ModelLanguages } from './../../../../core/languages/ModelLanguages';
 
 import { ModelDivisorBlock } from './../../common/divisorBlock/ModelDivisorBlock';
 import { ModelDivisor } from './../../common/divisorBlock/divisor/ModelDivisor';
