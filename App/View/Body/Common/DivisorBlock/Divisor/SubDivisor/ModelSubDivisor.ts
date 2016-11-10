@@ -1,6 +1,6 @@
 import { ModelItem } from './../../../item/ModelItem';
 import { ModelImage } from './../../../image/ModelImage';
-import { ModelVideoLink } from './../../../VideoLink/ModelVideoLink';
+import { ModelVideoLink } from './../../../videoLink/ModelVideoLink';
 
 export class ModelSubDivisor {
     item: ModelItem;

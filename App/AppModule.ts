@@ -34,7 +34,7 @@ import { ComponentComboBox } from './view/body/common/comboBox/ComponentComboBox
 import { ComponentClickButton } from './view/body/common/clickButton/ComponentClickButton';
 import { ComponentCheckButton } from './view/body/common/checkButton/ComponentCheckButton';
 import { ComponentImage } from './view/body/common/image/ComponentImage';
-import { ComponentVideoLink } from './view/body/common/VideoLink/ComponentVideoLink';
+import { ComponentVideoLink } from './view/body/common/videoLink/ComponentVideoLink';
 import { ComponentAuthentication } from './view/body/common/authentication/ComponentAuthentication';
 
 import { ComponentDivisorBlock } from './view/body/common/divisorBlock/ComponentDivisorBlock';
