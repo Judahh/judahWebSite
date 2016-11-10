@@ -65,8 +65,8 @@ const Routing_1 = require("./Routing");
 //     },
 //     debounceTime: 100 // allow to debounce checking timer
 // };
-// import firebaseConfiguration from './core/ConfigurationFiles/firebaseConfiguration.json';
-// import firebaseAuthConfiguration from './core/ConfigurationFiles/firebaseAuthConfiguration.json';
+// import firebaseConfiguration from './core/configurationFiles/firebaseConfiguration.json';
+// import firebaseAuthConfiguration from './core/configurationFiles/firebaseAuthConfiguration.json';
 let SafeUrlPipe = class SafeUrlPipe {
     constructor(sanitizer) {
         this.sanitizer = sanitizer;

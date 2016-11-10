@@ -1,5 +1,5 @@
 "use strict";
-class HTMLGenerator {
+class hTMLGenerator {
     constructor(type, name, info) {
         this.subDiv = new Array();
         this.type = type;
@@ -15,5 +15,5 @@ class HTMLGenerator {
         return html;
     }
 }
-exports.HTMLGenerator = HTMLGenerator;
-//# sourceMappingURL=HTMLGenerator.js.map
+exports.hTMLGenerator = hTMLGenerator;
+//# sourceMappingURL=hTMLGenerator.js.map

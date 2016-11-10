@@ -3,7 +3,7 @@ import { Component, OnInit, Input, ViewEncapsulation } from '@angular/core';
 import { ModelImage } from './ModelImage';
 import { ComponentColorEffect } from '../item/colorEffect/ComponentColorEffect';
 
-import {HTMLGenerator} from './../../../../core/HTMLGenerator/HTMLGenerator';
+import {hTMLGenerator} from './../../../../core/hTMLGenerator/hTMLGenerator';
 
 import { Utils } from './../../../../core/Utils/Utils';
 

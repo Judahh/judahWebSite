@@ -1,4 +1,4 @@
-import { CacheManager } from '../Cache/CacheManager';
+import { CacheManager } from '../cache/CacheManager';
 import { Utils } from '../Utils/Utils';
 import { ModelLanguages } from './ModelLanguages';
 

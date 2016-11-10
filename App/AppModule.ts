@@ -43,7 +43,7 @@ import { ComponentSubDivisor } from './view/body/common/divisorBlock/divisor/sub
 
 import { routing, routedComponents } from './Routing';
 
-import { HTMLGenerator } from './core/HTMLGenerator/HTMLGenerator';
+import { hTMLGenerator } from './core/hTMLGenerator/hTMLGenerator';
 
 //import { ResponsiveModule, ResponsiveConfig, ResponsiveConfigInterface } from 'ng2-responsive';
 //import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
@@ -72,9 +72,9 @@ import { HTMLGenerator } from './core/HTMLGenerator/HTMLGenerator';
 //     debounceTime: 100 // allow to debounce checking timer
 // };
 
-// import firebaseConfiguration from './core/ConfigurationFiles/firebaseConfiguration.json';
+// import firebaseConfiguration from './core/configurationFiles/firebaseConfiguration.json';
 
-// import firebaseAuthConfiguration from './core/ConfigurationFiles/firebaseAuthConfiguration.json';
+// import firebaseAuthConfiguration from './core/configurationFiles/firebaseAuthConfiguration.json';
 
 @Pipe({ name: 'safeUrl' })
 export class SafeUrlPipe implements PipeTransform {
