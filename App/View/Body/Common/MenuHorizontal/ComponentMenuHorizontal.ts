@@ -1,14 +1,14 @@
 import { Component, Input, OnInit, ViewEncapsulation, ViewChildren, QueryList, forwardRef } from '@angular/core';
 
 import {ComponentItem} from './../item/ComponentItem';
-import {HTMLGenerator} from './../../../../Core/HTMLGenerator/HTMLGenerator';
+import {HTMLGenerator} from './../../../../core/HTMLGenerator/HTMLGenerator';
 
 import { ModelItem } from './../item/ModelItem';
 import { ModelMenuHorizontal } from './ModelMenuHorizontal';
 import { ModelMenuItems } from './../ModelMenuItems';
-import { ServiceJSON } from './../../../../Core/Services/JSON/ServiceJSON';
+import { ServiceJSON } from './../../../../core/Services/JSON/ServiceJSON';
 
-import { Utils } from './../../../../Core/Utils/Utils';
+import { Utils } from './../../../../core/Utils/Utils';
 
 @Component({
   moduleId: module.id,

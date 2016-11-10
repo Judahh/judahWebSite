@@ -2,7 +2,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { ComponentPage } from './view/body/page/ComponentPage';
 
-import { ComponentPageWhoAmI } from './view/body/page/PageWhoAmI/ComponentPageWhoAmI';
+import { ComponentPageWhoAmI } from './view/body/page/pageWhoAmI/ComponentPageWhoAmI';
 import { ComponentPageEducation } from './view/body/page/pageEducation/ComponentPageEducation';
 import { ComponentPageSkills } from './view/body/page/pageSkills/ComponentPageSkills';
 import { ComponentPageProjects } from './view/body/page/pageProjects/ComponentPageProjects';

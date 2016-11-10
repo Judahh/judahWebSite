@@ -9,12 +9,12 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 const core_1 = require("@angular/core");
-const Utils_1 = require("./../../../../Core/Utils/Utils");
-const Languages_1 = require("./../../../../Core/Languages/Languages");
-const ModelLanguages_1 = require("./../../../../Core/Languages/ModelLanguages");
+const Utils_1 = require("./../../../../core/Utils/Utils");
+const Languages_1 = require("./../../../../core/Languages/Languages");
+const ModelLanguages_1 = require("./../../../../core/Languages/ModelLanguages");
 const ModelInformation_1 = require("./../../common/item/colorEffect/font/animationEffect/information/ModelInformation");
 const ModelSkillsInformation_1 = require("./ModelSkillsInformation");
-const ServiceJSON_1 = require("./../../../../Core/Services/JSON/ServiceJSON");
+const ServiceJSON_1 = require("./../../../../core/Services/JSON/ServiceJSON");
 let ComponentPageSkills = class ComponentPageSkills {
     constructor(serviceJSON) {
         this.serviceJSON = serviceJSON;

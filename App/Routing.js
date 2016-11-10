@@ -1,6 +1,6 @@
 "use strict";
 const router_1 = require("@angular/router");
-const ComponentPageWhoAmI_1 = require("./view/body/page/PageWhoAmI/ComponentPageWhoAmI");
+const ComponentPageWhoAmI_1 = require("./view/body/page/pageWhoAmI/ComponentPageWhoAmI");
 const ComponentPageEducation_1 = require("./view/body/page/pageEducation/ComponentPageEducation");
 const ComponentPageSkills_1 = require("./view/body/page/pageSkills/ComponentPageSkills");
 const ComponentPageProjects_1 = require("./view/body/page/pageProjects/ComponentPageProjects");

@@ -4,16 +4,16 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule, JsonpModule } from '@angular/http';
 // import { AngularFireModule, AuthProviders, AuthMethods } from 'angularfire2';
 
-import { ServiceJSON } from './Core/Services/JSON/ServiceJSON'
+import { ServiceJSON } from './core/Services/JSON/ServiceJSON'
 
-import './RXJS/RXJSExtensions';
+import './rXJS/RXJSExtensions';
 import { ComponentBody } from './view/body/ComponentBody';
 
 import { ComponentHeader } from './view/body/header/ComponentHeader';
 
 import { ComponentPage } from './view/body/page/ComponentPage';
 
-import { ComponentPageWhoAmI } from './view/body/page/PageWhoAmI/ComponentPageWhoAmI';
+import { ComponentPageWhoAmI } from './view/body/page/pageWhoAmI/ComponentPageWhoAmI';
 import { ComponentPageEducation } from './view/body/page/pageEducation/ComponentPageEducation';
 import { ComponentPageSkills } from './view/body/page/pageSkills/ComponentPageSkills';
 import { ComponentPageProjects } from './view/body/page/pageProjects/ComponentPageProjects';
@@ -43,7 +43,7 @@ import { ComponentSubDivisor } from './view/body/common/divisorBlock/divisor/sub
 
 import { routing, routedComponents } from './Routing';
 
-import { HTMLGenerator } from './Core/HTMLGenerator/HTMLGenerator';
+import { HTMLGenerator } from './core/HTMLGenerator/HTMLGenerator';
 
 //import { ResponsiveModule, ResponsiveConfig, ResponsiveConfigInterface } from 'ng2-responsive';
 //import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
@@ -72,9 +72,9 @@ import { HTMLGenerator } from './Core/HTMLGenerator/HTMLGenerator';
 //     debounceTime: 100 // allow to debounce checking timer
 // };
 
-// import firebaseConfiguration from './Core/ConfigurationFiles/firebaseConfiguration.json';
+// import firebaseConfiguration from './core/ConfigurationFiles/firebaseConfiguration.json';
 
-// import firebaseAuthConfiguration from './Core/ConfigurationFiles/firebaseAuthConfiguration.json';
+// import firebaseAuthConfiguration from './core/ConfigurationFiles/firebaseAuthConfiguration.json';
 
 @Pipe({ name: 'safeUrl' })
 export class SafeUrlPipe implements PipeTransform {

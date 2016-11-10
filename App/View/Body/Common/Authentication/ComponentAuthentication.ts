@@ -7,7 +7,7 @@ import { ModelColorEffect } from './../item/colorEffect/ModelColorEffect';
 import { ModelItem } from './../item/ModelItem';
 
 import { ModelAuthentication } from './ModelAuthentication';
-import { Utils } from './../../../../Core/Utils/Utils';
+import { Utils } from './../../../../core/Utils/Utils';
 // import { AngularFire, AuthProviders } from 'angularfire2';
 
 @Component({

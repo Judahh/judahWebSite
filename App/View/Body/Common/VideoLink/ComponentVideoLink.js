@@ -10,7 +10,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 const core_1 = require("@angular/core");
 const ModelVideoLink_1 = require("./ModelVideoLink");
-const Utils_1 = require("./../../../../Core/Utils/Utils");
+const Utils_1 = require("./../../../../core/Utils/Utils");
 let ComponentVideoLink = class ComponentVideoLink {
     constructor() { }
     ngOnInit() {

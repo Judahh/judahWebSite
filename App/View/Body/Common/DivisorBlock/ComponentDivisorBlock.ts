@@ -9,7 +9,7 @@ import { ModelItem } from './../item/ModelItem';
 import { ModelDivisorBlock } from './ModelDivisorBlock';
 import { ModelSubDivisor } from './divisor/subDivisor/ModelSubDivisor';
 import { ModelDivisor } from './divisor/ModelDivisor';
-import { Utils } from './../../../../Core/Utils/Utils';
+import { Utils } from './../../../../core/Utils/Utils';
 
 @Component({
   moduleId: module.id,

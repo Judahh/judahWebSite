@@ -9,14 +9,14 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 const core_1 = require("@angular/core");
-const Utils_1 = require("./../../../../Core/Utils/Utils");
-const Languages_1 = require("./../../../../Core/Languages/Languages");
-const ModelLanguages_1 = require("./../../../../Core/Languages/ModelLanguages");
+const Utils_1 = require("./../../../../core/Utils/Utils");
+const Languages_1 = require("./../../../../core/Languages/Languages");
+const ModelLanguages_1 = require("./../../../../core/Languages/ModelLanguages");
 const ModelInformation_1 = require("./../../common/item/colorEffect/font/animationEffect/information/ModelInformation");
 const ModelItem_1 = require("./../../common/item/ModelItem");
 const ModelCheckButton_1 = require("./../../common/checkButton/ModelCheckButton");
 const ModelLanguagesInformation_1 = require("./ModelLanguagesInformation");
-const ServiceJSON_1 = require("./../../../../Core/Services/JSON/ServiceJSON");
+const ServiceJSON_1 = require("./../../../../core/Services/JSON/ServiceJSON");
 let ComponentPageLanguages = class ComponentPageLanguages {
     constructor(serviceJSON) {
         this.serviceJSON = serviceJSON;

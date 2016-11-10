@@ -1,15 +1,15 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 
-import { Languages } from './../../../Core/Languages/Languages';
-import { ModelLanguages } from './../../../Core/Languages/ModelLanguages';
+import { Languages } from './../../../core/Languages/Languages';
+import { ModelLanguages } from './../../../core/Languages/ModelLanguages';
 
 import { ModelItem } from '../common/item/ModelItem';
 import { ModelTooltip } from '../common/item/ModelTooltip';
 import { ModelMenuHorizontal } from '../common/menuHorizontal/ModelMenuHorizontal';
 import { ModelMenuItems } from '../common/ModelMenuItems';
-import { ServiceJSON } from './../../../Core/Services/JSON/ServiceJSON';
+import { ServiceJSON } from './../../../core/Services/JSON/ServiceJSON';
 
-import { Utils } from './../../../Core/Utils/Utils';
+import { Utils } from './../../../core/Utils/Utils';
 @Component({
   moduleId: module.id,
   selector: Utils.getFileSelector(Utils.getFileName(__filename)),

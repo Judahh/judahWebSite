@@ -13,12 +13,12 @@ const platform_browser_1 = require("@angular/platform-browser");
 const forms_1 = require("@angular/forms");
 const http_1 = require("@angular/http");
 // import { AngularFireModule, AuthProviders, AuthMethods } from 'angularfire2';
-const ServiceJSON_1 = require("./Core/Services/JSON/ServiceJSON");
-require("./RXJS/RXJSExtensions");
+const ServiceJSON_1 = require("./core/Services/JSON/ServiceJSON");
+require("./rXJS/RXJSExtensions");
 const ComponentBody_1 = require("./view/body/ComponentBody");
 const ComponentHeader_1 = require("./view/body/header/ComponentHeader");
 const ComponentPage_1 = require("./view/body/page/ComponentPage");
-const ComponentPageWhoAmI_1 = require("./view/body/page/PageWhoAmI/ComponentPageWhoAmI");
+const ComponentPageWhoAmI_1 = require("./view/body/page/pageWhoAmI/ComponentPageWhoAmI");
 const ComponentPageEducation_1 = require("./view/body/page/pageEducation/ComponentPageEducation");
 const ComponentPageSkills_1 = require("./view/body/page/pageSkills/ComponentPageSkills");
 const ComponentPageProjects_1 = require("./view/body/page/pageProjects/ComponentPageProjects");
@@ -65,8 +65,8 @@ const Routing_1 = require("./Routing");
 //     },
 //     debounceTime: 100 // allow to debounce checking timer
 // };
-// import firebaseConfiguration from './Core/ConfigurationFiles/firebaseConfiguration.json';
-// import firebaseAuthConfiguration from './Core/ConfigurationFiles/firebaseAuthConfiguration.json';
+// import firebaseConfiguration from './core/ConfigurationFiles/firebaseConfiguration.json';
+// import firebaseAuthConfiguration from './core/ConfigurationFiles/firebaseAuthConfiguration.json';
 let SafeUrlPipe = class SafeUrlPipe {
     constructor(sanitizer) {
         this.sanitizer = sanitizer;

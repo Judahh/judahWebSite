@@ -10,7 +10,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 const core_1 = require("@angular/core");
 const ModelSubDivisor_1 = require("./ModelSubDivisor");
-const Utils_1 = require("./../../../../../../Core/Utils/Utils");
+const Utils_1 = require("./../../../../../../core/Utils/Utils");
 let ComponentSubDivisor = class ComponentSubDivisor {
     constructor() { }
     ngOnInit() {

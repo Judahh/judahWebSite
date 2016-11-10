@@ -3,9 +3,9 @@ import { Component, OnInit, Input, ViewEncapsulation } from '@angular/core';
 import { ModelImage } from './ModelImage';
 import { ComponentColorEffect } from '../item/colorEffect/ComponentColorEffect';
 
-import {HTMLGenerator} from './../../../../Core/HTMLGenerator/HTMLGenerator';
+import {HTMLGenerator} from './../../../../core/HTMLGenerator/HTMLGenerator';
 
-import { Utils } from './../../../../Core/Utils/Utils';
+import { Utils } from './../../../../core/Utils/Utils';
 
 @Component({
   moduleId: module.id,

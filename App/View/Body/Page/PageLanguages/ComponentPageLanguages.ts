@@ -1,8 +1,8 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 
-import { Utils } from './../../../../Core/Utils/Utils';
-import { Languages } from './../../../../Core/Languages/Languages';
-import { ModelLanguages } from './../../../../Core/Languages/ModelLanguages';
+import { Utils } from './../../../../core/Utils/Utils';
+import { Languages } from './../../../../core/Languages/Languages';
+import { ModelLanguages } from './../../../../core/Languages/ModelLanguages';
 
 import { ModelDivisorBlock } from './../../common/divisorBlock/ModelDivisorBlock';
 import { ModelDivisor } from './../../common/divisorBlock/divisor/ModelDivisor';
@@ -18,7 +18,7 @@ import { ModelCheckButton } from './../../common/checkButton/ModelCheckButton';
 
 import { ModelLanguagesInformation } from './ModelLanguagesInformation';
 
-import { ServiceJSON } from './../../../../Core/Services/JSON/ServiceJSON';
+import { ServiceJSON } from './../../../../core/Services/JSON/ServiceJSON';
 
 @Component({
   moduleId: module.id,
