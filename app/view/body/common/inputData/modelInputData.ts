@@ -1,11 +1,11 @@
-import { ModelTextInput } from './../textInput/ModelTextInput';
 import { ModelComboBox } from './../textInput/ModelComboBox';
+import { ModelTextInput } from './../textInput/ModelTextInput';
 import { ModelClickButton } from './../textInput/ModelClickButton';
 import { ModelCheckButton } from './../textInput/ModelCheckButton';
 
 export class ModelInputData {
-    modelTextInput:ModelTextInput;
     modelComboBox:ModelComboBox;
+    modelTextInput:ModelTextInput;
     modelClickButton:ModelClickButton;
     modelCheckButton:ModelCheckButton;
     
@@ -13,12 +13,12 @@ export class ModelInputData {
         return !((object==null)||(object==undefined));
     }
 
-    isModelTextInput(){
-        return this.exists(this.ModelTextInput);
-    }
-
     isModelComboBox(){
         return this.exists(this.ModelComboBox);
+    }
+
+    isModelTextInput(){
+        return this.exists(this.ModelTextInput);
     }
 
     isClickButton(){
