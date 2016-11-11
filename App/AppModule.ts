@@ -2,7 +2,7 @@ import { NgModule, CUSTOM_ELEMENTS_SCHEMA, Pipe, PipeTransform } from '@angular/
 import { BrowserModule, DomSanitizer } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { HttpModule, JsonpModule } from '@angular/http';
-// import { AngularFireModule, AuthProviders, AuthMethods } from 'angularfire2';
+import { AngularFireModule, AuthProviders, AuthMethods } from 'angularfire2';
 
 import { ServiceJSON } from './core/services/jSON/ServiceJSON'
 
@@ -72,9 +72,9 @@ import { hTMLGenerator } from './core/hTMLGenerator/hTMLGenerator';
 //     debounceTime: 100 // allow to debounce checking timer
 // };
 
-// import firebaseConfiguration from './core/configurationFiles/firebaseConfiguration.json';
+import firebaseConfiguration from './core/configurationFiles/firebaseConfiguration.json';
 
-// import firebaseAuthConfiguration from './core/configurationFiles/firebaseAuthConfiguration.json';
+import firebaseAuthConfiguration from './core/configurationFiles/firebaseAuthConfiguration.json';
 
 @Pipe({ name: 'safeUrl' })
 export class SafeUrlPipe implements PipeTransform {
@@ -98,7 +98,7 @@ export class SafeStylePipe implements PipeTransform {
     FormsModule,
     routing,
     HttpModule,
-    // AngularFireModule.initializeApp(firebaseConfiguration, firebaseAuthConfiguration),
+    AngularFireModule.initializeApp(firebaseConfiguration, firebaseAuthConfiguration),
     JsonpModule//,
     //ResponsiveModule,
     //InMemoryWebApiModule.forRoot(MenuItemService, { delay: 600 })
