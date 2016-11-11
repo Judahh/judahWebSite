@@ -10,7 +10,7 @@ export class ModelInputData {
     checkButton:ModelCheckButton;
     
     private exists(object:any) {
-        return !((object==null)||(object==undefined));
+        return (!((object==null)||(object==undefined)));
     }
 
     isComboBox(){

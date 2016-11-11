@@ -29,7 +29,6 @@ import { ComponentColorEffect } from './view/body/common/item/colorEffect/Compon
 import { ComponentItem } from './view/body/common/item/ComponentItem';
 import { ComponentMenuHorizontal } from './view/body/common/menuHorizontal/ComponentMenuHorizontal';
 
-import { ComponentInputData } from './view/body/common/inputData/ComponentInputData';
 import { ComponentTextInput } from './view/body/common/textInput/ComponentTextInput';
 import { ComponentComboBox } from './view/body/common/comboBox/ComponentComboBox';
 import { ComponentClickButton } from './view/body/common/clickButton/ComponentClickButton';
@@ -37,6 +36,7 @@ import { ComponentCheckButton } from './view/body/common/checkButton/ComponentCh
 import { ComponentImage } from './view/body/common/image/ComponentImage';
 import { ComponentVideoLink } from './view/body/common/videoLink/ComponentVideoLink';
 import { ComponentAuthentication } from './view/body/common/authentication/ComponentAuthentication';
+import { ComponentInputData } from './view/body/common/inputData/ComponentInputData';
 
 import { ComponentDivisorBlock } from './view/body/common/divisorBlock/ComponentDivisorBlock';
 import { ComponentDivisor } from './view/body/common/divisorBlock/divisor/ComponentDivisor';
