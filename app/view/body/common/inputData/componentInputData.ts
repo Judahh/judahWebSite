@@ -33,7 +33,7 @@ export class ComponentInputData implements OnInit {
   }
 
   style(){
-    return this.fontFamily()+this.fontSize();
+    return;
   }
 
 }
