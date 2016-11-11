@@ -4,28 +4,28 @@ import { ModelClickButton } from './../textInput/ModelClickButton';
 import { ModelCheckButton } from './../textInput/ModelCheckButton';
 
 export class ModelInputData {
-    modelComboBox:ModelComboBox;
-    modelTextInput:ModelTextInput;
-    modelClickButton:ModelClickButton;
-    modelCheckButton:ModelCheckButton;
+    comboBox:ModelComboBox;
+    textInput:ModelTextInput;
+    clickButton:ModelClickButton;
+    checkButton:ModelCheckButton;
     
     private exists(object:any) {
         return !((object==null)||(object==undefined));
     }
 
-    isModelComboBox(){
-        return this.exists(this.ModelComboBox);
+    isComboBox(){
+        return this.exists(this.comboBox);
     }
 
-    isModelTextInput(){
-        return this.exists(this.ModelTextInput);
+    isTextInput(){
+        return this.exists(this.textInput);
     }
 
     isClickButton(){
-        return this.exists(this.ModelClickButton);
+        return this.exists(this.clickButton);
     }
 
     isCheckButton(){
-        return this.exists(this.ModelCheckButton);
+        return this.exists(this.checkButton);
     }
 }
