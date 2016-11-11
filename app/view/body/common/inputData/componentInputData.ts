@@ -26,10 +26,6 @@ export class ComponentInputData implements OnInit {
   ngOnDestroy() {
   }
 
-  style(){
-    return;
-  }
-
 }
 
 
