@@ -98,7 +98,7 @@ export class SafeStylePipe implements PipeTransform {
     FormsModule,
     routing,
     HttpModule,
-    AngularFireModule.initializeApp(firebaseConfiguration, firebaseAuthConfiguration),
+    //AngularFireModule.initializeApp(firebaseConfiguration, firebaseAuthConfiguration),
     JsonpModule//,
     //ResponsiveModule,
     //InMemoryWebApiModule.forRoot(MenuItemService, { delay: 600 })
