@@ -5,24 +5,24 @@
     [style]="style()|safeStyle"
     value="{{modelTextInput.value}}"/>
 
-<div>
-<input 
-    *ngIf="modelTextInput.isDataList()"
-    name="{{modelTextInput.name}}"
-    [attr.list]="modelTextInput.getDataListId()"
-    placeholder="{{modelTextInput.placeholder}}"
-    [style]="style()|safeStyle"
-    value="{{modelTextInput.value}}"/>
+<div
+    *ngIf="modelTextInput.isDataList()">
+    <input 
+        name="{{modelTextInput.name}}"
+        [attr.list]="modelTextInput.getDataListId()"
+        placeholder="{{modelTextInput.placeholder}}"
+        [style]="style()|safeStyle"
+        value="{{modelTextInput.value}}"/>
 
-<datalist 
-    *ngIf="modelTextInput.isDataList()"
-    id="{{modelTextInput.getDataListId()}}">
-    <option 
-        *ngFor="let option of modelTextInput.arrayOptions">
-        {{option}}
-    </option>
-</datalist>
+    <datalist 
+        id="{{modelTextInput.getDataListId()}}">
+        <option 
+            *ngFor="let option of modelTextInput.arrayOptions">
+            {{option}}
+        </option>
+    </datalist>
 </div>
+
 <textarea 
     *ngIf="modelTextInput.isArea()"
     name="{{modelTextInput.name}}"
