@@ -1,7 +1,7 @@
-import { ModelComboBox } from './../textInput/ModelComboBox';
+import { ModelComboBox } from './../comboBox/ModelComboBox';
 import { ModelTextInput } from './../textInput/ModelTextInput';
-import { ModelClickButton } from './../textInput/ModelClickButton';
-import { ModelCheckButton } from './../textInput/ModelCheckButton';
+import { ModelClickButton } from './../clickButton/ModelClickButton';
+import { ModelCheckButton } from './../checkButton/ModelCheckButton';
 
 export class ModelInputData {
     comboBox:ModelComboBox;
