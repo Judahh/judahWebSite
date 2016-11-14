@@ -25,6 +25,10 @@ export class ComponentBasicForm implements OnInit {
 
   ngOnDestroy() {
   }
+
+  onSubmit(form: any): void {  
+    console.log('you submitted value: ', form);  
+  }
 }
 
 

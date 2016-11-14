@@ -1,7 +1,8 @@
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA, Pipe, PipeTransform } from '@angular/core';
 import { BrowserModule, DomSanitizer } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule  } from '@angular/forms';
 import { HttpModule, JsonpModule } from '@angular/http';
+
 //import { AngularFireModule, AuthProviders, AuthMethods } from 'angularfire2';
 
 import { ServiceJSON } from './core/services/jSON/ServiceJSON'
@@ -37,6 +38,7 @@ import { ComponentImage } from './view/body/common/image/ComponentImage';
 import { ComponentVideoLink } from './view/body/common/videoLink/ComponentVideoLink';
 import { ComponentAuthentication } from './view/body/common/authentication/ComponentAuthentication';
 import { ComponentInputData } from './view/body/common/inputData/ComponentInputData';
+import { ComponentBasicForm } from './view/body/common/basicForm/ComponentBasicForm';
 
 import { ComponentDivisorBlock } from './view/body/common/divisorBlock/ComponentDivisorBlock';
 import { ComponentDivisor } from './view/body/common/divisorBlock/divisor/ComponentDivisor';
@@ -97,6 +99,7 @@ export class SafeStylePipe implements PipeTransform {
   imports: [
     BrowserModule,
     FormsModule,
+    ReactiveFormsModule,
     routing,
     HttpModule,
     //AngularFireModule.initializeApp(firebaseConfiguration, firebaseAuthConfiguration),
@@ -133,6 +136,7 @@ export class SafeStylePipe implements PipeTransform {
     ComponentTextInput,
     ComponentComboBox,
     ComponentInputData,
+    ComponentBasicForm,
     ComponentAuthentication,
     SafeUrlPipe,
     SafeStylePipe

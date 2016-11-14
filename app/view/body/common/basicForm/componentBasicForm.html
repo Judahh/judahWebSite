@@ -1,7 +1,6 @@
 <form>
     <div
-        *ngFor="let array2InputData of modelBasicForm.array3InputData"
-        [modelInputData]="inputData">
+        *ngFor="let array2InputData of modelBasicForm.array3InputData">
         <div style="display: inline-block;"
             *ngFor="let arrayInputData of array2InputData">
             <div style="display: inline-block;"
@@ -12,4 +11,5 @@
             </div>
         </div>
     </div>
+    <button type="submit" class="ui button">Submit</button> 
 </form>
