@@ -26,6 +26,26 @@ export class ComponentInputData implements OnInit {
   ngOnDestroy() {
   }
 
+  private exists(object:any) {
+      return (!((object==null)||(object==undefined)));
+  }
+
+  isComboBox(){
+      return this.exists(this.modelInputData.comboBox);
+  }
+
+  isTextInput(){
+      return this.exists(this.modelInputData.textInput);
+  }
+
+  isClickButton(){
+      return this.exists(this.modelInputData.clickButton);
+  }
+
+  isCheckButton(){
+      return this.exists(this.modelInputData.checkButton);
+  }
+
 }
 
 
