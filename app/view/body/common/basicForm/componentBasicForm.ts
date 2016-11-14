@@ -25,7 +25,6 @@ export class ComponentBasicForm implements OnInit {
 
   ngOnDestroy() {
   }
-
 }
 
 

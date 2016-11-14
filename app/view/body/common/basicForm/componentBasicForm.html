@@ -1,6 +1,15 @@
 <form>
-    <inputData
-        *ngFor="let inputData of modelBasicForm.arrayInputData"
+    <div
+        *ngFor="let array2InputData of modelBasicForm.array3InputData"
         [modelInputData]="inputData">
-    </inputdata>
+        <div 
+            *ngFor="let arrayInputData of array2InputData">
+            <div
+                *ngFor="let inputData of arrayInputData">
+                <inputData
+                    [modelInputData]="inputData">
+                </inputData>
+            </div>
+        </div>
+    </div>
 </form>
