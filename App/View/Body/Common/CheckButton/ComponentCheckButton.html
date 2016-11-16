@@ -1,12 +1,12 @@
 <label>
     <input *ngIf="modelCheckButton.checked" checked 
-        type="{{modelCheckButton.type()}}" 
+        type="{{type()}}" 
         name="{{modelCheckButton.name}}"
         value="{{modelCheckButton.value}}"
     />
 
     <input *ngIf="!modelCheckButton.checked"
-        type="{{modelCheckButton.type()}}" 
+        type="{{type()}}" 
         name="{{modelCheckButton.name}}"
         value="{{modelCheckButton.value}}"
     />

@@ -1,21 +1,21 @@
 <input 
-    *ngIf="modelTextInput.isField()"
+    *ngIf="isField()"
     name="{{modelTextInput.name}}"
     placeholder="{{modelTextInput.placeholder}}"
     [style]="style()|safeStyle"
     value="{{modelTextInput.value}}"/>
 
 <div
-    *ngIf="modelTextInput.isDataList()">
+    *ngIf="isDataList()">
     <input 
         name="{{modelTextInput.name}}"
-        [attr.list]="modelTextInput.getDataListId()"
+        [attr.list]="getDataListId()"
         placeholder="{{modelTextInput.placeholder}}"
         [style]="style()|safeStyle"
         value="{{modelTextInput.value}}"/>
 
     <datalist 
-        id="{{modelTextInput.getDataListId()}}">
+        id="{{getDataListId()}}">
         <option 
             *ngFor="let option of modelTextInput.arrayOptions">
             {{option}}
@@ -24,7 +24,7 @@
 </div>
 
 <textarea 
-    *ngIf="modelTextInput.isArea()"
+    *ngIf="isArea()"
     name="{{modelTextInput.name}}"
     placeholder="{{modelTextInput.placeholder}}"
     [style]="style()|safeStyle">

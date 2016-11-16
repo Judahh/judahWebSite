@@ -32,6 +32,14 @@ export class ComponentCheckButton implements OnInit {
   ngOnDestroy() {
   }
 
+  public type(){
+      if(this.modelCheckButton.radio){
+          return "radio";
+      }else{
+          return "checkbox"
+      }
+  }
+
 }
 
 

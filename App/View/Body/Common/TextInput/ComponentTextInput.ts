@@ -9,6 +9,8 @@ import { ModelItem } from './../item/ModelItem';
 import { ModelTextInput } from './ModelTextInput';
 import { Utils } from './../../../../core/utils/Utils';
 
+import { TextInputType } from './TextInputType';
+
 @Component({
   moduleId: module.id,
   selector: Utils.getFileSelector(Utils.getFileName(__filename)),
@@ -50,6 +52,22 @@ export class ComponentTextInput implements OnInit {
   style(){
     return this.fontFamily()+this.fontSize();
   }
+
+  isField(){
+        return this.modelTextInput.textInputType==TextInputType.field;
+    }
+
+    isArea(){
+        return this.modelTextInput.textInputType==TextInputType.area;
+    }
+
+    isDataList(){
+        return this.modelTextInput.textInputType==TextInputType.dataList;
+    }
+
+    getDataListId(){
+        return "dataListId" + this.modelTextInput.name.charAt(0).toUpperCase() + this.modelTextInput.name.slice(1);
+    }
 
 }
 
