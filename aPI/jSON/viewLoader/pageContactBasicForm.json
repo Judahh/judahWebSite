@@ -404,6 +404,38 @@
                             }
                         }
                     }
+                },
+                {
+                    "checkButton":{
+                        "name":"flexible",
+                        "value":"flexible",
+                        "radio":false,
+                        "checked":false,
+                        "item":{
+                            "id":0,
+                            "routerLink":"",
+                            "routerLinkActive":"inactive",
+                            "colorEffect":{
+                                "colorEffect":"DivClassNeon",
+                                "font":{
+                                    "font":"DivClassOpenSansLight",
+                                    "width":"100%",
+                                    "size":10,
+                                    "arrayPadding":[5],
+                                    "animationEffect":{
+                                        "class":"",
+                                        "subClass":"",
+                                        "subClasses":[],
+                                        "arrayInformation":[
+                                            {
+                                                "information":"FLEX"
+                                            }
+                                        ]
+                                    }
+                                }
+                            }
+                        }
+                    }
                 }
             ]
         ]
