@@ -21,19 +21,10 @@
                             "animationEffect":{
                                 "class":"",
                                 "subClass":"",
-                                "subClasses":[
-                                    "DivClassTextBackground",
-                                    {
-                                        "current":"DivClassSpin2",
-                                        "subClass":"DivClassTextOverText"
-                                    }
-                                ],
+                                "subClasses":[],
                                 "arrayInformation":[
                                     {
-                                        "information":"g"
-                                    },
-                                    {
-                                        "information":"h"
+                                        "information":"±"
                                     }
                                 ]
                             }
@@ -116,25 +107,11 @@
                             "arrayPadding":[],
                             "animationEffect":{
                                 "class":"",
-                                "subClass":"DivClassConsoleIcon",
-                                "subClasses":[
-                                    "DivClassConsoleIconOff",
-                                    "DivClassConsoleIconOn",
-                                    "DivClassConsoleIconOn1",
-                                    "DivClassConsoleIconOn2"
-                                ],
+                                "subClass":"",
+                                "subClasses":[],
                                 "arrayInformation":[
                                     {
-                                        "information":"i"
-                                    },
-                                    {
-                                        "information":"j"
-                                    },
-                                    {
-                                        "information":"k"
-                                    },
-                                    {
-                                        "information":"l"
+                                        "information":"2"
                                     }
                                 ]
                             }
