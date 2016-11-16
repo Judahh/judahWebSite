@@ -111,41 +111,9 @@ export class ComponentPageContact implements OnInit {
   private getArrayModelDivisorBlock(arrayModelDivisorBlock:Array<ModelDivisorBlock>){
     this.arrayModelDivisorBlock=arrayModelDivisorBlock;
     this.arrayModelDivisorBlock[0].divisor.arraySubDivisor[0].item.colorEffect.font.animationEffect.arrayInformation.push(new ModelInformation(this.modelContactInformation.title));
-
-    this.arrayModelDivisorBlock[1].divisor.arraySubDivisor[1].item.colorEffect.font.animationEffect.arrayInformation.push(new ModelInformation(this.modelContactInformation.diplomas_CertificatesTitle));
-    for(let index=0;index<this.modelContactInformation.diplomas_CertificatesText.length;index++){
-      var modelInformation:ModelInformation=Object.create(this.basicModelInformation);
-      modelInformation.information=this.modelContactInformation.diplomas_CertificatesText[index];
-      this.arrayModelDivisorBlock[1].arraySubDivisor[0].item.colorEffect.font.animationEffect.arrayInformation.push(modelInformation);
-    }
-
-    this.arrayModelDivisorBlock[2].divisor.arraySubDivisor[1].item.colorEffect.font.animationEffect.arrayInformation.push(new ModelInformation(this.modelContactInformation.hardwareTitle));
-    for(let index=0;index<this.modelContactInformation.hardwareText.length;index++){
-      var modelInformation:ModelInformation=Object.create(this.basicModelInformation);
-      modelInformation.information=this.modelContactInformation.hardwareText[index];
-      this.arrayModelDivisorBlock[2].arraySubDivisor[0].item.colorEffect.font.animationEffect.arrayInformation.push(modelInformation);
-    }
-
-    this.arrayModelDivisorBlock[3].divisor.arraySubDivisor[1].item.colorEffect.font.animationEffect.arrayInformation.push(new ModelInformation(this.modelContactInformation.softwareTitle));
-    for(let index=0;index<this.modelContactInformation.softwareText.length;index++){
-      var modelInformation:ModelInformation=Object.create(this.basicModelInformation);
-      modelInformation.information=this.modelContactInformation.softwareText[index];
-      this.arrayModelDivisorBlock[3].arraySubDivisor[0].item.colorEffect.font.animationEffect.arrayInformation.push(modelInformation);
-    }
-
-    this.arrayModelDivisorBlock[4].divisor.arraySubDivisor[1].item.colorEffect.font.animationEffect.arrayInformation.push(new ModelInformation(this.modelContactInformation.webTitle));
-    for(let index=0;index<this.modelContactInformation.webText.length;index++){
-      var modelInformation:ModelInformation=Object.create(this.basicModelInformation);
-      modelInformation.information=this.modelContactInformation.webText[index];
-      this.arrayModelDivisorBlock[4].arraySubDivisor[0].item.colorEffect.font.animationEffect.arrayInformation.push(modelInformation);
-    }
-
-    this.arrayModelDivisorBlock[5].divisor.arraySubDivisor[1].item.colorEffect.font.animationEffect.arrayInformation.push(new ModelInformation(this.modelContactInformation.mobileTitle));
-    for(let index=0;index<this.modelContactInformation.mobileText.length;index++){
-      var modelInformation:ModelInformation=Object.create(this.basicModelInformation);
-      modelInformation.information=this.modelContactInformation.mobileText[index];
-      this.arrayModelDivisorBlock[5].arraySubDivisor[0].item.colorEffect.font.animationEffect.arrayInformation.push(modelInformation);
-    }
+    this.arrayModelDivisorBlock[1].divisor.arraySubDivisor[0].item.colorEffect.font.animationEffect.arrayInformation.push(new ModelInformation(this.modelContactInformation.doYouWantToHireMe));
+    this.arrayModelDivisorBlock[2].divisor.arraySubDivisor[1].item.colorEffect.font.animationEffect.arrayInformation.push(new ModelInformation(this.modelContactInformation.curriculumVitae));
+    this.arrayModelDivisorBlock[3].divisor.arraySubDivisor[1].item.colorEffect.font.animationEffect.arrayInformation.push(new ModelInformation(this.modelContactInformation.socialNetworks));
   }
 }
 
