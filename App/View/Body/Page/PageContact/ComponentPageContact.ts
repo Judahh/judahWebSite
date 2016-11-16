@@ -31,7 +31,8 @@ export class ComponentPageContact implements OnInit {
   basicModelInformation:ModelInformation;
   basicModelBasicForm:ModelBasicForm;
 
-  arrayModelDivisorBlock:Array<ModelDivisorBlock>;
+  arrayModelDivisorBlock0:Array<ModelDivisorBlock>;
+  arrayModelDivisorBlock1:Array<ModelDivisorBlock>;
 
 
   input:string="inputIdSalaryCurrency";
@@ -48,7 +49,8 @@ export class ComponentPageContact implements OnInit {
   constructor(private serviceJSON: ServiceJSON) {}
 
   initialization(){
-    this.arrayModelDivisorBlock=new Array<ModelDivisorBlock>();
+    this.arrayModelDivisorBlock0=new Array<ModelDivisorBlock>();
+    this.arrayModelDivisorBlock1=new Array<ModelDivisorBlock>();
     this.modelLanguages=new ModelLanguages();
     this.modelContactInformation=new ModelContactInformation();
     this.basicModelInformation=new ModelInformation("");
@@ -57,7 +59,8 @@ export class ComponentPageContact implements OnInit {
     this.getHalfModelInformation();
     this.getLanguageService();
     this.getInformationService();
-    this.getArrayDivisorBlockService();
+    this.getArrayDivisorBlock0Service();
+    this.getArrayDivisorBlock1Service();
   }
 
   ngOnDestroy() {
@@ -97,23 +100,38 @@ export class ComponentPageContact implements OnInit {
     }
   }
 
-  private getArrayDivisorBlockService(){
+  private getArrayDivisorBlock0Service(){
     var errorMessage="";
 
-    this.serviceJSON.getObservable('viewLoader/'+Utils.getFileSelector(Utils.getFileName(__filename))+'ArrayDivisorBlock').subscribe(
-      item => this.getArrayModelDivisorBlock(item), error => errorMessage = <any>error);
+    this.serviceJSON.getObservable('viewLoader/'+Utils.getFileSelector(Utils.getFileName(__filename))+'ArrayDivisorBlock0').subscribe(
+      item => this.getArrayModelDivisorBlock0(item), error => errorMessage = <any>error);
     
     if(errorMessage!=""){
       alert("Error:"+errorMessage);
     }
   }
 
-  private getArrayModelDivisorBlock(arrayModelDivisorBlock:Array<ModelDivisorBlock>){
-    this.arrayModelDivisorBlock=arrayModelDivisorBlock;
-    this.arrayModelDivisorBlock[0].divisor.arraySubDivisor[0].item.colorEffect.font.animationEffect.arrayInformation.push(new ModelInformation(this.modelContactInformation.title));
-    this.arrayModelDivisorBlock[1].divisor.arraySubDivisor[0].item.colorEffect.font.animationEffect.arrayInformation.push(new ModelInformation(this.modelContactInformation.doYouWantToHireMe));
-    this.arrayModelDivisorBlock[2].divisor.arraySubDivisor[1].item.colorEffect.font.animationEffect.arrayInformation.push(new ModelInformation(this.modelContactInformation.curriculumVitae));
-    this.arrayModelDivisorBlock[3].divisor.arraySubDivisor[1].item.colorEffect.font.animationEffect.arrayInformation.push(new ModelInformation(this.modelContactInformation.socialNetworks));
+  private getArrayDivisorBlock1Service(){
+    var errorMessage="";
+
+    this.serviceJSON.getObservable('viewLoader/'+Utils.getFileSelector(Utils.getFileName(__filename))+'ArrayDivisorBlock1').subscribe(
+      item => this.getArrayModelDivisorBlock1(item), error => errorMessage = <any>error);
+    
+    if(errorMessage!=""){
+      alert("Error:"+errorMessage);
+    }
+  }
+
+  private getArrayModelDivisorBlock0(arrayModelDivisorBlock:Array<ModelDivisorBlock>){
+    this.arrayModelDivisorBlock0=arrayModelDivisorBlock;
+    this.arrayModelDivisorBlock0[0].divisor.arraySubDivisor[0].item.colorEffect.font.animationEffect.arrayInformation.push(new ModelInformation(this.modelContactInformation.title));
+    this.arrayModelDivisorBlock0[1].divisor.arraySubDivisor[0].item.colorEffect.font.animationEffect.arrayInformation.push(new ModelInformation(this.modelContactInformation.doYouWantToHireMe));
+  }
+
+  private getArrayModelDivisorBlock1(arrayModelDivisorBlock:Array<ModelDivisorBlock>){
+    this.arrayModelDivisorBlock1=arrayModelDivisorBlock;
+    this.arrayModelDivisorBlock1[0].divisor.arraySubDivisor[1].item.colorEffect.font.animationEffect.arrayInformation.push(new ModelInformation(this.modelContactInformation.curriculumVitae));
+    this.arrayModelDivisorBlock1[1].divisor.arraySubDivisor[1].item.colorEffect.font.animationEffect.arrayInformation.push(new ModelInformation(this.modelContactInformation.socialNetworks));
   }
 }
 
