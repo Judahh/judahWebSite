@@ -30,6 +30,10 @@ export class ComponentInputData implements OnInit {
       return (!((object==null)||(object==undefined)));
   }
 
+  isItem(){
+      return this.exists(this.modelInputData.item);
+  }
+
   isComboBox(){
       return this.exists(this.modelInputData.comboBox);
   }
