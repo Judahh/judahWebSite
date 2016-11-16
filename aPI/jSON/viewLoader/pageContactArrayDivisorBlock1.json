@@ -101,7 +101,7 @@
                     "colorEffect":{
                         "colorEffect":"DivClassNeon",
                         "font":{
-                            "font":"DivClassIcon",
+                            "font":"DivClassIconSocialMedia",
                             "width":"100%",
                             "size":100,
                             "arrayPadding":[],
