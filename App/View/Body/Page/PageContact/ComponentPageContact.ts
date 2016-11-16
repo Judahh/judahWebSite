@@ -1,6 +1,22 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
-
 import { Utils } from './../../../../core/utils/Utils';
+import { Languages } from './../../../../core/languages/Languages';
+import { ModelLanguages } from './../../../../core/languages/ModelLanguages';
+
+import { ModelDivisorBlock } from './../../common/divisorBlock/ModelDivisorBlock';
+import { ModelDivisor } from './../../common/divisorBlock/divisor/ModelDivisor';
+import { ModelSubDivisor } from './../../common/divisorBlock/divisor/subDivisor/ModelSubDivisor';
+
+import { ModelInformation } from './../../common/item/colorEffect/font/animationEffect/information/ModelInformation';
+import { ModelAnimationEffect } from './../../common/item/colorEffect/font/animationEffect/ModelAnimationEffect';
+import { ModelFont } from './../../common/item/colorEffect/font/ModelFont';
+import { ModelColorEffect } from './../../common/item/colorEffect/ModelColorEffect';
+import { ModelItem } from './../../common/item/ModelItem';
+import { ModelBasicForm } from './../../common/basicForm/ModelBasicForm';
+
+import { ModelContactInformation } from './ModelContactInformation';
+
+import { ServiceJSON } from './../../../../core/services/jSON/ServiceJSON';
 
 @Component({
   moduleId: module.id,
@@ -10,8 +26,13 @@ import { Utils } from './../../../../core/utils/Utils';
   encapsulation: ViewEncapsulation.None
 })
 export class ComponentPageContact implements OnInit {
-  input:string="inputIdSalaryCurrency";
+  modelContactInformation:ModelContactInformation;
+  modelLanguages:ModelLanguages;
+  basicModelInformation:ModelInformation;
+  basicModelBasicForm:ModelBasicForm;
 
+
+  input:string="inputIdSalaryCurrency";
   page:string;
 
   //constructor(private heroService: HeroService) { }
