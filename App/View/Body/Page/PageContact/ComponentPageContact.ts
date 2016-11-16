@@ -61,6 +61,7 @@ export class ComponentPageContact implements OnInit {
     this.getInformationService();
     this.getArrayDivisorBlock0Service();
     this.getArrayDivisorBlock1Service();
+    this.getBasicModelBasicFormService();
   }
 
   ngOnDestroy() {
@@ -132,6 +133,21 @@ export class ComponentPageContact implements OnInit {
     this.arrayModelDivisorBlock1=arrayModelDivisorBlock;
     this.arrayModelDivisorBlock1[0].divisor.arraySubDivisor[1].item.colorEffect.font.animationEffect.arrayInformation.push(new ModelInformation(this.modelContactInformation.curriculumVitae));
     this.arrayModelDivisorBlock1[1].divisor.arraySubDivisor[1].item.colorEffect.font.animationEffect.arrayInformation.push(new ModelInformation(this.modelContactInformation.socialNetworks));
+  }
+
+  private getBasicModelBasicFormService(){
+    var errorMessage="";
+
+    this.serviceJSON.getObservable('viewLoader/'+Utils.getFileSelector(Utils.getFileName(__filename))+'BasicForm').subscribe(
+      item => this.getBasicModelBasicForm(item), error => errorMessage = <any>error);
+    
+    if(errorMessage!=""){
+      alert("Error:"+errorMessage);
+    }
+  }
+
+  private getBasicModelBasicForm(modelBasicForm:ModelBasicForm){
+    this.basicModelBasicForm=modelBasicForm;
   }
 }
 
