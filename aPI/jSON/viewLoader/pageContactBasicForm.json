@@ -578,6 +578,38 @@
                     }
                 }
             ]
+        ],
+        [
+            [
+                {
+                    "clickButton":{
+                        "type":"submit",
+                        "item":{
+                            "id":0,
+                            "routerLink":"",
+                            "routerLinkActive":"inactive",
+                            "colorEffect":{
+                                "colorEffect":"DivClassNeon",
+                                "font":{
+                                    "font":"DivClassOpenSansLight",
+                                    "size":10,
+                                    "arrayPadding":[5],
+                                    "animationEffect":{
+                                        "class":"",
+                                        "subClass":"",
+                                        "subClasses":[],
+                                        "arrayInformation":[
+                                            {
+                                                "information":"submit"
+                                            }
+                                        ]
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            ]
         ]
     ]
 }
