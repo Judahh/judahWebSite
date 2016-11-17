@@ -754,25 +754,26 @@
     },
     "arraySubDivisor":[
         {
-            "toBottom": false,
-            "item":{
-                "id":0,
-                "routerLink":"",
-                "routerLinkActive":"inactive",
-                "colorEffect":{
-                    "colorEffect":"",
-                    "font":{
-                        "font":"DivClassFuturisticI",
-                        "textAlign":"justify",
-                        "textIndent":"0.5em",
-                        "width":"100%",
-                        "size":20,
-                        "arrayPadding":[10],
-                        "animationEffect":{
-                            "class":"",
-                            "subClass":"",
-                            "subClasses":[],
-                            "arrayInformation":[]
+            "inputData":{
+                "clickButton":{
+                    "type":"submit",
+                    "item":{
+                        "id":0,
+                        "routerLink":"",
+                        "routerLinkActive":"inactive",
+                        "colorEffect":{
+                            "colorEffect":"DivClassNeon",
+                            "font":{
+                                "font":"DivClassOpenSansLight",
+                                "size":15,
+                                "arrayPadding":[5],
+                                "animationEffect":{
+                                    "class":"",
+                                    "subClass":"",
+                                    "subClasses":[],
+                                    "arrayInformation":[]
+                                }
+                            }
                         }
                     }
                 }
@@ -841,29 +842,7 @@
     },
     "arraySubDivisor":[
         {
-            "toBottom": false,
-            "item":{
-                "id":0,
-                "routerLink":"",
-                "routerLinkActive":"inactive",
-                "colorEffect":{
-                    "colorEffect":"",
-                    "font":{
-                        "font":"DivClassFuturisticI",
-                        "textAlign":"justify",
-                        "textIndent":"0.5em",
-                        "width":"100%",
-                        "size":20,
-                        "arrayPadding":[10],
-                        "animationEffect":{
-                            "class":"",
-                            "subClass":"",
-                            "subClasses":[],
-                            "arrayInformation":[]
-                        }
-                    }
-                }
-            }
+            
         }
     ]
   }

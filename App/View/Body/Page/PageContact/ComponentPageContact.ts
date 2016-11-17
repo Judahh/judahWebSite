@@ -13,6 +13,7 @@ import { ModelFont } from './../../common/item/colorEffect/font/ModelFont';
 import { ModelColorEffect } from './../../common/item/colorEffect/ModelColorEffect';
 import { ModelItem } from './../../common/item/ModelItem';
 import { ModelBasicForm } from './../../common/basicForm/ModelBasicForm';
+import { ModelClickButton } from './../../common/clickButton/ModelClickButton';
 
 import { ModelContactInformation } from './ModelContactInformation';
 
@@ -160,8 +161,12 @@ export class ComponentPageContact implements OnInit {
     this.arrayModelDivisorBlock[1].arraySubDivisor[0].basicForm.array3InputData[9][0][0].clickButton.item.colorEffect.font.animationEffect.arrayInformation.push(new ModelInformation(this.modelContactInformation.submit));
     // 2 eh limpo
     this.arrayModelDivisorBlock[3].divisor.arraySubDivisor[1].item.colorEffect.font.animationEffect.arrayInformation.push(new ModelInformation(this.modelContactInformation.curriculumVitae));
+    this.arrayModelDivisorBlock[3].arraySubDivisor[0].inputData.clickButton.item.colorEffect.font.animationEffect.arrayInformation.push(new ModelInformation(this.modelContactInformation.download));
+    this.arrayModelDivisorBlock[3].arraySubDivisor[0].inputData.clickButton.onClick=this.onClickCallback;
     this.arrayModelDivisorBlock[4].divisor.arraySubDivisor[1].item.colorEffect.font.animationEffect.arrayInformation.push(new ModelInformation(this.modelContactInformation.socialNetworks));
   }
+
+  onClickCallback = (modelClickButton: ModelClickButton) : void => {
+    alert(modelClickButton);
+  }
 }
-
-

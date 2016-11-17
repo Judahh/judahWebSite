@@ -32,6 +32,10 @@ export class ComponentClickButton implements OnInit {
   ngOnDestroy() {
   }
 
+  onClick(callback:(modelClickButton: ModelClickButton) => any) : void {
+      callback(this.modelClickButton);
+  }
+
 }
 
 

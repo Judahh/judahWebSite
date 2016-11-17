@@ -1,4 +1,5 @@
-<button type="{{modelClickButton.type}}">
+<button type="{{modelClickButton.type}}"
+        (click)="onClick(modelClickButton.onClick)">
     <item [modelItem]="modelClickButton.item">
     </item>
 </button>
