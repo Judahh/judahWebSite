@@ -32,6 +32,16 @@ export class ComponentComboBox implements OnInit {
   ngOnDestroy() {
   }
 
+  fontSize(){
+    if(this.modelComboBox.fontSize==undefined||this.modelComboBox.fontSize==null||this.modelComboBox.fontSize==""){
+      return "";
+    }
+    return "font-size: "+this.modelComboBox.fontSize+"px;";
+  }
+
+  style(){
+    return this.fontSize();
+  }
 }
 
 

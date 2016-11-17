@@ -6,7 +6,7 @@
                     "textInput":{
                         "name":"name",
                         "fontFamily":"OpenSans-Light",
-                        "fontSize":10,
+                        "fontSize":15,
                         "textInputType":0
                     }
                 }
@@ -16,7 +16,7 @@
                     "textInput":{
                         "name":"company",
                         "fontFamily":"OpenSans-Light",
-                        "fontSize":10,
+                        "fontSize":15,
                         "textInputType":0
                     }
                 }
@@ -28,7 +28,7 @@
                     "textInput":{
                         "name":"email",
                         "fontFamily":"OpenSans-Light",
-                        "fontSize":10,
+                        "fontSize":15,
                         "textInputType":0
                     }
                 }
@@ -38,7 +38,7 @@
                     "textInput":{
                         "name":"phone",
                         "fontFamily":"OpenSans-Light",
-                        "fontSize":10,
+                        "fontSize":15,
                         "textInputType":0
                     }
                 },
@@ -56,7 +56,7 @@
                     "textInput":{
                         "name":"address",
                         "fontFamily":"OpenSans-Light",
-                        "fontSize":10,
+                        "fontSize":15,
                         "textInputType":0
                     }
                 }
@@ -68,7 +68,7 @@
                     "textInput":{
                         "name":"jobTitle",
                         "fontFamily":"OpenSans-Light",
-                        "fontSize":10,
+                        "fontSize":15,
                         "textInputType":0
                     }
                 },
@@ -84,7 +84,7 @@
                     "textInput":{
                         "name":"currency",
                         "fontFamily":"OpenSans-Light",
-                        "fontSize":10,
+                        "fontSize":15,
                         "textInputType":2,
                         "arrayOptions":[]
                     }
@@ -93,7 +93,7 @@
                     "textInput":{
                         "name":"salary",
                         "fontFamily":"OpenSans-Light",
-                        "fontSize":10,
+                        "fontSize":15,
                         "textInputType":0
                     }
                 },
@@ -118,7 +118,7 @@
                                 "font":{
                                     "font":"DivClassOpenSansLight",
                                     "width":"100%",
-                                    "size":10,
+                                    "size":15,
                                     "arrayPadding":[5],
                                     "animationEffect":{
                                         "class":"",
@@ -145,7 +145,7 @@
                             "font":{
                                 "font":"DivClassOpenSansLight",
                                 "width":"100%",
-                                "size":10,
+                                "size":15,
                                 "arrayPadding":[5],
                                 "animationEffect":{
                                     "class":"",
@@ -176,7 +176,7 @@
                                 "font":{
                                     "font":"DivClassOpenSansLight",
                                     "width":"100%",
-                                    "size":10,
+                                    "size":15,
                                     "arrayPadding":[5],
                                     "animationEffect":{
                                         "class":"",
@@ -204,7 +204,7 @@
                                 "font":{
                                     "font":"DivClassOpenSansLight",
                                     "width":"100%",
-                                    "size":10,
+                                    "size":15,
                                     "arrayPadding":[5],
                                     "animationEffect":{
                                         "class":"",
@@ -232,7 +232,7 @@
                                 "font":{
                                     "font":"DivClassOpenSansLight",
                                     "width":"100%",
-                                    "size":10,
+                                    "size":15,
                                     "arrayPadding":[5],
                                     "animationEffect":{
                                         "class":"",
@@ -260,7 +260,7 @@
                                 "font":{
                                     "font":"DivClassOpenSansLight",
                                     "width":"100%",
-                                    "size":10,
+                                    "size":15,
                                     "arrayPadding":[5],
                                     "animationEffect":{
                                         "class":"",
@@ -288,7 +288,7 @@
                                 "font":{
                                     "font":"DivClassOpenSansLight",
                                     "width":"100%",
-                                    "size":10,
+                                    "size":15,
                                     "arrayPadding":[5],
                                     "animationEffect":{
                                         "class":"",
@@ -316,7 +316,7 @@
                                 "font":{
                                     "font":"DivClassOpenSansLight",
                                     "width":"100%",
-                                    "size":10,
+                                    "size":15,
                                     "arrayPadding":[5],
                                     "animationEffect":{
                                         "class":"",
@@ -344,7 +344,7 @@
                                 "font":{
                                     "font":"DivClassOpenSansLight",
                                     "width":"100%",
-                                    "size":10,
+                                    "size":15,
                                     "arrayPadding":[5],
                                     "animationEffect":{
                                         "class":"",
@@ -372,7 +372,7 @@
                                 "font":{
                                     "font":"DivClassOpenSansLight",
                                     "width":"100%",
-                                    "size":10,
+                                    "size":15,
                                     "arrayPadding":[5],
                                     "animationEffect":{
                                         "class":"",
@@ -393,7 +393,7 @@
                     "textInput":{
                         "name":"in",
                         "fontFamily":"OpenSans-Light",
-                        "fontSize":10,
+                        "fontSize":15,
                         "textInputType":0
                     }
                 },
@@ -407,7 +407,7 @@
                             "font":{
                                 "font":"DivClassOpenSansLight",
                                 "width":"100%",
-                                "size":10,
+                                "size":15,
                                 "arrayPadding":[5],
                                 "animationEffect":{
                                     "class":"",
@@ -434,7 +434,7 @@
                                 "font":{
                                     "font":"DivClassOpenSansLight",
                                     "width":"100%",
-                                    "size":10,
+                                    "size":15,
                                     "arrayPadding":[5],
                                     "animationEffect":{
                                         "class":"",
@@ -455,7 +455,7 @@
                     "textInput":{
                         "name":"out",
                         "fontFamily":"OpenSans-Light",
-                        "fontSize":10,
+                        "fontSize":15,
                         "textInputType":0
                     }
                 },
@@ -469,7 +469,7 @@
                             "font":{
                                 "font":"DivClassOpenSansLight",
                                 "width":"100%",
-                                "size":10,
+                                "size":15,
                                 "arrayPadding":[5],
                                 "animationEffect":{
                                     "class":"",
@@ -496,7 +496,7 @@
                                 "font":{
                                     "font":"DivClassOpenSansLight",
                                     "width":"100%",
-                                    "size":10,
+                                    "size":15,
                                     "arrayPadding":[5],
                                     "animationEffect":{
                                         "class":"",
@@ -524,7 +524,7 @@
                                 "colorEffect":"DivClassNeon",
                                 "font":{
                                     "font":"DivClassOpenSansLight",
-                                    "size":10,
+                                    "size":15,
                                     "arrayPadding":[5],
                                     "animationEffect":{
                                         "class":"",
