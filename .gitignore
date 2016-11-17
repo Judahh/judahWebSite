@@ -3,6 +3,9 @@ app/**/*.js
 app/**/*.map
 aPI/**/*.js
 aPI/**/*.map
+*.js
+*.map
+!plugins/*.js
 node_modules
 !node_modules/@types/declaration/*
 jspm_packages
