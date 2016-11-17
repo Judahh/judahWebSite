@@ -8,6 +8,7 @@ aPI/**/*.map
 *.js
 *.map
 !plugins/*.js
+!require.js
 node_modules
 !node_modules/@types/declaration/*
 jspm_packages
