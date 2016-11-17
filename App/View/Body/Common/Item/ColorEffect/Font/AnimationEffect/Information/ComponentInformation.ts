@@ -24,6 +24,13 @@ export class ComponentInformation implements OnInit{
   initialization(){
   }
 
+  textDecoration(){
+    if(this.information.textDecoration==null||this.information.textDecoration==undefined||this.information.textDecoration==""){
+      return "";
+    }
+    return "text-decoration: "+this.information.textDecoration+";";
+  }
+
   float(){
     if(this.information.float==null||this.information.float==undefined||this.information.float==""){
       return "";
@@ -39,6 +46,6 @@ export class ComponentInformation implements OnInit{
   }
 
   style(){
-    return this.opacity()+this.float();
+    return this.opacity()+this.float()+this.textDecoration();
   }
 }

@@ -862,22 +862,26 @@
                                 {
                                     "information":"i",
                                     "float":"left",
-                                    "link":"https://br.linkedin.com/pub/judah-holanda/4b/692/6ab"
+                                    "link":"https://br.linkedin.com/pub/judah-holanda/4b/692/6ab",
+                                    "textDecoration":"none"
                                 },
                                 {
                                     "information":"f",
                                     "float":"left",
-                                    "link":"http://facebook.com/JHCL007"
+                                    "link":"http://facebook.com/JHCL007",
+                                    "textDecoration":"none"
                                 },
                                 {
                                     "information":"l",
                                     "float":"left",
-                                    "link":"http://twitter.com/JH_esse"
+                                    "link":"http://twitter.com/JH_esse",
+                                    "textDecoration":"none"
                                 },
                                 {
                                     "information":"x",
                                     "float":"left",
-                                    "link":"http://youtube.com/c/JudahHolanda"
+                                    "link":"http://youtube.com/c/JudahHolanda",
+                                    "textDecoration":"none"
                                 }
                             ]
                         }
@@ -906,22 +910,26 @@
                                 {
                                     "information":"z",
                                     "float":"left",
-                                    "link":"http://github.com/Judahh/"
+                                    "link":"http://github.com/Judahh/",
+                                    "textDecoration":"none"
                                 },
                                 {
                                     "information":"h",
                                     "float":"left",
-                                    "link":"http://google.com/+JudahHolanda"
+                                    "link":"http://google.com/+JudahHolanda",
+                                    "textDecoration":"none"
                                 },
                                 {
                                     "information":"i",
                                     "float":"left",
-                                    "link":"http://instagram.com/judahholanda/"
+                                    "link":"http://instagram.com/judahholanda/",
+                                    "textDecoration":"none"
                                 },
                                 {
                                     "information":"s",
                                     "float":"left",
-                                    "link":"https://play.spotify.com/user/12142311218"
+                                    "link":"https://play.spotify.com/user/12142311218",
+                                    "textDecoration":"none"
                                 }
                             ]
                         }
@@ -950,12 +958,43 @@
                                 {
                                     "information":"¤",
                                     "float":"left",
-                                    "link":"https://account.xbox.com/en-US/Profile?gamerTag=HELLSING4ever"
+                                    "link":"https://account.xbox.com/en-US/Profile?gamerTag=HELLSING4ever",
+                                    "textDecoration":"none"
                                 },
                                 {
                                     "information":"£",
                                     "float":"left",
-                                    "link":"http://psnprofiles.com/MOHHAAMMED"
+                                    "link":"http://psnprofiles.com/MOHHAAMMED",
+                                    "textDecoration":"none"
+                                }
+                            ]
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "toBottom": false,
+            "item":{
+                "id":0,
+                "routerLink":"",
+                "routerLinkActive":"inactive",
+                "colorEffect":{
+                    "colorEffect":"DivClassNeon",
+                    "font":{
+                        "font":"DivClassOpenSansLight",
+                        "width":"100%",
+                        "size":100,
+                        "arrayPadding":[5],
+                        "animationEffect":{
+                            "class":"",
+                            "subClass":"",
+                            "subClasses":[],
+                            "arrayInformation":[
+                                {
+                                    "information":" ",
+                                    "float":"right",
+                                    "textDecoration":"none"
                                 }
                             ]
                         }
@@ -964,68 +1003,5 @@
             }
         }
     ]
-  },
-  {
-      "arraySubDivisor":[
-                {
-                    "toBottom": false,
-                    "item":{
-                        "id":0,
-                        "routerLink":"",
-                        "routerLinkActive":"inactive",
-                        "colorEffect":{
-                            "colorEffect":"DivClassNeon",
-                            "font":{
-                                "font":"DivClassFuturisticI",
-                                "width":"100%",
-                                "size":40,
-                                "arrayPadding":[],
-                                "animationEffect":{
-                                    "class":"",
-                                    "subClass":"",
-                                    "subClasses":[],
-                                    "arrayInformation":[
-                                        {
-                                            "information":" "
-                                        }
-                                    ]
-                                }
-                            }
-                        }
-                    }
-                }
-        ]
-        ,"divisor":{
-            "arrayPadding": [5],
-            "arraySubDivisor":[
-                {
-                    "toBottom": false,
-                    "item":{
-                        "id":0,
-                        "routerLink":"",
-                        "routerLinkActive":"inactive",
-                        "colorEffect":{
-                            "colorEffect":"DivClassNeon",
-                            "font":{
-                                "font":"DivClassIcon",
-                                "width":"100%",
-                                "size":100,
-                                "arrayPadding":[],
-                                "animationEffect":{
-                                    "class":"",
-                                    "subClass":"",
-                                    "subClasses":[],
-                                    "arrayInformation":[
-                                        {
-                                            "information":" "
-                                        }
-                                    ]
-                                }
-                            }
-                        }
-                    }
-                }
-            ]
-        }
   }
 ]

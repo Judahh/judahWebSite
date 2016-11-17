@@ -3,6 +3,7 @@ export class ModelInformation {
   link: string;
   opacity: number;
   float: string;
+  textDecoration: string;
 
   constructor(information: string){
       this.information=information;
