@@ -20,3 +20,13 @@
     [modelVideoLink]="modelSubDivisor.videoLink"
     [style]="style()|safeStyle">
 </videoLink>
+<basicForm
+    *ngIf="isBasicForm()"
+    [modelBasicForm]="modelSubDivisor.basicForm"
+    [style]="style()|safeStyle">
+</basicForm>
+<inputData
+    *ngIf="isInputData()"
+    [modelInputData]="modelSubDivisor.inputData"
+    [style]="style()|safeStyle">
+</inputData>

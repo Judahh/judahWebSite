@@ -32,6 +32,9 @@ export class ComponentPageContact implements OnInit {
   basicModelBasicForm:ModelBasicForm;
 
   arrayModelDivisorBlock0:Array<ModelDivisorBlock>;
+  space:ModelDivisorBlock;
+  curriculumVitae:ModelDivisorBlock;
+  socialNetworks:ModelDivisorBlock;
   arrayModelDivisorBlock1:Array<ModelDivisorBlock>;
 
 
@@ -51,6 +54,9 @@ export class ComponentPageContact implements OnInit {
   initialization(){
     this.arrayModelDivisorBlock0=new Array<ModelDivisorBlock>();
     this.arrayModelDivisorBlock1=new Array<ModelDivisorBlock>();
+    this.space=new ModelDivisorBlock();
+    this.curriculumVitae=new ModelDivisorBlock();
+    this.socialNetworks=new ModelDivisorBlock();
     this.modelLanguages=new ModelLanguages();
     this.modelContactInformation=new ModelContactInformation();
     this.basicModelInformation=new ModelInformation("");
@@ -133,6 +139,10 @@ export class ComponentPageContact implements OnInit {
     this.arrayModelDivisorBlock1=arrayModelDivisorBlock;
     this.arrayModelDivisorBlock1[1].divisor.arraySubDivisor[1].item.colorEffect.font.animationEffect.arrayInformation.push(new ModelInformation(this.modelContactInformation.curriculumVitae));
     this.arrayModelDivisorBlock1[2].divisor.arraySubDivisor[1].item.colorEffect.font.animationEffect.arrayInformation.push(new ModelInformation(this.modelContactInformation.socialNetworks));
+
+    this.space=this.arrayModelDivisorBlock1[0];
+    this.curriculumVitae=this.arrayModelDivisorBlock1[1];
+    this.socialNetworks=this.arrayModelDivisorBlock1[2];
   }
 
   private getBasicModelBasicFormService(){

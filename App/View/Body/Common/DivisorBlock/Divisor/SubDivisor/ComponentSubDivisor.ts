@@ -90,6 +90,16 @@ export class ComponentSubDivisor implements OnInit {
     this.modelSubDivisor.videoLink!=undefined);
   }
 
+  isBasicForm(){
+    return (this.modelSubDivisor.basicForm!=null && 
+    this.modelSubDivisor.basicForm!=undefined);
+  }
+
+  isInputData(){
+    return (this.modelSubDivisor.inputData!=null && 
+    this.modelSubDivisor.inputData!=undefined);
+  }
+
   style(){
     if(this.modelSubDivisor.toBottom){
       return this.position()+this.bottom()+this.float()+this.padding()+this.boxSizing();
