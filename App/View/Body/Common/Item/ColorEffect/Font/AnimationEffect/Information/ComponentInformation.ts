@@ -24,6 +24,13 @@ export class ComponentInformation implements OnInit{
   initialization(){
   }
 
+  float(){
+    if(this.information.float==null||this.information.float==undefined||this.information.float==""){
+      return "";
+    }
+    return "float: "+this.information.float+";";
+  }
+
   opacity(){
     if(this.information.opacity==null||this.information.opacity==undefined){
       return "";
@@ -32,6 +39,6 @@ export class ComponentInformation implements OnInit{
   }
 
   style(){
-    return this.opacity();
+    return this.opacity()+this.float();
   }
 }

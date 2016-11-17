@@ -1,7 +1,8 @@
 export class ModelInformation {
   information: string;
   link: string;
-  opacity:number;
+  opacity: number;
+  float: string;
 
   constructor(information: string){
       this.information=information;

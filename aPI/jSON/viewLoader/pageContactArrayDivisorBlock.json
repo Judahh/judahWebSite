@@ -756,7 +756,7 @@
         {
             "inputData":{
                 "clickButton":{
-                    "type":"submit",
+                    "type":"button",
                     "item":{
                         "id":0,
                         "routerLink":"",
@@ -842,8 +842,190 @@
     },
     "arraySubDivisor":[
         {
-            
+            "toBottom": false,
+            "item":{
+                "id":0,
+                "routerLink":"",
+                "routerLinkActive":"inactive",
+                "colorEffect":{
+                    "colorEffect":"DivClassNeon",
+                    "font":{
+                        "font":"DivClassIconSocialMedia",
+                        "width":"100%",
+                        "size":50,
+                        "arrayPadding":[5],
+                        "animationEffect":{
+                            "class":"",
+                            "subClass":"",
+                            "subClasses":[],
+                            "arrayInformation":[
+                                {
+                                    "information":"i",
+                                    "float":"left",
+                                    "link":"https://br.linkedin.com/pub/judah-holanda/4b/692/6ab"
+                                },
+                                {
+                                    "information":"f",
+                                    "float":"left",
+                                    "link":"http://facebook.com/JHCL007"
+                                },
+                                {
+                                    "information":"l",
+                                    "float":"left",
+                                    "link":"http://twitter.com/JH_esse"
+                                },
+                                {
+                                    "information":"x",
+                                    "float":"left",
+                                    "link":"http://youtube.com/c/JudahHolanda"
+                                }
+                            ]
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "toBottom": false,
+            "item":{
+                "id":0,
+                "routerLink":"",
+                "routerLinkActive":"inactive",
+                "colorEffect":{
+                    "colorEffect":"DivClassNeon",
+                    "font":{
+                        "font":"DivClassIconSocialMedia2",
+                        "width":"100%",
+                        "size":50,
+                        "arrayPadding":[5],
+                        "animationEffect":{
+                            "class":"",
+                            "subClass":"",
+                            "subClasses":[],
+                            "arrayInformation":[
+                                {
+                                    "information":"z",
+                                    "float":"left",
+                                    "link":"http://github.com/Judahh/"
+                                },
+                                {
+                                    "information":"h",
+                                    "float":"left",
+                                    "link":"http://google.com/+JudahHolanda"
+                                },
+                                {
+                                    "information":"i",
+                                    "float":"left",
+                                    "link":"http://instagram.com/judahholanda/"
+                                },
+                                {
+                                    "information":"s",
+                                    "float":"left",
+                                    "link":"https://play.spotify.com/user/12142311218"
+                                }
+                            ]
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "toBottom": false,
+            "item":{
+                "id":0,
+                "routerLink":"",
+                "routerLinkActive":"inactive",
+                "colorEffect":{
+                    "colorEffect":"DivClassNeon",
+                    "font":{
+                        "font":"DivClassIcon",
+                        "width":"100%",
+                        "size":44,
+                        "arrayPadding":[5],
+                        "animationEffect":{
+                            "class":"",
+                            "subClass":"",
+                            "subClasses":[],
+                            "arrayInformation":[
+                                {
+                                    "information":"¤",
+                                    "float":"left",
+                                    "link":"https://account.xbox.com/en-US/Profile?gamerTag=HELLSING4ever"
+                                },
+                                {
+                                    "information":"£",
+                                    "float":"left",
+                                    "link":"http://psnprofiles.com/MOHHAAMMED"
+                                }
+                            ]
+                        }
+                    }
+                }
+            }
         }
     ]
+  },
+  {
+      "arraySubDivisor":[
+                {
+                    "toBottom": false,
+                    "item":{
+                        "id":0,
+                        "routerLink":"",
+                        "routerLinkActive":"inactive",
+                        "colorEffect":{
+                            "colorEffect":"DivClassNeon",
+                            "font":{
+                                "font":"DivClassFuturisticI",
+                                "width":"100%",
+                                "size":40,
+                                "arrayPadding":[],
+                                "animationEffect":{
+                                    "class":"",
+                                    "subClass":"",
+                                    "subClasses":[],
+                                    "arrayInformation":[
+                                        {
+                                            "information":" "
+                                        }
+                                    ]
+                                }
+                            }
+                        }
+                    }
+                }
+        ]
+        ,"divisor":{
+            "arrayPadding": [5],
+            "arraySubDivisor":[
+                {
+                    "toBottom": false,
+                    "item":{
+                        "id":0,
+                        "routerLink":"",
+                        "routerLinkActive":"inactive",
+                        "colorEffect":{
+                            "colorEffect":"DivClassNeon",
+                            "font":{
+                                "font":"DivClassIcon",
+                                "width":"100%",
+                                "size":100,
+                                "arrayPadding":[],
+                                "animationEffect":{
+                                    "class":"",
+                                    "subClass":"",
+                                    "subClasses":[],
+                                    "arrayInformation":[
+                                        {
+                                            "information":" "
+                                        }
+                                    ]
+                                }
+                            }
+                        }
+                    }
+                }
+            ]
+        }
   }
 ]
