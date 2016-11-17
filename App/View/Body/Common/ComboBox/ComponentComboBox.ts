@@ -33,7 +33,7 @@ export class ComponentComboBox implements OnInit {
   }
 
   fontSize(){
-    if(this.modelComboBox.fontSize==undefined||this.modelComboBox.fontSize==null||this.modelComboBox.fontSize==""){
+    if(this.modelComboBox.fontSize==undefined||this.modelComboBox.fontSize==null){
       return "";
     }
     return "font-size: "+this.modelComboBox.fontSize+"px;";
