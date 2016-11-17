@@ -32,6 +32,10 @@ export class ComponentClickButton implements OnInit {
   ngOnDestroy() {
   }
 
+  isButton(){
+    return this.modelClickButton.type=="button";
+  }
+
   onClick(callback:(modelClickButton: ModelClickButton) => any) : void {
       callback(this.modelClickButton);
   }

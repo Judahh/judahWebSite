@@ -167,6 +167,8 @@ export class ComponentPageContact implements OnInit {
   }
 
   onClickCallback = (modelClickButton: ModelClickButton) : void => {
-    alert(modelClickButton);
+    //alert(modelClickButton);
+    window.open("files/CURRICULUM VITAE  - Judah Holanda.pdf");
+    window.open("files/Judah Holanda Correia Lima-EN2.pdf");
   }
 }
