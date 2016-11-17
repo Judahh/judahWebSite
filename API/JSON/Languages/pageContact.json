@@ -36,8 +36,8 @@
         "description":"Description",
         "curriculumVitae":"Curriculum Vitae",
         "socialNetworks":"Social Networks",
-        "submit":"submit",
-        "download":"download"
+        "submit":"Submit",
+        "download":"Download"
     },
     {
         "id":1,

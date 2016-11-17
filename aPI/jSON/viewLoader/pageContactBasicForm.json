@@ -45,10 +45,7 @@
                 {
                     "comboBox":{
                         "name":"phoneType",
-                        "arrayOptions":[
-                            "FUCK",
-                            "fuck"
-                        ]
+                        "arrayOptions":[]
                     }
                 }
             ]
@@ -78,10 +75,7 @@
                 {
                     "comboBox":{
                         "name":"jobTitleType",
-                        "arrayOptions":[
-                            "FUCK",
-                            "fuck"
-                        ]
+                        "arrayOptions":[]
                     }
                 }
             ],
@@ -92,10 +86,7 @@
                         "fontFamily":"OpenSans-Light",
                         "fontSize":10,
                         "textInputType":2,
-                        "arrayOptions":[
-                            "US",
-                            "RS"
-                        ]
+                        "arrayOptions":[]
                     }
                 },
                 {
@@ -109,10 +100,7 @@
                 {
                     "comboBox":{
                         "name":"salaryPer",
-                        "arrayOptions":[
-                            "FUCK",
-                            "fuck"
-                        ]
+                        "arrayOptions":[]
                     }
                 },
                 {
@@ -136,11 +124,7 @@
                                         "class":"",
                                         "subClass":"",
                                         "subClasses":[],
-                                        "arrayInformation":[
-                                            {
-                                                "information":"FLEXIBLE"
-                                            }
-                                        ]
+                                        "arrayInformation":[]
                                     }
                                 }
                             }
@@ -167,11 +151,7 @@
                                     "class":"",
                                     "subClass":"",
                                     "subClasses":[],
-                                    "arrayInformation":[
-                                        {
-                                            "information":"WORK:"
-                                        }
-                                    ]
+                                    "arrayInformation":[]
                                 }
                             }
                         }
@@ -202,11 +182,7 @@
                                         "class":"",
                                         "subClass":"",
                                         "subClasses":[],
-                                        "arrayInformation":[
-                                            {
-                                                "information":"S"
-                                            }
-                                        ]
+                                        "arrayInformation":[]
                                     }
                                 }
                             }
@@ -234,11 +210,7 @@
                                         "class":"",
                                         "subClass":"",
                                         "subClasses":[],
-                                        "arrayInformation":[
-                                            {
-                                                "information":"M"
-                                            }
-                                        ]
+                                        "arrayInformation":[]
                                     }
                                 }
                             }
@@ -266,11 +238,7 @@
                                         "class":"",
                                         "subClass":"",
                                         "subClasses":[],
-                                        "arrayInformation":[
-                                            {
-                                                "information":"T"
-                                            }
-                                        ]
+                                        "arrayInformation":[]
                                     }
                                 }
                             }
@@ -298,11 +266,7 @@
                                         "class":"",
                                         "subClass":"",
                                         "subClasses":[],
-                                        "arrayInformation":[
-                                            {
-                                                "information":"W"
-                                            }
-                                        ]
+                                        "arrayInformation":[]
                                     }
                                 }
                             }
@@ -330,11 +294,7 @@
                                         "class":"",
                                         "subClass":"",
                                         "subClasses":[],
-                                        "arrayInformation":[
-                                            {
-                                                "information":"T"
-                                            }
-                                        ]
+                                        "arrayInformation":[]
                                     }
                                 }
                             }
@@ -362,11 +322,7 @@
                                         "class":"",
                                         "subClass":"",
                                         "subClasses":[],
-                                        "arrayInformation":[
-                                            {
-                                                "information":"F"
-                                            }
-                                        ]
+                                        "arrayInformation":[]
                                     }
                                 }
                             }
@@ -394,11 +350,7 @@
                                         "class":"",
                                         "subClass":"",
                                         "subClasses":[],
-                                        "arrayInformation":[
-                                            {
-                                                "information":"S"
-                                            }
-                                        ]
+                                        "arrayInformation":[]
                                     }
                                 }
                             }
@@ -426,11 +378,7 @@
                                         "class":"",
                                         "subClass":"",
                                         "subClasses":[],
-                                        "arrayInformation":[
-                                            {
-                                                "information":"FLEX"
-                                            }
-                                        ]
+                                        "arrayInformation":[]
                                     }
                                 }
                             }
@@ -465,11 +413,7 @@
                                     "class":"",
                                     "subClass":"",
                                     "subClasses":[],
-                                    "arrayInformation":[
-                                        {
-                                            "information":"/h"
-                                        }
-                                    ]
+                                    "arrayInformation":[]
                                 }
                             }
                         }
@@ -496,11 +440,7 @@
                                         "class":"",
                                         "subClass":"",
                                         "subClasses":[],
-                                        "arrayInformation":[
-                                            {
-                                                "information":"FLEX"
-                                            }
-                                        ]
+                                        "arrayInformation":[]
                                     }
                                 }
                             }
@@ -535,11 +475,7 @@
                                     "class":"",
                                     "subClass":"",
                                     "subClasses":[],
-                                    "arrayInformation":[
-                                        {
-                                            "information":"/h"
-                                        }
-                                    ]
+                                    "arrayInformation":[]
                                 }
                             }
                         }
@@ -566,11 +502,7 @@
                                         "class":"",
                                         "subClass":"",
                                         "subClasses":[],
-                                        "arrayInformation":[
-                                            {
-                                                "information":"FLEX"
-                                            }
-                                        ]
+                                        "arrayInformation":[]
                                     }
                                 }
                             }
@@ -598,11 +530,7 @@
                                         "class":"",
                                         "subClass":"",
                                         "subClasses":[],
-                                        "arrayInformation":[
-                                            {
-                                                "information":"submit"
-                                            }
-                                        ]
+                                        "arrayInformation":[]
                                     }
                                 }
                             }

@@ -148,6 +148,40 @@ export class ComponentPageContact implements OnInit {
 
   private getBasicModelBasicForm(modelBasicForm:ModelBasicForm){
     this.basicModelBasicForm=modelBasicForm;
+    this.basicModelBasicForm.array3InputData[0][0][0].textInput.placeholder=this.modelContactInformation.name;
+    this.basicModelBasicForm.array3InputData[0][1][0].textInput.placeholder=this.modelContactInformation.company;
+    this.basicModelBasicForm.array3InputData[1][0][0].textInput.placeholder=this.modelContactInformation.email;
+    this.basicModelBasicForm.array3InputData[1][1][0].textInput.placeholder=this.modelContactInformation.phone;
+    this.basicModelBasicForm.array3InputData[1][1][1].comboBox.arrayOptions[0]=this.modelContactInformation.mobile;
+    this.basicModelBasicForm.array3InputData[1][1][1].comboBox.arrayOptions[1]=this.modelContactInformation.landline;
+    this.basicModelBasicForm.array3InputData[2][0][0].textInput.placeholder=this.modelContactInformation.address;
+    this.basicModelBasicForm.array3InputData[3][0][0].textInput.placeholder=this.modelContactInformation.jobTitle;
+    this.basicModelBasicForm.array3InputData[3][0][1].comboBox.arrayOptions[0]=this.modelContactInformation.regular;
+    this.basicModelBasicForm.array3InputData[3][0][1].comboBox.arrayOptions[1]=this.modelContactInformation.consultant;
+    this.basicModelBasicForm.array3InputData[3][0][1].comboBox.arrayOptions[2]=this.modelContactInformation.temporary;
+    this.basicModelBasicForm.array3InputData[3][1][0].textInput.arrayOptions[0]=this.modelContactInformation.currencyUS;
+    this.basicModelBasicForm.array3InputData[3][1][0].textInput.arrayOptions[1]=this.modelContactInformation.currencyRS;
+    this.basicModelBasicForm.array3InputData[3][1][1].textInput.placeholder=this.modelContactInformation.salary;
+    this.basicModelBasicForm.array3InputData[3][1][2].comboBox.arrayOptions[0]=this.modelContactInformation.perHour;
+    this.basicModelBasicForm.array3InputData[3][1][2].comboBox.arrayOptions[1]=this.modelContactInformation.perMonth;
+    this.basicModelBasicForm.array3InputData[3][1][2].comboBox.arrayOptions[2]=this.modelContactInformation.perYear;
+    this.basicModelBasicForm.array3InputData[3][1][3].checkButton.item.colorEffect.font.animationEffect.arrayInformation[0].information=this.modelContactInformation.flexible;
+    this.basicModelBasicForm.array3InputData[4][0][0].item.colorEffect.font.animationEffect.arrayInformation[0].information=this.modelContactInformation.workingHours;
+    this.basicModelBasicForm.array3InputData[5][0][0].checkButton.item.colorEffect.font.animationEffect.arrayInformation[0].information=this.modelContactInformation.sunday;
+    this.basicModelBasicForm.array3InputData[5][0][1].checkButton.item.colorEffect.font.animationEffect.arrayInformation[0].information=this.modelContactInformation.monday;
+    this.basicModelBasicForm.array3InputData[5][0][2].checkButton.item.colorEffect.font.animationEffect.arrayInformation[0].information=this.modelContactInformation.tuesday;
+    this.basicModelBasicForm.array3InputData[5][0][3].checkButton.item.colorEffect.font.animationEffect.arrayInformation[0].information=this.modelContactInformation.wednesday;
+    this.basicModelBasicForm.array3InputData[5][0][4].checkButton.item.colorEffect.font.animationEffect.arrayInformation[0].information=this.modelContactInformation.thursday;
+    this.basicModelBasicForm.array3InputData[5][0][5].checkButton.item.colorEffect.font.animationEffect.arrayInformation[0].information=this.modelContactInformation.friday;
+    this.basicModelBasicForm.array3InputData[5][0][6].checkButton.item.colorEffect.font.animationEffect.arrayInformation[0].information=this.modelContactInformation.saturday;
+    this.basicModelBasicForm.array3InputData[5][0][7].checkButton.item.colorEffect.font.animationEffect.arrayInformation[0].information=this.modelContactInformation.flexible;
+    this.basicModelBasicForm.array3InputData[6][0][0].textInput.placeholder=this.modelContactInformation.in;
+    this.basicModelBasicForm.array3InputData[6][0][1].item.colorEffect.font.animationEffect.arrayInformation[0].information=this.modelContactInformation.hour;
+    this.basicModelBasicForm.array3InputData[6][0][2].checkButton.item.colorEffect.font.animationEffect.arrayInformation[0].information=this.modelContactInformation.flexible;
+    this.basicModelBasicForm.array3InputData[7][0][0].textInput.placeholder=this.modelContactInformation.out;
+    this.basicModelBasicForm.array3InputData[7][0][1].item.colorEffect.font.animationEffect.arrayInformation[0].information=this.modelContactInformation.hour;
+    this.basicModelBasicForm.array3InputData[7][0][2].checkButton.item.colorEffect.font.animationEffect.arrayInformation[0].information=this.modelContactInformation.flexible;
+    this.basicModelBasicForm.array3InputData[8][0][0].clickButton.item.colorEffect.font.animationEffect.arrayInformation[0].information=this.modelContactInformation.submit;
   }
 }
 
