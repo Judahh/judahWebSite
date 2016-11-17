@@ -19,7 +19,8 @@ checkButton:active,checkButton:focus{
 
 checkButton label input {
     position:absolute;
-    top:-20px;
+    /*top:-20px;*/
+    visibility: hidden;
 }
 
 checkButton input:checked + div, checkButton input:checked + item{
