@@ -131,8 +131,8 @@ export class ComponentPageContact implements OnInit {
 
   private getArrayModelDivisorBlock1(arrayModelDivisorBlock:Array<ModelDivisorBlock>){
     this.arrayModelDivisorBlock1=arrayModelDivisorBlock;
-    this.arrayModelDivisorBlock1[0].divisor.arraySubDivisor[1].item.colorEffect.font.animationEffect.arrayInformation.push(new ModelInformation(this.modelContactInformation.curriculumVitae));
-    this.arrayModelDivisorBlock1[1].divisor.arraySubDivisor[1].item.colorEffect.font.animationEffect.arrayInformation.push(new ModelInformation(this.modelContactInformation.socialNetworks));
+    this.arrayModelDivisorBlock1[1].divisor.arraySubDivisor[1].item.colorEffect.font.animationEffect.arrayInformation.push(new ModelInformation(this.modelContactInformation.curriculumVitae));
+    this.arrayModelDivisorBlock1[2].divisor.arraySubDivisor[1].item.colorEffect.font.animationEffect.arrayInformation.push(new ModelInformation(this.modelContactInformation.socialNetworks));
   }
 
   private getBasicModelBasicFormService(){
@@ -162,6 +162,7 @@ export class ComponentPageContact implements OnInit {
     this.basicModelBasicForm.array3InputData[3][0][1].comboBox.arrayOptions[0]=this.modelContactInformation.regular;
     this.basicModelBasicForm.array3InputData[3][0][1].comboBox.arrayOptions[1]=this.modelContactInformation.consultant;
     this.basicModelBasicForm.array3InputData[3][0][1].comboBox.arrayOptions[2]=this.modelContactInformation.temporary;
+    this.basicModelBasicForm.array3InputData[3][1][0].textInput.placeholder=this.modelContactInformation.currency;
     this.basicModelBasicForm.array3InputData[3][1][0].textInput.arrayOptions[0]=this.modelContactInformation.currencyUS;
     this.basicModelBasicForm.array3InputData[3][1][0].textInput.arrayOptions[1]=this.modelContactInformation.currencyRS;
     this.basicModelBasicForm.array3InputData[3][1][1].textInput.placeholder=this.modelContactInformation.salary;
@@ -189,7 +190,9 @@ export class ComponentPageContact implements OnInit {
     this.basicModelBasicForm.array3InputData[7][0][1].item.colorEffect.font.animationEffect.arrayInformation.push(new ModelInformation(this.modelContactInformation.hour));
     this.basicModelBasicForm.array3InputData[7][0][2].checkButton.item.colorEffect.font.animationEffect.arrayInformation.push(new ModelInformation(this.modelContactInformation.flexible));
     
-    this.basicModelBasicForm.array3InputData[8][0][0].clickButton.item.colorEffect.font.animationEffect.arrayInformation.push(new ModelInformation(this.modelContactInformation.submit));
+    this.basicModelBasicForm.array3InputData[8][0][0].textInput.placeholder=this.modelContactInformation.description;
+
+    this.basicModelBasicForm.array3InputData[9][0][0].clickButton.item.colorEffect.font.animationEffect.arrayInformation.push(new ModelInformation(this.modelContactInformation.submit));
   }
 }
 

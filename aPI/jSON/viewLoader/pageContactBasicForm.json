@@ -517,6 +517,19 @@
         [
             [
                 {
+                    "textInput":{
+                        "name":"description",
+                        "fontFamily":"OpenSans-Light",
+                        "fontSize":15,
+                        "value":"",
+                        "textInputType":1
+                    }
+                }
+            ]
+        ],
+        [
+            [
+                {
                     "clickButton":{
                         "type":"submit",
                         "item":{

@@ -1,5 +1,68 @@
 [
   {
+      "arraySubDivisor":[
+                {
+                    "toBottom": false,
+                    "item":{
+                        "id":0,
+                        "routerLink":"",
+                        "routerLinkActive":"inactive",
+                        "colorEffect":{
+                            "colorEffect":"DivClassNeon",
+                            "font":{
+                                "font":"DivClassFuturisticI",
+                                "width":"100%",
+                                "size":40,
+                                "arrayPadding":[],
+                                "animationEffect":{
+                                    "class":"",
+                                    "subClass":"",
+                                    "subClasses":[],
+                                    "arrayInformation":[
+                                        {
+                                            "information":" "
+                                        }
+                                    ]
+                                }
+                            }
+                        }
+                    }
+                }
+        ]
+        ,"divisor":{
+            "arrayPadding": [5],
+            "arraySubDivisor":[
+                {
+                    "toBottom": false,
+                    "item":{
+                        "id":0,
+                        "routerLink":"",
+                        "routerLinkActive":"inactive",
+                        "colorEffect":{
+                            "colorEffect":"DivClassNeon",
+                            "font":{
+                                "font":"DivClassIcon",
+                                "width":"100%",
+                                "size":100,
+                                "arrayPadding":[],
+                                "animationEffect":{
+                                    "class":"",
+                                    "subClass":"",
+                                    "subClasses":[],
+                                    "arrayInformation":[
+                                        {
+                                            "information":" "
+                                        }
+                                    ]
+                                }
+                            }
+                        }
+                    }
+                }
+            ]
+        }
+  },
+  {
     "divisor":{
         "opacity":0.6,
         "color": "black",
