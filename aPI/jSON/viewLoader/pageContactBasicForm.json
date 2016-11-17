@@ -45,6 +45,7 @@
                 {
                     "comboBox":{
                         "name":"phoneType",
+                        "fontSize":15,
                         "arrayOptions":[]
                     }
                 }
@@ -75,6 +76,7 @@
                 {
                     "comboBox":{
                         "name":"jobTitleType",
+                        "fontSize":15,
                         "arrayOptions":[]
                     }
                 }
@@ -100,6 +102,7 @@
                 {
                     "comboBox":{
                         "name":"salaryPer",
+                        "fontSize":15,
                         "arrayOptions":[]
                     }
                 },
