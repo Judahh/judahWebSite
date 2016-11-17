@@ -1,4 +1,10 @@
 typings
+app/**/*.js
+app/**/*.map
+aPI/**/*.js
+aPI/**/*.map
+**/*.js
+**/*.map
 *.js
 *.map
 !plugins/*.js
