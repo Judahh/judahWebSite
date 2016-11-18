@@ -173,8 +173,9 @@
           {
             "id":0,
             "menuVertical":{
+              "position":"relative",
               "float":"right",
-              "padding":[5],
+              "arrayPadding":[5],
               "distance": 5,
               "borderSize": 1,
               "opacity": 0.6,

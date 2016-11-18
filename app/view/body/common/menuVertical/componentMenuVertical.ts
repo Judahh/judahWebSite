@@ -94,13 +94,21 @@ export class ComponentMenuVertical implements OnInit{
         return "background-color: "+this.modelMenuVertical.backgroundColor+";";
     }
 
+    position(){
+        if(this.modelMenuVertical.position==null||this.modelMenuVertical.position==undefined||this.modelMenuVertical.position==""){
+            return "";
+        }
+        return "position: "+this.modelMenuVertical.position+";";
+    }
+
     style(){
         return this.opacity()+
         this.distance()+
         this.border()+
         this.padding()+
         this.boxShadow()+
-        this.backgroundColor();
+        this.backgroundColor()+
+        this.position();
     }
 
     private initialization(){

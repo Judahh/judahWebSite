@@ -3,6 +3,7 @@ import { ModelItem } from '../item/ModelItem';
 export class ModelMenuVertical {
     id: number;
     distance: number; //px
+    position: string; //px
     borderSize: number; //px
     arrayPadding: Array<number>;//px
     opacity: number;
