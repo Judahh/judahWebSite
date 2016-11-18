@@ -94,10 +94,10 @@ export class ComponentImage implements OnInit{
     this.border()+
     this.borderRadius()+
     this.position()+
-    this.opacity+
+    this.opacity()+
     this.zIndex()+
-    this.height()
-    this.width()
+    this.height()+
+    this.width()+
     this.filter();
   }
 
