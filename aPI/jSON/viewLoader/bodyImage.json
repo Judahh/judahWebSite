@@ -1,0 +1,8 @@
+{
+    "opacity":0.6,
+    "source":"app/view/body/images/pictures/programming.jpg",
+    "width": "100%",
+    "position": "fixed",
+    "filter": "grayscale(100%)",
+    "zIndex": -1000
+}

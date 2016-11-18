@@ -41,14 +41,14 @@ export class ComponentImage implements OnInit{
   }
 
   borderRadius(){
-    if(this.modelImage.borderRadius==null){
+    if(this.modelImage.borderRadius==null||this.modelImage.borderRadius==undefined){
       return "";
     }
     return "border-radius: "+this.modelImage.borderRadius+"px;";
   }
 
   position(){
-    if(this.modelImage.position==null||this.modelImage.position==""){
+    if(this.modelImage.position==null||this.modelImage.position==undefined||this.modelImage.position==""){
       return "";
     }
     return "position: "+this.modelImage.position+";";
@@ -61,8 +61,44 @@ export class ComponentImage implements OnInit{
     return "opacity: "+this.modelImage.opacity+";";
   }
 
+  zIndex(){
+    if(this.modelImage.zIndex==null||this.modelImage.zIndex==undefined){
+      return "";
+    }
+    return "z-index: "+this.modelImage.zIndex+";";
+  }
+
+  height(){
+    if(this.modelImage.height==null||this.modelImage.height==undefined||this.modelImage.height==""){
+      return "";
+    }
+    return "height: "+this.modelImage.height+";";
+  }
+
+  width(){
+    if(this.modelImage.width==null||this.modelImage.width==undefined||this.modelImage.width==""){
+      return "";
+    }
+    return "width: "+this.modelImage.width+";";
+  }
+
+  filter(){
+    if(this.modelImage.filter==null||this.modelImage.filter==undefined||this.modelImage.filter==""){
+      return "";
+    }
+    return "filter: "+this.modelImage.filter+";";
+  }
+
   style(){
-    return this.boxSizing()+this.border()+this.borderRadius()+this.position()+this.opacity;
+    return this.boxSizing()+
+    this.border()+
+    this.borderRadius()+
+    this.position()+
+    this.opacity+
+    this.zIndex()+
+    this.height()
+    this.width()
+    this.filter();
   }
 
 }

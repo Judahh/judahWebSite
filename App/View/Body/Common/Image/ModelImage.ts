@@ -7,4 +7,8 @@ export class ModelImage {
     borderRadius:number;//px
     source:string;
     opacity:number;
+    height:string;
+    width:string;
+    filter:string;
+    zIndex:number;
 }
