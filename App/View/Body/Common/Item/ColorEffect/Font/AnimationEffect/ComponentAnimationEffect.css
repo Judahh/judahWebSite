@@ -36,7 +36,7 @@
         opacity:0;
     }
     to {
-        bottom: 0;
+        bottom: 40px;
         opacity:1;
     }
 }
@@ -47,7 +47,7 @@
         opacity:0;
     }
     to {
-        bottom: 0;
+        bottom: 40px;
         opacity:1;
     }
 }
@@ -58,7 +58,7 @@
         opacity:0;
     }
     to {
-        bottom: 0;
+        bottom: 40px;
         opacity:1;
     }
 }
@@ -69,7 +69,7 @@
         opacity:0;
     }
     to {
-        bottom: 0;
+        bottom: 40px;
         opacity:1;
     }
 }
@@ -80,7 +80,7 @@
         opacity:0;
     }
     to {
-        bottom: 0;
+        bottom: 40px;
         opacity:1;
     }
 }
