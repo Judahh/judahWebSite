@@ -1,3 +1,25 @@
+menuVertical{
+    top: -100px;
+    position: relative;
+    opacity: 0;
+    -webkit-transition: all 1s;
+    -moz-transition: all 1s;
+    -ms-transition: all 1s;
+    -o-transition: all 1s;
+    transition: all 1s;
+}
+
+item:hover menuVertical{
+    top: 0px;
+    opacity: 1;
+    -webkit-transition: all 1s;
+    -moz-transition: all 1s;
+    -ms-transition: all 1s;
+    -o-transition: all 1s;
+    transition: all 1s;
+}
+
+
 .DivClassNoWidth{
     width: 0px;
 }
