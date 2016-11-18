@@ -29,6 +29,7 @@ import { ComponentFont } from './view/body/common/item/colorEffect/font/Componen
 import { ComponentColorEffect } from './view/body/common/item/colorEffect/ComponentColorEffect';
 import { ComponentItem } from './view/body/common/item/ComponentItem';
 import { ComponentMenuHorizontal } from './view/body/common/menuHorizontal/ComponentMenuHorizontal';
+import { ComponentMenuVertical } from './view/body/common/menuVertical/ComponentMenuVertical';
 
 import { ComponentTextInput } from './view/body/common/textInput/ComponentTextInput';
 import { ComponentComboBox } from './view/body/common/comboBox/ComponentComboBox';
@@ -121,6 +122,7 @@ export class SafeStylePipe implements PipeTransform {
     ComponentPageLanguages,
     ComponentFooter,
     ComponentMenuHorizontal,
+    ComponentMenuVertical,
     ComponentItem,
     ComponentInformation,
     ComponentFont,

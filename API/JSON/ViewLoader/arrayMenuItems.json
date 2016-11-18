@@ -172,6 +172,45 @@
         "arrayItem":[
           {
             "id":0,
+            "menuVertical":{
+              "float":"right",
+              "padding":[5],
+              "distance": 5,
+              "borderSize": 1,
+              "opacity": 0.6,
+              "borderColor": "rgba(255, 255, 255, 0.8)",
+              "backgroundColor": "rgba(255, 255, 255, 0.9)",
+              "boxShadowSize": 5,
+              "boxShadowColor": "rgba(0, 0, 0, 1)",
+              "arrayItem":[
+                {
+                  "id":0,
+                  "routerLink":"Languages",
+                  "routerLinkActive":"active",
+                  "colorEffect":{
+                    "colorEffect":"DivClassNeon",
+                    "font":{
+                      "font":"DivClassIcon",
+                      "verticalAlign":"",
+                      "width":"",
+                      "size":40,
+                      "arrayPadding":[5],
+                      "animationEffect":{
+                          "class":"",
+                          "subClass":"",
+                          "subClasses":[],
+                          "arrayInformation":[
+                            {
+                              "information":"µ",
+                              "opacity":0.6
+                            }
+                          ]
+                      }
+                    }
+                  }
+                }
+              ]
+            },
             "tooltip":{
               "fontSize":15,
               "marginLeft":-91

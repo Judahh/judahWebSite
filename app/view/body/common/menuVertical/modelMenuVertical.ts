@@ -4,9 +4,10 @@ export class ModelMenuVertical {
     id: number;
     distance: number; //px
     borderSize: number; //px
-    padding: Array<number>;//px
+    arrayPadding: Array<number>;//px
     opacity: number;
     borderColor: string;
+    float: string;
     backgroundColor: string;
     boxShadowSize: number;//px
     boxShadowColor: string;

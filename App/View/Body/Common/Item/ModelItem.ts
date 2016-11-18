@@ -1,5 +1,6 @@
 import { ModelColorEffect } from './colorEffect/ModelColorEffect';
 import { ModelTooltip } from './ModelTooltip';
+import { ModelMenuVertical } from '../menuVertical/ModelMenuVertical';
 
 export class ModelItem {
   id: number;
@@ -7,4 +8,5 @@ export class ModelItem {
   routerLinkActive: string;
   colorEffect: ModelColorEffect;
   tooltip:ModelTooltip;
+  menuVertical:ModelMenuVertical;
 }

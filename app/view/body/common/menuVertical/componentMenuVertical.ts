@@ -28,50 +28,50 @@ export class ComponentMenuVertical implements OnInit{
     }
 
     float(){
-        if(modelMenuVertical.float==null||modelMenuVertical.float==undefined||modelMenuVertical.float==""){
+        if(this.modelMenuVertical.float==null||this.modelMenuVertical.float==undefined||this.modelMenuVertical.float==""){
             return "";
         }
-        return "float: "+modelMenuVertical.float+";";
+        return "float: "+this.modelMenuVertical.float+";";
     }
 
     opacity(){
-        if(modelMenuVertical.opacity==null||modelMenuVertical.opacity==undefined){
+        if(this.modelMenuVertical.opacity==null||this.modelMenuVertical.opacity==undefined){
             return "";
         }
-        return "opacity: "+modelMenuVertical.opacity+";";
+        return "opacity: "+this.modelMenuVertical.opacity+";";
     }
 
     distance(){
-        if(modelMenuVertical.float==null||modelMenuVertical.float==undefined||modelMenuVertical.float==""||
-            modelMenuVertical.distance==null||modelMenuVertical.distance==undefined){
+        if(this.modelMenuVertical.float==null||this.modelMenuVertical.float==undefined||this.modelMenuVertical.float==""||
+            this.modelMenuVertical.distance==null||this.modelMenuVertical.distance==undefined){
             return "";
         }
-        return (modelMenuVertical.float+": "+modelMenuVertical.distance+"px ;");
+        return (this.modelMenuVertical.float+": "+this.modelMenuVertical.distance+"px ;");
     }
 
     border(){
-        if(modelMenuVertical.borderColor==null||modelMenuVertical.borderColor==undefined||modelMenuVertical.borderColor==""||
-            modelMenuVertical.borderSize==null||modelMenuVertical.borderSize==undefined){
+        if(this.modelMenuVertical.borderColor==null||this.modelMenuVertical.borderColor==undefined||this.modelMenuVertical.borderColor==""||
+            this.modelMenuVertical.borderSize==null||this.modelMenuVertical.borderSize==undefined){
             return "";
         }
-        return "border: "+modelMenuVertical.borderSize+"px solid "+modelMenuVertical.borderColor+";";
+        return "border: "+this.modelMenuVertical.borderSize+"px solid "+this.modelMenuVertical.borderColor+";";
     }
 
     padding(){
-        if(this.modelSubDivisor.arrayPadding==null||this.modelSubDivisor.arrayPadding==undefined){
+        if(this.modelMenuVertical.arrayPadding==null||this.modelMenuVertical.arrayPadding==undefined){
             return "";
         }
 
         let stringPadding:string="";
 
-        for(let index:number=0;index<this.modelSubDivisor.arrayPadding.length;index++){
+        for(let index:number=0;index<this.modelMenuVertical.arrayPadding.length;index++){
             if(index==0){
             stringPadding+="padding:";
             }
 
-            stringPadding+=" "+(this.modelSubDivisor.arrayPadding[index]+"px");
+            stringPadding+=" "+(this.modelMenuVertical.arrayPadding[index]+"px");
 
-            if(index==this.modelSubDivisor.arrayPadding.length-1){
+            if(index==this.modelMenuVertical.arrayPadding.length-1){
             stringPadding+=";";
             }
         }
@@ -80,18 +80,18 @@ export class ComponentMenuVertical implements OnInit{
     }
 
     boxShadow(){
-        if(modelMenuVertical.boxShadowColor==null||modelMenuVertical.boxShadowColor==undefined||modelMenuVertical.boxShadowColor==""||
-            modelMenuVertical.boxShadowSize==null||modelMenuVertical.boxShadowSize==undefined){
+        if(this.modelMenuVertical.boxShadowColor==null||this.modelMenuVertical.boxShadowColor==undefined||this.modelMenuVertical.boxShadowColor==""||
+            this.modelMenuVertical.boxShadowSize==null||this.modelMenuVertical.boxShadowSize==undefined){
             return "";
         }
-        return "box-shadow: "+modelMenuVertical.boxShadowSize+"px "+modelMenuVertical.boxShadowColor+";";
+        return "box-shadow: "+this.modelMenuVertical.boxShadowSize+"px "+this.modelMenuVertical.boxShadowColor+";";
     }
 
     backgroundColor(){
-        if(modelMenuVertical.backgroundColor==null||modelMenuVertical.backgroundColor==undefined||modelMenuVertical.backgroundColor==""){
+        if(this.modelMenuVertical.backgroundColor==null||this.modelMenuVertical.backgroundColor==undefined||this.modelMenuVertical.backgroundColor==""){
             return "";
         }
-        return "background-color: "+modelMenuVertical.backgroundColor+";";
+        return "background-color: "+this.modelMenuVertical.backgroundColor+";";
     }
 
     style(){

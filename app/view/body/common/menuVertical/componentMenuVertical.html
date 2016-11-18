@@ -1,14 +1,6 @@
-<div class="DivClassNoWidth" style="float()|safeStyle">
-    <div style="float()|safeStyle">
-        <div id="DivIdPointerCursor" style="
-            position: relative;
-            right: 5px;
-            border: 1px solid white;
-            padding: 10px;
-            opacity: 0.6;
-            border-color: rgba(255, 255, 255, 0.8);
-            background-color: rgba(255, 255, 255, 0.9);
-            box-shadow: 5px rgba(0, 0, 0, 1);">
+<div class="DivClassNoWidth" [style]="float()|safeStyle">
+    <div [style]="float()|safeStyle">
+        <div id="DivIdPointerCursor" [style]="style()|safeStyle">
             <li
                 *ngFor="let item of modelMenuVertical.arrayItem"
                 style="float: none;">

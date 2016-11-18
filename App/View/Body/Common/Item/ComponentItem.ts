@@ -29,6 +29,10 @@ export class ComponentItem implements OnInit{
   initialization(){
   }
 
+  hasMenuVertical(){
+      return !(this.modelItem.menuVertical==null||this.modelItem.menuVertical==undefined);
+  }
+
   cursor(){
     if(this.routerLinkActive=="active"){
       return "cursor: pointer;";

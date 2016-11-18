@@ -1,4 +1,4 @@
-import { Component, ViewEncapsulation } from '@angular/core';
+import { Component, ViewEncapsulation, OnInit } from '@angular/core';
 
 import { Utils } from './../../core/utils/Utils';
 
@@ -44,7 +44,7 @@ export class ComponentBody implements OnInit {
 
    private getImage(modelImage:ModelImage){
      this.modelImage=modelImage;
-     console.log("teste:"+modelImage.source);
+    //  console.log("teste:"+modelImage.source);
    }
 
 }
