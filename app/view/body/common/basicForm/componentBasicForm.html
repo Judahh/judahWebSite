@@ -2,9 +2,9 @@
     (ngSubmit)="onSubmit(basicForm.value)">
     <div
         *ngFor="let array2InputData of modelBasicForm.array3InputData">
-        <div style="display: inline-block;"
+        <div [style]="style(array2InputData)|safeStyle"
             *ngFor="let arrayInputData of array2InputData">
-            <div style="display: inline-block;"
+            <div [style]="style2(arrayInputData)|safeStyle"
                 *ngFor="let inputData of arrayInputData">
                 <inputData
                     [modelInputData]="inputData">

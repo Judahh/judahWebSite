@@ -29,6 +29,37 @@ export class ComponentBasicForm implements OnInit {
   onSubmit(form: any): void {  
     console.log('you submitted value: ', form);  
   }
+
+  style(array:Array<any>){
+    return this.width(array)+this.displayInlineBlock();
+  }
+
+  style2(array:Array<any>){
+    if(array.length==1){
+      return this.width(array)+this.displayInlineBlock();
+    }
+    if(array.length>1){
+      var number=0;
+      for (var index = 0; index < array.length; index++) {
+        var element = array[index];
+        if(element.textInput!=null){
+          number++;
+        }
+      }
+      if(number>1){
+        return this.width(array)+this.displayInlineBlock();
+      }
+    }
+    return this.displayInlineBlock();
+  }
+
+  width(array:Array<any>){
+    return "width: "+(100/array.length)+"%;";
+  }
+  
+  displayInlineBlock(){
+    return "display: inline-block;";
+  }
 }
 
 
