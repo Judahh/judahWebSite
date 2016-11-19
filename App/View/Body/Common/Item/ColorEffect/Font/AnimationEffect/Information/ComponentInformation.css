@@ -91,7 +91,7 @@ information{
 .DivClassConsoleIconOn, .DivClassConsoleIconOn1, .DivClassConsoleIconOn2, .DivClassConsoleIcon:hover .DivClassConsoleIconOff{
     visibility: hidden;
     height: 0px;
-    /*width: 0px;*/
+    width: 0px;
 }
 
 .DivClassWebIcon:hover .DivClassWebIconOn1{
