@@ -45,7 +45,25 @@ export class ComponentInformation implements OnInit{
     return "opacity: "+this.information.opacity+";";
   }
 
+  color(){
+    if(this.information.color==null||this.information.color==undefined||this.information.color==""){
+      return "";
+    }
+    return "color: "+this.information.color+";";
+  }
+
+  backgroundColor(){
+    if(this.information.backgroundColor==null||this.information.backgroundColor==undefined||this.information.backgroundColor==""){
+      return "";
+    }
+    return "background-color: "+this.information.backgroundColor+";";
+  }
+
   style(){
-    return this.opacity()+this.float()+this.textDecoration();
+    return this.opacity()+
+    this.float()+
+    this.textDecoration()+
+    this.color()+
+    this.backgroundColor();
   }
 }
