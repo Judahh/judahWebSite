@@ -22,6 +22,11 @@ export class ComponentBody implements OnInit {
   modelHeaderNav:ModelNav;
   modelFooterNav:ModelNav;
 
+  firstTime:boolean=true;
+  defaultTooltipMarginTop: string;
+  defaultTooltipMarginLeft: string;
+  defaultTooltipOffset: number;
+
   constructor(private serviceJSON: ServiceJSON) {}
   
   ngOnInit() {
@@ -29,6 +34,9 @@ export class ComponentBody implements OnInit {
   }
 
   initialization(){
+    window.onresize= this.onResizeCallback;
+    document.addEventListener('mousemove', this.mouseTooltip, false);
+
     this.modelImage=new ModelImage();
     this.modelHeaderNav=new ModelNav();
     this.modelFooterNav=new ModelNav();
@@ -36,6 +44,60 @@ export class ComponentBody implements OnInit {
     this.getImageService();
     this.getHeaderNavService();
     this.getFooterNavService();
+  }
+
+  onResizeCallback = () : void => {
+    console.log("resize");
+  }
+
+  mouseTooltip(event: any) {
+      this.defaultTooltipMarginTop="17px";
+      this.defaultTooltipMarginLeft="7px";
+      this.defaultTooltipOffset=17;
+
+      var tooltip: any = document.querySelectorAll('.DivClassTooltip');
+
+      for (var i = 0; i < tooltip.length; i++) {
+        
+        tooltip[i].style.left = event.clientX + 'px';
+        tooltip[i].style.top = event.clientY + 'px';
+        if (event.clientY + tooltip[i].offsetHeight + this.defaultTooltipOffset > window.innerHeight) {
+            tooltip[i].style.marginTop = "0px";
+            tooltip[i].style.marginTop = (-tooltip[i].clientHeight) + "px";
+        }
+
+        if (event.clientX + tooltip[i].offsetWidth + this.defaultTooltipOffset > window.innerWidth) {
+            tooltip[i].style.marginLeft = "0px";
+            tooltip[i].style.marginLeft = (-tooltip[i].clientWidth) + "px";
+        }
+
+        var marginTop: number = parseInt(tooltip[i].style.marginTop.replace(/[^\d.-]/g, ''), 10);
+        if (event.clientY + marginTop - this.defaultTooltipOffset < 0) {
+            tooltip[i].style.marginTop = this.defaultTooltipMarginTop;
+        }
+
+        var marginLeft: number = parseInt(tooltip[i].style.marginLeft.replace(/[^\d.-]/g, ''), 10);
+        if (event.clientX + marginLeft - this.defaultTooltipOffset < 0) {
+            tooltip[i].style.marginLeft = this.defaultTooltipMarginLeft;
+        }
+      }
+  }
+
+  isBottom(element: any): any {
+      if (element.parentElement.nodeName == "FOOTER") {
+          return element.parentElement.offsetHeight;
+      }
+
+      if (element.parentElement == document.documentElement) {
+          //alert("nope");
+          return false;
+      }
+
+      return this.isBottom(element.parentElement);
+  }
+
+  window.onresize = function() {
+    console.log("resize:"+window.innerWidth);
   }
 
   private getImageService(){
