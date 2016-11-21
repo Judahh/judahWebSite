@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation, HostListener } from '@angular/core';
 import { Utils } from './../../../../core/utils/Utils';
 import { Languages } from './../../../../core/languages/Languages';
 import { ModelLanguages } from './../../../../core/languages/ModelLanguages';
@@ -50,7 +50,6 @@ export class ComponentPageContact implements OnInit {
   constructor(private serviceJSON: ServiceJSON) {}
 
   initialization(){
-    window.onresize= this.onResizeCallback;
     this.arrayModelDivisorBlock=new Array<ModelDivisorBlock>();
     this.modelLanguages=new ModelLanguages();
     this.modelContactInformation=new ModelContactInformation();
@@ -60,14 +59,17 @@ export class ComponentPageContact implements OnInit {
     this.refresh();
   }
 
-  onResizeCallback = () : void => {
+  @HostListener('window:resize', ['$event'])
+  windowResize(event: any) {
+    // console.log("resizeCon");
     if(this.currentWidth==null||this.currentWidth==undefined){
-      this.currentWidth=window.innerWidth
+      this.currentWidth=event.target.innerWidth;
       this.refresh();
     }
 
-    if((this.currentWidth>=425 && window.innerWidth<425)||(this.currentWidth<425 && window.innerWidth>=425)){
-      this.currentWidth=window.innerWidth
+    if((this.currentWidth>=425 && event.target.innerWidth<425)||
+       (this.currentWidth<425 && event.target.innerWidth>=425)){
+      this.currentWidth=event.target.innerWidth;
       this.refresh();
     }
   }

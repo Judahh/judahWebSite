@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation, HostListener } from '@angular/core';
 
 import { Utils } from './../../../../core/utils/Utils';
 import { Languages } from './../../../../core/languages/Languages';
@@ -75,7 +75,6 @@ export class ComponentPageWhoAmI implements OnInit {
   constructor(private serviceJSON: ServiceJSON) {}
 
   initialization(){
-    window.onresize= this.onResizeCallback;
     this.arrayModelDivisorBlock=new Array<ModelDivisorBlock>();
     this.modelWhoAmI=new ModelWhoAmI();
     this.modelLanguages=new ModelLanguages();
@@ -84,27 +83,36 @@ export class ComponentPageWhoAmI implements OnInit {
     this.refresh();
   }
 
-  onResizeCallback = () : void => {
+  @HostListener('window:resize', ['$event'])
+  windowResize(event: any) {
+    // console.log("resizeWHO");
     if(this.currentWidth==null||this.currentWidth==undefined){
-      this.currentWidth=window.innerWidth
+      this.currentWidth=event.target.innerWidth;
       this.refresh();
     }
 
-    if((this.currentWidth>=700 && window.innerWidth<700)||(this.currentWidth<700 && window.innerWidth>=700)){
-      this.currentWidth=window.innerWidth
+    if((this.currentWidth>=500 && event.target.innerWidth<500)||
+       (this.currentWidth<500 && event.target.innerWidth>=500)||
+       (this.currentWidth>=900 && event.target.innerWidth<900)||
+       (this.currentWidth<900 && event.target.innerWidth>=900)){
+      this.currentWidth=event.target.innerWidth;
       this.refresh();
     }
   }
 
   refresh(){
     if(this.currentWidth==null||this.currentWidth==undefined){
-      this.currentWidth=window.innerWidth
+      this.currentWidth=window.innerWidth;
     }
 
     var type:string="";
 
-    if(this.currentWidth<700){
-      type="SmallerThan700";
+    if(this.currentWidth<900){
+      type="SmallerThan900";
+    }
+
+    if(this.currentWidth<500){
+      type="SmallerThan500";
     }
 
     //console.log("type:"+type);

@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation, HostListener } from '@angular/core';
 
 import { Languages } from './../../../core/languages/Languages';
 import { ModelLanguages } from './../../../core/languages/ModelLanguages';
@@ -32,20 +32,20 @@ export class ComponentFooter implements OnInit {
   }
 
   initialization(){
-    window.onresize= this.onResizeCallback;
     this.modelLanguages=new ModelLanguages();
 
     this.refresh();
   }
 
-  onResizeCallback = () : void => {
+  @HostListener('window:resize', ['$event'])
+  windowResize(event: any) {
     if(this.currentWidth==null||this.currentWidth==undefined){
-      this.currentWidth=window.innerWidth
+      this.currentWidth=event.target.innerWidth
       this.refresh();
     }
 
-    if((this.currentWidth>=500 && window.innerWidth<500)||(this.currentWidth<500 && window.innerWidth>=500)){
-      this.currentWidth=window.innerWidth
+    if((this.currentWidth>=500 && event.target.innerWidth<500)||(this.currentWidth<500 && event.target.innerWidth>=500)){
+      this.currentWidth=event.target.innerWidth
       this.refresh();
     }
   }
@@ -61,7 +61,7 @@ export class ComponentFooter implements OnInit {
       type="SmallerThan500";
     }
 
-    //console.log("type:"+type);
+    // console.log("type:"+type);
     
     this.getLanguageService();
     this.getItems(type);

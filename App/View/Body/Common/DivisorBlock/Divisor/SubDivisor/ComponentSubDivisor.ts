@@ -100,6 +100,13 @@ export class ComponentSubDivisor implements OnInit {
     this.modelSubDivisor.inputData!=undefined);
   }
 
+  // width(){
+  //   if(this.modelSubDivisor.width==null||this.modelSubDivisor.width==undefined||this.modelSubDivisor.width==""){
+  //     return "";
+  //   }
+  //   return "width: "+this.modelSubDivisor.width+";";
+  // }
+
   style(){
     if(this.modelSubDivisor.toBottom){
       return this.position()+this.bottom()+this.float()+this.padding()+this.boxSizing();
