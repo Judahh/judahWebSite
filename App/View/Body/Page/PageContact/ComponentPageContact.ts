@@ -31,6 +31,7 @@ export class ComponentPageContact implements OnInit {
   modelLanguages:ModelLanguages;
   basicModelInformation:ModelInformation;
   basicModelBasicForm:ModelBasicForm;
+  currentWidth:number;
 
   arrayModelDivisorBlock:Array<ModelDivisorBlock>;
 
@@ -49,16 +50,45 @@ export class ComponentPageContact implements OnInit {
   constructor(private serviceJSON: ServiceJSON) {}
 
   initialization(){
+    window.onresize= this.onResizeCallback;
     this.arrayModelDivisorBlock=new Array<ModelDivisorBlock>();
     this.modelLanguages=new ModelLanguages();
     this.modelContactInformation=new ModelContactInformation();
     this.basicModelInformation=new ModelInformation("");
     this.basicModelBasicForm=new ModelBasicForm();
 
+    this.refresh();
+  }
+
+  onResizeCallback = () : void => {
+    if(this.currentWidth==null||this.currentWidth==undefined){
+      this.currentWidth=window.innerWidth
+      this.refresh();
+    }
+
+    if((this.currentWidth>=425 && window.innerWidth<425)||(this.currentWidth<425 && window.innerWidth>=425)){
+      this.currentWidth=window.innerWidth
+      this.refresh();
+    }
+  }
+
+  refresh(){
+    if(this.currentWidth==null||this.currentWidth==undefined){
+      this.currentWidth=window.innerWidth
+    }
+
+    var type:string="";
+
+    if(this.currentWidth<425){
+      type="SmallerThan425";
+    }
+
+    //console.log("type:"+type);
+
     this.getHalfModelInformation();
     this.getLanguageService();
     this.getInformationService();
-    this.getArrayDivisorBlockService();
+    this.getArrayDivisorBlockService(type);
   }
 
   ngOnDestroy() {
@@ -98,10 +128,10 @@ export class ComponentPageContact implements OnInit {
     }
   }
 
-  private getArrayDivisorBlockService(){
+  private getArrayDivisorBlockService(type:string){
     var errorMessage="";
 
-    this.serviceJSON.getObservable('viewLoader/'+Utils.getFileSelector(Utils.getFileName(__filename))+'ArrayDivisorBlock').subscribe(
+    this.serviceJSON.getObservable('viewLoader/'+Utils.getFileSelector(Utils.getFileName(__filename))+'ArrayDivisorBlock'+type).subscribe(
       item => this.getArrayModelDivisorBlock(item), error => errorMessage = <any>error);
     
     if(errorMessage!=""){
