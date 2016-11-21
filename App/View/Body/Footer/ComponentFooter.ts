@@ -23,6 +23,7 @@ export class ComponentFooter implements OnInit {
   arrayModelMenuHorizontal: ModelMenuHorizontal[];
   modelLanguages:ModelLanguages;
   position: string;
+  currentWidth:number;
 
   constructor(private serviceJSON: ServiceJSON) {}
 
@@ -31,10 +32,39 @@ export class ComponentFooter implements OnInit {
   }
 
   initialization(){
+    window.onresize= this.onResizeCallback;
     this.modelLanguages=new ModelLanguages();
 
+    this.refresh();
+  }
+
+  onResizeCallback = () : void => {
+    if(this.currentWidth==null||this.currentWidth==undefined){
+      this.currentWidth=window.innerWidth
+      this.refresh();
+    }
+
+    if((this.currentWidth>=500 && window.innerWidth<500)||(this.currentWidth<500 && window.innerWidth>=500)){
+      this.currentWidth=window.innerWidth
+      this.refresh();
+    }
+  }
+
+  refresh(){
+    if(this.currentWidth==null||this.currentWidth==undefined){
+      this.currentWidth=window.innerWidth
+    }
+
+    var type:string="";
+
+    if(this.currentWidth<500){
+      type="SmallerThan500";
+    }
+
+    //console.log("type:"+type);
+    
     this.getLanguageService();
-    this.getItems();
+    this.getItems(type);
   }
 
   private getLanguageService(){
@@ -48,11 +78,11 @@ export class ComponentFooter implements OnInit {
     }
   }
 
-  getItems(){
+  getItems(type:string){
     this.arrayModelMenuHorizontal=[];
     var errorMessage="";
 
-    this.serviceJSON.getObservable('viewLoader/arrayMenuItems').subscribe(items => this.filter(items), error => errorMessage = <any>error);
+    this.serviceJSON.getObservable('viewLoader/arrayMenuItems'+type).subscribe(items => this.filter(items), error => errorMessage = <any>error);
     
     if(errorMessage!=""){
       alert("Error:"+errorMessage);
@@ -70,6 +100,15 @@ export class ComponentFooter implements OnInit {
             if(this.arrayModelMenuHorizontal[index2].arrayItem[index3].tooltip==null||
               this.arrayModelMenuHorizontal[index2].arrayItem[index3].tooltip==undefined){
                 this.arrayModelMenuHorizontal[index2].arrayItem[index3].tooltip=new ModelTooltip();
+            }
+            if(this.arrayModelMenuHorizontal[index2].arrayItem[index3].menuVertical!=null){
+              for(var index4:number=0;index4<this.arrayModelMenuHorizontal[index2].arrayItem[index3].menuVertical.arrayItem.length;index4++){
+                if(this.arrayModelMenuHorizontal[index2].arrayItem[index3].menuVertical.arrayItem[index4].tooltip==null||
+                  this.arrayModelMenuHorizontal[index2].arrayItem[index3].menuVertical.arrayItem[index4].tooltip==undefined){
+                    this.arrayModelMenuHorizontal[index2].arrayItem[index3].menuVertical.arrayItem[index4].tooltip=new ModelTooltip();
+                }
+                this.getTooltipService2(index2,index3,index4);
+              }
             }
             this.getTooltipService(index2,index3);
           }
@@ -90,7 +129,22 @@ export class ComponentFooter implements OnInit {
     }
   }
 
+  getTooltipService2(index:number,index2:number,index3:number){
+    var errorMessage="";
+    this.serviceJSON.getObservable("languages/page"+this.arrayModelMenuHorizontal[index].arrayItem[index2].menuVertical.arrayItem[index3].routerLink).subscribe(
+              items => this.getTooltip2(index, index2, index3, items), 
+              error => errorMessage = <any>error);
+
+    if(errorMessage!=""){
+      alert("Error:"+errorMessage);
+    }
+  }
+
   getTooltip(index:number,index2:number,items:any){
     this.arrayModelMenuHorizontal[index].arrayItem[index2].tooltip.value=Languages.getPageLanguage(items,this.modelLanguages).title
+  }
+
+  getTooltip2(index:number,index2:number,index3:number,items:any){
+    this.arrayModelMenuHorizontal[index].arrayItem[index2].menuVertical.arrayItem[index3].tooltip.value=Languages.getPageLanguage(items,this.modelLanguages).title
   }
 }
