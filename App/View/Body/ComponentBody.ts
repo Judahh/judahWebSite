@@ -34,7 +34,6 @@ export class ComponentBody implements OnInit {
   }
 
   initialization(){
-    window.onresize= this.onResizeCallback;
     document.addEventListener('mousemove', this.mouseTooltip, false);
 
     this.modelImage=new ModelImage();
@@ -44,10 +43,6 @@ export class ComponentBody implements OnInit {
     this.getImageService();
     this.getHeaderNavService();
     this.getFooterNavService();
-  }
-
-  onResizeCallback = () : void => {
-    console.log("resize");
   }
 
   mouseTooltip(event: any) {
@@ -94,10 +89,6 @@ export class ComponentBody implements OnInit {
       }
 
       return this.isBottom(element.parentElement);
-  }
-
-  window.onresize = function() {
-    console.log("resize:"+window.innerWidth);
   }
 
   private getImageService(){
