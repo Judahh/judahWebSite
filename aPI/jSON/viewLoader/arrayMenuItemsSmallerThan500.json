@@ -48,6 +48,7 @@
               "arrayItem":[
                 {
                   "id":0,
+                  "tooltip":{"fontSize":15},
                   "routerLink":"Languages",
                   "routerLinkActive":"active",
                   "colorEffect":{

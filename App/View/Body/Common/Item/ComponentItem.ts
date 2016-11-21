@@ -33,8 +33,12 @@ export class ComponentItem implements OnInit{
       return !(this.modelItem.menuVertical==null||this.modelItem.menuVertical==undefined);
   }
 
+  isLinkActive(){
+      return this.routerLinkActive=="active";
+  }
+
   cursor(){
-    if(this.routerLinkActive=="active"){
+    if(this.isLinkActive()||this.hasMenuVertical()){
       return "cursor: pointer;";
     }else{
       return "";//"pointer-events: none;";

@@ -144,16 +144,16 @@ export class ComponentPageLanguages implements OnInit {
           modelCheckButton.value=this.arrayModelLanguages[index2].code[0];
           modelCheckButton.name="language";
           modelCheckButton.radio=true;
-          console.log("value:"+modelCheckButton.value);
-          console.log("information:"+modelCheckButton.item.colorEffect.font.animationEffect.arrayInformation[0].information);
+          //console.log("value:"+modelCheckButton.value);
+          //console.log("information:"+modelCheckButton.item.colorEffect.font.animationEffect.arrayInformation[0].information);
           this.arrayModelCheckButton.push(modelCheckButton);
         }
       }
     }
     for(let index:number=0;index<this.arrayModelCheckButton.length;index++){
       var modelCheckButton:ModelCheckButton=this.arrayModelCheckButton[index];
-      console.log("value:"+modelCheckButton.value);
-      console.log("information:"+modelCheckButton.item.colorEffect.font.animationEffect.arrayInformation[0].information);
+      //console.log("value:"+modelCheckButton.value);
+      //console.log("information:"+modelCheckButton.item.colorEffect.font.animationEffect.arrayInformation[0].information);
     }
 
   }
