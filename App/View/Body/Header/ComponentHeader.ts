@@ -62,7 +62,7 @@ export class ComponentHeader implements OnInit {
       type="SmallerThan500";
     }
 
-    console.log("type:"+type);
+    //console.log("type:"+type);
     
     this.getLanguageService();
     this.getItems(type);

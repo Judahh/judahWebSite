@@ -10,12 +10,12 @@ import { ModelAuthentication } from './ModelAuthentication';
 import { Utils } from './../../../../core/utils/Utils';
 // import { AngularFire, AuthProviders } from 'angularfire2';
 
-import passport = require("passport");
+// import passport = require("passport");
 
-var LocalStrategy    = require('passport-local').Strategy;
-var FacebookStrategy = require('passport-facebook').Strategy;
+// var LocalStrategy    = require('passport-local').Strategy;
+// var FacebookStrategy = require('passport-facebook').Strategy;
 
-import passportAuthentication from './core/configurationFiles/passportAuthentication.json';
+import passportAuthentication from './../../../../core/configurationFiles/passportAuthentication.json';
 
 @Component({
     moduleId: module.id,
@@ -87,18 +87,18 @@ export class ComponentAuthentication implements OnInit {
     }
 
     initialization() {
-        passport.use(
-            new FacebookStrategy(
-                {
-                    clientID: passportAuthentication.clientID,
-                    clientSecret: passportAuthentication.clientSecret,
-                    callbackURL: passportAuthentication.callbackURL
-                },
-                function (accessToken:any, refreshToken:any, profile:any, done:any){
-                    // you email, name, id, and so on is on profile
-                    var result = profile; 
-                }
-            )
-        );
+        // passport.use(
+        //     new FacebookStrategy(
+        //         {
+        //             clientID: passportAuthentication.facebookAuth.clientID,
+        //             clientSecret: passportAuthentication.facebookAuth.clientSecret,
+        //             callbackURL: passportAuthentication.facebookAuth.callbackURL
+        //         },
+        //         function (accessToken:any, refreshToken:any, profile:any, done:any){
+        //             // you email, name, id, and so on is on profile
+        //             var result = profile; 
+        //         }
+        //     )
+        // );
     }
 }
