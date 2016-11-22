@@ -76,9 +76,9 @@ import { hTMLGenerator } from './core/hTMLGenerator/hTMLGenerator';
 //     debounceTime: 100 // allow to debounce checking timer
 // };
 
-import firebaseConfiguration from './core/configurationFiles/firebaseConfiguration.json';
+// import firebaseConfiguration from './core/configurationFiles/firebaseConfiguration.json';
 
-import firebaseAuthConfiguration from './core/configurationFiles/firebaseAuthConfiguration.json';
+// import firebaseAuthConfiguration from './core/configurationFiles/firebaseAuthConfiguration.json';
 
 @Pipe({ name: 'safeUrl' })
 export class SafeUrlPipe implements PipeTransform {
