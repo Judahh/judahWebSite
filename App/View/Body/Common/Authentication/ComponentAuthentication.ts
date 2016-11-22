@@ -86,13 +86,13 @@ export class ComponentAuthentication implements OnInit {
     // }
 
     constructor() {
-        // FB.init({
-        //     appId      : passportAuthentication.facebook.clientID,
-        //     cookie     : false,  // enable cookies to allow the server to access
-        //                         // the session
-        //     xfbml      : true,  // parse social plugins on this page
-        //     version    : 'v2.5' // use graph api version 2.5
-        // });
+        FB.init({
+            appId      : passportAuthentication.facebook.clientID,
+            cookie     : false,  // enable cookies to allow the server to access
+                                // the session
+            xfbml      : true,  // parse social plugins on this page
+            version    : 'v2.5' // use graph api version 2.5
+        });
     }
 
     ngOnInit() {
@@ -100,23 +100,28 @@ export class ComponentAuthentication implements OnInit {
     }
 
     onFacebookLoginClick() {
-        // FB.login();
+        FB.login();
+    }
+
+    onClickCallback = (modelClickButton: ModelClickButton) : void => {
+        onFacebookLoginClick()
     }
 
     statusChangeCallback(response:any) {
-        // if (response.status === 'connected') {
-        //     // connect here with your server for facebook login by passing access token given by facebook
-        // }else if (response.status === 'not_authorized') {
+        if (response.status === 'connected') {
+            // connect here with your server for facebook login by passing access token given by facebook
+        }else if (response.status === 'not_authorized') {
             
-        // }else {
+        }else {
             
-        // }
+        }
     }
 
     initialization() {
-        // FB.getLoginStatus(response => {
-        //     this.statusChangeCallback(response);
-        // });
+        //var response:any;
+        FB.getLoginStatus(response => {
+            this.statusChangeCallback(response);
+        });
         // passport.use(
         //     new FacebookStrategy(
         //         {
