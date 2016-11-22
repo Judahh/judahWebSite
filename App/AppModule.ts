@@ -80,6 +80,7 @@ import { hTMLGenerator } from './core/hTMLGenerator/hTMLGenerator';
 
 // import firebaseAuthConfiguration from './core/configurationFiles/firebaseAuthConfiguration.json';
 
+
 @Pipe({ name: 'safeUrl' })
 export class SafeUrlPipe implements PipeTransform {
   constructor(private sanitizer: DomSanitizer) {}
