@@ -94,7 +94,7 @@ export class ComponentAuthentication implements OnInit {
                     clientSecret: passportAuthentication.clientSecret,
                     callbackURL: passportAuthentication.callbackURL
                 },
-                function (accessToken, refreshToken, profile, done){
+                function (accessToken:any, refreshToken:any, profile:any, done:any){
                     // you email, name, id, and so on is on profile
                     var result = profile; 
                 }
