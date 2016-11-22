@@ -87,16 +87,18 @@ export class ComponentAuthentication implements OnInit {
     }
 
     initialization() {
-        passport.use(new FacebookStrategy({
-            clientID: passportAuthentication.clientID,
-            clientSecret: passportAuthentication.clientSecret,
-            callbackURL: passportAuthentication.callbackURL
-        },
-            function (accessToken, refreshToken, profile, done)
-            {
-                // you email, name, id, and so on is on profile
-                var result = profile; 
-            }
-        ));
+        passport.use(
+            new FacebookStrategy(
+                {
+                    clientID: passportAuthentication.clientID,
+                    clientSecret: passportAuthentication.clientSecret,
+                    callbackURL: passportAuthentication.callbackURL
+                },
+                function (accessToken, refreshToken, profile, done){
+                    // you email, name, id, and so on is on profile
+                    var result = profile; 
+                }
+            )
+        );
     }
 }
