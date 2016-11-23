@@ -10,6 +10,8 @@ import { ModelClickButton } from './../clickButton/ModelClickButton';
 
 import { ModelAuthentication } from './ModelAuthentication';
 import { Utils } from './../../../../core/utils/Utils';
+
+import { ServiceJSON } from './../../../../core/services/jSON/ServiceJSON';
 // import { AngularFire, AuthProviders } from 'angularfire2';
 
 // import passport = require("passport");
@@ -31,75 +33,29 @@ declare const FB:any;
 })
 export class ComponentAuthentication implements OnInit {
     @Input() modelAuthentication: ModelAuthentication;
-    // isAuth = false;
-    // authColor = 'warn';
-    // user = {};
 
-    // constructor(
-    //     public af: AngularFire
-    // ) {
-    //     this.af.auth.subscribe(
-    //         user => this._changeState(user),
-    //         error => console.trace(error)
-    //     );
-    // }
-
-    // login(from: string) {
-    //     this.af.auth.login({
-    //         provider: this._getProvider(from)
-    //     });
-    // }
-    // logout() {
-    //     this.af.auth.logout();
-    // }
-
-    // private _changeState(user: any = null) {
-    //     if (user) {
-    //         this.isAuth = true;
-    //         this.authColor = 'primary';
-    //         this.user = this._getUserInfo(user)
-    //     }
-    //     else {
-    //         this.isAuth = false;
-    //         this.authColor = 'warn';
-    //         this.user = {};
-    //     }
-    // }
-
-    // private _getUserInfo(user: any): any {
-    //     if (!user) {
-    //         return {};
-    //     }
-    //     let data = user.auth.providerData[0];
-    //     return {
-    //         name: data.displayName,
-    //         avatar: data.photoURL,
-    //         email: data.email,
-    //         provider: data.providerId
-    //     };
-    // }
-
-    // private _getProvider(from: string) {
-    //     switch (from) {
-    //         case 'twitter': return AuthProviders.Twitter;
-    //         case 'facebook': return AuthProviders.Facebook;
-    //         case 'github': return AuthProviders.Github;
-    //         case 'google': return AuthProviders.Google;
-    //     }
-    // }
-
-    constructor() {
+    constructor(private serviceJSON: ServiceJSON) {
         FB.init({
             appId      : passportAuthentication.facebook.clientID,
-            cookie     : false,  // enable cookies to allow the server to access
+            cookie     : true,  // enable cookies to allow the server to access
                                 // the session
             xfbml      : true,  // parse social plugins on this page
-            version    : 'v2.5' // use graph api version 2.5
+            success    : true,
+            version    : 'v2.8' // use graph api version 2.8
         });
     }
 
     ngOnInit() {
         this.initialization();
+    }
+
+    checkLoginState() {
+        // FB.getLoginStatus(function(response) {
+        //     this.statusChangeCallback(response);
+        // });
+        FB.getLoginStatus(response => {
+            this.statusChangeCallback(response);
+        });
     }
 
     onFacebookLoginClick() {
@@ -112,19 +68,51 @@ export class ComponentAuthentication implements OnInit {
 
     statusChangeCallback(response:any) {
         if (response.status === 'connected') {
+            // facebookID=response.authResponse.userID;
             // connect here with your server for facebook login by passing access token given by facebook
+            console.log("logged");
         }else if (response.status === 'not_authorized') {
-            
+            this.notAuthorized();
         }else {
-            
+            this.loggedOut();
+            facebookID=null;
         }
     }
 
+    notAuthorized(){
+        console.log('Not Authorized!');
+    }
+
+    loggedOut(){
+        console.log('Logged Out!');
+        //goToPage("Home");
+        // $("#DivLogoutText").toggle(false);
+        // $("#DivLoginText").toggle(true);
+        // removeProfilePicture();
+        //document.getElementById('status').innerHTML = 'Logged Out!';
+    }
+
+
+    getFacebookLoginStatus(response){
+        this.statusChangeCallback(response);
+    }
+
+    updateStatusCallback(){
+        //alert('Status updated!!');
+        //FB.getLoginStatus();
+        // Your logic here
+    }
+
+    isInputData(){
+        return (this.modelAuthentication.inputData!=null && 
+        this.modelAuthentication.inputData!=undefined);
+    }
+
     initialization() {
+        this.modelAuthentication=new ModelAuthentication();
+        this.checkLoginState();
+        this.getAuthenticationService();
         //var response:any;
-        FB.getLoginStatus(response => {
-            this.statusChangeCallback(response);
-        });
         // passport.use(
         //     new FacebookStrategy(
         //         {
@@ -138,5 +126,23 @@ export class ComponentAuthentication implements OnInit {
         //         }
         //     )
         // );
+    }
+
+    private getAuthenticationService(){
+        var errorMessage="";
+
+        this.serviceJSON.getObservable('viewLoader/'+Utils.getFileSelector(Utils.getFileName(__filename))).subscribe(
+        item => this.getAuthentication(item), error => errorMessage = <any>error);
+        
+        if(errorMessage!=""){
+        alert("Error:"+errorMessage);
+        }
+    }
+
+    private getAuthentication(modelAuthentication:ModelAuthentication){
+        this.modelAuthentication=modelAuthentication;
+        console.log("Test:"+this.modelAuthentication.inputData.clickButton);
+        this.modelAuthentication.inputData.clickButton.onClick=this.onClickCallback;
+        //this.modelAuthentication.inputData.clickButton.onClick=this.onClickCallback;
     }
 }

@@ -38,10 +38,6 @@ export class ComponentPageContact implements OnInit {
   modelAuthentication: ModelAuthentication;
   arrayModelDivisorBlock:Array<ModelDivisorBlock>;
 
-
-  input:string="inputIdSalaryCurrency";
-  page:string;
-
   //constructor(private heroService: HeroService) { }
 
   ngOnInit() {
@@ -54,11 +50,11 @@ export class ComponentPageContact implements OnInit {
 
   initialization(){
     this.arrayModelDivisorBlock=new Array<ModelDivisorBlock>();
+    // this.modelAuthentication=new ModelAuthentication();
     this.modelLanguages=new ModelLanguages();
     this.modelContactInformation=new ModelContactInformation();
     this.basicModelInformation=new ModelInformation("");
     this.basicModelBasicForm=new ModelBasicForm();
-    this.modelAuthentication=new ModelAuthentication();
 
     this.refresh();
   }
@@ -95,7 +91,7 @@ export class ComponentPageContact implements OnInit {
     this.getLanguageService();
     this.getInformationService();
     this.getArrayDivisorBlockService(type);
-    this.getAuthenticationService();
+    // this.getAuthenticationService();
   }
 
   ngOnDestroy() {
@@ -129,17 +125,6 @@ export class ComponentPageContact implements OnInit {
 
     this.serviceJSON.getObservable('languages/'+Utils.getFileSelector(Utils.getFileName(__filename))).subscribe(
       items => this.modelContactInformation=Languages.getPageLanguage(items,this.modelLanguages), error => errorMessage = <any>error);
-    
-    if(errorMessage!=""){
-      alert("Error:"+errorMessage);
-    }
-  }
-
-  private getAuthenticationService(){
-    var errorMessage="";
-
-    this.serviceJSON.getObservable('languages/'+Utils.getFileSelector(Utils.getFileName(__filename))+"Authentication").subscribe(
-      item => this.modelAuthentication=item, error => errorMessage = <any>error);
     
     if(errorMessage!=""){
       alert("Error:"+errorMessage);
