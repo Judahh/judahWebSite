@@ -6,6 +6,7 @@ import { HttpModule, JsonpModule } from '@angular/http';
 //import { AngularFireModule, AuthProviders, AuthMethods } from 'angularfire2';
 
 import { ServiceJSON } from './core/services/jSON/ServiceJSON'
+import { ServiceAuthenticationFacebook } from './core/services/authentication/ServiceAuthenticationFacebook'
 
 import './rXJS/RXJSExtensions';
 import { ComponentBody } from './view/body/ComponentBody';
@@ -145,7 +146,8 @@ export class SafeStylePipe implements PipeTransform {
     SafeStylePipe
   ],
   providers: [
-    ServiceJSON//,
+    ServiceJSON,
+    ServiceAuthenticationFacebook//,
     //{provide: ResponsiveConfig, useFactory: () => new ResponsiveConfig(config) }
   ],
   bootstrap: [ComponentBody]
