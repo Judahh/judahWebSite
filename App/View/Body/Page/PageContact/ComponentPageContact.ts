@@ -15,6 +15,8 @@ import { ModelItem } from './../../common/item/ModelItem';
 import { ModelBasicForm } from './../../common/basicForm/ModelBasicForm';
 import { ModelClickButton } from './../../common/clickButton/ModelClickButton';
 
+import { ModelAuthentication } from './../../common/authentication/ModelAuthentication';
+
 import { ModelContactInformation } from './ModelContactInformation';
 
 import { ServiceJSON } from './../../../../core/services/jSON/ServiceJSON';
@@ -33,6 +35,7 @@ export class ComponentPageContact implements OnInit {
   basicModelBasicForm:ModelBasicForm;
   currentWidth:number;
 
+  modelAuthentication: ModelAuthentication;
   arrayModelDivisorBlock:Array<ModelDivisorBlock>;
 
 
@@ -55,6 +58,7 @@ export class ComponentPageContact implements OnInit {
     this.modelContactInformation=new ModelContactInformation();
     this.basicModelInformation=new ModelInformation("");
     this.basicModelBasicForm=new ModelBasicForm();
+    this.modelAuthentication=new ModelAuthentication();
 
     this.refresh();
   }
@@ -91,6 +95,7 @@ export class ComponentPageContact implements OnInit {
     this.getLanguageService();
     this.getInformationService();
     this.getArrayDivisorBlockService(type);
+    this.getAuthenticationService();
   }
 
   ngOnDestroy() {
@@ -124,6 +129,17 @@ export class ComponentPageContact implements OnInit {
 
     this.serviceJSON.getObservable('languages/'+Utils.getFileSelector(Utils.getFileName(__filename))).subscribe(
       items => this.modelContactInformation=Languages.getPageLanguage(items,this.modelLanguages), error => errorMessage = <any>error);
+    
+    if(errorMessage!=""){
+      alert("Error:"+errorMessage);
+    }
+  }
+
+  private getAuthenticationService(){
+    var errorMessage="";
+
+    this.serviceJSON.getObservable('languages/'+Utils.getFileSelector(Utils.getFileName(__filename))+"Authentication").subscribe(
+      item => this.modelAuthentication=item, error => errorMessage = <any>error);
     
     if(errorMessage!=""){
       alert("Error:"+errorMessage);

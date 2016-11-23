@@ -5,6 +5,8 @@ import { ModelAnimationEffect } from './../item/colorEffect/font/animationEffect
 import { ModelFont } from './../item/colorEffect/font/ModelFont';
 import { ModelColorEffect } from './../item/colorEffect/ModelColorEffect';
 import { ModelItem } from './../item/ModelItem';
+import { ModelInputData } from './../inputData/ModelInputData';
+import { ModelClickButton } from './../clickButton/ModelClickButton';
 
 import { ModelAuthentication } from './ModelAuthentication';
 import { Utils } from './../../../../core/utils/Utils';
@@ -28,6 +30,7 @@ declare const FB:any;
     encapsulation: ViewEncapsulation.None
 })
 export class ComponentAuthentication implements OnInit {
+    @Input() modelAuthentication: ModelAuthentication;
     // isAuth = false;
     // authColor = 'warn';
     // user = {};
@@ -104,7 +107,7 @@ export class ComponentAuthentication implements OnInit {
     }
 
     onClickCallback = (modelClickButton: ModelClickButton) : void => {
-        onFacebookLoginClick()
+        this.onFacebookLoginClick()
     }
 
     statusChangeCallback(response:any) {
