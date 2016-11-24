@@ -11,6 +11,22 @@
                             Loading...
                 </item>
             </li>
+            <li
+                *ngFor="let inputData of modelMenuVertical.arrayInputData"
+                style="float: none;">
+                <inputData
+                    [modelInputData]="inputData" >
+                            Loading...
+                </inputData>
+            </li>
+            <li
+                *ngFor="let authentication of modelMenuVertical.arrayAuthentication"
+                style="float: none;">
+                <authentication
+                    [modelAuthentication]="authentication" >
+                            Loading...
+                </authentication>
+            </li>
         </div>
     </div>
 </div>
