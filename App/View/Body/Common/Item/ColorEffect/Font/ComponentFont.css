@@ -133,3 +133,14 @@
     /*cursor: pointer;*/
     font-family: "Facebook";
 }
+
+.DivClassRoboto{
+    font-smooth:always;
+    font-smoothing: antialiased;
+    -o-font-smoothing: antialiased;
+    -ms-font-smoothing: antialiased;
+    -moz-font-smoothing: antialiased;
+    -webkit-font-smoothing: antialiased;
+    /*cursor: pointer;*/
+    font-family: "Roboto";
+}

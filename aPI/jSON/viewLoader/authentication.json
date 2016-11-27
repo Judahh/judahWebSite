@@ -9,7 +9,7 @@
                 "colorEffect":{
                     "colorEffect":"DivClassNeon",
                     "font":{
-                        "font":"DivClassOpenSansLight",
+                        "font":"DivClassRoboto",
                         "size":15,
                         "arrayPadding":[5],
                         "animationEffect":{
@@ -18,7 +18,7 @@
                             "subClasses":[],
                             "arrayInformation":[
                                 {
-                                    "information":"WTF????",
+                                    "information":"Login with facebook",
                                     "opacity":0.6
                                 }
                             ]

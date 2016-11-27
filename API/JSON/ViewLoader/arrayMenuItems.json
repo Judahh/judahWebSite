@@ -184,39 +184,7 @@
               "boxShadowSize": 5,
               "boxShadowColor": "rgba(0, 0, 0, 1)",
               "arrayItem":[],
-              "arrayAuthentication":[
-                {
-                    "inputData":{
-                        "clickButton":{
-                            "type":"button",
-                            "item":{
-                                "id":0,
-                                "routerLink":"",
-                                "routerLinkActive":"inactive",
-                                "colorEffect":{
-                                    "colorEffect":"DivClassNeon",
-                                    "font":{
-                                        "font":"DivClassFacebook",
-                                        "size":15,
-                                        "arrayPadding":[5],
-                                        "animationEffect":{
-                                            "class":"",
-                                            "subClass":"",
-                                            "subClasses":[],
-                                            "arrayInformation":[
-                                                {
-                                                    "information":"Login with facebook",
-                                                    "opacity":0.6
-                                                }
-                                            ]
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-              ]
+              "arrayAuthentication":[{}]
             },
             "tooltip":{
               "fontSize":15,
