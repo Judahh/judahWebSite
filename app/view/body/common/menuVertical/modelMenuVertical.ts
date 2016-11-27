@@ -1,4 +1,6 @@
 import { ModelItem } from '../item/ModelItem';
+import { ModelInputData } from '../inputData/ModelInputData';
+import { ModelAuthentication } from '../authentication/ModelAuthentication';
 
 export class ModelMenuVertical {
     id: number;
@@ -13,4 +15,6 @@ export class ModelMenuVertical {
     boxShadowSize: number;//px
     boxShadowColor: string;
     arrayItem: Array<ModelItem>;
+    arrayInputData: Array<ModelInputData>;
+    arrayAuthentication: Array<ModelAuthentication>;
 }

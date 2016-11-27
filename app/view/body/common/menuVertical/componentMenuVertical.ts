@@ -1,7 +1,7 @@
 import { Component, Input, OnInit, ViewEncapsulation, ViewChildren, QueryList, forwardRef } from '@angular/core';
 
-import {ComponentItem} from './../item/ComponentItem';
-import {hTMLGenerator} from './../../../../core/hTMLGenerator/hTMLGenerator';
+import { ComponentItem } from './../item/ComponentItem';
+import { HTMLGenerator } from './../../../../core/hTMLGenerator/HTMLGenerator';
 
 import { ModelItem } from './../item/ModelItem';
 import { ModelMenuVertical } from './ModelMenuVertical';

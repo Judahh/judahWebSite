@@ -48,7 +48,7 @@ import { ComponentSubDivisor } from './view/body/common/divisorBlock/divisor/sub
 
 import { routing, routedComponents } from './Routing';
 
-import { hTMLGenerator } from './core/hTMLGenerator/hTMLGenerator';
+import { HTMLGenerator } from './core/hTMLGenerator/HTMLGenerator';
 
 //import { ResponsiveModule, ResponsiveConfig, ResponsiveConfigInterface } from 'ng2-responsive';
 //import { InMemoryWebApiModule } from 'angular-in-memory-web-api';

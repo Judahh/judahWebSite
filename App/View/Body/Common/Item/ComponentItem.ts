@@ -4,7 +4,7 @@ import { ModelItem } from './ModelItem';
 import { ModelTooltip } from './ModelTooltip';
 import { ComponentColorEffect } from '../item/colorEffect/ComponentColorEffect';
 
-import {hTMLGenerator} from './../../../../core/hTMLGenerator/hTMLGenerator';
+import {HTMLGenerator} from './../../../../core/hTMLGenerator/HTMLGenerator';
 
 import { Utils } from './../../../../core/utils/Utils';
 

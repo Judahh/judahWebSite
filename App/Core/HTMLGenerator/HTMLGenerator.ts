@@ -1,12 +1,12 @@
-export class hTMLGenerator {
+export class HTMLGenerator {
   public type: string;
   public name: string;
   public info?: string;
   
-  public subDiv?: Array<hTMLGenerator>;
+  public subDiv?: Array<HTMLGenerator>;
 
   public constructor(type:string, name: string, info?:string){
-      this.subDiv=new Array<hTMLGenerator>();
+      this.subDiv=new Array<HTMLGenerator>();
       this.type=type;
       this.name=name;
       this.info=info;

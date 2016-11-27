@@ -3,7 +3,7 @@ import { Component, OnInit, Input, ViewEncapsulation } from '@angular/core';
 import { ModelVideoLink } from './ModelVideoLink';
 import { ComponentColorEffect } from '../item/colorEffect/ComponentColorEffect';
 
-import {hTMLGenerator} from './../../../../core/hTMLGenerator/hTMLGenerator';
+import {HTMLGenerator} from './../../../../core/hTMLGenerator/HTMLGenerator';
 
 import { Utils } from './../../../../core/utils/Utils';
 
