@@ -607,6 +607,12 @@
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
 }
 
+@font-face {
+  font-family: 'Facebook'; 
+  src: url(‘http://www.mediafont.com/storage/contents/11/font.eot’); /* IE */ 
+  src: local(‘Facebook Letter Faces’), url(‘http://www.mediafont.com/storage/contents/11/FACEBOLF.OTF’); /* non-IE */ 
+}
+
 body{
   margin: 0 0 0 0;
 }
