@@ -2,11 +2,11 @@
     {
         "id":0,
         "language":"English-USA",
-        "title":"Login"
+        "title":"Login with facebook"
     },
     {
         "id":1,
         "language":"Portuguese-Brazil",
-        "title":"Login"
+        "title":"Logar com facebook"
     }
 ]
