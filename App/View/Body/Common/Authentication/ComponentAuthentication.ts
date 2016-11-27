@@ -9,7 +9,9 @@ import { ModelInputData } from './../inputData/ModelInputData';
 import { ModelClickButton } from './../clickButton/ModelClickButton';
 
 import { ModelAuthentication } from './ModelAuthentication';
-import { Utils } from './../../../../core/utils/Utils';
+import { Utils } from  './../../../../core/utils/Utils';
+import { Languages } from './../../../../core/languages/Languages';
+import { ModelLanguages } from './../../../../core/languages/ModelLanguages';
 
 import { ServiceJSON } from './../../../../core/services/jSON/ServiceJSON';
 import { ServiceAuthenticationFacebook } from './../../../../core/services/authentication/ServiceAuthenticationFacebook';
@@ -34,6 +36,9 @@ declare const FB:any;
 })
 export class ComponentAuthentication implements OnInit {
     @Input() modelAuthentication: ModelAuthentication;
+    modelAuthenticationInformation:any;
+    modelLanguages:ModelLanguages;
+    basicModelInformation:ModelInformation;
     name="";
 	isUser = false;
 
@@ -119,7 +124,12 @@ export class ComponentAuthentication implements OnInit {
     initialization() {
         this.modelAuthentication=new ModelAuthentication();
         this.serviceAuthenticationFacebook.loadAndInitFBSDK();
+        this.basicModelInformation=new ModelInformation("");
+        this.modelLanguages=new ModelLanguages();
+        
         this.getAuthenticationService();
+        this.getLanguageService();
+        this.getInformationService();
     }
 
     private getAuthenticationService(){
@@ -131,6 +141,33 @@ export class ComponentAuthentication implements OnInit {
         if(errorMessage!=""){
         alert("Error:"+errorMessage);
         }
+    }
+
+    private getLanguageService(){
+        var errorMessage="";
+
+        this.serviceJSON.getObservable(Languages.currentLanguageNamePath).subscribe(
+        items => this.modelLanguages=Languages.getModelLanguages(items), error => errorMessage = <any>error);
+        
+        if(errorMessage!=""){
+        alert("Error:"+errorMessage);
+        }
+    }
+
+    private getInformationService(){
+        var errorMessage="";
+
+        this.serviceJSON.getObservable('languages/'+Utils.getFileSelector(Utils.getFileName(__filename))).subscribe(
+        items => this.getInformation(Languages.getPageLanguage(items,this.modelLanguages)), error => errorMessage = <any>error);
+        
+        if(errorMessage!=""){
+        alert("Error:"+errorMessage);
+        }
+    }
+
+    private getInformation(modelAuthenticationInformation:any){
+        this.modelAuthenticationInformation=modelAuthenticationInformation;
+        this.modelAuthentication.inputData.clickButton.item.colorEffect.font.animationEffect.arrayInformation[0].information=this.modelAuthenticationInformation.title;
     }
 
     private getAuthentication(modelAuthentication:ModelAuthentication){
