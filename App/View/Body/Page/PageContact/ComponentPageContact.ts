@@ -15,8 +15,6 @@ import { ModelItem } from './../../common/item/ModelItem';
 import { ModelBasicForm } from './../../common/basicForm/ModelBasicForm';
 import { ModelClickButton } from './../../common/clickButton/ModelClickButton';
 
-import { ModelAuthentication } from './../../common/authentication/ModelAuthentication';
-
 import { ModelContactInformation } from './ModelContactInformation';
 
 import { ServiceJSON } from './../../../../core/services/jSON/ServiceJSON';
@@ -34,8 +32,6 @@ export class ComponentPageContact implements OnInit {
   basicModelInformation:ModelInformation;
   basicModelBasicForm:ModelBasicForm;
   currentWidth:number;
-
-  modelAuthentication: ModelAuthentication;
   arrayModelDivisorBlock:Array<ModelDivisorBlock>;
 
   //constructor(private heroService: HeroService) { }
@@ -50,7 +46,6 @@ export class ComponentPageContact implements OnInit {
 
   initialization(){
     this.arrayModelDivisorBlock=new Array<ModelDivisorBlock>();
-    // this.modelAuthentication=new ModelAuthentication();
     this.modelLanguages=new ModelLanguages();
     this.modelContactInformation=new ModelContactInformation();
     this.basicModelInformation=new ModelInformation("");
@@ -91,7 +86,6 @@ export class ComponentPageContact implements OnInit {
     this.getLanguageService();
     this.getInformationService();
     this.getArrayDivisorBlockService(type);
-    // this.getAuthenticationService();
   }
 
   ngOnDestroy() {
