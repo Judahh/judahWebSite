@@ -38,14 +38,19 @@ export class ComponentBasicForm implements OnInit {
 
       const body = JSON.stringify(form);
       self.http
-           .post('aPI/hire/hire', 
+           //.post('https://jsonplaceholder.typicode.com/posts', 
+           .get('http://localhost:3000/aPI/hire',
+           //.post('http://localhost:3000/aPI/hire', 
                  body, 
                  {
-                    headers: new Headers({ "Content-Type": "application/json" }) 
+                    headers: new Headers({ 
+                                            "Content-Type": "application/json"
+                                          }
+                    ) 
                  })
-           .map(response => response.json())
+           .map(response2 => response2.json())
            .subscribe(json => { 
-             console.log('received response');
+             console.log('received response:'+response2);
             /* handle it */ 
            });
 

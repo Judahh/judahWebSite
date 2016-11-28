@@ -32,7 +32,7 @@
   "license": "MIT",
   "angular-cli": {},
   "scripts": {
-    "start": "tsc && concurrently \"npm run tsc:w\" \"npm run lite\"",
+    "start": "tsc && concurrently \"npm run tsc:w\" \"npm run lite\" \"node index.js\"",
     "lint": "tslint \"src/**/*.ts\"",
     "test": "ng test",
     "pree2e": "webdriver-manager update",
@@ -96,10 +96,12 @@
     "zone.js": "^0.6.25"
   },
   "devDependencies": {
+    "@types/body-parser": "0.0.33",
     "@types/core-js": "^0.9.34",
     "@types/debug": "0.0.29",
     "@types/express": "^4.0.34",
     "@types/jasmine": "^2.5.37",
+    "@types/morgan": "^1.7.32",
     "@types/node": "^6.0.51",
     "@types/passport": "^0.2.34",
     "@types/passport-facebook": "^1.0.29",
