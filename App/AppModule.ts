@@ -3,6 +3,8 @@ import { BrowserModule, DomSanitizer } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule  } from '@angular/forms';
 import { HttpModule, JsonpModule } from '@angular/http';
 
+// import { ControllerHire } from './../aPI/hire/ControllerHire';
+
 //import { AngularFireModule, AuthProviders, AuthMethods } from 'angularfire2';
 
 import { ServiceJSON } from './core/services/jSON/ServiceJSON'
@@ -113,6 +115,7 @@ export class SafeStylePipe implements PipeTransform {
   //schemas:
   //[CUSTOM_ELEMENTS_SCHEMA],
   declarations: [
+    // ControllerHire,
     ComponentBody,
     ComponentHeader,
     ComponentPage,
