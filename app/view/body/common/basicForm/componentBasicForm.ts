@@ -13,7 +13,6 @@ import { Utils } from './../../../../core/utils/Utils';
 export class ComponentBasicForm implements OnInit {
 
   @Input() modelBasicForm: ModelBasicForm;
-  facebookId:string;
 
   ngOnInit() {
     this.initialization();
@@ -30,13 +29,8 @@ export class ComponentBasicForm implements OnInit {
   onSubmit(form: any): void { 
     FB.api('/me', function(response) {
       console.log('facebookId: ', response.id);
-    });
-    console.log('you submitted value: ', form);  
-    console.log('facebookId: ', this.facebookId);  
-  }
-
-  onFacebookAPICallback = (response: any) : void => {
-    this.facebookId=response.id;
+      console.log('you submitted value: ', form); 
+    }); 
   }
 
   style(array:Array<any>){
