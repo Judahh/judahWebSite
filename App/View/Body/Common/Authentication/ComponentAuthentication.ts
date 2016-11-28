@@ -40,8 +40,6 @@ export class ComponentAuthentication implements OnInit {
     modelLanguages:ModelLanguages;
     basicModelInformation:ModelInformation;
     idLoginInnerHTML:string;
-    name="";
-	isUser = false;
 
     constructor(private serviceJSON: ServiceJSON, 
                 private serviceAuthenticationFacebook: ServiceAuthenticationFacebook, 
@@ -118,11 +116,7 @@ export class ComponentAuthentication implements OnInit {
     onLoginCallback = (response: any) : void => {
         if (response.authResponse) {
             FB.api('/me', function(response) {
-                self.ngZone.run(() => {
-                    self.name = response.name;
-                    self.isUser = true
-                    console.log('USER:'+response);
-                });
+                console.log('USER:'+response);
             });
             this.getProfilePicture();
             this.modelAuthentication.inputData.clickButton.item.colorEffect.font.animationEffect.arrayInformation[0].information=this.modelAuthenticationInformation.logoff;
