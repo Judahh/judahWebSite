@@ -1,4 +1,4 @@
-import { Component, Input, OnInit, ViewEncapsulation, NgZone } from '@angular/core';
+import { Component, Input, OnInit, ViewEncapsulation } from '@angular/core';
 
 import { ModelInformation } from './../item/colorEffect/font/animationEffect/information/ModelInformation';
 import { ModelAnimationEffect } from './../item/colorEffect/font/animationEffect/ModelAnimationEffect';
@@ -42,8 +42,7 @@ export class ComponentAuthentication implements OnInit {
     idLoginInnerHTML:string;
 
     constructor(private serviceJSON: ServiceJSON, 
-                private serviceAuthenticationFacebook: ServiceAuthenticationFacebook, 
-                private ngZone: NgZone) {
+                private serviceAuthenticationFacebook: ServiceAuthenticationFacebook) {
 
     }
 
