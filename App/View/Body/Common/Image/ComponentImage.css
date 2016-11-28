@@ -6,3 +6,12 @@ image{
     height: auto;
     top: 0;
 }
+
+#ImgIdProfilePicture{
+    height: 40px;
+    width: 40px;
+    box-sizing: border-box;
+    /* border: 15px solid black; */
+    border-radius: 1000px;
+    position: relative;
+}

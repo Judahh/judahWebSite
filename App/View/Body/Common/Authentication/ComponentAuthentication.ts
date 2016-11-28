@@ -39,6 +39,7 @@ export class ComponentAuthentication implements OnInit {
     modelAuthenticationInformation:any;
     modelLanguages:ModelLanguages;
     basicModelInformation:ModelInformation;
+    idLoginInnerHTML:string;
     name="";
 	isUser = false;
 
@@ -97,23 +98,42 @@ export class ComponentAuthentication implements OnInit {
 
     onFacebookLoginClick() {
         var self = this;
-		FB.login(function(response) {
-		    if (response.authResponse) {
-		        FB.api('/me', function(response) {
-		          	self.ngZone.run(() => {
-				        self.name = response.name;
-				        self.isUser = true
-                        console.log('USER:'+response);
-			        });
-		        });
-		    }else{
-		        console.log('User cancelled login or did not fully authorize.');
-		    }
-		});
+		FB.login(this.onLoginCallback);
     }
+
+    onFacebookLogoffClick() {
+        var self = this;
+        FB.logout(this.onLogoffCallback);
+    }
+
 
     onClickCallback = (modelClickButton: ModelClickButton) : void => {
         this.onFacebookLoginClick()
+    }
+
+    onClick2Callback = (modelClickButton: ModelClickButton) : void => {
+        this.onFacebookLogoffClick()
+    }
+
+    onLoginCallback = (response: any) : void => {
+        if (response.authResponse) {
+            FB.api('/me', function(response) {
+                self.ngZone.run(() => {
+                    self.name = response.name;
+                    self.isUser = true
+                    console.log('USER:'+response);
+                });
+            });
+            this.getProfilePicture();
+            this.modelAuthentication.inputData.clickButton.item.colorEffect.font.animationEffect.arrayInformation[0].information=this.modelAuthenticationInformation.logoff;
+            this.modelAuthentication.inputData.clickButton.onClick=this.onClick2Callback;
+        }else{
+            console.log('User cancelled login or did not fully authorize.');
+        }
+    }
+
+    onLogoffCallback = (response: any) : void => {
+        this.removeProfilePicture();
     }
 
     isInputData(){
@@ -174,4 +194,43 @@ export class ComponentAuthentication implements OnInit {
         this.modelAuthentication=modelAuthentication;
         this.modelAuthentication.inputData.clickButton.onClick=this.onClickCallback;
     }
+
+    getIdLogin(){
+        var idLogin: any = document.getElementById('IdLogin');
+        return idLogin;
+    }
+
+    removeProfilePicture() {
+        var idLogin: any = this.getIdLogin();
+        //idLogin.text('0');
+        idLogin.innerHTML = this.idLoginInnerHTML;//"0";
+    }
+
+    getProfilePicture() {
+        var idLogin: any = this.getIdLogin();
+        this.idLoginInnerHTML=idLogin.innerHTML;
+        idLogin.innerHTML = "";
+        var photo = idLogin;
+        //var $btn = $('.btn-fb');
+        //var $fbPhoto = $('img.fb-photo');
+
+        //uploading
+        //$btn.text('Uploading...');
+
+        FB.api("/me/picture?redirect=false",  function(response) {
+
+            var profileImage = response.data.url.split('https://')[1], //remove https to avoid any cert issues
+                randomNumber = Math.floor(Math.random()*256);
+
+            //remove if there and add image element to dom to show without refresh
+            //if( $fbPhoto.length ){
+            //    $fbPhoto.remove();
+            //}
+            //add random number to reduce the frequency of cached images showing
+            photo.innerHTML='<img id=\"ImgIdProfilePicture\" class=\"fb-photo img-polaroid\" src=\"http://' + profileImage + '\">';
+            //photo.append('<img id=\"ImgIdProfilePicture\" class=\"fb-photo img-polaroid\" src=\"http://' + profileImage + '\">');
+            //$btn.addClass('hide');
+        });
+    }
+
 }

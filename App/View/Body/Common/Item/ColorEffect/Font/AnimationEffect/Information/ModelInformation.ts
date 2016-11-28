@@ -6,6 +6,7 @@ export class ModelInformation {
   textDecoration: string;
   color: string;
   backgroundColor: string;
+  id: string;
 
   constructor(information: string){
       this.information=information;

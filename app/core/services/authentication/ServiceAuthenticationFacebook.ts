@@ -17,7 +17,7 @@ export class ServiceAuthenticationFacebook {
 
   constructor() {
     if (!window.fbAsyncInit) {
-      console.log('define');
+      //console.log('define');
       window.fbAsyncInit = function() {
         FB.init({
             appId      : passportAuthentication.facebook.clientID,

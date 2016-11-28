@@ -206,6 +206,7 @@
                     "subClasses":[],
                     "arrayInformation":[
                       {
+                        "id":"IdLogin",
                         "information":"0",
                         "opacity":0.6
                       }
