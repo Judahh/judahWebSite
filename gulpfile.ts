@@ -69,3 +69,14 @@ gulp.task("compileAndTest-TypeScript", function () {
 gulp.task("watch-TypeScript", function() {
     return gulp.watch(typeScriptGlob, ["compileAndTest-TypeScript"]);
 });
+gulp.task('scripts', () => {
+  const tsResult = tsProject.src()
+  .pipe(tsProject());
+  return tsResult.js.pipe(gulp.dest('dist'));
+});
+
+gulp.task('watch', ['scripts'], () => {
+  gulp.watch('src/**/*.ts', ['scripts']);
+});
+
+gulp.task('default', ['watch']);
