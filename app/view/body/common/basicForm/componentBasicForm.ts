@@ -1,7 +1,11 @@
 import { Component, Input, OnInit, ViewEncapsulation } from '@angular/core';
+import { Headers, Http, Response, RequestOptions } from '@angular/http';
+import { Observable }     from 'rxjs/Observable';
 
 import { ModelBasicForm } from './ModelBasicForm';
 import { Utils } from './../../../../core/utils/Utils';
+
+declare const FB:any;
 
 @Component({
   moduleId: module.id,
@@ -18,7 +22,7 @@ export class ComponentBasicForm implements OnInit {
     this.initialization();
   }
 
-  constructor() {}
+  constructor(private http: Http) {}
 
   initialization(){
   }
@@ -27,9 +31,24 @@ export class ComponentBasicForm implements OnInit {
   }
 
   onSubmit(form: any): void { 
+    var self = this;
     FB.api('/me', function(response) {
       console.log('facebookId: ', response.id);
       console.log('you submitted value: ', form); 
+
+      const body = JSON.stringify(form);
+      self.http
+           .post('aPI/hire/hire', 
+                 body, 
+                 {
+                    headers: new Headers({ "Content-Type": "application/json" }) 
+                 })
+           .map(response => response.json())
+           .subscribe(json => { 
+             console.log('received response');
+            /* handle it */ 
+           });
+
     }); 
   }
 

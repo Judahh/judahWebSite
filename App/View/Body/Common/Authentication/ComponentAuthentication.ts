@@ -94,12 +94,10 @@ export class ComponentAuthentication implements OnInit {
     // }
 
     onFacebookLoginClick() {
-        var self = this;
 		FB.login(this.onLoginCallback);
     }
 
     onFacebookLogoffClick() {
-        var self = this;
         FB.logout(this.onLogoffCallback);
     }
 
