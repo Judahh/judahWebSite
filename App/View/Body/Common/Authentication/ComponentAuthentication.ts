@@ -129,11 +129,16 @@ export class ComponentAuthentication implements OnInit {
             this.modelAuthentication.inputData.clickButton.onClick=this.onClick2Callback;
         }else{
             console.log('User cancelled login or did not fully authorize.');
+            this.removeProfilePicture();
+            this.modelAuthentication.inputData.clickButton.item.colorEffect.font.animationEffect.arrayInformation[0].information=this.modelAuthenticationInformation.title;
+            this.modelAuthentication.inputData.clickButton.onClick=this.onClickCallback;
         }
     }
 
     onLogoffCallback = (response: any) : void => {
         this.removeProfilePicture();
+        this.modelAuthentication.inputData.clickButton.item.colorEffect.font.animationEffect.arrayInformation[0].information=this.modelAuthenticationInformation.title;
+        this.modelAuthentication.inputData.clickButton.onClick=this.onClickCallback;
     }
 
     isInputData(){
