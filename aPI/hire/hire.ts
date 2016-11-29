@@ -1,4 +1,5 @@
 import {Router, Request, Response, NextFunction} from 'express';
+import * as logger from 'morgan';
 
 export class Hire {
   router: Router
@@ -15,16 +16,14 @@ export class Hire {
    * GET all Heroes.
    */
   public getAll(req: Request, res: Response, next: NextFunction) {
-    res.send("REQA:"+req);
-    res.send("RESA:"+res);
+    res.send("REQA:"+req+"RESA:"+res);
   }
 
   /**
    * GET one hero by id
    */
   public getOne(req: Request, res: Response, next: NextFunction) {
-    res.send("REQ:"+req);
-    res.send("RES:"+req);
+    res.send("REQ:"+req+"RES:"+req);
   }
 
   /**

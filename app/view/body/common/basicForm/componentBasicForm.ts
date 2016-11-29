@@ -33,28 +33,27 @@ export class ComponentBasicForm implements OnInit {
   onSubmit(form: any): void { 
     var self = this;
     FB.api('/me', function(response) {
-      console.log('facebookId: ', response.id);
-      console.log('you submitted value: ', form); 
       if(response.id!=undefined){
         form.facebookId=response.id;
       }
-      self.http
-           //.post('https://jsonplaceholder.typicode.com/posts', 
-           .post('http://localhost:3000/aPI/hire', 
-                 form, 
-                 {
-                    headers: new Headers({ 
-                                            "Content-Type": "application/json"
-                                          }
-                    ) 
-                 })
-           .map(response => response)
-           .subscribe(json => { 
-             console.log('received response:'+JSON.stringify(json));
-            /* handle it */ 
-           });
 
+      var headers:any=new Headers({"Content-Type": "application/json"}); 
+
+      self.http.post(self.modelBasicForm.link, 
+                 JSON.stringify(form),
+                 {headers: headers})
+           .map(self.extractData)
+           .subscribe(json => self.handleResponse(json));
     }); 
+  }
+
+  private extractData(response: Response) {
+    //console.log('extract Data:'+JSON.stringify(response));
+    return response;
+  }
+
+  private handleResponse(response: Response) {
+    console.log('received response:'+JSON.stringify(response));
   }
 
   style(array:Array<any>){
