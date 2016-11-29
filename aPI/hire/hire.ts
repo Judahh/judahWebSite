@@ -16,14 +16,14 @@ export class Hire {
    * GET all Heroes.
    */
   public getAll(req: Request, res: Response, next: NextFunction) {
-    res.send("REQA:"+req+"RESA:"+res);
+    res.send("formA:"+JSON.stringify(req.body));
   }
 
   /**
    * GET one hero by id
    */
   public getOne(req: Request, res: Response, next: NextFunction) {
-    res.send("REQ:"+req+"RES:"+req);
+    res.send("formA:"+req.params._body+req.params.body+req.params.form);
   }
 
   /**

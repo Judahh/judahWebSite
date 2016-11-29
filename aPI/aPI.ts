@@ -42,12 +42,12 @@ class API {
     let router = express.Router();
     
     // placeholder route handler
-    router.get('/', (req, res, next) => {
-      res.json({
-        message: 'Hello World!'
-      });
-    });
-    this.express.use('/', router);
+    // router.get('/', (req, res, next) => {
+    //   res.json({
+    //     message: 'Hello World!'
+    //   });
+    // });
+    // this.express.use('/', router);
     this.express.use('/aPI/hire', Hire);
   }
 

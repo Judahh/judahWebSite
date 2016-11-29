@@ -1,4 +1,4 @@
-<select name="modelComboBox.name" [style]="style()|safeStyle">
+<select name="{{modelComboBox.name}}" formControlName="{{modelComboBox.name}}" [style]="style()|safeStyle">
     <option *ngFor="let option of modelComboBox.arrayOptions"
         value="{{option}}">
         {{option}}

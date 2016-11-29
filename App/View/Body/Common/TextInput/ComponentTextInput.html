@@ -1,6 +1,7 @@
 <input 
     *ngIf="isField()"
     name="{{modelTextInput.name}}"
+    formControlName="{{modelTextInput.name}}"
     placeholder="{{modelTextInput.placeholder}}"
     [style]="style()|safeStyle"
     value="{{modelTextInput.value}}"/>
@@ -9,6 +10,7 @@
     *ngIf="isDataList()">
     <input 
         name="{{modelTextInput.name}}"
+        formControlName="{{modelTextInput.name}}"
         [attr.list]="getDataListId()"
         placeholder="{{modelTextInput.placeholder}}"
         [style]="style()|safeStyle"

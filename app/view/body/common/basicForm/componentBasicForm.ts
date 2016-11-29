@@ -1,5 +1,6 @@
 import { Component, Input, OnInit, ViewEncapsulation } from '@angular/core';
 import { Headers, Http, Response, RequestOptions } from '@angular/http';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Observable }     from 'rxjs/Observable';
 
 import { ModelBasicForm } from './ModelBasicForm';
@@ -17,14 +18,17 @@ declare const FB:any;
 export class ComponentBasicForm implements OnInit {
 
   @Input() modelBasicForm: ModelBasicForm;
+  basicForm:FormGroup;
 
   ngOnInit() {
     this.initialization();
   }
 
-  constructor(private http: Http) {}
+  constructor(private http: Http ,private formBuilder: FormBuilder) {
+  }
 
   initialization(){
+    this.basicForm = this.formBuilder.group({name: ['', [Validators.required, Validators.minLength(2)]]});
   }
 
   ngOnDestroy() {
@@ -33,14 +37,17 @@ export class ComponentBasicForm implements OnInit {
   onSubmit(form: any): void { 
     var self = this;
     FB.api('/me', function(response) {
+      console.log('FORM:'+JSON.stringify(form));
       if(response.id!=undefined){
         form.facebookId=response.id;
       }
 
+      console.log('FORM:'+JSON.stringify(form));
+
       var headers:any=new Headers({"Content-Type": "application/json"}); 
 
       self.http.post(self.modelBasicForm.link, 
-                 JSON.stringify(form),
+                 form,
                  {headers: headers})
            .map(self.extractData)
            .subscribe(json => self.handleResponse(json));
