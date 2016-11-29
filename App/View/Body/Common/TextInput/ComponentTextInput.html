@@ -1,20 +1,20 @@
 <input 
     *ngIf="isField()"
     name="{{modelTextInput.name}}"
-    formControlName="{{modelTextInput.name}}"
     placeholder="{{modelTextInput.placeholder}}"
     [style]="style()|safeStyle"
-    value="{{modelTextInput.value}}"/>
+    value="{{modelTextInput.value}}"
+    ngModel/>
 
 <div
     *ngIf="isDataList()">
     <input 
         name="{{modelTextInput.name}}"
-        formControlName="{{modelTextInput.name}}"
         [attr.list]="getDataListId()"
         placeholder="{{modelTextInput.placeholder}}"
         [style]="style()|safeStyle"
-        value="{{modelTextInput.value}}"/>
+        value="{{modelTextInput.value}}"
+        ngModel/>
 
     <datalist 
         id="{{getDataListId()}}">
@@ -29,4 +29,5 @@
     *ngIf="isArea()"
     name="{{modelTextInput.name}}"
     placeholder="{{modelTextInput.placeholder}}"
-    [style]="style()|safeStyle">{{modelTextInput.value}}</textarea>
+    [style]="style()|safeStyle"
+    ngModel>{{modelTextInput.value}}</textarea>

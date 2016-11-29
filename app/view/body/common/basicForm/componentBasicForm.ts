@@ -1,6 +1,6 @@
 import { Component, Input, OnInit, ViewEncapsulation } from '@angular/core';
 import { Headers, Http, Response, RequestOptions } from '@angular/http';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators, NgForm } from '@angular/forms';
 import { Observable }     from 'rxjs/Observable';
 
 import { ModelBasicForm } from './ModelBasicForm';
@@ -18,36 +18,34 @@ declare const FB:any;
 export class ComponentBasicForm implements OnInit {
 
   @Input() modelBasicForm: ModelBasicForm;
-  basicForm:FormGroup;
+  //basicForm:FormGroup;
 
   ngOnInit() {
     this.initialization();
   }
 
-  constructor(private http: Http ,private formBuilder: FormBuilder) {
+  constructor(private http: Http) {
   }
 
   initialization(){
-    this.basicForm = this.formBuilder.group({name: ['', [Validators.required, Validators.minLength(2)]]});
+    //this.basicForm = this.formBuilder.group({});
   }
 
   ngOnDestroy() {
   }
 
-  onSubmit(form: any): void { 
+  onSubmit(form: NgForm): void { 
     var self = this;
     FB.api('/me', function(response) {
-      console.log('FORM:'+JSON.stringify(form));
       if(response.id!=undefined){
-        form.facebookId=response.id;
+        form.value.facebookId=response.id;
       }
-
-      console.log('FORM:'+JSON.stringify(form));
+      console.log('FORM:'+JSON.stringify(form.value));
 
       var headers:any=new Headers({"Content-Type": "application/json"}); 
 
       self.http.post(self.modelBasicForm.link, 
-                 form,
+                 form.value,
                  {headers: headers})
            .map(self.extractData)
            .subscribe(json => self.handleResponse(json));

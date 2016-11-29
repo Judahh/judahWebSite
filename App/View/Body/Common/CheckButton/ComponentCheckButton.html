@@ -2,14 +2,12 @@
     <input *ngIf="modelCheckButton.checked" checked 
         type="{{type()}}" 
         name="{{modelCheckButton.name}}"
-        formControlName="{{modelCheckButton.name}}"
         value="{{modelCheckButton.value}}"
     />
 
     <input *ngIf="!modelCheckButton.checked"
         type="{{type()}}" 
         name="{{modelCheckButton.name}}"
-        formControlName="{{modelCheckButton.name}}"
         value="{{modelCheckButton.value}}"
     />
     
