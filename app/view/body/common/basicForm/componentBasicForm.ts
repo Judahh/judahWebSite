@@ -35,22 +35,22 @@ export class ComponentBasicForm implements OnInit {
     FB.api('/me', function(response) {
       console.log('facebookId: ', response.id);
       console.log('you submitted value: ', form); 
-
-      const body = JSON.stringify(form);
+      if(response.id!=undefined){
+        form.facebookId=response.id;
+      }
       self.http
            //.post('https://jsonplaceholder.typicode.com/posts', 
-           .get('http://localhost:3000/aPI/hire',
-           //.post('http://localhost:3000/aPI/hire', 
-                 body, 
+           .post('http://localhost:3000/aPI/hire', 
+                 form, 
                  {
                     headers: new Headers({ 
                                             "Content-Type": "application/json"
                                           }
                     ) 
                  })
-           .map(response2 => response2.json())
+           .map(response => response)
            .subscribe(json => { 
-             console.log('received response:'+response2);
+             console.log('received response:'+JSON.stringify(json));
             /* handle it */ 
            });
 
