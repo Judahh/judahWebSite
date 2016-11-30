@@ -53,6 +53,17 @@ export class ComponentInputData implements OnInit {
       return this.exists(this.modelInputData.checkButton);
   }
 
+  width(){
+    if(this.modelInputData.width==null||this.modelInputData.width==undefined||this.modelInputData.width==""){
+      return "";
+    }
+    return "width: "+this.modelInputData.width+";";
+  }
+
+  style(){
+    return this.width();
+  }
+
 }
 
 

@@ -1,28 +1,33 @@
 <comboBox 
     [form]="form"
     *ngIf="isComboBox()"
-    [modelComboBox]="modelInputData.comboBox">
+    [modelComboBox]="modelInputData.comboBox"
+    [style]="style()|safeStyle">
 </comboBox>
 
 <textInput 
     [form]="form"
     *ngIf="isTextInput()"
-    [modelTextInput]="modelInputData.textInput">
+    [modelTextInput]="modelInputData.textInput"
+    [style]="style()|safeStyle">
 </textInput>
 
 <clickButton 
     [form]="form"
     *ngIf="isClickButton()"
-    [modelClickButton]="modelInputData.clickButton">
+    [modelClickButton]="modelInputData.clickButton"
+    [style]="style()|safeStyle">
 </clickButton>
 
 <checkButton 
     [form]="form"
     *ngIf="isCheckButton()"
-    [modelCheckButton]="modelInputData.checkButton">
+    [modelCheckButton]="modelInputData.checkButton"
+    [style]="style()|safeStyle">
 </checkButton>
 
 <item 
     *ngIf="isItem()"
-    [modelItem]="modelInputData.item">
+    [modelItem]="modelInputData.item"
+    [style]="style()|safeStyle">
 </item>

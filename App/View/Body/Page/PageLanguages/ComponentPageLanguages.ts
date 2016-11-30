@@ -102,9 +102,9 @@ export class ComponentPageLanguages implements OnInit {
   }
 
 
-  getItem(modelLanguages:ModelLanguages){
+  getItem(modelLanguages:ModelLanguages,item:ModelItem){
     var item:ModelItem;
-    item = JSON.parse(JSON.stringify(this.basicItem));
+    //item = JSON.parse(JSON.stringify(this.basicItem));
     for(let index:number=0;index<this.modelLanguagesInformation.languages.length;index++){
       if(this.modelLanguagesInformation.languages[index].language==modelLanguages.language){
         var modelInformation:ModelInformation=JSON.parse(JSON.stringify(this.basicModelInformation));
@@ -145,7 +145,8 @@ export class ComponentPageLanguages implements OnInit {
         if(this.arrayModelLanguagesInformation[index].language==this.arrayModelLanguages[index2].language){
           this.arrayModelDivisorBlock[0].arraySubDivisor[0].basicForm.array3InputData[0][index][0].checkButton.checked=this.isChecked(this.arrayModelLanguages[index2]);
           this.arrayModelDivisorBlock[0].arraySubDivisor[0].basicForm.array3InputData[0][index][0].checkButton.value=this.arrayModelLanguages[index2].code[0];
-          this.arrayModelDivisorBlock[0].arraySubDivisor[0].basicForm.array3InputData[0][index][0].checkButton.item=this.getItem(this.arrayModelLanguages[index2]);
+          this.arrayModelDivisorBlock[0].arraySubDivisor[0].basicForm.array3InputData[0][index][0].checkButton.item=this.getItem(this.arrayModelLanguages[index2],
+          this.arrayModelDivisorBlock[0].arraySubDivisor[0].basicForm.array3InputData[0][index][0].checkButton.item);
           this.arrayModelDivisorBlock[0].arraySubDivisor[0].basicForm.array3InputData[0][index][0].checkButton.onClick=this.onClickCallback;
         }
       }
@@ -153,7 +154,7 @@ export class ComponentPageLanguages implements OnInit {
   }
 
   onClickCallback = (modelCheckButton: ModelCheckButton) : void => {
-    console.log("value:"modelCheckButton.value);
+   // console.log("value:"modelCheckButton.value);
     this.setLanguage(modelCheckButton.value);
     //alert(modelClickButton);
     //window.open("files/CURRICULUM VITAE  - Judah Holanda.pdf");

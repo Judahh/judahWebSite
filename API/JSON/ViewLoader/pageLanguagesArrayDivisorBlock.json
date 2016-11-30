@@ -7,6 +7,7 @@
                     [
                         [
                             {
+                                "width":"100%",
                                 "checkButton":{
                                     "type":"button",
                                     "name":"language",
@@ -21,6 +22,7 @@
                                             "colorEffect":"DivClassNeon",
                                             "font":{
                                                 "font":"DivClassFuturisticI",
+                                                "textAlign":"center",
                                                 "width":"100%",
                                                 "size":20,
                                                 "arrayPadding":[5],
@@ -38,6 +40,7 @@
                         ],
                         [
                             {
+                                "width":"100%",
                                 "checkButton":{
                                     "type":"button",
                                     "name":"language",
@@ -52,6 +55,7 @@
                                             "colorEffect":"DivClassNeon",
                                             "font":{
                                                 "font":"DivClassFuturisticI",
+                                                "textAlign":"center",
                                                 "width":"100%",
                                                 "size":20,
                                                 "arrayPadding":[5],

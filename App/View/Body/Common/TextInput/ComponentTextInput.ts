@@ -57,20 +57,20 @@ export class ComponentTextInput implements OnInit {
   }
 
   isField(){
-        return this.modelTextInput.textInputType==TextInputType.field;
-    }
+      return this.modelTextInput.textInputType==TextInputType.field;
+  }
 
-    isArea(){
-        return this.modelTextInput.textInputType==TextInputType.area;
-    }
+  isArea(){
+      return this.modelTextInput.textInputType==TextInputType.area;
+  }
 
-    isDataList(){
-        return this.modelTextInput.textInputType==TextInputType.dataList;
-    }
+  isDataList(){
+      return this.modelTextInput.textInputType==TextInputType.dataList;
+  }
 
-    getDataListId(){
-        return "dataListId" + this.modelTextInput.name.charAt(0).toUpperCase() + this.modelTextInput.name.slice(1);
-    }
+  getDataListId(){
+      return "dataListId" + this.modelTextInput.name.charAt(0).toUpperCase() + this.modelTextInput.name.slice(1);
+  }
 
 }
 

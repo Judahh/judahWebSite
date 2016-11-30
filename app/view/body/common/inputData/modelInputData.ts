@@ -9,5 +9,6 @@ export class ModelInputData {
     textInput:ModelTextInput;
     clickButton:ModelClickButton;
     checkButton:ModelCheckButton;
-    item:ModelItem
+    item:ModelItem;
+    width:string;
 }
