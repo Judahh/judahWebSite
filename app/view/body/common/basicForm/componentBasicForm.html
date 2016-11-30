@@ -1,6 +1,6 @@
-<form #basicForm="ngForm"
-    (ngSubmit)="onSubmit(basicForm)">
-    <div><div><div><input name="{{modelBasicForm.link}}" ngModel/></div></div></div>
+<form
+    (ngSubmit)="onSubmit(form)"
+    [formGroup]="form">
     <div
         *ngFor="let array2InputData of modelBasicForm.array3InputData">
         <div [style]="style(array2InputData)|safeStyle"
@@ -8,7 +8,8 @@
             <div [style]="style2(arrayInputData)|safeStyle"
                 *ngFor="let inputData of arrayInputData">
                 <inputData 
-                    [modelInputData]="inputData">
+                    [modelInputData]="inputData"
+                    [form]="form">
                 </inputData>
             </div>
         </div>

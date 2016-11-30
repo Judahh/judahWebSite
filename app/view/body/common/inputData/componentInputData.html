@@ -1,24 +1,28 @@
-<comboBox
+<comboBox 
+    [form]="form"
     *ngIf="isComboBox()"
     [modelComboBox]="modelInputData.comboBox">
 </comboBox>
 
 <textInput 
+    [form]="form"
     *ngIf="isTextInput()"
     [modelTextInput]="modelInputData.textInput">
 </textInput>
 
-<clickButton
+<clickButton 
+    [form]="form"
     *ngIf="isClickButton()"
     [modelClickButton]="modelInputData.clickButton">
 </clickButton>
 
-<checkButton
+<checkButton 
+    [form]="form"
     *ngIf="isCheckButton()"
     [modelCheckButton]="modelInputData.checkButton">
 </checkButton>
 
-<item
+<item 
     *ngIf="isItem()"
     [modelItem]="modelInputData.item">
 </item>

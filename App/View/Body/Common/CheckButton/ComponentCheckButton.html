@@ -1,14 +1,20 @@
-<label>
+<label [formGroup]="form">
     <input *ngIf="modelCheckButton.checked" checked 
         type="{{type()}}" 
+        id="{{modelCheckButton.name}}"
         name="{{modelCheckButton.name}}"
+        formControlName="{{modelCheckButton.name}}"
         value="{{modelCheckButton.value}}"
+        [attr.ngControl]="modelCheckButton.name"
     />
 
     <input *ngIf="!modelCheckButton.checked"
         type="{{type()}}" 
+        id="{{modelCheckButton.name}}"
         name="{{modelCheckButton.name}}"
+        formControlName="{{modelCheckButton.name}}"
         value="{{modelCheckButton.value}}"
+        [attr.ngControl]="modelCheckButton.name"
     />
     
     <div>

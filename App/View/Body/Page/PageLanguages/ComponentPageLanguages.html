@@ -3,6 +3,7 @@
 </divisorBlock>
 
 <checkButton *ngFor="let checkButton of arrayModelCheckButton" 
+    [form]="form"
     [modelCheckButton]="checkButton"
     (click)="setLanguage(checkButton.value)">
 </checkButton>

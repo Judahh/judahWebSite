@@ -1,20 +1,21 @@
+<div [formGroup]="form">
 <input 
     *ngIf="isField()"
     name="{{modelTextInput.name}}"
+    formControlName="{{modelTextInput.name}}"
     placeholder="{{modelTextInput.placeholder}}"
     [style]="style()|safeStyle"
-    value="{{modelTextInput.value}}"
-    ngModel/>
+    value="{{modelTextInput.value}}"/>
 
 <div
     *ngIf="isDataList()">
     <input 
         name="{{modelTextInput.name}}"
+        formControlName="{{modelTextInput.name}}"
         [attr.list]="getDataListId()"
         placeholder="{{modelTextInput.placeholder}}"
         [style]="style()|safeStyle"
-        value="{{modelTextInput.value}}"
-        ngModel/>
+        value="{{modelTextInput.value}}"/>
 
     <datalist 
         id="{{getDataListId()}}">
@@ -28,6 +29,7 @@
 <textarea 
     *ngIf="isArea()"
     name="{{modelTextInput.name}}"
+    formControlName="{{modelTextInput.name}}"
     placeholder="{{modelTextInput.placeholder}}"
-    [style]="style()|safeStyle"
-    ngModel>{{modelTextInput.value}}</textarea>
+    [style]="style()|safeStyle">{{modelTextInput.value}}</textarea>
+</div>

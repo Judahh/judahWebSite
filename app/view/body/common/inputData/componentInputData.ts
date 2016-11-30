@@ -13,6 +13,9 @@ import { Utils } from './../../../../core/utils/Utils';
 export class ComponentInputData implements OnInit {
 
   @Input() modelInputData: ModelInputData;
+  @Input() form: FormGroup;
+
+  //get isValid() { return this.form.controls[this.question.key].valid; }
 
   ngOnInit() {
     this.initialization();

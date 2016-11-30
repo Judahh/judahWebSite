@@ -20,6 +20,8 @@ import { ModelLanguagesInformation } from './ModelLanguagesInformation';
 
 import { ServiceJSON } from './../../../../core/services/jSON/ServiceJSON';
 
+import { FormBuilder, FormGroup, Validators, NgForm } from '@angular/forms';
+
 @Component({
   moduleId: module.id,
   selector: Utils.getFileSelector(Utils.getFileName(__filename)),
@@ -36,6 +38,7 @@ export class ComponentPageLanguages implements OnInit {
   arrayModelCheckButton:Array<ModelCheckButton>;
   basicItem:ModelItem;
   basicModelInformation:ModelInformation;
+  form:FormGroup;
 
   arrayModelDivisorBlock:Array<ModelDivisorBlock>;
 
@@ -43,7 +46,7 @@ export class ComponentPageLanguages implements OnInit {
       this.initialization();
   }
 
-  constructor(private serviceJSON: ServiceJSON) {}
+  constructor(private serviceJSON: ServiceJSON, private formBuilder:FormBuilder) {}
 
   initialization(){
     this.arrayModelDivisorBlock=new Array<ModelDivisorBlock>();
@@ -55,6 +58,10 @@ export class ComponentPageLanguages implements OnInit {
     this.basicItem=new ModelItem();
     this.basicModelInformation=new ModelInformation("");
     this.arrayModelCheckButton=new Array<ModelCheckButton>();
+
+    this.form = this.formBuilder.group({
+      'language':[false, Validators.required]
+    });
 
     this.getHalfModelInformation();
     this.getItemService();

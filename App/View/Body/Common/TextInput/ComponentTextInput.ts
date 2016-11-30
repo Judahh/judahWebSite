@@ -11,6 +11,8 @@ import { Utils } from './../../../../core/utils/Utils';
 
 import { TextInputType } from './TextInputType';
 
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+
 @Component({
   moduleId: module.id,
   selector: Utils.getFileSelector(Utils.getFileName(__filename)),
@@ -22,6 +24,7 @@ export class ComponentTextInput implements OnInit {
 
   @Input() modelTextInput: ModelTextInput;
   @Input() list: string;
+  @Input() form: FormGroup;
 
   ngOnInit() {
     this.initialization();

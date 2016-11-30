@@ -18,17 +18,43 @@ declare const FB:any;
 export class ComponentBasicForm implements OnInit {
 
   @Input() modelBasicForm: ModelBasicForm;
-  //basicForm:FormGroup;
+  form:FormGroup;
 
   ngOnInit() {
     this.initialization();
   }
 
-  constructor(private http: Http) {
+  constructor(private http: Http, private formBuilder:FormBuilder) {
   }
 
   initialization(){
-    //this.basicForm = this.formBuilder.group({});
+    this.form = this.formBuilder.group({
+      'name':['', Validators.required],
+      'company':['', Validators.required],
+      'email':['', Validators.required],
+      'phone':['', Validators.required],
+      'phoneType':['', Validators.required],
+      'address':['', Validators.required],
+      'jobTitle':['', Validators.required],
+      'jobTitleType':['', Validators.required],
+      'currency':['', Validators.required],
+      'salary':['', Validators.required],
+      'salaryPer':['', Validators.required],
+      'in':['', Validators.required],
+      'out':['', Validators.required],
+      'description':['', Validators.required],
+      'flexible0':[false, Validators.required],
+      'flexible1':[false, Validators.required],
+      'flexible2':[false, Validators.required],
+      'flexible3':[false, Validators.required],
+      'sunday':[false, Validators.required],
+      'monday':[false, Validators.required],
+      'tuesday':[false, Validators.required],
+      'wednesday':[false, Validators.required],
+      'thursday':[false, Validators.required],
+      'friday':[true, Validators.required],
+      'saturday':[0, Validators.required]
+    });
   }
 
   ngOnDestroy() {

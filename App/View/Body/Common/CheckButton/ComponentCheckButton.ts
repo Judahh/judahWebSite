@@ -9,6 +9,8 @@ import { ModelItem } from './../item/ModelItem';
 import { ModelCheckButton } from './ModelCheckButton';
 import { Utils } from './../../../../core/utils/Utils';
 
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+
 @Component({
   moduleId: module.id,
   selector: Utils.getFileSelector(Utils.getFileName(__filename)),
@@ -19,6 +21,8 @@ import { Utils } from './../../../../core/utils/Utils';
 export class ComponentCheckButton implements OnInit {
 
   @Input() modelCheckButton: ModelCheckButton;
+  @Input() form: FormGroup;
+  
 
   ngOnInit() {
     this.initialization();
