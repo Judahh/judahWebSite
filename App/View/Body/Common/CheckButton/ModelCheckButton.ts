@@ -7,6 +7,7 @@ export class ModelCheckButton {
     value:string;
     item:ModelItem;
     type:string;
+    onClick:any;
 
     public type(){
         if(this.radio){

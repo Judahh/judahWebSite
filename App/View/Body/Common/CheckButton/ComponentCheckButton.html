@@ -26,7 +26,7 @@
 
 <label [formGroup]="form" 
     *ngIf="isButton()" 
-    (click)="onClick(modelClickButton.onClick)">
+    (click)="onClick(modelCheckButton.onClick)">
     <input *ngIf="modelCheckButton.checked" checked 
         type="{{type()}}" 
         id="{{modelCheckButton.name}}"

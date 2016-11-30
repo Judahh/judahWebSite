@@ -35,7 +35,6 @@ export class ComponentPageLanguages implements OnInit {
   modelLanguages:ModelLanguages;
   arrayModelLanguages:Array<ModelLanguages>;
   //filteredArrayModelLanguages:Array<ModelLanguages>;
-  arrayModelCheckButton:Array<ModelCheckButton>;
   basicItem:ModelItem;
   basicModelInformation:ModelInformation;
   form:FormGroup;
@@ -57,7 +56,6 @@ export class ComponentPageLanguages implements OnInit {
     this.modelLanguages=new ModelLanguages();
     this.basicItem=new ModelItem();
     this.basicModelInformation=new ModelInformation("");
-    this.arrayModelCheckButton=new Array<ModelCheckButton>();
 
     this.form = this.formBuilder.group({
       'language':[false, Validators.required]
@@ -138,31 +136,28 @@ export class ComponentPageLanguages implements OnInit {
   getModelLanguagesInformation(arrayModelLanguagesInformation:Array<ModelLanguagesInformation>){
     this.arrayModelLanguagesInformation=arrayModelLanguagesInformation;
     this.modelLanguagesInformation=Languages.getPageLanguage(arrayModelLanguagesInformation,this.modelLanguages);
-    this.getArrayModelCheckButton();
+    //this.getArrayModelCheckButton();
   }
 
   getArrayModelCheckButton(){
     for(let index:number=0;index<this.arrayModelLanguagesInformation.length;index++){
       for(let index2:number=0;index2<this.arrayModelLanguages.length;index2++){
         if(this.arrayModelLanguagesInformation[index].language==this.arrayModelLanguages[index2].language){
-          var modelCheckButton:ModelCheckButton=new ModelCheckButton();
-          modelCheckButton.item=this.getItem(this.arrayModelLanguages[index2]);
-          modelCheckButton.checked=this.isChecked(this.arrayModelLanguages[index2]);
-          modelCheckButton.value=this.arrayModelLanguages[index2].code[0];
-          modelCheckButton.name="language";
-          modelCheckButton.radio=true;
-          //console.log("value:"+modelCheckButton.value);
-          //console.log("information:"+modelCheckButton.item.colorEffect.font.animationEffect.arrayInformation[0].information);
-          this.arrayModelCheckButton.push(modelCheckButton);
+          this.arrayModelDivisorBlock[0].arraySubDivisor[0].basicForm.array3InputData[0][index][0].checkButton.checked=this.isChecked(this.arrayModelLanguages[index2]);
+          this.arrayModelDivisorBlock[0].arraySubDivisor[0].basicForm.array3InputData[0][index][0].checkButton.value=this.arrayModelLanguages[index2].code[0];
+          this.arrayModelDivisorBlock[0].arraySubDivisor[0].basicForm.array3InputData[0][index][0].checkButton.item=this.getItem(this.arrayModelLanguages[index2]);
+          this.arrayModelDivisorBlock[0].arraySubDivisor[0].basicForm.array3InputData[0][index][0].checkButton.onClick=this.onClickCallback;
         }
       }
     }
-    for(let index:number=0;index<this.arrayModelCheckButton.length;index++){
-      var modelCheckButton:ModelCheckButton=this.arrayModelCheckButton[index];
-      //console.log("value:"+modelCheckButton.value);
-      //console.log("information:"+modelCheckButton.item.colorEffect.font.animationEffect.arrayInformation[0].information);
-    }
+  }
 
+  onClickCallback = (modelCheckButton: ModelCheckButton) : void => {
+    console.log("value:"modelCheckButton.value);
+    this.setLanguage(modelCheckButton.value);
+    //alert(modelClickButton);
+    //window.open("files/CURRICULUM VITAE  - Judah Holanda.pdf");
+    //window.open("files/Judah Holanda Correia Lima-EN2.pdf");
   }
 
   private getInformationService(){
@@ -190,7 +185,7 @@ export class ComponentPageLanguages implements OnInit {
   private getArrayModelDivisorBlock(arrayModelDivisorBlock:Array<ModelDivisorBlock>){
     this.arrayModelDivisorBlock=arrayModelDivisorBlock;
     this.arrayModelDivisorBlock[0].divisor.arraySubDivisor[0].item.colorEffect.font.animationEffect.arrayInformation.push(new ModelInformation(this.modelLanguagesInformation.title));
-
+    this.getArrayModelCheckButton();
   }
 
   ngOnDestroy() {

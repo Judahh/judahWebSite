@@ -30,6 +30,7 @@ export class ComponentBasicForm implements OnInit {
   initialization(){
     this.form = this.formBuilder.group({
       'name':['', Validators.required],
+      'language':['', Validators.required],
       'company':['', Validators.required],
       'email':['', Validators.required],
       'phone':['', Validators.required],
