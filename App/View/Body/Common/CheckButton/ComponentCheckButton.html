@@ -1,4 +1,32 @@
-<label [formGroup]="form">
+<label [formGroup]="form" 
+    *ngIf="!isButton()">
+    <input *ngIf="modelCheckButton.checked" checked 
+        type="{{type()}}" 
+        id="{{modelCheckButton.name}}"
+        name="{{modelCheckButton.name}}"
+        formControlName="{{modelCheckButton.name}}"
+        value="{{modelCheckButton.value}}"
+        [attr.ngControl]="modelCheckButton.name"
+    />
+
+    <input *ngIf="!modelCheckButton.checked"
+        type="{{type()}}" 
+        id="{{modelCheckButton.name}}"
+        name="{{modelCheckButton.name}}"
+        formControlName="{{modelCheckButton.name}}"
+        value="{{modelCheckButton.value}}"
+        [attr.ngControl]="modelCheckButton.name"
+    />
+    
+    <div>
+        <item [modelItem]="modelCheckButton.item">
+        </item>
+    </div>
+</label>
+
+<label [formGroup]="form" 
+    *ngIf="isButton()" 
+    (click)="onClick(modelClickButton.onClick)">
     <input *ngIf="modelCheckButton.checked" checked 
         type="{{type()}}" 
         id="{{modelCheckButton.name}}"

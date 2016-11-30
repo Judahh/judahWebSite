@@ -6,6 +6,7 @@ export class ModelCheckButton {
     name:string;
     value:string;
     item:ModelItem;
+    type:string;
 
     public type(){
         if(this.radio){

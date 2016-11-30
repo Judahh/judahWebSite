@@ -44,6 +44,14 @@ export class ComponentCheckButton implements OnInit {
       }
   }
 
+  isButton(){
+    return this.modelCheckButton.type=="button";
+  }
+
+  onClick(callback:(modelClickButton: ModelClickButton) => any) : void {
+      callback(this.modelClickButton);
+  }
+
 }
 
 
