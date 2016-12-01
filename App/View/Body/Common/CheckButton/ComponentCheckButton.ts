@@ -44,6 +44,14 @@ export class ComponentCheckButton implements OnInit {
       }
   }
 
+  public radio(){
+      return this.modelCheckButton.radio;
+  }
+
+  public checkbox(){
+      return !this.modelCheckButton.radio;
+  }
+
   isButton(){
     return this.modelCheckButton.type=="button";
   }
