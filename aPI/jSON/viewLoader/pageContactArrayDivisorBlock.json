@@ -148,7 +148,7 @@
                             {
                                 "checkButton":{
                                     "name":"flexible0",
-                                    "value":"flexible",
+                                    "value":false,
                                     "radio":false,
                                     "checked":false,
                                     "item":{
@@ -206,7 +206,7 @@
                             {
                                 "checkButton":{
                                     "name":"sunday",
-                                    "value":"sunday",
+                                    "value":false,
                                     "radio":false,
                                     "checked":false,
                                     "item":{
@@ -234,7 +234,7 @@
                             {
                                 "checkButton":{
                                     "name":"monday",
-                                    "value":"monday",
+                                    "value":false,
                                     "radio":false,
                                     "checked":false,
                                     "item":{
@@ -262,7 +262,7 @@
                             {
                                 "checkButton":{
                                     "name":"tuesday",
-                                    "value":"tuesday",
+                                    "value":false,
                                     "radio":false,
                                     "checked":false,
                                     "item":{
@@ -290,7 +290,7 @@
                             {
                                 "checkButton":{
                                     "name":"wednesday",
-                                    "value":"wednesday",
+                                    "value":false,
                                     "radio":false,
                                     "checked":false,
                                     "item":{
@@ -318,7 +318,7 @@
                             {
                                 "checkButton":{
                                     "name":"thursday",
-                                    "value":"thursday",
+                                    "value":false,
                                     "radio":false,
                                     "checked":false,
                                     "item":{
@@ -346,7 +346,7 @@
                             {
                                 "checkButton":{
                                     "name":"friday",
-                                    "value":"friday",
+                                    "value":false,
                                     "radio":false,
                                     "checked":false,
                                     "item":{
@@ -374,7 +374,7 @@
                             {
                                 "checkButton":{
                                     "name":"saturday",
-                                    "value":"saturday",
+                                    "value":false,
                                     "radio":false,
                                     "checked":false,
                                     "item":{
@@ -402,7 +402,7 @@
                             {
                                 "checkButton":{
                                     "name":"flexible1",
-                                    "value":"flexible",
+                                    "value":false,
                                     "radio":false,
                                     "checked":false,
                                     "item":{
@@ -464,7 +464,7 @@
                             {
                                 "checkButton":{
                                     "name":"flexible2",
-                                    "value":"flexible",
+                                    "value":false,
                                     "radio":false,
                                     "checked":false,
                                     "item":{
@@ -526,7 +526,7 @@
                             {
                                 "checkButton":{
                                     "name":"flexible3",
-                                    "value":"flexible",
+                                    "value":false,
                                     "radio":false,
                                     "checked":false,
                                     "item":{

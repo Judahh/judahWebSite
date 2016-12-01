@@ -37,6 +37,7 @@
     "arraySubDivisor":[
         {
             "basicForm":{
+                "link":"http://localhost:3000/aPI/hire",
                 "array3InputData":[
                     [
                         [
@@ -146,8 +147,8 @@
                             },
                             {
                                 "checkButton":{
-                                    "name":"flexible",
-                                    "value":"flexible",
+                                    "name":"flexible0",
+                                    "value":false,
                                     "radio":false,
                                     "checked":false,
                                     "item":{
@@ -204,8 +205,8 @@
                         [
                             {
                                 "checkButton":{
-                                    "name":"flexible",
-                                    "value":"flexible",
+                                    "name":"sunday",
+                                    "value":false,
                                     "radio":false,
                                     "checked":false,
                                     "item":{
@@ -232,8 +233,8 @@
                             },
                             {
                                 "checkButton":{
-                                    "name":"flexible",
-                                    "value":"flexible",
+                                    "name":"monday",
+                                    "value":false,
                                     "radio":false,
                                     "checked":false,
                                     "item":{
@@ -260,8 +261,8 @@
                             },
                             {
                                 "checkButton":{
-                                    "name":"flexible",
-                                    "value":"flexible",
+                                    "name":"tuesday",
+                                    "value":false,
                                     "radio":false,
                                     "checked":false,
                                     "item":{
@@ -288,8 +289,8 @@
                             },
                             {
                                 "checkButton":{
-                                    "name":"flexible",
-                                    "value":"flexible",
+                                    "name":"wednesday",
+                                    "value":false,
                                     "radio":false,
                                     "checked":false,
                                     "item":{
@@ -316,8 +317,8 @@
                             },
                             {
                                 "checkButton":{
-                                    "name":"flexible",
-                                    "value":"flexible",
+                                    "name":"thursday",
+                                    "value":false,
                                     "radio":false,
                                     "checked":false,
                                     "item":{
@@ -344,8 +345,8 @@
                             },
                             {
                                 "checkButton":{
-                                    "name":"flexible",
-                                    "value":"flexible",
+                                    "name":"friday",
+                                    "value":false,
                                     "radio":false,
                                     "checked":false,
                                     "item":{
@@ -372,8 +373,8 @@
                             },
                             {
                                 "checkButton":{
-                                    "name":"flexible",
-                                    "value":"flexible",
+                                    "name":"saturday",
+                                    "value":false,
                                     "radio":false,
                                     "checked":false,
                                     "item":{
@@ -400,8 +401,8 @@
                             },
                             {
                                 "checkButton":{
-                                    "name":"flexible",
-                                    "value":"flexible",
+                                    "name":"flexible1",
+                                    "value":false,
                                     "radio":false,
                                     "checked":false,
                                     "item":{
@@ -462,8 +463,8 @@
                             },
                             {
                                 "checkButton":{
-                                    "name":"flexible",
-                                    "value":"flexible",
+                                    "name":"flexible2",
+                                    "value":false,
                                     "radio":false,
                                     "checked":false,
                                     "item":{
@@ -524,8 +525,8 @@
                             },
                             {
                                 "checkButton":{
-                                    "name":"flexible",
-                                    "value":"flexible",
+                                    "name":"flexible3",
+                                    "value":false,
                                     "radio":false,
                                     "checked":false,
                                     "item":{

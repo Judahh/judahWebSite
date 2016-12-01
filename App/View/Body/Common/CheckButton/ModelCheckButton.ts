@@ -8,12 +8,4 @@ export class ModelCheckButton {
     item:ModelItem;
     type:string;
     onClick:any;
-
-    public type(){
-        if(this.radio){
-            return "radio";
-        }else{
-            return "checkbox"
-        }
-    }
 }

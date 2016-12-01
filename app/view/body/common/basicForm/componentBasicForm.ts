@@ -19,6 +19,7 @@ export class ComponentBasicForm implements OnInit {
 
   @Input() modelBasicForm: ModelBasicForm;
   form:FormGroup;
+  st:string="test";
 
   ngOnInit() {
     this.initialization();
@@ -54,7 +55,8 @@ export class ComponentBasicForm implements OnInit {
       'wednesday':[false, Validators.required],
       'thursday':[false, Validators.required],
       'friday':[true, Validators.required],
-      'saturday':[0, Validators.required]
+      'test':[true, Validators.required],
+      'saturday':[true, Validators.required]
     });
   }
 

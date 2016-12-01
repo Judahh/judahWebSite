@@ -1,52 +1,48 @@
-<label [formGroup]="form" 
-    *ngIf="!isButton()">
-    <input *ngIf="modelCheckButton.checked" checked 
-        type="{{type()}}" 
-        id="{{modelCheckButton.name}}"
-        name="{{modelCheckButton.name}}"
-        formControlName="{{modelCheckButton.name}}"
-        value="{{modelCheckButton.value}}"
-        [attr.ngControl]="modelCheckButton.name"
-    />
+<div [formGroup]="form">
+    <label *ngIf="!isButton()">
+        <input *ngIf="modelCheckButton.checked" checked 
+            type="{{type()}}" 
+            id="{{modelCheckButton.name}}"
+            name="{{modelCheckButton.name}}"
+            formControlName="{{modelCheckButton.name}}"
+            value="{{modelCheckButton.value}}"
+        />
 
-    <input *ngIf="!modelCheckButton.checked"
-        type="{{type()}}" 
-        id="{{modelCheckButton.name}}"
-        name="{{modelCheckButton.name}}"
-        formControlName="{{modelCheckButton.name}}"
-        value="{{modelCheckButton.value}}"
-        [attr.ngControl]="modelCheckButton.name"
-    />
-    
-    <div>
-        <item [modelItem]="modelCheckButton.item">
-        </item>
-    </div>
-</label>
+        <input *ngIf="!modelCheckButton.checked"
+            type="{{type()}}" 
+            id="{{modelCheckButton.name}}"
+            name="{{modelCheckButton.name}}"
+            formControlName="{{modelCheckButton.name}}"
+            value="{{modelCheckButton.value}}"
+        />
+        
+        <div>
+            <item [modelItem]="modelCheckButton.item">
+            </item>
+        </div>
+    </label>
 
-<label [formGroup]="form" 
-    *ngIf="isButton()" 
-    (click)="onClick(modelCheckButton.onClick)">
-    <input *ngIf="modelCheckButton.checked" checked 
-        type="{{type()}}" 
-        id="{{modelCheckButton.name}}"
-        name="{{modelCheckButton.name}}"
-        formControlName="{{modelCheckButton.name}}"
-        value="{{modelCheckButton.value}}"
-        [attr.ngControl]="modelCheckButton.name"
-    />
+    <label *ngIf="isButton()" 
+        (click)="onClick(modelCheckButton.onClick)">
+        <input *ngIf="modelCheckButton.checked" checked 
+            type="{{type()}}" 
+            id="{{modelCheckButton.name}}"
+            name="{{modelCheckButton.name}}"
+            formControlName="{{modelCheckButton.name}}"
+            value="{{modelCheckButton.value}}"
+        />
 
-    <input *ngIf="!modelCheckButton.checked"
-        type="{{type()}}" 
-        id="{{modelCheckButton.name}}"
-        name="{{modelCheckButton.name}}"
-        formControlName="{{modelCheckButton.name}}"
-        value="{{modelCheckButton.value}}"
-        [attr.ngControl]="modelCheckButton.name"
-    />
-    
-    <div>
-        <item [modelItem]="modelCheckButton.item">
-        </item>
-    </div>
-</label>
+        <input *ngIf="!modelCheckButton.checked"
+            type="{{type()}}" 
+            id="{{modelCheckButton.name}}"
+            name="{{modelCheckButton.name}}"
+            formControlName="{{modelCheckButton.name}}"
+            value="{{modelCheckButton.value}}"
+        />
+        
+        <div>
+            <item [modelItem]="modelCheckButton.item">
+            </item>
+        </div>
+    </label>
+</div>
