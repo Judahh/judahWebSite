@@ -154,7 +154,7 @@ export class ComponentPageLanguages implements OnInit {
   }
 
   onClickCallback = (modelCheckButton: ModelCheckButton) : void => {
-    console.log("value:"modelCheckButton.value);
+    console.log("value:"+modelCheckButton.value);
     this.setLanguage(modelCheckButton.value);
     //alert(modelClickButton);
     //window.open("files/CURRICULUM VITAE  - Judah Holanda.pdf");

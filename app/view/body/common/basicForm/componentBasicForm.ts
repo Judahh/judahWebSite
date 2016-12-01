@@ -3,6 +3,7 @@ import { Headers, Http, Response, RequestOptions } from '@angular/http';
 import { FormBuilder, FormGroup, Validators, NgForm } from '@angular/forms';
 import { Observable }     from 'rxjs/Observable';
 
+import { BasicFormElement } from './BasicFormElement';
 import { ModelBasicForm } from './ModelBasicForm';
 import { Utils } from './../../../../core/utils/Utils';
 
@@ -19,7 +20,6 @@ export class ComponentBasicForm implements OnInit {
 
   @Input() modelBasicForm: ModelBasicForm;
   form:FormGroup;
-  st:string="test";
 
   ngOnInit() {
     this.initialization();
@@ -29,35 +29,16 @@ export class ComponentBasicForm implements OnInit {
   }
 
   initialization(){
-    this.form = this.formBuilder.group({
-      'name':['', Validators.required],
-      'language':['', Validators.required],
-      'company':['', Validators.required],
-      'email':['', Validators.required],
-      'phone':['', Validators.required],
-      'phoneType':['', Validators.required],
-      'address':['', Validators.required],
-      'jobTitle':['', Validators.required],
-      'jobTitleType':['', Validators.required],
-      'currency':['', Validators.required],
-      'salary':['', Validators.required],
-      'salaryPer':['', Validators.required],
-      'in':['', Validators.required],
-      'out':['', Validators.required],
-      'description':['', Validators.required],
-      'flexible0':[false, Validators.required],
-      'flexible1':[false, Validators.required],
-      'flexible2':[false, Validators.required],
-      'flexible3':[false, Validators.required],
-      'sunday':[false, Validators.required],
-      'monday':[false, Validators.required],
-      'tuesday':[false, Validators.required],
-      'wednesday':[false, Validators.required],
-      'thursday':[false, Validators.required],
-      'friday':[true, Validators.required],
-      'test':[true, Validators.required],
-      'saturday':[true, Validators.required]
+    var group:any={};
+    this.modelBasicForm.array3InputData.forEach(element => {
+      element.forEach(element2 => {
+        element2.forEach(element3 => {
+          var basicFormElement=new BasicFormElement(element3);
+          group=basicFormElement.toFormGroupElements(group);
+        });
+      });
     });
+    this.form = new FormGroup(group);
   }
 
   ngOnDestroy() {
