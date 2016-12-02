@@ -244,8 +244,6 @@ export class ComponentPageContact implements OnInit {
         console.log("A");
       }
       if(this.arrayModelDivisorBlock[1].arraySubDivisor[0].basicForm.array3InputData[1].length==2){
-        // this.arrayModelDivisorBlock[1].arraySubDivisor[0].basicForm.array3InputData[1][this.arrayModelDivisorBlock[1].arraySubDivisor[0].basicForm.array3InputData[1].length-1][0].textInput.name='phone'+(this.arrayModelDivisorBlock[1].arraySubDivisor[0].basicForm.array3InputData[1].length-2);
-        // componentBasicForm.addControl(this.arrayModelDivisorBlock[1].arraySubDivisor[0].basicForm.array3InputData[1][this.arrayModelDivisorBlock[1].arraySubDivisor[0].basicForm.array3InputData[1].length-1][0].textInput.name, '', false);
       }else{
         this.arrayModelDivisorBlock[1].arraySubDivisor[0].basicForm.array3InputData[1][this.arrayModelDivisorBlock[1].arraySubDivisor[0].basicForm.array3InputData[1].length-1][1].textInput.name='phone'+(this.arrayModelDivisorBlock[1].arraySubDivisor[0].basicForm.array3InputData[1].length-2);
         componentBasicForm.addControl(this.arrayModelDivisorBlock[1].arraySubDivisor[0].basicForm.array3InputData[1][this.arrayModelDivisorBlock[1].arraySubDivisor[0].basicForm.array3InputData[1].length-1][1].textInput.name, '', false);
