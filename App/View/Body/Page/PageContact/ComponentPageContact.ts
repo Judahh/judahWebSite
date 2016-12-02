@@ -234,6 +234,26 @@ export class ComponentPageContact implements OnInit {
 
   onClickCallbackRemove = (modelClickButton: ModelClickButton) : void => {
     console.log(modelClickButton.name);
+    var position:number=modelClickButton.name+1;
+    var tempArray=this.arrayModelDivisorBlock[1].arraySubDivisor[0].basicForm.array3InputData[1];
+    tempArray.splice(position, 1);
+    if(tempArray.length==2){
+      tempArray[1].splice(0, 1);
+    }
+    var phone=JSON.parse(JSON.stringify(this.basicPhone));
+    for (var index = position; index < tempArray.length; index++) {
+      var element = tempArray[index];
+      if(index==1){
+        element[0].textInput.name=phone[1].textInput.name+(index-1);
+        element[1].comboBox.name=phone[2].comboBox.name+(index-1);
+        element[2].clickButton.name=phone[3].clickButton.name+(index-1);
+      }else{
+        element[0].textInput.name=phone[0].clickButton.name+(index-1);
+        element[1].textInput.name=phone[1].textInput.name+(index-1);
+        element[2].comboBox.name=phone[2].comboBox.name+(index-1);
+        element[3].clickButton.name=phone[3].clickButton.name+(index-1);
+      }
+    }
   }
 
   onInsertCallback = (componentBasicForm:ComponentBasicForm,event:any) : void => {
