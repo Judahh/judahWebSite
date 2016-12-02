@@ -1,6 +1,6 @@
 import { Component, Input, OnInit, ViewEncapsulation, Renderer, ElementRef } from '@angular/core';
 import { Headers, Http, Response, RequestOptions } from '@angular/http';
-import { FormBuilder, FormGroup, Validators, NgForm } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators, NgForm, FormControl } from '@angular/forms';
 import { Observable }     from 'rxjs/Observable';
 
 import { BasicFormElement } from './BasicFormElement';
@@ -29,14 +29,14 @@ export class ComponentBasicForm implements OnInit {
               private formBuilder:FormBuilder, 
               private elementRef: ElementRef, 
               private renderer: Renderer) {
-                this.listenFunc = renderer.listen(elementRef.nativeElement, 'DOMNodeInserted', this.onInsertCallback);
-                this.listenFunc = renderer.listen(elementRef.nativeElement, 'DOMNodeRemoved', this.onRemoveCallback);
+                renderer.listen(elementRef.nativeElement, 'DOMNodeInserted', this.onInsertCallback);
+                renderer.listen(elementRef.nativeElement, 'DOMNodeRemoved', this.onRemoveCallback);
   }
 
   onInsertCallback = (event: any) : void => {
     if(this.modelBasicForm!=null&&this.modelBasicForm!=undefined){
       if(this.modelBasicForm.onInsert!=null&&this.modelBasicForm.onInsert!=undefined){
-        this.modelBasicForm.onInsert(event);
+        this.modelBasicForm.onInsert(this,event);
       }
     }
   }
@@ -44,7 +44,7 @@ export class ComponentBasicForm implements OnInit {
   onRemoveCallback = (event: any) : void => {
     if(this.modelBasicForm!=null&&this.modelBasicForm!=undefined){
       if(this.modelBasicForm.onRemove!=null&&this.modelBasicForm.onRemove!=undefined){
-        this.modelBasicForm.onRemove(event);
+        this.modelBasicForm.onRemove(this,event);
       }
     }
   }

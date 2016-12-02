@@ -1,4 +1,5 @@
 import { Component, OnInit, ViewEncapsulation, HostListener } from '@angular/core';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Utils } from './../../../../core/utils/Utils';
 import { Languages } from './../../../../core/languages/Languages';
 import { ModelLanguages } from './../../../../core/languages/ModelLanguages';
@@ -191,6 +192,8 @@ export class ComponentPageContact implements OnInit {
     this.arrayModelDivisorBlock[3].arraySubDivisor[0].inputData.clickButton.item.colorEffect.font.animationEffect.arrayInformation.push(new ModelInformation(this.modelContactInformation.download));
     this.arrayModelDivisorBlock[3].arraySubDivisor[0].inputData.clickButton.onClick=this.onClickCallback;
     this.arrayModelDivisorBlock[4].divisor.arraySubDivisor[1].item.colorEffect.font.animationEffect.arrayInformation.push(new ModelInformation(this.modelContactInformation.socialNetworks));
+
+    this.arrayModelDivisorBlock[1].arraySubDivisor[0].basicForm.onInsert=this.onInsertCallback;
   }
 
   onClickCallback = (modelClickButton: ModelClickButton) : void => {
@@ -200,28 +203,55 @@ export class ComponentPageContact implements OnInit {
   }
 
   onClickCallbackAdd = (modelClickButton: ModelClickButton) : void => {
-    this.arrayModelDivisorBlock[1].arraySubDivisor[0].basicForm.onInsert=this.onInsertCallback;
-    console.log(modelClickButton);
+    //console.log(modelClickButton);
     var phone=JSON.parse(JSON.stringify(this.basicPhone));
 
     phone[0].clickButton.onClick=this.onClickCallbackRemove;
-    //phone[1].textInput.name=phone[1].textInput.name+1;
+    phone[0].clickButton.name=this.arrayModelDivisorBlock[1].arraySubDivisor[0].basicForm.array3InputData[1].length-1;
     phone[1].textInput.placeholder=this.modelContactInformation.phone;
     phone[2].comboBox.arrayOptions[0]=this.modelContactInformation.mobile;
     phone[2].comboBox.arrayOptions[1]=this.modelContactInformation.landline;
     phone[3].clickButton.onClick=this.onClickCallbackAdd;
+    phone[3].clickButton.name=this.arrayModelDivisorBlock[1].arraySubDivisor[0].basicForm.array3InputData[1].length-1;
 
-    //this.arrayModelDivisorBlock[1].arraySubDivisor[0].basicForm.addControl(phone[1].textInput.name, phone[1].textInput.value, phone[1].textInput.required);
+    if(this.arrayModelDivisorBlock[1].arraySubDivisor[0].basicForm.array3InputData[1].length==2){
+      var phone0=JSON.parse(JSON.stringify(this.basicPhone));
+
+      phone0[0].clickButton.onClick=this.onClickCallbackRemove;
+      phone0[0].clickButton.name=0;
+      phone0[1].textInput.name+=0;
+      phone0[1].textInput.placeholder=this.modelContactInformation.phone;
+      phone0[2].comboBox.name+=0;
+      phone0[2].comboBox.arrayOptions[0]=this.modelContactInformation.mobile;
+      phone0[2].comboBox.arrayOptions[1]=this.modelContactInformation.landline;
+      phone0[3].clickButton.onClick=this.onClickCallbackAdd;
+      phone0[3].clickButton.name=0;
+      this.arrayModelDivisorBlock[1].arraySubDivisor[0].basicForm.array3InputData[1][1]=phone0;
+    }
+
     this.arrayModelDivisorBlock[1].arraySubDivisor[0].basicForm.array3InputData[1].push(phone);
   }
 
   onClickCallbackRemove = (modelClickButton: ModelClickButton) : void => {
-    console.log(modelClickButton);
-    //this.arrayModelDivisorBlock[1].arraySubDivisor[0].basicForm.array3InputData[1].push(this.arrayModelDivisorBlock[1].arraySubDivisor[0].basicForm.array3InputData[1][1]);
+    console.log(modelClickButton.name);
   }
 
-  onInsertCallback = (event:any) : void => {
-    console.log("modelClickButton");
-    //this.arrayModelDivisorBlock[1].arraySubDivisor[0].basicForm.array3InputData[1].push(this.arrayModelDivisorBlock[1].arraySubDivisor[0].basicForm.array3InputData[1][1]);
+  onInsertCallback = (componentBasicForm:ComponentBasicForm,event:any) : void => {
+    if(event.relatedNode.nodeName=="INFORMATION"){
+      var div = event.relatedNode.firstElementChild.lastChild.cloneNode(true);
+      console.log(div);
+      if(event.relatedNode.firstElementChild.firstChild.toString().indexOf("ADD") !== -1){
+        console.log("A");
+      }
+      if(this.arrayModelDivisorBlock[1].arraySubDivisor[0].basicForm.array3InputData[1].length==2){
+        // this.arrayModelDivisorBlock[1].arraySubDivisor[0].basicForm.array3InputData[1][this.arrayModelDivisorBlock[1].arraySubDivisor[0].basicForm.array3InputData[1].length-1][0].textInput.name='phone'+(this.arrayModelDivisorBlock[1].arraySubDivisor[0].basicForm.array3InputData[1].length-2);
+        // componentBasicForm.addControl(this.arrayModelDivisorBlock[1].arraySubDivisor[0].basicForm.array3InputData[1][this.arrayModelDivisorBlock[1].arraySubDivisor[0].basicForm.array3InputData[1].length-1][0].textInput.name, '', false);
+      }else{
+        this.arrayModelDivisorBlock[1].arraySubDivisor[0].basicForm.array3InputData[1][this.arrayModelDivisorBlock[1].arraySubDivisor[0].basicForm.array3InputData[1].length-1][1].textInput.name='phone'+(this.arrayModelDivisorBlock[1].arraySubDivisor[0].basicForm.array3InputData[1].length-2);
+        componentBasicForm.addControl(this.arrayModelDivisorBlock[1].arraySubDivisor[0].basicForm.array3InputData[1][this.arrayModelDivisorBlock[1].arraySubDivisor[0].basicForm.array3InputData[1].length-1][1].textInput.name, '', false);
+        this.arrayModelDivisorBlock[1].arraySubDivisor[0].basicForm.array3InputData[1][this.arrayModelDivisorBlock[1].arraySubDivisor[0].basicForm.array3InputData[1].length-1][2].comboBox.name='phoneType'+(this.arrayModelDivisorBlock[1].arraySubDivisor[0].basicForm.array3InputData[1].length-2);
+        componentBasicForm.addControl(this.arrayModelDivisorBlock[1].arraySubDivisor[0].basicForm.array3InputData[1][this.arrayModelDivisorBlock[1].arraySubDivisor[0].basicForm.array3InputData[1].length-1][2].comboBox.name, '', false);
+      }
+    }
   }
 }
