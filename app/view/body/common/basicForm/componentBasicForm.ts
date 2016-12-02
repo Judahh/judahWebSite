@@ -1,4 +1,4 @@
-import { Component, Input, OnInit, ViewEncapsulation } from '@angular/core';
+import { Component, Input, OnInit, ViewEncapsulation, Renderer, ElementRef } from '@angular/core';
 import { Headers, Http, Response, RequestOptions } from '@angular/http';
 import { FormBuilder, FormGroup, Validators, NgForm } from '@angular/forms';
 import { Observable }     from 'rxjs/Observable';
@@ -25,7 +25,28 @@ export class ComponentBasicForm implements OnInit {
     this.initialization();
   }
 
-  constructor(private http: Http, private formBuilder:FormBuilder) {
+  constructor(private http: Http, 
+              private formBuilder:FormBuilder, 
+              private elementRef: ElementRef, 
+              private renderer: Renderer) {
+                this.listenFunc = renderer.listen(elementRef.nativeElement, 'DOMNodeInserted', this.onInsertCallback);
+                this.listenFunc = renderer.listen(elementRef.nativeElement, 'DOMNodeRemoved', this.onRemoveCallback);
+  }
+
+  onInsertCallback = (event: any) : void => {
+    if(this.modelBasicForm!=null&&this.modelBasicForm!=undefined){
+      if(this.modelBasicForm.onInsert!=null&&this.modelBasicForm.onInsert!=undefined){
+        this.modelBasicForm.onInsert(event);
+      }
+    }
+  }
+
+  onRemoveCallback = (event: any) : void => {
+    if(this.modelBasicForm!=null&&this.modelBasicForm!=undefined){
+      if(this.modelBasicForm.onRemove!=null&&this.modelBasicForm.onRemove!=undefined){
+        this.modelBasicForm.onRemove(event);
+      }
+    }
   }
 
   initialization(){
@@ -39,6 +60,12 @@ export class ComponentBasicForm implements OnInit {
       });
     });
     this.form = new FormGroup(group);
+  }
+
+  addControl(name:string, value:any, required:boolean){
+    this.form.addControl(name, required? 
+                    new FormControl(value || '', Validators.required) : 
+                    new FormControl(value || ''));
   }
 
   ngOnDestroy() {

@@ -29,8 +29,7 @@ import { ServiceJSON } from './../../../../core/services/jSON/ServiceJSON';
 export class ComponentPageContact implements OnInit {
   modelContactInformation:ModelContactInformation;
   modelLanguages:ModelLanguages;
-  basicModelInformation:ModelInformation;
-  basicModelBasicForm:ModelBasicForm;
+  basicPhone:any;
   currentWidth:number;
   arrayModelDivisorBlock:Array<ModelDivisorBlock>;
 
@@ -48,8 +47,6 @@ export class ComponentPageContact implements OnInit {
     this.arrayModelDivisorBlock=new Array<ModelDivisorBlock>();
     this.modelLanguages=new ModelLanguages();
     this.modelContactInformation=new ModelContactInformation();
-    this.basicModelInformation=new ModelInformation("");
-    this.basicModelBasicForm=new ModelBasicForm();
 
     this.refresh();
   }
@@ -82,7 +79,7 @@ export class ComponentPageContact implements OnInit {
 
     //console.log("type:"+type);
 
-    this.getHalfModelInformation();
+    this.getBasicPhoneService(type);
     this.getLanguageService();
     this.getInformationService();
     this.getArrayDivisorBlockService(type);
@@ -92,11 +89,11 @@ export class ComponentPageContact implements OnInit {
     //this.heroSubscription.unsubscribe();
   }
 
-  private getHalfModelInformation(){
+  private getBasicPhoneService(type:string){
     var errorMessage="";
 
-    this.serviceJSON.getObservable('viewLoader/halfInformation').subscribe(
-      item => this.basicModelInformation=item, error => errorMessage = <any>error);
+    this.serviceJSON.getObservable('viewLoader/'+Utils.getFileSelector(Utils.getFileName(__filename))+'BasicPhone'+type).subscribe(
+      item => this.basicPhone=item, error => errorMessage = <any>error);
     
     if(errorMessage!=""){
       alert("Error:"+errorMessage);
@@ -145,6 +142,8 @@ export class ComponentPageContact implements OnInit {
     this.arrayModelDivisorBlock[1].arraySubDivisor[0].basicForm.array3InputData[0][1][0].textInput.placeholder=this.modelContactInformation.company;
 
     this.arrayModelDivisorBlock[1].arraySubDivisor[0].basicForm.array3InputData[1][0][0].textInput.placeholder=this.modelContactInformation.email;
+
+    //this.arrayModelDivisorBlock[1].arraySubDivisor[0].basicForm.array3InputData[1][1][0].clickButton.onClick=this.onClickCallbackRemove;
     this.arrayModelDivisorBlock[1].arraySubDivisor[0].basicForm.array3InputData[1][1][0].textInput.placeholder=this.modelContactInformation.phone;
     this.arrayModelDivisorBlock[1].arraySubDivisor[0].basicForm.array3InputData[1][1][1].comboBox.arrayOptions[0]=this.modelContactInformation.mobile;
     this.arrayModelDivisorBlock[1].arraySubDivisor[0].basicForm.array3InputData[1][1][1].comboBox.arrayOptions[1]=this.modelContactInformation.landline;
@@ -201,12 +200,28 @@ export class ComponentPageContact implements OnInit {
   }
 
   onClickCallbackAdd = (modelClickButton: ModelClickButton) : void => {
+    this.arrayModelDivisorBlock[1].arraySubDivisor[0].basicForm.onInsert=this.onInsertCallback;
     console.log(modelClickButton);
-    this.arrayModelDivisorBlock[1].arraySubDivisor[0].basicForm.array3InputData[1].push(this.arrayModelDivisorBlock[1].arraySubDivisor[0].basicForm.array3InputData[1][1]);
+    var phone=JSON.parse(JSON.stringify(this.basicPhone));
+
+    phone[0].clickButton.onClick=this.onClickCallbackRemove;
+    //phone[1].textInput.name=phone[1].textInput.name+1;
+    phone[1].textInput.placeholder=this.modelContactInformation.phone;
+    phone[2].comboBox.arrayOptions[0]=this.modelContactInformation.mobile;
+    phone[2].comboBox.arrayOptions[1]=this.modelContactInformation.landline;
+    phone[3].clickButton.onClick=this.onClickCallbackAdd;
+
+    //this.arrayModelDivisorBlock[1].arraySubDivisor[0].basicForm.addControl(phone[1].textInput.name, phone[1].textInput.value, phone[1].textInput.required);
+    this.arrayModelDivisorBlock[1].arraySubDivisor[0].basicForm.array3InputData[1].push(phone);
   }
 
-  onClickCallbackAdd = (modelClickButton: ModelClickButton) : void => {
+  onClickCallbackRemove = (modelClickButton: ModelClickButton) : void => {
     console.log(modelClickButton);
-    this.arrayModelDivisorBlock[1].arraySubDivisor[0].basicForm.array3InputData[1].push(this.arrayModelDivisorBlock[1].arraySubDivisor[0].basicForm.array3InputData[1][1]);
+    //this.arrayModelDivisorBlock[1].arraySubDivisor[0].basicForm.array3InputData[1].push(this.arrayModelDivisorBlock[1].arraySubDivisor[0].basicForm.array3InputData[1][1]);
+  }
+
+  onInsertCallback = (event:any) : void => {
+    console.log("modelClickButton");
+    //this.arrayModelDivisorBlock[1].arraySubDivisor[0].basicForm.array3InputData[1].push(this.arrayModelDivisorBlock[1].arraySubDivisor[0].basicForm.array3InputData[1][1]);
   }
 }

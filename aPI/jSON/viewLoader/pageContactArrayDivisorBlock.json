@@ -90,6 +90,7 @@
                             },
                             {
                                 "clickButton":{
+                                    "name":0,
                                     "type":"button",
                                     "item":{
                                         "id":0,
