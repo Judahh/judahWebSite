@@ -2,12 +2,13 @@ import { TextInputType } from './TextInputType';
 
 export class ModelTextInput {
     name:string;
-    value:string;
     fontFamily:string;
     fontSize:number;//px
     textInputType:TextInputType;
     placeholder:string;
     arrayOptions:Array<string>;
+    required:boolean;
+    value:any;
     
     isField(){
         return this.textInputType==TextInputType.field;

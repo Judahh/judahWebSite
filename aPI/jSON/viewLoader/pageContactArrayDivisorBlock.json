@@ -87,6 +87,35 @@
                                     "fontSize":15,
                                     "arrayOptions":[]
                                 }
+                            },
+                            {
+                                "clickButton":{
+                                    "type":"button",
+                                    "item":{
+                                        "id":0,
+                                        "routerLink":"",
+                                        "routerLinkActive":"inactive",
+                                        "colorEffect":{
+                                            "colorEffect":"",
+                                            "font":{
+                                                "font":"DivClassOpenSansLight",
+                                                "width":"100%",
+                                                "size":15,
+                                                "arrayPadding":[5],
+                                                "animationEffect":{
+                                                    "class":"",
+                                                    "subClass":"",
+                                                    "subClasses":[],
+                                                    "arrayInformation":[
+                                                        {
+                                                            "information":"ADD"
+                                                        }
+                                                    ]
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
                             }
                         ]
                     ],

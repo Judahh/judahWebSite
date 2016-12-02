@@ -4,8 +4,9 @@ export class ModelCheckButton {
     radio:boolean;
     checked:boolean;
     name:string;
-    value:string;
     item:ModelItem;
     type:string;
     onClick:any;
+    required:boolean;
+    value:any;
 }

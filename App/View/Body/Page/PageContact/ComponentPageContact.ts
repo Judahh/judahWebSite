@@ -148,6 +148,7 @@ export class ComponentPageContact implements OnInit {
     this.arrayModelDivisorBlock[1].arraySubDivisor[0].basicForm.array3InputData[1][1][0].textInput.placeholder=this.modelContactInformation.phone;
     this.arrayModelDivisorBlock[1].arraySubDivisor[0].basicForm.array3InputData[1][1][1].comboBox.arrayOptions[0]=this.modelContactInformation.mobile;
     this.arrayModelDivisorBlock[1].arraySubDivisor[0].basicForm.array3InputData[1][1][1].comboBox.arrayOptions[1]=this.modelContactInformation.landline;
+    this.arrayModelDivisorBlock[1].arraySubDivisor[0].basicForm.array3InputData[1][1][2].clickButton.onClick=this.onClickCallbackAdd;
 
     this.arrayModelDivisorBlock[1].arraySubDivisor[0].basicForm.array3InputData[2][0][0].textInput.placeholder=this.modelContactInformation.address;
 
@@ -197,5 +198,15 @@ export class ComponentPageContact implements OnInit {
     //alert(modelClickButton);
     window.open("files/CURRICULUM VITAE  - Judah Holanda.pdf");
     window.open("files/Judah Holanda Correia Lima-EN2.pdf");
+  }
+
+  onClickCallbackAdd = (modelClickButton: ModelClickButton) : void => {
+    console.log(modelClickButton);
+    this.arrayModelDivisorBlock[1].arraySubDivisor[0].basicForm.array3InputData[1].push(this.arrayModelDivisorBlock[1].arraySubDivisor[0].basicForm.array3InputData[1][1]);
+  }
+
+  onClickCallbackAdd = (modelClickButton: ModelClickButton) : void => {
+    console.log(modelClickButton);
+    this.arrayModelDivisorBlock[1].arraySubDivisor[0].basicForm.array3InputData[1].push(this.arrayModelDivisorBlock[1].arraySubDivisor[0].basicForm.array3InputData[1][1]);
   }
 }
