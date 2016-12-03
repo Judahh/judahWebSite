@@ -6,7 +6,6 @@ export class BasicFormElement {
     constructor(private modelInputData:ModelInputData) { }
 
     toFormGroupElements(group: any) {
-
         if(this.modelInputData!=undefined && this.modelInputData!=null){
             if(this.modelInputData.comboBox!=undefined && this.modelInputData.comboBox!=null){
                 group[this.modelInputData.comboBox.name] = this.modelInputData.comboBox.required? 
