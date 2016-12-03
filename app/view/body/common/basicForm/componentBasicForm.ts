@@ -68,6 +68,10 @@ export class ComponentBasicForm implements OnInit {
                     new FormControl(value || ''));
   }
 
+  removeControl(name:string){
+    this.form.removeControl(name);
+  }
+
   ngOnDestroy() {
   }
 
