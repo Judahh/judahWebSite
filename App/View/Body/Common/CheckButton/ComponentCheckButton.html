@@ -6,6 +6,8 @@
             name="{{modelCheckButton.name}}"
             formControlName="{{modelCheckButton.name}}"
             value="{{modelCheckButton.value}}"
+            [(ngModel)]="value"  
+            (blur)="onBlur()"
         />
 
         <input *ngIf="!modelCheckButton.checked && checkbox()"
@@ -14,6 +16,8 @@
             name="{{modelCheckButton.name}}"
             formControlName="{{modelCheckButton.name}}"
             value="{{modelCheckButton.value}}"
+            [(ngModel)]="value"  
+            (blur)="onBlur()"
         />
 
         <input *ngIf="modelCheckButton.checked && radio()" checked 
@@ -22,6 +26,8 @@
             name="{{modelCheckButton.name}}"
             formControlName="{{modelCheckButton.name}}"
             value="{{modelCheckButton.value}}"
+            [(ngModel)]="value"  
+            (blur)="onBlur()"
         />
 
         <input *ngIf="!modelCheckButton.checked && radio()"
@@ -30,6 +36,8 @@
             name="{{modelCheckButton.name}}"
             formControlName="{{modelCheckButton.name}}"
             value="{{modelCheckButton.value}}"
+            [(ngModel)]="value"  
+            (blur)="onBlur()"
         />
         
         <div>
@@ -46,6 +54,8 @@
             name="{{modelCheckButton.name}}"
             formControlName="{{modelCheckButton.name}}"
             value="{{modelCheckButton.value}}"
+            [(ngModel)]="value"  
+            (blur)="onBlur()"
         />
 
         <input *ngIf="!modelCheckButton.checked && checkbox()"
@@ -54,6 +64,8 @@
             name="{{modelCheckButton.name}}"
             formControlName="{{modelCheckButton.name}}"
             value="{{modelCheckButton.value}}"
+            [(ngModel)]="value"  
+            (blur)="onBlur()"
         />
 
         <input *ngIf="modelCheckButton.checked && radio()" checked 
@@ -62,6 +74,8 @@
             name="{{modelCheckButton.name}}"
             formControlName="{{modelCheckButton.name}}"
             value="{{modelCheckButton.value}}"
+            [(ngModel)]="value"  
+            (blur)="onBlur()"
         />
 
         <input *ngIf="!modelCheckButton.checked && radio()"
@@ -70,6 +84,8 @@
             name="{{modelCheckButton.name}}"
             formControlName="{{modelCheckButton.name}}"
             value="{{modelCheckButton.value}}"
+            [(ngModel)]="value"  
+            (blur)="onBlur()"
         />
         
         <div>

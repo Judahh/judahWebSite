@@ -72,6 +72,27 @@ export class ComponentBasicForm implements OnInit {
     this.form.removeControl(name);
   }
 
+  getInputDataType(inputData:InputData){
+    if(inputData.comboBox!=null && inputData.comboBox!=undefined){
+      return "comboBox";
+    }
+    if(inputData.checkButton!=null && inputData.checkButton!=undefined){
+      return "checkButton";
+    }
+    if(inputData.textInput!=null && inputData.textInput!=undefined){
+      return "textInput";
+    }
+    return null;
+  }
+
+  getValue(inputData:InputData){
+    if(this.getInputDataType(inputData)==null || this.getInputDataType(inputData)==undefined){
+      return null;
+    }else{
+      return inputData[this.getInputDataType(inputData)].value;
+    }
+  }
+
   ngOnDestroy() {
   }
 

@@ -2,14 +2,16 @@
     [form]="form"
     *ngIf="isComboBox()"
     [modelComboBox]="modelInputData.comboBox"
-    [style]="style()|safeStyle">
+    [style]="style()|safeStyle"
+    [(ngModel)]="dataModel">
 </comboBox>
 
 <textInput 
     [form]="form"
     *ngIf="isTextInput()"
     [modelTextInput]="modelInputData.textInput"
-    [style]="style()|safeStyle">
+    [style]="style()|safeStyle"
+    [(ngModel)]="dataModel">
 </textInput>
 
 <clickButton 
@@ -23,7 +25,8 @@
     [form]="form"
     *ngIf="isCheckButton()"
     [modelCheckButton]="modelInputData.checkButton"
-    [style]="style()|safeStyle">
+    [style]="style()|safeStyle"
+    [(ngModel)]="dataModel">
 </checkButton>
 
 <item 

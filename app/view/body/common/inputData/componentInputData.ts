@@ -14,6 +14,7 @@ export class ComponentInputData implements OnInit {
 
   @Input() modelInputData: ModelInputData;
   @Input() form: FormGroup;
+  @Input() dataModel: any;
 
   //get isValid() { return this.form.controls[this.question.key].valid; }
 

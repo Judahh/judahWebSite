@@ -5,7 +5,9 @@
     formControlName="{{modelTextInput.name}}"
     placeholder="{{modelTextInput.placeholder}}"
     [style]="style()|safeStyle"
-    value="{{modelTextInput.value}}"/>
+    value="{{modelTextInput.value}}"
+    [(ngModel)]="value"  
+    (blur)="onBlur()"/>
 
 <div
     *ngIf="isDataList()">
@@ -15,7 +17,9 @@
         [attr.list]="getDataListId()"
         placeholder="{{modelTextInput.placeholder}}"
         [style]="style()|safeStyle"
-        value="{{modelTextInput.value}}"/>
+        value="{{modelTextInput.value}}"
+        [(ngModel)]="value"  
+        (blur)="onBlur()"/>
 
     <datalist 
         id="{{getDataListId()}}">
@@ -31,5 +35,7 @@
     name="{{modelTextInput.name}}"
     formControlName="{{modelTextInput.name}}"
     placeholder="{{modelTextInput.placeholder}}"
-    [style]="style()|safeStyle">{{modelTextInput.value}}</textarea>
+    [style]="style()|safeStyle"
+    [(ngModel)]="value"  
+    (blur)="onBlur()">{{modelTextInput.value}}</textarea>
 </div>
