@@ -227,36 +227,14 @@ export class ComponentPageContact implements OnInit {
 
       phone0[0].clickButton.onClick=this.onClickCallbackRemove;
       phone0[0].clickButton.name=0;
-      phone0[1].textInput.placeholder=this.modelContactInformation.phone;
-      phone0[1].textInput.value=lastPhone[0].textInput.value;
-      phone0[1].textInput.name=phone0[1].textInput.name+"0";
-      phone0[2].comboBox.arrayOptions[0]=this.modelContactInformation.mobile;
-      phone0[2].comboBox.arrayOptions[1]=this.modelContactInformation.landline;
-      phone0[2].comboBox.value=lastPhone[1].comboBox.value;
-      phone0[2].comboBox.name=phone0[2].comboBox.name+"0";
-      phone0[3].clickButton.onClick=this.onClickCallbackAdd;
-      phone0[3].clickButton.name=0;
 
-      arrayPhone[1]=phone0;
+      arrayPhone[1].splice(0, 0, phone0[0]);
     }
 
-    console.log("nextPosition:"+nextPosition);
-    console.log("arrayPhone.length:"+arrayPhone.length);
     if(nextPosition>=arrayPhone.length){
       arrayPhone.push(phone);
     }else{
-      console.log("A1234");
-      for (var index = arrayPhone.length-1; index >= nextPosition; index--) {
-        var element = arrayPhone[index];
-        if(index == arrayPhone.length-1){
-          console.log("A1");
-          arrayPhone.push(element);
-        }else{
-          console.log("B1");
-          arrayPhone[index+1]=element;
-        }
-      }
-      arrayPhone[nextPosition]=phone;
+      arrayPhone.splice(nextPosition, 0, phone);
     }
 
     if(arrayPhone.length>2){
@@ -287,7 +265,7 @@ export class ComponentPageContact implements OnInit {
       element[3].clickButton.name=(phone[3].clickButton.name+(index-1));
       if(index==1 && tempArray.length==2){
         element.splice(0, 1);
-        console.log("S");
+        //console.log("S");
       }
     }
   }
@@ -301,19 +279,11 @@ export class ComponentPageContact implements OnInit {
       }
       var arrayPhone=this.arrayModelDivisorBlock[1].arraySubDivisor[0].basicForm.array3InputData[1];
       if(arrayPhone.length==2){
-        for (var index = 0; index < arrayPhone.length; index++) {
-          componentBasicForm.removeControl('phone'+index);
-          componentBasicForm.removeControl('phoneType'+index);
-        }
         var index = 1;
         var element = arrayPhone[index];
         componentBasicForm.addControl(element[0].textInput.name, element[0].textInput.value, false);
         componentBasicForm.addControl(element[1].comboBox.name, element[1].comboBox.value, false);
       }else{
-        for (var index = 0; index < arrayPhone.length; index++) {
-          componentBasicForm.removeControl('phone'+index);
-          componentBasicForm.removeControl('phoneType'+index);
-        }
         for (var index = 1; index < arrayPhone.length; index++) {
           var element = arrayPhone[index];
           componentBasicForm.addControl(element[1].textInput.name, element[1].textInput.value, false);
@@ -327,17 +297,13 @@ export class ComponentPageContact implements OnInit {
     if(this.arrayModelDivisorBlock[1].arraySubDivisor[0].basicForm.array3InputData[1].length==2){
     }else{
       var arrayPhone=this.arrayModelDivisorBlock[1].arraySubDivisor[0].basicForm.array3InputData[1];
-
       for (var index = 0; index < arrayPhone.length; index++) {
-        console.log('phone'+index);
         componentBasicForm.removeControl('phone'+index);
         componentBasicForm.removeControl('phoneType'+index);
       }
       for (var index = 1; index < arrayPhone.length; index++) {
         var element = arrayPhone[index];
-        element[1].textInput.name='phone'+(index-1);
         componentBasicForm.addControl(element[1].textInput.name, element[1].textInput.value, false);
-        element[2].comboBox.name='phoneType'+(index-1);
         componentBasicForm.addControl(element[2].comboBox.name, element[2].comboBox.value, false);
       }
     }
