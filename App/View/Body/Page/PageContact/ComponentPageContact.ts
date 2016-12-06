@@ -294,17 +294,18 @@ export class ComponentPageContact implements OnInit {
   }
 
   onRemoveCallback = (componentBasicForm:ComponentBasicForm,event:any) : void => {
-    if(this.arrayModelDivisorBlock[1].arraySubDivisor[0].basicForm.array3InputData[1].length==2){
-    }else{
-      var arrayPhone=this.arrayModelDivisorBlock[1].arraySubDivisor[0].basicForm.array3InputData[1];
-      for (var index = 0; index < arrayPhone.length; index++) {
-        componentBasicForm.removeControl('phone'+index);
-        componentBasicForm.removeControl('phoneType'+index);
-      }
-      for (var index = 1; index < arrayPhone.length; index++) {
-        var element = arrayPhone[index];
+    var arrayPhone=this.arrayModelDivisorBlock[1].arraySubDivisor[0].basicForm.array3InputData[1];
+    console.log('phone'+(arrayPhone.length-1));
+    componentBasicForm.removeControl('phone'+(arrayPhone.length-1));
+    componentBasicForm.removeControl('phoneType'+(arrayPhone.length-1));
+    for (var index = 1; index < arrayPhone.length; index++) {
+      var element = arrayPhone[index];
+      if(arrayPhone.length>2){
         componentBasicForm.addControl(element[1].textInput.name, element[1].textInput.value, false);
         componentBasicForm.addControl(element[2].comboBox.name, element[2].comboBox.value, false);
+      }else{
+        componentBasicForm.addControl(element[0].textInput.name, element[0].textInput.value, false);
+        componentBasicForm.addControl(element[1].comboBox.name, element[1].comboBox.value, false);
       }
     }
   }
