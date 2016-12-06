@@ -16,6 +16,8 @@ import { ModelItem } from './../../common/item/ModelItem';
 import { ModelBasicForm } from './../../common/basicForm/ModelBasicForm';
 import { ModelClickButton } from './../../common/clickButton/ModelClickButton';
 
+import { ComponentBasicForm } from './../../common/basicForm/ComponentBasicForm';
+
 import { ModelContactInformation } from './ModelContactInformation';
 
 import { ServiceJSON } from './../../../../core/services/jSON/ServiceJSON';

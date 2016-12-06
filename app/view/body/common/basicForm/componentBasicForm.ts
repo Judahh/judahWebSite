@@ -6,6 +6,7 @@ import { Observable }     from 'rxjs/Observable';
 import { BasicFormElement } from './BasicFormElement';
 import { ModelBasicForm } from './ModelBasicForm';
 import { Utils } from './../../../../core/utils/Utils';
+import { ModelInputData } from './../inputData/ModelInputData';
 
 declare const FB:any;
 
@@ -72,7 +73,7 @@ export class ComponentBasicForm implements OnInit {
     this.form.removeControl(name);
   }
 
-  getInputDataType(inputData:InputData){
+  getInputDataType(inputData:ModelInputData){
     if(inputData.comboBox!=null && inputData.comboBox!=undefined){
       return "comboBox";
     }
@@ -85,7 +86,7 @@ export class ComponentBasicForm implements OnInit {
     return null;
   }
 
-  getValue(inputData:InputData){
+  getValue(inputData:ModelInputData){
     if(this.getInputDataType(inputData)==null || this.getInputDataType(inputData)==undefined){
       //var empty:any='';
       return null;
