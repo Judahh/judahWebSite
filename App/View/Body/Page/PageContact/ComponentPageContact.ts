@@ -210,7 +210,7 @@ export class ComponentPageContact implements OnInit {
   }
 
   onClickCallbackAdd = (modelClickButton: ModelClickButton) : void => {
-    console.log("NAME:"+modelClickButton.name);
+    // console.log("NAME:"+modelClickButton.name);
     var nextPosition:number=modelClickButton.name+1+1;
     var arrayPhone=this.arrayModelDivisorBlock[1].arraySubDivisor[0].basicForm.array3InputData[1];
     var phone=JSON.parse(JSON.stringify(this.basicPhone));
@@ -252,15 +252,15 @@ export class ComponentPageContact implements OnInit {
         element[2].comboBox.name=phone[2].comboBox.name+(index-1);
         element[3].clickButton.name=(index-1);
 
-        console.log("element refresh name:"+element[1].textInput.name);
-        console.log("element refresh:"+element[1].textInput.value);
+        // console.log("element refresh name:"+element[1].textInput.name);
+        // console.log("element refresh:"+element[1].textInput.value);
       }
     }
     this.changed=true;
   }
 
   onClickCallbackRemove = (modelClickButton: ModelClickButton) : void => {
-    console.log("Remove NAME:"+modelClickButton.name);
+    // console.log("Remove NAME:"+modelClickButton.name);
     var position:number=modelClickButton.name+1;
     var tempArray=this.arrayModelDivisorBlock[1].arraySubDivisor[0].basicForm.array3InputData[1];
     tempArray.splice(position, 1);
@@ -285,23 +285,23 @@ export class ComponentPageContact implements OnInit {
       this.changed=false;
       var arrayPhone=this.arrayModelDivisorBlock[1].arraySubDivisor[0].basicForm.array3InputData[1];
       if(arrayPhone.length==2){
-        console.log("1:");
+        // console.log("1:");
         var index = 1;
         var element = arrayPhone[index];
         componentBasicForm.addControl(element[0].textInput.name, element[0].textInput.value, false);
         componentBasicForm.addControl(element[1].comboBox.name, element[1].comboBox.value, false);
       }else{
-        console.log("2:");
+        // console.log("2:");
 
         var values=new Array();
         var boxes=new Array();
 
         for (var index = 1; index < arrayPhone.length; index++) {
           var element = arrayPhone[index];
-          console.log("e:"+element[1].textInput.value);
+          // console.log("e:"+element[1].textInput.value);
           values.push(element[1].textInput.value);
           boxes.push(element[2].comboBox.value);
-          console.log("value:"+values[index-1]);
+          // console.log("value:"+values[index-1]);
         }
 
         for (var index = 1; index < arrayPhone.length; index++) {
@@ -310,6 +310,8 @@ export class ComponentPageContact implements OnInit {
           var box = boxes[index-1];
           // console.log("element name:"+element[1].textInput.name);
           // console.log("element:"+element[1].textInput.value);
+          componentBasicForm.removeControl(element[1].textInput.name);
+          componentBasicForm.removeControl(element[2].comboBox.name);
           componentBasicForm.addControl(element[1].textInput.name, value, false);
           componentBasicForm.addControl(element[2].comboBox.name, box, false);
           element[1].textInput.value=value;
@@ -325,7 +327,7 @@ export class ComponentPageContact implements OnInit {
     if(this.changed){
       this.changed=false;
       var arrayPhone=this.arrayModelDivisorBlock[1].arraySubDivisor[0].basicForm.array3InputData[1];
-      console.log('phone'+(arrayPhone.length-1));
+      // console.log('phone'+(arrayPhone.length-1));
       componentBasicForm.removeControl('phone'+(arrayPhone.length-1));
       componentBasicForm.removeControl('phoneType'+(arrayPhone.length-1));
       for (var index = 1; index < arrayPhone.length; index++) {
