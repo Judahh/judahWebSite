@@ -241,7 +241,7 @@ export class ComponentPageContact implements OnInit {
       arrayPhone.splice(nextPosition, 0, phone);
     }
 
-    if(arrayPhone.length>2){
+    if(arrayPhone.length>=2){
       var phone=JSON.parse(JSON.stringify(this.basicPhone));
       for (var index = 1; index < arrayPhone.length; index++) {
         var element = arrayPhone[index];
