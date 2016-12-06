@@ -87,6 +87,7 @@ export class ComponentBasicForm implements OnInit {
 
   getValue(inputData:InputData){
     if(this.getInputDataType(inputData)==null || this.getInputDataType(inputData)==undefined){
+      //var empty:any='';
       return null;
     }else{
       return inputData[this.getInputDataType(inputData)].value;
