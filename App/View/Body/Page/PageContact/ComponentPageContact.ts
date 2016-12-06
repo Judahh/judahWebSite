@@ -35,6 +35,7 @@ export class ComponentPageContact implements OnInit {
   basicPhone:any;
   currentWidth:number;
   arrayModelDivisorBlock:Array<ModelDivisorBlock>;
+  changed:boolean=false;
 
   //constructor(private heroService: HeroService) { }
 
@@ -245,13 +246,17 @@ export class ComponentPageContact implements OnInit {
       var phone=JSON.parse(JSON.stringify(this.basicPhone));
       for (var index = 1; index < arrayPhone.length; index++) {
         var element = arrayPhone[index];
+        
         element[0].clickButton.name=(index-1);
         element[1].textInput.name=phone[1].textInput.name+(index-1);
         element[2].comboBox.name=phone[2].comboBox.name+(index-1);
         element[3].clickButton.name=(index-1);
+
+        console.log("element refresh name:"+element[1].textInput.name);
+        console.log("element refresh:"+element[1].textInput.value);
       }
     }
-   
+    this.changed=true;
   }
 
   onClickCallbackRemove = (modelClickButton: ModelClickButton) : void => {
@@ -272,44 +277,66 @@ export class ComponentPageContact implements OnInit {
         //console.log("S");
       }
     }
+    this.changed=true;
   }
 
   onInsertCallback = (componentBasicForm:ComponentBasicForm,event:any) : void => {
-    if(event.relatedNode.nodeName=="INFORMATION"){
-      var div = event.relatedNode.firstElementChild.lastChild.cloneNode(true);
-      console.log(div);
-      if(event.relatedNode.firstElementChild.firstChild.toString().indexOf("ADD") !== -1){
-        console.log("A");
-      }
+    if(event.relatedNode.nodeName=="INFORMATION"&& this.changed){
+      this.changed=false;
       var arrayPhone=this.arrayModelDivisorBlock[1].arraySubDivisor[0].basicForm.array3InputData[1];
       if(arrayPhone.length==2){
+        console.log("1:");
         var index = 1;
         var element = arrayPhone[index];
         componentBasicForm.addControl(element[0].textInput.name, element[0].textInput.value, false);
         componentBasicForm.addControl(element[1].comboBox.name, element[1].comboBox.value, false);
       }else{
+        console.log("2:");
+
+        var values=new Array();
+        var boxes=new Array();
+
         for (var index = 1; index < arrayPhone.length; index++) {
           var element = arrayPhone[index];
-          componentBasicForm.addControl(element[1].textInput.name, element[1].textInput.value, false);
-          componentBasicForm.addControl(element[2].comboBox.name, element[2].comboBox.value, false);
+          console.log("e:"+element[1].textInput.value);
+          values.push(element[1].textInput.value);
+          boxes.push(element[2].comboBox.value);
+          console.log("value:"+values[index-1]);
+        }
+
+        for (var index = 1; index < arrayPhone.length; index++) {
+          var element = arrayPhone[index];
+          var value = values[index-1];
+          var box = boxes[index-1];
+          // console.log("element name:"+element[1].textInput.name);
+          // console.log("element:"+element[1].textInput.value);
+          componentBasicForm.addControl(element[1].textInput.name, value, false);
+          componentBasicForm.addControl(element[2].comboBox.name, box, false);
+          element[1].textInput.value=value;
+          element[2].comboBox.value=box;
+          // console.log("element name2:"+element[1].textInput.name);
+          // console.log("element2:"+element[1].textInput.value);
         }
       }
     }
   }
 
   onRemoveCallback = (componentBasicForm:ComponentBasicForm,event:any) : void => {
-    var arrayPhone=this.arrayModelDivisorBlock[1].arraySubDivisor[0].basicForm.array3InputData[1];
-    console.log('phone'+(arrayPhone.length-1));
-    componentBasicForm.removeControl('phone'+(arrayPhone.length-1));
-    componentBasicForm.removeControl('phoneType'+(arrayPhone.length-1));
-    for (var index = 1; index < arrayPhone.length; index++) {
-      var element = arrayPhone[index];
-      if(arrayPhone.length>2){
-        componentBasicForm.addControl(element[1].textInput.name, element[1].textInput.value, false);
-        componentBasicForm.addControl(element[2].comboBox.name, element[2].comboBox.value, false);
-      }else{
-        componentBasicForm.addControl(element[0].textInput.name, element[0].textInput.value, false);
-        componentBasicForm.addControl(element[1].comboBox.name, element[1].comboBox.value, false);
+    if(this.changed){
+      this.changed=false;
+      var arrayPhone=this.arrayModelDivisorBlock[1].arraySubDivisor[0].basicForm.array3InputData[1];
+      console.log('phone'+(arrayPhone.length-1));
+      componentBasicForm.removeControl('phone'+(arrayPhone.length-1));
+      componentBasicForm.removeControl('phoneType'+(arrayPhone.length-1));
+      for (var index = 1; index < arrayPhone.length; index++) {
+        var element = arrayPhone[index];
+        if(arrayPhone.length>2){
+          componentBasicForm.addControl(element[1].textInput.name, element[1].textInput.value, false);
+          componentBasicForm.addControl(element[2].comboBox.name, element[2].comboBox.value, false);
+        }else{
+          componentBasicForm.addControl(element[0].textInput.name, element[0].textInput.value, false);
+          componentBasicForm.addControl(element[1].comboBox.name, element[1].comboBox.value, false);
+        }
       }
     }
   }
