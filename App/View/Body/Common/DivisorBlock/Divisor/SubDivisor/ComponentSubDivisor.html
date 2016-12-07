@@ -25,6 +25,11 @@
     [modelBasicForm]="modelSubDivisor.basicForm"
     [style]="style()|safeStyle">
 </basicForm>
+<basicTwoWay
+    *ngIf="isBasicTwoWay()"
+    [modelBasicTwoWay]="modelSubDivisor.basicTwoWay"
+    [style]="style()|safeStyle">
+</basicTwoWay>
 <inputData
     *ngIf="isInputData()"
     [modelInputData]="modelSubDivisor.inputData"
