@@ -43,6 +43,7 @@ import { ComponentVideoLink } from './view/body/common/videoLink/ComponentVideoL
 import { ComponentAuthentication } from './view/body/common/authentication/ComponentAuthentication';
 import { ComponentInputData } from './view/body/common/inputData/ComponentInputData';
 import { ComponentBasicForm } from './view/body/common/basicForm/ComponentBasicForm';
+import { ComponentBasicTwoWay } from './view/body/common/basicTwoWay/ComponentBasicTwoWay';
 
 import { ComponentDivisorBlock } from './view/body/common/divisorBlock/ComponentDivisorBlock';
 import { ComponentDivisor } from './view/body/common/divisorBlock/divisor/ComponentDivisor';
@@ -144,6 +145,7 @@ export class SafeStylePipe implements PipeTransform {
     ComponentComboBox,
     ComponentInputData,
     ComponentBasicForm,
+    ComponentBasicTwoWay,
     ComponentAuthentication,
     SafeUrlPipe,
     SafeStylePipe
