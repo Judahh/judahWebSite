@@ -2,12 +2,12 @@
     (ngSubmit)="onSubmit(form)"
     [formGroup]="form">
     <div
-        *ngFor="let dataModel of arrayDataModel; let i = index;"
+        *ngFor="let inputData of modelBasicTwoWay.arrayInputData; let i = index;"
         [style]="style()|safeStyle">
         <inputData 
-            [modelInputData]="arrayInputData[i]"
+            [modelInputData]="inputData"
             [form]="form"
-            [dataModel]="dataModel">
+            [dataModel]="getDataModel(inputData,i)">
         </inputData>
     </div>
 </form>

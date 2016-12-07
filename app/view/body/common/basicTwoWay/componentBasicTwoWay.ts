@@ -21,6 +21,7 @@ export class ComponentBasicTwoWay implements OnInit {
 
   @Input() modelBasicTwoWay: ModelBasicTwoWay;
   @Input() arrayDataModel: Array<any>;
+  numberOfNonDataModel:number;
   form:FormGroup;
 
   ngOnInit() {
@@ -52,6 +53,7 @@ export class ComponentBasicTwoWay implements OnInit {
   }
 
   initialization(){
+    this.numberOfNonDataModel=0;
     var group:any={};
     this.modelBasicTwoWay.arrayInputData.forEach(element => {
         var basicFormElement=new BasicFormElement(element);
@@ -90,6 +92,22 @@ export class ComponentBasicTwoWay implements OnInit {
     }else{
       return inputData[this.getInputDataType(inputData)].value;
     }
+  }
+
+  exists(value:any){
+      return (value!=null && value!=undefined);
+  }
+
+  getDataModel(inputData:ModelInputData, index:number){
+    if(index==0){
+        this.numberOfNonDataModel=0;
+    }  
+    if(this.exists(inputData.comboBox)||this.exists(inputData.textInput)||this.exists(inputData.checkButton)){
+        return this.arrayDataModel[index-this.numberOfNonDataModel];
+    }else{
+        this.numberOfNonDataModel++;
+    }
+    return null;
   }
 
   ngOnDestroy() {
