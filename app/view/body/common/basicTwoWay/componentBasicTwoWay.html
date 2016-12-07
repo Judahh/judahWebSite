@@ -1,0 +1,13 @@
+<form
+    (ngSubmit)="onSubmit(form)"
+    [formGroup]="form">
+    <div
+        *ngFor="let dataModel of arrayDataModel"
+        [style]="style()|safeStyle">
+        <inputData 
+            [modelInputData]="inputData"
+            [form]="form"
+            [dataModel]="dataModel">
+        </inputData>
+    </div>
+</form>
