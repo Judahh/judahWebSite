@@ -65,7 +65,7 @@
                         [
                             {
                                 "textInput":{
-                                    "name":"email",
+                                    "name":"email0",
                                     "fontFamily":"OpenSans-Light",
                                     "fontSize":15,
                                     "textInputType":0
@@ -75,7 +75,7 @@
                         [
                             {
                                 "textInput":{
-                                    "name":"phone",
+                                    "name":"phone0",
                                     "fontFamily":"OpenSans-Light",
                                     "fontSize":15,
                                     "textInputType":0
