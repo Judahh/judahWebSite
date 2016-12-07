@@ -20,6 +20,7 @@ declare const FB:any;
 export class ComponentBasicTwoWay implements OnInit {
 
   @Input() modelBasicTwoWay: ModelBasicTwoWay;
+  @Input() arrayDataModel: Array<any>;
   form:FormGroup;
 
   ngOnInit() {
