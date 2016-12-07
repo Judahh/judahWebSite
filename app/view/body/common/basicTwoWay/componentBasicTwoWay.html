@@ -5,7 +5,7 @@
         *ngFor="let dataModel of arrayDataModel"
         [style]="style()|safeStyle">
         <inputData 
-            [modelInputData]="inputData"
+            [modelInputData]="arrayInputData[]"
             [form]="form"
             [dataModel]="dataModel">
         </inputData>
