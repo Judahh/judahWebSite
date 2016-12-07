@@ -19,8 +19,9 @@ import { Utils } from './../../../../core/utils/Utils';
   encapsulation: ViewEncapsulation.None
 })
 export class ComponentDivisorBlock implements OnInit {
-
   @Input() modelDivisorBlock: ModelDivisorBlock;
+  @Input() dataModel: Array<any>;
+  @Input() subDataModel: Array<any>;
 
   ngOnInit() {
     this.initialization();

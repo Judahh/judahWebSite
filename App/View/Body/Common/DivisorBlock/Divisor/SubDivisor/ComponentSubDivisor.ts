@@ -13,6 +13,7 @@ import { Utils } from './../../../../../../core/utils/Utils';
 })
 export class ComponentSubDivisor implements OnInit {
   @Input() modelSubDivisor: ModelSubDivisor;
+  @Input() dataModel: Array<any>;
 
   ngOnInit() {
     this.initialization();

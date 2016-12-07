@@ -20,7 +20,6 @@ declare const FB:any;
 export class ComponentBasicForm implements OnInit {
 
   @Input() modelBasicForm: ModelBasicForm;
-  @Input() dataModel: Array<any>;
   form:FormGroup;
 
   ngOnInit() {
@@ -97,14 +96,6 @@ export class ComponentBasicForm implements OnInit {
   }
 
   ngOnDestroy() {
-  }
-
-  getDataModel(index3:number, 
-              array3size:number,
-              index2:number,
-              array2size:number,
-              index:number){
-    return this.dataModel[array3size*array2size*index+array3size*index2+index3];
   }
 
   onSubmit(form: NgForm): void { 

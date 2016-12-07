@@ -44,12 +44,11 @@
 }
 
 @font-face {
-    font-family: "FontAwesome";
-    src: url("App/view/body/fonts/fontawesome-webfont.ttf");
-    src: url("App/view/body/fonts/fontawesome-webfont.woff") format('woff');
-    /*src: url("../../../../../../fonts/SocialicoPlus.ttf")  format(‘truetype’);*/
-    font-weight: normal;
-    font-style: normal;
+  font-family: 'FontAwesome';
+  src: url('App/view/body/fonts/fontawesome-webfont.eot?v=4.7.0');
+  src: url('App/view/body/fonts/fontawesome-webfont.eot?#iefix&v=4.7.0') format('embedded-opentype'), url('App/view/body/fonts/fontawesome-webfont.woff2?v=4.7.0') format('woff2'), url('App/view/body/fonts/fontawesome-webfont.woff?v=4.7.0') format('woff'), url('App/view/body/fonts/fontawesome-webfont.ttf?v=4.7.0') format('truetype'), url('App/view/body/fonts/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
 }
 
 @font-face {

@@ -36,6 +36,7 @@ export class ComponentPageContact implements OnInit {
   currentWidth:number;
   arrayModelDivisorBlock:Array<ModelDivisorBlock>;
   changed:boolean=false;
+  dataModel:Array<any>;
 
   //constructor(private heroService: HeroService) { }
 
@@ -45,12 +46,17 @@ export class ComponentPageContact implements OnInit {
       this.initialization();
   }
 
-  constructor(private serviceJSON: ServiceJSON) {}
+  constructor(private serviceJSON: ServiceJSON) {
+    this.dataModel=new Array();
+    for (var index = 0; index < 50; index++) {
+      this.dataModel.push("FUCK:"+index);
+    }
+  }
 
   initialization(){
     this.arrayModelDivisorBlock=new Array<ModelDivisorBlock>();
     this.modelLanguages=new ModelLanguages();
-    this.modelContactInformation=new ModelContactInformation();
+    this.modelContactInformation=new ModelContactInformation();    
 
     this.refresh();
   }

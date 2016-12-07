@@ -1,5 +1,4 @@
 <form
-    *ngIf="dataModel==null || dataModel==undefined"
     (ngSubmit)="onSubmit(form)"
     [formGroup]="form">
     <div
@@ -11,26 +10,6 @@
                 <inputData 
                     [modelInputData]="inputData"
                     [form]="form">
-                </inputData>
-            </div>
-        </div>
-    </div>
-</form>
-
-<form
-    *ngIf="dataModel!=null && dataModel==undefined"
-    (ngSubmit)="onSubmit(form)"
-    [formGroup]="form">
-    <div
-        *ngFor="let array2InputData of modelBasicForm.array3InputData; let i3 = index">
-        <div [style]="style(array2InputData)|safeStyle"
-            *ngFor="let arrayInputData of array2InputData; let i2 = index">
-            <div [style]="style2(arrayInputData)|safeStyle"
-                *ngFor="let inputData of arrayInputData; let i = index">
-                <inputData 
-                    [modelInputData]="inputData"
-                    [form]="form"
-                    [dataModel]="getDataModel(i3, modelBasicForm.array3InputData.length, i2, array2InputData.length, i)">
                 </inputData>
             </div>
         </div>

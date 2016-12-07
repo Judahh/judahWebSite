@@ -3,6 +3,7 @@
         "clickButton":{
             "name":0,
             "type":"button",
+            "class":"ButtonClassRedIcon",
             "item":{
                 "id":0,
                 "routerLink":"",
@@ -10,17 +11,17 @@
                 "colorEffect":{
                     "colorEffect":"",
                     "font":{
-                        "font":"DivClassOpenSansLight",
+                        "font":"DivClassFontAwesome",
                         "width":"100%",
                         "size":15,
-                        "arrayPadding":[5],
+                        "arrayPadding":[2],
                         "animationEffect":{
                             "class":"",
                             "subClass":"",
                             "subClasses":[],
                             "arrayInformation":[
                                 {
-                                    "information":"REM"
+                                    "information":""
                                 }
                             ]
                         }
@@ -48,6 +49,7 @@
         "clickButton":{
             "name":0,
             "type":"button",
+            "class":"ButtonClassBlueIcon",
             "item":{
                 "id":0,
                 "routerLink":"",
@@ -55,17 +57,17 @@
                 "colorEffect":{
                     "colorEffect":"",
                     "font":{
-                        "font":"DivClassOpenSansLight",
+                        "font":"DivClassFontAwesome",
                         "width":"100%",
                         "size":15,
-                        "arrayPadding":[5],
+                        "arrayPadding":[2],
                         "animationEffect":{
                             "class":"",
                             "subClass":"",
                             "subClasses":[],
                             "arrayInformation":[
                                 {
-                                    "information":"ADD"
+                                    "information":""
                                 }
                             ]
                         }
