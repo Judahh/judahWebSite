@@ -100,22 +100,48 @@ export class ComponentHeader implements OnInit {
           for(var index3:number=0;index3<this.arrayModelMenuHorizontal[index2].arrayItem.length;index3++){
             if(this.arrayModelMenuHorizontal[index2].arrayItem[index3].tooltip==null||
               this.arrayModelMenuHorizontal[index2].arrayItem[index3].tooltip==undefined){
-                this.arrayModelMenuHorizontal[index2].arrayItem[index3].tooltip=new ModelTooltip();
-            }
-            if(this.arrayModelMenuHorizontal[index2].arrayItem[index3].menuVertical!=null){
-              for(var index4:number=0;index4<this.arrayModelMenuHorizontal[index2].arrayItem[index3].menuVertical.arrayItem.length;index4++){
-                if(this.arrayModelMenuHorizontal[index2].arrayItem[index3].menuVertical.arrayItem[index4].tooltip==null||
-                  this.arrayModelMenuHorizontal[index2].arrayItem[index3].menuVertical.arrayItem[index4].tooltip==undefined){
-                    this.arrayModelMenuHorizontal[index2].arrayItem[index3].menuVertical.arrayItem[index4].tooltip=new ModelTooltip();
+                //this.arrayModelMenuHorizontal[index2].arrayItem[index3].tooltip=new ModelTooltip();
+                this.getInformationService(index2,index3);
+            }else{
+              if(this.arrayModelMenuHorizontal[index2].arrayItem[index3].menuVertical!=null){
+                for(var index4:number=0;index4<this.arrayModelMenuHorizontal[index2].arrayItem[index3].menuVertical.arrayItem.length;index4++){
+                  if(this.arrayModelMenuHorizontal[index2].arrayItem[index3].menuVertical.arrayItem[index4].tooltip==null||
+                    this.arrayModelMenuHorizontal[index2].arrayItem[index3].menuVertical.arrayItem[index4].tooltip==undefined){
+                      //this.arrayModelMenuHorizontal[index2].arrayItem[index3].menuVertical.arrayItem[index4].tooltip=new ModelTooltip();
+                      this.getInformationService2(index2,index3,index4);
+                  }else{
+                    this.getTooltipService2(index2,index3,index4);
+                  }
                 }
-                this.getTooltipService2(index2,index3,index4);
               }
+              this.getTooltipService(index2,index3);
             }
-            this.getTooltipService(index2,index3);
           }
         }
         return;
       }
+    }
+  }
+
+  getInformationService(index:number,index2:number){
+    var errorMessage="";
+    this.serviceJSON.getObservable("languages/page"+this.arrayModelMenuHorizontal[index].arrayItem[index2].routerLink).subscribe(
+              items => this.getInformation(index, index2, items), 
+              error => errorMessage = <any>error);
+
+    if(errorMessage!=""){
+      alert("Error:"+errorMessage);
+    }
+  }
+
+  getInformationService2(index:number,index2:number,index3:number){
+    var errorMessage="";
+    this.serviceJSON.getObservable("languages/page"+this.arrayModelMenuHorizontal[index].arrayItem[index2].menuVertical.arrayItem[index3].routerLink).subscribe(
+              items => this.getInformation2(index, index2, index3, items), 
+              error => errorMessage = <any>error);
+
+    if(errorMessage!=""){
+      alert("Error:"+errorMessage);
     }
   }
 
@@ -141,11 +167,19 @@ export class ComponentHeader implements OnInit {
     }
   }
 
+  getInformation(index:number,index2:number,items:any){
+    this.arrayModelMenuHorizontal[index].arrayItem[index2].colorEffect.font.animationEffect.arrayInformation[0].information=Languages.getPageLanguage(items,this.modelLanguages).title;
+  }
+
+  getInformation2(index:number,index2:number,index3:number,items:any){
+    this.arrayModelMenuHorizontal[index].arrayItem[index2].menuVertical.arrayItem[index3].colorEffect.font.animationEffect.arrayInformation[0].information=Languages.getPageLanguage(items,this.modelLanguages).title;
+  }
+
   getTooltip(index:number,index2:number,items:any){
-    this.arrayModelMenuHorizontal[index].arrayItem[index2].tooltip.value=Languages.getPageLanguage(items,this.modelLanguages).title
+    this.arrayModelMenuHorizontal[index].arrayItem[index2].tooltip.value=Languages.getPageLanguage(items,this.modelLanguages).title;
   }
 
   getTooltip2(index:number,index2:number,index3:number,items:any){
-    this.arrayModelMenuHorizontal[index].arrayItem[index2].menuVertical.arrayItem[index3].tooltip.value=Languages.getPageLanguage(items,this.modelLanguages).title
+    this.arrayModelMenuHorizontal[index].arrayItem[index2].menuVertical.arrayItem[index3].tooltip.value=Languages.getPageLanguage(items,this.modelLanguages).title;
   }
 }
