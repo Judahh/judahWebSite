@@ -90,7 +90,6 @@ export class ComponentFooter implements OnInit {
   }
 
   filter(items:Array<ModelMenuItems>){
-    
     for(var index:number=0;index<items.length;index++){
       if(items[index].name==Utils.getFileSelector(Utils.getFileName(__filename))){
         this.position=items[index].position;
@@ -99,21 +98,19 @@ export class ComponentFooter implements OnInit {
           for(var index3:number=0;index3<this.arrayModelMenuHorizontal[index2].arrayItem.length;index3++){
             if(this.arrayModelMenuHorizontal[index2].arrayItem[index3].tooltip==null||
               this.arrayModelMenuHorizontal[index2].arrayItem[index3].tooltip==undefined){
-                //this.arrayModelMenuHorizontal[index2].arrayItem[index3].tooltip=new ModelTooltip();
                 this.getInformationService(index2,index3);
             }else{
-              if(this.arrayModelMenuHorizontal[index2].arrayItem[index3].menuVertical!=null){
-                for(var index4:number=0;index4<this.arrayModelMenuHorizontal[index2].arrayItem[index3].menuVertical.arrayItem.length;index4++){
-                  if(this.arrayModelMenuHorizontal[index2].arrayItem[index3].menuVertical.arrayItem[index4].tooltip==null||
-                    this.arrayModelMenuHorizontal[index2].arrayItem[index3].menuVertical.arrayItem[index4].tooltip==undefined){
-                      //this.arrayModelMenuHorizontal[index2].arrayItem[index3].menuVertical.arrayItem[index4].tooltip=new ModelTooltip();
-                      this.getInformationService2(index2,index3,index4);
-                  }else{
-                    this.getTooltipService2(index2,index3,index4);
-                  }
+              this.getTooltipService(index2,index3);
+            }
+            if(this.arrayModelMenuHorizontal[index2].arrayItem[index3].menuVertical!=null){
+              for(var index4:number=0;index4<this.arrayModelMenuHorizontal[index2].arrayItem[index3].menuVertical.arrayItem.length;index4++){
+                if(this.arrayModelMenuHorizontal[index2].arrayItem[index3].menuVertical.arrayItem[index4].tooltip==null||
+                  this.arrayModelMenuHorizontal[index2].arrayItem[index3].menuVertical.arrayItem[index4].tooltip==undefined){
+                    this.getInformationService2(index2,index3,index4);
+                }else{
+                  this.getTooltipService2(index2,index3,index4);
                 }
               }
-              this.getTooltipService(index2,index3);
             }
           }
         }
