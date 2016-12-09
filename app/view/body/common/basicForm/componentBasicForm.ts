@@ -20,7 +20,10 @@ declare const FB:any;
 export class ComponentBasicForm implements OnInit {
 
   @Input() modelBasicForm: ModelBasicForm;
+  @Input() arrayDataModel: Array<any>;
   form:FormGroup;
+  normalIndex:number;
+  numberOfNonDataModel:number;
 
   ngOnInit() {
     this.initialization();
@@ -91,8 +94,38 @@ export class ComponentBasicForm implements OnInit {
       //var empty:any='';
       return null;
     }else{
+      console.log("AEW!!");
+      if(this.getInputDataType(inputData)=="checkButton"){
+        console.log("checkButton!!");
+        if(inputData.checkButton.radio){
+          console.log("RADIO!!");
+        }
+      }
       return inputData[this.getInputDataType(inputData)].value;
     }
+  }
+
+  exists(value:any){
+      return (value!=null && value!=undefined);
+  }
+
+  getDataModel(inputData:ModelInputData, index3:number, index2:number, index:number){
+    var normalIndex=index3+index2+index;
+    if(normalIndex==0){
+      this.normalIndex=-1;
+      this.numberOfNonDataModel=0;
+    }  
+    this.normalIndex++;
+    // console.log("index:"+this.normalIndex);
+    // console.log("NONindex:"+this.numberOfNonDataModel);
+    if(this.exists(inputData.comboBox)||this.exists(inputData.textInput)||this.exists(inputData.checkButton)){
+      // console.log("REGULARindex:"+(this.normalIndex-this.numberOfNonDataModel));
+      return this.arrayDataModel[this.normalIndex-this.numberOfNonDataModel];
+    }
+    
+    this.numberOfNonDataModel++;
+    
+    return null;
   }
 
   ngOnDestroy() {

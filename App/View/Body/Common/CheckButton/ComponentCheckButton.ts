@@ -1,4 +1,4 @@
-import { Component, Input, OnInit, ViewEncapsulation, forwardRef } from '@angular/core';
+import { Component, Input, OnInit, ViewEncapsulation, Directive, Renderer, ElementRef, Self, forwardRef, Provider } from '@angular/core';
 
 import { ModelInformation } from './../item/colorEffect/font/animationEffect/information/ModelInformation';
 import { ModelAnimationEffect } from './../item/colorEffect/font/animationEffect/ModelAnimationEffect';
@@ -26,6 +26,7 @@ const CUSTOM_INPUT_CONTROL_VALUE_ACCESSOR: any = {
   styleUrls: [Utils.getFileCSS(Utils.getFileName(__filename))],
   templateUrl: Utils.getFileHTML(Utils.getFileName(__filename)),
   encapsulation: ViewEncapsulation.None,
+  host: {'(change)': 'onChangeCallback($event.target.value)', '(blur)': 'onTouchedCallback()'},
   providers: [CUSTOM_INPUT_CONTROL_VALUE_ACCESSOR]
 })
 export class ComponentCheckButton implements OnInit, ControlValueAccessor {
@@ -34,31 +35,40 @@ export class ComponentCheckButton implements OnInit, ControlValueAccessor {
   @Input() form: FormGroup;
   
   private onTouchedCallback: () => void = noop;
-  private onChangeCallback: (_: any) => void = noop;
+  private onChangeCallback: (event:any) => void = noop;
 
   //get accessor
   get value(): any {
-      return this.modelCheckButton.value;
+    if(this.modelCheckButton.radio){
+        if(this.modelCheckButton.checked){
+            return this.modelCheckButton.value;
+        }
+    }else{
+        return this.modelCheckButton.value;
+    }
   };
 
   //set accessor including call the onchange callback
   set value(value: any) {
+    if(this.modelCheckButton.radio){
+        this.renderer.setElementProperty(this.elementRef, 'checked', value == this.elementRef.nativeElement.value);
+    }else{
         if (value !== this.modelCheckButton.value) {
           this.modelCheckButton.value = value;
           this.onChangeCallback(value);
         }
-  }
-
-  //Set touched on blur
-  onBlur() {
-      this.onTouchedCallback();
+    }
   }
 
   //From ControlValueAccessor interface
   writeValue(value: any) {
-      if (value !== this.modelCheckButton.value) {
-          this.modelCheckButton.value = value;
-      }
+    if(this.modelCheckButton.radio){
+        this.renderer.setElementProperty(this.elementRef, 'checked', value == this.elementRef.nativeElement.value);
+    }else{
+        if (value !== this.modelCheckButton.value) {
+            this.modelCheckButton.value = value;
+        }
+    }
   }
 
   //From ControlValueAccessor interface
@@ -75,7 +85,7 @@ export class ComponentCheckButton implements OnInit, ControlValueAccessor {
     this.initialization();
   }
 
-  constructor() {}
+  constructor(private renderer: Renderer, private elementRef: ElementRef) {}
 
   initialization(){
   }

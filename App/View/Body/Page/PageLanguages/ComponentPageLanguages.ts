@@ -37,7 +37,8 @@ export class ComponentPageLanguages implements OnInit {
   //filteredArrayModelLanguages:Array<ModelLanguages>;
   basicItem:ModelItem;
   basicModelInformation:ModelInformation;
-  form:FormGroup;
+  dataModel:Array<string>;
+  // form:FormGroup;
 
   arrayModelDivisorBlock:Array<ModelDivisorBlock>;
 
@@ -48,6 +49,7 @@ export class ComponentPageLanguages implements OnInit {
   constructor(private serviceJSON: ServiceJSON, private formBuilder:FormBuilder) {}
 
   initialization(){
+    this.dataModel=new Array();
     this.arrayModelDivisorBlock=new Array<ModelDivisorBlock>();
     this.arrayModelLanguages=new Array<ModelLanguages>();
     //this.filteredArrayModelLanguages=new Array<ModelLanguages>();
@@ -57,9 +59,9 @@ export class ComponentPageLanguages implements OnInit {
     this.basicItem=new ModelItem();
     this.basicModelInformation=new ModelInformation("");
 
-    this.form = this.formBuilder.group({
-      'language':[false, Validators.required]
-    });
+    // this.form = this.formBuilder.group({
+    //   'language':[Validators.required]
+    // });
 
     this.getHalfModelInformation();
     this.getItemService();
@@ -123,9 +125,9 @@ export class ComponentPageLanguages implements OnInit {
   setLanguage(languageCode:string){
     var currentLanguage=Languages.currentLanguage;
     Languages.currentLanguage=languageCode;
-    if(currentLanguage!=languageCode){
-      location.reload();
-    }
+    // if(currentLanguage!=languageCode){
+    //   location.reload();
+    // }
   }
 
   getModelLanguages(arrayModelLanguages:Array<ModelLanguages>){
@@ -143,8 +145,13 @@ export class ComponentPageLanguages implements OnInit {
     for(let index:number=0;index<this.arrayModelLanguagesInformation.length;index++){
       for(let index2:number=0;index2<this.arrayModelLanguages.length;index2++){
         if(this.arrayModelLanguagesInformation[index].language==this.arrayModelLanguages[index2].language){
+          // console.log("Value:"+this.arrayModelLanguages[index2].code[0]);
+          // console.log("Checked:"+this.isChecked(this.arrayModelLanguages[index2]));
+          this.dataModel.push(this.modelLanguages.code[0]);
+          // console.log("BValue:"+this.arrayModelDivisorBlock[0].arraySubDivisor[0].basicForm.array3InputData[0][index][0].checkButton.value);
+          // console.log("BChecked:"+this.arrayModelDivisorBlock[0].arraySubDivisor[0].basicForm.array3InputData[0][index][0].checkButton.checked);
           this.arrayModelDivisorBlock[0].arraySubDivisor[0].basicForm.array3InputData[0][index][0].checkButton.checked=this.isChecked(this.arrayModelLanguages[index2]);
-          this.arrayModelDivisorBlock[0].arraySubDivisor[0].basicForm.array3InputData[0][index][0].checkButton.value=this.arrayModelLanguages[index2].code[0];
+          // this.arrayModelDivisorBlock[0].arraySubDivisor[0].basicForm.array3InputData[0][index][0].checkButton.value=this.arrayModelLanguages[index2].code[0];
           this.arrayModelDivisorBlock[0].arraySubDivisor[0].basicForm.array3InputData[0][index][0].checkButton.item=this.getItem(this.arrayModelLanguages[index2],
           this.arrayModelDivisorBlock[0].arraySubDivisor[0].basicForm.array3InputData[0][index][0].checkButton.item);
           this.arrayModelDivisorBlock[0].arraySubDivisor[0].basicForm.array3InputData[0][index][0].checkButton.onClick=this.onClickCallback;

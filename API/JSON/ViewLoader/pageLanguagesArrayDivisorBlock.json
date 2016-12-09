@@ -11,9 +11,8 @@
                                 "checkButton":{
                                     "type":"button",
                                     "name":"language",
-                                    "value":"english",
+                                    "value":"en-us",
                                     "radio":true,
-                                    "checked":false,
                                     "item":{
                                         "id":0,
                                         "routerLink":"",
@@ -44,9 +43,8 @@
                                 "checkButton":{
                                     "type":"button",
                                     "name":"language",
-                                    "value":"portuguese",
+                                    "value":"pt-br",
                                     "radio":true,
-                                    "checked":false,
                                     "item":{
                                         "id":0,
                                         "routerLink":"",

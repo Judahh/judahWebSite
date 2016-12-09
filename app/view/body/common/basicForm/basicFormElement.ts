@@ -7,6 +7,7 @@ export class BasicFormElement {
 
     toFormGroupElements(group: any) {
         if(this.modelInputData!=undefined && this.modelInputData!=null){
+
             if(this.modelInputData.comboBox!=undefined && this.modelInputData.comboBox!=null){
                 group[this.modelInputData.comboBox.name] = this.modelInputData.comboBox.required? 
                     new FormControl(this.modelInputData.comboBox.value || '', Validators.required) : 
@@ -20,9 +21,19 @@ export class BasicFormElement {
             }
 
             if(this.modelInputData.checkButton!=undefined && this.modelInputData.checkButton!=null){
-                group[this.modelInputData.checkButton.name] = this.modelInputData.checkButton.required? 
-                    new FormControl(this.modelInputData.checkButton.value || '', Validators.required) : 
-                    new FormControl(this.modelInputData.checkButton.value || '');
+                // console.log("name:"+this.modelInputData.checkButton.name);
+                // console.log("value:"+this.modelInputData.checkButton.value);
+                // console.log("checked:"+this.modelInputData.checkButton.checked);
+                if(this.modelInputData.checkButton.checked){
+                //     console.log("checkedT:"+this.modelInputData.checkButton.checked);
+                    group[this.modelInputData.checkButton.name] = this.modelInputData.checkButton.required? 
+                        new FormControl(this.modelInputData.checkButton.value || '', Validators.required) : 
+                        new FormControl(this.modelInputData.checkButton.value || '');
+                }else{
+                    group[this.modelInputData.checkButton.name] = this.modelInputData.checkButton.required? 
+                        new FormControl(Validators.required) : 
+                        new FormControl();
+                }
             }
         }
 
