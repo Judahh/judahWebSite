@@ -48,6 +48,7 @@ export class ComponentPageContact implements OnInit {
 
   constructor(private serviceJSON: ServiceJSON) {
     this.dataModel=new Array();
+    // this.dataModel["name"]="FUCK!";
     // for (var index = 0; index < 30; index++) {
     //   this.dataModel.push("FUCK:"+index);
     // }

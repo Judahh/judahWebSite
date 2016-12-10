@@ -5,15 +5,27 @@ import { Observable }     from 'rxjs/Observable';
 
 @Injectable()
 export class ServiceJSON {
-  private URL = '/aPI/jSON/';
+  // private URL = '/aPI/jSON/';
+  private URL = '/app/core/jSON/';
   
   constructor(private http: Http) { }
 
   getPromise(path:string): Promise<any>  {
+    // var internalJSON = require(this.internalURL+path+".json");
+    // console.log(internalJSON);
     return this.http.get(this.URL+path+".json").toPromise().then(this.extractData).catch(this.handlePromiseError);
   }
 
   getObservable(path:string): Observable<any>  {
+    //var internalJSON = require();
+    // var path2 = this.URL+path+".json";
+    // this.$inject = [path2];
+    // var internalJSON = require(path2);
+    // require(path2, function( internalJSON ) {
+    //   internalJSON.resolve();
+    //   console.log(internalJSON);
+    // });
+
     return this.http.get(this.URL+path+".json").map(this.extractData).catch(this.handleObservableError);
   }
 

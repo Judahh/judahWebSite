@@ -51,7 +51,13 @@ export class ComponentCheckButton implements OnInit, ControlValueAccessor {
   //set accessor including call the onchange callback
   set value(value: any) {
     if(this.modelCheckButton.radio){
-        this.renderer.setElementProperty(this.elementRef, 'checked', value == this.elementRef.nativeElement.value);
+        if(this.elementRef.nativeElement.getElementsByTagName("INPUT")[0]!=undefined){
+            console.log("ELE0:"+this.elementRef.nativeElement.getElementsByTagName("INPUT")[0].checked);
+            console.log("ELEB0:"+this.elementRef.nativeElement.getElementsByTagName("INPUT")[0].value);
+            this.renderer.setElementProperty(this.elementRef.nativeElement.getElementsByTagName("INPUT")[0], 'checked', value == this.modelCheckButton.value);
+            this.modelCheckButton.checked=true;
+        }
+        
     }else{
         if (value !== this.modelCheckButton.value) {
           this.modelCheckButton.value = value;
@@ -63,7 +69,11 @@ export class ComponentCheckButton implements OnInit, ControlValueAccessor {
   //From ControlValueAccessor interface
   writeValue(value: any) {
     if(this.modelCheckButton.radio){
-        this.renderer.setElementProperty(this.elementRef, 'checked', value == this.elementRef.nativeElement.value);
+        if(this.elementRef.nativeElement.getElementsByTagName("INPUT")[0]!=undefined){
+            console.log("ELE1:"+this.elementRef.nativeElement.getElementsByTagName("INPUT")[0].value);
+            this.renderer.setElementProperty(this.elementRef.nativeElement.getElementsByTagName("INPUT")[0], 'checked', value == this.modelCheckButton.value);
+            this.modelCheckButton.checked=true;
+        }
     }else{
         if (value !== this.modelCheckButton.value) {
             this.modelCheckButton.value = value;

@@ -25,7 +25,7 @@
             name="{{modelCheckButton.name}}"
             formControlName="{{modelCheckButton.name}}"
             value="{{modelCheckButton.value}}"
-            [(ngModel)]="value"  
+            [(ngModel)]="dataModel" 
         />
 
         <input *ngIf="!modelCheckButton.checked && radio()"
@@ -34,7 +34,7 @@
             name="{{modelCheckButton.name}}"
             formControlName="{{modelCheckButton.name}}"
             value="{{modelCheckButton.value}}"
-            [(ngModel)]="value"  
+            [(ngModel)]="dataModel" 
         />
         
         <div>
@@ -69,7 +69,7 @@
             name="{{modelCheckButton.name}}"
             formControlName="{{modelCheckButton.name}}"
             value="{{modelCheckButton.value}}"
-            [(ngModel)]="value" 
+            [(ngModel)]="dataModel" 
         />
 
         <input *ngIf="!modelCheckButton.checked && radio()"
@@ -78,12 +78,13 @@
             name="{{modelCheckButton.name}}"
             formControlName="{{modelCheckButton.name}}"
             value="{{modelCheckButton.value}}"
-            [(ngModel)]="value"  
+            [(ngModel)]="dataModel" 
         />
-        
         <div>
             <item [modelItem]="modelCheckButton.item">
             </item>
         </div>
     </label>
 </div>
+{{dataModel}}
+{{modelCheckButton.value}}
