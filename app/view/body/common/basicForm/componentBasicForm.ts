@@ -128,6 +128,18 @@ export class ComponentBasicForm implements OnInit {
     return null;
   }
 
+  getSimpleDataModel(inputData:ModelInputData, index:number){
+    if(index==0){
+        this.numberOfNonDataModel=0;
+    }  
+    if(this.exists(inputData.comboBox)||this.exists(inputData.textInput)||this.exists(inputData.checkButton)){
+        return this.arrayDataModel[index-this.numberOfNonDataModel];
+    }else{
+        this.numberOfNonDataModel++;
+    }
+    return null;
+  }
+
   ngOnDestroy() {
   }
 
@@ -156,6 +168,10 @@ export class ComponentBasicForm implements OnInit {
 
   private handleResponse(response: Response) {
     console.log('received response:'+JSON.stringify(response));
+  }
+
+  simpleStyle(){
+    return this.displayInlineBlock();
   }
 
   style(array:Array<any>){

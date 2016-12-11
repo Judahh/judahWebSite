@@ -15,4 +15,13 @@
             </div>
         </div>
     </div>
+    <div
+        *ngFor="let inputData of modelBasicTwoWay.arrayInputData; let i = index;"
+        [style]="simpleStyle()|safeStyle">
+        <inputData 
+            [modelInputData]="inputData"
+            [form]="form"
+            [dataModel]="getSimpleDataModel(inputData,i)">
+        </inputData>
+    </div>
 </form>
