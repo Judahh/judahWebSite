@@ -125,9 +125,9 @@ export class ComponentPageLanguages implements OnInit {
   setLanguage(languageCode:string){
     var currentLanguage=Languages.currentLanguage;
     Languages.currentLanguage=languageCode;
-    // if(currentLanguage!=languageCode){
-    //   location.reload();
-    // }
+    if(currentLanguage!=languageCode){
+      location.reload();
+    }
   }
 
   getModelLanguages(arrayModelLanguages:Array<ModelLanguages>){
