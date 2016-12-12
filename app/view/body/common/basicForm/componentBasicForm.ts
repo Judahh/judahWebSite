@@ -89,22 +89,6 @@ export class ComponentBasicForm implements OnInit {
     return null;
   }
 
-  getValue(inputData:ModelInputData){
-    if(this.getInputDataType(inputData)==null || this.getInputDataType(inputData)==undefined){
-      //var empty:any='';
-      return null;
-    }else{
-      console.log("AEW!!");
-      if(this.getInputDataType(inputData)=="checkButton"){
-        console.log("checkButton!!");
-        if(inputData.checkButton.radio){
-          console.log("RADIO!!");
-        }
-      }
-      return inputData[this.getInputDataType(inputData)].value;
-    }
-  }
-
   exists(value:any){
       return (value!=null && value!=undefined);
   }
