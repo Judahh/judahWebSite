@@ -1,5 +1,4 @@
 import { ModelBasicForm } from './../../../basicForm/ModelBasicForm';
-import { ModelBasicTwoWay } from './../../../basicTwoWay/ModelBasicTwoWay';
 import { ModelInputData } from './../../../inputData/ModelInputData';
 import { ModelItem } from './../../../item/ModelItem';
 import { ModelImage } from './../../../image/ModelImage';
@@ -10,7 +9,6 @@ export class ModelSubDivisor {
     image: ModelImage;
     videoLink: ModelVideoLink;
     basicForm: ModelBasicForm;
-    basicTwoWay: ModelBasicTwoWay;
     inputData: ModelInputData;
     toBottom:boolean;
     float:string;

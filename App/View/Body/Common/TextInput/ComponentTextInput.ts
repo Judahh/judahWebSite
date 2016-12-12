@@ -101,7 +101,12 @@ export class ComponentTextInput implements OnInit, ControlValueAccessor {
   }
 
   style(){
-    return this.fontFamily()+this.fontSize();
+    return this.fontFamily()+
+           this.fontSize()+
+           this.border()+
+           this.color()+
+           this.backgroundColor()+
+           this.opacity();
   }
 
   isField(){
@@ -120,6 +125,50 @@ export class ComponentTextInput implements OnInit, ControlValueAccessor {
       return "dataListId" + this.modelTextInput.name.charAt(0).toUpperCase() + this.modelTextInput.name.slice(1);
   }
 
+  border(){
+    if(this.modelTextInput.border==null){
+      return "";
+    }
+    var borderStyle="border-style:";
+    var borderWidth="border-width:";
+    var borderColor="border-color:";
+    for (var index = 0; index < this.modelTextInput.border.length; index++) {
+      var element = this.modelTextInput.border[index];
+      if(element.style!=null||element.style!=undefined||element.style!=""){
+        borderStyle+=" "+element.style;
+      }
+      if(element.width!=null||element.width!=undefined){
+        borderWidth+=" "+element.style+"px";
+      }
+      if(element.color!=null||element.color!=undefined||element.color!=""){
+        borderColor+=" "+element.color;
+      }
+    }
+    borderStyle+=";";
+    borderWidth+=";";
+    borderColor+=";";
+    return borderStyle+borderWidth+borderColor;
+  }
+
+  color(){
+    if(this.modelTextInput.color==null||this.modelTextInput.color==undefined||this.modelTextInput.color==""){
+      return "";
+    }
+    return "color: "+this.modelTextInput.color+";";
+  }
+
+  backgroundColor(){
+    if(this.modelTextInput.backgroundColor==null||this.modelTextInput.backgroundColor==undefined||this.modelTextInput.backgroundColor==""){
+      return "";
+    }
+    return "background-color: "+this.modelTextInput.backgroundColor+";";
+  }
+
+  opacity(){
+    if(this.modelTextInput.opacity==null||this.modelTextInput.opacity==undefined){
+      return "";
+    }
+    return "opacity: "+this.modelTextInput.opacity+";";
+  }
+
 }
-
-

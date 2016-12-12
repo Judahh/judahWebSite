@@ -92,7 +92,57 @@ export class ComponentComboBox implements OnInit, ControlValueAccessor {
   }
 
   style(){
-    return this.fontSize();
+    return this.fontSize()+
+           this.border()+
+           this.color()+
+           this.backgroundColor()+
+           this.opacity();
+  }
+
+  border(){
+    if(this.modelComboBox.border==null){
+      return "";
+    }
+    var borderStyle="border-style:";
+    var borderWidth="border-width:";
+    var borderColor="border-color:";
+    for (var index = 0; index < this.modelComboBox.border.length; index++) {
+      var element = this.modelComboBox.border[index];
+      if(element.style!=null||element.style!=undefined||element.style!=""){
+        borderStyle+=" "+element.style;
+      }
+      if(element.width!=null||element.width!=undefined){
+        borderWidth+=" "+element.style+"px";
+      }
+      if(element.color!=null||element.color!=undefined||element.color!=""){
+        borderColor+=" "+element.color;
+      }
+    }
+    borderStyle+=";";
+    borderWidth+=";";
+    borderColor+=";";
+    return borderStyle+borderWidth+borderColor;
+  }
+
+  color(){
+    if(this.modelComboBox.color==null||this.modelComboBox.color==undefined||this.modelComboBox.color==""){
+      return "";
+    }
+    return "color: "+this.modelComboBox.color+";";
+  }
+
+  backgroundColor(){
+    if(this.modelComboBox.backgroundColor==null||this.modelComboBox.backgroundColor==undefined||this.modelComboBox.backgroundColor==""){
+      return "";
+    }
+    return "background-color: "+this.modelComboBox.backgroundColor+";";
+  }
+
+  opacity(){
+    if(this.modelComboBox.opacity==null||this.modelComboBox.opacity==undefined){
+      return "";
+    }
+    return "opacity: "+this.modelComboBox.opacity+";";
   }
 }
 

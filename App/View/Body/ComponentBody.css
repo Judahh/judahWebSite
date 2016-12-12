@@ -617,17 +617,17 @@ body{
 }
 
 ::-webkit-input-placeholder { /* Chrome */
-  color: dimgrey;
+  color: lightgrey;
 }
 :-ms-input-placeholder { /* IE 10+ */
-  color: dimgrey;
+  color: lightgrey;
 }
 ::-moz-placeholder { /* Firefox 19+ */
-  color: dimgrey;
+  color: lightgrey;
   opacity: 1;
 }
 :-moz-placeholder { /* Firefox 4 - 18 */
-  color: dimgrey;
+  color: lightgrey;
   opacity: 1;
 }
 
@@ -640,11 +640,11 @@ a {
 a:visited {
   cursor: pointer;
   cursor: hand;
-  color: black;
+  color: inherit;
 }
 
 datalist, option{
-    border: 1px solid black;
+    border: 1px solid white;
     font-family: "OpenSans-Light";
     font-size: 17px;
 }
@@ -697,6 +697,7 @@ input{
     border: none;
     border: 1px solid transparent;
     border-bottom: 1px solid black;
+    color: black;
     background-color: transparent;
     padding: 2px;
     margin: 2px;

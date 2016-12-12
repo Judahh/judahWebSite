@@ -47,6 +47,30 @@
                                     "name":"name",
                                     "fontFamily":"OpenSans-Light",
                                     "fontSize":15,
+                                    "color":"white",
+                                    "opacity":1,
+                                    "border":[
+                                        {
+                                            "width":0,
+                                            "style":"solid",
+                                            "color":"transparent"
+                                        },
+                                        {
+                                            "width":0,
+                                            "style":"solid",
+                                            "color":"transparent"
+                                        },
+                                        {
+                                            "width":1,
+                                            "style":"solid",
+                                            "color":"white"
+                                        },
+                                        {
+                                            "width":0,
+                                            "style":"solid",
+                                            "color":"transparent"
+                                        }
+                                    ],
                                     "textInputType":0
                                 }
                             }
@@ -57,6 +81,30 @@
                                     "name":"company",
                                     "fontFamily":"OpenSans-Light",
                                     "fontSize":15,
+                                    "color":"white",
+                                    "opacity":1,
+                                    "border":[
+                                        {
+                                            "width":0,
+                                            "style":"solid",
+                                            "color":"transparent"
+                                        },
+                                        {
+                                            "width":0,
+                                            "style":"solid",
+                                            "color":"transparent"
+                                        },
+                                        {
+                                            "width":1,
+                                            "style":"solid",
+                                            "color":"white"
+                                        },
+                                        {
+                                            "width":0,
+                                            "style":"solid",
+                                            "color":"transparent"
+                                        }
+                                    ],
                                     "textInputType":0
                                 }
                             }
@@ -69,6 +117,30 @@
                                     "name":"email0",
                                     "fontFamily":"OpenSans-Light",
                                     "fontSize":15,
+                                    "color":"white",
+                                    "opacity":1,
+                                    "border":[
+                                        {
+                                            "width":0,
+                                            "style":"solid",
+                                            "color":"transparent"
+                                        },
+                                        {
+                                            "width":0,
+                                            "style":"solid",
+                                            "color":"transparent"
+                                        },
+                                        {
+                                            "width":1,
+                                            "style":"solid",
+                                            "color":"white"
+                                        },
+                                        {
+                                            "width":0,
+                                            "style":"solid",
+                                            "color":"transparent"
+                                        }
+                                    ],
                                     "textInputType":0
                                 }
                             }
@@ -79,6 +151,30 @@
                                     "name":"phone0",
                                     "fontFamily":"OpenSans-Light",
                                     "fontSize":15,
+                                    "color":"white",
+                                    "opacity":1,
+                                    "border":[
+                                        {
+                                            "width":0,
+                                            "style":"solid",
+                                            "color":"transparent"
+                                        },
+                                        {
+                                            "width":0,
+                                            "style":"solid",
+                                            "color":"transparent"
+                                        },
+                                        {
+                                            "width":1,
+                                            "style":"solid",
+                                            "color":"white"
+                                        },
+                                        {
+                                            "width":0,
+                                            "style":"solid",
+                                            "color":"transparent"
+                                        }
+                                    ],
                                     "textInputType":0
                                 }
                             },
@@ -86,6 +182,30 @@
                                 "comboBox":{
                                     "name":"phoneType0",
                                     "fontSize":15,
+                                    "color":"white",
+                                    "opacity":1,
+                                    "border":[
+                                        {
+                                            "width":1,
+                                            "style":"solid",
+                                            "color":"white"
+                                        },
+                                        {
+                                            "width":1,
+                                            "style":"solid",
+                                            "color":"white"
+                                        },
+                                        {
+                                            "width":1,
+                                            "style":"solid",
+                                            "color":"white"
+                                        },
+                                        {
+                                            "width":1,
+                                            "style":"solid",
+                                            "color":"white"
+                                        }
+                                    ],
                                     "arrayOptions":[]
                                 }
                             },
@@ -129,6 +249,30 @@
                                     "name":"address",
                                     "fontFamily":"OpenSans-Light",
                                     "fontSize":15,
+                                    "color":"white",
+                                    "opacity":1,
+                                    "border":[
+                                        {
+                                            "width":0,
+                                            "style":"solid",
+                                            "color":"transparent"
+                                        },
+                                        {
+                                            "width":0,
+                                            "style":"solid",
+                                            "color":"transparent"
+                                        },
+                                        {
+                                            "width":1,
+                                            "style":"solid",
+                                            "color":"white"
+                                        },
+                                        {
+                                            "width":0,
+                                            "style":"solid",
+                                            "color":"transparent"
+                                        }
+                                    ],
                                     "textInputType":0
                                 }
                             }
@@ -141,6 +285,30 @@
                                     "name":"jobTitle",
                                     "fontFamily":"OpenSans-Light",
                                     "fontSize":15,
+                                    "color":"white",
+                                    "opacity":1,
+                                    "border":[
+                                        {
+                                            "width":0,
+                                            "style":"solid",
+                                            "color":"transparent"
+                                        },
+                                        {
+                                            "width":0,
+                                            "style":"solid",
+                                            "color":"transparent"
+                                        },
+                                        {
+                                            "width":1,
+                                            "style":"solid",
+                                            "color":"white"
+                                        },
+                                        {
+                                            "width":0,
+                                            "style":"solid",
+                                            "color":"transparent"
+                                        }
+                                    ],
                                     "textInputType":0
                                 }
                             },
@@ -148,6 +316,30 @@
                                 "comboBox":{
                                     "name":"jobTitleType",
                                     "fontSize":15,
+                                    "color":"white",
+                                    "opacity":1,
+                                    "border":[
+                                        {
+                                            "width":1,
+                                            "style":"solid",
+                                            "color":"white"
+                                        },
+                                        {
+                                            "width":1,
+                                            "style":"solid",
+                                            "color":"white"
+                                        },
+                                        {
+                                            "width":1,
+                                            "style":"solid",
+                                            "color":"white"
+                                        },
+                                        {
+                                            "width":1,
+                                            "style":"solid",
+                                            "color":"white"
+                                        }
+                                    ],
                                     "arrayOptions":[]
                                 }
                             }
@@ -159,6 +351,30 @@
                                     "fontFamily":"OpenSans-Light",
                                     "fontSize":15,
                                     "textInputType":2,
+                                    "color":"white",
+                                    "opacity":1,
+                                    "border":[
+                                        {
+                                            "width":0,
+                                            "style":"solid",
+                                            "color":"transparent"
+                                        },
+                                        {
+                                            "width":0,
+                                            "style":"solid",
+                                            "color":"transparent"
+                                        },
+                                        {
+                                            "width":1,
+                                            "style":"solid",
+                                            "color":"white"
+                                        },
+                                        {
+                                            "width":0,
+                                            "style":"solid",
+                                            "color":"transparent"
+                                        }
+                                    ],
                                     "arrayOptions":[]
                                 }
                             },
@@ -167,6 +383,30 @@
                                     "name":"salary",
                                     "fontFamily":"OpenSans-Light",
                                     "fontSize":15,
+                                    "color":"white",
+                                    "opacity":1,
+                                    "border":[
+                                        {
+                                            "width":0,
+                                            "style":"solid",
+                                            "color":"transparent"
+                                        },
+                                        {
+                                            "width":0,
+                                            "style":"solid",
+                                            "color":"transparent"
+                                        },
+                                        {
+                                            "width":1,
+                                            "style":"solid",
+                                            "color":"white"
+                                        },
+                                        {
+                                            "width":0,
+                                            "style":"solid",
+                                            "color":"transparent"
+                                        }
+                                    ],
                                     "textInputType":0
                                 }
                             },
@@ -174,6 +414,30 @@
                                 "comboBox":{
                                     "name":"salaryPer",
                                     "fontSize":15,
+                                    "color":"white",
+                                    "opacity":1,
+                                    "border":[
+                                        {
+                                            "width":1,
+                                            "style":"solid",
+                                            "color":"white"
+                                        },
+                                        {
+                                            "width":1,
+                                            "style":"solid",
+                                            "color":"white"
+                                        },
+                                        {
+                                            "width":1,
+                                            "style":"solid",
+                                            "color":"white"
+                                        },
+                                        {
+                                            "width":1,
+                                            "style":"solid",
+                                            "color":"white"
+                                        }
+                                    ],
                                     "arrayOptions":[]
                                 }
                             },
@@ -215,6 +479,7 @@
                                     "routerLink":"",
                                     "routerLinkActive":"inactive",
                                     "colorEffect":{
+                                        "color": "white",
                                         "colorEffect":"DivClassNeon",
                                         "font":{
                                             "font":"DivClassOpenSansLight",
@@ -468,6 +733,30 @@
                                     "name":"in",
                                     "fontFamily":"OpenSans-Light",
                                     "fontSize":15,
+                                    "color":"white",
+                                    "opacity":1,
+                                    "border":[
+                                        {
+                                            "width":0,
+                                            "style":"solid",
+                                            "color":"transparent"
+                                        },
+                                        {
+                                            "width":0,
+                                            "style":"solid",
+                                            "color":"transparent"
+                                        },
+                                        {
+                                            "width":1,
+                                            "style":"solid",
+                                            "color":"white"
+                                        },
+                                        {
+                                            "width":0,
+                                            "style":"solid",
+                                            "color":"transparent"
+                                        }
+                                    ],
                                     "textInputType":0
                                 }
                             },
@@ -477,6 +766,7 @@
                                     "routerLink":"",
                                     "routerLinkActive":"inactive",
                                     "colorEffect":{
+                                        "color": "white",
                                         "colorEffect":"DivClassNeon",
                                         "font":{
                                             "font":"DivClassOpenSansLight",
@@ -530,6 +820,30 @@
                                     "name":"out",
                                     "fontFamily":"OpenSans-Light",
                                     "fontSize":15,
+                                    "color":"white",
+                                    "opacity":1,
+                                    "border":[
+                                        {
+                                            "width":0,
+                                            "style":"solid",
+                                            "color":"transparent"
+                                        },
+                                        {
+                                            "width":0,
+                                            "style":"solid",
+                                            "color":"transparent"
+                                        },
+                                        {
+                                            "width":1,
+                                            "style":"solid",
+                                            "color":"white"
+                                        },
+                                        {
+                                            "width":0,
+                                            "style":"solid",
+                                            "color":"transparent"
+                                        }
+                                    ],
                                     "textInputType":0
                                 }
                             },
@@ -539,6 +853,7 @@
                                     "routerLink":"",
                                     "routerLinkActive":"inactive",
                                     "colorEffect":{
+                                        "color": "white",
                                         "colorEffect":"DivClassNeon",
                                         "font":{
                                             "font":"DivClassOpenSansLight",
@@ -593,6 +908,30 @@
                                     "fontFamily":"OpenSans-Light",
                                     "fontSize":15,
                                     "value":"",
+                                    "color":"white",
+                                    "opacity":1,
+                                    "border":[
+                                        {
+                                            "width":1,
+                                            "style":"solid",
+                                            "color":"white"
+                                        },
+                                        {
+                                            "width":1,
+                                            "style":"solid",
+                                            "color":"white"
+                                        },
+                                        {
+                                            "width":1,
+                                            "style":"solid",
+                                            "color":"white"
+                                        },
+                                        {
+                                            "width":1,
+                                            "style":"solid",
+                                            "color":"white"
+                                        }
+                                    ],
                                     "textInputType":1
                                 }
                             }
@@ -887,7 +1226,7 @@
                 "routerLinkActive":"inactive",
                 "colorEffect":{
                     "color": "white",
-                    "colorEffect":"DivClassNeon",
+                    "colorEffect":"",
                     "font":{
                         "font":"DivClassIconSocialMedia",
                         "width":"100%",
@@ -939,7 +1278,8 @@
                 "routerLink":"",
                 "routerLinkActive":"inactive",
                 "colorEffect":{
-                    "colorEffect":"DivClassNeon",
+                    "color": "white",
+                    "colorEffect":"",
                     "font":{
                         "font":"DivClassIconSocialMedia2",
                         "width":"100%",
@@ -991,7 +1331,8 @@
                 "routerLink":"",
                 "routerLinkActive":"inactive",
                 "colorEffect":{
-                    "colorEffect":"DivClassNeon",
+                    "color": "white",
+                    "colorEffect":"",
                     "font":{
                         "font":"DivClassIcon",
                         "width":"100%",
@@ -1029,7 +1370,8 @@
                 "routerLink":"",
                 "routerLinkActive":"inactive",
                 "colorEffect":{
-                    "colorEffect":"DivClassNeon",
+                    "color": "white",
+                    "colorEffect":"",
                     "font":{
                         "font":"DivClassOpenSansLight",
                         "width":"100%",

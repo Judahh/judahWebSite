@@ -96,11 +96,6 @@ export class ComponentSubDivisor implements OnInit {
     this.modelSubDivisor.basicForm!=undefined);
   }
 
-  isBasicTwoWay(){
-    return (this.modelSubDivisor.basicTwoWay!=null && 
-    this.modelSubDivisor.basicTwoWay!=undefined);
-  }
-
   isInputData(){
     return (this.modelSubDivisor.inputData!=null && 
     this.modelSubDivisor.inputData!=undefined);

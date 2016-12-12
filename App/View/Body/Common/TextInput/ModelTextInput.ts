@@ -9,6 +9,11 @@ export class ModelTextInput {
     arrayOptions:Array<string>;
     required:boolean;
     value:any;
+
+    border:Array<any>;//px
+    color:string;
+    backgroundColor:string;
+    opacity:number;
     
     isField(){
         return this.textInputType==TextInputType.field;

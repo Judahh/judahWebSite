@@ -180,7 +180,7 @@ export class ComponentHeader implements OnInit {
     this.arrayModelMenuHorizontal[index].arrayItem[index2].menuVertical.arrayItem[index3].tooltip.value=Languages.getPageLanguage(items,this.modelLanguages).title;
   }
 
-  style(menuHorizontal:menuHorizontal){
+  style(menuHorizontal:ModelMenuHorizontal){
     return this.opacity(menuHorizontal)+
       this.backgroundColor(menuHorizontal)+
       this.color(menuHorizontal)+
@@ -188,40 +188,37 @@ export class ComponentHeader implements OnInit {
       this.bottom(menuHorizontal);
   }
 
-  opacity(menuHorizontal:menuHorizontal){
+  opacity(menuHorizontal:ModelMenuHorizontal){
     if(menuHorizontal.opacity==null||menuHorizontal.opacity==undefined){
       return "";
     }
     return "opacity: "+menuHorizontal.opacity+";";
   }
 
-  height(menuHorizontal:menuHorizontal){
+  height(menuHorizontal:ModelMenuHorizontal){
     if(menuHorizontal.height==null||menuHorizontal.height==undefined||menuHorizontal.height==""){
       return "";
     }
     return "height: "+menuHorizontal.height+";";
   }
 
-  color(menuHorizontal:menuHorizontal){
+  color(menuHorizontal:ModelMenuHorizontal){
     if(menuHorizontal.color==null||menuHorizontal.color==undefined||menuHorizontal.color==""){
       return "";
     }
     return "color: "+menuHorizontal.color+";";
   }
 
-  backgroundColor(menuHorizontal:menuHorizontal){
+  backgroundColor(menuHorizontal:ModelMenuHorizontal){
     if(menuHorizontal.backgroundColor==null||menuHorizontal.backgroundColor==undefined||menuHorizontal.backgroundColor==""){
       return "";
     }
     return "background-color: "+menuHorizontal.backgroundColor+";";
   }
 
-  bottom(menuHorizontal:menuHorizontal){
+  bottom(menuHorizontal:ModelMenuHorizontal){
     if(menuHorizontal.bottom==null||menuHorizontal.bottom==undefined){
       return "";
-    }
-    if(menuHorizontal.bottom==0){
-      return "bottom: "+menuHorizontal.bottom+"px;"+this.goUp2();
     }
     return "bottom: "+menuHorizontal.bottom+"px;";
   }
