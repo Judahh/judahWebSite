@@ -1,7 +1,7 @@
 [
   {
     "divisor":{
-        "opacity":0.6,
+        "opacity":1,
         "color": "transparent",
         "arrayPadding": [5],
         "arraySubDivisor":[
@@ -12,6 +12,7 @@
                     "routerLink":"",
                     "routerLinkActive":"inactive",
                     "colorEffect":{
+                        "color":"white",
                         "colorEffect":"",
                         "font":{
                             "font":"DivClassFuturisticIAndII",
@@ -39,6 +40,7 @@
                 "routerLink":"",
                 "routerLinkActive":"inactive",
                 "colorEffect":{
+                    "color":"white",
                     "colorEffect":"",
                     "font":{
                         "font":"DivClassOpenSansLight",
@@ -55,27 +57,27 @@
                                 {
                                     "information":"- https://github.com/Judahh",
                                     "link":"https://github.com/Judahh",
-                                    "opacity":0.6
+                                    "opacity":1
                                 },
                                 {
                                     "information":"- http://judahh.com/",
                                     "link":"http://judahh.com/",
-                                    "opacity":0.6
+                                    "opacity":1
                                 },
                                 {
                                     "information":"- http://judahh.com/Projects/Hutch/",
                                     "link":"http://judahh.com/Projects/Hutch/",
-                                    "opacity":0.6
+                                    "opacity":1
                                 },
                                 {
                                     "information":"- http://judahh.com/Projects/Easembly/",
                                     "link":"http://judahh.com/Projects/Easembly/",
-                                    "opacity":0.6
+                                    "opacity":1
                                 },
                                 {
                                     "information":"- http://embarcadosunifor.blogspot.de/",
                                     "link":"http://embarcadosunifor.blogspot.de/",
-                                    "opacity":0.6
+                                    "opacity":1
                                 }
                             ]
                         }

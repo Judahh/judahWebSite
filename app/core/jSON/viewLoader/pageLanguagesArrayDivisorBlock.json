@@ -75,7 +75,7 @@
         }
     ],
     "divisor":{
-        "opacity":0.6,
+        "opacity":1,
         "color": "transparent",
         "arrayPadding": [5],
         "arraySubDivisor":[
@@ -86,6 +86,7 @@
                     "routerLink":"",
                     "routerLinkActive":"inactive",
                     "colorEffect":{
+                        "color":"white",
                         "colorEffect":"",
                         "font":{
                             "font":"DivClassFuturisticIAndII",

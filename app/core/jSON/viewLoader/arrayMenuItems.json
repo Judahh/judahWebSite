@@ -14,6 +14,7 @@
             "routerLink":"WhoAmI",
             "routerLinkActive":"active",
             "colorEffect":{
+              "color":"white",
               "colorEffect":"DivClassNeon",
               "font":{
                 "font":"DivClassIcon",
@@ -28,7 +29,7 @@
                     "arrayInformation":[
                       {
                         "information":"c",
-                        "opacity":0.6
+                        "opacity":1
                       }
                     ]
                 }
@@ -41,6 +42,7 @@
             "routerLink":"Education",
             "routerLinkActive":"active",
             "colorEffect":{
+              "color":"white",
               "colorEffect":"DivClassNeon",
               "font":{
                 "font":"DivClassIcon",
@@ -55,7 +57,7 @@
                     "arrayInformation":[
                       {
                         "information":"d",
-                        "opacity":0.6
+                        "opacity":1
                       }
                     ]
                 }
@@ -68,6 +70,7 @@
             "routerLink":"Skills",
             "routerLinkActive":"active",
             "colorEffect":{
+              "color":"white",
               "colorEffect":"DivClassNeon",
               "font":{
                 "font":"DivClassIcon",
@@ -82,11 +85,11 @@
                     "arrayInformation":[
                       {
                         "information":"«",
-                        "opacity":0.6
+                        "opacity":1
                       },
                       {
                         "information":"¬",
-                        "opacity":0.6
+                        "opacity":1
                       }
                     ]
                 }
@@ -99,6 +102,7 @@
             "routerLink":"Projects",
             "routerLinkActive":"active",
             "colorEffect":{
+              "color":"white",
               "colorEffect":"DivClassNeon",
               "font":{
                 "font":"DivClassIcon",
@@ -113,19 +117,19 @@
                     "arrayInformation":[
                       {
                         "information":"i",
-                        "opacity":0.6
+                        "opacity":1
                       },
                       {
                         "information":"j",
-                        "opacity":0.6
+                        "opacity":1
                       },
                       {
                         "information":"k",
-                        "opacity":0.6
+                        "opacity":1
                       },
                       {
                         "information":"l",
-                        "opacity":0.6
+                        "opacity":1
                       }
                     ]
                 }
@@ -138,6 +142,7 @@
             "routerLink":"Contact",
             "routerLinkActive":"active",
             "colorEffect":{
+              "color":"white",
               "colorEffect":"DivClassNeon",
               "font":{
                 "font":"DivClassIcon",
@@ -152,7 +157,7 @@
                     "arrayInformation":[
                       {
                         "information":"6",
-                        "opacity":0.6
+                        "opacity":1
                       }
                     ]
                 }
@@ -193,6 +198,7 @@
             "routerLink":"Login",
             "routerLinkActive":"inactive",
             "colorEffect":{
+              "color":"white",
               "colorEffect":"DivClassNeon",
               "font":{
                 "font":"DivClassIcon",
@@ -208,7 +214,7 @@
                       {
                         "id":"IdLogin",
                         "information":"0",
-                        "opacity":0.6
+                        "opacity":1
                       }
                     ]
                 }
@@ -226,6 +232,8 @@
     "arrayMenuHorizontal":[
       {
         "id":0,
+        "backgroundColor":"rgba(0, 0, 0, 0.3)",
+        "height":"40px",
         "class":"DivClassLeft",
         "arrayItem":[
           {
@@ -238,6 +246,7 @@
             "routerLink":"Languages",
             "routerLinkActive":"active",
             "colorEffect":{
+              "color":"white",
               "colorEffect":"DivClassNeon",
               "font":{
                 "font":"DivClassIcon",
@@ -252,7 +261,7 @@
                     "arrayInformation":[
                       {
                         "information":"µ",
-                        "opacity":0.6
+                        "opacity":1
                       }
                     ]
                 }
@@ -269,6 +278,8 @@
       {
         "id":2,
         "class":"DivClassRight",
+        "backgroundColor":"rgba(0, 0, 0, 0.3)",
+        "height":"40px",
         "arrayItem":[
           {
             "id":0,
@@ -280,6 +291,7 @@
             "routerLink":"Languages",
             "routerLinkActive":"active",
             "colorEffect":{
+              "color":"white",
               "colorEffect":"DivClassNeon",
               "font":{
                 "font":"DivClassIcon",
@@ -294,7 +306,7 @@
                     "arrayInformation":[
                       {
                         "information":"µ",
-                        "opacity":0.6
+                        "opacity":1
                       }
                     ]
                 }

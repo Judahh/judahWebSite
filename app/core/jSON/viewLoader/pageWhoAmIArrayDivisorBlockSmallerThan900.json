@@ -2,7 +2,7 @@
   {
     "arraySubDivisor":[],
     "divisor":{
-        "opacity":0.6,
+        "opacity":1,
         "color": "transparent",
         "arrayPadding": [5],
         "arraySubDivisor":[
@@ -13,6 +13,7 @@
                     "routerLink":"",
                     "routerLinkActive":"inactive",
                     "colorEffect":{
+                        "color":"white",
                         "colorEffect":"",
                         "font":{
                             "font":"DivClassFuturisticIAndII",
@@ -36,7 +37,7 @@
   {
     "arraySubDivisor":[],
     "divisor":{
-        "opacity":0.6,
+        "opacity":1,
         "color": "transparent",
         "arrayPadding": [5],
         "arraySubDivisor":[
@@ -47,6 +48,7 @@
                     "routerLink":"",
                     "routerLinkActive":"inactive",
                     "colorEffect":{
+                        "color":"white",
                         "colorEffect":"",
                         "font":{
                             "font":"DivClassFuturisticIAndII",
@@ -70,21 +72,21 @@
   {
     "arraySubDivisor":[],
     "divisor":{
-        "opacity":0.6,
+        "opacity":1,
         "display":"block",
         "color": "transparent",
         "arrayPadding": [],
         "arraySubDivisor":[
             {
                 "float":"left",
-                "width":"30%",
+                "width":"25%",
                 "arrayPadding":[15],
                 "toBottom": false,
                 "image":{
                     "boxSizing":"border-box",
-                    "borderSize":"15",
+                    "borderSize":"1",
                     "borderRadius":"1000",
-                    "color":"black",
+                    "color":"white",
                     "position":"relative"
                 }
             },
@@ -95,6 +97,7 @@
                     "routerLink":"",
                     "routerLinkActive":"inactive",
                     "colorEffect":{
+                        "color":"white",
                         "colorEffect":"",
                         "font":{
                             "font":"DivClassOpenSans",
@@ -119,7 +122,7 @@
   {
     "arraySubDivisor":[],
     "divisor":{
-        "opacity":0.6,
+        "opacity":1,
         "color": "transparent",
         "arrayPadding": [5],
         "arraySubDivisor":[
@@ -130,6 +133,7 @@
                     "routerLink":"",
                     "routerLinkActive":"inactive",
                     "colorEffect":{
+                        "color":"white",
                         "colorEffect":"",
                         "font":{
                             "font":"DivClassFuturisticIAndII",
@@ -153,7 +157,7 @@
   {
     "arraySubDivisor":[],
     "divisor":{
-        "opacity":0.6,
+        "opacity":1,
         "color": "transparent",
         "arrayPadding": [],
         "arraySubDivisor":[
@@ -175,7 +179,7 @@
   {
     "arraySubDivisor":[],
     "divisor":{
-        "opacity":0.6,
+        "opacity":1,
         "display":"block",
         "color": "transparent",
         "arrayPadding": [],
@@ -187,6 +191,7 @@
                     "routerLink":"",
                     "routerLinkActive":"inactive",
                     "colorEffect":{
+                        "color":"white",
                         "colorEffect":"",
                         "font":{
                             "font":"DivClassOpenSans",

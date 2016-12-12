@@ -13,6 +13,7 @@
             "routerLink":"",
             "routerLinkActive":"inactive",
             "colorEffect":{
+              "color":"white",
               "colorEffect":"DivClassNeon",
               "font":{
                 "font":"DivClassIcon",
@@ -27,7 +28,7 @@
                     "arrayInformation":[
                       {
                         "information":"Y",
-                        "opacity":0.6
+                        "opacity":1
                       }
                     ]
                 }
@@ -50,6 +51,7 @@
                   "routerLink":"WhoAmI",
                   "routerLinkActive":"active",
                   "colorEffect":{
+                    "color":"white",
                     "colorEffect":"DivClassNeon",
                     "font":{
                       "font":"DivClassRoboto",
@@ -64,7 +66,7 @@
                           "arrayInformation":[
                             {
                               "information":"c",
-                              "opacity":0.6
+                              "opacity":1
                             }
                           ]
                       }
@@ -76,6 +78,7 @@
                   "routerLink":"Education",
                   "routerLinkActive":"active",
                   "colorEffect":{
+                    "color":"white",
                     "colorEffect":"DivClassNeon",
                     "font":{
                       "font":"DivClassRoboto",
@@ -90,7 +93,7 @@
                           "arrayInformation":[
                             {
                               "information":"d",
-                              "opacity":0.6
+                              "opacity":1
                             }
                           ]
                       }
@@ -102,6 +105,7 @@
                   "routerLink":"Skills",
                   "routerLinkActive":"active",
                   "colorEffect":{
+                    "color":"white",
                     "colorEffect":"DivClassNeon",
                     "font":{
                       "font":"DivClassRoboto",
@@ -116,7 +120,7 @@
                           "arrayInformation":[
                             {
                               "information":"«",
-                              "opacity":0.6
+                              "opacity":1
                             }
                           ]
                       }
@@ -128,6 +132,7 @@
                   "routerLink":"Projects",
                   "routerLinkActive":"active",
                   "colorEffect":{
+                    "color":"white",
                     "colorEffect":"DivClassNeon",
                     "font":{
                       "font":"DivClassRoboto",
@@ -142,7 +147,7 @@
                           "arrayInformation":[
                             {
                               "information":"i",
-                              "opacity":0.6
+                              "opacity":1
                             }
                           ]
                       }
@@ -154,6 +159,7 @@
                   "routerLink":"Contact",
                   "routerLinkActive":"active",
                   "colorEffect":{
+                    "color":"white",
                     "colorEffect":"DivClassNeon",
                     "font":{
                       "font":"DivClassRoboto",
@@ -168,7 +174,7 @@
                           "arrayInformation":[
                             {
                               "information":"6",
-                              "opacity":0.6
+                              "opacity":1
                             }
                           ]
                       }
@@ -212,6 +218,7 @@
             "routerLink":"Login",
             "routerLinkActive":"inactive",
             "colorEffect":{
+              "color":"white",
               "colorEffect":"DivClassNeon",
               "font":{
                 "font":"DivClassIcon",
@@ -227,7 +234,7 @@
                       {
                         "id":"IdLogin",
                         "information":"0",
-                        "opacity":0.6
+                        "opacity":1
                       }
                     ]
                 }
@@ -246,6 +253,8 @@
       {
         "id":0,
         "class":"DivClassLeft",
+        "backgroundColor":"rgba(0, 0, 0, 0.3)",
+        "height":"40px",
         "arrayItem":[
           {
             "id":0,
@@ -257,6 +266,7 @@
             "routerLink":"Languages",
             "routerLinkActive":"active",
             "colorEffect":{
+              "color":"white",
               "colorEffect":"DivClassNeon",
               "font":{
                 "font":"DivClassIcon",
@@ -271,7 +281,7 @@
                     "arrayInformation":[
                       {
                         "information":"µ",
-                        "opacity":0.6
+                        "opacity":1
                       }
                     ]
                 }

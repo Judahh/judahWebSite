@@ -2,7 +2,7 @@
   {
     "arraySubDivisor":[],
     "divisor":{
-        "opacity":0.6,
+        "opacity":1,
         "color": "transparent",
         "arrayPadding": [5],
         "arraySubDivisor":[
@@ -13,6 +13,7 @@
                     "routerLink":"",
                     "routerLinkActive":"inactive",
                     "colorEffect":{
+                        "color":"white",
                         "colorEffect":"",
                         "font":{
                             "font":"DivClassFuturisticIAndII",
@@ -35,8 +36,8 @@
   },
   {
     "divisor":{
-        "opacity":0.6,
-        "color": "black",
+        "opacity":1,
+        "color": "white",
         "arrayPadding": [5],
         "arraySubDivisor":[
             {
@@ -46,6 +47,7 @@
                     "routerLink":"",
                     "routerLinkActive":"inactive",
                     "colorEffect":{
+                        "color":"white",
                         "colorEffect":"DivClassNeon",
                         "font":{
                             "font":"DivClassIcon",
@@ -79,6 +81,7 @@
                     "routerLink":"",
                     "routerLinkActive":"inactive",
                     "colorEffect":{
+                        "color":"white",
                         "colorEffect":"",
                         "font":{
                             "font":"DivClassFuturisticIAndII",
@@ -106,6 +109,7 @@
                 "routerLink":"",
                 "routerLinkActive":"inactive",
                 "colorEffect":{
+                    "color":"white",
                     "colorEffect":"",
                     "font":{
                         "font":"DivClassFuturisticI",
@@ -128,8 +132,8 @@
   },
   {
     "divisor":{
-        "opacity":0.6,
-        "color": "black",
+        "opacity":1,
+        "color": "white",
         "arrayPadding": [5],
         "arraySubDivisor":[
             {
@@ -139,6 +143,7 @@
                     "routerLink":"",
                     "routerLinkActive":"inactive",
                     "colorEffect":{
+                        "color":"white",
                         "colorEffect":"DivClassNeon",
                         "font":{
                             "font":"DivClassIcon",
@@ -166,6 +171,7 @@
                     "routerLink":"",
                     "routerLinkActive":"inactive",
                     "colorEffect":{
+                        "color":"white",
                         "colorEffect":"",
                         "font":{
                             "font":"DivClassFuturisticIAndII",
@@ -193,6 +199,7 @@
                 "routerLink":"",
                 "routerLinkActive":"inactive",
                 "colorEffect":{
+                    "color":"white",
                     "colorEffect":"",
                     "font":{
                         "font":"DivClassFuturisticI",
@@ -215,8 +222,8 @@
   },
   {
     "divisor":{
-        "opacity":0.6,
-        "color": "black",
+        "opacity":1,
+        "color": "white",
         "arrayPadding": [5],
         "arraySubDivisor":[
             {
@@ -226,6 +233,7 @@
                     "routerLink":"",
                     "routerLinkActive":"inactive",
                     "colorEffect":{
+                        "color":"white",
                         "colorEffect":"DivClassNeon",
                         "font":{
                             "font":"DivClassIcon",
@@ -253,6 +261,7 @@
                     "routerLink":"",
                     "routerLinkActive":"inactive",
                     "colorEffect":{
+                        "color":"white",
                         "colorEffect":"",
                         "font":{
                             "font":"DivClassFuturisticIAndII",
@@ -280,6 +289,7 @@
                 "routerLink":"",
                 "routerLinkActive":"inactive",
                 "colorEffect":{
+                    "color":"white",
                     "colorEffect":"",
                     "font":{
                         "font":"DivClassFuturisticI",
@@ -302,8 +312,8 @@
   },
   {
     "divisor":{
-        "opacity":0.6,
-        "color": "black",
+        "opacity":1,
+        "color": "white",
         "arrayPadding": [5],
         "arraySubDivisor":[
             {
@@ -313,6 +323,7 @@
                     "routerLink":"",
                     "routerLinkActive":"inactive",
                     "colorEffect":{
+                        "color":"white",
                         "colorEffect":"DivClassNeon",
                         "font":{
                             "font":"DivClassIcon",
@@ -340,6 +351,7 @@
                     "routerLink":"",
                     "routerLinkActive":"inactive",
                     "colorEffect":{
+                        "color":"white",
                         "colorEffect":"",
                         "font":{
                             "font":"DivClassFuturisticIAndII",
@@ -367,6 +379,7 @@
                 "routerLink":"",
                 "routerLinkActive":"inactive",
                 "colorEffect":{
+                    "color":"white",
                     "colorEffect":"",
                     "font":{
                         "font":"DivClassFuturisticI",
@@ -389,8 +402,8 @@
   },
   {
     "divisor":{
-        "opacity":0.6,
-        "color": "black",
+        "opacity":1,
+        "color": "white",
         "arrayPadding": [5],
         "arraySubDivisor":[
             {
@@ -400,6 +413,7 @@
                     "routerLink":"",
                     "routerLinkActive":"inactive",
                     "colorEffect":{
+                        "color":"white",
                         "colorEffect":"DivClassNeon",
                         "font":{
                             "font":"DivClassIcon",
@@ -433,6 +447,7 @@
                     "routerLink":"",
                     "routerLinkActive":"inactive",
                     "colorEffect":{
+                        "color":"white",
                         "colorEffect":"",
                         "font":{
                             "font":"DivClassFuturisticIAndII",
@@ -460,6 +475,7 @@
                 "routerLink":"",
                 "routerLinkActive":"inactive",
                 "colorEffect":{
+                    "color":"white",
                     "colorEffect":"",
                     "font":{
                         "font":"DivClassFuturisticI",

@@ -2,7 +2,7 @@
   {
     "arraySubDivisor":[],
     "divisor":{
-        "opacity":0.6,
+        "opacity":1,
         "color": "transparent",
         "arrayPadding": [5],
         "arraySubDivisor":[
@@ -600,7 +600,7 @@
         }
     ],
     "divisor":{
-        "opacity":0.6,
+        "opacity":1,
         "color": "transparent",
         "arrayPadding": [5],
         "arraySubDivisor":[
@@ -696,7 +696,7 @@
   },
   {
     "divisor":{
-        "opacity":0.6,
+        "opacity":1,
         "color": "black",
         "arrayPadding": [5],
         "arraySubDivisor":[
@@ -784,7 +784,7 @@
   },
   {
     "divisor":{
-        "opacity":0.6,
+        "opacity":1,
         "color": "black",
         "arrayPadding": [5],
         "arraySubDivisor":[
@@ -865,28 +865,28 @@
                                     "float":"left",
                                     "link":"https://br.linkedin.com/pub/judah-holanda/4b/692/6ab",
                                     "textDecoration":"none",
-                                    "opacity":0.6
+                                    "opacity":1
                                 },
                                 {
                                     "information":"f",
                                     "float":"left",
                                     "link":"http://facebook.com/JHCL007",
                                     "textDecoration":"none",
-                                    "opacity":0.6
+                                    "opacity":1
                                 },
                                 {
                                     "information":"l",
                                     "float":"left",
                                     "link":"http://twitter.com/JH_esse",
                                     "textDecoration":"none",
-                                    "opacity":0.6
+                                    "opacity":1
                                 },
                                 {
                                     "information":"x",
                                     "float":"left",
                                     "link":"http://youtube.com/c/JudahHolanda",
                                     "textDecoration":"none",
-                                    "opacity":0.6
+                                    "opacity":1
                                 }
                             ]
                         }
@@ -917,28 +917,28 @@
                                     "float":"left",
                                     "link":"http://github.com/Judahh/",
                                     "textDecoration":"none",
-                                    "opacity":0.6
+                                    "opacity":1
                                 },
                                 {
                                     "information":"h",
                                     "float":"left",
                                     "link":"http://google.com/+JudahHolanda",
                                     "textDecoration":"none",
-                                    "opacity":0.6
+                                    "opacity":1
                                 },
                                 {
                                     "information":"i",
                                     "float":"left",
                                     "link":"http://instagram.com/judahholanda/",
                                     "textDecoration":"none",
-                                    "opacity":0.6
+                                    "opacity":1
                                 },
                                 {
                                     "information":"s",
                                     "float":"left",
                                     "link":"https://play.spotify.com/user/12142311218",
                                     "textDecoration":"none",
-                                    "opacity":0.6
+                                    "opacity":1
                                 }
                             ]
                         }
@@ -969,14 +969,14 @@
                                     "float":"left",
                                     "link":"https://account.xbox.com/en-US/Profile?gamerTag=HELLSING4ever",
                                     "textDecoration":"none",
-                                    "opacity":0.6
+                                    "opacity":1
                                 },
                                 {
                                     "information":"£",
                                     "float":"left",
                                     "link":"http://psnprofiles.com/MOHHAAMMED",
                                     "textDecoration":"none",
-                                    "opacity":0.6
+                                    "opacity":1
                                 }
                             ]
                         }

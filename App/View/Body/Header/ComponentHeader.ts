@@ -179,4 +179,50 @@ export class ComponentHeader implements OnInit {
   getTooltip2(index:number,index2:number,index3:number,items:any){
     this.arrayModelMenuHorizontal[index].arrayItem[index2].menuVertical.arrayItem[index3].tooltip.value=Languages.getPageLanguage(items,this.modelLanguages).title;
   }
+
+  style(menuHorizontal:menuHorizontal){
+    return this.opacity(menuHorizontal)+
+      this.backgroundColor(menuHorizontal)+
+      this.color(menuHorizontal)+
+      this.height(menuHorizontal)+
+      this.bottom(menuHorizontal);
+  }
+
+  opacity(menuHorizontal:menuHorizontal){
+    if(menuHorizontal.opacity==null||menuHorizontal.opacity==undefined){
+      return "";
+    }
+    return "opacity: "+menuHorizontal.opacity+";";
+  }
+
+  height(menuHorizontal:menuHorizontal){
+    if(menuHorizontal.height==null||menuHorizontal.height==undefined||menuHorizontal.height==""){
+      return "";
+    }
+    return "height: "+menuHorizontal.height+";";
+  }
+
+  color(menuHorizontal:menuHorizontal){
+    if(menuHorizontal.color==null||menuHorizontal.color==undefined||menuHorizontal.color==""){
+      return "";
+    }
+    return "color: "+menuHorizontal.color+";";
+  }
+
+  backgroundColor(menuHorizontal:menuHorizontal){
+    if(menuHorizontal.backgroundColor==null||menuHorizontal.backgroundColor==undefined||menuHorizontal.backgroundColor==""){
+      return "";
+    }
+    return "background-color: "+menuHorizontal.backgroundColor+";";
+  }
+
+  bottom(menuHorizontal:menuHorizontal){
+    if(menuHorizontal.bottom==null||menuHorizontal.bottom==undefined){
+      return "";
+    }
+    if(menuHorizontal.bottom==0){
+      return "bottom: "+menuHorizontal.bottom+"px;"+this.goUp2();
+    }
+    return "bottom: "+menuHorizontal.bottom+"px;";
+  }
 }

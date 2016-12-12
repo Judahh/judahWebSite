@@ -133,6 +133,7 @@ export class ComponentBody implements OnInit {
     return this.opacity(nav)+
       this.backgroundColor(nav)+
       this.color(nav)+
+      this.height(nav)+
       this.bottom(nav);
   }
 
@@ -141,6 +142,13 @@ export class ComponentBody implements OnInit {
       return "";
     }
     return "opacity: "+nav.opacity+";";
+  }
+
+  height(nav:ModelNav){
+    if(nav.height==null||nav.height==undefined||nav.height==""){
+      return "";
+    }
+    return "height: "+nav.height+";";
   }
 
   color(nav:ModelNav){

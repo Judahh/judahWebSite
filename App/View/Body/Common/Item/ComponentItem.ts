@@ -73,8 +73,15 @@ export class ComponentItem implements OnInit{
     return "opacity: "+tooltip.opacity+";";
   }
 
+  color(){
+    if(this.modelItem.colorEffect.color==null||this.modelItem.colorEffect.color==undefined||this.modelItem.colorEffect.color==""){
+      return "";
+    }
+    return "color: "+this.modelItem.colorEffect.color+";";
+  }
+
   style(){
-    return this.cursor();
+    return this.cursor() + this.color();
   }
 
   tooltipStyle(tooltip:ModelTooltip){
