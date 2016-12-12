@@ -16,6 +16,7 @@ export class ModelContactInformation {
     consultant:string;
     temporary:string;
     salary:string;
+    smallCurrency:string;
     currency:string;
     currencyUS:string;
     currencyRS:string;
