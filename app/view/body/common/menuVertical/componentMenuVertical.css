@@ -1,5 +1,6 @@
 menuVertical{
-    top: -100px;
+    top: -200px;
+    visibility: hidden;
     position: relative;
     opacity: 0;
     -webkit-transition: all 1s;
@@ -11,6 +12,7 @@ menuVertical{
 
 item:hover menuVertical{
     top: 0px;
+    visibility: visible;
     opacity: 1;
     -webkit-transition: all 1s;
     -moz-transition: all 1s;
@@ -23,4 +25,7 @@ item:hover menuVertical{
 .DivClassNoWidth{
     width: 0px;
     height: 0px;
+}
+
+.DivClassHasWidth{
 }

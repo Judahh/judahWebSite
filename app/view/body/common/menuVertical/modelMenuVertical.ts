@@ -17,4 +17,7 @@ export class ModelMenuVertical {
     arrayItem: Array<ModelItem>;
     arrayInputData: Array<ModelInputData>;
     arrayAuthentication: Array<ModelAuthentication>;
+    width:string;
+    left: number;
+    top: number;
 }

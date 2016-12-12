@@ -17,5 +17,6 @@
 </div>
 <menuVertical
     *ngIf="hasMenuVertical()"
-    [modelMenuVertical]="modelItem.menuVertical">
+    [modelMenuVertical]="modelItem.menuVertical"
+    [style]="menuVerticalStyle()|safeStyle">
 </menuVertical>

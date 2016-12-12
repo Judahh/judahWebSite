@@ -101,8 +101,25 @@ export class ComponentMenuVertical implements OnInit{
         return "position: "+this.modelMenuVertical.position+";";
     }
 
+    hasWidth(){
+        return !(this.modelMenuVertical.width==null||this.modelMenuVertical.width==undefined||this.modelMenuVertical.width=="");
+    }
+
+    width(){
+        if(this.modelMenuVertical.width==null||this.modelMenuVertical.width==undefined||this.modelMenuVertical.width==""){
+            return "";
+        }
+        return "width: "+this.modelMenuVertical.width+";";
+    }
+
+    styleW(){
+        return this.width()+
+        this.float();
+    }
+
     style(){
         return this.opacity()+
+        this.width()+
         this.distance()+
         this.border()+
         this.padding()+

@@ -84,6 +84,41 @@ export class ComponentItem implements OnInit{
     return this.cursor() + this.color();
   }
 
+  position(){
+      if(this.modelItem.menuVertical.position==null||this.modelItem.menuVertical.position==undefined||this.modelItem.menuVertical.position==""){
+          return "";
+      }
+      return "position: "+this.modelItem.menuVertical.position+";";
+  }
+
+  left(){
+      if(this.modelItem.menuVertical.left==null||this.modelItem.menuVertical.left==undefined){
+          return "";
+      }
+      return "left: "+this.modelItem.menuVertical.left+"px;";
+  }
+
+  top(){
+      if(this.modelItem.menuVertical.top==null||this.modelItem.menuVertical.top==undefined){
+          return "";
+      }
+      return "top: "+this.modelItem.menuVertical.top+"px;";
+  }
+
+  width(){
+      if(this.modelItem.menuVertical.width==null||this.modelItem.menuVertical.width==undefined||this.modelItem.menuVertical.width==""){
+          return "";
+      }
+      return "width: "+this.modelItem.menuVertical.width+";";
+  }
+
+  menuVerticalStyle(){
+    return this.position()+
+           this.width()+
+           this.left()+
+           this.top();
+  }
+
   tooltipStyle(tooltip:ModelTooltip){
     // return this.marginTop(tooltip)+this.marginLeft(tooltip)+this.opacity(tooltip);
     return this.opacity(tooltip);
