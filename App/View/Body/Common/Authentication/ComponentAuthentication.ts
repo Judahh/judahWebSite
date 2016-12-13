@@ -36,6 +36,8 @@ declare const FB:any;
 })
 export class ComponentAuthentication implements OnInit {
     @Input() modelAuthentication: ModelAuthentication;
+    modelAuthenticationLogged: ModelAuthentication;
+    modelAuthenticationLoggedOff: ModelAuthentication;
     modelAuthenticationInformation:any;
     modelLanguages:ModelLanguages;
     basicModelInformation:ModelInformation;
@@ -49,49 +51,6 @@ export class ComponentAuthentication implements OnInit {
     ngOnInit() {
         this.initialization();
     }
-
-    // checkLoginState() {
-    //     FB.getLoginStatus(response => {
-    //         this.statusChangeCallback(response);
-    //     });
-    // }
-
-    // statusChangeCallback(response:any) {
-    //     if (response.status === 'connected') {
-    //         // facebookID=response.authResponse.userID;
-    //         // connect here with your server for facebook login by passing access token given by facebook
-    //         console.log("logged");
-    //     }else if (response.status === 'not_authorized') {
-    //         this.notAuthorized();
-    //     }else {
-    //         this.loggedOut();
-    //         //facebookID=null;
-    //     }
-    // }
-
-    // notAuthorized(){
-    //     console.log('Not Authorized!');
-    // }
-
-    // loggedOut(){
-    //     console.log('Logged Out!');
-    //     //goToPage("Home");
-    //     // $("#DivLogoutText").toggle(false);
-    //     // $("#DivLoginText").toggle(true);
-    //     // removeProfilePicture();
-    //     //document.getElementById('status').innerHTML = 'Logged Out!';
-    // }
-
-
-    // getFacebookLoginStatus(response){
-    //     this.statusChangeCallback(response);
-    // }
-
-    // updateStatusCallback(){
-    //     //alert('Status updated!!');
-    //     //FB.getLoginStatus();
-    //     // Your logic here
-    // }
 
     onFacebookLoginClick() {
 		FB.login(this.onLoginCallback);
@@ -115,44 +74,55 @@ export class ComponentAuthentication implements OnInit {
             FB.api('/me', function(response) {
                 console.log('USER:'+response);
             });
+            this.modelAuthentication=this.modelAuthenticationLogged;
             this.getProfilePicture();
-            this.modelAuthentication.inputData.clickButton.item.colorEffect.font.animationEffect.arrayInformation[0].information=this.modelAuthenticationInformation.logoff;
-            this.modelAuthentication.inputData.clickButton.onClick=this.onClick2Callback;
         }else{
             console.log('User cancelled login or did not fully authorize.');
             this.removeProfilePicture();
-            this.modelAuthentication.inputData.clickButton.item.colorEffect.font.animationEffect.arrayInformation[0].information=this.modelAuthenticationInformation.title;
-            this.modelAuthentication.inputData.clickButton.onClick=this.onClickCallback;
+            this.modelAuthentication=this.modelAuthenticationLoggedOff;
         }
     }
 
     onLogoffCallback = (response: any) : void => {
         this.removeProfilePicture();
-        this.modelAuthentication.inputData.clickButton.item.colorEffect.font.animationEffect.arrayInformation[0].information=this.modelAuthenticationInformation.title;
-        this.modelAuthentication.inputData.clickButton.onClick=this.onClickCallback;
+        this.modelAuthentication=this.modelAuthenticationLoggedOff;
     }
 
-    isInputData(){
-        return (this.modelAuthentication.inputData!=null && 
-        this.modelAuthentication.inputData!=undefined);
-    }
+    // isInputData(){
+    //     return (this.modelAuthentication.arrayInputData[0]!=null && 
+    //     this.modelAuthentication.arrayInputData[0]!=undefined);
+    // }
 
     initialization() {
         this.modelAuthentication=new ModelAuthentication();
+        this.modelAuthenticationLogged=new ModelAuthentication();
+        this.modelAuthenticationLoggedOff=new ModelAuthentication();
         this.serviceAuthenticationFacebook.loadAndInitFBSDK();
         this.basicModelInformation=new ModelInformation("");
         this.modelLanguages=new ModelLanguages();
         
-        this.getAuthenticationService();
         this.getLanguageService();
         this.getInformationService();
+        this.getAuthenticationLoggedOffService();
+        this.getAuthenticationLoggedService();
     }
 
-    private getAuthenticationService(){
+    private getAuthenticationLoggedService(){
         var errorMessage="";
 
-        this.serviceJSON.getObservable('viewLoader/'+Utils.getFileSelector(Utils.getFileName(__filename))).subscribe(
-        item => this.getAuthentication(item), error => errorMessage = <any>error);
+        this.serviceJSON.getObservable('viewLoader/'+Utils.getFileSelector(Utils.getFileName(__filename))+'Logged').subscribe(
+        item => this.getAuthenticationLogged(item), error => errorMessage = <any>error);
+        
+        if(errorMessage!=""){
+        alert("Error:"+errorMessage);
+        }
+    }
+
+    private getAuthenticationLoggedOffService(){
+        var errorMessage="";
+
+        this.serviceJSON.getObservable('viewLoader/'+Utils.getFileSelector(Utils.getFileName(__filename))+'').subscribe(
+        item => this.getAuthenticationLoggedOff(item), error => errorMessage = <any>error);
         
         if(errorMessage!=""){
         alert("Error:"+errorMessage);
@@ -183,12 +153,19 @@ export class ComponentAuthentication implements OnInit {
 
     private getInformation(modelAuthenticationInformation:any){
         this.modelAuthenticationInformation=modelAuthenticationInformation;
-        this.modelAuthentication.inputData.clickButton.item.colorEffect.font.animationEffect.arrayInformation[0].information=this.modelAuthenticationInformation.title;
     }
 
-    private getAuthentication(modelAuthentication:ModelAuthentication){
-        this.modelAuthentication=modelAuthentication;
-        this.modelAuthentication.inputData.clickButton.onClick=this.onClickCallback;
+    private getAuthenticationLoggedOff(modelAuthentication:ModelAuthentication){
+        this.modelAuthenticationLoggedOff=modelAuthentication;
+        this.modelAuthenticationLoggedOff.arrayInputData[0].clickButton.onClick=this.onClickCallback;
+        this.modelAuthenticationLoggedOff.arrayInputData[0].clickButton.item.colorEffect.font.animationEffect.arrayInformation[0].information=this.modelAuthenticationInformation.login;
+        this.modelAuthentication=this.modelAuthenticationLoggedOff;
+    }
+
+    private getAuthenticationLogged(modelAuthentication:ModelAuthentication){
+        this.modelAuthenticationLogged=modelAuthentication;
+        this.modelAuthenticationLogged.arrayInputData[0].clickButton.onClick=this.onClick2Callback;
+        this.modelAuthenticationLogged.arrayInputData[0].clickButton.item.colorEffect.font.animationEffect.arrayInformation[0].information=this.modelAuthenticationInformation.logoff;
     }
 
     getIdLogin(){

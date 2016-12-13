@@ -1,4 +1,5 @@
-<inputData
-    *ngIf="isInputData()"
-    [modelInputData]="modelAuthentication.inputData">
-</inputData>
+<li *ngFor="let inputData of modelAuthentication.arrayInputData">
+    <inputData
+        [modelInputData]="inputData">
+    </inputData>
+</li>

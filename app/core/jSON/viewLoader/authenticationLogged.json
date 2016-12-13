@@ -28,6 +28,36 @@
                     }
                 }
             }
+        },
+        {
+            "item":{
+                "id":0,
+                "tooltip":{"fontSize":15},
+                "routerLink":"WhoAmI",
+                "routerLinkActive":"active",
+                "colorEffect":{
+                "color":"white",
+                "colorEffect":"DivClassNeon",
+                "font":{
+                    "font":"DivClassIcon",
+                    "verticalAlign":"",
+                    "width":"",
+                    "size":40,
+                    "arrayPadding":[5],
+                    "animationEffect":{
+                        "class":"DivClassPulse",
+                        "subClass":"",
+                        "subClasses":[],
+                        "arrayInformation":[
+                            {
+                                "information":"c",
+                                "opacity":1
+                            }
+                        ]
+                    }
+                }
+                }
+            }
         }
     ]
 }
