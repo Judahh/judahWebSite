@@ -105,7 +105,6 @@ export class ComponentAuthentication implements OnInit {
         this.getInformationService();
         this.getAuthenticationLoggedOffService();
         this.getAuthenticationLoggedService();
-        
     }
     
     private getAuthenticationLoggedService(){
@@ -193,6 +192,7 @@ export class ComponentAuthentication implements OnInit {
                 
             }
         }
+        
         this.modelAuthentication=this.modelAuthenticationLoggedOff;
     }
 
