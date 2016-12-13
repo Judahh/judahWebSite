@@ -32,17 +32,16 @@
         {
             "item":{
                 "id":0,
-                "tooltip":{"fontSize":15},
                 "routerLink":"WhoAmI",
                 "routerLinkActive":"active",
                 "colorEffect":{
                 "color":"white",
                 "colorEffect":"DivClassNeon",
                 "font":{
-                    "font":"DivClassIcon",
+                    "font":"DivClassRoboto",
                     "verticalAlign":"",
                     "width":"",
-                    "size":40,
+                    "size":15,
                     "arrayPadding":[5],
                     "animationEffect":{
                         "class":"DivClassPulse",

@@ -141,6 +141,17 @@ export class ComponentAuthentication implements OnInit {
         }
     }
 
+    private getPageInformationService(item:any){
+        var errorMessage="";
+        this.serviceJSON.getObservable("languages/page"+item.routerLink).subscribe(
+                items => this.getPageInformation(item, items), 
+                error => errorMessage = <any>error);
+
+        if(errorMessage!=""){
+        alert("Error:"+errorMessage);
+        }
+    }
+
     private getLanguageService(){
         var errorMessage="";
 
@@ -174,10 +185,19 @@ export class ComponentAuthentication implements OnInit {
         for (var index = 1; index < this.modelAuthenticationLoggedOff.arrayInputData.length; index++) {
             var element =  this.modelAuthenticationLoggedOff.arrayInputData[index];
             if(element.item!=undefined){
-                this.getTooltipService(element.item);
+                if(element.item.tooltip!=undefined){
+                    this.getTooltipService(element.item);
+                }else{
+                    this.getPageInformationService(element.item);
+                }
+                
             }
         }
         this.modelAuthentication=this.modelAuthenticationLoggedOff;
+    }
+
+    private getPageInformation(item:any,items:any){
+        item.colorEffect.font.animationEffect.arrayInformation[0].information=Languages.getPageLanguage(items,this.modelLanguages).title;
     }
 
     private getTooltip(item:any,items:any){
@@ -191,7 +211,12 @@ export class ComponentAuthentication implements OnInit {
         for (var index = 1; index < this.modelAuthenticationLogged.arrayInputData.length; index++) {
             var element =  this.modelAuthenticationLogged.arrayInputData[index];
             if(element.item!=undefined){
-                this.getTooltipService(element.item);
+                if(element.item.tooltip!=undefined){
+                    this.getTooltipService(element.item);
+                }else{
+                    this.getPageInformationService(element.item);
+                }
+                
             }
         }
     }
