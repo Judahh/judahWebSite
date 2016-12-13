@@ -51,10 +51,19 @@
     [style]="style()|safeStyle">
 </checkButton>
 
-<item 
-    *ngIf="isItem()"
+<item  *ngIf="isItem() && modelInputData.item.routerLinkActive=='active'"
+    [modelItem]="modelInputData.item"
+    routerLink="/{{modelInputData.item.routerLink}}"
+    routerLinkActive="{{modelInputData.item.routerLinkActive}}" 
+    [style]="style()|safeStyle">
+    Loading...
+</item>
+
+<item  *ngIf="isItem() && modelInputData.item.routerLinkActive!='active'"
     [modelItem]="modelInputData.item"
     [style]="style()|safeStyle">
+    Loading...
 </item>
+
 
 </div>

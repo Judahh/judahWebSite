@@ -105,8 +105,9 @@ export class ComponentAuthentication implements OnInit {
         this.getInformationService();
         this.getAuthenticationLoggedOffService();
         this.getAuthenticationLoggedService();
+        
     }
-
+    
     private getAuthenticationLoggedService(){
         var errorMessage="";
 
@@ -124,6 +125,17 @@ export class ComponentAuthentication implements OnInit {
         this.serviceJSON.getObservable('viewLoader/'+Utils.getFileSelector(Utils.getFileName(__filename))+'').subscribe(
         item => this.getAuthenticationLoggedOff(item), error => errorMessage = <any>error);
         
+        if(errorMessage!=""){
+        alert("Error:"+errorMessage);
+        }
+    }
+
+    private getTooltipService(item:any){
+        var errorMessage="";
+        this.serviceJSON.getObservable("languages/page"+item.routerLink).subscribe(
+              items => this.getTooltip(item, items), 
+              error => errorMessage = <any>error);
+
         if(errorMessage!=""){
         alert("Error:"+errorMessage);
         }
@@ -159,13 +171,29 @@ export class ComponentAuthentication implements OnInit {
         this.modelAuthenticationLoggedOff=modelAuthentication;
         this.modelAuthenticationLoggedOff.arrayInputData[0].clickButton.onClick=this.onClickCallback;
         this.modelAuthenticationLoggedOff.arrayInputData[0].clickButton.item.colorEffect.font.animationEffect.arrayInformation[0].information=this.modelAuthenticationInformation.login;
+        for (var index = 1; index < this.modelAuthenticationLoggedOff.arrayInputData.length; index++) {
+            var element =  this.modelAuthenticationLoggedOff.arrayInputData[index];
+            if(element.item!=undefined){
+                this.getTooltipService(element.item);
+            }
+        }
         this.modelAuthentication=this.modelAuthenticationLoggedOff;
+    }
+
+    private getTooltip(item:any,items:any){
+        item.tooltip.value=Languages.getPageLanguage(items,this.modelLanguages).title;
     }
 
     private getAuthenticationLogged(modelAuthentication:ModelAuthentication){
         this.modelAuthenticationLogged=modelAuthentication;
         this.modelAuthenticationLogged.arrayInputData[0].clickButton.onClick=this.onClick2Callback;
         this.modelAuthenticationLogged.arrayInputData[0].clickButton.item.colorEffect.font.animationEffect.arrayInformation[0].information=this.modelAuthenticationInformation.logoff;
+        for (var index = 1; index < this.modelAuthenticationLogged.arrayInputData.length; index++) {
+            var element =  this.modelAuthenticationLogged.arrayInputData[index];
+            if(element.item!=undefined){
+                this.getTooltipService(element.item);
+            }
+        }
     }
 
     getIdLogin(){
