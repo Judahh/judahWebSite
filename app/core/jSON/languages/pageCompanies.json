@@ -2,7 +2,7 @@
     {
         "id":0,
         "language":"English-USA",
-        "title":"Contact",
+        "title":"Conpanies",
         "doYouWantToHireMe":"Do You Want To Hire Me?",
         "name":"Name",
         "company":"Company",
@@ -44,7 +44,7 @@
     {
         "id":1,
         "language":"Portuguese-Brazil",
-        "title":"Contato",
+        "title":"Empresas",
         "doYouWantToHireMe":"Quer Me Contratar?",
         "name":"Nome",
         "company":"Empresa",
