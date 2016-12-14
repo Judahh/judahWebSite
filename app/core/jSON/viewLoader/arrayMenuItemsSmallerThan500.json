@@ -192,7 +192,64 @@
       {
         "id":1,
         "class":"DivClassCenter",
-        "arrayItem":[]
+        "arrayItem":[
+          {
+            "id":0,
+            "routerLink":"",
+            "routerLinkActive":"inactive",
+            "colorEffect":{
+              "color":"red",
+              "colorEffect":"DivClassNeon",
+              "font":{
+                "font":"DivClassCompanies",
+                "verticalAlign":"",
+                "width":"",
+                "size":30,
+                "arrayPadding":[5,0,0,0],
+                "arrayMargin":[0,0,0,-217],
+                "animationEffect":{
+                    "class":"",
+                    "subClass":"",
+                    "subClasses":[],
+                    "arrayInformation":[
+                      {
+                        "information":"b",
+                        "opacity":1
+                      }
+                    ]
+                }
+              }
+            }
+          },
+          {
+            "id":0,
+            "routerLink":"",
+            "routerLinkActive":"inactive",
+            "colorEffect":{
+              "color":"white",
+              "colorEffect":"DivClassNeon",
+              "font":{
+                "font":"DivClassCompanies",
+                "verticalAlign":"",
+                "width":"",
+                "size":30,
+                "arrayPadding":[5,0,0,0],
+                "arrayMargin":[0,0,0,-155],
+                "animationEffect":{
+                    "class":"",
+                    "subClass":"",
+                    "subClasses":[],
+                    "arrayInformation":[
+                      {
+                        "information":"B",
+                        "opacity":1
+                      }
+                    ]
+                }
+              }
+            }
+          }
+        ]
       },
       {
         "id":2,
