@@ -206,7 +206,7 @@
                 "width":"",
                 "size":30,
                 "arrayPadding":[5,0,0,0],
-                "arrayMargin":[0,0,0,-217],
+                "arrayMargin":[0,0,0,0],
                 "animationEffect":{
                     "class":"",
                     "subClass":"",
@@ -234,7 +234,7 @@
                 "width":"",
                 "size":30,
                 "arrayPadding":[5,0,0,0],
-                "arrayMargin":[0,0,0,-155],
+                "arrayMargin":[0,0,0,0],
                 "animationEffect":{
                     "class":"",
                     "subClass":"",
