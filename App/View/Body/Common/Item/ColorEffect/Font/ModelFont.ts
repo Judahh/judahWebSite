@@ -8,6 +8,7 @@ export class ModelFont {
   width: string;
   size: number;
   arrayPadding: Array<number>;
+  arrayMargin: Array<number>;
 
   animationEffect: ModelAnimationEffect;
 }

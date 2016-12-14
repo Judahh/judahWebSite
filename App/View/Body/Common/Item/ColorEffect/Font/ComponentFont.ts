@@ -72,10 +72,35 @@ export class ComponentFont implements OnInit{
     return stringPadding;
   }
 
+  fontMargin(){
+    if(this.modelFont.arrayMargin==null||this.modelFont.arrayMargin==undefined){
+      return "";
+    }
+
+    let stringMargin:string="";
+    for(let index:number=0;index<this.modelFont.arrayMargin.length;index++){
+      if(index==0){
+        stringMargin+="margin:";
+      }
+
+      stringMargin+=" "+(this.modelFont.arrayMargin[index]+"px");
+
+      if(index==this.modelFont.arrayMargin.length-1){
+        stringMargin+=";";
+      }
+    }
+
+    return stringMargin;
+  }
+
   style(){
-    return this.fontSize() + this.fontPadding() + 
-    this.fontVerticalAlign() + this.fontTextAlign() + 
-    this.fontTextIndent() + this.fontWidth();
+    return this.fontSize() + 
+           this.fontPadding() + 
+           this.fontMargin() + 
+           this.fontVerticalAlign() + 
+           this.fontTextAlign() + 
+           this.fontTextIndent() +
+           this.fontWidth();
   }
 
   initialization(){

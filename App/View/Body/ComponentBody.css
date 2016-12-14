@@ -8,6 +8,15 @@
 }
 
 @font-face {
+    font-family: "Companies";
+    src: url("App/view/body/fonts/Brands/Companies.otf");
+    src: url("App/view/body/fonts/Brands/Companies.woff") format('woff');
+    /*src: url("../../../../../../fonts/Brands/Companies.ttf")  format(‘truetype’);*/
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
     font-family: "FontIconSocialMedia";
     src: url("App/view/body/fonts/Brands/Socialico.otf");
     /*src: url("../../../../../../fonts/Socialico.woff") format('woff');
