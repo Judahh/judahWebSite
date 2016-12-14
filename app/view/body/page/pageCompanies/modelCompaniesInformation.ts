@@ -1,5 +1,5 @@
 import { ModelBasicForm } from './../../common/basicForm/ModelBasicForm';
-export class ModelAddCompanyInformation {
+export class ModelCompaniesInformation {
     id: number;
     language:string;
     title:string;

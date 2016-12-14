@@ -18,7 +18,7 @@ import { ModelClickButton } from './../../common/clickButton/ModelClickButton';
 
 import { ComponentBasicForm } from './../../common/basicForm/ComponentBasicForm';
 
-import { ModelAddCompanyInformation } from './ModelAddCompanyInformation';
+import { ModelCompaniesInformation } from './ModelCompaniesInformation';
 
 import { ServiceJSON } from './../../../../core/services/jSON/ServiceJSON';
 
@@ -29,8 +29,8 @@ import { ServiceJSON } from './../../../../core/services/jSON/ServiceJSON';
   templateUrl: Utils.getFileHTML(Utils.getFileName(__filename)),
   encapsulation: ViewEncapsulation.None
 })
-export class ComponentPageAddCompany implements OnInit {
-  modelAddCompanyInformation:ModelAddCompanyInformation;
+export class ComponentPageCompanies implements OnInit {
+  modelCompaniesInformation:ModelCompaniesInformation;
   modelLanguages:ModelLanguages;
   basicPhone:any;
   currentWidth:number;
@@ -57,7 +57,7 @@ export class ComponentPageAddCompany implements OnInit {
   initialization(){
     this.arrayModelDivisorBlock=new Array<ModelDivisorBlock>();
     this.modelLanguages=new ModelLanguages();
-    this.modelAddCompanyInformation=new ModelAddCompanyInformation();    
+    this.modelCompaniesInformation=new ModelCompaniesInformation();    
 
     this.refresh();
   }
@@ -126,7 +126,7 @@ export class ComponentPageAddCompany implements OnInit {
     var errorMessage="";
 
     this.serviceJSON.getObservable('languages/'+Utils.getFileSelector(Utils.getFileName(__filename))).subscribe(
-      items => this.modelAddCompanyInformation=Languages.getPageLanguage(items,this.modelLanguages), error => errorMessage = <any>error);
+      items => this.modelCompaniesInformation=Languages.getPageLanguage(items,this.modelLanguages), error => errorMessage = <any>error);
     
     if(errorMessage!=""){
       alert("Error:"+errorMessage);
@@ -146,71 +146,71 @@ export class ComponentPageAddCompany implements OnInit {
 
   private getArrayModelDivisorBlock(arrayModelDivisorBlock:Array<ModelDivisorBlock>){
     this.arrayModelDivisorBlock=arrayModelDivisorBlock;
-    this.arrayModelDivisorBlock[0].divisor.arraySubDivisor[0].item.colorEffect.font.animationEffect.arrayInformation.push(new ModelInformation(this.modelAddCompanyInformation.title));
-    this.arrayModelDivisorBlock[1].divisor.arraySubDivisor[0].item.colorEffect.font.animationEffect.arrayInformation.push(new ModelInformation(this.modelAddCompanyInformation.doYouWantToHireMe));
+    this.arrayModelDivisorBlock[0].divisor.arraySubDivisor[0].item.colorEffect.font.animationEffect.arrayInformation.push(new ModelInformation(this.modelCompaniesInformation.title));
+    this.arrayModelDivisorBlock[1].divisor.arraySubDivisor[0].item.colorEffect.font.animationEffect.arrayInformation.push(new ModelInformation(this.modelCompaniesInformation.doYouWantToHireMe));
 
-    this.arrayModelDivisorBlock[1].arraySubDivisor[0].basicForm.array3InputData[0][0][0].textInput.placeholder=this.modelAddCompanyInformation.name;
-    this.arrayModelDivisorBlock[1].arraySubDivisor[0].basicForm.array3InputData[0][1][0].textInput.placeholder=this.modelAddCompanyInformation.company;
+    this.arrayModelDivisorBlock[1].arraySubDivisor[0].basicForm.array3InputData[0][0][0].textInput.placeholder=this.modelCompaniesInformation.name;
+    this.arrayModelDivisorBlock[1].arraySubDivisor[0].basicForm.array3InputData[0][1][0].textInput.placeholder=this.modelCompaniesInformation.company;
 
-    this.arrayModelDivisorBlock[1].arraySubDivisor[0].basicForm.array3InputData[1][0][0].textInput.placeholder=this.modelAddCompanyInformation.email;
+    this.arrayModelDivisorBlock[1].arraySubDivisor[0].basicForm.array3InputData[1][0][0].textInput.placeholder=this.modelCompaniesInformation.email;
 
     //this.arrayModelDivisorBlock[1].arraySubDivisor[0].basicForm.array3InputData[1][1][0].clickButton.onClick=this.onClickCallbackRemove;
-    this.arrayModelDivisorBlock[1].arraySubDivisor[0].basicForm.array3InputData[1][1][0].textInput.placeholder=this.modelAddCompanyInformation.phone;
-    this.arrayModelDivisorBlock[1].arraySubDivisor[0].basicForm.array3InputData[1][1][1].comboBox.arrayOptions[0]=this.modelAddCompanyInformation.mobile;
-    this.arrayModelDivisorBlock[1].arraySubDivisor[0].basicForm.array3InputData[1][1][1].comboBox.arrayOptions[1]=this.modelAddCompanyInformation.landline;
-    this.arrayModelDivisorBlock[1].arraySubDivisor[0].basicForm.array3InputData[1][1][1].comboBox.value=this.modelAddCompanyInformation.mobile;
+    this.arrayModelDivisorBlock[1].arraySubDivisor[0].basicForm.array3InputData[1][1][0].textInput.placeholder=this.modelCompaniesInformation.phone;
+    this.arrayModelDivisorBlock[1].arraySubDivisor[0].basicForm.array3InputData[1][1][1].comboBox.arrayOptions[0]=this.modelCompaniesInformation.mobile;
+    this.arrayModelDivisorBlock[1].arraySubDivisor[0].basicForm.array3InputData[1][1][1].comboBox.arrayOptions[1]=this.modelCompaniesInformation.landline;
+    this.arrayModelDivisorBlock[1].arraySubDivisor[0].basicForm.array3InputData[1][1][1].comboBox.value=this.modelCompaniesInformation.mobile;
     if(this.currentWidth>=425){
       this.arrayModelDivisorBlock[1].arraySubDivisor[0].basicForm.array3InputData[1][1][2].clickButton.onClick=this.onClickCallbackAdd;
     }
 
-    this.arrayModelDivisorBlock[1].arraySubDivisor[0].basicForm.array3InputData[2][0][0].textInput.placeholder=this.modelAddCompanyInformation.address;
+    this.arrayModelDivisorBlock[1].arraySubDivisor[0].basicForm.array3InputData[2][0][0].textInput.placeholder=this.modelCompaniesInformation.address;
 
-    this.arrayModelDivisorBlock[1].arraySubDivisor[0].basicForm.array3InputData[3][0][0].textInput.placeholder=this.modelAddCompanyInformation.jobTitle;
-    this.arrayModelDivisorBlock[1].arraySubDivisor[0].basicForm.array3InputData[3][0][1].comboBox.arrayOptions[0]=this.modelAddCompanyInformation.regular;
-    this.arrayModelDivisorBlock[1].arraySubDivisor[0].basicForm.array3InputData[3][0][1].comboBox.arrayOptions[1]=this.modelAddCompanyInformation.consultant;
-    this.arrayModelDivisorBlock[1].arraySubDivisor[0].basicForm.array3InputData[3][0][1].comboBox.arrayOptions[2]=this.modelAddCompanyInformation.temporary;
-    this.arrayModelDivisorBlock[1].arraySubDivisor[0].basicForm.array3InputData[3][0][1].comboBox.value=this.modelAddCompanyInformation.regular;
+    this.arrayModelDivisorBlock[1].arraySubDivisor[0].basicForm.array3InputData[3][0][0].textInput.placeholder=this.modelCompaniesInformation.jobTitle;
+    this.arrayModelDivisorBlock[1].arraySubDivisor[0].basicForm.array3InputData[3][0][1].comboBox.arrayOptions[0]=this.modelCompaniesInformation.regular;
+    this.arrayModelDivisorBlock[1].arraySubDivisor[0].basicForm.array3InputData[3][0][1].comboBox.arrayOptions[1]=this.modelCompaniesInformation.consultant;
+    this.arrayModelDivisorBlock[1].arraySubDivisor[0].basicForm.array3InputData[3][0][1].comboBox.arrayOptions[2]=this.modelCompaniesInformation.temporary;
+    this.arrayModelDivisorBlock[1].arraySubDivisor[0].basicForm.array3InputData[3][0][1].comboBox.value=this.modelCompaniesInformation.regular;
     if(this.currentWidth<425){
-      this.arrayModelDivisorBlock[1].arraySubDivisor[0].basicForm.array3InputData[3][1][0].textInput.placeholder=this.modelAddCompanyInformation.smallCurrency;
+      this.arrayModelDivisorBlock[1].arraySubDivisor[0].basicForm.array3InputData[3][1][0].textInput.placeholder=this.modelCompaniesInformation.smallCurrency;
     }else{
-      this.arrayModelDivisorBlock[1].arraySubDivisor[0].basicForm.array3InputData[3][1][0].textInput.placeholder=this.modelAddCompanyInformation.currency;
+      this.arrayModelDivisorBlock[1].arraySubDivisor[0].basicForm.array3InputData[3][1][0].textInput.placeholder=this.modelCompaniesInformation.currency;
     }
-    this.arrayModelDivisorBlock[1].arraySubDivisor[0].basicForm.array3InputData[3][1][0].textInput.arrayOptions[0]=this.modelAddCompanyInformation.currencyUS;
-    this.arrayModelDivisorBlock[1].arraySubDivisor[0].basicForm.array3InputData[3][1][0].textInput.arrayOptions[1]=this.modelAddCompanyInformation.currencyRS;
-    this.arrayModelDivisorBlock[1].arraySubDivisor[0].basicForm.array3InputData[3][1][1].textInput.placeholder=this.modelAddCompanyInformation.salary;
-    this.arrayModelDivisorBlock[1].arraySubDivisor[0].basicForm.array3InputData[3][1][2].comboBox.arrayOptions[0]=this.modelAddCompanyInformation.perHour;
-    this.arrayModelDivisorBlock[1].arraySubDivisor[0].basicForm.array3InputData[3][1][2].comboBox.arrayOptions[1]=this.modelAddCompanyInformation.perMonth;
-    this.arrayModelDivisorBlock[1].arraySubDivisor[0].basicForm.array3InputData[3][1][2].comboBox.arrayOptions[2]=this.modelAddCompanyInformation.perYear;
-    this.arrayModelDivisorBlock[1].arraySubDivisor[0].basicForm.array3InputData[3][1][2].comboBox.value=this.modelAddCompanyInformation.perMonth;
-    this.arrayModelDivisorBlock[1].arraySubDivisor[0].basicForm.array3InputData[3][1][3].checkButton.item.colorEffect.font.animationEffect.arrayInformation.push(new ModelInformation(this.modelAddCompanyInformation.flexible));
+    this.arrayModelDivisorBlock[1].arraySubDivisor[0].basicForm.array3InputData[3][1][0].textInput.arrayOptions[0]=this.modelCompaniesInformation.currencyUS;
+    this.arrayModelDivisorBlock[1].arraySubDivisor[0].basicForm.array3InputData[3][1][0].textInput.arrayOptions[1]=this.modelCompaniesInformation.currencyRS;
+    this.arrayModelDivisorBlock[1].arraySubDivisor[0].basicForm.array3InputData[3][1][1].textInput.placeholder=this.modelCompaniesInformation.salary;
+    this.arrayModelDivisorBlock[1].arraySubDivisor[0].basicForm.array3InputData[3][1][2].comboBox.arrayOptions[0]=this.modelCompaniesInformation.perHour;
+    this.arrayModelDivisorBlock[1].arraySubDivisor[0].basicForm.array3InputData[3][1][2].comboBox.arrayOptions[1]=this.modelCompaniesInformation.perMonth;
+    this.arrayModelDivisorBlock[1].arraySubDivisor[0].basicForm.array3InputData[3][1][2].comboBox.arrayOptions[2]=this.modelCompaniesInformation.perYear;
+    this.arrayModelDivisorBlock[1].arraySubDivisor[0].basicForm.array3InputData[3][1][2].comboBox.value=this.modelCompaniesInformation.perMonth;
+    this.arrayModelDivisorBlock[1].arraySubDivisor[0].basicForm.array3InputData[3][1][3].checkButton.item.colorEffect.font.animationEffect.arrayInformation.push(new ModelInformation(this.modelCompaniesInformation.flexible));
 
-    this.arrayModelDivisorBlock[1].arraySubDivisor[0].basicForm.array3InputData[4][0][0].item.colorEffect.font.animationEffect.arrayInformation.push(new ModelInformation(this.modelAddCompanyInformation.workingHours));
+    this.arrayModelDivisorBlock[1].arraySubDivisor[0].basicForm.array3InputData[4][0][0].item.colorEffect.font.animationEffect.arrayInformation.push(new ModelInformation(this.modelCompaniesInformation.workingHours));
 
-    this.arrayModelDivisorBlock[1].arraySubDivisor[0].basicForm.array3InputData[5][0][0].checkButton.item.colorEffect.font.animationEffect.arrayInformation.push(new ModelInformation(this.modelAddCompanyInformation.sunday));
-    this.arrayModelDivisorBlock[1].arraySubDivisor[0].basicForm.array3InputData[5][0][1].checkButton.item.colorEffect.font.animationEffect.arrayInformation.push(new ModelInformation(this.modelAddCompanyInformation.monday));
-    this.arrayModelDivisorBlock[1].arraySubDivisor[0].basicForm.array3InputData[5][0][2].checkButton.item.colorEffect.font.animationEffect.arrayInformation.push(new ModelInformation(this.modelAddCompanyInformation.tuesday));
-    this.arrayModelDivisorBlock[1].arraySubDivisor[0].basicForm.array3InputData[5][0][3].checkButton.item.colorEffect.font.animationEffect.arrayInformation.push(new ModelInformation(this.modelAddCompanyInformation.wednesday));
-    this.arrayModelDivisorBlock[1].arraySubDivisor[0].basicForm.array3InputData[5][0][4].checkButton.item.colorEffect.font.animationEffect.arrayInformation.push(new ModelInformation(this.modelAddCompanyInformation.thursday));
-    this.arrayModelDivisorBlock[1].arraySubDivisor[0].basicForm.array3InputData[5][0][5].checkButton.item.colorEffect.font.animationEffect.arrayInformation.push(new ModelInformation(this.modelAddCompanyInformation.friday));
-    this.arrayModelDivisorBlock[1].arraySubDivisor[0].basicForm.array3InputData[5][0][6].checkButton.item.colorEffect.font.animationEffect.arrayInformation.push(new ModelInformation(this.modelAddCompanyInformation.saturday));
-    this.arrayModelDivisorBlock[1].arraySubDivisor[0].basicForm.array3InputData[5][0][7].checkButton.item.colorEffect.font.animationEffect.arrayInformation.push(new ModelInformation(this.modelAddCompanyInformation.flexible));
+    this.arrayModelDivisorBlock[1].arraySubDivisor[0].basicForm.array3InputData[5][0][0].checkButton.item.colorEffect.font.animationEffect.arrayInformation.push(new ModelInformation(this.modelCompaniesInformation.sunday));
+    this.arrayModelDivisorBlock[1].arraySubDivisor[0].basicForm.array3InputData[5][0][1].checkButton.item.colorEffect.font.animationEffect.arrayInformation.push(new ModelInformation(this.modelCompaniesInformation.monday));
+    this.arrayModelDivisorBlock[1].arraySubDivisor[0].basicForm.array3InputData[5][0][2].checkButton.item.colorEffect.font.animationEffect.arrayInformation.push(new ModelInformation(this.modelCompaniesInformation.tuesday));
+    this.arrayModelDivisorBlock[1].arraySubDivisor[0].basicForm.array3InputData[5][0][3].checkButton.item.colorEffect.font.animationEffect.arrayInformation.push(new ModelInformation(this.modelCompaniesInformation.wednesday));
+    this.arrayModelDivisorBlock[1].arraySubDivisor[0].basicForm.array3InputData[5][0][4].checkButton.item.colorEffect.font.animationEffect.arrayInformation.push(new ModelInformation(this.modelCompaniesInformation.thursday));
+    this.arrayModelDivisorBlock[1].arraySubDivisor[0].basicForm.array3InputData[5][0][5].checkButton.item.colorEffect.font.animationEffect.arrayInformation.push(new ModelInformation(this.modelCompaniesInformation.friday));
+    this.arrayModelDivisorBlock[1].arraySubDivisor[0].basicForm.array3InputData[5][0][6].checkButton.item.colorEffect.font.animationEffect.arrayInformation.push(new ModelInformation(this.modelCompaniesInformation.saturday));
+    this.arrayModelDivisorBlock[1].arraySubDivisor[0].basicForm.array3InputData[5][0][7].checkButton.item.colorEffect.font.animationEffect.arrayInformation.push(new ModelInformation(this.modelCompaniesInformation.flexible));
 
-    this.arrayModelDivisorBlock[1].arraySubDivisor[0].basicForm.array3InputData[6][0][0].textInput.placeholder=this.modelAddCompanyInformation.in;
-    this.arrayModelDivisorBlock[1].arraySubDivisor[0].basicForm.array3InputData[6][0][1].item.colorEffect.font.animationEffect.arrayInformation.push(new ModelInformation(this.modelAddCompanyInformation.hour));
-    this.arrayModelDivisorBlock[1].arraySubDivisor[0].basicForm.array3InputData[6][0][2].checkButton.item.colorEffect.font.animationEffect.arrayInformation.push(new ModelInformation(this.modelAddCompanyInformation.flexible));
+    this.arrayModelDivisorBlock[1].arraySubDivisor[0].basicForm.array3InputData[6][0][0].textInput.placeholder=this.modelCompaniesInformation.in;
+    this.arrayModelDivisorBlock[1].arraySubDivisor[0].basicForm.array3InputData[6][0][1].item.colorEffect.font.animationEffect.arrayInformation.push(new ModelInformation(this.modelCompaniesInformation.hour));
+    this.arrayModelDivisorBlock[1].arraySubDivisor[0].basicForm.array3InputData[6][0][2].checkButton.item.colorEffect.font.animationEffect.arrayInformation.push(new ModelInformation(this.modelCompaniesInformation.flexible));
 
-    this.arrayModelDivisorBlock[1].arraySubDivisor[0].basicForm.array3InputData[7][0][0].textInput.placeholder=this.modelAddCompanyInformation.out;
-    this.arrayModelDivisorBlock[1].arraySubDivisor[0].basicForm.array3InputData[7][0][1].item.colorEffect.font.animationEffect.arrayInformation.push(new ModelInformation(this.modelAddCompanyInformation.hour));
-    this.arrayModelDivisorBlock[1].arraySubDivisor[0].basicForm.array3InputData[7][0][2].checkButton.item.colorEffect.font.animationEffect.arrayInformation.push(new ModelInformation(this.modelAddCompanyInformation.flexible));
+    this.arrayModelDivisorBlock[1].arraySubDivisor[0].basicForm.array3InputData[7][0][0].textInput.placeholder=this.modelCompaniesInformation.out;
+    this.arrayModelDivisorBlock[1].arraySubDivisor[0].basicForm.array3InputData[7][0][1].item.colorEffect.font.animationEffect.arrayInformation.push(new ModelInformation(this.modelCompaniesInformation.hour));
+    this.arrayModelDivisorBlock[1].arraySubDivisor[0].basicForm.array3InputData[7][0][2].checkButton.item.colorEffect.font.animationEffect.arrayInformation.push(new ModelInformation(this.modelCompaniesInformation.flexible));
     
-    this.arrayModelDivisorBlock[1].arraySubDivisor[0].basicForm.array3InputData[8][0][0].textInput.placeholder=this.modelAddCompanyInformation.description;
+    this.arrayModelDivisorBlock[1].arraySubDivisor[0].basicForm.array3InputData[8][0][0].textInput.placeholder=this.modelCompaniesInformation.description;
 
-    this.arrayModelDivisorBlock[1].arraySubDivisor[0].basicForm.array3InputData[9][0][0].clickButton.item.colorEffect.font.animationEffect.arrayInformation.push(new ModelInformation(this.modelAddCompanyInformation.submit));
+    this.arrayModelDivisorBlock[1].arraySubDivisor[0].basicForm.array3InputData[9][0][0].clickButton.item.colorEffect.font.animationEffect.arrayInformation.push(new ModelInformation(this.modelCompaniesInformation.submit));
     // 2 eh limpo
-    this.arrayModelDivisorBlock[3].divisor.arraySubDivisor[1].item.colorEffect.font.animationEffect.arrayInformation.push(new ModelInformation(this.modelAddCompanyInformation.curriculumVitae));
-    this.arrayModelDivisorBlock[3].arraySubDivisor[0].inputData.clickButton.item.colorEffect.font.animationEffect.arrayInformation.push(new ModelInformation(this.modelAddCompanyInformation.download));
+    this.arrayModelDivisorBlock[3].divisor.arraySubDivisor[1].item.colorEffect.font.animationEffect.arrayInformation.push(new ModelInformation(this.modelCompaniesInformation.curriculumVitae));
+    this.arrayModelDivisorBlock[3].arraySubDivisor[0].inputData.clickButton.item.colorEffect.font.animationEffect.arrayInformation.push(new ModelInformation(this.modelCompaniesInformation.download));
     this.arrayModelDivisorBlock[3].arraySubDivisor[0].inputData.clickButton.onClick=this.onClickCallback;
-    this.arrayModelDivisorBlock[4].divisor.arraySubDivisor[1].item.colorEffect.font.animationEffect.arrayInformation.push(new ModelInformation(this.modelAddCompanyInformation.socialNetworks));
+    this.arrayModelDivisorBlock[4].divisor.arraySubDivisor[1].item.colorEffect.font.animationEffect.arrayInformation.push(new ModelInformation(this.modelCompaniesInformation.socialNetworks));
 
     this.arrayModelDivisorBlock[1].arraySubDivisor[0].basicForm.onInsert=this.onInsertCallback;
     this.arrayModelDivisorBlock[1].arraySubDivisor[0].basicForm.onRemove=this.onRemoveCallback;
@@ -230,11 +230,11 @@ export class ComponentPageAddCompany implements OnInit {
 
     phone[0].clickButton.onClick=this.onClickCallbackRemove;
     phone[0].clickButton.name=nextPosition-1;
-    phone[1].textInput.placeholder=this.modelAddCompanyInformation.phone;
+    phone[1].textInput.placeholder=this.modelCompaniesInformation.phone;
     phone[1].textInput.name=phone[1].textInput.name+(nextPosition-1);
-    phone[2].comboBox.arrayOptions[0]=this.modelAddCompanyInformation.mobile;
-    phone[2].comboBox.arrayOptions[1]=this.modelAddCompanyInformation.landline;
-    phone[2].comboBox.value=this.modelAddCompanyInformation.mobile;
+    phone[2].comboBox.arrayOptions[0]=this.modelCompaniesInformation.mobile;
+    phone[2].comboBox.arrayOptions[1]=this.modelCompaniesInformation.landline;
+    phone[2].comboBox.value=this.modelCompaniesInformation.mobile;
     phone[2].comboBox.name=phone[2].comboBox.name+(nextPosition-1);
     phone[3].clickButton.onClick=this.onClickCallbackAdd;
     phone[3].clickButton.name=nextPosition-1;

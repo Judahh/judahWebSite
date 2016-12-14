@@ -8,7 +8,7 @@ import { ComponentPageSkills } from './view/body/page/pageSkills/ComponentPageSk
 import { ComponentPageProjects } from './view/body/page/pageProjects/ComponentPageProjects';
 import { ComponentPageContact } from './view/body/page/pageContact/ComponentPageContact';
 import { ComponentPageLanguages } from './view/body/page/pageLanguages/ComponentPageLanguages';
-import { ComponentPageAddCompany } from './view/body/page/pageAddCompany/ComponentPageAddCompany';
+import { ComponentPageCompanies } from './view/body/page/pageCompanies/ComponentPageCompanies';
 
 //import { ControllerHire } from './../aPI/hire/ControllerHire';
 
@@ -38,8 +38,8 @@ const appRoutes: Routes = [
     component: ComponentPageLanguages
   },
   {
-    path: 'AddCompany',
-    component: ComponentPageAddCompany
+    path: 'Companies',
+    component: ComponentPageCompanies
   },
   {
     path: '**',
@@ -61,5 +61,5 @@ export const routedComponents =
     ComponentPageProjects,
     ComponentPageContact,
     ComponentPageLanguages,
-    ComponentPageAddCompany
+    ComponentPageCompanies
   ];
