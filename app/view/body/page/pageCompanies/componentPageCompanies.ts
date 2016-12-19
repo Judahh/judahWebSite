@@ -148,13 +148,13 @@ export class ComponentPageCompanies implements OnInit {
     this.arrayModelDivisorBlock=arrayModelDivisorBlock;
     this.arrayModelDivisorBlock[0].divisor.arraySubDivisor[0].item.colorEffect.font.animationEffect.arrayInformation.push(new ModelInformation(this.modelCompaniesInformation.title));
 
-    this.arrayModelDivisorBlock[1].arraySubDivisor[0].basicForm.array3InputData[0][0][0].textInput.placeholder=this.modelCompaniesInformation.company;
-    this.arrayModelDivisorBlock[1].arraySubDivisor[0].basicForm.array3InputData[0][0][1].clickButton.item.colorEffect.font.animationEffect.arrayInformation.push(new ModelInformation(this.modelCompaniesInformation.workers));
-    this.arrayModelDivisorBlock[1].arraySubDivisor[0].basicForm.array3InputData[0][0][2].clickButton.item.colorEffect.font.animationEffect.arrayInformation.push(new ModelInformation(this.modelCompaniesInformation.services));
-    this.arrayModelDivisorBlock[1].arraySubDivisor[0].basicForm.array3InputData[0][0][3].clickButton.onClick=this.onClickCallbackAdd;
+    this.arrayModelDivisorBlock[0].arraySubDivisor[0].basicForm.array3InputData[0][0][0].textInput.placeholder=this.modelCompaniesInformation.company;
+    this.arrayModelDivisorBlock[0].arraySubDivisor[0].basicForm.array3InputData[0][0][1].clickButton.item.colorEffect.font.animationEffect.arrayInformation.push(new ModelInformation(this.modelCompaniesInformation.workers));
+    this.arrayModelDivisorBlock[0].arraySubDivisor[0].basicForm.array3InputData[0][0][2].clickButton.item.colorEffect.font.animationEffect.arrayInformation.push(new ModelInformation(this.modelCompaniesInformation.services));
+    this.arrayModelDivisorBlock[0].arraySubDivisor[0].basicForm.array3InputData[0][0][3].clickButton.onClick=this.onClickCallbackAdd;
 
-    this.arrayModelDivisorBlock[1].arraySubDivisor[0].basicForm.onInsert=this.onInsertCallback;
-    this.arrayModelDivisorBlock[1].arraySubDivisor[0].basicForm.onRemove=this.onRemoveCallback;
+    this.arrayModelDivisorBlock[0].arraySubDivisor[0].basicForm.onInsert=this.onInsertCallback;
+    this.arrayModelDivisorBlock[0].arraySubDivisor[0].basicForm.onRemove=this.onRemoveCallback;
   }
 
   onClickCallbackAdd = (modelClickButton: ModelClickButton) : void => {

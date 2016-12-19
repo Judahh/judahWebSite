@@ -1,40 +1,5 @@
 [
   {
-    "arraySubDivisor":[],
-    "divisor":{
-        "opacity":1,
-        "color": "transparent",
-        "arrayPadding": [5],
-        "arraySubDivisor":[
-            {
-                "toBottom": false,
-                "item":{
-                    "id":0,
-                    "routerLink":"",
-                    "routerLinkActive":"inactive",
-                    "colorEffect":{
-                        "color":"white",
-                        "colorEffect":"",
-                        "font":{
-                            "font":"DivClassFuturisticIAndII",
-                            "textAlign":"center",
-                            "width":"100%",
-                            "size":40,
-                            "arrayPadding":[],
-                            "animationEffect":{
-                                "class":"",
-                                "subClass":"",
-                                "subClasses":[],
-                                "arrayInformation":[]
-                            }
-                        }
-                    }
-                }
-            }
-        ]
-    }
-  },
-  {
     "arraySubDivisor":[
         {
             "basicForm":{
@@ -49,6 +14,7 @@
                                     "fontSize":15,
                                     "color":"white",
                                     "opacity":1,
+                                    "arrayPadding":[5],
                                     "border":[
                                         {
                                             "width":0,
@@ -72,6 +38,56 @@
                                         }
                                     ],
                                     "textInputType":0
+                                }
+                            },
+                            {
+                                "clickButton":{
+                                    "name":0,
+                                    "type":"button",
+                                    "item":{
+                                        "id":0,
+                                        "routerLink":"Workers",
+                                        "routerLinkActive":"active",
+                                        "colorEffect":{
+                                            "colorEffect":"DivClassNeon",
+                                            "font":{
+                                                "font":"DivClassOpenSansLight",
+                                                "size":15,
+                                                "arrayPadding":[5],
+                                                "animationEffect":{
+                                                    "class":"",
+                                                    "subClass":"",
+                                                    "subClasses":[],
+                                                    "arrayInformation":[]
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "clickButton":{
+                                    "name":0,
+                                    "type":"button",
+                                    "item":{
+                                        "id":0,
+                                        "routerLink":"Services",
+                                        "routerLinkActive":"active",
+                                        "colorEffect":{
+                                            "colorEffect":"DivClassNeon",
+                                            "font":{
+                                                "font":"DivClassOpenSansLight",
+                                                "size":15,
+                                                "arrayPadding":[5],
+                                                "animationEffect":{
+                                                    "class":"",
+                                                    "subClass":"",
+                                                    "subClasses":[],
+                                                    "arrayInformation":[]
+                                                }
+                                            }
+                                        }
+                                    }
                                 }
                             },
                             {
@@ -110,6 +126,38 @@
                 ]
             }
         }
-    ]
+    ],
+    "divisor":{
+        "opacity":1,
+        "color": "transparent",
+        "arrayPadding": [5],
+        "arraySubDivisor":[
+            {
+                "toBottom": false,
+                "item":{
+                    "id":0,
+                    "routerLink":"",
+                    "routerLinkActive":"inactive",
+                    "colorEffect":{
+                        "color":"white",
+                        "colorEffect":"",
+                        "font":{
+                            "font":"DivClassFuturisticIAndII",
+                            "textAlign":"center",
+                            "width":"100%",
+                            "size":40,
+                            "arrayPadding":[],
+                            "animationEffect":{
+                                "class":"",
+                                "subClass":"",
+                                "subClasses":[],
+                                "arrayInformation":[]
+                            }
+                        }
+                    }
+                }
+            }
+        ]
+    }
   }
 ]
