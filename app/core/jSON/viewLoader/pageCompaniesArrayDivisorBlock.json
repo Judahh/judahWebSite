@@ -9,7 +9,7 @@
                         [
                             {
                                 "textInput":{
-                                    "name":"company",
+                                    "name":"company0",
                                     "fontFamily":"OpenSans-Light",
                                     "fontSize":15,
                                     "color":"white",
@@ -42,7 +42,7 @@
                             },
                             {
                                 "clickButton":{
-                                    "name":0,
+                                    "name":"workers0",
                                     "type":"button",
                                     "item":{
                                         "id":0,
@@ -67,7 +67,7 @@
                             },
                             {
                                 "clickButton":{
-                                    "name":0,
+                                    "name":"services0",
                                     "type":"button",
                                     "item":{
                                         "id":0,

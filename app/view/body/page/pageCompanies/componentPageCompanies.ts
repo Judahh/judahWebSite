@@ -32,7 +32,7 @@ import { ServiceJSON } from './../../../../core/services/jSON/ServiceJSON';
 export class ComponentPageCompanies implements OnInit {
   modelCompaniesInformation:ModelCompaniesInformation;
   modelLanguages:ModelLanguages;
-  basicPhone:any;
+  basicCompany:any;
   currentWidth:number;
   arrayModelDivisorBlock:Array<ModelDivisorBlock>;
   changed:boolean=false;
@@ -89,8 +89,6 @@ export class ComponentPageCompanies implements OnInit {
     }
 
     //console.log("type:"+type);
-
-    this.getBasicPhoneService(type);
     this.getLanguageService();
     this.getInformationService();
     this.getArrayDivisorBlockService(type);
@@ -98,17 +96,6 @@ export class ComponentPageCompanies implements OnInit {
 
   ngOnDestroy() {
     //this.heroSubscription.unsubscribe();
-  }
-
-  private getBasicPhoneService(type:string){
-    var errorMessage="";
-
-    this.serviceJSON.getObservable('viewLoader/'+Utils.getFileSelector(Utils.getFileName(__filename))+'BasicPhone'+type).subscribe(
-      item => this.basicPhone=item, error => errorMessage = <any>error);
-    
-    if(errorMessage!=""){
-      alert("Error:"+errorMessage);
-    }
   }
 
   private getLanguageService(){
@@ -153,6 +140,8 @@ export class ComponentPageCompanies implements OnInit {
     this.arrayModelDivisorBlock[0].arraySubDivisor[0].basicForm.array3InputData[0][0][2].clickButton.item.colorEffect.font.animationEffect.arrayInformation.push(new ModelInformation(this.modelCompaniesInformation.services));
     this.arrayModelDivisorBlock[0].arraySubDivisor[0].basicForm.array3InputData[0][0][3].clickButton.onClick=this.onClickCallbackAdd;
 
+    this.basicCompany=JSON.parse(JSON.stringify(this.arrayModelDivisorBlock[0].arraySubDivisor[0].basicForm.array3InputData[0][0]));
+
     this.arrayModelDivisorBlock[0].arraySubDivisor[0].basicForm.onInsert=this.onInsertCallback;
     this.arrayModelDivisorBlock[0].arraySubDivisor[0].basicForm.onRemove=this.onRemoveCallback;
   }
@@ -160,44 +149,44 @@ export class ComponentPageCompanies implements OnInit {
   onClickCallbackAdd = (modelClickButton: ModelClickButton) : void => {
     // console.log("NAME:"+modelClickButton.name);
     var nextPosition:number=modelClickButton.name+1+1;
-    var arrayPhone=this.arrayModelDivisorBlock[1].arraySubDivisor[0].basicForm.array3InputData[1];
-    var phone=JSON.parse(JSON.stringify(this.basicPhone));
+    var arrayCompany=this.arrayModelDivisorBlock[0].arraySubDivisor[0].basicForm.array3InputData[0];
+    var company=JSON.parse(JSON.stringify(this.basicCompany));
 
-    phone[0].clickButton.onClick=this.onClickCallbackRemove;
-    phone[0].clickButton.name=nextPosition-1;
-    phone[1].textInput.placeholder=this.modelCompaniesInformation.phone;
-    phone[1].textInput.name=phone[1].textInput.name+(nextPosition-1);
-    phone[2].comboBox.arrayOptions[0]=this.modelCompaniesInformation.mobile;
-    phone[2].comboBox.arrayOptions[1]=this.modelCompaniesInformation.landline;
-    phone[2].comboBox.value=this.modelCompaniesInformation.mobile;
-    phone[2].comboBox.name=phone[2].comboBox.name+(nextPosition-1);
-    phone[3].clickButton.onClick=this.onClickCallbackAdd;
-    phone[3].clickButton.name=nextPosition-1;
+    company[0].clickButton.onClick=this.onClickCallbackRemove;
+    company[0].clickButton.name=nextPosition-1;
+    company[1].textInput.placeholder=this.modelCompaniesInformation.company;
+    company[1].textInput.name=company[1].textInput.name+(nextPosition-1);
+    company[2].comboBox.arrayOptions[0]=this.modelCompaniesInformation.mobile;
+    company[2].comboBox.arrayOptions[1]=this.modelCompaniesInformation.landline;
+    company[2].comboBox.value=this.modelCompaniesInformation.mobile;
+    company[2].comboBox.name=company[2].comboBox.name+(nextPosition-1);
+    company[3].clickButton.onClick=this.onClickCallbackAdd;
+    company[3].clickButton.name=nextPosition-1;
     
     if(arrayPhone.length==2){
-      var phone0=JSON.parse(JSON.stringify(this.basicPhone));
+      var company0=JSON.parse(JSON.stringify(this.basicPhone));
       var lastPhone=arrayPhone[1];
 
-      phone0[0].clickButton.onClick=this.onClickCallbackRemove;
-      phone0[0].clickButton.name=0;
+      company0[0].clickButton.onClick=this.onClickCallbackRemove;
+      company0[0].clickButton.name=0;
 
-      arrayPhone[1].splice(0, 0, phone0[0]);
+      arrayPhone[1].splice(0, 0, company0[0]);
     }
 
     if(nextPosition>=arrayPhone.length){
-      arrayPhone.push(phone);
+      arrayPhone.push(company);
     }else{
-      arrayPhone.splice(nextPosition, 0, phone);
+      arrayPhone.splice(nextPosition, 0, company);
     }
 
     if(arrayPhone.length>=2){
-      var phone=JSON.parse(JSON.stringify(this.basicPhone));
+      var company=JSON.parse(JSON.stringify(this.basicPhone));
       for (var index = 1; index < arrayPhone.length; index++) {
         var element = arrayPhone[index];
         
         element[0].clickButton.name=(index-1);
-        element[1].textInput.name=phone[1].textInput.name+(index-1);
-        element[2].comboBox.name=phone[2].comboBox.name+(index-1);
+        element[1].textInput.name=company[1].textInput.name+(index-1);
+        element[2].comboBox.name=company[2].comboBox.name+(index-1);
         element[3].clickButton.name=(index-1);
 
         // console.log("element refresh name:"+element[1].textInput.name);
@@ -213,13 +202,13 @@ export class ComponentPageCompanies implements OnInit {
     var tempArray=this.arrayModelDivisorBlock[1].arraySubDivisor[0].basicForm.array3InputData[1];
     tempArray.splice(position, 1);
 
-    var phone=JSON.parse(JSON.stringify(this.basicPhone));
+    var company=JSON.parse(JSON.stringify(this.basicPhone));
     for (var index = 1; index < tempArray.length; index++) {
       var element = tempArray[index];
-      element[0].clickButton.name=(phone[0].clickButton.name+(index-1));
-      element[1].textInput.name=phone[1].textInput.name+(index-1);
-      element[2].comboBox.name=phone[2].comboBox.name+(index-1);
-      element[3].clickButton.name=(phone[3].clickButton.name+(index-1));
+      element[0].clickButton.name=(company[0].clickButton.name+(index-1));
+      element[1].textInput.name=company[1].textInput.name+(index-1);
+      element[2].comboBox.name=company[2].comboBox.name+(index-1);
+      element[3].clickButton.name=(company[3].clickButton.name+(index-1));
       if(index==1 && tempArray.length==2){
         element.splice(0, 1);
         //console.log("S");
