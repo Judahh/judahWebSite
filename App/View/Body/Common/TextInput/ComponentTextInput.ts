@@ -2,7 +2,7 @@ import { Component, Input, OnInit, ViewEncapsulation, forwardRef } from '@angula
 
 import { ModelInformation } from './../item/colorEffect/font/animationEffect/information/ModelInformation';
 import { ModelAnimationEffect } from './../item/colorEffect/font/animationEffect/ModelAnimationEffect';
-import { ModelFont } from './../item/colorEffect/font/ModelFont';
+import { modelTextInput } from './../item/colorEffect/font/modelTextInput';
 import { ModelColorEffect } from './../item/colorEffect/ModelColorEffect';
 import { ModelItem } from './../item/ModelItem';
 
@@ -109,6 +109,11 @@ export class ComponentTextInput implements OnInit, ControlValueAccessor {
            this.opacity();
   }
 
+  positionStyle(){
+    return this.margin()+
+           this.padding();
+  }
+
   isField(){
       return this.modelTextInput.textInputType==TextInputType.field;
   }
@@ -169,6 +174,48 @@ export class ComponentTextInput implements OnInit, ControlValueAccessor {
       return "";
     }
     return "opacity: "+this.modelTextInput.opacity+";";
+  }
+
+  padding(){
+    if(this.modelTextInput.arrayPadding==null||this.modelTextInput.arrayPadding==undefined){
+      return "";
+    }
+
+    let stringPadding:string="";
+    for(let index:number=0;index<this.modelTextInput.arrayPadding.length;index++){
+      if(index==0){
+        stringPadding+="padding:";
+      }
+
+      stringPadding+=" "+(this.modelTextInput.arrayPadding[index]+"px");
+
+      if(index==this.modelTextInput.arrayPadding.length-1){
+        stringPadding+=";";
+      }
+    }
+
+    return stringPadding;
+  }
+
+  margin(){
+    if(this.modelTextInput.arrayMargin==null||this.modelTextInput.arrayMargin==undefined){
+      return "";
+    }
+
+    let stringMargin:string="";
+    for(let index:number=0;index<this.modelTextInput.arrayMargin.length;index++){
+      if(index==0){
+        stringMargin+="margin:";
+      }
+
+      stringMargin+=" "+(this.modelTextInput.arrayMargin[index]+"px");
+
+      if(index==this.modelTextInput.arrayMargin.length-1){
+        stringMargin+=";";
+      }
+    }
+
+    return stringMargin;
   }
 
 }

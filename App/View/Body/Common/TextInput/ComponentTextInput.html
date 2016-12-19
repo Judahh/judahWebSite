@@ -1,4 +1,4 @@
-<div [formGroup]="form">
+<div [formGroup]="form" [style]="positionStyle()|safeStyle">
 <input 
     *ngIf="isField()"
     name="{{modelTextInput.name}}"
