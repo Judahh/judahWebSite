@@ -135,12 +135,15 @@ export class ComponentPageCompanies implements OnInit {
     this.arrayModelDivisorBlock=arrayModelDivisorBlock;
     this.arrayModelDivisorBlock[0].divisor.arraySubDivisor[0].item.colorEffect.font.animationEffect.arrayInformation.push(new ModelInformation(this.modelCompaniesInformation.title));
 
-    this.arrayModelDivisorBlock[0].arraySubDivisor[0].basicForm.array3InputData[0][0][0].textInput.placeholder=this.modelCompaniesInformation.company;
-    this.arrayModelDivisorBlock[0].arraySubDivisor[0].basicForm.array3InputData[0][0][1].clickButton.item.colorEffect.font.animationEffect.arrayInformation.push(new ModelInformation(this.modelCompaniesInformation.workers));
-    this.arrayModelDivisorBlock[0].arraySubDivisor[0].basicForm.array3InputData[0][0][2].clickButton.item.colorEffect.font.animationEffect.arrayInformation.push(new ModelInformation(this.modelCompaniesInformation.services));
-    this.arrayModelDivisorBlock[0].arraySubDivisor[0].basicForm.array3InputData[0][0][3].clickButton.onClick=this.onClickCallbackAdd;
+    this.arrayModelDivisorBlock[0].arraySubDivisor[0].basicForm.array3InputData[0][0][0].clickButton.onClick=this.onClickCallbackRemove;
+    this.arrayModelDivisorBlock[0].arraySubDivisor[0].basicForm.array3InputData[0][0][1].textInput.placeholder=this.modelCompaniesInformation.company;
+    this.arrayModelDivisorBlock[0].arraySubDivisor[0].basicForm.array3InputData[0][0][2].clickButton.item.colorEffect.font.animationEffect.arrayInformation.push(new ModelInformation(this.modelCompaniesInformation.workers));
+    this.arrayModelDivisorBlock[0].arraySubDivisor[0].basicForm.array3InputData[0][0][3].clickButton.item.colorEffect.font.animationEffect.arrayInformation.push(new ModelInformation(this.modelCompaniesInformation.services));
+    this.arrayModelDivisorBlock[0].arraySubDivisor[0].basicForm.array3InputData[0][0][4].clickButton.onClick=this.onClickCallbackAdd;
 
     this.basicCompany=JSON.parse(JSON.stringify(this.arrayModelDivisorBlock[0].arraySubDivisor[0].basicForm.array3InputData[0][0]));
+
+    this.arrayModelDivisorBlock[0].arraySubDivisor[0].basicForm.array3InputData[0][0].splice(0, 1);
 
     this.arrayModelDivisorBlock[0].arraySubDivisor[0].basicForm.onInsert=this.onInsertCallback;
     this.arrayModelDivisorBlock[0].arraySubDivisor[0].basicForm.onRemove=this.onRemoveCallback;
@@ -156,12 +159,10 @@ export class ComponentPageCompanies implements OnInit {
     company[0].clickButton.name=nextPosition-1;
     company[1].textInput.placeholder=this.modelCompaniesInformation.company;
     company[1].textInput.name=company[1].textInput.name+(nextPosition-1);
-    company[2].comboBox.arrayOptions[0]=this.modelCompaniesInformation.mobile;
-    company[2].comboBox.arrayOptions[1]=this.modelCompaniesInformation.landline;
-    company[2].comboBox.value=this.modelCompaniesInformation.mobile;
-    company[2].comboBox.name=company[2].comboBox.name+(nextPosition-1);
-    company[3].clickButton.onClick=this.onClickCallbackAdd;
-    company[3].clickButton.name=nextPosition-1;
+    company[2].clickButton.name=company[2].clickButton.name+(nextPosition-1);
+    company[3].clickButton.name=company[2].clickButton.name+(nextPosition-1);
+    company[4].clickButton.onClick=this.onClickCallbackAdd;
+    company[4].clickButton.name=nextPosition-1;
     
     if(arrayPhone.length==2){
       var company0=JSON.parse(JSON.stringify(this.basicPhone));

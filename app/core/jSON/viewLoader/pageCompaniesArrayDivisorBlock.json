@@ -8,6 +8,37 @@
                     [
                         [
                             {
+                                "clickButton":{
+                                    "name":0,
+                                    "type":"button",
+                                    "class":"ButtonClassRedIcon",
+                                    "item":{
+                                        "id":0,
+                                        "routerLink":"",
+                                        "routerLinkActive":"inactive",
+                                        "colorEffect":{
+                                            "colorEffect":"",
+                                            "font":{
+                                                "font":"DivClassFontAwesome",
+                                                "width":"100%",
+                                                "size":15,
+                                                "arrayPadding":[2],
+                                                "animationEffect":{
+                                                    "class":"",
+                                                    "subClass":"",
+                                                    "subClasses":[],
+                                                    "arrayInformation":[
+                                                        {
+                                                            "information":""
+                                                        }
+                                                    ]
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            },
+                            {
                                 "textInput":{
                                     "name":"company0",
                                     "fontFamily":"OpenSans-Light",
