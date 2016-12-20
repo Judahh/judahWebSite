@@ -2,7 +2,7 @@ import { Component, Input, OnInit, ViewEncapsulation, forwardRef } from '@angula
 
 import { ModelInformation } from './../item/colorEffect/font/animationEffect/information/ModelInformation';
 import { ModelAnimationEffect } from './../item/colorEffect/font/animationEffect/ModelAnimationEffect';
-import { modelTextInput } from './../item/colorEffect/font/modelTextInput';
+import { ModelFont } from './../item/colorEffect/font/ModelFont';
 import { ModelColorEffect } from './../item/colorEffect/ModelColorEffect';
 import { ModelItem } from './../item/ModelItem';
 

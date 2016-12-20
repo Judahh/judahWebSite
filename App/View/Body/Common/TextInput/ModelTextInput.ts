@@ -14,6 +14,9 @@ export class ModelTextInput {
     color:string;
     backgroundColor:string;
     opacity:number;
+
+    arrayPadding:Array<number>;
+    arrayMargin:Array<number>;
     
     isField(){
         return this.textInputType==TextInputType.field;
