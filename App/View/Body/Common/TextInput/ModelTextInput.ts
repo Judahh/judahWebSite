@@ -1,7 +1,7 @@
 import { TextInputType } from './TextInputType';
 
 export class ModelTextInput {
-    name:string;
+    name:any;
     fontFamily:string;
     fontSize:number;//px
     textInputType:TextInputType;

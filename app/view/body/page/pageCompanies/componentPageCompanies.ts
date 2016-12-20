@@ -183,17 +183,22 @@ export class ComponentPageCompanies implements OnInit {
       arrayCompany.splice(nextPosition, 0, company);
     }
 
-    // if(arrayCompany.length>=2){
-    //   var company=JSON.parse(JSON.stringify(this.basicCompany));
-    //   for (var index = 1; index < arrayCompany.length; index++) {
-    //     var element = arrayCompany[index];
-        
-    //     element[0].clickButton.name=(index-1);
-    //     element[1].textInput.name=company[1].textInput.name+(index-1);
-    //     element[2].comboBox.name=company[2].comboBox.name+(index-1);
-    //     element[3].clickButton.name=(index-1);
-    //   }
-    // }
+    if(arrayCompany.length>1){
+      var company=JSON.parse(JSON.stringify(this.basicCompany));
+      for (var index:number = 0; index < arrayCompany.length; index++) {
+        var element = arrayCompany[index];
+        var company0=JSON.parse(JSON.stringify(this.basicCompany));
+
+        element[0].clickButton.onClick=this.onClickCallbackRemove;
+        element[4].clickButton.onClick=this.onClickCallbackAdd;
+
+        element[0].clickButton.name=company0[0].clickButton.name+(index);
+        element[1].textInput.name=company0[1].clickButton.name+(index);
+        element[2].clickButton.name=company0[2].clickButton.name+(index);
+        element[3].clickButton.name=company0[3].clickButton.name+(index);
+        element[4].clickButton.name=company0[4].clickButton.name+(index);
+      }
+    }
     this.changed=true;
   }
 
