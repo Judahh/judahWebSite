@@ -9,7 +9,7 @@
                         [
                             {
                                 "clickButton":{
-                                    "name":0,
+                                    "name":"remove",
                                     "type":"button",
                                     "class":"ButtonClassRedIcon",
                                     "item":{
@@ -40,7 +40,7 @@
                             },
                             {
                                 "textInput":{
-                                    "name":"company0",
+                                    "name":"company",
                                     "fontFamily":"OpenSans-Light",
                                     "fontSize":15,
                                     "color":"white",
@@ -73,7 +73,7 @@
                             },
                             {
                                 "clickButton":{
-                                    "name":"workers0",
+                                    "name":"workers",
                                     "type":"button",
                                     "item":{
                                         "id":0,
@@ -98,7 +98,7 @@
                             },
                             {
                                 "clickButton":{
-                                    "name":"services0",
+                                    "name":"services",
                                     "type":"button",
                                     "item":{
                                         "id":0,
@@ -123,7 +123,7 @@
                             },
                             {
                                 "clickButton":{
-                                    "name":0,
+                                    "name":"add",
                                     "type":"button",
                                     "class":"ButtonClassBlueIcon",
                                     "item":{

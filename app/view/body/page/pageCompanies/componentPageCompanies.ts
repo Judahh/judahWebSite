@@ -145,33 +145,36 @@ export class ComponentPageCompanies implements OnInit {
 
     this.arrayModelDivisorBlock[0].arraySubDivisor[0].basicForm.array3InputData[0][0].splice(0, 1);
 
+    this.arrayModelDivisorBlock[0].arraySubDivisor[0].basicForm.array3InputData[0][0][0].textInput.name+=0;
+    this.arrayModelDivisorBlock[0].arraySubDivisor[0].basicForm.array3InputData[0][0][1].clickButton.name+=0;
+    this.arrayModelDivisorBlock[0].arraySubDivisor[0].basicForm.array3InputData[0][0][2].clickButton.name+=0;
+    this.arrayModelDivisorBlock[0].arraySubDivisor[0].basicForm.array3InputData[0][0][3].clickButton.name+=0;
+
     this.arrayModelDivisorBlock[0].arraySubDivisor[0].basicForm.onInsert=this.onInsertCallback;
     this.arrayModelDivisorBlock[0].arraySubDivisor[0].basicForm.onRemove=this.onRemoveCallback;
   }
 
   onClickCallbackAdd = (modelClickButton: ModelClickButton) : void => {
-    // console.log("NAME:"+modelClickButton.name);
-    var nextPosition:number=modelClickButton.name+1+1;
+    var nextPosition:number=modelClickButton.name.split('add')[1];
+    nextPosition++;
     var arrayCompany=this.arrayModelDivisorBlock[0].arraySubDivisor[0].basicForm.array3InputData[0];
     var company=JSON.parse(JSON.stringify(this.basicCompany));
 
     company[0].clickButton.onClick=this.onClickCallbackRemove;
-    company[0].clickButton.name=nextPosition-1;
-    company[1].textInput.placeholder=this.modelCompaniesInformation.company;
-    company[1].textInput.name=company[1].textInput.name+(nextPosition-1);
-    company[2].clickButton.name=company[2].clickButton.name+(nextPosition-1);
-    company[3].clickButton.name=company[2].clickButton.name+(nextPosition-1);
+    company[0].clickButton.name+=nextPosition;
+    company[1].textInput.name+=(nextPosition);
+    company[2].clickButton.name+=(nextPosition);
+    company[3].clickButton.name+=(nextPosition);
     company[4].clickButton.onClick=this.onClickCallbackAdd;
-    company[4].clickButton.name=nextPosition-1;
+    company[4].clickButton.name+=nextPosition;
     
-    if(arrayCompany.length==2){
+    if(arrayCompany.length==1){
       var company0=JSON.parse(JSON.stringify(this.basicCompany));
-      var lastPhone=arrayCompany[1];
 
       company0[0].clickButton.onClick=this.onClickCallbackRemove;
-      company0[0].clickButton.name=0;
+      company0[0].clickButton.name="remove"+0;
 
-      arrayCompany[1].splice(0, 0, company0[0]);
+      arrayCompany[0].splice(0, 0, company0[0]);
     }
 
     if(nextPosition>=arrayCompany.length){
@@ -180,20 +183,17 @@ export class ComponentPageCompanies implements OnInit {
       arrayCompany.splice(nextPosition, 0, company);
     }
 
-    if(arrayCompany.length>=2){
-      var company=JSON.parse(JSON.stringify(this.basicCompany));
-      for (var index = 1; index < arrayCompany.length; index++) {
-        var element = arrayCompany[index];
+    // if(arrayCompany.length>=2){
+    //   var company=JSON.parse(JSON.stringify(this.basicCompany));
+    //   for (var index = 1; index < arrayCompany.length; index++) {
+    //     var element = arrayCompany[index];
         
-        element[0].clickButton.name=(index-1);
-        element[1].textInput.name=company[1].textInput.name+(index-1);
-        element[2].comboBox.name=company[2].comboBox.name+(index-1);
-        element[3].clickButton.name=(index-1);
-
-        // console.log("element refresh name:"+element[1].textInput.name);
-        // console.log("element refresh:"+element[1].textInput.value);
-      }
-    }
+    //     element[0].clickButton.name=(index-1);
+    //     element[1].textInput.name=company[1].textInput.name+(index-1);
+    //     element[2].comboBox.name=company[2].comboBox.name+(index-1);
+    //     element[3].clickButton.name=(index-1);
+    //   }
+    // }
     this.changed=true;
   }
 
@@ -221,13 +221,12 @@ export class ComponentPageCompanies implements OnInit {
   onInsertCallback = (componentBasicForm:ComponentBasicForm,event:any) : void => {
     if(event.relatedNode.nodeName=="INFORMATION"&& this.changed){
       this.changed=false;
-      var arrayCompany=this.arrayModelDivisorBlock[1].arraySubDivisor[0].basicForm.array3InputData[1];
-      if(arrayCompany.length==2){
+      var arrayCompany=this.arrayModelDivisorBlock[0].arraySubDivisor[0].basicForm.array3InputData[0];
+      if(arrayCompany.length==1){
         // console.log("1:");
-        var index = 1;
+        var index = 0;
         var element = arrayCompany[index];
         componentBasicForm.addControl(element[0].textInput.name, element[0].textInput.value, false);
-        componentBasicForm.addControl(element[1].comboBox.name, element[1].comboBox.value, false);
       }else{
         // console.log("2:");
 
@@ -236,26 +235,15 @@ export class ComponentPageCompanies implements OnInit {
 
         for (var index = 1; index < arrayCompany.length; index++) {
           var element = arrayCompany[index];
-          // console.log("e:"+element[1].textInput.value);
           values.push(element[1].textInput.value);
-          boxes.push(element[2].comboBox.value);
-          // console.log("value:"+values[index-1]);
         }
 
         for (var index = 1; index < arrayCompany.length; index++) {
           var element = arrayCompany[index];
           var value = values[index-1];
-          var box = boxes[index-1];
-          // console.log("element name:"+element[1].textInput.name);
-          // console.log("element:"+element[1].textInput.value);
           componentBasicForm.removeControl(element[1].textInput.name);
-          componentBasicForm.removeControl(element[2].comboBox.name);
           componentBasicForm.addControl(element[1].textInput.name, value, false);
-          componentBasicForm.addControl(element[2].comboBox.name, box, false);
           element[1].textInput.value=value;
-          element[2].comboBox.value=box;
-          // console.log("element name2:"+element[1].textInput.name);
-          // console.log("element2:"+element[1].textInput.value);
         }
       }
     }
