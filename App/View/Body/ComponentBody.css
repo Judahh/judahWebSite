@@ -17,6 +17,15 @@
 }
 
 @font-face {
+    font-family: "BlueLion";
+    src: url("App/view/body/fonts/Brands/blueLion.otf");
+    src: url("App/view/body/fonts/Brands/blueLion.woff") format('woff');
+    /*src: url("../../../../../../fonts/Brands/blueLion.ttf")  format(‘truetype’);*/
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
     font-family: "FontIconSocialMedia";
     src: url("App/view/body/fonts/Brands/Socialico.otf");
     /*src: url("../../../../../../fonts/Socialico.woff") format('woff');

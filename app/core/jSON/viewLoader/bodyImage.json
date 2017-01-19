@@ -1,9 +1,9 @@
 {
     "opacity":1,
-    "source":"app/view/body/images/pictures/programming.jpg",
+    "source":"",
     "width": "100%",
     "height": "100%",
     "position": "fixed",
-    "filter": "brightness(70%) grayscale(0%) blur(5px)",
+    "filter": "",
     "zIndex": -1000
 }

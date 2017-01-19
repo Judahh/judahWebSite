@@ -13,7 +13,7 @@
                     "routerLink":"",
                     "routerLinkActive":"inactive",
                     "colorEffect":{
-                        "color":"white",
+                        "color":"deepskyblue",
                         "colorEffect":"",
                         "font":{
                             "font":"DivClassFuturisticIAndII",
@@ -48,7 +48,7 @@
                     "routerLink":"",
                     "routerLinkActive":"inactive",
                     "colorEffect":{
-                        "color":"white",
+                        "color":"deepskyblue",
                         "colorEffect":"",
                         "font":{
                             "font":"DivClassFuturisticIAndII",
@@ -86,7 +86,7 @@
                     "boxSizing":"border-box",
                     "borderSize":"1",
                     "borderRadius":"1000",
-                    "color":"white",
+                    "color":"deepskyblue",
                     "position":"relative"
                 }
             },
@@ -97,7 +97,7 @@
                     "routerLink":"",
                     "routerLinkActive":"inactive",
                     "colorEffect":{
-                        "color":"white",
+                        "color":"deepskyblue",
                         "colorEffect":"",
                         "font":{
                             "font":"DivClassOpenSans",
@@ -133,7 +133,7 @@
                     "routerLink":"",
                     "routerLinkActive":"inactive",
                     "colorEffect":{
-                        "color":"white",
+                        "color":"deepskyblue",
                         "colorEffect":"",
                         "font":{
                             "font":"DivClassFuturisticIAndII",
@@ -191,7 +191,7 @@
                     "routerLink":"",
                     "routerLinkActive":"inactive",
                     "colorEffect":{
-                        "color":"white",
+                        "color":"deepskyblue",
                         "colorEffect":"",
                         "font":{
                             "font":"DivClassOpenSans",
