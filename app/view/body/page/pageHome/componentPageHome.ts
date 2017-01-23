@@ -127,7 +127,7 @@ export class ComponentPageHome implements OnInit {
     this.arrayModelDivisorBlock=arrayModelDivisorBlock;
     this.arrayModelDivisorBlock[0].divisor.arraySubDivisor[0].item.colorEffect.font.animationEffect.arrayInformation.push(new ModelInformation(this.title()));
     this.arrayModelDivisorBlock[1].divisor.arraySubDivisor[0].item.colorEffect.font.animationEffect.arrayInformation.push(new ModelInformation(this.name()));
-    this.arrayModelDivisorBlock[2].divisor.arraySubDivisor[0].image.source = this.modelHome.myPicturePath;
+    // this.arrayModelDivisorBlock[2].divisor.arraySubDivisor[0].image.source = this.modelHome.myPicturePath;
     this.arrayModelDivisorBlock[2].divisor.arraySubDivisor[1].item.colorEffect.font.animationEffect.arrayInformation.push(new ModelInformation(this.personalStatement()));
     this.arrayModelDivisorBlock[2].divisor.arraySubDivisor[1].item.colorEffect.font.animationEffect.arrayInformation.push(new ModelInformation(" "));
     this.arrayModelDivisorBlock[2].divisor.arraySubDivisor[1].item.colorEffect.font.animationEffect.arrayInformation.push(new ModelInformation(this.personalStatement2()));

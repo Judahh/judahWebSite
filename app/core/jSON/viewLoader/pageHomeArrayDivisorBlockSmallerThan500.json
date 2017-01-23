@@ -13,7 +13,7 @@
                     "routerLink":"",
                     "routerLinkActive":"inactive",
                     "colorEffect":{
-                        "color":"white",
+                        "color":"deepskyblue",
                         "colorEffect":"",
                         "font":{
                             "font":"DivClassFuturisticIAndII",
@@ -48,7 +48,7 @@
                     "routerLink":"",
                     "routerLinkActive":"inactive",
                     "colorEffect":{
-                        "color":"white",
+                        "color":"deepskyblue",
                         "colorEffect":"",
                         "font":{
                             "font":"DivClassFuturisticIAndII",
@@ -78,17 +78,34 @@
         "arrayPadding": [],
         "arraySubDivisor":[
             {
-                "float":"left",
-                "width":"100%",
-                "arrayPadding":[15],
                 "toBottom": false,
-                "image":{
-                    "boxSizing":"border-box",
-                    "borderSize":"5",
-                    "borderRadius":"1000",
-                    "color":"white",
-                    "width":"100%",
-                    "position":"relative"
+                "item":{
+                    "id":1,
+                    "routerLink":"",
+                    "routerLinkActive":"inactive",
+                    "colorEffect":{
+                        "color":"deepskyblue",
+                        "colorEffect":"DivClassNeon",
+                        "font":{
+                            "font":"DivClassBlueLion",
+                            "textAlign":"center",
+                            "verticalAlign":"center",
+                            "width":"",
+                            "size":400,
+                            "arrayPadding":[5],
+                            "animationEffect":{
+                                "class":"",
+                                "subClass":"",
+                                "subClasses":[],
+                                "arrayInformation":[
+                                    {
+                                        "information":"A",
+                                        "opacity":1
+                                    }
+                                ]
+                            }
+                        }
+                    }
                 }
             },
             {
@@ -98,7 +115,7 @@
                     "routerLink":"",
                     "routerLinkActive":"inactive",
                     "colorEffect":{
-                        "color":"white",
+                        "color":"deepskyblue",
                         "colorEffect":"",
                         "font":{
                             "font":"DivClassOpenSans",
@@ -134,7 +151,7 @@
                     "routerLink":"",
                     "routerLinkActive":"inactive",
                     "colorEffect":{
-                        "color":"white",
+                        "color":"deepskyblue",
                         "colorEffect":"",
                         "font":{
                             "font":"DivClassFuturisticIAndII",
@@ -192,7 +209,7 @@
                     "routerLink":"",
                     "routerLinkActive":"inactive",
                     "colorEffect":{
-                        "color":"white",
+                        "color":"deepskyblue",
                         "colorEffect":"",
                         "font":{
                             "font":"DivClassOpenSans",

@@ -13,7 +13,7 @@
                     "routerLink":"",
                     "routerLinkActive":"inactive",
                     "colorEffect":{
-                        "color":"white",
+                        "color":"deepskyblue",
                         "colorEffect":"",
                         "font":{
                             "font":"DivClassFuturisticIAndII",
@@ -48,7 +48,7 @@
                     "routerLink":"",
                     "routerLinkActive":"inactive",
                     "colorEffect":{
-                        "color":"white",
+                        "color":"deepskyblue",
                         "colorEffect":"",
                         "font":{
                             "font":"DivClassFuturisticIAndII",
@@ -79,15 +79,34 @@
         "arraySubDivisor":[
             {
                 "float":"left",
-                "width":"25%",
                 "arrayPadding":[15],
                 "toBottom": false,
-                "image":{
-                    "boxSizing":"border-box",
-                    "borderSize":"1",
-                    "borderRadius":"1000",
-                    "color":"white",
-                    "position":"relative"
+                "item":{
+                    "id":1,
+                    "routerLink":"",
+                    "routerLinkActive":"inactive",
+                    "colorEffect":{
+                        "color":"deepskyblue",
+                        "colorEffect":"DivClassNeon",
+                        "font":{
+                            "font":"DivClassBlueLion",
+                            "verticalAlign":"",
+                            "width":"",
+                            "size":150,
+                            "arrayPadding":[5],
+                            "animationEffect":{
+                                "class":"",
+                                "subClass":"",
+                                "subClasses":[],
+                                "arrayInformation":[
+                                    {
+                                        "information":"A",
+                                        "opacity":1
+                                    }
+                                ]
+                            }
+                        }
+                    }
                 }
             },
             {
@@ -97,7 +116,7 @@
                     "routerLink":"",
                     "routerLinkActive":"inactive",
                     "colorEffect":{
-                        "color":"white",
+                        "color":"deepskyblue",
                         "colorEffect":"",
                         "font":{
                             "font":"DivClassOpenSans",
@@ -133,7 +152,7 @@
                     "routerLink":"",
                     "routerLinkActive":"inactive",
                     "colorEffect":{
-                        "color":"white",
+                        "color":"deepskyblue",
                         "colorEffect":"",
                         "font":{
                             "font":"DivClassFuturisticIAndII",
@@ -191,7 +210,7 @@
                     "routerLink":"",
                     "routerLinkActive":"inactive",
                     "colorEffect":{
-                        "color":"white",
+                        "color":"deepskyblue",
                         "colorEffect":"",
                         "font":{
                             "font":"DivClassOpenSans",
