@@ -2,10 +2,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { ComponentPage } from './view/body/page/ComponentPage';
 
-import { ComponentPageWhoAmI } from './view/body/page/pageWhoAmI/ComponentPageWhoAmI';
-import { ComponentPageEducation } from './view/body/page/pageEducation/ComponentPageEducation';
-import { ComponentPageSkills } from './view/body/page/pageSkills/ComponentPageSkills';
-import { ComponentPageProjects } from './view/body/page/pageProjects/ComponentPageProjects';
+import { ComponentPageHome } from './view/body/page/pageHome/ComponentPageHome';
 import { ComponentPageContact } from './view/body/page/pageContact/ComponentPageContact';
 import { ComponentPageLanguages } from './view/body/page/pageLanguages/ComponentPageLanguages';
 import { ComponentPageCompanies } from './view/body/page/pageCompanies/ComponentPageCompanies';
@@ -14,20 +11,8 @@ import { ComponentPageCompanies } from './view/body/page/pageCompanies/Component
 
 const appRoutes: Routes = [
   {
-    path: 'WhoAmI',
-    component: ComponentPageWhoAmI
-  },
-  {
-    path: 'Education',
-    component: ComponentPageEducation
-  },
-  {
-    path: 'Skills',
-    component: ComponentPageSkills
-  },
-  {
-    path: 'Projects',
-    component: ComponentPageProjects
+    path: 'Home',
+    component: ComponentPageHome
   },
   {
     path: 'Contact',
@@ -43,7 +28,7 @@ const appRoutes: Routes = [
   },
   {
     path: '**',
-    redirectTo: '/WhoAmI',
+    redirectTo: '/Home',
   }//,
   // {
   //   path: 'api/{controller}/{id?}',
@@ -55,10 +40,7 @@ export const routing = RouterModule.forRoot(appRoutes);
 
 export const routedComponents = 
   [
-    ComponentPageWhoAmI,
-    ComponentPageEducation,
-    ComponentPageSkills,
-    ComponentPageProjects,
+    ComponentPageHome,
     ComponentPageContact,
     ComponentPageLanguages,
     ComponentPageCompanies

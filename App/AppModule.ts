@@ -17,10 +17,7 @@ import { ComponentHeader } from './view/body/header/ComponentHeader';
 
 import { ComponentPage } from './view/body/page/ComponentPage';
 
-import { ComponentPageWhoAmI } from './view/body/page/pageWhoAmI/ComponentPageWhoAmI';
-import { ComponentPageEducation } from './view/body/page/pageEducation/ComponentPageEducation';
-import { ComponentPageSkills } from './view/body/page/pageSkills/ComponentPageSkills';
-import { ComponentPageProjects } from './view/body/page/pageProjects/ComponentPageProjects';
+import { ComponentPageHome } from './view/body/page/pageHome/ComponentPageHome';
 import { ComponentPageContact } from './view/body/page/pageContact/ComponentPageContact';
 import { ComponentPageLanguages } from './view/body/page/pageLanguages/ComponentPageLanguages';
 import { ComponentPageCompanies } from './view/body/page/pageCompanies/ComponentPageCompanies';
@@ -121,10 +118,7 @@ export class SafeStylePipe implements PipeTransform {
     ComponentBody,
     ComponentHeader,
     ComponentPage,
-    ComponentPageWhoAmI,
-    ComponentPageEducation,
-    ComponentPageSkills,
-    ComponentPageProjects,
+    ComponentPageHome,
     ComponentPageContact,
     ComponentPageLanguages,
     ComponentPageCompanies,

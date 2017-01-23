@@ -14,8 +14,8 @@ import { ModelFont } from './../../common/item/colorEffect/font/ModelFont';
 import { ModelColorEffect } from './../../common/item/colorEffect/ModelColorEffect';
 import { ModelItem } from './../../common/item/ModelItem';
 
-import { ModelWhoAmI } from './ModelWhoAmI';
-import { ModelWhoAmIInformation } from './ModelWhoAmIInformation';
+import { ModelHome } from './ModelHome';
+import { ModelHomeInformation } from './ModelHomeInformation';
 
 import { ServiceJSON } from './../../../../core/services/jSON/ServiceJSON';
 
@@ -27,45 +27,45 @@ import { ServiceJSON } from './../../../../core/services/jSON/ServiceJSON';
   encapsulation: ViewEncapsulation.None
 })
 
-export class ComponentPageWhoAmI implements OnInit {
-  modelWhoAmI:ModelWhoAmI;
-  modelWhoAmIInformation:ModelWhoAmIInformation;
+export class ComponentPageHome implements OnInit {
+  modelHome:ModelHome;
+  modelHomeInformation:ModelHomeInformation;
   modelLanguages:ModelLanguages;
   arrayModelDivisorBlock:Array<ModelDivisorBlock>;
   currentWidth:number;
 
   title(){
-    return this.modelWhoAmIInformation.title;
+    return this.modelHomeInformation.title;
   }
 
   name(){
-    return this.modelWhoAmIInformation.name;
+    return this.modelHomeInformation.name;
   }
 
   personalStatement(){
-      return (this.modelWhoAmIInformation.personalStatementBeforeAge
-      + Utils.gregorianAge(this.modelWhoAmI.birthDate)
-      + this.modelWhoAmIInformation.personalStatementAfterAge);
+      return (this.modelHomeInformation.personalStatementBeforeAge
+      + Utils.gregorianAge(this.modelHome.birthDate)
+      + this.modelHomeInformation.personalStatementAfterAge);
   }
 
   personalStatement2(){
-    return (this.modelWhoAmIInformation.personalStatement2);
+    return (this.modelHomeInformation.personalStatement2);
   }
   
   talkingAboutMe(){
-    return this.modelWhoAmIInformation.talkingAboutMe;
+    return this.modelHomeInformation.talkingAboutMe;
   }
 
   talkingAboutMe2(){
-    return this.modelWhoAmIInformation.talkingAboutMe2;
+    return this.modelHomeInformation.talkingAboutMe2;
   }
 
   thinkDifferentTitle(){
-    return this.modelWhoAmIInformation.thinkDifferentTitle;
+    return this.modelHomeInformation.thinkDifferentTitle;
   }
 
   thinkDifferent(){
-    return this.modelWhoAmIInformation.thinkDifferent;
+    return this.modelHomeInformation.thinkDifferent;
   }
 
   ngOnInit() {
@@ -76,9 +76,9 @@ export class ComponentPageWhoAmI implements OnInit {
 
   initialization(){
     this.arrayModelDivisorBlock=new Array<ModelDivisorBlock>();
-    this.modelWhoAmI=new ModelWhoAmI();
+    this.modelHome=new ModelHome();
     this.modelLanguages=new ModelLanguages();
-    this.modelWhoAmIInformation=new ModelWhoAmIInformation();
+    this.modelHomeInformation=new ModelHomeInformation();
 
     this.refresh();
   }
@@ -127,7 +127,7 @@ export class ComponentPageWhoAmI implements OnInit {
     this.arrayModelDivisorBlock=arrayModelDivisorBlock;
     this.arrayModelDivisorBlock[0].divisor.arraySubDivisor[0].item.colorEffect.font.animationEffect.arrayInformation.push(new ModelInformation(this.title()));
     this.arrayModelDivisorBlock[1].divisor.arraySubDivisor[0].item.colorEffect.font.animationEffect.arrayInformation.push(new ModelInformation(this.name()));
-    this.arrayModelDivisorBlock[2].divisor.arraySubDivisor[0].image.source = this.modelWhoAmI.myPicturePath;
+    this.arrayModelDivisorBlock[2].divisor.arraySubDivisor[0].image.source = this.modelHome.myPicturePath;
     this.arrayModelDivisorBlock[2].divisor.arraySubDivisor[1].item.colorEffect.font.animationEffect.arrayInformation.push(new ModelInformation(this.personalStatement()));
     this.arrayModelDivisorBlock[2].divisor.arraySubDivisor[1].item.colorEffect.font.animationEffect.arrayInformation.push(new ModelInformation(" "));
     this.arrayModelDivisorBlock[2].divisor.arraySubDivisor[1].item.colorEffect.font.animationEffect.arrayInformation.push(new ModelInformation(this.personalStatement2()));
@@ -137,7 +137,7 @@ export class ComponentPageWhoAmI implements OnInit {
     this.arrayModelDivisorBlock[2].divisor.arraySubDivisor[1].item.colorEffect.font.animationEffect.arrayInformation.push(new ModelInformation(this.talkingAboutMe2()));
     this.arrayModelDivisorBlock[2].divisor.arraySubDivisor[1].item.colorEffect.font.animationEffect.arrayInformation.push(new ModelInformation(" "));
     this.arrayModelDivisorBlock[3].divisor.arraySubDivisor[0].item.colorEffect.font.animationEffect.arrayInformation.push(new ModelInformation(this.thinkDifferentTitle()));
-    this.arrayModelDivisorBlock[4].divisor.arraySubDivisor[0].videoLink.source = this.modelWhoAmI.videoLink;
+    this.arrayModelDivisorBlock[4].divisor.arraySubDivisor[0].videoLink.source = this.modelHome.videoLink;
     this.arrayModelDivisorBlock[5].divisor.arraySubDivisor[0].item.colorEffect.font.animationEffect.arrayInformation.push(new ModelInformation(" "));
     this.arrayModelDivisorBlock[5].divisor.arraySubDivisor[0].item.colorEffect.font.animationEffect.arrayInformation.push(new ModelInformation(this.thinkDifferent()));
   }
@@ -146,7 +146,7 @@ export class ComponentPageWhoAmI implements OnInit {
     var errorMessage="";
 
     this.serviceJSON.getObservable('viewLoader/'+Utils.getFileSelector(Utils.getFileName(__filename))).subscribe(
-      item => this.modelWhoAmI=item, error => errorMessage = <any>error);
+      item => this.modelHome=item, error => errorMessage = <any>error);
     
     if(errorMessage!=""){
       alert("Error:"+errorMessage);
@@ -168,7 +168,7 @@ export class ComponentPageWhoAmI implements OnInit {
     var errorMessage="";
 
     this.serviceJSON.getObservable('languages/'+Utils.getFileSelector(Utils.getFileName(__filename))).subscribe(
-      items => this.modelWhoAmIInformation=Languages.getPageLanguage(items,this.modelLanguages), error => errorMessage = <any>error);
+      items => this.modelHomeInformation=Languages.getPageLanguage(items,this.modelLanguages), error => errorMessage = <any>error);
     
     if(errorMessage!=""){
       alert("Error:"+errorMessage);
