@@ -43,7 +43,7 @@
                                     "name":"company",
                                     "fontFamily":"OpenSans-Light",
                                     "fontSize":15,
-                                    "color":"white",
+                                    "color":"deepskyblue",
                                     "opacity":1,
                                     "arrayPadding":[5],
                                     "border":[
@@ -60,7 +60,7 @@
                                         {
                                             "width":1,
                                             "style":"solid",
-                                            "color":"white"
+                                            "color":"deepskyblue"
                                         },
                                         {
                                             "width":0,

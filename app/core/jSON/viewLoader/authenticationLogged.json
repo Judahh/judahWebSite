@@ -35,7 +35,7 @@
                 "routerLink":"Companies",
                 "routerLinkActive":"active",
                 "colorEffect":{
-                "color":"white",
+                "color":"deepskyblue",
                 "colorEffect":"DivClassNeon",
                 "font":{
                     "font":"DivClassRoboto",
