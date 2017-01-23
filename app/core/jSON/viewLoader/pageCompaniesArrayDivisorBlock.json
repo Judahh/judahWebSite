@@ -170,7 +170,7 @@
                     "routerLink":"",
                     "routerLinkActive":"inactive",
                     "colorEffect":{
-                        "color":"white",
+                        "color":"deepskyblue",
                         "colorEffect":"",
                         "font":{
                             "font":"DivClassFuturisticIAndII",

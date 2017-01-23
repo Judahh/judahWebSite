@@ -42,7 +42,7 @@
               "borderSize": 1,
               "opacity": 1,
               "borderColor": "rgba(255, 255, 255, 0)",
-              "backgroundColor": "rgba(0, 0, 0, 0.3)",
+              "backgroundColor": "rgba(255, 255, 255, 0.7)",
               "boxShadowSize": 5,
               "boxShadowColor": "rgba(0, 0, 0, 1)",
               "width":"100%",
@@ -69,87 +69,6 @@
                           "arrayInformation":[
                             {
                               "information":"c",
-                              "opacity":1
-                            }
-                          ]
-                      }
-                    }
-                  }
-                },
-                {
-                  "id":1,
-                  "routerLink":"Education",
-                  "routerLinkActive":"active",
-                  "colorEffect":{
-                    "color":"deepskyblue",
-                    "colorEffect":"DivClassNeon",
-                    "font":{
-                      "font":"DivClassRoboto",
-                      "verticalAlign":"",
-                      "width":"",
-                      "size":15,
-                      "arrayPadding":[5],
-                      "animationEffect":{
-                          "class":"DivClassPulse",
-                          "subClass":"",
-                          "subClasses":[],
-                          "arrayInformation":[
-                            {
-                              "information":"d",
-                              "opacity":1
-                            }
-                          ]
-                      }
-                    }
-                  }
-                },
-                {
-                  "id":2,
-                  "routerLink":"Skills",
-                  "routerLinkActive":"active",
-                  "colorEffect":{
-                    "color":"deepskyblue",
-                    "colorEffect":"DivClassNeon",
-                    "font":{
-                      "font":"DivClassRoboto",
-                      "verticalAlign":"",
-                      "width":"",
-                      "size":15,
-                      "arrayPadding":[5],
-                      "animationEffect":{
-                          "class":"DivClassPulse",
-                          "subClass":"",
-                          "subClasses":[],
-                          "arrayInformation":[
-                            {
-                              "information":"«",
-                              "opacity":1
-                            }
-                          ]
-                      }
-                    }
-                  }
-                },
-                {
-                  "id":3,
-                  "routerLink":"Projects",
-                  "routerLinkActive":"active",
-                  "colorEffect":{
-                    "color":"deepskyblue",
-                    "colorEffect":"DivClassNeon",
-                    "font":{
-                      "font":"DivClassRoboto",
-                      "verticalAlign":"",
-                      "width":"",
-                      "size":15,
-                      "arrayPadding":[5],
-                      "animationEffect":{
-                          "class":"DivClassPulse",
-                          "subClass":"",
-                          "subClasses":[],
-                          "arrayInformation":[
-                            {
-                              "information":"i",
                               "opacity":1
                             }
                           ]
@@ -208,7 +127,7 @@
               "borderSize": 1,
               "opacity": 1,
               "borderColor": "rgba(255, 255, 255, 0)",
-              "backgroundColor": "rgba(0, 0, 0, 0.3)",
+              "backgroundColor": "rgba(255, 255, 255, 0.7)",
               "boxShadowSize": 5,
               "boxShadowColor": "rgba(0, 0, 0, 1)",
               "width":"100%",
