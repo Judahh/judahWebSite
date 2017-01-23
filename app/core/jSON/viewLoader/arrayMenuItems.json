@@ -63,11 +63,7 @@
               "arrayItem":[],
               "arrayAuthentication":[{}]
             },
-            "tooltip":{
-              "fontSize":15,
-              "marginLeft":-91
-            },
-            "routerLink":"Login",
+            "routerLink":"",
             "routerLinkActive":"inactive",
             "colorEffect":{
               "color":"deepskyblue",
@@ -160,7 +156,7 @@
               "marginLeft":-91,
               "marginTop":-35
             },
-            "routerLink":"Languages",
+            "routerLink":"About",
             "routerLinkActive":"active",
             "colorEffect":{
               "color":"deepskyblue",
@@ -177,7 +173,7 @@
                     "subClasses":[],
                     "arrayInformation":[
                       {
-                        "information":"µ",
+                        "information":")",
                         "opacity":1
                       }
                     ]
