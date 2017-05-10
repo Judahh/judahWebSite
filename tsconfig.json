@@ -14,8 +14,8 @@
     ],
     "types": [
       "jasmine",
-      "node",
-      "declaration"
+      "node"//,
+      // "declaration"
     ]
   }
 }
