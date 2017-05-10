@@ -40,6 +40,7 @@
     "lite": "lite-server",
     "tsc": "tsc",
     "tsc:w": "tsc -w",
+    "preinstall": "npm i -g typescript",
     "postinstall": "typings install",
     "build": "gulp build",
     "clean": "shx rm -Rf build/",
