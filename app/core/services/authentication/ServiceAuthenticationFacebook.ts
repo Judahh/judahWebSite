@@ -2,8 +2,8 @@ import { Injectable } from '@angular/core';
 import { Headers, Http, Response, RequestOptions } from '@angular/http';
 
 import { Observable }     from 'rxjs/Observable';
-// import passportAuthentication from './../../configurationFiles/passportAuthentication.json';
-const passportAuthentication = require('./../../ConfigurationFiles/passportAuthentication.json');
+import passportAuthentication from './../../configurationFiles/passportAuthentication.json';
+// const passportAuthentication = require('./../../ConfigurationFiles/passportAuthentication.json');
 
 declare const FB:any;
 
