@@ -15,13 +15,4 @@ platforms
 
 !plugins/*.js
 !require.js
-#!node_modules/@types/*
-#!node_modules/@types/*.js
-#!node_modules/@types/*.ts
-#!node_modules/@types/**/*
-#!node_modules/@types/*/*
-#!node_modules/@types/**/*.js
-#!node_modules/@types/**/*.ts
 !node_modules/@types/declaration/*
-!node_modules/@types/declaration/*.js
-!node_modules/@types/declaration/*.ts
