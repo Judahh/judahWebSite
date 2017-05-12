@@ -10,7 +10,7 @@ aPI/**/*.map
 !plugins/*.js
 !require.js
 node_modules
-!node_modules/@types/declaration/*
+node_modules/@types/declaration/*
 jspm_packages
 bower_components
 platforms
