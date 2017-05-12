@@ -13,6 +13,7 @@ export class ServiceJSON {
   getPromise(path:string): Promise<any>  {
     // var internalJSON = require(this.internalURL+path+".json");
     // console.log(internalJSON);
+    // console.log("A:");
     return this.http.get(this.URL+path+".json").toPromise().then(this.extractData).catch(this.handlePromiseError);
   }
 
@@ -25,6 +26,7 @@ export class ServiceJSON {
     //   internalJSON.resolve();
     //   console.log(internalJSON);
     // });
+    // console.log("B:"+path);
 
     return this.http.get(this.URL+path+".json").map(this.extractData).catch(this.handleObservableError);
   }
@@ -32,6 +34,7 @@ export class ServiceJSON {
   addObservable(name: string, path:string): Observable<any> {
     let headers = new Headers({ 'Content-Type': 'application/json' });
     let options = new RequestOptions({ headers: headers });
+    // console.log("B:");
 
     return this.http.post(this.URL, { name }, options)
                     .map(this.extractData)
@@ -41,6 +44,7 @@ export class ServiceJSON {
   addPromise(name: string, path:string): Promise<any> {
     let headers = new Headers({ 'Content-Type': 'application/json' });
     let options = new RequestOptions({ headers: headers });
+    // console.log("B:");
 
     return this.http.post(this.URL, { name }, options)
                     .toPromise().then(this.extractData)
@@ -62,6 +66,7 @@ export class ServiceJSON {
     } else {
       errMsg = error.message ? error.message : error.toString();
     }
+    // console.log("E:");
     console.error(errMsg);
     return Observable.throw(errMsg);
   }
@@ -76,6 +81,7 @@ export class ServiceJSON {
     } else {
       errMsg = error.message ? error.message : error.toString();
     }
+    // console.log("E:");
     console.error(errMsg);
     return Promise.reject(errMsg);
   }

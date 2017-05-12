@@ -114,13 +114,13 @@ export class ComponentPageWhoAmI implements OnInit {
     if(this.currentWidth<500){
       type="SmallerThan500";
     }
-
-    //console.log("type:"+type);
+    // console.log("type:"+type);
 
     this.getPageService();
     this.getLanguageService();
     this.getInformationService();
     this.getArrayDivisorBlockService(type);
+    // console.log("B:");
   }
 
   private getArrayModelDivisorBlock(arrayModelDivisorBlock:Array<ModelDivisorBlock>){
