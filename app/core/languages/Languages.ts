@@ -5,7 +5,8 @@ import { ModelLanguages } from './ModelLanguages';
 export class Languages {
 
     public static get currentLanguageNamePath(){
-        return Utils.getFileName(__filename)+'/'+Utils.getFileSelector(Utils.getFileName(__filename));
+        // console.log(Utils.getLowerCaseFileName(__filename)+'/'+Utils.getFileSelector(Utils.getFileName(__filename)));
+        return Utils.getLowerCaseFileName(__filename)+'/'+Utils.getFileSelector(Utils.getFileName(__filename));
     }
 
     public static get currentLanguage() : string {

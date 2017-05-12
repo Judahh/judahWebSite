@@ -4,6 +4,11 @@ export class Utils {
         return names[names.length-1].split(".")[0];
     }
 
+    static getLowerCaseFileName(filename:string){
+        var name:string=Utils.getFileName(filename);
+        return name.charAt(0).toLowerCase() + name.slice(1);
+    }
+
     static getFileJSON(fileName:string){
         return fileName+".json";
     }
