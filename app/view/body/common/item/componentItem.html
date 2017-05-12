@@ -1,0 +1,22 @@
+<colorEffect *ngIf="modelItem.tooltip==undefined"
+    [modelColorEffect]="modelItem.colorEffect"
+    [style]="style()|safeStyle">
+</colorEffect>
+<div *ngIf="modelItem.tooltip!=undefined">
+  <div class="DivClassTooltiper">
+    <colorEffect
+        [modelColorEffect]="modelItem.colorEffect"
+        [style]="style()|safeStyle">
+    </colorEffect>
+    <div class="DivClassTooltip" [style]="tooltipStyle(modelItem.tooltip)|safeStyle">
+        <div class="DivClassOpenSansLight" [style]="this.fontSize(tooltip)|safeStyle">
+            {{modelItem.tooltip.value}}
+        </div>
+    </div>
+  </div>
+</div>
+<menuVertical
+    *ngIf="hasMenuVertical()"
+    [modelMenuVertical]="modelItem.menuVertical"
+    [style]="menuVerticalStyle()|safeStyle">
+</menuVertical>

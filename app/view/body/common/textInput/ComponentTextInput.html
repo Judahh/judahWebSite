@@ -1,0 +1,41 @@
+<div [formGroup]="form" [style]="positionStyle()|safeStyle">
+<input 
+    *ngIf="isField()"
+    name="{{modelTextInput.name}}"
+    formControlName="{{modelTextInput.name}}"
+    placeholder="{{modelTextInput.placeholder}}"
+    [style]="style()|safeStyle"
+    value="{{modelTextInput.value}}"
+    [(ngModel)]="value"  
+    (blur)="onBlur()"/>
+
+<div
+    *ngIf="isDataList()">
+    <input 
+        name="{{modelTextInput.name}}"
+        formControlName="{{modelTextInput.name}}"
+        [attr.list]="getDataListId()"
+        placeholder="{{modelTextInput.placeholder}}"
+        [style]="style()|safeStyle"
+        value="{{modelTextInput.value}}"
+        [(ngModel)]="value"  
+        (blur)="onBlur()"/>
+
+    <datalist 
+        id="{{getDataListId()}}">
+        <option 
+            *ngFor="let option of modelTextInput.arrayOptions">
+            {{option}}
+        </option>
+    </datalist>
+</div>
+
+<textarea 
+    *ngIf="isArea()"
+    name="{{modelTextInput.name}}"
+    formControlName="{{modelTextInput.name}}"
+    placeholder="{{modelTextInput.placeholder}}"
+    [style]="style()|safeStyle"
+    [(ngModel)]="value"  
+    (blur)="onBlur()">{{modelTextInput.value}}</textarea>
+</div>

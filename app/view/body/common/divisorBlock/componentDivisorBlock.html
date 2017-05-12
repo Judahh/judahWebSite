@@ -1,0 +1,8 @@
+<divisor [modelDivisor]="modelDivisorBlock.divisor"
+    [style]="style()|safeStyle"
+    [dataModel]="dataModel">
+</divisor>
+<subDivisor *ngFor="let subDivisor of modelDivisorBlock.arraySubDivisor"
+    [modelSubDivisor]="subDivisor"
+    [dataModel]="subDataModel">
+</subDivisor>

@@ -1,0 +1,19 @@
+.DivClassCenter{
+    align-content: center;
+    align-items: center;
+    align-self: center;
+    text-align: center;
+    display: inline-block;
+}
+
+.DivClassLeft{
+    float: left;
+}
+
+.DivClassRight{
+    float: right;
+}
+
+.DivClassMenuHorizontal{
+    text-align: center;
+}
