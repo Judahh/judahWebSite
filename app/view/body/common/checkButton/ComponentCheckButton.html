@@ -1,0 +1,92 @@
+<div 
+    [formGroup]="form">
+    <label *ngIf="!isButton()">
+        <input *ngIf="modelCheckButton.checked && checkbox()" checked 
+            type="checkbox" 
+            id="{{modelCheckButton.name}}"
+            name="{{modelCheckButton.name}}"
+            formControlName="{{modelCheckButton.name}}"
+            value="{{modelCheckButton.value}}"
+            [(ngModel)]="value" 
+        />
+
+        <input *ngIf="!modelCheckButton.checked && checkbox()"
+            type="checkbox" 
+            id="{{modelCheckButton.name}}"
+            name="{{modelCheckButton.name}}"
+            formControlName="{{modelCheckButton.name}}"
+            value="{{modelCheckButton.value}}"
+            [(ngModel)]="value"  
+        />
+
+        <input *ngIf="modelCheckButton.checked && radio()" checked 
+            type="radio" 
+            id="{{modelCheckButton.name}}"
+            [attr.name]="modelCheckButton.name"
+            name="{{modelCheckButton.name}}"
+            formControlName="{{modelCheckButton.name}}"
+            value="{{modelCheckButton.value}}"
+            [(ngModel)]="dataModel" 
+        />
+
+        <input *ngIf="!modelCheckButton.checked && radio()"
+            type="radio" 
+            id="{{modelCheckButton.name}}"
+            [attr.name]="modelCheckButton.name"
+            name="{{modelCheckButton.name}}"
+            formControlName="{{modelCheckButton.name}}"
+            value="{{modelCheckButton.value}}"
+            [(ngModel)]="dataModel" 
+        />
+        
+        <div>
+            <item [modelItem]="modelCheckButton.item">
+            </item>
+        </div>
+    </label>
+
+    <label *ngIf="isButton()" 
+        (click)="onClick(modelCheckButton.onClick)">
+        <input *ngIf="modelCheckButton.checked && checkbox()" checked 
+            type="checkbox" 
+            id="{{modelCheckButton.name}}"
+            name="{{modelCheckButton.name}}"
+            formControlName="{{modelCheckButton.name}}"
+            value="{{modelCheckButton.value}}"
+            [(ngModel)]="value"  
+        />
+
+        <input *ngIf="!modelCheckButton.checked && checkbox()"
+            type="checkbox" 
+            id="{{modelCheckButton.name}}"
+            name="{{modelCheckButton.name}}"
+            formControlName="{{modelCheckButton.name}}"
+            value="{{modelCheckButton.value}}"
+            [(ngModel)]="value" 
+        />
+
+        <input *ngIf="modelCheckButton.checked && radio()" checked 
+            type="radio" 
+            id="{{modelCheckButton.name}}"
+            [attr.name]="modelCheckButton.name"
+            name="{{modelCheckButton.name}}"
+            formControlName="{{modelCheckButton.name}}"
+            value="{{modelCheckButton.value}}"
+            [(ngModel)]="dataModel" 
+        />
+
+        <input *ngIf="!modelCheckButton.checked && radio()"
+            type="radio" 
+            id="{{modelCheckButton.name}}"
+            [attr.name]="modelCheckButton.name"
+            name="{{modelCheckButton.name}}"
+            formControlName="{{modelCheckButton.name}}"
+            value="{{modelCheckButton.value}}"
+            [(ngModel)]="dataModel" 
+        />
+        <div>
+            <item [modelItem]="modelCheckButton.item">
+            </item>
+        </div>
+    </label>
+</div>

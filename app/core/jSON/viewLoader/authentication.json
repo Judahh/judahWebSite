@@ -1,0 +1,33 @@
+{
+    "arrayInputData":[
+        {
+            "clickButton":{
+                "type":"button",
+                "item":{
+                    "id":0,
+                    "routerLink":"",
+                    "routerLinkActive":"inactive",
+                    "colorEffect":{
+                        "colorEffect":"DivClassNeon",
+                        "font":{
+                            "font":"DivClassRoboto",
+                            "size":15,
+                            "arrayPadding":[5],
+                            "animationEffect":{
+                                "class":"",
+                                "subClass":"",
+                                "subClasses":[],
+                                "arrayInformation":[
+                                    {
+                                        "information":"",
+                                        "opacity":1
+                                    }
+                                ]
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    ]
+}

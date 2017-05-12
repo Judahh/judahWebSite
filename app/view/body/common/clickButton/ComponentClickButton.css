@@ -1,0 +1,106 @@
+button {
+  margin: 0 0.1em;
+  background-color: #eee;
+  /*background-color:white;*/
+  color: black;
+  /*border:none;*/
+  border:solid 1px transparent;
+  padding: 0px;
+  
+  border-radius: 5px;
+  cursor: pointer;
+  cursor: hand;
+  display: inline-block;
+}
+
+button:active,button:focus{
+    outline: 0;
+    /*border: none;*/
+    border:solid 1px transparent;
+}
+
+button:active{
+    background: deepskyblue;
+}
+
+button:focus{
+    border: 1px solid deepskyblue;
+}
+
+button:disabled {
+  background-color: #eee;
+  color: #aaa;
+  /*border: none;*/
+  border:solid 1px transparent;
+  cursor: auto;
+}
+
+button.ButtonClassBlueIcon {
+  margin: 0;
+  background-color: transparent;
+  color: dodgerblue;
+  border:none;
+  padding: 0px;
+  cursor: pointer;
+  cursor: hand;
+  display: inline-block;
+}
+
+button.ButtonClassBlueIcon:active,button.ButtonClassBlueIcon:focus{
+    outline: 0;
+    /*border: none;*/
+    border:none;
+    
+}
+
+button.ButtonClassBlueIcon:active{
+    background: none;
+    color: deepskyblue;
+}
+
+button.ButtonClassBlueIcon:focus{
+    border: none;
+}
+
+button.ButtonClassBlueIcon:disabled {
+  background-color: transparent;
+  color: #aaa;
+  /*border: none;*/
+  border:none;
+  cursor: auto;
+}
+
+button.ButtonClassRedIcon {
+  margin: 0;
+  background-color: transparent;
+  color: red;
+  border:none;
+  padding: 0px;
+  cursor: pointer;
+  cursor: hand;
+  display: inline-block;
+}
+
+button.ButtonClassRedIcon:active,button.ButtonClassRedIcon:focus{
+    outline: 0;
+    /*border: none;*/
+    border:none;
+    
+}
+
+button.ButtonClassRedIcon:active{
+    background: none;
+    color: orangered;
+}
+
+button.ButtonClassRedIcon:focus{
+    border: none;
+}
+
+button.ButtonClassRedIcon:disabled {
+  background-color: transparent;
+  color: #aaa;
+  /*border: none;*/
+  border:none;
+  cursor: auto;
+}
