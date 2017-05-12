@@ -1,0 +1,11 @@
+<div *ngIf="information.link==null||information.link==undefined"
+    [style]="style()|safeStyle" 
+    id="{{information.id}}">
+    {{information.information}}
+</div>
+<a *ngIf="information.link!=null && information.link!=undefined"
+    href="{{information.link}}"
+    [style]="style()|safeStyle"
+    id="{{information.id}}">
+    {{information.information}}
+</a>

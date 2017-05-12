@@ -1,0 +1,9 @@
+<div [style]="style()|safeStyle">
+    <div [style]="style2()|safeStyle">
+        <subDivisor *ngFor="let subDivisor of modelDivisor.arraySubDivisor; let i = index;"
+            [modelSubDivisor]="subDivisor"
+            [style]="subDivisorStyle(i)|safeStyle"
+            [dataModel]="dataModel">
+        </subDivisor>
+    </div>
+</div>

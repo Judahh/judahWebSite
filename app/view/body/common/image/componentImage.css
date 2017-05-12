@@ -1,0 +1,17 @@
+image{
+    width: 100%;
+}
+.ImgClassPicture {
+    width: 100%;
+    height: auto;
+    top: 0;
+}
+
+#ImgIdProfilePicture{
+    height: 30px;
+    width: 30px;
+    box-sizing: border-box;
+    /* border: 15px solid black; */
+    border-radius: 1000px;
+    position: relative;
+}

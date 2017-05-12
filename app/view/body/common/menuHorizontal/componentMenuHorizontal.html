@@ -1,0 +1,14 @@
+<ul>    
+    <li *ngFor="let item of modelMenuHorizontal.arrayItem">
+        <item  *ngIf="item.routerLinkActive=='active'"
+            [modelItem]="item"
+            routerLink="/{{item.routerLink}}"
+            routerLinkActive="{{item.routerLinkActive}}" >
+            Loading...
+        </item>
+        <item  *ngIf="item.routerLinkActive!='active'"
+            [modelItem]="item">
+            Loading...
+        </item>
+    </li>
+</ul>

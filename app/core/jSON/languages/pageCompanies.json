@@ -1,0 +1,18 @@
+[
+    {
+        "id":0,
+        "language":"English-USA",
+        "title":"Companies",
+        "company":"Company",
+        "workers":"Workers",
+        "services":"Services"
+    },
+    {
+        "id":1,
+        "language":"Portuguese-Brazil",
+        "title":"Empresas", 
+        "company":"Empresa",
+        "workers":"Workers",
+        "services":"Services"
+    }
+]

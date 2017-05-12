@@ -1,0 +1,16 @@
+<div>
+    <button *ngIf="isButton()"
+            class="{{modelClickButton.class}}"
+            type="{{modelClickButton.type}}"
+            (click)="onClick(modelClickButton.onClick)">
+        <item [modelItem]="modelClickButton.item">
+        </item>
+    </button>
+
+    <button *ngIf="!isButton()"
+            class="{{modelClickButton.class}}"
+            type="{{modelClickButton.type}}">
+        <item [modelItem]="modelClickButton.item">
+        </item>
+    </button>
+</div>
