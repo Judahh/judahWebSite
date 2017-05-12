@@ -1,0 +1,69 @@
+<div >
+<comboBox 
+    [form]="form"
+    *ngIf="isComboBox() && dataModel!=null"
+    [modelComboBox]="modelInputData.comboBox"
+    [style]="style()|safeStyle"
+    [(ngModel)]="dataModel">
+</comboBox>
+
+<comboBox 
+    [form]="form"
+    *ngIf="isComboBox() && dataModel==null"
+    [modelComboBox]="modelInputData.comboBox"
+    [style]="style()|safeStyle">
+</comboBox>
+
+<textInput 
+    [form]="form"
+    *ngIf="isTextInput() && dataModel!=null"
+    [modelTextInput]="modelInputData.textInput"
+    [style]="style()|safeStyle"
+    [(ngModel)]="dataModel">
+</textInput>
+
+<textInput 
+    [form]="form"
+    *ngIf="isTextInput() && dataModel==null"
+    [modelTextInput]="modelInputData.textInput"
+    [style]="style()|safeStyle">
+</textInput>
+
+<clickButton 
+    [form]="form"
+    *ngIf="isClickButton()"
+    [modelClickButton]="modelInputData.clickButton"
+    [style]="style()|safeStyle">
+</clickButton>
+
+<checkButton 
+    [form]="form"
+    *ngIf="isCheckButton() && dataModel!=null"
+    [modelCheckButton]="modelInputData.checkButton"
+    [style]="style()|safeStyle"
+    [(ngModel)]="dataModel">
+</checkButton>
+
+<checkButton 
+    [form]="form"
+    *ngIf="isCheckButton() && dataModel==null"
+    [modelCheckButton]="modelInputData.checkButton"
+    [style]="style()|safeStyle">
+</checkButton>
+
+<item  *ngIf="isItem() && modelInputData.item.routerLinkActive=='active'"
+    [modelItem]="modelInputData.item"
+    routerLink="/{{modelInputData.item.routerLink}}"
+    routerLinkActive="{{modelInputData.item.routerLinkActive}}" 
+    [style]="style()|safeStyle">
+    Loading...
+</item>
+
+<item  *ngIf="isItem() && modelInputData.item.routerLinkActive!='active'"
+    [modelItem]="modelInputData.item"
+    [style]="style()|safeStyle">
+    Loading...
+</item>
+
+
+</div>

@@ -1,0 +1,27 @@
+<form
+    (ngSubmit)="onSubmit(form)"
+    [formGroup]="form">
+    <div
+        *ngFor="let array2InputData of modelBasicForm.array3InputData; let i3 = index;">
+        <div [style]="style(array2InputData)|safeStyle"
+            *ngFor="let arrayInputData of array2InputData; let i2 = index;">
+            <div [style]="style2(arrayInputData)|safeStyle"
+                *ngFor="let inputData of arrayInputData; let i = index;">
+                <inputData 
+                    [modelInputData]="inputData"
+                    [form]="form"
+                    [dataModel]="getDataModel(inputData,i3,i2,i,array2InputData.length,arrayInputData.length)">
+                </inputData>
+            </div>
+        </div>
+    </div>
+    <div
+        *ngFor="let inputData of modelBasicForm.arrayInputData; let i = index;"
+        [style]="simpleStyle()|safeStyle">
+        <inputData 
+            [modelInputData]="inputData"
+            [form]="form"
+            [dataModel]="getSimpleDataModel(inputData,i)">
+        </inputData>
+    </div>
+</form>

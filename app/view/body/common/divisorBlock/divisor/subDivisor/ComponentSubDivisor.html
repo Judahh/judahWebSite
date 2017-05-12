@@ -1,0 +1,33 @@
+<item
+    *ngIf="isItemActive()"
+    [modelItem]="modelSubDivisor.item"
+    routerLink="/{{modelSubDivisor.item.routerLink}}"
+    routerLinkActive="{{modelSubDivisor.item.routerLinkActive}}"
+    [style]="style()|safeStyle">
+</item>
+<item
+    *ngIf="isItemInactive()"
+    [modelItem]="modelSubDivisor.item"
+    [style]="style()|safeStyle">
+</item>
+<image
+    *ngIf="isImage()"
+    [modelImage]="modelSubDivisor.image"
+    [style]="style()|safeStyle">
+</image>
+<videoLink
+    *ngIf="isVideoLink()"
+    [modelVideoLink]="modelSubDivisor.videoLink"
+    [style]="style()|safeStyle">
+</videoLink>
+<basicForm
+    *ngIf="isBasicForm()"
+    [modelBasicForm]="modelSubDivisor.basicForm"
+    [arrayDataModel]="dataModel"
+    [style]="style()|safeStyle">
+</basicForm>
+<inputData
+    *ngIf="isInputData()"
+    [modelInputData]="modelSubDivisor.inputData"
+    [style]="style()|safeStyle">
+</inputData>

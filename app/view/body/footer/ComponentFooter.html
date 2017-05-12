@@ -1,0 +1,9 @@
+<nav>
+    <div class="DivClassMenuHorizontal">
+        <menuHorizontal *ngFor="let modelMenuHorizontal of arrayModelMenuHorizontal" 
+            [modelMenuHorizontal]="modelMenuHorizontal"
+            class="{{modelMenuHorizontal.class}}"
+            [style]="style(modelMenuHorizontal)|safeStyle">
+        </menuHorizontal>
+    </div>
+</nav>

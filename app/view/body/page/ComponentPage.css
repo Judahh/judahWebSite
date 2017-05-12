@@ -1,0 +1,142 @@
+page{
+    width: 100%;
+    height: 100%;
+    border: 10px solid transparent;
+    border-top: 40px solid transparent;
+    border-bottom: 40px solid transparent;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.selected {
+  background-color: #a62e5c !important;
+  color: white;
+}
+
+.DivClassProjectTitle{
+    text-align: center;
+}
+
+.DivClassProjectTitleText, .DivClassProjectTitleText2{
+    width: 100%;
+    vertical-align: bottom;
+}
+
+.DivClassProjectTitleText:active, .DivClassProjectTitleText:focus, .DivClassProjectTitleText2:active, .DivClassProjectTitleText2:focus{
+    font-family: FontFuturisticI;
+}
+
+.DivClassProjectTitleText3{
+    width: 100%;
+    vertical-align: bottom;
+    padding-top: 40px;
+}
+
+.DivClassText2{
+    font-smooth:always;
+    font-smoothing: antialiased;
+    -o-font-smoothing: antialiased;
+    -ms-font-smoothing: antialiased;
+    -moz-font-smoothing: antialiased;
+    -webkit-font-smoothing: antialiased;
+    cursor: pointer;
+    font-family: "FontFuturisticII";
+    padding: 5px;
+    font-size: 20px;
+}
+
+.DivClassTextBasic{
+    font-smooth:always;
+    font-smoothing: antialiased;
+    -o-font-smoothing: antialiased;
+    -ms-font-smoothing: antialiased;
+    -moz-font-smoothing: antialiased;
+    -webkit-font-smoothing: antialiased;
+    font-family: "FontFuturisticI";
+    padding: 5px;
+    font-size: 20px;
+}
+
+.DivClassText{
+    font-smooth:always;
+    font-smoothing: antialiased;
+    -o-font-smoothing: antialiased;
+    -ms-font-smoothing: antialiased;
+    -moz-font-smoothing: antialiased;
+    -webkit-font-smoothing: antialiased;
+    font-family: "FontFuturisticI";
+    padding: 5px;
+    font-size: 20px;
+}
+
+.DivClassText:hover{
+    font-family: "FontFuturisticII";
+    /*-webkit-animation: fontFuturisticPulse 1.0s linear;
+    -moz-animation: fontFuturisticPulse 1.0s linear;
+    -ms-animation: fontFuturisticPulse 1.0s linear;
+    -o-animation: fontFuturisticPulse 1.0s linear;
+    animation: fontFuturisticPulse 1.0s linear;*/
+}
+
+.DivClassTextBackground{
+    height: 0px;
+    width: 0px;
+    z-index: -1;
+}
+
+.DivClassTextOverText{
+    color: white;
+}
+
+.DivClassFullBlock{
+    width: 100%;
+    display: block;
+    overflow: auto;
+}
+
+.DivClassHalfBlock{
+    width: 50%;
+    float: left;
+}
+
+.DivClassThirdBlock{
+    width: 33%;
+    float: left;
+}
+
+.DivClassQuarterBlock{
+    width: 25%;
+    float: left;
+}
+
+/*common Size A (sm)*/
+
+.DivClassTextWhoAmISizeSm{
+    width: 100%;
+}
+
+/*common Size A END*/
+
+/*common Size B (xs)*/
+
+.DivClassText,.DivClassTextBasicSizeXS{
+    font-size: 15px;
+}
+
+/*common Size B END*/
+
+/*common Size C (md)*/
+
+.DivClassHalfBlockSizeMd{
+    width: 100%;
+    display: block;
+}
+
+.DivClassThirdBlockSizeMd{
+    width: 100%;
+    display: block;
+}
+/*common Size C END*/
