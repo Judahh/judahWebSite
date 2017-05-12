@@ -1,0 +1,21 @@
+{
+    "default" : {
+        "facebook" : {
+            "clientID"      : "815941421881352", 
+            "clientSecret"  : "e8643ff6d1fa0eb49ab0a1bc12304b19", 
+            "callbackURL"   : "http://localhost:8080/auth/facebook/callback"
+        },
+
+        "twitter" : {
+            "consumerKey"       : "your-consumer-key-here",
+            "consumerSecret"    : "your-client-secret-here",
+            "callbackURL"       : "http://localhost:8080/auth/twitter/callback"
+        },
+
+        "google" : {
+            "clientID"      : "your-secret-clientID-here",
+            "clientSecret"  : "your-client-secret-here",
+            "callbackURL"   : "http://localhost:8080/auth/google/callback"
+        }
+    }
+}

@@ -1,0 +1,12 @@
+<div class="{{modelAnimationEffect.class}}">
+    <div class="{{modelAnimationEffect.subClass}}">
+        <div *ngFor="let information of this.modelAnimationEffect.arrayInformation; let i = index" class="{{getSubClasses(i)}}">
+            <information *ngIf="isSubClassesString(i)" [information]="information">
+            </information>
+            <div *ngIf="!isSubClassesString(i)" class="{{getSubClassesSubClass(i)}}">
+                <information [information]="information">
+                </information>
+            </div>
+        </div>
+    </div>
+</div>

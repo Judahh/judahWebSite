@@ -1,0 +1,69 @@
+<div *ngIf="!hasWidth()"
+    class="DivClassNoWidth" 
+    [style]="float()|safeStyle">
+    <div [style]="float()|safeStyle">
+        <div [style]="style()|safeStyle">
+            <li
+                *ngFor="let item of modelMenuVertical.arrayItem"
+                style="float: none;">
+                <item
+                    [modelItem]="item"
+                    routerLink="/{{item.routerLink}}"
+                    routerLinkActive="{{item.routerLinkActive}}" >
+                            Loading...
+                </item>
+            </li>
+            <li
+                *ngFor="let inputData of modelMenuVertical.arrayInputData"
+                style="float: none;">
+                <inputData
+                    [modelInputData]="inputData" >
+                            Loading...
+                </inputData>
+            </li>
+            <div
+                *ngFor="let authentication of modelMenuVertical.arrayAuthentication"
+                style="float: none;">
+                <authentication
+                    [modelAuthentication]="authentication" >
+                            Loading...
+                </authentication>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div *ngIf="hasWidth()"
+    class="DivClassHasWidth" 
+    [style]="styleW()|safeStyle">
+    <div [style]="float()|safeStyle">
+        <div [style]="style()|safeStyle">
+            <li
+                *ngFor="let item of modelMenuVertical.arrayItem"
+                style="float: none;">
+                <item
+                    [modelItem]="item"
+                    routerLink="/{{item.routerLink}}"
+                    routerLinkActive="{{item.routerLinkActive}}" >
+                            Loading...
+                </item>
+            </li>
+            <li
+                *ngFor="let inputData of modelMenuVertical.arrayInputData"
+                style="float: none;">
+                <inputData
+                    [modelInputData]="inputData" >
+                            Loading...
+                </inputData>
+            </li>
+            <li
+                *ngFor="let authentication of modelMenuVertical.arrayAuthentication"
+                style="float: none;">
+                <authentication
+                    [modelAuthentication]="authentication" >
+                            Loading...
+                </authentication>
+            </li>
+        </div>
+    </div>
+</div>

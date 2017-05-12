@@ -1,0 +1,12 @@
+<div [formGroup]="form">
+    <select name="{{modelComboBox.name}}" 
+            formControlName="{{modelComboBox.name}}" 
+            [style]="style()|safeStyle"
+            [(ngModel)]="value"  
+            (blur)="onBlur()">
+        <option *ngFor="let option of modelComboBox.arrayOptions"
+            value="{{option}}">
+            {{option}}
+        </option>
+    </select>
+</div>
