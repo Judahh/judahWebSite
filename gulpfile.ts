@@ -1,4 +1,4 @@
-import {Gulpclass, Task} from "gulpfile.ts/Annotations";
+import {Gulpclass, Task, SequenceTask} from "gulpclass";
 import * as gulp from "gulp";
 import * as mocha from "gulp-mocha"; 
 import * as typescript from "gulp-typescript"; 
