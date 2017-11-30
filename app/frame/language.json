@@ -3,11 +3,10 @@
         "image": {
             "element": {
                 "style": {
-                    "background-color": "rgba(225, 223, 221,1)",
                     "opacity": 1,
                     "visibility": "visible",
                     "position": "fixed",
-                    "filter": "brightness(100%) grayscale(0%) blur(0px)",
+                    "filter": "brightness(70%) grayscale(0%) blur(5px)",
                     "zIndex": -1000,
                     "max-width": "inherit",
                     "max-height": "inherit",
@@ -19,10 +18,9 @@
                 "element": {
                     "style": {
                         "width": "100%",
-                        "opacity": 0.1,
                         "height": "100%"
                     },
-                    "src": "images/horus.svg"
+                    "src": "images/programming.jpg"
                 }
             }
         }
