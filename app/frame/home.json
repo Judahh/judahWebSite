@@ -70,8 +70,7 @@
                                             "animationEffect": {
                                                 "element": {
                                                     "style": {
-                                                        "display": "block",
-                                                        "margin": "4px"
+                                                        "display": "block"
                                                     }
                                                 },
                                                 "animationSubEffect": {
@@ -137,8 +136,7 @@
                                             "animationEffect": {
                                                 "element": {
                                                     "style": {
-                                                        "display": "block",
-                                                        "margin": "4px"
+                                                        "display": "block"
                                                     }
                                                 },
                                                 "animationSubEffect": {
@@ -244,8 +242,7 @@
                                             "animationEffect": {
                                                 "element": {
                                                     "style": {
-                                                        "display": "block",
-                                                        "margin": "4px"
+                                                        "display": "block"
                                                     }
                                                 },
                                                 "animationSubEffect": {
@@ -285,8 +282,7 @@
                                             "animationEffect": {
                                                 "element": {
                                                     "style": {
-                                                        "display": "block",
-                                                        "margin": "4px"
+                                                        "display": "block"
                                                     }
                                                 },
                                                 "animationSubEffect": {
@@ -294,8 +290,10 @@
                                                         {
                                                             "information": {
                                                                 "information": "Age",
-                                                                "age": {},
-                                                                "code": true
+                                                                "runOnBuild": true,
+                                                                "appObject": {},
+                                                                "code": "Age",
+                                                                "element": {}
                                                             }
                                                         }
                                                     ]
@@ -327,8 +325,7 @@
                                             "animationEffect": {
                                                 "element": {
                                                     "style": {
-                                                        "display": "block",
-                                                        "margin": "4px"
+                                                        "display": "block"
                                                     }
                                                 },
                                                 "animationSubEffect": {
@@ -368,8 +365,7 @@
                                             "animationEffect": {
                                                 "element": {
                                                     "style": {
-                                                        "display": "block",
-                                                        "margin": "4px"
+                                                        "display": "block"
                                                     }
                                                 },
                                                 "animationSubEffect": {
@@ -409,8 +405,7 @@
                                             "animationEffect": {
                                                 "element": {
                                                     "style": {
-                                                        "display": "block",
-                                                        "margin": "4px"
+                                                        "display": "block"
                                                     }
                                                 },
                                                 "animationSubEffect": {
@@ -508,8 +503,7 @@
                                             "animationEffect": {
                                                 "element": {
                                                     "style": {
-                                                        "display": "block",
-                                                        "margin": "4px"
+                                                        "display": "block"
                                                     }
                                                 },
                                                 "animationSubEffect": {
@@ -615,8 +609,7 @@
                                             "animationEffect": {
                                                 "element": {
                                                     "style": {
-                                                        "display": "block",
-                                                        "margin": "4px"
+                                                        "display": "block"
                                                     }
                                                 },
                                                 "animationSubEffect": {
