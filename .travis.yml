@@ -1,0 +1,13 @@
+language: node_js
+node_js:
+- '9'
+install:
+- npm install
+script: tsc
+deploy:
+  provider: heroku
+  api_key:
+    secure: cIvE9p5j8ZECEwS0wDEe3+NgzLQ6xFBk83qz51KBUBq1h+fbNkz9YSjFbIc5uPoPBjVP04WRZ9XeEjHSQLAIEVO/A+sWDTcoGZ3oHeY8clUnlIQx3bcOSGJ1y8AEV8l/3DxATmyNoFjaj07KhuKNyONTwM128URrECWUJFfY5WYxU/aOuyXz2qOaNIohuX770KojqYlQLjvit9bJkpuhCAfJ3ts+StXzVlQ0JO1bAOW3x0rn+gr4DmUPsrJfs8i48XVaho/5+sfXW+Mk5G+x0JdqL6g2eQsvb6Jzb1krBnizNTJzXaDC0xjm/Opl9SQgfFwIezeLE5GgZaXoIACx/gLum6J7fLsRs2cV+yXaUjtAYJd7Sp+TrHqTYHFO5uPRmGUrCCCOw7FxSmqE2EnlMl+IyuFKifJuzWs53t/hlPD8RxYLYT9zr6381K7bldz4nDWEeR0VjnAwj+rs6RR+ZCx7njjtdQ8/lwU8EkY1McT6rOeCymlczg4fr8kUn5ie2HKKXBjb1dAAZRabbl3/SMEkEkp+yRO4FZCvGX4cvBHQN9JNDrDrUzzw86Ak7J2Ynjbwf0WDAxpCu2SFyaX9XX8+P/lbZvyOeY/kZ+iSKrxGNJPlDcguxuSaJCUsszc/Vasa4twS4PtnkO7jPSOLW4edsGYsbHp8NJfjFKtsVkk=
+  app: judahh
+  on:
+    repo: Judahh/judahh
