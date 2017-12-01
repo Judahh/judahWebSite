@@ -5,9 +5,12 @@ import { ImportScript } from 'backappjh';
 //     ImportScript.importJS('loader');
 // }
 import { App } from 'backappjh';
+import { Socket } from './../socket/socket'
 
-export class OnLoad{
+export class OnLoad {
     constructor() {
+        let socket = Socket.getInstance().getSocket();
+        socket.on('getIdentification', () => { socket.emit('identification', { type: 'app' }) });
         let app = new App();
     }
 }

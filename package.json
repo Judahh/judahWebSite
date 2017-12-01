@@ -52,8 +52,8 @@
   },
   "dependencies": {
     "async": "2.6.0",
-    "backapijh": "0.2.20",
-    "backappjh": "0.1.89",
+    "backapijh": "0.2.31",
+    "backappjh": "0.1.91",
     "d3": "4.12.0",
     "moment": "2.19.2",
     "semaphore": "^1.1.0",
