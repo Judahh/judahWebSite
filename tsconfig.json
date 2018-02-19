@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "target": "es6",
+    "target": "es2017",
     "module": "commonjs",
     "moduleResolution": "node",
     "sourceMap": true,
@@ -9,13 +9,19 @@
     "removeComments": false,
     "noImplicitAny": false,
     "suppressImplicitAnyIndexErrors": true,
+    "listEmittedFiles": true,
+    "allowJs": true,
+    // "outDir": "../release",
     "typeRoots": [
-      "../node_modules/@types"
+      "../node_modules/@types",
+      "node_modules/@types"
     ],
     "types": [
-      // "jasmine",
-      "node",
-      "declaration"
     ]
-  }
+  },
+  "include": [ 
+    "*",
+    "api",
+    "app"
+  ]
 }
