@@ -32,7 +32,7 @@
     "tsc:w": "tsc -w",
     "clean": "shx rm -Rf build/",
     "gulp": "gulp",
-    "startXElectron": "startx /opt/pocketDoc/node_modules/electron/dist/electron .",
+    "startXElectron": "startx /opt/judahh/node_modules/electron/dist/electron .",
     "startElectron": "electron .",
     "devElectron": "electron . --debug",
     "testElectron": "mocha && standard",
