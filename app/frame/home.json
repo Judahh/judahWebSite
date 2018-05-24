@@ -5,7 +5,7 @@
                 "background-color": "white",
                 "opacity": 0.8,
                 "visibility": "visible",
-                "position": "fixed",
+                "position": "absolute",
                 "filter": "brightness(100%) grayscale(0%) blur(0px)",
                 "zIndex": -1000,
                 "max-width": "inherit",
@@ -24,7 +24,8 @@
                 "type": "ComponentImg",
                 "element": {
                     "style": {
-                        "width": "100%",
+                        "position": "fixed",
+                        "width": "110%",
                         "height": "100%"
                     },
                     "src": "images/programming.jpg"
