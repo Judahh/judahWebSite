@@ -7,13 +7,6 @@
     "arrayAppObject": [
         {
             "type": "ComponentMenuHorizontal",
-            "arrayAppObjectEvent": [
-                {
-                    "name": "router",
-                    "appObject": {},
-                    "link": "home"
-                }
-            ],
             "arrayAppObject": [
                 {
                     "type": "ComponentLeftHolder",
@@ -33,6 +26,13 @@
                             "arrayAppObject": [
                                 {
                                     "type": "ComponentDivisor",
+                                    "arrayAppObjectEvent": [
+                                        {
+                                            "name": "router",
+                                            "appObject": {},
+                                            "link": "home"
+                                        }
+                                    ],
                                     "element": {
                                         "style": {
                                             "color": "white",
@@ -65,203 +65,210 @@
                                             ]
                                         }
                                     ]
-                                }
-                            ]
-                        },
-                        {
-                            "type": "ComponentDivisor",
-                            "element": {
-                                "style": {
-                                    "display": "inline-flex"
-                                }
-                            },
-                            "arrayAppObject": [
+                                },
                                 {
                                     "type": "ComponentDivisor",
+                                    "arrayAppObjectEvent": [
+                                        {
+                                            "name": "router",
+                                            "appObject": {},
+                                            "link": "education"
+                                        }
+                                    ],
                                     "element": {
                                         "style": {
+                                            "color": "white",
                                             "display": "inherit"
                                         },
                                         "className": "ClassMenu"
                                     },
                                     "arrayAppObject": [
                                         {
-                                            "type": "ComponentFontAwesome",
+                                            "type": "ComponentItem",
                                             "element": {
                                                 "style": {
                                                     "vertical-align": "-webkit-baseline-middle",
-                                                    "color": "white",
                                                     "opacity": "1",
                                                     "padding": "5px",
                                                     "font-size": "30px"
                                                 },
-                                                "className": "ClassPulse far fa-address-book"
-                                            }
-                                        },
-                                        {
-                                            "type": "ComponentMenuVertical",
-                                            "element": {
-                                                "style": {
-                                                    "top": "100%",
-                                                    "float": "left",
-                                                    "left": "40px",
-                                                    "background-color": "rgba(255, 255, 255, 0.1)",
-                                                    "width": "max-content",
-                                                    "position": "absolute",
-                                                    "display": "block"
-                                                }
+                                                "className": "ClassNeon ClassPulse"
                                             },
-                                            "class": "",
                                             "arrayAppObject": [
                                                 {
                                                     "type": "ComponentInformation",
-                                                    "arrayAppObjectEvent": [
-                                                        {
-                                                            "name": "router",
-                                                            "link": "contacts",
-                                                            "runFunction": "isLogged",
-                                                            "code": "UserManegement"
-                                                        },
-                                                        {
-                                                            "name": "router",
-                                                            "link": "login"
-                                                        }
-                                                    ],
                                                     "element": {
                                                         "style": {
-                                                            "vertical-align": "-webkit-baseline-middle",
-                                                            "color": "white",
-                                                            "opacity": "1",
-                                                            "padding": "5px",
-                                                            "display": "block",
-                                                            "font-size": "16px",
-                                                            "-webkit-font-smoothing": "antialiased"
                                                         },
-                                                        "className": "ClassPulse ClassOpenSans"
+                                                        "className": "ClassIcon"
                                                     },
-                                                    "information": "contacts"
-                                                },
-                                                {
-                                                    "type": "ComponentInformation",
-                                                    "arrayAppObjectEvent": [
-                                                        {
-                                                            "name": "router",
-                                                            "link": "addContact",
-                                                            "runFunction": "isLogged",
-                                                            "code": "UserManegement"
-                                                        },
-                                                        {
-                                                            "name": "router",
-                                                            "link": "login"
-                                                        }
-                                                    ],
-                                                    "element": {
-                                                        "style": {
-                                                            "vertical-align": "-webkit-baseline-middle",
-                                                            "color": "white",
-                                                            "opacity": "1",
-                                                            "padding": "5px",
-                                                            "display": "block",
-                                                            "font-size": "16px",
-                                                            "-webkit-font-smoothing": "antialiased"
-                                                        },
-                                                        "className": "ClassPulse ClassOpenSans"
-                                                    },
-                                                    "information": "addContact"
+                                                    "information": "d"
                                                 }
                                             ]
                                         }
                                     ]
-                                }
-                            ]
-                        },
-                        {
-                            "type": "ComponentDivisor",
-                            "element": {
-                                "style": {
-                                    "display": "inline-flex"
-                                }
-                            },
-                            "arrayAppObject": [
+                                },
                                 {
                                     "type": "ComponentDivisor",
-                                    "element": {
-                                        "style": {
-                                            "display": "inherit"
-                                        }
-                                    },
                                     "arrayAppObjectEvent": [
                                         {
                                             "name": "router",
-                                            "link": "messages",
-                                            "runFunction": "isLogged",
-                                            "code": "UserManegement"
-                                        },
-                                        {
-                                            "name": "router",
-                                            "link": "login"
+                                            "appObject": {},
+                                            "link": "skills"
                                         }
                                     ],
+                                    "element": {
+                                        "style": {
+                                            "color": "white",
+                                            "display": "inherit"
+                                        },
+                                        "className": "ClassMenu"
+                                    },
                                     "arrayAppObject": [
                                         {
-                                            "type": "ComponentFontAwesome",
+                                            "type": "ComponentItem",
                                             "element": {
                                                 "style": {
+                                                    "margin-top": "4px",
                                                     "vertical-align": "-webkit-baseline-middle",
-                                                    "color": "white",
                                                     "opacity": "1",
                                                     "padding": "5px",
                                                     "font-size": "30px"
                                                 },
-                                                "className": "ClassPulse far fa-envelope"
-                                            }
+                                                "className": "ClassNeon ClassShake ClassIcon ClassHandIcon"
+                                            },
+                                            "arrayAppObject": [
+                                                {
+                                                    "type": "ComponentInformation",
+                                                    "element": {
+                                                        "style": {
+                                                        },
+                                                        "className": "ClassHandIconOff"
+                                                    },
+                                                    "information": "«"
+                                                },
+                                                {
+                                                    "type": "ComponentInformation",
+                                                    "element": {
+                                                        "style": {
+                                                        },
+                                                        "className": "ClassHandIconOn"
+                                                    },
+                                                    "information": "¬"
+                                                }
+                                            ]
                                         }
                                     ]
-                                }
-                            ]
-                        },
-                        {
-                            "type": "ComponentDivisor",
-                            "element": {
-                                "style": {
-                                    "display": "inline-flex"
-                                }
-                            },
-                            "arrayAppObject": [
+                                },
                                 {
                                     "type": "ComponentDivisor",
-                                    "element": {
-                                        "style": {
-                                            "display": "inherit"
-                                        }
-                                    },
                                     "arrayAppObjectEvent": [
                                         {
                                             "name": "router",
-                                            "link": "attenuatingOrAggravating",
-                                            "runFunction": "isLogged",
-                                            "code": "UserManegement"
-                                        },
-                                        {
-                                            "name": "router",
-                                            "link": "login",
-                                            "runFunction": "isNotLogged",
-                                            "code": "UserManegement"
+                                            "appObject": {},
+                                            "link": "projects"
                                         }
                                     ],
+                                    "element": {
+                                        "style": {
+                                            "color": "white",
+                                            "display": "inherit"
+                                        },
+                                        "className": "ClassMenu"
+                                    },
                                     "arrayAppObject": [
                                         {
-                                            "type": "ComponentFontAwesome",
+                                            "type": "ComponentItem",
                                             "element": {
                                                 "style": {
+                                                    "margin-top": "4px",
                                                     "vertical-align": "-webkit-baseline-middle",
-                                                    "color": "white",
                                                     "opacity": "1",
                                                     "padding": "5px",
                                                     "font-size": "30px"
                                                 },
-                                                "className": "ClassPulse fas fa-medkit"
-                                            }
+                                                "className": "ClassNeon ClassIcon ClassConsoleIcon"
+                                            },
+                                            "arrayAppObject": [
+                                                {
+                                                    "type": "ComponentInformation",
+                                                    "element": {
+                                                        "style": {
+                                                        },
+                                                        "className": "ClassConsoleIconOff"
+                                                    },
+                                                    "information": "i"
+                                                },
+                                                {
+                                                    "type": "ComponentInformation",
+                                                    "element": {
+                                                        "style": {
+                                                        },
+                                                        "className": "ClassConsoleIconOn"
+                                                    },
+                                                    "information": "j"
+                                                },
+                                                {
+                                                    "type": "ComponentInformation",
+                                                    "element": {
+                                                        "style": {
+                                                        },
+                                                        "className": "ClassConsoleIconOn1"
+                                                    },
+                                                    "information": "k"
+                                                },
+                                                {
+                                                    "type": "ComponentInformation",
+                                                    "element": {
+                                                        "style": {
+                                                        },
+                                                        "className": "ClassConsoleIconOn2"
+                                                    },
+                                                    "information": "l"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "ComponentDivisor",
+                                    "arrayAppObjectEvent": [
+                                        {
+                                            "name": "router",
+                                            "appObject": {},
+                                            "link": "contact"
+                                        }
+                                    ],
+                                    "element": {
+                                        "style": {
+                                            "color": "white",
+                                            "display": "inherit"
+                                        },
+                                        "className": "ClassMenu"
+                                    },
+                                    "arrayAppObject": [
+                                        {
+                                            "type": "ComponentItem",
+                                            "element": {
+                                                "style": {
+                                                    "vertical-align": "-webkit-baseline-middle",
+                                                    "opacity": "1",
+                                                    "padding": "5px",
+                                                    "font-size": "30px"
+                                                },
+                                                "className": "ClassNeon ClassShake"
+                                            },
+                                            "arrayAppObject": [
+                                                {
+                                                    "type": "ComponentInformation",
+                                                    "element": {
+                                                        "style": {
+                                                        },
+                                                        "className": "ClassIcon"
+                                                    },
+                                                    "information": "6"
+                                                }
+                                            ]
                                         }
                                     ]
                                 }
@@ -297,134 +304,47 @@
                                     "type": "ComponentDivisor",
                                     "element": {
                                         "style": {
-                                            "display": "inherit"
-                                        },
-                                        "className": "ClassMenu"
-                                    },
-                                    "arrayAppObjectEvent": [
-                                        {
-                                            "name": "click",
-                                            "appObject": {},
-                                            "runFunction": "goToLogin()",
-                                            "code": "UserManegement"
+                                            "display": "inline-flex"
                                         }
-                                    ],
+                                    },
                                     "arrayAppObject": [
                                         {
-                                            "type": "ComponentFontAwesome",
-                                            "element": {
-                                                "style": {
-                                                    "vertical-align": "-webkit-baseline-middle",
-                                                    "color": "white",
-                                                    "opacity": "1",
-                                                    "padding": "5px",
-                                                    "font-size": "30px"
-                                                },
-                                                "className": "ClassPulse fas fa-user"
-                                            }
-                                        },
-                                        {
-                                            "type": "ComponentMenuVertical",
-                                            "element": {
-                                                "style": {
-                                                    "top": "100%",
-                                                    "float": "right",
-                                                    "right": "0px",
-                                                    "background-color": "rgba(255, 255, 255, 0.1)",
-                                                    "width": "max-content",
-                                                    "position": "absolute",
-                                                    "display": "block"
+                                            "type": "ComponentDivisor",
+                                            "arrayAppObjectEvent": [
+                                                {
+                                                    "name": "router",
+                                                    "appObject": {},
+                                                    "link": "languages"
                                                 }
+                                            ],
+                                            "element": {
+                                                "style": {
+                                                    "color": "white",
+                                                    "display": "inherit"
+                                                },
+                                                "className": "ClassMenu"
                                             },
-                                            "class": "",
                                             "arrayAppObject": [
                                                 {
-                                                    "type": "ComponentDivisor",
+                                                    "type": "ComponentItem",
                                                     "element": {
                                                         "style": {
-                                                            "height": "fit-content",
-                                                            "width": "max-content"
-                                                        }
+                                                            "vertical-align": "-webkit-baseline-middle",
+                                                            "opacity": "1",
+                                                            "padding": "5px",
+                                                            "font-size": "30px"
+                                                        },
+                                                        "className": "ClassNeon"
                                                     },
                                                     "arrayAppObject": [
                                                         {
                                                             "type": "ComponentInformation",
-                                                            "arrayAppObjectEvent": [
-                                                                {
-                                                                    "name": "router",
-                                                                    "link": "profile",
-                                                                    "runFunction": "isLogged",
-                                                                    "code": "UserManegement"
-                                                                },
-                                                                {
-                                                                    "name": "router",
-                                                                    "link": "login"
-                                                                }
-                                                            ],
                                                             "element": {
                                                                 "style": {
-                                                                    "vertical-align": "-webkit-baseline-middle",
-                                                                    "color": "white",
-                                                                    "opacity": "1",
-                                                                    "padding": "5px",
-                                                                    "display": "block",
-                                                                    "font-size": "16px",
-                                                                    "-webkit-font-smoothing": "antialiased"
                                                                 },
-                                                                "className": "ClassPulse ClassOpenSans"
+                                                                "className": "ClassIcon"
                                                             },
-                                                            "information": "profile"
-                                                        },
-                                                        {
-                                                            "type": "ComponentInformation",
-                                                            "arrayAppObjectEvent": [
-                                                                {
-                                                                    "name": "router",
-                                                                    "link": "historical",
-                                                                    "runFunction": "isLogged",
-                                                                    "code": "UserManegement"
-                                                                },
-                                                                {
-                                                                    "name": "router",
-                                                                    "link": "login"
-                                                                }
-                                                            ],
-                                                            "element": {
-                                                                "style": {
-                                                                    "vertical-align": "-webkit-baseline-middle",
-                                                                    "color": "white",
-                                                                    "opacity": "1",
-                                                                    "padding": "5px",
-                                                                    "display": "block",
-                                                                    "font-size": "16px",
-                                                                    "-webkit-font-smoothing": "antialiased"
-                                                                },
-                                                                "className": "ClassPulse ClassOpenSans"
-                                                            },
-                                                            "information": "historical"
-                                                        },
-                                                        {
-                                                            "type": "ComponentInformation",
-                                                            "arrayAppObjectEvent": [
-                                                                {
-                                                                    "name": "click",
-                                                                    "runFunction": "logout(this)",
-                                                                    "code": "UserManegement"
-                                                                }
-                                                            ],
-                                                            "element": {
-                                                                "style": {
-                                                                    "vertical-align": "-webkit-baseline-middle",
-                                                                    "color": "white",
-                                                                    "opacity": "1",
-                                                                    "padding": "5px",
-                                                                    "display": "block",
-                                                                    "font-size": "16px",
-                                                                    "-webkit-font-smoothing": "antialiased"
-                                                                },
-                                                                "className": "ClassPulse ClassOpenSans"
-                                                            },
-                                                            "information": "logoff"
+                                                            "information": "µ"
                                                         }
                                                     ]
                                                 }

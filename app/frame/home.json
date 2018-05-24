@@ -3,7 +3,7 @@
         "element": {
             "style": {
                 "background-color": "white",
-                "opacity": 0.5,
+                "opacity": 0.8,
                 "visibility": "visible",
                 "position": "fixed",
                 "filter": "brightness(100%) grayscale(0%) blur(0px)",
