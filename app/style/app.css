@@ -122,15 +122,6 @@
   src: local('Facebook Letter Faces'), url('https://www.mediafont.com/storage/contents/11/FACEBOLF.OTF');
 }
 
-font {
-    font-smooth:always;
-    font-smoothing: antialiased;
-    -o-font-smoothing: antialiased;
-    -ms-font-smoothing: antialiased;
-    -moz-font-smoothing: antialiased;
-    -webkit-font-smoothing: antialiased;
-}
-
 .ClassCompanies{
     font-family: "Companies";
 }
@@ -276,4 +267,13 @@ input.ClassStar[type=checkbox]:checked + label:before {
 
 label{
     color: white;
+}
+
+font {
+    -o-font-smoothing: antialiased;
+    -ms-font-smoothing: antialiased;
+    -moz-font-smoothing: antialiased;
+    -webkit-font-smoothing: antialiased;
+    font-smooth:always;
+    font-smoothing: antialiased;
 }
