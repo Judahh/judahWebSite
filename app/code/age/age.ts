@@ -22,8 +22,6 @@ export class Age extends AppObject {
         if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
             age--;
         }
-        console.log(age);
-        console.log(component);
         component.father.getElement().innerHTML = '' + age;
     }
 }
