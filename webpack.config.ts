@@ -1,9 +1,12 @@
 import * as  path from 'path';
 import * as webpack from 'webpack';
+import * as UglifyJSPlugin from 'uglifyjs-webpack-plugin';
+import * as  CompressionPlugin from 'compression-webpack-plugin';
+import * as  ExtractTextPlugin from 'extract-text-webpack-plugin';
+require('dotenv').config();
 
 const config: webpack.Configuration = {
-    entry: './app/code/imports/imports.ts',
-    // entry: './app/code/onLoad/onLoad.ts',
+    entry: './app/code/imports/imports.js',
     output: {
         libraryTarget: 'commonjs',
         path: path.resolve(__dirname, 'dist'),
@@ -11,34 +14,62 @@ const config: webpack.Configuration = {
         publicPath: '/dist/'
     },
     resolve: {
-        // Add `.ts` and `.tsx` as a resolvable extension.
         extensions: ['.webpack.js', '.webpack.ts', '.web.js', '.web.ts', '.js', '.ts', '.tsx']
     },
     module: {
-        loaders: [
-            // all files with a `.ts` or `.tsx` extension will be handled by `ts-loader`
-            { test: /\.ts$/, loader: 'ts-loader' },
-            // all files with a `.ts` or `.tsx` extension will be handled by `ts-loader`
-            {
-                test: /\.css$/,
-                loader: 'style-loader!css-loader!postcss-loader',
-                include: [
-                    path.resolve(__dirname, 'node_modules'),
-                    path.resolve(__dirname, 'app/view/common/fonts')
-                ]
-            },
-            { test: /\.(png|woff|woff2|eot|ttf|svg)$/, loader: 'url-loader?limit=100000' }
-        ],
         rules: [
             {
                 test: /\.css$/,
-                use: [
-                    'style-loader',
-                    'css-loader'
+                use: ['style-loader', 'css-loader'],
+                include: [
+                    path.resolve(__dirname, 'node_modules'),
+                    path.resolve(__dirname, 'app/style'),
+                    path.resolve(__dirname, 'app/style/fonts')
                 ]
+            },
+            // {
+            //     test: /\.(png|woff|woff2|eot|otf|ttf|svg)$/,
+            //     use: ['file-loader', 'url-loader']
+            // } // ,
+            // {
+            //     test: /\.(png|woff|woff2|eot|otf|ttf|svg)$/,
+            //     loader: 'file-loader',
+            //     options: {
+            //         publicPath: '/',
+            //         // name: '[name].[ext]',
+            //         // outputPath: '/[path]/',
+            //         // useRelativePath: true
+            //     }
+            // },
+            {
+                test: /\.(png|woff|woff2|eot|otf|ttf|svg)$/,
+                use: ['url-loader']
             }
         ]
-    }
+    },
+    plugins: [
+        // new ExtractTextPlugin('app/style/app.css?[contenthash]')
+    ]
 };
+
+if (JSON.parse(process.env.WEBPACK_PRODUCTION)) {
+    console.log('Production');
+    config.plugins.push(
+        new UglifyJSPlugin({
+            parallel: true
+        })
+    );
+    config.plugins.push(
+        new CompressionPlugin({
+            minRatio: 1
+        })
+    );
+} else {
+    console.log('Development');
+    config.devtool = 'inline-source-map'
+    config.plugins.push(
+        new webpack.HotModuleReplacementPlugin()
+    );
+}
 
 export default config;

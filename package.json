@@ -6,8 +6,8 @@
   "private": true,
   "main": "api/server.js",
   "engines": {
-    "node": "9.2.0",
-    "npm": "5.5.1"
+    "node": "10.1.0",
+    "npm": "6.0.1"
   },
   "description": "Horus Server project",
   "keywords": [

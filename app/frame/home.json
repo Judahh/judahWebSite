@@ -1,20 +1,27 @@
 {
     "background": {
-        "image": {
-            "element": {
-                "style": {
-                    "opacity": 1,
-                    "visibility": "visible",
-                    "position": "fixed",
-                    "filter": "brightness(70%) grayscale(0%) blur(5px)",
-                    "zIndex": -1000,
-                    "max-width": "inherit",
-                    "max-height": "inherit",
-                    "width": "100%",
-                    "height": "100%"
-                }
-            },
-            "img": {
+        "element": {
+            "style": {
+                "background-color": "white",
+                "opacity": 0.5,
+                "visibility": "visible",
+                "position": "fixed",
+                "filter": "brightness(100%) grayscale(0%) blur(0px)",
+                "zIndex": -1000,
+                "max-width": "inherit",
+                "max-height": "inherit",
+                "width": "100%",
+                "height": "100%",
+                "text-align": "center",
+                "justify-content": "center",
+                "display": "flex",
+                "align-items": "center",
+                "mix-blend-mode": "difference"
+            }
+        },
+        "arrayAppObject": [
+            {
+                "type": "ComponentImg",
                 "element": {
                     "style": {
                         "width": "100%",
@@ -23,12 +30,14 @@
                     "src": "images/programming.jpg"
                 }
             }
-        }
+        ]
     },
-    "arrayDivisor": [
+    "arrayAppObject": [
         {
-            "arrayDivisor": [
+            "type": "ComponentDivisor",
+            "arrayAppObject": [
                 {
+                    "type": "ComponentDivisor",
                     "element": {
                         "style": {
                             "opacity": 1,
@@ -38,8 +47,9 @@
                             ]
                         }
                     },
-                    "arrayDivisor": [
+                    "arrayAppObject": [
                         {
+                            "type": "ComponentDivisor",
                             "arrayItem": [
                                 {
                                     "element": {
@@ -94,8 +104,9 @@
             ]
         },
         {
-            "arrayDivisor": [
+            "arrayAppObject": [
                 {
+                    "type": "ComponentDivisor",
                     "element": {
                         "style": {
                             "opacity": 1,
@@ -105,8 +116,9 @@
                             ]
                         }
                     },
-                    "arrayDivisor": [
+                    "arrayAppObject": [
                         {
+                            "type": "ComponentDivisor",
                             "arrayItem": [
                                 {
                                     "element": {
@@ -159,8 +171,9 @@
             ]
         },
         {
-            "arrayDivisor": [
+            "arrayAppObject": [
                 {
+                    "type": "ComponentDivisor",
                     "element": {
                         "style": {
                             "opacity": 1,
@@ -169,8 +182,9 @@
                             "padding": []
                         }
                     },
-                    "arrayDivisor": [
+                    "arrayAppObject": [
                         {
+                            "type": "ComponentDivisor",
                             "element": {
                                 "style": {
                                     "float": "left",
@@ -468,8 +482,9 @@
             ]
         },
         {
-            "arrayDivisor": [
+            "arrayAppObject": [
                 {
+                    "type": "ComponentDivisor",
                     "element": {
                         "style": {
                             "opacity": 1,
@@ -479,8 +494,9 @@
                             ]
                         }
                     },
-                    "arrayDivisor": [
+                    "arrayAppObject": [
                         {
+                            "type": "ComponentDivisor",
                             "toBottom": false,
                             "arrayItem": [
                                 {
@@ -526,8 +542,9 @@
             ]
         },
         {
-            "arrayDivisor": [
+            "arrayAppObject": [
                 {
+                    "type": "ComponentDivisor",
                     "element": {
                         "style": {
                             "opacity": 1,
@@ -535,8 +552,9 @@
                             "arrayPadding": []
                         }
                     },
-                    "arrayDivisor": [
+                    "arrayAppObject": [
                         {
+                            "type": "ComponentDivisor",
                             "element": {
                                 "style": {
                                     "width": "100%"
@@ -575,8 +593,9 @@
             ]
         },
         {
-            "arrayDivisor": [
+            "arrayAppObject": [
                 {
+                    "type": "ComponentDivisor",
                     "element": {
                         "style": {
                             "opacity": 1,
@@ -585,8 +604,9 @@
                             "arrayPadding": []
                         }
                     },
-                    "arrayDivisor": [
+                    "arrayAppObject": [
                         {
+                            "type": "ComponentDivisor",
                             "arrayItem": [
                                 {
                                     "colorEffect": {
