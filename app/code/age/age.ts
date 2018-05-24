@@ -1,15 +1,20 @@
-import { AppObject, Component, ComponentPageBody } from 'backappjh';
+import { AppObject, Component } from 'backappjh';
 
 export class Age extends AppObject {
+    private static instance: Age;
+
+    public static getInstance(father?: Component): Age {
+        if (!Age.instance) {
+            Age.instance = new Age(father);
+        }
+        return Age.instance;
+    }
+
     constructor(father?: Component) {
         super(father);
     }
 
-    public run() {
-        this.father.getElement().innerHTML = "" + this.getAge();
-    }
-
-    public getAge() {
+    public getAge(component) {
         var today = new Date();
         var birthDate = new Date("07/01/1992");
         var age = today.getFullYear() - birthDate.getFullYear();
@@ -17,6 +22,8 @@ export class Age extends AppObject {
         if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
             age--;
         }
-        return age;
+        console.log(age);
+        console.log(component);
+        component.father.getElement().innerHTML = '' + age;
     }
 }

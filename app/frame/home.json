@@ -41,17 +41,15 @@
                     "element": {
                         "style": {
                             "opacity": 1,
-                            "color": "transparent",
-                            "padding": [
-                                5
-                            ]
+                            "color": "transparent"
                         }
                     },
                     "arrayAppObject": [
                         {
                             "type": "ComponentDivisor",
-                            "arrayItem": [
+                            "arrayAppObject": [
                                 {
+                                    "type": "ComponentItem",
                                     "element": {
                                         "style": {
                                             "color": "white",
@@ -60,42 +58,21 @@
                                             "textAlign": "center"
                                         }
                                     },
-                                    "colorEffect": {
-                                        "element": {
-                                            "style": {
-                                                "color": "white"
-                                            }
-                                        },
-                                        "font": {
+                                    "arrayAppObject": [
+                                        {
+                                            "type": "ComponentInformation",
+                                            "information": "title",
                                             "element": {
                                                 "className": "ClassFuturisticIAndII",
                                                 "style": {
+                                                    "color": "white",
+                                                    "display": "block",
                                                     "width": "100%",
-                                                    "font-size": "40px",
-                                                    "padding": [
-                                                        0
-                                                    ]
-                                                }
-                                            },
-                                            "animationEffect": {
-                                                "element": {
-                                                    "style": {
-                                                        "display": "block"
-                                                    }
-                                                },
-                                                "animationSubEffect": {
-                                                    "arrayAnimationSubEffectHolder": [
-                                                        {
-                                                            "information": {
-                                                                "information": "title",
-                                                                "element": {}
-                                                            }
-                                                        }
-                                                    ]
+                                                    "font-size": "40px"
                                                 }
                                             }
                                         }
-                                    }
+                                    ]
                                 }
                             ]
                         }
@@ -104,63 +81,37 @@
             ]
         },
         {
+            "type": "ComponentDivisor",
             "arrayAppObject": [
                 {
                     "type": "ComponentDivisor",
                     "element": {
                         "style": {
                             "opacity": 1,
-                            "color": "transparent",
-                            "padding": [
-                                5
-                            ]
+                            "color": "transparent"
                         }
                     },
                     "arrayAppObject": [
                         {
-                            "type": "ComponentDivisor",
-                            "arrayItem": [
+                            "type": "ComponentItem",
+                            "element": {
+                                "style": {
+                                    "color": "white",
+                                    "display": "block",
+                                    "textAlign": "center"
+                                }
+                            },
+                            "arrayAppObject": [
                                 {
+                                    "type": "ComponentInformation",
+                                    "information": "name",
                                     "element": {
+                                        "className": "ClassFuturisticIAndII",
                                         "style": {
                                             "color": "white",
                                             "display": "block",
-                                            "textAlign": "center"
-                                        }
-                                    },
-                                    "colorEffect": {
-                                        "element": {
-                                            "style": {
-                                                "color": "white"
-                                            }
-                                        },
-                                        "font": {
-                                            "element": {
-                                                "className": "ClassFuturisticIAndII",
-                                                "style": {
-                                                    "width": "100%",
-                                                    "font-size": "20px",
-                                                    "padding": [
-                                                        0
-                                                    ]
-                                                }
-                                            },
-                                            "animationEffect": {
-                                                "element": {
-                                                    "style": {
-                                                        "display": "block"
-                                                    }
-                                                },
-                                                "animationSubEffect": {
-                                                    "arrayAnimationSubEffectHolder": [
-                                                        {
-                                                            "information": {
-                                                                "information": "name"
-                                                            }
-                                                        }
-                                                    ]
-                                                }
-                                            }
+                                            "width": "100%",
+                                            "font-size": "20px"
                                         }
                                     }
                                 }
@@ -171,6 +122,7 @@
             ]
         },
         {
+            "type": "ComponentDivisor",
             "arrayAppObject": [
                 {
                     "type": "ComponentDivisor",
@@ -178,8 +130,7 @@
                         "style": {
                             "opacity": 1,
                             "display": "block",
-                            "color": "transparent",
-                            "padding": []
+                            "color": "transparent"
                         }
                     },
                     "arrayAppObject": [
@@ -188,14 +139,12 @@
                             "element": {
                                 "style": {
                                     "float": "left",
-                                    "width": "18%",
-                                    "arrayPadding": [
-                                        15
-                                    ]
+                                    "width": "18%"
                                 }
                             },
-                            "arrayImage": [
+                            "arrayAppObject": [
                                 {
+                                    "type": "ComponentImage",
                                     "element": {
                                         "style": {
                                             "visibility": "visible",
@@ -212,268 +161,185 @@
                                             "position": "relative"
                                         }
                                     },
-                                    "img": {
-                                        "element": {
-                                            "style": {
-                                                "box-sizing": "border-box",
-                                                "border": "1px solid white",
-                                                "border-radius": "1000px",
-                                                "position": "relative",
-                                                "top": "0",
-                                                "width": "100%",
-                                                "height": "auto"
-                                            },
-                                            "src": "https://graph.facebook.com/100002241941537/picture?type=large"
+                                    "arrayAppObject": [
+                                        {
+                                            "type": "ComponentImg",
+                                            "element": {
+                                                "style": {
+                                                    "box-sizing": "border-box",
+                                                    "border": "1px solid white",
+                                                    "border-radius": "1000px",
+                                                    "position": "relative",
+                                                    "top": "0",
+                                                    "width": "100%",
+                                                    "height": "auto"
+                                                },
+                                                "src": "https://graph.facebook.com/100002241941537/picture?type=large"
+                                            }
                                         }
-                                    }
+                                    ]
                                 }
                             ]
                         },
                         {
-                            "arrayItem": [
+                            "type": "ComponentDivisor",
+                            "element": {
+                                "style": {
+                                    "padding": "15px 20px 0px 10px"
+                                }
+                            },
+                            "arrayAppObject": [
                                 {
+                                    "type": "ComponentItem",
                                     "element": {
                                         "style": {
                                             "textAlign": "justify",
                                             "float": "left"
                                         }
                                     },
-                                    "colorEffect": {
-                                        "element": {
-                                            "style": {
-                                                "color": "white"
-                                            }
-                                        },
-                                        "font": {
+                                    "arrayAppObject": [
+                                        {
+                                            "type": "ComponentInformation",
+                                            "information": "personalStatementBeforeAge",
                                             "element": {
                                                 "className": "ClassOpenSans",
                                                 "style": {
+                                                    "color": "white",
+                                                    "display": "block",
+                                                    "width": "100%",
                                                     "textIndent": "2.5em",
-                                                    "font-size": "16px",
-                                                    "arrayPadding": []
-                                                }
-                                            },
-                                            "animationEffect": {
-                                                "element": {
-                                                    "style": {
-                                                        "display": "block"
-                                                    }
-                                                },
-                                                "animationSubEffect": {
-                                                    "arrayAnimationSubEffectHolder": [
-                                                        {
-                                                            "information": {
-                                                                "information": "personalStatementBeforeAge"
-                                                            }
-                                                        }
-                                                    ]
+                                                    "font-size": "16px"
                                                 }
                                             }
                                         }
-                                    }
+                                    ]
                                 },
                                 {
+                                    "type": "ComponentItem",
                                     "element": {
                                         "style": {
                                             "textAlign": "justify",
                                             "float": "left"
                                         }
                                     },
-                                    "colorEffect": {
-                                        "element": {
-                                            "style": {
-                                                "color": "white"
-                                            }
-                                        },
-                                        "font": {
+                                    "arrayAppObject": [
+                                        {
+                                            "type": "ComponentInformation",
+                                            "information": "Age",
                                             "element": {
                                                 "className": "ClassOpenSans",
                                                 "style": {
-                                                    "font-size": "16px",
-                                                    "arrayPadding": []
+                                                    "color": "white",
+                                                    "display": "block",
+                                                    "width": "100%",
+                                                    "font-size": "16px"
                                                 }
                                             },
-                                            "animationEffect": {
-                                                "element": {
-                                                    "style": {
-                                                        "display": "block"
-                                                    }
-                                                },
-                                                "animationSubEffect": {
-                                                    "arrayAnimationSubEffectHolder": [
-                                                        {
-                                                            "information": {
-                                                                "information": "Age",
-                                                                "runOnBuild": true,
-                                                                "appObject": {},
-                                                                "code": "Age",
-                                                                "element": {}
-                                                            }
-                                                        }
-                                                    ]
+                                            "arrayAppObjectEvent": [
+                                                {
+                                                    "name": "build",
+                                                    "appObject": {},
+                                                    "runFunction": "getAge(this)",
+                                                    "code": "Age"
                                                 }
-                                            }
+                                            ]
                                         }
-                                    }
+                                    ]
                                 },
                                 {
+                                    "type": "ComponentItem",
                                     "element": {
                                         "style": {
                                             "textAlign": "justify"
                                         }
                                     },
-                                    "colorEffect": {
-                                        "element": {
-                                            "style": {
-                                                "color": "white"
-                                            }
-                                        },
-                                        "font": {
+                                    "arrayAppObject": [
+                                        {
+                                            "type": "ComponentInformation",
+                                            "information": "personalStatementAfterAge",
                                             "element": {
                                                 "className": "ClassOpenSans",
                                                 "style": {
-                                                    "font-size": "16px",
-                                                    "arrayPadding": []
-                                                }
-                                            },
-                                            "animationEffect": {
-                                                "element": {
-                                                    "style": {
-                                                        "display": "block"
-                                                    }
-                                                },
-                                                "animationSubEffect": {
-                                                    "arrayAnimationSubEffectHolder": [
-                                                        {
-                                                            "information": {
-                                                                "information": "personalStatementAfterAge"
-                                                            }
-                                                        }
-                                                    ]
+                                                    "color": "white",
+                                                    "display": "block",
+                                                    "width": "100%",
+                                                    "font-size": "16px"
                                                 }
                                             }
                                         }
-                                    }
+                                    ]
                                 },
                                 {
+                                    "type": "ComponentItem",
                                     "element": {
                                         "style": {
                                             "textAlign": "justify"
                                         }
                                     },
-                                    "colorEffect": {
-                                        "element": {
-                                            "style": {
-                                                "color": "white"
-                                            }
-                                        },
-                                        "font": {
+                                    "arrayAppObject": [
+                                        {
+                                            "type": "ComponentInformation",
+                                            "information": "personalStatement2",
                                             "element": {
                                                 "className": "ClassOpenSans",
                                                 "style": {
+                                                    "color": "white",
+                                                    "display": "block",
+                                                    "width": "100%",
                                                     "textIndent": "2.5em",
-                                                    "font-size": "16px",
-                                                    "arrayPadding": []
-                                                }
-                                            },
-                                            "animationEffect": {
-                                                "element": {
-                                                    "style": {
-                                                        "display": "block"
-                                                    }
-                                                },
-                                                "animationSubEffect": {
-                                                    "arrayAnimationSubEffectHolder": [
-                                                        {
-                                                            "information": {
-                                                                "information": "personalStatement2"
-                                                            }
-                                                        }
-                                                    ]
+                                                    "font-size": "16px"
                                                 }
                                             }
                                         }
-                                    }
+                                    ]
                                 },
                                 {
+                                    "type": "ComponentItem",
                                     "element": {
                                         "style": {
                                             "textAlign": "justify"
                                         }
                                     },
-                                    "colorEffect": {
-                                        "element": {
-                                            "style": {
-                                                "color": "white"
-                                            }
-                                        },
-                                        "font": {
+                                    "arrayAppObject": [
+                                        {
+                                            "type": "ComponentInformation",
+                                            "information": "talkingAboutMe",
                                             "element": {
                                                 "className": "ClassOpenSans",
                                                 "style": {
+                                                    "color": "white",
+                                                    "display": "block",
+                                                    "width": "100%",
                                                     "textIndent": "2.5em",
-                                                    "font-size": "16px",
-                                                    "arrayPadding": []
-                                                }
-                                            },
-                                            "animationEffect": {
-                                                "element": {
-                                                    "style": {
-                                                        "display": "block"
-                                                    }
-                                                },
-                                                "animationSubEffect": {
-                                                    "arrayAnimationSubEffectHolder": [
-                                                        {
-                                                            "information": {
-                                                                "information": "talkingAboutMe"
-                                                            }
-                                                        }
-                                                    ]
+                                                    "font-size": "16px"
                                                 }
                                             }
                                         }
-                                    }
+                                    ]
                                 },
                                 {
+                                    "type": "ComponentItem",
                                     "element": {
                                         "style": {
                                             "textAlign": "justify"
                                         }
                                     },
-                                    "colorEffect": {
-                                        "element": {
-                                            "style": {
-                                                "color": "white"
-                                            }
-                                        },
-                                        "font": {
+                                    "arrayAppObject": [
+                                        {
+                                            "type": "ComponentInformation",
+                                            "information": "talkingAboutMe2",
                                             "element": {
                                                 "className": "ClassOpenSans",
                                                 "style": {
+                                                    "color": "white",
+                                                    "display": "block",
+                                                    "width": "100%",
                                                     "textIndent": "2.5em",
-                                                    "font-size": "16px",
-                                                    "arrayPadding": []
-                                                }
-                                            },
-                                            "animationEffect": {
-                                                "element": {
-                                                    "style": {
-                                                        "display": "block"
-                                                    }
-                                                },
-                                                "animationSubEffect": {
-                                                    "arrayAnimationSubEffectHolder": [
-                                                        {
-                                                            "information": {
-                                                                "information": "talkingAboutMe2"
-                                                            }
-                                                        }
-                                                    ]
+                                                    "font-size": "16px"
                                                 }
                                             }
                                         }
-                                    }
+                                    ]
                                 }
                             ]
                         }
@@ -482,58 +348,45 @@
             ]
         },
         {
+            "type": "ComponentDivisor",
             "arrayAppObject": [
                 {
                     "type": "ComponentDivisor",
                     "element": {
                         "style": {
                             "opacity": 1,
-                            "color": "transparent",
-                            "arrayPadding": [
-                                5
-                            ]
+                            "color": "transparent"
                         }
                     },
                     "arrayAppObject": [
                         {
                             "type": "ComponentDivisor",
                             "toBottom": false,
-                            "arrayItem": [
+                            "arrayAppObject": [
                                 {
-                                    "colorEffect": {
-                                        "element": {
-                                            "style": {
-                                                "color": "white"
-                                            }
-                                        },
-                                        "font": {
+                                    "type": "ComponentItem",
+                                    "element": {
+                                        "style": {
+                                            "color": "white",
+                                            "display": "block",
+                                            "textAlign": "center"
+                                        }
+                                    },
+                                    "arrayAppObject": [
+                                        {
+                                            "type": "ComponentInformation",
+                                            "information": "thinkDifferentTitle",
                                             "element": {
                                                 "className": "ClassFuturisticIAndII",
                                                 "style": {
-                                                    "textAlign": "center",
+                                                    "color": "white",
+                                                    "display": "block",
                                                     "width": "100%",
-                                                    "font-size": "20px",
-                                                    "arrayPadding": []
-                                                }
-                                            },
-                                            "animationEffect": {
-                                                "element": {
-                                                    "style": {
-                                                        "display": "block"
-                                                    }
-                                                },
-                                                "animationSubEffect": {
-                                                    "arrayAnimationSubEffectHolder": [
-                                                        {
-                                                            "information": {
-                                                                "information": "thinkDifferentTitle"
-                                                            }
-                                                        }
-                                                    ]
+                                                    "font-size": "20px"
                                                 }
                                             }
                                         }
-                                    }
+                                    ]
                                 }
                             ]
                         }
@@ -542,14 +395,14 @@
             ]
         },
         {
+            "type": "ComponentDivisor",
             "arrayAppObject": [
                 {
                     "type": "ComponentDivisor",
                     "element": {
                         "style": {
                             "opacity": 1,
-                            "color": "transparent",
-                            "arrayPadding": []
+                            "color": "transparent"
                         }
                     },
                     "arrayAppObject": [
@@ -560,8 +413,9 @@
                                     "width": "100%"
                                 }
                             },
-                            "arrayVideoHolder": [
+                            "arrayAppObject": [
                                 {
+                                    "type": "ComponentVideoHolder",
                                     "element": {
                                         "style": {
                                             "visibility": "visible",
@@ -574,8 +428,9 @@
                                             "width": 420
                                         }
                                     },
-                                    "arrayIframe": [
+                                    "arrayAppObject": [
                                         {
+                                            "type": "ComponentIframe",
                                             "element": {
                                                 "src": "https://www.youtube.com/embed/8rwsuXHA7RA",
                                                 "style": {
@@ -593,57 +448,45 @@
             ]
         },
         {
+            "type": "ComponentDivisor",
             "arrayAppObject": [
                 {
                     "type": "ComponentDivisor",
                     "element": {
                         "style": {
+                            "padding": "10px 20px 10px 10px",
                             "opacity": 1,
                             "display": "block",
-                            "color": "transparent",
-                            "arrayPadding": []
+                            "color": "transparent"
                         }
                     },
                     "arrayAppObject": [
                         {
                             "type": "ComponentDivisor",
-                            "arrayItem": [
+                            "arrayAppObject": [
                                 {
-                                    "colorEffect": {
-                                        "element": {
-                                            "style": {
-                                                "color": "white"
-                                            }
-                                        },
-                                        "font": {
+                                    "type": "ComponentItem",
+                                    "element": {
+                                        "style": {
+                                            "textAlign": "justify"
+                                        }
+                                    },
+                                    "arrayAppObject": [
+                                        {
+                                            "type": "ComponentInformation",
+                                            "information": "thinkDifferent",
                                             "element": {
                                                 "className": "ClassOpenSans",
                                                 "style": {
-                                                    "textAlign": "justify",
-                                                    "textIndent": "2.5em",
+                                                    "color": "white",
+                                                    "display": "block",
                                                     "width": "100%",
-                                                    "font-size": "16px",
-                                                    "arrayPadding": []
-                                                }
-                                            },
-                                            "animationEffect": {
-                                                "element": {
-                                                    "style": {
-                                                        "display": "block"
-                                                    }
-                                                },
-                                                "animationSubEffect": {
-                                                    "arrayAnimationSubEffectHolder": [
-                                                        {
-                                                            "information": {
-                                                                "information": "thinkDifferent"
-                                                            }
-                                                        }
-                                                    ]
+                                                    "textIndent": "2.5em",
+                                                    "font-size": "16px"
                                                 }
                                             }
                                         }
-                                    }
+                                    ]
                                 }
                             ]
                         }
